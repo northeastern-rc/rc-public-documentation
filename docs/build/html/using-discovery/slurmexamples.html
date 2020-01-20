@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Slurm examples &mdash; Northeastern University
+Research Computing 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Using Slurm" href="usingslurm.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/NU_logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Slurm examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#core-job">1-core job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#core-job-and-additional-memory">1-core job and additional memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#core-job-with-exclusive-use-of-a-node">1-core job with exclusive use of a node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-parallel-job-scripts">Example Parallel Job Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-job-one-node-and-additional-memory">8-task job, one node and additional memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-job-multiple-nodes-and-additional-memory">8-task job, multiple nodes and additional memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-job-multiple-nodes-additional-memory-and-exclusive">8-task job, multiple nodes, additional memory, and exclusive</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Northeastern University
+Research Computing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Slurm examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/using-discovery/slurmexamples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="slurm-examples">
+<span id="id1"></span><h1>Slurm examples<a class="headerlink" href="#slurm-examples" title="Permalink to this headline">¶</a></h1>
+<p>The following are example job scripts for submitting to Slurm using the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>
+command. You should review these to have a general understanding of the types
+of jobs you can submit to the scheduler.</p>
+<div class="section" id="core-job">
+<h2>1-core job<a class="headerlink" href="#core-job" title="Permalink to this headline">¶</a></h2>
+<p>Run a 1-core job for 4 hours on the general partition:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH –nodes=1</span>
+<span class="c1">#SBATCH –time=4:00:00</span>
+<span class="c1">#SBATCH –job-name=MyJobName</span>
+<span class="c1">#SBATCH –partition=general</span>
+<span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="core-job-and-additional-memory">
+<h2>1-core job and additional memory<a class="headerlink" href="#core-job-and-additional-memory" title="Permalink to this headline">¶</a></h2>
+<p>The default memory per allocated core is 1GB. If your calculations try to use
+more memory than what is allocated, Slurm automatically kills your job.
+You should request a specific amount of memory in your job script if your
+calculations need more memory than the default. The example script below is
+requesting 100GB of memory (mem=100Gb).:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --time=4:00:00</span>
+<span class="c1">#SBATCH --job-name=MyJobName</span>
+<span class="c1">#SBATCH --mem=100Gb</span>
+<span class="c1">#SBATCH --partition=general</span>
+<span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="core-job-with-exclusive-use-of-a-node">
+<h2>1-core job with exclusive use of a node<a class="headerlink" href="#core-job-with-exclusive-use-of-a-node" title="Permalink to this headline">¶</a></h2>
+<p>If you need exclusive use of a node, such as when you have a job that has high
+I/O requirements, you can use the exclusive flag. The example script below
+specifies exclusive use of 1 node in the general partition for four hours.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --time=4:00:00</span>
+<span class="c1">#SBATCH --job-name=MyJobName</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --partition=general</span>
+<span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-parallel-job-scripts">
+<h2>Example Parallel Job Scripts<a class="headerlink" href="#example-parallel-job-scripts" title="Permalink to this headline">¶</a></h2>
+<p>Parallel jobs should be used with code that is configured to use the reserved resources.
+If your code is not optimized for running in parallel, your job could fail.
+The following script examples all allocate additional memory.
+The default memory per allocated core is 1GB. If your calculations try to use more
+memory than what is allocated, Slurm automatically kills your job.
+You should request a specific amount of memory in your job script if your calculations
+need more memory than the default.</p>
+</div>
+<div class="section" id="task-job-one-node-and-additional-memory">
+<h2>8-task job, one node and additional memory<a class="headerlink" href="#task-job-one-node-and-additional-memory" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --tasks-per-node=8</span>
+<span class="c1">#SBATCH --cpus-per-task=1</span>
+<span class="c1">#SBATCH --time=4:00:00</span>
+<span class="c1">#SBATCH --job-name=MyJobName</span>
+<span class="c1">#SBATCH --mem=100Gb</span>
+<span class="c1">#SBATCH --partition=general</span>
+<span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="task-job-multiple-nodes-and-additional-memory">
+<h2>8-task job, multiple nodes and additional memory<a class="headerlink" href="#task-job-multiple-nodes-and-additional-memory" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --nodes=4</span>
+<span class="c1">#SBATCH --tasks-per-node=2</span>
+<span class="c1">#SBATCH --cpus-per-task=1</span>
+<span class="c1">#SBATCH --time=4:00:00</span>
+<span class="c1">#SBATCH --job-name=MyJobName</span>
+<span class="c1">#SBATCH --mem=100Gb</span>
+<span class="c1">#SBATCH --partition=general</span>
+<span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="task-job-multiple-nodes-additional-memory-and-exclusive">
+<h2>8-task job, multiple nodes, additional memory, and exclusive<a class="headerlink" href="#task-job-multiple-nodes-additional-memory-and-exclusive" title="Permalink to this headline">¶</a></h2>
+<p>If you need exclusive use of a node, such as when you have a job that has
+high I/O requirements, you can use the exclusive flag.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --nodes=4</span>
+<span class="c1">#SBATCH --tasks-per-node=2</span>
+<span class="c1">#SBATCH --time=4:00:00</span>
+<span class="c1">#SBATCH --job-name=MyJobName</span>
+<span class="c1">#SBATCH --mem=100Gb</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --partition=general</span>
+<span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="usingslurm.html" class="btn btn-neutral float-left" title="Using Slurm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Northeastern University Research Computing
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
