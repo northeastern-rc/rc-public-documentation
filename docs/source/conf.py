@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Northeastern University\nResearch Computing'
-copyright = '2019, Northeastern University Research Computing'
-author = 'Northeastern Univeristy Research Computing'
+project = 'Northeastern University Research Computing'
+copyright = '2019-2020, Northeastern University Research Computing'
+author = 'Northeastern University Research Computing'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0.1'
