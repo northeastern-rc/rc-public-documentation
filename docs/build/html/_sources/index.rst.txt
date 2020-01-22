@@ -28,4 +28,10 @@ Northeastern University Research Computing
   using-discovery/usingslurm
   using-discovery/slurmexamples
 
-   
+.. toctree::
+  :maxdepth: 2
+  :caption: Using Open OnDemand (OOD)
+
+  using-ood/introduction
+  using-ood/fileexplore
+  using-ood/interactiveapps

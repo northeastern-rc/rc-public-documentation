@@ -8,8 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using OOD’s Interactive Apps &mdash; Northeastern University
-Research Computing 0.0.1 documentation</title>
+  <title>Using OOD’s Interactive Apps &mdash; Northeastern University Research Computing 0.0.1 documentation</title>
   
 
   
@@ -35,7 +34,8 @@ Research Computing 0.0.1 documentation</title>
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Using OOD’s File Explorer" href="fileexplore.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,6 +98,12 @@ Research Computing 0.0.1 documentation</title>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Open OnDemand (OOD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fileexplore.html">Using OOD’s File Explorer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using OOD’s Interactive Apps</a></li>
+</ul>
 
             
           
@@ -111,8 +117,7 @@ Research Computing 0.0.1 documentation</title>
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Northeastern University
-Research Computing</a>
+          <a href="../index.html">Northeastern University Research Computing</a>
         
       </nav>
 
@@ -163,7 +168,35 @@ Research Computing</a>
            <div itemprop="articleBody">
             
   <div class="section" id="using-ood-s-interactive-apps">
-<h1>Using OOD’s Interactive Apps<a class="headerlink" href="#using-ood-s-interactive-apps" title="Permalink to this headline">¶</a></h1>
+<span id="accessing-ood"></span><h1>Using OOD’s Interactive Apps<a class="headerlink" href="#using-ood-s-interactive-apps" title="Permalink to this headline">¶</a></h1>
+<p>There are a number of applications that you can access and use through the OOD web portal.
+When you select an application and click launch, the scheduler (Slurm) allocates a compute node with
+a predetermined number of cores and amount of memory. The default time for running any of the
+applications is one hour. It is recommended that you keep the default. If you ask for more than one
+hour, you will need to wait for Slurm to allocate a  resource that can run for your requested time,
+which could take a long time to be allocated, depending on how busy the cluster is.</p>
+<ol class="arabic simple">
+<li><p>In a web browser, go to ood.discovery.neu.edu. If prompted, enter your myNortheastern username and password.</p></li>
+<li><p>Select <strong>Interactive Apps</strong>, then select the application you want to use.</p></li>
+<li><p>Accept the default of 1 hour, and click <strong>Launch</strong>. You might have to wait a
+minute or two for a compute node to be allocated with your requested time and resource.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you request more than one hour, you might have to wait much longer for a compute node to be allocated to you.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>If you selected Jupyter Notebook, click <strong>Connect to Jupyter</strong>.
+A Jupyter Notebook opens in a new tab on your browser.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>On the Jupyter Notebook Home tab, click <strong>New</strong>, then select the kernel you want to use.
+Your selected kernel opens in a new tab on your browser. Click the <strong>Running</strong> tab to see a
+list of what Notebooks you already have running.
+If you already have a Notebook saved to your home directory, on the <strong>Files</strong> tab,
+click the name of the file to restart the Notebook in a new tab on your browser.</p>
+</div>
 </div>
 
 
@@ -172,12 +205,19 @@ Research Computing</a>
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="fileexplore.html" class="btn btn-neutral float-left" title="Using OOD’s File Explorer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Northeastern University Research Computing
+        &copy; Copyright 2019-2020, Northeastern University Research Computing
 
     </p>
   </div> 
