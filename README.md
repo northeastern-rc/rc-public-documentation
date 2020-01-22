@@ -1,1 +1,1 @@
-# rc-publilc-documentation
+# rc-public-documentation
