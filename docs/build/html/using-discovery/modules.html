@@ -165,10 +165,21 @@
            <div itemprop="articleBody">
             
   <div class="section" id="using-module">
-<h1>Using Module<a class="headerlink" href="#using-module" title="Permalink to this headline">¶</a></h1>
-<p>The module command allows you to easily install software packages in your path on Discovery.
-Discovery has several software packages available for you to use.
-Use the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> command to show a list of the most currently available software on Discovery.</p>
+<span id="id1"></span><h1>Using Module<a class="headerlink" href="#using-module" title="Permalink to this headline">¶</a></h1>
+<p>The module system on Discovery includes many commonly used scientific software packages that you can load in your path when you need it
+and unload it when you no longer need it.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> command to show a list of the most currently available software on Discovery.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some modules might conflict with each other, resulting in the software not behaving as expected.
+Also, if there are multiple versions of software, and you load more than one version of the software,
+only the latest version will be used. Use <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code> to view the modules you currently have loaded in your path.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">which</span></code> command to display which version of a software package you have in your path.
+For example, <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code> will display the version of python that you have in your path.</p>
+</div>
 <div class="section" id="module-commands">
 <h2>Module commands<a class="headerlink" href="#module-commands" title="Permalink to this headline">¶</a></h2>
 <p>The following are common module commands that are useful for interacting with software packages on Discovery.</p>
@@ -186,14 +197,20 @@ Use the <code class="docutils literal notranslate"><span class="pre">module</spa
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code></p></td>
 <td><p>View a list of all of the available software packages on Discovery that you can load</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code></p></td>
+<td><p>Displays a list of the software packages currently loaded in your path</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
 <td><p>View the details of a software package</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
 <td><p>Load a software package into your environment</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">unload</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
-<td><p>Remove a software package from your environment</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">unload</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
+<td><p>Remove a single software package from your environment</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">purge</span></code></p></td>
+<td><p>Removes all of the loaded software packages from your environment</p></td>
 </tr>
 </tbody>
 </table>

@@ -8,7 +8,7 @@ you should take our training courses before working on the system. You can find 
 services that the Research Computing team provides at our website: http://www.rc.northeastern.edu.
 
 This is a beta version of the help system, and updates and changes will continue to be pushed to
-this help system during the Fall 2019 semester.
+this help system during the Spring 2020 semester.
 
 We want your feedback! If you have any comments or suggestions, email us at rchelp@northeastern.edu
 and specify Documentation Request in the subject line.
@@ -95,6 +95,6 @@ For more information about Slurm, see :ref:`using_slurm`.
 
 Software overview
 =================
-Discovery has a number of software applications that are free for you to use.
-You can find and load the currently available software on Discovery using the ``module avail`` command.
-See the section Using Module for more information.
+Discovery has a number of software applications that are available for you to load and use using a module system.
+You can view the most up to date list of available software on Discovery by using the ``module avail`` command.
+See :ref:`using_module` for more information.
