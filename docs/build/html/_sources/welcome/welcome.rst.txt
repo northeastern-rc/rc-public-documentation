@@ -30,71 +30,134 @@ You can also find information on how to use Linux on sites such as Code Academy.
 
 Hardware overview
 =================
-The Discovery cluster consists of a combination of the following CPUs and GPUs:
-
-* 2.4 GHz Intel E5-2680 v4 CPUs
-* 2.1 GHz Intel Xeon Platinum 8176 CPUs
-* a selection of NVIDIA K80, P100, V100, and T4 GPUs
-
-This system provides you with access to over 20,000 CPU cores and over 200 GPUs. Discovery is connected
+The Discovery cluster provides you with access to over 20,000 CPU cores and over 200 GPUs. Discovery is connected
 to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer, and Discovery
 provides 3 PB of available storage on a high-performance GPFS parallel filesystem.
 Compute nodes are connected with either 10 GbE or a high-performance HDR100 InfiniBand (IB) interconnect
 running at 100 Gbps, supporting all types and scales of computational workloads.
 Full HDR IB connections (200 Gbps) are also available, if needed.
+See the table below for details on CPU types, cores per node, and number of cores.
+
+.. list-table::
+  :widths: 40 10 10 10
+  :header-rows: 1
+
+  * - CPU Type
+    - Cores per Node
+    - Number of Nodes
+    - Total Cores
+  * - E5-2680v2@2.8 GHz
+    - 20
+    - 76
+    - 1520
+  * - E5-2690v3@2.6 GHz
+    - 24
+    - 184
+    - 4416
+  * - E5-2680v4@2.4 GHz
+    - 28
+    - 408
+    - 11424
+  * - Platinum 8276@2.2 GHz
+    - 56
+    - 128
+    - 7168
 
 Partitions
 ++++++++++
-The Discovery cluster is sectioned into partitions. Discovery offers several
-computing partitions. The two main partitions are general and gpu.
-Each partition consists of several processor architectures and different compute node count.
+The Discovery cluster is sectioned into partitions. Discovery has several
+computing partitions for different computing needs. The partitions available for general use
+are debug, express, short, and gpu.
+Each partition consists of several processor architectures and different compute node counts.
 There are also partitions that are reserved for individual faculty members.
-Two partitions, fullnode and multigpu, are accessible only after application approval
+Three partitions, long, large, and multigpu, are accessible only after application approval
 (details can be found in: https://rc.northeastern.edu/policy/).
+NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Per User/Per Research Group.
 
 .. list-table::
-   :widths: 20 20 20 20
+   :widths: 20 20 10 20 20 20 20 20 20
    :header-rows: 1
 
    * - Name
-     - Nodes
-     - CPUs
-     - GPUs
-   * - general
-     - 316
-     - 6828
-     - 0
-   * - gpu
-     - 48
-     - 896
-     - 48
-   * - test
-     - 2
-     - 40
-     - 0
-   * - interactive
-     - 2
-     - 40
-     - 0
-   * - infinband
-     - 64
+     - Requires Approval?
+     - Time limit
+     - Running Jobs
+     - Submitted Jobs
+     - Core Limit
+     - RAM Limit
+     - GPU per job Limit
+     - GPU per user Limit
+   * - debug
+     - No
+     - 20 minutes
+     - 10/25
+     - 25/100
+     - 128
+     - 256GB
+     - N/A
+     - N/A
+   * - express
+     - No
+     - 60 minutes
+     - 50/250
+     - 250/100
+     - 2048
+     - 25TB
+     - N/A
+     - N/A
+   * - short
+     - No
+     - 24 Hours
+     - 50/500
+     - 100/100
      - 1024
-     - 0
+     - 25TB
+     - N/A
+     - N/A
+   * - long
+     - Yes
+     - 5 Days
+     - 25/250
+     - 50/500
+     - 1024
+     - 25TB
+     - N/A
+     - N/A
+   * - gpu
+     - No
+     - 8 Hours
+     - 25/250
+     - 50/100
+     - N/A
+     - N/A
+     - 1
+     - 8
    * - multigpu
-     - 24
-     - 688
-     - 120
-   * - fullnode
-     - 408
-     - 11424
-     - 0
+     - Yes
+     - 24 Hours
+     - 25/100
+     - 50/100
+     - N/A
+     - N/A
+     - 8
+     - 8
+   * - large
+     - Yes
+     - 6 Hours
+     - 100/100
+     - 100/1000 
+     - N/A
+     - N/A
+     - N/A
+     - N/A
 
 
-You can view all of the partitions by using the Slurm command ``sinfo``.
+You can view all of the partitions by using the Slurm command ``sinfo -a``. To specify a partition in
+your job submission script, use the option ``--partition=<partition name>``.
 For more information about Slurm, see :ref:`using_slurm`.
 
 Software overview
 =================
 Discovery has a number of software applications that are available for you to load and use using a module system.
-You can view the most up to date list of available software on Discovery by using the ``module avail`` command.
-See :ref:`using_module` for more information.
+Before requesting software or installing software locally to your Path, you should always check the available
+software modules on Discovery by using the ``module avail`` command. See :ref:`using_module` for more information.

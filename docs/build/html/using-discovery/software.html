@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using OOD’s File Explorer &mdash; Northeastern University Research Computing 0.0.1 documentation</title>
+  <title>Installing Software &mdash; Northeastern University Research Computing 0.0.1 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using OOD’s Interactive Apps" href="interactiveapps.html" />
-    <link rel="prev" title="Introduction to Open OnDemand (OOD)" href="introduction.html" /> 
+    <link rel="next" title="Introduction to Open OnDemand (OOD)" href="../using-ood/introduction.html" />
+    <link rel="prev" title="Slurm examples" href="slurmexamples.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,17 +93,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing Software</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Open OnDemand (OOD)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Using OOD’s File Explorer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
 </ul>
 
             
@@ -149,7 +150,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Using OOD’s File Explorer</li>
+      <li>Installing Software</li>
     
     
 
@@ -161,34 +162,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="using-ood-s-file-explorer">
-<span id="file-explorer"></span><h1>Using OOD’s File Explorer<a class="headerlink" href="#using-ood-s-file-explorer" title="Permalink to this headline">¶</a></h1>
-<p>When working with the resources in OOD, your files are stored in your home directory
-on the storage space on the Discovery cluster. Similar to any file navigation system,
-you can work with your files and directories through the OOD Files feature as detailed below.
-For example, you can download a Jupyter Notebook file in OOD that you’ve been working
-on to your local hard drive, rename a file, or delete a file that you no longer need.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Your home directory has a file size limit of 100GB. Be sure to check your home
-directory regularly, and remove any files you do not need to ensure you do not run out of space.</p>
-</div>
-<ol class="arabic simple">
-<li><p>In a web browser, go to <a class="reference external" href="https://ood.discovery.neu.edu">ood.discovery.neu.edu</a>. If prompted, enter your myNortheastern username and password.</p></li>
-<li><p>Select <strong>Files &gt; Home Directory</strong>. The contents of your home directory display in a new tab.</p></li>
-<li><p>To download a file to your hard drive, navigate to the file you want to download,
-select the file, and click <strong>Download</strong>. If prompted by your browser,
-click <strong>OK</strong> to save your file to your hard drive.</p></li>
-<li><p>To navigate to another folder on the Discovery file system, click <strong>Go To</strong>,
-enter the path to the folder you want to access, and click <strong>OK</strong>.</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>From the <strong>Files &gt; Home Directory</strong> view, the <strong>Edit</strong> button will not launch your
-.ipynb file in a Jupyter Notebook. It will open the file in a text editor. You have
-to be in Jupyter Notebook in order to launch a .ipynb file from your /home directory.
-See <a class="reference internal" href="interactiveapps.html#accessing-ood"><span class="std std-ref">Using OOD’s Interactive Apps</span></a> for how to access a Jupyter Notebook through OOD.</p>
-</div>
+  <div class="section" id="installing-software">
+<h1>Installing Software<a class="headerlink" href="#installing-software" title="Permalink to this headline">¶</a></h1>
+<p>There are a few ways you can install software for your own use on Discovery. You should always first
+check to see if the software package that you need is already available through one of the preinstalled
+modules on Discovery. See <a class="reference internal" href="modules.html#using-module"><span class="std std-ref">Using Module</span></a> for how to view and load software modules to your path.</p>
+<p>If you have a software request or need help with installing a software package, please submit a ServiceNow
+software request ticket. Be aware that there might be packages that cannot be installed on Discovery due
+to incompatibility with the hardware on Discovery.</p>
+<p>We recommend that you try using Spack <a class="reference external" href="https://spack.io/_">https://spack.io/_</a> to install software locally to your path.</p>
 </div>
 
 
@@ -199,10 +181,10 @@ See <a class="reference internal" href="interactiveapps.html#accessing-ood"><spa
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="interactiveapps.html" class="btn btn-neutral float-right" title="Using OOD’s Interactive Apps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../using-ood/introduction.html" class="btn btn-neutral float-right" title="Introduction to Open OnDemand (OOD)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction to Open OnDemand (OOD)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="slurmexamples.html" class="btn btn-neutral float-left" title="Slurm examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

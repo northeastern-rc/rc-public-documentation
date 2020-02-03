@@ -177,12 +177,12 @@ command. You should review these to have a general understanding of the types
 of jobs you can submit to the scheduler.</p>
 <div class="section" id="core-job">
 <h2>1-core job<a class="headerlink" href="#core-job" title="Permalink to this headline">¶</a></h2>
-<p>Run a 1-core job for 4 hours on the general partition:</p>
+<p>Run a 1-core job for 4 hours on the short partition:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH –nodes=1</span>
 <span class="c1">#SBATCH –time=4:00:00</span>
 <span class="c1">#SBATCH –job-name=MyJobName</span>
-<span class="c1">#SBATCH –partition=general</span>
+<span class="c1">#SBATCH –partition=short</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -190,7 +190,7 @@ of jobs you can submit to the scheduler.</p>
 <div class="section" id="core-job-and-additional-memory">
 <h2>1-core job and additional memory<a class="headerlink" href="#core-job-and-additional-memory" title="Permalink to this headline">¶</a></h2>
 <p>The default memory per allocated core is 1GB. If your calculations try to use
-more memory than what is allocated, Slurm automatically kills your job.
+more memory than what is allocated, Slurm automatically terminates your job.
 You should request a specific amount of memory in your job script if your
 calculations need more memory than the default. The example script below is
 requesting 100GB of memory (mem=100Gb).:</p>
@@ -199,7 +199,7 @@ requesting 100GB of memory (mem=100Gb).:</p>
 <span class="c1">#SBATCH --time=4:00:00</span>
 <span class="c1">#SBATCH --job-name=MyJobName</span>
 <span class="c1">#SBATCH --mem=100Gb</span>
-<span class="c1">#SBATCH --partition=general</span>
+<span class="c1">#SBATCH --partition=short</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -208,13 +208,13 @@ requesting 100GB of memory (mem=100Gb).:</p>
 <h2>1-core job with exclusive use of a node<a class="headerlink" href="#core-job-with-exclusive-use-of-a-node" title="Permalink to this headline">¶</a></h2>
 <p>If you need exclusive use of a node, such as when you have a job that has high
 I/O requirements, you can use the exclusive flag. The example script below
-specifies exclusive use of 1 node in the general partition for four hours.:</p>
+specifies exclusive use of 1 node in the short partition for four hours.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --nodes=1</span>
 <span class="c1">#SBATCH --time=4:00:00</span>
 <span class="c1">#SBATCH --job-name=MyJobName</span>
 <span class="c1">#SBATCH --exclusive</span>
-<span class="c1">#SBATCH --partition=general</span>
+<span class="c1">#SBATCH --partition=short</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -225,7 +225,7 @@ specifies exclusive use of 1 node in the general partition for four hours.:</p>
 If your code is not optimized for running in parallel, your job could fail.
 The following script examples all allocate additional memory.
 The default memory per allocated core is 1GB. If your calculations try to use more
-memory than what is allocated, Slurm automatically kills your job.
+memory than what is allocated, Slurm automatically terminates your job.
 You should request a specific amount of memory in your job script if your calculations
 need more memory than the default.</p>
 </div>
@@ -238,7 +238,7 @@ need more memory than the default.</p>
 <span class="c1">#SBATCH --time=4:00:00</span>
 <span class="c1">#SBATCH --job-name=MyJobName</span>
 <span class="c1">#SBATCH --mem=100Gb</span>
-<span class="c1">#SBATCH --partition=general</span>
+<span class="c1">#SBATCH --partition=short</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -252,7 +252,7 @@ need more memory than the default.</p>
 <span class="c1">#SBATCH --time=4:00:00</span>
 <span class="c1">#SBATCH --job-name=MyJobName</span>
 <span class="c1">#SBATCH --mem=100Gb</span>
-<span class="c1">#SBATCH --partition=general</span>
+<span class="c1">#SBATCH --partition=short</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -268,7 +268,7 @@ high I/O requirements, you can use the exclusive flag.:</p>
 <span class="c1">#SBATCH --job-name=MyJobName</span>
 <span class="c1">#SBATCH --mem=100Gb</span>
 <span class="c1">#SBATCH --exclusive</span>
-<span class="c1">#SBATCH --partition=general</span>
+<span class="c1">#SBATCH --partition=short</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
 </div>

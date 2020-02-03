@@ -1,3 +1,5 @@
+.. _file_explorer:
+
 **************************
 Using OOD's File Explorer
 **************************

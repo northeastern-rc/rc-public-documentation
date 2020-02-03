@@ -27,7 +27,7 @@ Northeastern University Research Computing
   using-discovery/transferringdata
   using-discovery/usingslurm
   using-discovery/slurmexamples
-
+  using-discovery/software
 .. toctree::
   :maxdepth: 2
   :caption: Using Open OnDemand (OOD)

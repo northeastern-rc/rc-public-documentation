@@ -8,7 +8,8 @@ The node name is ``<username>@xfer.discovery.neu.edu:`` where ``<username>`` is 
 .. caution::
 
    The /scratch directory is for temporary file storage only. It is not backed up.
-   You should immediately transfer any data off /scratch to another location.
+   If you have directed your output files to /scratch, you should transfer your data from /scratch
+   to another location as soon as possible.
 
 Data transfer node using Mac
 ============================
@@ -24,6 +25,7 @@ Where ``<filename>`` is the name of the file you want to transfer and ``<youruse
 Data transfer node using Windows
 ================================
 You can use MobaXterm to transfer data to and from Discovery. You can also use a file transfer program, such as Filezilla.
+The Files menu in Open onDemand (OOD) also allows you to transfer files. See :ref:`file_explorer` for more information.
 
 **To transfer data using MobaXterm:**
 
