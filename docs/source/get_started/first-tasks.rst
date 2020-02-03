@@ -17,16 +17,6 @@ Your request can take up to 24 hours to process. You will receive a confirmation
 After you have access, if you are not familiar with using Discovery, high performance computing, or Linux, you should take one of our training courses.
 See the `Research Computing website <https://rc.northeastern.edu/support/training/>`_ for more information on our training and services.
 
-FullNode Access
-===============
-If you require access to the fullnode partition, you will need to download and fill out the fullnode partition application.
-You can find the application in the Policies section on the `Research Computing <https://rc.northeastern.edu/files/2019/09/Fullnode-App.docx>`_ website. Then, email the application to p.whitford@northeastern.edu. This application should only be filled out after you have general access to Discovery. See Getting Access for instructions on getting an account on Discovery.
-
-MultiGPU Access
-===============
-If you require access to the multigpu partition, you will need to download and fill out the multigpu partition application.
-You can find the application in the Policies section on the `RC website <https://rc.northeastern.edu/files/2019/09/Getting-Access-to-Multigpu.docx>`_. Then, email the application to d.kaeli@northeastern.edu and ioannidis@ece.neu.edu. This application should only be filled out after you have general access to Discovery. See Getting Access for instructions on getting an account on Discovery.
-
 Connecting to Discovery
 =======================
 You connect to Discovery using a `secure shell <https://www.ssh.com/ssh/protocol/>`_ program and initiate an SSH session to

@@ -17,7 +17,7 @@ or scripts that you are trying to use, so that we can best connect you with the 
 ServiceNow
 ==========
 
-You can submit a ticket on ServiceNow by selecting from the Research Computing ServiceNow catalog https://northeastern.service-now.com/research?id=nurc_category.
+You can submit a ticket on ServiceNow by selecting from the `Research Computing ServiceNow catalog <https://northeastern.service-now.com/nav_to.do?uri=%2Fcatalog_home.do%3Fv%3D1%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default>`_.
 You might need to sign in with your myNortheastern username and password to view the ServiceNow catalog page.
 
 Consultations (in person and online)

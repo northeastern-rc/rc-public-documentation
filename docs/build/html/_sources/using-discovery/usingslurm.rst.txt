@@ -50,8 +50,6 @@ The general format for submitting a job to the scheduler is as follows::
 Where ``example.script`` is a script detailing the parameters of the job you want to run.
 See :ref:`slurm_examples` for more information on writing scheduler scripts.
 
-
-
 .. note::
   The default time limit depends on the partition that you specify in your submission script using the
   ``--partition=<partition name>`` option.
