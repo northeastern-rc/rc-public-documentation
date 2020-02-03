@@ -63,15 +63,22 @@ See the table below for details on CPU types, cores per node, and number of core
     - 128
     - 7168
 
+.. _partition_names:
+
 Partitions
 ++++++++++
+
+.. note::
+   As of January 2020, the partition names were updated. You should refer to the table below for
+   the most current partition names to use with your submission scripts.
+
 The Discovery cluster is sectioned into partitions. Discovery has several
 computing partitions for different computing needs. The partitions available for general use
 are debug, express, short, and gpu.
 Each partition consists of several processor architectures and different compute node counts.
 There are also partitions that are reserved for individual faculty members.
 Three partitions, long, large, and multigpu, are accessible only after application approval
-(details can be found in: https://rc.northeastern.edu/policy/).
+(details and application forms can be found on the RC website: https://rc.northeastern.edu/policy/).
 NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Per User/Per Research Group.
 
 .. list-table::
@@ -114,15 +121,6 @@ NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Pe
      - 25TB
      - N/A
      - N/A
-   * - long
-     - Yes
-     - 5 Days
-     - 25/250
-     - 50/500
-     - 1024
-     - 25TB
-     - N/A
-     - N/A
    * - gpu
      - No
      - 8 Hours
@@ -132,8 +130,17 @@ NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Pe
      - N/A
      - 1
      - 8
+   * - long
+     - **Yes**
+     - 5 Days
+     - 25/250
+     - 50/500
+     - 1024
+     - 25TB
+     - N/A
+     - N/A
    * - multigpu
-     - Yes
+     - **Yes**
      - 24 Hours
      - 25/100
      - 50/100
@@ -142,10 +149,10 @@ NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Pe
      - 8
      - 8
    * - large
-     - Yes
+     - **Yes**
      - 6 Hours
      - 100/100
-     - 100/1000 
+     - 100/1000
      - N/A
      - N/A
      - N/A

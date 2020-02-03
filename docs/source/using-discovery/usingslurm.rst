@@ -51,10 +51,11 @@ Where ``example.script`` is a script detailing the parameters of the job you wan
 See :ref:`slurm_examples` for more information on writing scheduler scripts.
 
 .. note::
-  The default time limit for submitted jobs is 24 hours.
+  The default time limit depends on the partition that you specify in your submission script using the
+  ``--partition=<partition name>`` option.
   If your job does not complete within the requested time limit,
-  Slurm will automatically terminate the job. You also cannot request more than 24 hours,
-  as your job will not launch.
+  Slurm will automatically terminate the job.
+  See :ref:`partition_names` for the most up-to-date partition names and parameters.
 
 .. tip::
    Slurm looks at the time you’ve requested when scheduling jobs.

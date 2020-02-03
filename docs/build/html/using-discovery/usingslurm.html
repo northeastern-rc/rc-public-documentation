@@ -102,6 +102,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -221,10 +222,11 @@ The general format for submitting a job to the scheduler is as follows:</p>
 See <a class="reference internal" href="slurmexamples.html#slurm-examples"><span class="std std-ref">Slurm examples</span></a> for more information on writing scheduler scripts.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The default time limit for submitted jobs is 24 hours.
+<p>The default time limit depends on the partition that you specify in your submission script using the
+<code class="docutils literal notranslate"><span class="pre">--partition=&lt;partition</span> <span class="pre">name&gt;</span></code> option.
 If your job does not complete within the requested time limit,
-Slurm will automatically terminate the job. You also cannot request more than 24 hours,
-as your job will not launch.</p>
+Slurm will automatically terminate the job.
+See <a class="reference internal" href="../welcome/welcome.html#partition-names"><span class="std std-ref">Partitions</span></a> for the most up-to-date partition names and parameters.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>

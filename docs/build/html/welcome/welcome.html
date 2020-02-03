@@ -244,14 +244,19 @@ See the table below for details on CPU types, cores per node, and number of core
 </tbody>
 </table>
 <div class="section" id="partitions">
-<h3>Partitions<a class="headerlink" href="#partitions" title="Permalink to this headline">¶</a></h3>
+<span id="partition-names"></span><h3>Partitions<a class="headerlink" href="#partitions" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of January 2020, the partition names were updated. You should refer to the table below for
+the most current partition names to use with your submission scripts.</p>
+</div>
 <p>The Discovery cluster is sectioned into partitions. Discovery has several
 computing partitions for different computing needs. The partitions available for general use
 are debug, express, short, and gpu.
 Each partition consists of several processor architectures and different compute node counts.
 There are also partitions that are reserved for individual faculty members.
 Three partitions, long, large, and multigpu, are accessible only after application approval
-(details can be found in: <a class="reference external" href="https://rc.northeastern.edu/policy/">https://rc.northeastern.edu/policy/</a>).
+(details and application forms can be found on the RC website: <a class="reference external" href="https://rc.northeastern.edu/policy/">https://rc.northeastern.edu/policy/</a>).
 NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Per User/Per Research Group.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
@@ -308,17 +313,7 @@ NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Pe
 <td><p>N/A</p></td>
 <td><p>N/A</p></td>
 </tr>
-<tr class="row-odd"><td><p>long</p></td>
-<td><p>Yes</p></td>
-<td><p>5 Days</p></td>
-<td><p>25/250</p></td>
-<td><p>50/500</p></td>
-<td><p>1024</p></td>
-<td><p>25TB</p></td>
-<td><p>N/A</p></td>
-<td><p>N/A</p></td>
-</tr>
-<tr class="row-even"><td><p>gpu</p></td>
+<tr class="row-odd"><td><p>gpu</p></td>
 <td><p>No</p></td>
 <td><p>8 Hours</p></td>
 <td><p>25/250</p></td>
@@ -328,8 +323,18 @@ NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Pe
 <td><p>1</p></td>
 <td><p>8</p></td>
 </tr>
+<tr class="row-even"><td><p>long</p></td>
+<td><p><strong>Yes</strong></p></td>
+<td><p>5 Days</p></td>
+<td><p>25/250</p></td>
+<td><p>50/500</p></td>
+<td><p>1024</p></td>
+<td><p>25TB</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
 <tr class="row-odd"><td><p>multigpu</p></td>
-<td><p>Yes</p></td>
+<td><p><strong>Yes</strong></p></td>
 <td><p>24 Hours</p></td>
 <td><p>25/100</p></td>
 <td><p>50/100</p></td>
@@ -339,7 +344,7 @@ NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Pe
 <td><p>8</p></td>
 </tr>
 <tr class="row-even"><td><p>large</p></td>
-<td><p>Yes</p></td>
+<td><p><strong>Yes</strong></p></td>
 <td><p>6 Hours</p></td>
 <td><p>100/100</p></td>
 <td><p>100/1000</p></td>
