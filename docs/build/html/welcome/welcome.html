@@ -88,13 +88,11 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Welcome</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-discovery">What is Discovery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hardware-overview">Hardware overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#partitions">Partitions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#large-partition-access">large Partition Access</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multigpu-partition-access">multiGPU Partition Access</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#long-partition-access">long Partition Access</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-overview">Hardware overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#partitions">Partitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#large-partition-access">large Partition Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multigpu-partition-access">multiGPU Partition Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#long-partition-access">long Partition Access</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#software-overview">Software overview</a></li>
@@ -204,13 +202,13 @@ You can also find information on how to use Linux on sites such as Code Academy.
 </div>
 <div class="section" id="hardware-overview">
 <h2>Hardware overview<a class="headerlink" href="#hardware-overview" title="Permalink to this headline">¶</a></h2>
-<p>The Discovery cluster provides you with access to over 20,000 CPU cores and over 200 GPUs. Discovery is connected
+<p>The Discovery cluster provides you with access to over 24,000 CPU cores and over 200 GPUs. Discovery is connected
 to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer, and Discovery
 provides 3 PB of available storage on a high-performance GPFS parallel filesystem.
 Compute nodes are connected with either 10 GbE or a high-performance HDR100 InfiniBand (IB) interconnect
 running at 100 Gbps, supporting all types and scales of computational workloads.
 Full HDR IB connections (200 Gbps) are also available, if needed.
-See the table below for details on CPU types, cores per node, and number of cores.</p>
+See the tables below for details on CPUs and GPUs that are available on Discovery.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 57%" />
@@ -248,8 +246,41 @@ See the table below for details on CPU types, cores per node, and number of core
 </tr>
 </tbody>
 </table>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>GPU Type</p></th>
+<th class="head"><p>Number of nodes/GPUs</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>k20m</p></td>
+<td><p>23 nodes with 1 GPU each</p></td>
+</tr>
+<tr class="row-odd"><td><p>k40m</p></td>
+<td><p>16 nodes with 1 GPU each</p></td>
+</tr>
+<tr class="row-even"><td><p>k80</p></td>
+<td><p>8 nodes with 8 GPUs each</p></td>
+</tr>
+<tr class="row-odd"><td><p>p100</p></td>
+<td><p>12 nodes with 4 GPUs each</p></td>
+</tr>
+<tr class="row-even"><td><p>v100</p></td>
+<td><p>4 nodes with 2 GPUs each</p></td>
+</tr>
+<tr class="row-odd"><td><p>v100-sxm2</p></td>
+<td><p>24 nodes with 4 GPUs each</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="partitions">
-<span id="partition-names"></span><h3>Partitions<a class="headerlink" href="#partitions" title="Permalink to this headline">¶</a></h3>
+<span id="partition-names"></span><h2>Partitions<a class="headerlink" href="#partitions" title="Permalink to this headline">¶</a></h2>
+<p><sub>Updated February 6, 2020</sub></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As of February 2020, the partition names were updated. You should refer to the table below for
@@ -364,7 +395,7 @@ NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Pe
 your job submission script, use the option <code class="docutils literal notranslate"><span class="pre">--partition=&lt;partition</span> <span class="pre">name&gt;</span></code>.
 For more information about Slurm, see <a class="reference internal" href="../using-discovery/usingslurm.html#using-slurm"><span class="std std-ref">Using Slurm</span></a>.</p>
 <div class="section" id="large-partition-access">
-<h4>large Partition Access<a class="headerlink" href="#large-partition-access" title="Permalink to this headline">¶</a></h4>
+<h3>large Partition Access<a class="headerlink" href="#large-partition-access" title="Permalink to this headline">¶</a></h3>
 <p>If you require access to the large partition, you will need to download and fill out the large partition application
 and then attach the form to a general <a class="reference external" href="https://northeastern.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default">Research Computing ServiceNow request</a>.
 Your application will be reviewed by the Research Computing team and two faculty members.
@@ -374,7 +405,7 @@ You can find the application and information on how to submit it in the Policies
 <a class="reference external" href="https://rc.northeastern.edu/files/2020/02/access_request_large_partition.docx">Research Computing</a> website.</p>
 </div>
 <div class="section" id="multigpu-partition-access">
-<h4>multiGPU Partition Access<a class="headerlink" href="#multigpu-partition-access" title="Permalink to this headline">¶</a></h4>
+<h3>multiGPU Partition Access<a class="headerlink" href="#multigpu-partition-access" title="Permalink to this headline">¶</a></h3>
 <p>If you require access to the multigpu partition, you will need to download and fill out the multigpu partition application and then attach
 the form to a general <a class="reference external" href="https://northeastern.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default">Research Computing ServiceNow request</a>.
 Your application will be reviewed by the Research Computing team and two faculty members.
@@ -384,7 +415,7 @@ You can find the application and how to submit it in the Policies section on the
 <a class="reference external" href="https://rc.northeastern.edu/files/2020/02/access_request_multigpu.docx">RC website</a>.</p>
 </div>
 <div class="section" id="long-partition-access">
-<h4>long Partition Access<a class="headerlink" href="#long-partition-access" title="Permalink to this headline">¶</a></h4>
+<h3>long Partition Access<a class="headerlink" href="#long-partition-access" title="Permalink to this headline">¶</a></h3>
 <p>The long partition is designed to meet the needs of researchers who have code that needs to run longer than 24hrs and that cannot be checkpointed.
 To request access, you must submit a general <a class="reference external" href="https://northeastern.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default">Research Computing ServiceNow request</a>.
 and detail your need for access to the long partition, including the software that you are using.
@@ -400,11 +431,10 @@ You should provide the following information in your request:</p>
 </ul>
 </div>
 </div>
-</div>
 <div class="section" id="software-overview">
 <h2>Software overview<a class="headerlink" href="#software-overview" title="Permalink to this headline">¶</a></h2>
 <p>Discovery has a number of software applications that are available for you to load and use using a module system.
-Before requesting software or installing software locally to your Path, you should always check the available
+Before requesting software or installing software locally to your path, you should always check the available
 software modules on Discovery by using the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> command. See <a class="reference internal" href="../using-discovery/modules.html#using-module"><span class="std std-ref">Using Module</span></a> for more information.</p>
 </div>
 </div>

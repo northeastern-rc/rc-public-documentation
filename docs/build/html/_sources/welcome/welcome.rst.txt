@@ -30,13 +30,13 @@ You can also find information on how to use Linux on sites such as Code Academy.
 
 Hardware overview
 =================
-The Discovery cluster provides you with access to over 20,000 CPU cores and over 200 GPUs. Discovery is connected
+The Discovery cluster provides you with access to over 24,000 CPU cores and over 200 GPUs. Discovery is connected
 to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer, and Discovery
 provides 3 PB of available storage on a high-performance GPFS parallel filesystem.
 Compute nodes are connected with either 10 GbE or a high-performance HDR100 InfiniBand (IB) interconnect
 running at 100 Gbps, supporting all types and scales of computational workloads.
 Full HDR IB connections (200 Gbps) are also available, if needed.
-See the table below for details on CPU types, cores per node, and number of cores.
+See the tables below for details on CPUs and GPUs that are available on Discovery.
 
 .. list-table::
   :widths: 40 10 10 10
@@ -63,10 +63,31 @@ See the table below for details on CPU types, cores per node, and number of core
     - 128
     - 7168
 
+.. list-table::
+  :widths: 40 40
+  :header-rows: 1
+
+  * - GPU Type
+    - Number of nodes/GPUs
+  * - k20m
+    - 23 nodes with 1 GPU each
+  * - k40m
+    - 16 nodes with 1 GPU each
+  * - k80
+    - 8 nodes with 8 GPUs each
+  * - p100
+    - 12 nodes with 4 GPUs each
+  * - v100
+    - 4 nodes with 2 GPUs each
+  * - v100-sxm2
+    - 24 nodes with 4 GPUs each  
+
+
 .. _partition_names:
 
 Partitions
-++++++++++
+==========
+:sub:`Updated February 6, 2020`
 
 .. note::
    As of February 2020, the partition names were updated. You should refer to the table below for
@@ -202,5 +223,5 @@ You should provide the following information in your request:
 Software overview
 =================
 Discovery has a number of software applications that are available for you to load and use using a module system.
-Before requesting software or installing software locally to your Path, you should always check the available
+Before requesting software or installing software locally to your path, you should always check the available
 software modules on Discovery by using the ``module avail`` command. See :ref:`using_module` for more information.

@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using Globus &mdash; Northeastern University Research Computing 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction to Open OnDemand (OOD)" href="../using-ood/introduction.html" />
+    <link rel="prev" title="Installing Software" href="software.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/NU_logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Get Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using Globus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#globus-account-set-up">Globus Account Set Up</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-and-linking-a-new-account-identity-optional">Creating and linking a new account identity (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#install-globus-connect">Install Globus Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-gloubs">Working with Gloubs</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Northeastern University Research Computing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Using Globus</li>
+    
+    
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-globus">
+<span id="id1"></span><h1>Using Globus<a class="headerlink" href="#using-globus" title="Permalink to this headline">¶</a></h1>
+<p>Globus is a data management system that you can use to transfer and share files.
+Northeastern has a subscription to Globus, and you can setup a Globus account with
+your myNortheastern credentials. If you have another account, either personal or
+through another institution, you can also link your accounts.</p>
+<div class="section" id="globus-account-set-up">
+<h2>Globus Account Set Up<a class="headerlink" href="#globus-account-set-up" title="Permalink to this headline">¶</a></h2>
+<p>Use the following instructions to setup an account with Globus using your myNortheastern credentials.</p>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://www.globus.org">Globus</a>.</p></li>
+<li><p>Click Log In.</p></li>
+<li><p>From the Use your existing organizational login, select Northeastern University, and then click Continue.</p></li>
+<li><p>Enter your myNortheastern username and password.</p></li>
+<li><p>If you do not have a previous Globus account, click Continue. If you have a previous account, click Link to existing account.</p></li>
+<li><p>Check the agreement checkbox, and then click Continue.</p></li>
+<li><p>Click Allow to give Globus permissions to access your files.</p></li>
+</ol>
+<p>You will then be able to access the <a class="reference external" href="https://app.globus.org">Globus File Manager app</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you received an account identity that includes your NUID number
+(for example <a class="reference external" href="mailto:000123456&#37;&#52;&#48;northeastern&#46;edu">000123456<span>&#64;</span>northeastern<span>&#46;</span>edu</a>), you can follow the “Creating and linking
+a new account identity” instructions below to get a different account identity if
+you want a more user-friendly account identity. You can then link the two accounts together.</p>
+</div>
+<div class="section" id="creating-and-linking-a-new-account-identity-optional">
+<h3>Creating and linking a new account identity (Optional)<a class="headerlink" href="#creating-and-linking-a-new-account-identity-optional" title="Permalink to this headline">¶</a></h3>
+<p>If you created an account through the Northeastern University existing organizational
+login and received a username that includes your NUID, you can create a new identity
+with a different username and then link the two accounts together. A username that you have selected,
+as opposed to one with your NUID, can make it easier for you to remember your login credentials.</p>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://www.globus.org">Globus</a>.</p></li>
+<li><p>Click Log In.</p></li>
+<li><p>Click Globus ID to sign in.</p></li>
+<li><p>Click Need a Globus ID? Sign up.</p></li>
+<li><p>Enter your Globus ID information.</p></li>
+<li><p>Enter the verification code that Globus sends to your email.</p></li>
+<li><p>Click Link to an existing account to link this new account with your primary account.</p></li>
+<li><p>Select Northeastern University from the dropdown box, and click Continue to be taken to the Northeastern University single sign on page.</p></li>
+<li><p>Enter your myNortheastern username and password.</p></li>
+</ol>
+<p>You should now be able to see your two accounts linked in the Account section on the <a class="reference external" href="https://app.globus.org/account/identities">Globus web app</a>.</p>
+</div>
+</div>
+<div class="section" id="install-globus-connect">
+<h2>Install Globus Connect<a class="headerlink" href="#install-globus-connect" title="Permalink to this headline">¶</a></h2>
+<p>Use Globus Connect Personal (GCP) to use your personal laptop as an endpoint.
+You first need to install GCP using the following procedure.
+You need to be logged into Globus before you can install GCP.</p>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://app.globus.org/file-manager/gcp">Globus File Manager</a>.</p></li>
+<li><p>Enter a name for your endpoint in the Endpoint Display Name field.</p></li>
+<li><p>Click Generate Setup Key to generate a setup key for your endpoint.</p></li>
+<li><p>Click the Copy icon next to the setup key that was generated to copy the key to your clipboard. You will need this key during the installation of GCP in step 6.</p></li>
+<li><p>Click the appropriate OS icon for your computer to download the installation file.</p></li>
+<li><p>After the installation file has been downloaded to your computer, double click on the file to launch the installer.</p></li>
+</ol>
+<p>Accept the defaults on the install wizard. After the install completes, you can then use your laptop as an endpoint within Globus.</p>
+</div>
+<div class="section" id="working-with-gloubs">
+<h2>Working with Gloubs<a class="headerlink" href="#working-with-gloubs" title="Permalink to this headline">¶</a></h2>
+<p>To access the Northeastern endpoint on Globus, on the Globus web app, click File Manager, then in the Collection text box, type Northeastern.
+The Northeastern endpoint is <code class="docutils literal notranslate"><span class="pre">northeastern#discovery</span></code>.</p>
+<p>Globus provides detailed instructions and test files for you to practice with.
+These are free for you to access and use. We encourage you to use the test files to become familiar with the Globus interface.
+You can access the Globus documentation and training files <a class="reference external" href="https://docs.globus.org/how-to/">here</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../using-ood/introduction.html" class="btn btn-neutral float-right" title="Introduction to Open OnDemand (OOD)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="software.html" class="btn btn-neutral float-left" title="Installing Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2020, Northeastern University Research Computing
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

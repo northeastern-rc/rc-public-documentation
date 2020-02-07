@@ -188,7 +188,7 @@ For in-depth information on Slurm, see <a class="reference external" href="https
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sinfo</span> <span class="pre">&lt;options&gt;</span></code></p></td>
-<td><p>View partition and node information</p></td>
+<td><p>View partition and node information. Use option -a to view all partitions.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">squeue</span></code></p></td>
 <td><p>View details about jobs being run on the cluster</p></td>
@@ -227,15 +227,6 @@ See <a class="reference internal" href="slurmexamples.html#slurm-examples"><span
 If your job does not complete within the requested time limit,
 Slurm will automatically terminate the job.
 See <a class="reference internal" href="../welcome/welcome.html#partition-names"><span class="std std-ref">Partitions</span></a> for the most up-to-date partition names and parameters.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Slurm looks at the time you’ve requested when scheduling jobs.
-If you request less time, Slurm may be able to schedule your job sooner.
-For example, if there is a high priority job that requires a specific number of nodes,
-and Slurm anticipates that those nodes will be available in 6 hours,
-Slurm will let lower priority jobs run if they will complete within
-the 6 hours the higher priority job has to wait for the specific nodes to be available.</p>
 </div>
 </div>
 </div>

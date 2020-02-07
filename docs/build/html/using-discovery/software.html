@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to Open OnDemand (OOD)" href="../using-ood/introduction.html" />
-    <link rel="prev" title="Slurm examples" href="slurmexamples.html" /> 
+    <link rel="next" title="Using Slurm" href="usingslurm.html" />
+    <link rel="prev" title="Using Module" href="modules.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,10 +95,11 @@
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="slurmexamples.html">Slurm examples</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -164,13 +165,20 @@
             
   <div class="section" id="installing-software">
 <h1>Installing Software<a class="headerlink" href="#installing-software" title="Permalink to this headline">¶</a></h1>
-<p>There are a few ways you can install software for your own use on Discovery. You should always first
+<p>Before requesting software or installing software locally to your path, you should always first
 check to see if the software package that you need is already available through one of the preinstalled
-modules on Discovery. See <a class="reference internal" href="modules.html#using-module"><span class="std std-ref">Using Module</span></a> for how to view and load software modules to your path.</p>
+modules on Discovery. The Research Computing team adds new modules regularly, so first use the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> command
+to view the most up to date list. See <a class="reference internal" href="modules.html#using-module"><span class="std std-ref">Using Module</span></a> for working with module.</p>
 <p>If you have a software request or need help with installing a software package, please submit a ServiceNow
 software request ticket. Be aware that there might be packages that cannot be installed on Discovery due
 to incompatibility with the hardware on Discovery.</p>
-<p>We recommend that you try using Spack <a class="reference external" href="https://spack.io/_">https://spack.io/_</a> to install software locally to your path.</p>
+<p>We recommend that you try using Spack <a class="reference external" href="https://spack.io/">https://spack.io/</a> to install software locally to your path. Spack is a tool that conveniently installs
+software packages to your local path. Please refer to the Spack documentation for the latest information on using Spack.</p>
+<p>If you want to use <code class="docutils literal notranslate"><span class="pre">make</span></code> to add software locally to you path you must first download the
+software package from its source (such as a webpage or Github), and you need to unpack it or unzip it, if it is archived/zipped.
+Then, you must set the installation path to a directory where you have write access on Discovery, such as your home directory.
+You can use <code class="docutils literal notranslate"><span class="pre">./configure</span></code> to do this, such as  <code class="docutils literal notranslate"><span class="pre">./configure</span> <span class="pre">--prefix=/home/&lt;yourusername&gt;/software</span></code>
+After you have set the install path, you need to compile the code using <code class="docutils literal notranslate"><span class="pre">make</span></code> and then install the software using <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>.</p>
 </div>
 
 
@@ -181,10 +189,10 @@ to incompatibility with the hardware on Discovery.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../using-ood/introduction.html" class="btn btn-neutral float-right" title="Introduction to Open OnDemand (OOD)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="usingslurm.html" class="btn btn-neutral float-right" title="Using Slurm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="slurmexamples.html" class="btn btn-neutral float-left" title="Slurm examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-left" title="Using Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

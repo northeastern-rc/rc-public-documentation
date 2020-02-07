@@ -22,7 +22,7 @@ The following table highlights some common Slurm commands.
    * - Slurm Command
      - Function
    * - ``sinfo <options>``
-     - View partition and node information
+     - View partition and node information. Use option -a to view all partitions.
    * - ``squeue``
      - View details about jobs being run on the cluster
    * - ``srun``
@@ -56,11 +56,3 @@ See :ref:`slurm_examples` for more information on writing scheduler scripts.
   If your job does not complete within the requested time limit,
   Slurm will automatically terminate the job.
   See :ref:`partition_names` for the most up-to-date partition names and parameters.
-
-.. tip::
-   Slurm looks at the time you’ve requested when scheduling jobs.
-   If you request less time, Slurm may be able to schedule your job sooner.
-   For example, if there is a high priority job that requires a specific number of nodes,
-   and Slurm anticipates that those nodes will be available in 6 hours,
-   Slurm will let lower priority jobs run if they will complete within
-   the 6 hours the higher priority job has to wait for the specific nodes to be available.

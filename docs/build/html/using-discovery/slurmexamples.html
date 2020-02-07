@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to Open OnDemand (OOD)" href="../using-ood/introduction.html" />
+    <link rel="next" title="Installing Software" href="software.html" />
     <link rel="prev" title="Using Slurm" href="usingslurm.html" /> 
 </head>
 
@@ -105,8 +105,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#task-job-one-node-and-additional-memory">8-task job, one node and additional memory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task-job-multiple-nodes-and-additional-memory">8-task job, multiple nodes and additional memory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task-job-multiple-nodes-additional-memory-and-exclusive">8-task job, multiple nodes, additional memory, and exclusive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-arrays">Using Arrays</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -273,6 +275,16 @@ high I/O requirements, you can use the exclusive flag.:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="using-arrays">
+<h2>Using Arrays<a class="headerlink" href="#using-arrays" title="Permalink to this headline">¶</a></h2>
+<p>Using a job array can often help in situations where you need to submit multiple similar jobs.
+To use an array with your jobs, in your sbatch script, use the <code class="docutils literal notranslate"><span class="pre">array=</span></code> option.</p>
+<p>For example, if you want to run a 10 job array, one job at a time, you would add the following
+line to your sbatch script:</p>
+<p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--array=1-10%1</span></code></p>
+<p>Go <cite>here &lt;https://slurm.schedmd.com/job_array.html&gt;_</cite> for more information about using the
+<code class="docutils literal notranslate"><span class="pre">array=</span></code> option.</p>
+</div>
 </div>
 
 
@@ -283,7 +295,7 @@ high I/O requirements, you can use the exclusive flag.:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../using-ood/introduction.html" class="btn btn-neutral float-right" title="Introduction to Open OnDemand (OOD)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="software.html" class="btn btn-neutral float-right" title="Installing Software" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="usingslurm.html" class="btn btn-neutral float-left" title="Using Slurm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

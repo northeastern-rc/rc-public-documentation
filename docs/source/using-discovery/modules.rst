@@ -4,8 +4,8 @@
 Using Module
 *************
 
-The module system on Discovery includes many commonly used scientific software packages that you can load in your path when you need it
-and unload it when you no longer need it.
+The module system on Discovery includes many commonly used scientific software packages
+that you can load in your path when you need it and unload it when you no longer need it.
 
 Use the ``module avail`` command to show a list of the most currently available software on Discovery.
 
