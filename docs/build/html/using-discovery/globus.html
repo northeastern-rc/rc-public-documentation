@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Introduction to Open OnDemand (OOD)" href="../using-ood/introduction.html" />
-    <link rel="prev" title="Installing Software" href="software.html" /> 
+    <link rel="prev" title="Transferring Data" href="transferringdata.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,17 +95,17 @@
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="slurmexamples.html">Slurm examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using Globus</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#globus-account-set-up">Globus Account Set Up</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#creating-and-linking-a-new-account-identity-optional">Creating and linking a new account identity (Optional)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#install-globus-connect">Install Globus Connect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#working-with-gloubs">Working with Gloubs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-globus">Working with Globus</a></li>
 </ul>
 </li>
 </ul>
@@ -182,12 +182,12 @@ through another institution, you can also link your accounts.</p>
 <p>Use the following instructions to setup an account with Globus using your myNortheastern credentials.</p>
 <ol class="arabic simple">
 <li><p>Go to <a class="reference external" href="https://www.globus.org">Globus</a>.</p></li>
-<li><p>Click Log In.</p></li>
-<li><p>From the Use your existing organizational login, select Northeastern University, and then click Continue.</p></li>
+<li><p>Click <strong>Log In</strong>.</p></li>
+<li><p>From the Use your existing organizational login, select <strong>Northeastern University</strong>, and then click <strong>Continue</strong>.</p></li>
 <li><p>Enter your myNortheastern username and password.</p></li>
-<li><p>If you do not have a previous Globus account, click Continue. If you have a previous account, click Link to existing account.</p></li>
-<li><p>Check the agreement checkbox, and then click Continue.</p></li>
-<li><p>Click Allow to give Globus permissions to access your files.</p></li>
+<li><p>If you do not have a previous Globus account, click <strong>Continue</strong>. If you have a previous account, click Link to existing account.</p></li>
+<li><p>Check the agreement checkbox, and then click <strong>Continue</strong>.</p></li>
+<li><p>Click <strong>Allow</strong> to give Globus permissions to access your files.</p></li>
 </ol>
 <p>You will then be able to access the <a class="reference external" href="https://app.globus.org">Globus File Manager app</a>.</p>
 <div class="admonition note">
@@ -205,13 +205,13 @@ with a different username and then link the two accounts together. A username th
 as opposed to one with your NUID, can make it easier for you to remember your login credentials.</p>
 <ol class="arabic simple">
 <li><p>Go to <a class="reference external" href="https://www.globus.org">Globus</a>.</p></li>
-<li><p>Click Log In.</p></li>
-<li><p>Click Globus ID to sign in.</p></li>
-<li><p>Click Need a Globus ID? Sign up.</p></li>
+<li><p>Click <strong>Log In</strong>.</p></li>
+<li><p>Click <strong>Globus ID</strong> to sign in.</p></li>
+<li><p>Click <strong>Need a Globus ID? Sign up</strong>.</p></li>
 <li><p>Enter your Globus ID information.</p></li>
 <li><p>Enter the verification code that Globus sends to your email.</p></li>
-<li><p>Click Link to an existing account to link this new account with your primary account.</p></li>
-<li><p>Select Northeastern University from the dropdown box, and click Continue to be taken to the Northeastern University single sign on page.</p></li>
+<li><p>Click <strong>Link to an existing account</strong> to link this new account with your primary account.</p></li>
+<li><p>Select Northeastern University from the dropdown box, and click <strong>Continue</strong> to be taken to the Northeastern University single sign on page.</p></li>
 <li><p>Enter your myNortheastern username and password.</p></li>
 </ol>
 <p>You should now be able to see your two accounts linked in the Account section on the <a class="reference external" href="https://app.globus.org/account/identities">Globus web app</a>.</p>
@@ -225,18 +225,20 @@ You need to be logged into Globus before you can install GCP.</p>
 <ol class="arabic simple">
 <li><p>Go to <a class="reference external" href="https://app.globus.org/file-manager/gcp">Globus File Manager</a>.</p></li>
 <li><p>Enter a name for your endpoint in the Endpoint Display Name field.</p></li>
-<li><p>Click Generate Setup Key to generate a setup key for your endpoint.</p></li>
-<li><p>Click the Copy icon next to the setup key that was generated to copy the key to your clipboard. You will need this key during the installation of GCP in step 6.</p></li>
+<li><p>Click <strong>Generate Setup Key</strong> to generate a setup key for your endpoint.</p></li>
+<li><p>Click the <strong>Copy</strong> icon next to the setup key that was generated to copy the key to your clipboard. You will need this key during the installation of GCP in step 6.</p></li>
 <li><p>Click the appropriate OS icon for your computer to download the installation file.</p></li>
 <li><p>After the installation file has been downloaded to your computer, double click on the file to launch the installer.</p></li>
 </ol>
 <p>Accept the defaults on the install wizard. After the install completes, you can then use your laptop as an endpoint within Globus.</p>
 </div>
-<div class="section" id="working-with-gloubs">
-<h2>Working with Gloubs<a class="headerlink" href="#working-with-gloubs" title="Permalink to this headline">¶</a></h2>
-<p>To access the Northeastern endpoint on Globus, on the Globus web app, click File Manager, then in the Collection text box, type Northeastern.
+<div class="section" id="working-with-globus">
+<h2>Working with Globus<a class="headerlink" href="#working-with-globus" title="Permalink to this headline">¶</a></h2>
+<p>To access the Northeastern endpoint on Globus, on the Globus web app, click <strong>File Manager</strong>, then in the Collection text box, type Northeastern.
 The Northeastern endpoint is <code class="docutils literal notranslate"><span class="pre">northeastern#discovery</span></code>.</p>
-<p>Globus provides detailed instructions and test files for you to practice with.
+<p>The Globus Command Line Interface (CLI) tool allows you to access Globus from a command line. It is a stand-alone app that requires a separate downloaded
+and installation. Please refer to the <a class="reference external" href="https://docs.globus.org/cli/">Globus CLI documentation</a> for working with this app.</p>
+<p>Globus also provides detailed instructions and test files for you to practice with.
 These are free for you to access and use. We encourage you to use the test files to become familiar with the Globus interface.
 You can access the Globus documentation and training files <a class="reference external" href="https://docs.globus.org/how-to/">here</a>.</p>
 </div>
@@ -253,7 +255,7 @@ You can access the Globus documentation and training files <a class="reference e
         <a href="../using-ood/introduction.html" class="btn btn-neutral float-right" title="Introduction to Open OnDemand (OOD)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="software.html" class="btn btn-neutral float-left" title="Installing Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="transferringdata.html" class="btn btn-neutral float-left" title="Transferring Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
