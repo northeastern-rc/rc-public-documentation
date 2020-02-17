@@ -39,48 +39,60 @@ Full HDR IB connections (200 Gbps) are also available, if needed.
 See the tables below for details on CPUs and GPUs that are available on Discovery.
 
 .. list-table::
-  :widths: 40 10 10 10
+  :widths: 40 10 10 10 10
   :header-rows: 1
 
   * - CPU Type
     - Cores per Node
     - Number of Nodes
     - Total Cores
-  * - E5-2680v2@2.8 GHz
+    - RAM per node
+  * - E5-2680v2\@\2.8 GHz
     - 20
     - 76
     - 1520
-  * - E5-2690v3@2.6 GHz
+    - 64GB
+  * - E5-2690v3\@\2.6 GHz
     - 24
     - 184
     - 4416
-  * - E5-2680v4@2.4 GHz
+    - 128GB
+  * - E5-2680v4\@\2.4 GHz
     - 28
     - 408
     - 11424
-  * - Platinum 8276@2.2 GHz
+    - 256GB
+  * - Platinum 8276\@\2.2 GHz
     - 56
     - 128
     - 7168
+    - 192GB
 
 .. list-table::
-  :widths: 40 40
+  :widths: 40 40 40
   :header-rows: 1
 
   * - GPU Type
     - Number of nodes/GPUs
+    - CPU Type
   * - k20m
     - 23 nodes with 1 GPU each
+    - E5-2650\@\2.00GHz
   * - k40m
     - 16 nodes with 1 GPU each
+    - E5-2690v3\@\2.60GHz
   * - k80
     - 8 nodes with 8 GPUs each
+    - E5-2680v4\@\2.40GHz
   * - p100
     - 12 nodes with 4 GPUs each
+    - E5-2680v4\@\2.40GHz
   * - v100
     - 4 nodes with 2 GPUs each
+    - AMD EPYC 7351\@\2.60GHz
   * - v100-sxm2
-    - 24 nodes with 4 GPUs each  
+    - 24 nodes with 4 GPUs each
+    - Intel Gold 6132\@\2.60Ghz
 
 
 .. _partition_names:
@@ -100,7 +112,11 @@ Each partition consists of several processor architectures and different compute
 There are also partitions that are reserved for individual faculty members.
 Three partitions, long, large, and multigpu, are accessible only after application approval
 (details and application forms can be found on the RC website: https://rc.northeastern.edu/policy/).
-NOTE: In the following table, the Running Jobs and Submitted Jobs numbers are Per User/Per Research Group.
+
+.. note::
+   In the following table, the Running Jobs and Submitted Jobs numbers are Per User/Per Research Group.
+   RAM limit is per user, across all jobs.
+
 
 .. list-table::
    :widths: 20 20 20 20 20 20 20 20 20

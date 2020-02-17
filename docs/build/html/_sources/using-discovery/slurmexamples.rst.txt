@@ -121,5 +121,5 @@ line to your sbatch script:
 
 ``#SBATCH --array=1-10%1``
 
-Go `here <https://slurm.schedmd.com/job_array.html>_` for more information about using the
+Go `here <https://slurm.schedmd.com/job_array.html>`_ for more information about using the
 ``array=`` option.

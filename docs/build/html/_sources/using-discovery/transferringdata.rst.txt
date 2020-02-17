@@ -6,7 +6,7 @@ You are not allowed to transfer data from any other node.
 The node name is ``<username>@xfer.discovery.neu.edu:`` where ``<username>`` is your Northeastern username.
 
 You can also transfer files using Globus. This is highly recommended if you need to transfer large amounts of data.
-See :ref:`using_globus_` for more information. 
+See :ref:`using_globus` for more information. 
 
 .. caution::
 

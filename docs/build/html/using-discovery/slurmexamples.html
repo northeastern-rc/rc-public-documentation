@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installing Software" href="software.html" />
+    <link rel="next" title="Transferring Data" href="transferringdata.html" />
     <link rel="prev" title="Using Slurm" href="usingslurm.html" /> 
 </head>
 
@@ -95,7 +95,7 @@
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Slurm examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#core-job">1-core job</a></li>
@@ -108,7 +108,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#using-arrays">Using Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -282,7 +283,7 @@ To use an array with your jobs, in your sbatch script, use the <code class="docu
 <p>For example, if you want to run a 10 job array, one job at a time, you would add the following
 line to your sbatch script:</p>
 <p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--array=1-10%1</span></code></p>
-<p>Go <cite>here &lt;https://slurm.schedmd.com/job_array.html&gt;_</cite> for more information about using the
+<p>Go <a class="reference external" href="https://slurm.schedmd.com/job_array.html">here</a> for more information about using the
 <code class="docutils literal notranslate"><span class="pre">array=</span></code> option.</p>
 </div>
 </div>
@@ -295,7 +296,7 @@ line to your sbatch script:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="software.html" class="btn btn-neutral float-right" title="Installing Software" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="transferringdata.html" class="btn btn-neutral float-right" title="Transferring Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="usingslurm.html" class="btn btn-neutral float-left" title="Using Slurm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -76,4 +76,4 @@ You should never launch any jobs from the login node ``[username@login-00~]``. A
 
 - To move to a compute node, at the command prompt type ``srun --pty /bin/bash``
 
-- See :ref:`submitting_jobs` for information about using ``sbatch``.
+- See :ref:`batch_jobs` for information about using ``sbatch``.

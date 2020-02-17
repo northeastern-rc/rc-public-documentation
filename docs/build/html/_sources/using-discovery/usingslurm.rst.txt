@@ -4,16 +4,22 @@
 Using Slurm
 ***********
 
-Slurm (Simple Linux Utility Resource Management) is the scheduling software that
-you use to schedule your jobs on Discovery.
-:ref:`slurm_examples` provides you with a few simple examples to help get you familiar
+Slurm (Simple Linux Utility Resource Management) is the software on Discovery
+that lets you do the following:
+
+* view information about the cluster
+* schedule your jobs on Discovery
+* monitor your jobs
+
+:ref:`slurm_examples` provides you with a few examples to help get you familiar
 with Slurm and be able to submit and monitor basic jobs on Discovery.
 For in-depth information on Slurm, see https://slurm.schedmd.com/.
 
-Commonly used Slurm commands
-============================
+Viewing Cluster Information
+===========================
 
-The following table highlights some common Slurm commands.
+Use the following commands to view information about the cluster. This information can help you better understand the
+hardware that is available in order to customize your scripts.
 
 .. list-table::
    :widths: 20 100
@@ -23,23 +29,50 @@ The following table highlights some common Slurm commands.
      - Function
    * - ``sinfo <options>``
      - View partition and node information. Use option -a to view all partitions.
-   * - ``squeue``
-     - View details about jobs being run on the cluster
+   * - ``smap <options>``
+     - View details about the cluster in a visual format
+
+.. _submitting_jobs:
+
+Controlling Jobs
+================
+
+There are two main commands for submitting jobs to Discovery: ``srun`` and ``sbatch``.
+To run a job interactively, use ``srun``. To submit a job to run in the back ground with a script, use ``sbatch``.
+
+.. list-table::
+   :widths: 20 100
+   :header-rows: 1
+
+   * - Slurm Command
+     - Function
    * - ``srun``
      - Run an interactive job on the cluster
    * - ``sbatch <scriptname.script>``
      - Submit a script to the scheduler for running a job
    * - ``scancel <jobid>``
      - Cancel a pending or running job on the cluster
-   * - ``seff``
-     - Reports the computational efficiency of your calculations
 
-.. _submitting_jobs:
-
-Submitting Jobs
+Monitoring Jobs
 ===============
 
-You use Slurm to submit jobs to Discovery. Slurm commands allow you to specify the
+.. list-table::
+   :widths: 20 100
+   :header-rows: 1
+
+   * - Slurm Command
+     - Function
+   * - ``seff <jobid>``
+     - Reports the computational efficiency of your calculations
+   * - ``squeue``
+     - View job status
+
+.. _batch_jobs:
+
+Batch Jobs
+~~~~~~~~~~
+
+You use the ``sbatch`` command with a batch script to specify the
 resources you need to run your jobs, such as which nodes you want to run your jobs
 on and how much memory you’ll need. Slurm then schedules your job based on the
 availability of the resources you’ve specified.
