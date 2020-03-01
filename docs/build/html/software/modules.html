@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using OOD’s Interactive Apps &mdash; Northeastern University Research Computing 0.0.2 documentation</title>
+  <title>Using Module &mdash; Northeastern University Research Computing 0.0.2 documentation</title>
   
 
   
@@ -35,7 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Using OOD’s File Explorer" href="fileexplore.html" /> 
+    <link rel="next" title="Installing Software" href="software.html" />
+    <link rel="prev" title="Using Globus" href="../using-discovery/globus.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,15 +100,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-commands">Module commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Open OnDemand (OOD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fileexplore.html">Using OOD’s File Explorer</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Using OOD’s Interactive Apps</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
 </ul>
 
             
@@ -153,7 +157,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Using OOD’s Interactive Apps</li>
+      <li>Using Module</li>
     
     
 
@@ -165,35 +169,56 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="using-ood-s-interactive-apps">
-<span id="accessing-ood"></span><h1>Using OOD’s Interactive Apps<a class="headerlink" href="#using-ood-s-interactive-apps" title="Permalink to this headline">¶</a></h1>
-<p>There are a number of applications that you can access and use through the OOD web portal.
-When you select an application and click launch, the scheduler (Slurm) allocates a compute node with
-a predetermined number of cores and amount of memory. The default time for running any of the
-applications is one hour. It is recommended that you keep the default. If you ask for more than one
-hour, you will need to wait for Slurm to allocate a  resource that can run for your requested time,
-which could take a long time to be allocated, depending on how busy the cluster is.</p>
-<ol class="arabic simple">
-<li><p>In a web browser, go to ood.discovery.neu.edu. If prompted, enter your myNortheastern username and password.</p></li>
-<li><p>Select <strong>Interactive Apps</strong>, then select the application you want to use.</p></li>
-<li><p>Accept the default of 1 hour, and click <strong>Launch</strong>. You might have to wait a
-minute or two for a compute node to be allocated with your requested time and resource.</p></li>
-</ol>
+  <div class="section" id="using-module">
+<span id="id1"></span><h1>Using Module<a class="headerlink" href="#using-module" title="Permalink to this headline">¶</a></h1>
+<p>The module system on Discovery includes many commonly used scientific software packages
+that you can load in your path when you need it and unload it when you no longer need it.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> command to show a list of the most currently available software on Discovery.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you request more than one hour, you might have to wait much longer for a compute node to be allocated to you.</p>
+<p>Some modules might conflict with each other, resulting in the software not behaving as expected.
+Also, if there are multiple versions of software, and you load more than one version of the software,
+only the latest version will be used. Use <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code> to view the modules you currently have loaded in your path.</p>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>If you selected Jupyter Notebook, click <strong>Connect to Jupyter</strong>.
-A Jupyter Notebook opens in a new tab on your browser.</p></li>
-</ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>On the Jupyter Notebook Home tab, click <strong>New</strong>, then select the kernel you want to use.
-Your selected kernel opens in a new tab on your browser. Click the <strong>Running</strong> tab to see a
-list of what Notebooks you already have running.
-If you already have a Notebook saved to your home directory, on the <strong>Files</strong> tab,
-click the name of the file to restart the Notebook in a new tab on your browser.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">which</span></code> command to display which version of a software package you have in your path.
+For example, <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code> will display the version of python that you have in your path.</p>
+</div>
+<div class="section" id="module-commands">
+<h2>Module commands<a class="headerlink" href="#module-commands" title="Permalink to this headline">¶</a></h2>
+<p>The following are common module commands that are useful for interacting with software packages on Discovery.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Module Command</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code></p></td>
+<td><p>View a list of all of the available software packages on Discovery that you can load</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code></p></td>
+<td><p>Displays a list of the software packages currently loaded in your path</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
+<td><p>View the details of a software package</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
+<td><p>Load a software package into your environment</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">unload</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
+<td><p>Remove a single software package from your environment</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">purge</span></code></p></td>
+<td><p>Removes all of the loaded software packages from your environment</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -205,8 +230,10 @@ click the name of the file to restart the Notebook in a new tab on your browser.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="software.html" class="btn btn-neutral float-right" title="Installing Software" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="fileexplore.html" class="btn btn-neutral float-left" title="Using OOD’s File Explorer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="../using-discovery/globus.html" class="btn btn-neutral float-left" title="Using Globus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

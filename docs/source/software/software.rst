@@ -38,3 +38,55 @@ software package from its source (such as a webpage or Github), and you need to 
 Then, you must set the installation path to a directory where you have write access on Discovery, such as your home directory.
 You can use ``./configure`` to do this, such as  ``./configure --prefix=/home/<yourusername>/software``
 After you have set the install path, you need to compile the code using ``make`` and then install the software using ``make install``.
+
+Creating a Python Environment
+==============================
+
+Using a locally installed conda virtual environment is highly recommended so that you can install the specific packages that you need.
+You can also have more than one environment with different packages for testing purposes.
+
+1. To check what version of Python you have installed, type ``which python``.
+2. To load anaconda, type ``module load anaconda3/3.7``.
+3. To create your environment, type ``conda create -n <yourenvironmentname> python3.7 anaconda``, where <yourenvironmentname> is the name you want to give your environment. Tip: to see a list of all of your conda environments, type ``conda info -e``.
+4. Follow the prompts to complete the conda install.
+5. To activate your conda environment, type ``source activate <yourenvironmentname>``. Note that ``conda activate`` will not work on Discovery.
+6. To install a specific package, type ``conda install -n <yourenvironmentname> [package]``.
+7. To deactivate the current, active conda environment, type ``conda deactivate``.
+8. To delete a conda environment and all of its related packages, type ``conda remove -n <yourenvironmentname> --all``.
+
+Installing Matlab toolboxes
+===========================
+
+Use the following procedure if you need to install a Matlab toolbox:
+
+1. Download the toolbox from its source website.
+2. Connect to Discovery.
+3. Create a directory in your /home directory. We recommend creating a directory called ``matlab``::
+
+    mkdir /home/<username>/matlab  #where <username> is your username
+
+4. Go to the directory you just created::
+
+    cd /home/<username>/matlab
+
+5. Unzip the toolbox file::
+
+    unzip <toolboxname>
+
+6. Load Matlab::
+
+    module load matlab
+
+7. Start Matlab::
+
+    matlab
+
+8. Add the toolbox to your PATH::
+
+    addpath('/home/<username>/matlab/<toolbox>') #where <toolbox> is the name of the toolbox you just unzipped
+
+9. If this is a toolbox you want to use more than once, you should save it to your path::
+
+    savepath()
+
+10. You can now use the toolbox within Matlab. When you are done, type ``quit``.

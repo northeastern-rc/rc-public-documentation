@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Slurm examples &mdash; Northeastern University Research Computing 0.0.1 documentation</title>
+  <title>Slurm examples &mdash; Northeastern University Research Computing 0.0.2 documentation</title>
   
 
   
@@ -94,22 +94,30 @@
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Slurm examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#core-job">1-core job</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#core-job-and-additional-memory">1-core job and additional memory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#core-job-with-exclusive-use-of-a-node">1-core job with exclusive use of a node</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#example-parallel-job-scripts">Example Parallel Job Scripts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-job-one-node-and-additional-memory">8-task job, one node and additional memory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-job-multiple-nodes-and-additional-memory">8-task job, multiple nodes and additional memory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task-job-multiple-nodes-additional-memory-and-exclusive">8-task job, multiple nodes, additional memory, and exclusive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#srun-examples">SRUN Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sbatch-examples">SBATCH Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core-job">1-core job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#core-job-and-additional-memory">1-core job and additional memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#core-job-with-exclusive-use-of-a-node">1-core job with exclusive use of a node</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#example-parallel-job-scripts">Example Parallel Job Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#task-job-one-node-and-additional-memory">8-task job, one node and additional memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-job-multiple-nodes-and-additional-memory">8-task job, multiple nodes and additional memory</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#using-arrays">Using Arrays</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -175,11 +183,32 @@
             
   <div class="section" id="slurm-examples">
 <span id="id1"></span><h1>Slurm examples<a class="headerlink" href="#slurm-examples" title="Permalink to this headline">¶</a></h1>
-<p>The following are example job scripts for submitting to Slurm using the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>
-command. You should review these to have a general understanding of the types
+<p>You can submit jobs using <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>. <code class="docutils literal notranslate"><span class="pre">srun</span></code> is for submitting interactive jobs, while you use <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> with a script.
+You should review the examples on this page to have a general understanding of the types
 of jobs you can submit to the scheduler.</p>
+<p>Refer to the official Slurm documentation for more information about these
+commands and their options: <a class="reference external" href="https://slurm.schedmd.com">https://slurm.schedmd.com</a>.</p>
+<div class="section" id="srun-examples">
+<h2>SRUN Examples<a class="headerlink" href="#srun-examples" title="Permalink to this headline">¶</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">srun</span></code> to start an interactive job. Note that you need to use <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">&lt;yourusername&gt;</span></code> after you submit an interactive job
+to view the job.</p>
+<p>A simple <code class="docutils literal notranslate"><span class="pre">srun</span></code> example is to move to a compute node after you first log into Discovery.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srun</span> <span class="o">--</span><span class="n">pty</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+</pre></div>
+</div>
+<p>To allocate one node (N 1), one core (n 1) for 30 minutes with X11 forwarding on the short partition (p short), type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srun</span> <span class="o">-</span><span class="n">p</span> <span class="n">short</span> <span class="o">--</span><span class="n">pty</span> <span class="o">--</span><span class="n">export</span><span class="o">=</span><span class="n">ALL</span> <span class="o">-</span><span class="n">n</span> <span class="mi">1</span> <span class="o">-</span><span class="n">N</span> <span class="mi">1</span> <span class="o">--</span><span class="n">x11</span> <span class="o">--</span><span class="n">mem</span><span class="o">=</span><span class="mi">10</span><span class="n">Gb</span> <span class="o">--</span><span class="n">time</span><span class="o">=</span><span class="mi">00</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">00</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+</pre></div>
+</div>
+<p>When Discovery has maintenance, you can specify the <code class="docutils literal notranslate"><span class="pre">t2sd</span></code> (“time to shutdown”) script with the <code class="docutils literal notranslate"><span class="pre">--time</span></code> option along with your usual SRUN options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>srun --time=$( t2sd )
+</pre></div>
+</div>
+</div>
+<div class="section" id="sbatch-examples">
+<h2>SBATCH Examples<a class="headerlink" href="#sbatch-examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="core-job">
-<h2>1-core job<a class="headerlink" href="#core-job" title="Permalink to this headline">¶</a></h2>
+<h3>1-core job<a class="headerlink" href="#core-job" title="Permalink to this headline">¶</a></h3>
 <p>Run a 1-core job for 4 hours on the short partition:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH –nodes=1</span>
@@ -191,7 +220,7 @@ of jobs you can submit to the scheduler.</p>
 </div>
 </div>
 <div class="section" id="core-job-and-additional-memory">
-<h2>1-core job and additional memory<a class="headerlink" href="#core-job-and-additional-memory" title="Permalink to this headline">¶</a></h2>
+<h3>1-core job and additional memory<a class="headerlink" href="#core-job-and-additional-memory" title="Permalink to this headline">¶</a></h3>
 <p>The default memory per allocated core is 1GB. If your calculations try to use
 more memory than what is allocated, Slurm automatically terminates your job.
 You should request a specific amount of memory in your job script if your
@@ -208,7 +237,7 @@ requesting 100GB of memory (mem=100Gb).:</p>
 </div>
 </div>
 <div class="section" id="core-job-with-exclusive-use-of-a-node">
-<h2>1-core job with exclusive use of a node<a class="headerlink" href="#core-job-with-exclusive-use-of-a-node" title="Permalink to this headline">¶</a></h2>
+<h3>1-core job with exclusive use of a node<a class="headerlink" href="#core-job-with-exclusive-use-of-a-node" title="Permalink to this headline">¶</a></h3>
 <p>If you need exclusive use of a node, such as when you have a job that has high
 I/O requirements, you can use the exclusive flag. The example script below
 specifies exclusive use of 1 node in the short partition for four hours.:</p>
@@ -222,6 +251,7 @@ specifies exclusive use of 1 node in the short partition for four hours.:</p>
 </pre></div>
 </div>
 </div>
+</div>
 <div class="section" id="example-parallel-job-scripts">
 <h2>Example Parallel Job Scripts<a class="headerlink" href="#example-parallel-job-scripts" title="Permalink to this headline">¶</a></h2>
 <p>Parallel jobs should be used with code that is configured to use the reserved resources.
@@ -231,9 +261,8 @@ The default memory per allocated core is 1GB. If your calculations try to use mo
 memory than what is allocated, Slurm automatically terminates your job.
 You should request a specific amount of memory in your job script if your calculations
 need more memory than the default.</p>
-</div>
 <div class="section" id="task-job-one-node-and-additional-memory">
-<h2>8-task job, one node and additional memory<a class="headerlink" href="#task-job-one-node-and-additional-memory" title="Permalink to this headline">¶</a></h2>
+<h3>8-task job, one node and additional memory<a class="headerlink" href="#task-job-one-node-and-additional-memory" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --nodes=1</span>
 <span class="c1">#SBATCH --tasks-per-node=8</span>
@@ -247,7 +276,7 @@ need more memory than the default.</p>
 </div>
 </div>
 <div class="section" id="task-job-multiple-nodes-and-additional-memory">
-<h2>8-task job, multiple nodes and additional memory<a class="headerlink" href="#task-job-multiple-nodes-and-additional-memory" title="Permalink to this headline">¶</a></h2>
+<h3>8-task job, multiple nodes and additional memory<a class="headerlink" href="#task-job-multiple-nodes-and-additional-memory" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --nodes=4</span>
 <span class="c1">#SBATCH --tasks-per-node=2</span>
@@ -259,21 +288,6 @@ need more memory than the default.</p>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="task-job-multiple-nodes-additional-memory-and-exclusive">
-<h2>8-task job, multiple nodes, additional memory, and exclusive<a class="headerlink" href="#task-job-multiple-nodes-additional-memory-and-exclusive" title="Permalink to this headline">¶</a></h2>
-<p>If you need exclusive use of a node, such as when you have a job that has
-high I/O requirements, you can use the exclusive flag.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH --nodes=4</span>
-<span class="c1">#SBATCH --tasks-per-node=2</span>
-<span class="c1">#SBATCH --time=4:00:00</span>
-<span class="c1">#SBATCH --job-name=MyJobName</span>
-<span class="c1">#SBATCH --mem=100Gb</span>
-<span class="c1">#SBATCH --exclusive</span>
-<span class="c1">#SBATCH --partition=short</span>
-<span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
-</pre></div>
 </div>
 </div>
 <div class="section" id="using-arrays">

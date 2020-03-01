@@ -22,16 +22,22 @@ Connecting to Discovery
 You connect to Discovery using a `secure shell <https://www.ssh.com/ssh/protocol/>`_ program and initiate an SSH session to
 log into Discovery.
 
+
 Mac
 ~~~~
 Mac computers come with a Secure Shell (SSH) program called `Terminal <https://support.apple.com/guide/terminal/welcome/mac>`_
 that you use to connect to Discovery using SSH.
 
+.. note::
+   If you use Mac OS X version 10.8 or higher, and you use `XQuartz <https://www.xquartz.org/>`_ to do X11 forwarding, you should execute the following command in Terminal once before connecting to Discovery::
+
+      defaults write org.macosforge.xquartz.X11 enable_iglx -bool true
+
 **To connect to Discovery on a Mac:**
 
 1. Open Terminal.
 
-2. Type ``ssh <username>@login.discovery.neu.edu`` , where ``<username>`` is your Northeastern username.
+2. Type ``ssh <username>@login.discovery.neu.edu`` , where ``<username>`` is your Northeastern username. If you need to use X 11 forwarding, type ``ssh -Y <username>@login.discovery.neu.edu``.
 
 3. Type your Northeastern password and press Enter.
 

@@ -23,17 +23,22 @@ Northeastern University Research Computing
   :maxdepth: 2
   :caption: Using Discovery
 
-  using-discovery/modules
-  using-discovery/software
   using-discovery/usingslurm
   using-discovery/slurmexamples
   using-discovery/transferringdata
   using-discovery/globus
 
 .. toctree::
-  :maxdepth: 2
-  :caption: Using Open OnDemand (OOD)
+   :maxdepth: 2
+   :caption: Software on Discovery
 
-  using-ood/introduction
-  using-ood/fileexplore
-  using-ood/interactiveapps
+   software/modules
+   software/software
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Using Open OnDemand (OOD)
+
+   using-ood/introduction
+   using-ood/fileexplore
+   using-ood/interactiveapps
