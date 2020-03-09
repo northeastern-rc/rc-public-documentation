@@ -25,7 +25,11 @@ To allocate one node (N 1), one core (n 1) for 30 minutes with X11 forwarding on
 
   srun -p short --pty --export=ALL -n 1 -N 1 --x11 --mem=10Gb --time=00:30:00 /bin/bash
 
-When Discovery has maintenance, you can specify the ``t2sd`` ("time to shutdown") script with the ``--time`` option along with your usual SRUN options::   
+To allocate a GPU node, you should specify the ``gpu`` partition and use the --gres option::
+
+  srun -p gpu -N 1 -n 1 --pty --export=ALL --gres=gpu:1 --mem=1Gb --time=01:00:00 /bin/bash
+
+When Discovery has maintenance, you can specify the ``t2sd`` ("time to shutdown") script with the ``--time`` option along with your usual SRUN options::
 
   srun --time=$( t2sd )
 
