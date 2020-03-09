@@ -63,17 +63,39 @@ You need to be logged into Globus before you can install GCP.
 5.	Click the appropriate OS icon for your computer to download the installation file.
 6.	After the installation file has been downloaded to your computer, double click on the file to launch the installer.
 
-Accept the defaults on the install wizard. After the install completes, you can then use your laptop as an endpoint within Globus.
+Accept the defaults on the install wizard. After the install completes, you can now use your laptop as an endpoint within Globus.
 
 Working with Globus
 ===================
+After you have an account and set up a personal endpoint using Globus Connect personal, you can perform basic file management tasks using the Globus File Manager interface
+such as transferring files, renaming files, and creating new folders. You can also download and use the Globus Command Line Interface (CLI) tool. GLobus also has extensive documentation and
+training files for you to practice with.
 
-To access the Northeastern endpoint on Globus, on the Globus web app, click **File Manager**, then in the Collection text box, type Northeastern.
-The Northeastern endpoint is ``northeastern#discovery``.
+Northeastern endpoint
++++++++++++++++++++++
+To access the Northeastern endpoint on Globus, on the Globus web app, click **File Manager**, then in the **Collection** text box, type Northeastern. The endpoints owned by Northeastern University display in the collection area.
+The general Northeastern endpoint is ``northeastern#discovery``.
+Using the File Manager interface, you can easily change directories, switch the direction of transferring to and from, and specify options such as transferring only new or changed files. Below is a procedure for transferring files from Discovery to your
+personal computer, but with the flexibility of the File Manager interface, you can adjust the endpoints, file view, direction of the transfer, and many other options.
 
+**To transfer files from your Discovery to your personal computer, do the following**
+
+1. Create an endpoint on your computer using the procedure above "Install Globus Connect", if you have not done so already.
+2. In the File Manager on the Globus web app, in the **Collections** textbox, type Northeastern, then in the collection list click the ``northeastern#discovery`` endpoint.
+3. In the right-pane menu, click **Transfer or Synch to**.
+4. Click in the **Search** text box, and then in on the **Your Collections** tab, click the name of your personal endpoint. You now can see the list of your files on Discovery on the left and a list of your files on your personal computer on the right.
+5. Select the file or files from the right-side list of Discovery files that you want to transfer to your personal computer.
+6. Select the destination folder from the left-side list of the files on your personal computer.
+7. (Optional) Click **Transfer & Synch Options** and select the transfer options that you need.
+8. Click **Start**.
+
+Command Line Interface (CLI)
+++++++++++++++++++++++++++++
 The Globus Command Line Interface (CLI) tool allows you to access Globus from a command line. It is a stand-alone app that requires a separate downloaded
 and installation. Please refer to the `Globus CLI documentation <https://docs.globus.org/cli/>`_ for working with this app.
 
-Globus also provides detailed instructions and test files for you to practice with.
+Globus documentation and test files
++++++++++++++++++++++++++++++++++++
+Globus provides detailed instructions on using Globus and also has test files for you to practice with.
 These are free for you to access and use. We encourage you to use the test files to become familiar with the Globus interface.
 You can access the Globus documentation and training files `here <https://docs.globus.org/how-to/>`_.
