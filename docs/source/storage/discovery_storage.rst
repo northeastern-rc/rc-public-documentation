@@ -9,9 +9,7 @@ The list below details the storage options available to you if you have an accou
 that are connected to Discovery and you should use when working on Discovery.
 
 .. note::
-   You can also request additional storage if needed. See :ref:`general_storage` for details about RC's storage options available
-   for storage that is not connected to Discovery, and that is available to anyone
-   affiliated with Northeastern University.
+   You can also request additional storage if needed. See :ref:`general_storage` for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.
 
 **NAME:** ``/home/<yourusername>`` where ``yourusername`` is your username, e.g. ``/home/j.smith``
  - **DESCRIPTION:** You are given a ``/home`` directory automatically when your Discovery account is created. This storage is mainly intended for environment tools and very low utilization. It is not performant storage.
