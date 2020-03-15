@@ -30,6 +30,13 @@ Northeastern University Research Computing
 
 .. toctree::
    :maxdepth: 2
+   :caption: Understanding storage options
+
+   storage/discovery_storage
+   storage/general_storage
+
+.. toctree::
+   :maxdepth: 2
    :caption: Software on Discovery
 
    software/modules
