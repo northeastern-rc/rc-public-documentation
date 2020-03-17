@@ -8,8 +8,14 @@ There are a number of applications that you can access and use through the OOD w
 When you select an application and click launch, the scheduler (Slurm) allocates a compute node with
 a predetermined number of cores and amount of memory. The default time for running any of the
 applications is one hour. It is recommended that you keep the default. If you ask for more than one
-hour, you will need to wait for Slurm to allocate a  resource that can run for your requested time,
+hour, you will need to wait for Slurm to allocate a resource that can run for your requested time,
 which could take a long time to be allocated, depending on how busy the cluster is.
+
+.. note::
+   Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to
+   open an app, and you believe that you should have access to it, please email rchelp@northeastern.edu with your username,
+   research group, the app you are trying to access, a screenshot of the error that you are getting, and we will
+   look into the issue.
 
 1. In a web browser, go to ood.discovery.neu.edu. If prompted, enter your myNortheastern username and password.
 

@@ -49,3 +49,9 @@ Northeastern University Research Computing
    using-ood/introduction
    using-ood/fileexplore
    using-ood/interactiveapps
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Using Discovery in your classroom
+
+   classroom/class_use
