@@ -44,6 +44,7 @@ An easy way to get a list of student emails is in Blackboard.
    Note: The spreadsheet contains the student emails of all of your active courses, so only select the emails of the students who need access.
 
 Send the list of student names and emails to rchelp@northeastern.edu along with your name, your course name, number, and dates the course is running.
+Please also include a list any software not currently available that needs to be installed. 
 
 **Is there any training on Discovery for my class?**
 
