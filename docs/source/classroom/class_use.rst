@@ -3,7 +3,7 @@ Using Discovery with your class FAQ
 ***********************************
 There are several use cases for teaching and learning with the Discovery cluster in a classroom.
 Discovery offers both a command line and web interface, allowing flexibility in access and instruction level.
-Using Discovery gives you and your students access to many popular scientific application,
+Using Discovery gives you and your students access to many popular scientific applications,
 and also allows you and your students to install other packages as needed.
 The easy-to-use Open onDemand web portal also offers a built-in visual file
 explorer for file viewing and transfer.
@@ -44,7 +44,7 @@ An easy way to get a list of student emails is in Blackboard.
    Note: The spreadsheet contains the student emails of all of your active courses, so only select the emails of the students who need access.
 
 Send the list of student names and emails to rchelp@northeastern.edu along with your name, your course name, number, and dates the course is running.
-Please also include a list any software not currently available that needs to be installed. 
+Please also include a list any software not currently available that needs to be installed.
 
 **Is there any training on Discovery for my class?**
 
