@@ -18,7 +18,6 @@ that are connected to Discovery and you should use when working on Discovery.
 
 **NAME:** ``/work/<yourusername>``
  - **DESCRIPTION:** In addition to your automatically provided ``/home`` and ``/scratch`` directories, you can request up to 250GB of storage on ``/work``. Research groups can request up to 500TB of storage on ``/work``. You can request this extra storage through the `New Storage request <https://northeastern.service-now.com/research?id=sc_cat_item&sys_id=891235d31b20c0502dafc8415b4bcb0e>`_ on ServiceNow. Note that currently this storage tier is not performant storage.
- - **QUOTA:** 250GB per individual/500TB per research group
 
  .. note::
     You can also request additional storage if needed. See :ref:`general_storage` for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.
