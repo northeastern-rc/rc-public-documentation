@@ -108,8 +108,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Options on Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">Research Computing Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul>
@@ -121,6 +127,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classroom/class_use.html">Using Discovery with your class FAQ</a></li>
 </ul>
 
             
@@ -298,7 +308,7 @@ See the tables below for details on CPUs and GPUs that are available on Discover
 </div>
 <div class="section" id="partitions">
 <span id="partition-names"></span><h2>Partitions<a class="headerlink" href="#partitions" title="Permalink to this headline">¶</a></h2>
-<p><sub>Updated February 6, 2020</sub></p>
+<p><sub>Updated April 3, 2020</sub></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As of February 2020, the partition names were updated. You should refer to the table below for
@@ -310,34 +320,29 @@ are debug, express, short, and gpu.
 Each partition consists of several processor architectures and different compute node counts.
 There are also partitions that are reserved for individual faculty members.
 Three partitions, long, large, and multigpu, are accessible only after application approval
-(details and application forms can be found on the RC website: <a class="reference external" href="https://rc.northeastern.edu/policy/">https://rc.northeastern.edu/policy/</a>).</p>
+(details can be found below and on the RC website: <a class="reference external" href="https://rc.northeastern.edu/policy/">https://rc.northeastern.edu/policy/</a>).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In the following table, the Running Jobs and Submitted Jobs numbers are Per User/Per Research Group.
-RAM limit is per user, across all jobs.</p>
+<p>In the following table, the Running Jobs Per User/Per Research Group. RAM limit is per user, across all jobs.</p>
 </div>
 <table class="colwidths-given docutils align-default">
 <colgroup>
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 20%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Requires Approval?</p></th>
-<th class="head"><p>Time limit (Default/Max)</p></th>
-<th class="head"><p>Running Jobs</p></th>
-<th class="head"><p>Submitted Jobs</p></th>
-<th class="head"><p>Core Limit</p></th>
-<th class="head"><p>RAM Limit</p></th>
-<th class="head"><p>GPU per job Limit</p></th>
-<th class="head"><p>GPU per user Limit</p></th>
+<th class="head"><p>Requires approval?</p></th>
+<th class="head"><p>Time limit (default/max)</p></th>
+<th class="head"><p>Running jobs</p></th>
+<th class="head"><p>Submitted jobs</p></th>
+<th class="head"><p>Core limit</p></th>
+<th class="head"><p>RAM limit</p></th>
 </tr>
 </thead>
 <tbody>
@@ -345,71 +350,80 @@ RAM limit is per user, across all jobs.</p>
 <td><p>No</p></td>
 <td><p>20 minutes/20 minutes</p></td>
 <td><p>10/25</p></td>
-<td><p>25/100</p></td>
+<td><p>5000</p></td>
 <td><p>128</p></td>
 <td><p>256GB</p></td>
-<td><p>N/A</p></td>
-<td><p>N/A</p></td>
 </tr>
 <tr class="row-odd"><td><p>express</p></td>
 <td><p>No</p></td>
 <td><p>30 minutes/60 minutes</p></td>
 <td><p>50/250</p></td>
-<td><p>250/100</p></td>
+<td><p>5000</p></td>
 <td><p>2048</p></td>
 <td><p>25TB</p></td>
-<td><p>N/A</p></td>
-<td><p>N/A</p></td>
 </tr>
 <tr class="row-even"><td><p>short</p></td>
 <td><p>No</p></td>
 <td><p>4 hours/24 Hours</p></td>
 <td><p>50/500</p></td>
-<td><p>100/100</p></td>
+<td><p>5000</p></td>
 <td><p>1024</p></td>
 <td><p>25TB</p></td>
+</tr>
+<tr class="row-odd"><td><p>long</p></td>
+<td><p><strong>Yes</strong></p></td>
+<td><p>1 day/5 Days</p></td>
+<td><p>25/250</p></td>
+<td><p>1000 per user/5000 per group</p></td>
+<td><p>1024</p></td>
+<td><p>25TB</p></td>
+</tr>
+<tr class="row-even"><td><p>large</p></td>
+<td><p><strong>Yes</strong></p></td>
+<td><p>6 hours/6 Hours</p></td>
+<td><p>100/100</p></td>
+<td><p>1000 per user/5000 per group</p></td>
 <td><p>N/A</p></td>
 <td><p>N/A</p></td>
 </tr>
-<tr class="row-odd"><td><p>gpu</p></td>
+</tbody>
+</table>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Requires approval?</p></th>
+<th class="head"><p>Time limit (default/max)</p></th>
+<th class="head"><p>Running jobs</p></th>
+<th class="head"><p>Submitted jobs</p></th>
+<th class="head"><p>GPU per job limit</p></th>
+<th class="head"><p>GPU per user limit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>gpu</p></td>
 <td><p>No</p></td>
 <td><p>4 hours/8 Hours</p></td>
 <td><p>25/250</p></td>
 <td><p>50/100</p></td>
-<td><p>N/A</p></td>
-<td><p>N/A</p></td>
 <td><p>1</p></td>
 <td><p>8</p></td>
-</tr>
-<tr class="row-even"><td><p>long</p></td>
-<td><p><strong>Yes</strong></p></td>
-<td><p>1 day/5 Days</p></td>
-<td><p>25/250</p></td>
-<td><p>50/500</p></td>
-<td><p>1024</p></td>
-<td><p>25TB</p></td>
-<td><p>N/A</p></td>
-<td><p>N/A</p></td>
 </tr>
 <tr class="row-odd"><td><p>multigpu</p></td>
 <td><p><strong>Yes</strong></p></td>
 <td><p>4 hours/24 Hours</p></td>
 <td><p>25/100</p></td>
 <td><p>50/100</p></td>
-<td><p>N/A</p></td>
-<td><p>N/A</p></td>
-<td><p>8</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="row-even"><td><p>large</p></td>
-<td><p><strong>Yes</strong></p></td>
-<td><p>6 hours/6 Hours</p></td>
-<td><p>100/100</p></td>
-<td><p>100/1000</p></td>
-<td><p>N/A</p></td>
-<td><p>N/A</p></td>
-<td><p>N/A</p></td>
-<td><p>N/A</p></td>
+<td><p>12</p></td>
+<td><p>12</p></td>
 </tr>
 </tbody>
 </table>

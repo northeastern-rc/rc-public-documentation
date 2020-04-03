@@ -16,7 +16,7 @@ a ServiceNow ticket if you need further information.
 
 There are several ways you can use Discovery in your classroom. You class can use Discovery for accessing
 specific software packages and working environments, as well as learn how to utilize high performance computing (HPC) resources for
-large and complex data processing, such as Machine Learning, AI and Molecular Simulations and more.
+large and complex data processing, such as machine learning, AI and molecular simulations and more.
 
 **Do my students have to learn Linux to work with Discovery?**
 
@@ -32,19 +32,59 @@ If you have an account on Discovery, you can see the list of available software 
 Students have access to all of the modules on Discovery. They can also use the interactive apps available on Open onDemand. See :ref:`using_ood` for more information.
 We can also install additional modules and libraries specifically for your class as needed.
 
+**My class  needs access to a specific software application that I do not see installed on Discovery or Open onDemand. What should I do?**
+
+If you class requires software not currently installed on Discovery or OOD, follow the procedure below to request that software be installed on Discovery.
+You must be a professor or instructor to initiate this request. Students in your class should not make this request.
+If your students need a specific software application, you must complete the form for them.
+This is to ensure that we only get one request for the software. Students in one class often make multiple requests for the same software,
+so having all requests go through the professor or instructor reduces this overlap.
+
+To request additional software (instructors only):
+
+1.	Go to the `ServiceNow software request ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=777c510bdbebd340a37cd206ca9619b0>`_. If prompted, sign into ServiceNow with your myNortheastern username and password to access the form
+2.	In the Sponsor’s Name field, enter your name.
+3.	Make sure to follow the instructions on the form regarding either providing the URL of the open source software library or uploading the installation package in your home directory if it requires you to register it first. The request will not be completed without this information.
+4.	Select the acknowledgement checkbox, and click **Submit**.
+
+.. note::
+   Software requests can take up to 24 hours to verify, and then additional time is needed
+   to complete the installation. We might not be able to install every software application requested. If this is the case
+   we will notify you and try to provide alternative software to meet your needs.
+
+.. tip::
+   You and your students can install software locally to your PATH on Discovery, which may be a better option in some cases,
+   such as installing multiple conda environments. See :ref:`installing_software` for more information.     
+
 **How do I get my class access to Discovery?**
 
 We need a list of your students' names and emails, and we will create accounts for them.
 An easy way to get a list of student emails is in Blackboard.
 
-1. In Blackboard, click Course Tools > Student Email Addresses.
-2. Click Spreadsheet.
-3. Select Open with Microsoft Excel, and click OK.
+1. In Blackboard, click **Course Tools**, then select **Student Email Addresses**.
+2. Click **Spreadsheet**.
+3. Select **Open with Microsoft Excel**, and click **OK**.
 4. In the spreadsheet that opens, select the emails and course number/section (CRN) of the course that you want to work on Discovery.
    Note: The spreadsheet contains the student emails of all of your active courses, so only select the emails of the students who need access.
 
 Send the list of student names and emails to rchelp@northeastern.edu along with your name, your course name, number, and dates the course is running.
-Please also include a list any software not currently available that needs to be installed.
+
+**I just need my class to access Open onDemand. How do I request that?**
+
+Open onDemand is a web portal that lets you access the resources on Discovery through an easy-to-navigate web browser interface. You request course access the same way you would to get access to
+Discovery, as outlined in the question above. Please specify that you'd like your course to be on Open onDemand for your students, in
+addition to the information we request above.
+
+**I'd like my class to use specific resources on Discovery. Can you create a reservation on Discovery for my class?**
+
+In many cases, we will create a reservation on Discovery for your class for specific hardware resources. For example, if you course assignments
+require the use of GPUs or nodes with a large amount of memory, we can create a reservation on specific nodes that only your class can access
+for the duration of the course. However, Discovery is a shared resource, so we ask that you test out your assignments on Discovery so
+that you are requesting an appropriate amount of resources for your class. If a class needs an increase in resources due to higher than
+expected use, we can always increase your reservation. But, if a reservation is not being used to capacity, we will ask you to review the
+need for the requested resources, and adjust the reservation accordingly. We understand that sometimes it is difficult to determine exactly
+what your resource needs will be, but we do need to keep a reservation to a reasonable limit so that we keep the shared resources available to
+all users.
 
 **Is there any training on Discovery for my class?**
 
@@ -56,6 +96,10 @@ to provide us with information about your class.
 
 Students will have access to Discovery for the full duration of the class, and then for one term following the end of the class.
 If they want to continue to have access to Discovery after that time period, they'll need to request an individual account.
+
+**How do I get an account on Discovery?**
+
+If you are a professor or instructor at Northeastern, you can request an account on Discovery. See
 
 **How do my students get help with Discovery?**
 

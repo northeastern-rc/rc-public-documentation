@@ -99,7 +99,7 @@ See the tables below for details on CPUs and GPUs that are available on Discover
 
 Partitions
 ==========
-:sub:`Updated February 6, 2020`
+:sub:`Updated April 3, 2020`
 
 .. note::
    As of February 2020, the partition names were updated. You should refer to the table below for
@@ -111,90 +111,83 @@ are debug, express, short, and gpu.
 Each partition consists of several processor architectures and different compute node counts.
 There are also partitions that are reserved for individual faculty members.
 Three partitions, long, large, and multigpu, are accessible only after application approval
-(details and application forms can be found on the RC website: https://rc.northeastern.edu/policy/).
+(details can be found below and on the RC website: https://rc.northeastern.edu/policy/).
 
 .. note::
-   In the following table, the Running Jobs and Submitted Jobs numbers are Per User/Per Research Group.
-   RAM limit is per user, across all jobs.
-
+   In the following table, the Running Jobs Per User/Per Research Group. RAM limit is per user, across all jobs.
 
 .. list-table::
-   :widths: 20 20 20 20 20 20 20 20 20
+   :widths: 20 20 20 20 30 20 20
    :header-rows: 1
 
    * - Name
-     - Requires Approval?
-     - Time limit (Default/Max)
-     - Running Jobs
-     - Submitted Jobs
-     - Core Limit
-     - RAM Limit
-     - GPU per job Limit
-     - GPU per user Limit
+     - Requires approval?
+     - Time limit (default/max)
+     - Running jobs
+     - Submitted jobs
+     - Core limit
+     - RAM limit
    * - debug
      - No
      - 20 minutes/20 minutes
      - 10/25
-     - 25/100
+     - 5000
      - 128
      - 256GB
-     - N/A
-     - N/A
    * - express
      - No
      - 30 minutes/60 minutes
      - 50/250
-     - 250/100
+     - 5000
      - 2048
      - 25TB
-     - N/A
-     - N/A
    * - short
      - No
      - 4 hours/24 Hours
      - 50/500
-     - 100/100
+     - 5000
      - 1024
      - 25TB
+   * - long
+     - **Yes**
+     - 1 day/5 Days
+     - 25/250
+     - 1000 per user/5000 per group
+     - 1024
+     - 25TB
+   * - large
+     - **Yes**
+     - 6 hours/6 Hours
+     - 100/100
+     - 1000 per user/5000 per group
      - N/A
      - N/A
+
+.. list-table::
+   :widths: 20 20 20 20 20 20 20
+   :header-rows: 1
+
+   * - Name
+     - Requires approval?
+     - Time limit (default/max)
+     - Running jobs
+     - Submitted jobs
+     - GPU per job limit
+     - GPU per user limit
    * - gpu
      - No
      - 4 hours/8 Hours
      - 25/250
      - 50/100
-     - N/A
-     - N/A
      - 1
      - 8
-   * - long
-     - **Yes**
-     - 1 day/5 Days
-     - 25/250
-     - 50/500
-     - 1024
-     - 25TB
-     - N/A
-     - N/A
    * - multigpu
      - **Yes**
      - 4 hours/24 Hours
      - 25/100
      - 50/100
-     - N/A
-     - N/A
-     - 8
-     - 8
-   * - large
-     - **Yes**
-     - 6 hours/6 Hours
-     - 100/100
-     - 100/1000
-     - N/A
-     - N/A
-     - N/A
-     - N/A
-
+     - 12
+     - 12
 
 You can view all of the partitions by using the Slurm command ``sinfo -a``. To specify a partition in
 your job submission script, use the option ``--partition=<partition name>``.

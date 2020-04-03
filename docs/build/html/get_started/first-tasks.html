@@ -91,12 +91,12 @@
 <p class="caption"><span class="caption-text">Get Started</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">First Tasks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#getting-access">Getting Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#connecting-to-discovery">Connecting to Discovery</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#mac">Mac</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-access">Getting Access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#principle-investigator-pi-professor-instructor-access">Principle Investigator(PI)/Professor/Instructor Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sponsor-approval-process">Sponsor Approval Process</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-discovery">Connecting to Discovery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#move-to-a-compute-node">Move to a compute node</a></li>
 </ul>
 </li>
@@ -105,8 +105,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Options on Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">Research Computing Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul>
@@ -118,6 +124,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classroom/class_use.html">Using Discovery with your class FAQ</a></li>
 </ul>
 
             
@@ -185,16 +195,25 @@
 <li><p>Go to <a class="reference external" href="https://northeastern.service-now.com/research?id=nurc_category">ServiceNow</a>.</p></li>
 <li><p>Fill out the form, check the acknowledgement box, and click Submit.</p></li>
 </ol>
-<p>Your request can take up to 24 hours to process. You will receive a confirmation email when your access has been granted.
+<p>Your request can take up to 24 hours to process after it has been approved by your sponsor (see Sponsor Approval Process below). You will receive a confirmation email when your access has been granted.
 After you have access, if you are not familiar with using Discovery, high performance computing, or Linux, you should take one of our training courses.
 See the <a class="reference external" href="https://rc.northeastern.edu/support/training/">Research Computing website</a> for more information on our training and services.</p>
+<div class="section" id="principle-investigator-pi-professor-instructor-access">
+<h3>Principle Investigator(PI)/Professor/Instructor Access<a class="headerlink" href="#principle-investigator-pi-professor-instructor-access" title="Permalink to this headline">¶</a></h3>
+<p>If you are a PI, professor, or instructor at Northeastern, and you need access to Discovery, you should use the access form in the
+above procedure, and in the Sponsor name field on the form, enter your own name.</p>
+</div>
+<div class="section" id="sponsor-approval-process">
+<h3>Sponsor Approval Process<a class="headerlink" href="#sponsor-approval-process" title="Permalink to this headline">¶</a></h3>
+<p>Every user on Discovery needs to have a sponsor approve their request, usually a PI or professor at Northeastern. PIs, professors, and instructors can sponsor themselves.
+Students (undergraduate or graduate), visiting researchers, or staff members must have a sponsor approve their request. When you fill out the
+ServiceNow form and enter the name of your sponsor, an email goes to the sponsor when you submit the request.</p>
+</div>
 </div>
 <div class="section" id="connecting-to-discovery">
 <h2>Connecting to Discovery<a class="headerlink" href="#connecting-to-discovery" title="Permalink to this headline">¶</a></h2>
 <p>You connect to Discovery using a <a class="reference external" href="https://www.ssh.com/ssh/protocol/">secure shell</a> program and initiate an SSH session to
 log into Discovery.</p>
-<div class="section" id="mac">
-<h3>Mac<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h3>
 <p>Mac computers come with a Secure Shell (SSH) program called <a class="reference external" href="https://support.apple.com/guide/terminal/welcome/mac">Terminal</a>
 that you use to connect to Discovery using SSH.</p>
 <div class="admonition note">
@@ -217,9 +236,6 @@ that you use to connect to Discovery using SSH.</p>
 Jobs that are launched from the login node will be terminated.
 Move to a compute node before running any jobs.</p>
 </div>
-</div>
-<div class="section" id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <p>Before you can connect to Discovery on a Windows computer, you’ll need to download a terminal program,
 such as MobaXterm or PuTTY. We recommend MobaXterm, as you can also use it for file transfer,
 whereas with other SSH programs, you would need a separate file transfer program.</p>
@@ -237,7 +253,6 @@ whereas with other SSH programs, you would need a separate file transfer program
 <p>Never launch a job from the login node.
 Jobs that are launched from the login node will be terminated.
 Move to a compute node before running any jobs.</p>
-</div>
 </div>
 </div>
 <div class="section" id="move-to-a-compute-node">

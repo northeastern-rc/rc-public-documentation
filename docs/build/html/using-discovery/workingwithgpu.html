@@ -283,10 +283,10 @@ the need for using <code class="docutils literal notranslate"><span class="pre">
 <p>Use <code class="docutils literal notranslate"><span class="pre">srun</span></code> for interactive mode and <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> for batch mode.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">srun</span></code> example below is requesting 1 node and 1 GPU with 1GB of memory in the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> partition. Note that on the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> partition, you cannot request more than 1 GPU (<code class="docutils literal notranslate"><span class="pre">--gres=gpu:1</span></code>)
 or your request will fail.</p>
-<p><code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">--partition</span> <span class="pre">gpu</span> <span class="pre">--nodes</span> <span class="pre">1</span> <span class="pre">--ntasks</span> <span class="pre">1</span> <span class="pre">--pty</span> <span class="pre">--export=All</span> <span class="pre">--gres=gpu:1</span> <span class="pre">--mem=1Gb</span> <span class="pre">--time=00:30:00</span> <span class="pre">/bin/bash</span></code></p>
-<p>The <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> example below is the similar to the <code class="docutils literal notranslate"><span class="pre">srun</span></code> example above, except for the run time, giving the job a name, and directing the output to a file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">--partition</span> <span class="pre">gpu</span> <span class="pre">--nodes</span> <span class="pre">1</span> <span class="pre">--pty</span> <span class="pre">--export=All</span> <span class="pre">--gres=gpu:1</span> <span class="pre">--mem=1Gb</span> <span class="pre">--time=00:30:00</span> <span class="pre">/bin/bash</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> example below is the similar to the <code class="docutils literal notranslate"><span class="pre">srun</span></code> example above, except for giving the job a name and directing the output to a file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#SBATCH --nodes=1</span>
-<span class="c1">#SBATCH --time=0:10:00</span>
+<span class="c1">#SBATCH --time=0:30:00</span>
 <span class="c1">#SBATCH --job-name=gpu_run</span>
 <span class="c1">#SBATCH --mem=1Gb</span>
 <span class="c1">#SBATCH --gres=gpu:1</span>

@@ -1,3 +1,5 @@
+.. _installing_software:
+
 ********************
 Installing Software
 ********************
@@ -5,7 +7,7 @@ Installing Software
 Before requesting software or installing software locally to your path, you should always first
 check to see if the software package that you need is already available through one of the preinstalled
 modules on Discovery. The Research Computing team adds new modules regularly, so first use the ``module avail`` command
-to view the most up to date list. See :ref:`using_module` for working with module.
+to view the most up to date list. See :ref:`using_module` for more information about working with module.
 
 Requesting Software Installation
 =================================
