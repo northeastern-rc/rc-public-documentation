@@ -17,7 +17,9 @@ Your request can take up to 24 hours to process after it has been approved by yo
 After you have access, if you are not familiar with using Discovery, high performance computing, or Linux, you should take one of our training courses.
 See the `Research Computing website <https://rc.northeastern.edu/support/training/>`_ for more information on our training and services.
 
-Principle Investigator(PI)/Professor/Instructor Access
+.. _instructor_access:
+
+Principal Investigator(PI)/Professor/Instructor Access
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 If you are a PI, professor, or instructor at Northeastern, and you need access to Discovery, you should use the access form in the
 above procedure, and in the Sponsor name field on the form, enter your own name.

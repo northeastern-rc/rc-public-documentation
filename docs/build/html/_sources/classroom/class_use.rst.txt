@@ -54,7 +54,7 @@ To request additional software (instructors only):
 
 .. tip::
    You and your students can install software locally to your PATH on Discovery, which may be a better option in some cases,
-   such as installing multiple conda environments. See :ref:`installing_software` for more information.     
+   such as installing multiple conda environments. See :ref:`installing_software` for more information.
 
 **How do I get my class access to Discovery?**
 
@@ -99,7 +99,7 @@ If they want to continue to have access to Discovery after that time period, the
 
 **How do I get an account on Discovery?**
 
-If you are a professor or instructor at Northeastern, you can request an account on Discovery. See
+If you are a professor or instructor at Northeastern, you can request an account on Discovery. See :ref:`instructor_access` for more information.
 
 **How do my students get help with Discovery?**
 
