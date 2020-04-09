@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Using Globus" href="globus.html" />
-    <link rel="prev" title="Slurm examples" href="slurmexamples.html" /> 
+    <link rel="prev" title="Working with GPUs" href="workingwithgpu.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,12 +96,18 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Transferring Data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#data-transfer-node-using-mac">Data transfer node using Mac</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#data-transfer-node-using-windows">Data transfer node using Windows</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Options on Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">Research Computing Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul>
@@ -113,6 +119,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classroom/class_use.html">Using Discovery with your class FAQ</a></li>
 </ul>
 
             
@@ -192,18 +202,27 @@ to another location as soon as possible.</p>
 </div>
 <div class="section" id="data-transfer-node-using-windows">
 <h2>Data transfer node using Windows<a class="headerlink" href="#data-transfer-node-using-windows" title="Permalink to this headline">¶</a></h2>
-<p>You can use MobaXterm to transfer data to and from Discovery. You can also use a file transfer program, such as Filezilla.
+<p>You can use MobaXterm to transfer data to and from Discovery. You can also use a file transfer program, such as FileZilla.
 The Files menu in Open onDemand (OOD) also allows you to transfer files. See <a class="reference internal" href="../using-ood/fileexplore.html#file-explorer"><span class="std std-ref">Using OOD’s File Explorer</span></a> for more information.</p>
 <p><strong>To transfer data using MobaXterm:</strong></p>
 <ol class="arabic simple">
 <li><p>Open MobaXterm.</p></li>
 <li><p>Click <strong>Session</strong>, then select <strong>SFTP</strong>.</p></li>
-<li><p>In the <strong>Host</strong> field, type <code class="docutils literal notranslate"><span class="pre">xfer.discovery.neu.edu</span></code></p></li>
+<li><p>In the <strong>Remote host</strong> field, type <code class="docutils literal notranslate"><span class="pre">xfer.discovery.neu.edu</span></code></p></li>
 <li><p>In the <strong>Username</strong> field, type your Northeastern username.</p></li>
 <li><p>In the <strong>Port</strong> field, type 22.</p></li>
-<li><p>In the <strong>Password</strong> field, type your Northeastern password.</p></li>
+<li><p>In the <strong>Password</strong> box, type your Northeastern password and click <strong>OK</strong>. Click <strong>No</strong> if prompted to save your password.</p></li>
 </ol>
 <p>You will now be connected to the transfer node and can transfer files through MobaXterm.</p>
+<p><strong>To transfer data using FileZilla:</strong></p>
+<ol class="arabic simple">
+<li><p>Open FileZilla.</p></li>
+<li><p>In the <strong>Host</strong> field, type <code class="docutils literal notranslate"><span class="pre">sftp://xfer.discovery.neu.edu</span></code></p></li>
+<li><p>In the <strong>Username</strong> field, type your Northeastern username.</p></li>
+<li><p>In the <strong>Password</strong> field, type your Northeastern password.</p></li>
+<li><p>In the <strong>Port</strong> field, type 22.</p></li>
+</ol>
+<p>You will now be connected to the transfer node and can transfer files through FileZilla.</p>
 </div>
 </div>
 
@@ -218,7 +237,7 @@ The Files menu in Open onDemand (OOD) also allows you to transfer files. See <a 
         <a href="globus.html" class="btn btn-neutral float-right" title="Using Globus" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="slurmexamples.html" class="btn btn-neutral float-left" title="Slurm examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="workingwithgpu.html" class="btn btn-neutral float-left" title="Working with GPUs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
