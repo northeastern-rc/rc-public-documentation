@@ -89,12 +89,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#what-is-discovery">What is Discovery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#linux">Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hardware-overview">Hardware overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#partitions">Partitions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#large-partition-access">large Partition Access</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#multigpu-partition-access">multiGPU Partition Access</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#long-partition-access">long Partition Access</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#partitions">Partitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#partition-access-requests">Partition Access Requests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#software-overview">Software overview</a></li>
 </ul>
 </li>
@@ -314,13 +310,11 @@ See the tables below for details on CPUs and GPUs that are available on Discover
 <p>As of February 2020, the partition names were updated. You should refer to the table below for
 the most current partition names to use with your submission scripts.</p>
 </div>
-<p>The Discovery cluster is sectioned into partitions. Discovery has several
-computing partitions for different computing needs. The partitions available for general use
-are debug, express, short, and gpu.
-Each partition consists of several processor architectures and different compute node counts.
+<p>The Discovery cluster is sectioned into virtual partitions. The partitions available for general use
+are debug, express, short, and gpu. Each partition consists of several processor architectures and different compute node counts.
 There are also partitions that are reserved for individual faculty members.
 Three partitions, long, large, and multigpu, are accessible only after application approval
-(details can be found below and on the RC website: <a class="reference external" href="https://rc.northeastern.edu/policy/">https://rc.northeastern.edu/policy/</a>).</p>
+For more information see <a class="reference internal" href="#partition-access"><span class="std std-ref">Partition Access Requests</span></a> and the RC website: <a class="reference external" href="https://rc.northeastern.edu/policy/">https://rc.northeastern.edu/policy/</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In the following table, the Running Jobs Per User/Per Research Group. RAM limit is per user, across all jobs.</p>
@@ -430,42 +424,14 @@ Three partitions, long, large, and multigpu, are accessible only after applicati
 <p>You can view all of the partitions by using the Slurm command <code class="docutils literal notranslate"><span class="pre">sinfo</span> <span class="pre">-a</span></code>. To specify a partition in
 your job submission script, use the option <code class="docutils literal notranslate"><span class="pre">--partition=&lt;partition</span> <span class="pre">name&gt;</span></code>.
 For more information about Slurm, see <a class="reference internal" href="../using-discovery/usingslurm.html#using-slurm"><span class="std std-ref">Using Slurm</span></a>.</p>
-<div class="section" id="large-partition-access">
-<h3>large Partition Access<a class="headerlink" href="#large-partition-access" title="Permalink to this headline">¶</a></h3>
-<p>If you require access to the large partition, you will need to download and fill out the large partition application
-and then attach the form to a general <a class="reference external" href="https://northeastern.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default">Research Computing ServiceNow request</a>.
-Your application will be reviewed by the Research Computing team and two faculty members.
-All communication regarding this access request will be through emails that the ServiceNow
-request that you open generates, or you can go to the Service Portal to view your ServiceNow incidents.
-You can find the application and information on how to submit it in the Policies section on the
-<a class="reference external" href="https://rc.northeastern.edu/files/2020/02/access_request_large_partition.docx">Research Computing</a> website.</p>
 </div>
-<div class="section" id="multigpu-partition-access">
-<h3>multiGPU Partition Access<a class="headerlink" href="#multigpu-partition-access" title="Permalink to this headline">¶</a></h3>
-<p>If you require access to the multigpu partition, you will need to download and fill out the multigpu partition application and then attach
-the form to a general <a class="reference external" href="https://northeastern.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default">Research Computing ServiceNow request</a>.
-Your application will be reviewed by the Research Computing team and two faculty members.
-All communication regarding this access request will be through emails that the ServiceNow
-request that you open generates, or you can go to the Service Portal to view your ServiceNow incidents.
-You can find the application and how to submit it in the Policies section on the
-<a class="reference external" href="https://rc.northeastern.edu/files/2020/02/access_request_multigpu.docx">RC website</a>.</p>
-</div>
-<div class="section" id="long-partition-access">
-<h3>long Partition Access<a class="headerlink" href="#long-partition-access" title="Permalink to this headline">¶</a></h3>
-<p>The long partition is designed to meet the needs of researchers who have code that needs to run longer than 24hrs and that cannot be checkpointed.
-To request access, you must submit a general <a class="reference external" href="https://northeastern.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default">Research Computing ServiceNow request</a>.
-and detail your need for access to the long partition, including the software that you are using.
-Your application will be reviewed by the Research Computing team, and you will be required to have a consultation (in person or online)
-with a member of the RC team regarding this request.
-You should provide the following information in your request:</p>
-<ul class="simple">
-<li><p>Your Name</p></li>
-<li><p>Your Faculty Sponsor Name</p></li>
-<li><p>Your Faculty Sponsor Department</p></li>
-<li><p>What software are you using? Is this available as a Discovery module or is this your own locally installed software?</p></li>
-<li><p>Provide a code sample as an attachment to your request</p></li>
-</ul>
-</div>
+<div class="section" id="partition-access-requests">
+<span id="partition-access"></span><h2>Partition Access Requests<a class="headerlink" href="#partition-access-requests" title="Permalink to this headline">¶</a></h2>
+<p>If you need access to the large, long, or multigpu partition, you need to submit a <a class="reference external" href="https://service.northeastern.edu/tech?id=sc_cat_item&amp;sys_id=0c34d402db0b0010a37cd206ca9619b7">ServiceNow ticket</a>.
+Access is not automatically granted. You will need to provide details and test results that demonstrate your need for access for these partitions.
+If you need temporary access to multigpu to perform testing before applying for permanent access,
+you should also submit a <a class="reference external" href="https://service.northeastern.edu/tech?id=sc_cat_item&amp;sys_id=0c34d402db0b0010a37cd206ca9619b7">ServiceNow ticket</a>. All requests are evaluated by members of the RC team,
+and multigpu requests are also evaluated by two faculty members.</p>
 </div>
 <div class="section" id="software-overview">
 <h2>Software overview<a class="headerlink" href="#software-overview" title="Permalink to this headline">¶</a></h2>

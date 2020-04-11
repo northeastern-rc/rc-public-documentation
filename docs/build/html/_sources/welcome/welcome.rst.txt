@@ -105,13 +105,11 @@ Partitions
    As of February 2020, the partition names were updated. You should refer to the table below for
    the most current partition names to use with your submission scripts.
 
-The Discovery cluster is sectioned into partitions. Discovery has several
-computing partitions for different computing needs. The partitions available for general use
-are debug, express, short, and gpu.
-Each partition consists of several processor architectures and different compute node counts.
+The Discovery cluster is sectioned into virtual partitions. The partitions available for general use
+are debug, express, short, and gpu. Each partition consists of several processor architectures and different compute node counts.
 There are also partitions that are reserved for individual faculty members.
 Three partitions, long, large, and multigpu, are accessible only after application approval
-(details can be found below and on the RC website: https://rc.northeastern.edu/policy/).
+For more information see :ref:`partition_access` and the RC website: https://rc.northeastern.edu/policy/.
 
 .. note::
    In the following table, the Running Jobs Per User/Per Research Group. RAM limit is per user, across all jobs.
@@ -193,41 +191,16 @@ You can view all of the partitions by using the Slurm command ``sinfo -a``. To s
 your job submission script, use the option ``--partition=<partition name>``.
 For more information about Slurm, see :ref:`using_slurm`.
 
-large Partition Access
-~~~~~~~~~~~~~~~~~~~~~~
-If you require access to the large partition, you will need to download and fill out the large partition application
-and then attach the form to a general `Research Computing ServiceNow request <https://northeastern.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default>`_.
-Your application will be reviewed by the Research Computing team and two faculty members.
-All communication regarding this access request will be through emails that the ServiceNow
-request that you open generates, or you can go to the Service Portal to view your ServiceNow incidents.
-You can find the application and information on how to submit it in the Policies section on the
-`Research Computing <https://rc.northeastern.edu/files/2020/02/access_request_large_partition.docx>`_ website.
+.. _partition_access:
 
-multiGPU Partition Access
-~~~~~~~~~~~~~~~~~~~~~~~~~
-If you require access to the multigpu partition, you will need to download and fill out the multigpu partition application and then attach
-the form to a general `Research Computing ServiceNow request <https://northeastern.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default>`_.
-Your application will be reviewed by the Research Computing team and two faculty members.
-All communication regarding this access request will be through emails that the ServiceNow
-request that you open generates, or you can go to the Service Portal to view your ServiceNow incidents.
-You can find the application and how to submit it in the Policies section on the
-`RC website <https://rc.northeastern.edu/files/2020/02/access_request_multigpu.docx>`_.
+Partition Access Requests
+==========================
 
-long Partition Access
-~~~~~~~~~~~~~~~~~~~~~
-The long partition is designed to meet the needs of researchers who have code that needs to run longer than 24hrs and that cannot be checkpointed.
-To request access, you must submit a general `Research Computing ServiceNow request <https://northeastern.service-now.com/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default>`_.
-and detail your need for access to the long partition, including the software that you are using.
-Your application will be reviewed by the Research Computing team, and you will be required to have a consultation (in person or online)
-with a member of the RC team regarding this request.
-You should provide the following information in your request:
-
-* Your Name
-* Your Faculty Sponsor Name
-* Your Faculty Sponsor Department
-* What software are you using? Is this available as a Discovery module or is this your own locally installed software?
-* Provide a code sample as an attachment to your request
-
+If you need access to the large, long, or multigpu partition, you need to submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_.
+Access is not automatically granted. You will need to provide details and test results that demonstrate your need for access for these partitions.
+If you need temporary access to multigpu to perform testing before applying for permanent access,
+you should also submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_. All requests are evaluated by members of the RC team,
+and multigpu requests are also evaluated by two faculty members.
 
 Software overview
 =================
