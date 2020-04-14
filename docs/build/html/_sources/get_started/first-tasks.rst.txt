@@ -28,7 +28,9 @@ Sponsor Approval Process
 +++++++++++++++++++++++++++
 Every user on Discovery needs to have a sponsor approve their request, usually a PI or professor at Northeastern. PIs, professors, and instructors can sponsor themselves.
 Students (undergraduate or graduate), visiting researchers, or staff members must have a sponsor approve their request. When you fill out the
-ServiceNow form and enter the name of your sponsor, an email goes to the sponsor when you submit the request.
+ServiceNow form and enter the name of your sponsor, an email goes to the sponsor when you submit the request. Sponsors will continue to receive email
+reminders until they approve the request through the link in the email to ServiceNow. We recommended that before you submit an access request, let your sponsor know to
+look for the email with the link to the approval page to help expedite the process. 
 
 Connecting to Discovery
 =======================
