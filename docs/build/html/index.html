@@ -91,6 +91,16 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="get_started/first-tasks.html">First Tasks</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/partitions.html">Partitions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="software/modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software/software.html">Installing Software</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="using-discovery/usingslurm.html">Using Slurm</a></li>
@@ -103,11 +113,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="storage/discovery_storage.html">Storage Options on Discovery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="storage/general_storage.html">Research Computing Storage Options</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Software on Discovery</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="software/software.html">Installing Software</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -182,11 +187,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="welcome/welcome.html">Welcome</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="welcome/welcome.html#what-is-discovery">What is Discovery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="welcome/welcome.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="welcome/welcome.html#hardware-overview">Hardware overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="welcome/welcome.html#partitions">Partitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="welcome/welcome.html#partition-access-request">Partition Access Request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="welcome/welcome.html#software-overview">Software overview</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="welcome/gettinghelp.html">Getting Help</a><ul>
@@ -209,68 +209,13 @@
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="using-discovery/usingslurm.html">Using Slurm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/usingslurm.html#viewing-cluster-information">Viewing Cluster Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/usingslurm.html#controlling-jobs">Controlling Jobs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/usingslurm.html#monitoring-jobs">Monitoring Jobs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/usingslurm.html#batch-jobs">Batch Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/partitions.html">Partitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/partitions.html#partition-access-request">Partition Access Request</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="using-discovery/slurmexamples.html">Slurm examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/slurmexamples.html#srun-examples">SRUN Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/slurmexamples.html#sbatch-examples">SBATCH Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/slurmexamples.html#core-job">1-core job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/slurmexamples.html#core-job-and-additional-memory">1-core job and additional memory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/slurmexamples.html#core-job-with-exclusive-use-of-a-node">1-core job with exclusive use of a node</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/slurmexamples.html#example-parallel-job-scripts">Example Parallel Job Scripts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/slurmexamples.html#task-job-one-node-and-additional-memory">8-task job, one node and additional memory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/slurmexamples.html#task-job-multiple-nodes-and-additional-memory">8-task job, multiple nodes and additional memory</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/slurmexamples.html#using-arrays">Using Arrays</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="using-discovery/workingwithgpu.html">Working with GPUs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/workingwithgpu.html#requesting-gpus-with-srun-or-sbatch">Requesting GPUs with <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/workingwithgpu.html#specifying-a-gpu-type">Specifying a GPU type</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/workingwithgpu.html#using-cuda">Using CUDA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/workingwithgpu.html#using-gpus-with-pytorch">Using GPUs with PyTorch</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="using-discovery/transferringdata.html">Transferring Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/transferringdata.html#data-transfer-node-using-mac">Data transfer node using Mac</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/transferringdata.html#data-transfer-node-using-windows">Data transfer node using Windows</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="using-discovery/globus.html">Using Globus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/globus.html#globus-account-set-up">Globus Account Set Up</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/globus.html#creating-and-linking-a-new-account-identity-optional">Creating and linking a new account identity (Optional)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/globus.html#install-globus-connect">Install Globus Connect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using-discovery/globus.html#working-with-globus">Working with Globus</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/globus.html#northeastern-endpoint">Northeastern endpoint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/globus.html#command-line-interface-cli">Command Line Interface (CLI)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="using-discovery/globus.html#globus-documentation-and-test-files">Globus documentation and test files</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Understanding storage options</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="storage/discovery_storage.html">Storage Options on Discovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="storage/general_storage.html">Research Computing Storage Options</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -288,6 +233,48 @@
 <li class="toctree-l2"><a class="reference internal" href="software/software.html#installing-matlab-toolboxes">Installing Matlab toolboxes</a></li>
 </ul>
 </li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using-discovery/usingslurm.html">Using Slurm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/usingslurm.html#viewing-cluster-information">Viewing Cluster Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/usingslurm.html#controlling-jobs">Controlling Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/usingslurm.html#monitoring-jobs">Monitoring Jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using-discovery/slurmexamples.html">Slurm examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/slurmexamples.html#srun-examples">SRUN Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/slurmexamples.html#sbatch-examples">SBATCH Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/slurmexamples.html#example-parallel-job-scripts">Example Parallel Job Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/slurmexamples.html#using-arrays">Using Arrays</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using-discovery/workingwithgpu.html">Working with GPUs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/workingwithgpu.html#requesting-gpus-with-srun-or-sbatch">Requesting GPUs with <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/workingwithgpu.html#using-cuda">Using CUDA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/workingwithgpu.html#using-gpus-with-pytorch">Using GPUs with PyTorch</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using-discovery/transferringdata.html">Transferring Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/transferringdata.html#data-transfer-node-using-mac">Data transfer node using Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/transferringdata.html#data-transfer-node-using-windows">Data transfer node using Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using-discovery/globus.html">Using Globus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/globus.html#globus-account-set-up">Globus Account Set Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/globus.html#install-globus-connect">Install Globus Connect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-discovery/globus.html#working-with-globus">Working with Globus</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="storage/discovery_storage.html">Storage Options on Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage/general_storage.html">Research Computing Storage Options</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">

@@ -20,7 +20,21 @@ Northeastern University Research Computing
   get_started/first-tasks
 
 .. toctree::
-  :maxdepth: 3
+   :maxdepth: 2
+   :caption: Hardware on Discovery
+
+   hardware/hardware_overview
+   hardware/partitions
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Software on Discovery
+
+   software/modules
+   software/software
+   
+.. toctree::
+  :maxdepth: 2
   :caption: Using Discovery
 
   using-discovery/usingslurm
@@ -36,12 +50,6 @@ Northeastern University Research Computing
    storage/discovery_storage
    storage/general_storage
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Software on Discovery
-
-   software/modules
-   software/software
 
 .. toctree::
    :maxdepth: 2
