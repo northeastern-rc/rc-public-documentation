@@ -8,7 +8,7 @@ loading modules, running jobs, and storing data. If you are not familiar with hi
 you should take our training courses before working on the system. You can find information about the training and
 services that the Research Computing team provides at our website: http://www.rc.northeastern.edu.
 
-This is help system is update frequently to reflect the latest information about Discovery, as well
+This help system is updated frequently to reflect the latest information about Discovery, as well
 as to add new topics to help you with your research. Check back often to view our updates.
 
 We want your feedback! If you have any comments or suggestions for topics you'd like
