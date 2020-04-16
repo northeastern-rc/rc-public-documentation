@@ -82,20 +82,20 @@ personal computer, but with the flexibility of the File Manager interface, you c
 
 1. Create an endpoint on your computer using the procedure above "Install Globus Connect", if you have not done so already.
 2. In the File Manager on the Globus web app, in the **Collections** textbox, type Northeastern, then in the collection list click the ``northeastern#discovery`` endpoint.
-3. In the right-pane menu, click **Transfer or Synch to**.
+3. In the right-pane menu, click **Transfer or Sync to**.
 4. Click in the **Search** text box, and then in on the **Your Collections** tab, click the name of your personal endpoint. You now can see the list of your files on Discovery on the left and a list of your files on your personal computer on the right.
 5. Select the file or files from the right-side list of Discovery files that you want to transfer to your personal computer.
 6. Select the destination folder from the left-side list of the files on your personal computer.
-7. (Optional) Click **Transfer & Synch Options** and select the transfer options that you need.
+7. (Optional) Click **Transfer & Sync Options** and select the transfer options that you need.
 8. Click **Start**.
 
 Command Line Interface (CLI)
 ++++++++++++++++++++++++++++
-The Globus Command Line Interface (CLI) tool allows you to access Globus from a command line. It is a stand-alone app that requires a separate downloaded
+The Globus Command Line Interface (CLI) tool allows you to access Globus from a command line. It is a stand-alone app that requires a separate download
 and installation. Please refer to the `Globus CLI documentation <https://docs.globus.org/cli/>`_ for working with this app.
 
 Globus documentation and test files
 +++++++++++++++++++++++++++++++++++
 Globus provides detailed instructions on using Globus and also has test files for you to practice with.
 These are free for you to access and use. We encourage you to use the test files to become familiar with the Globus interface.
-You can access the Globus documentation and training files `here <https://docs.globus.org/how-to/>`_.
+You can access the Globus documentation and training files on the `Globus How To website <https://docs.globus.org/how-to/>`_.
