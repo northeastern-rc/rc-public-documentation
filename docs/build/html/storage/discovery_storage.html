@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Storage Options on Discovery &mdash; Northeastern University Research Computing 0.0.2 documentation</title>
+  <title>Storage Accessible on Discovery &mdash; Northeastern University Research Computing 0.0.2 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Research Computing Storage Options" href="general_storage.html" />
+    <link rel="next" title="General Data Storage Options" href="general_storage.html" />
     <link rel="prev" title="Using Globus" href="../using-discovery/globus.html" /> 
 </head>
 
@@ -92,22 +92,28 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Understanding storage options</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Storage Options on Discovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="general_storage.html">Research Computing Storage Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -163,7 +169,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Storage Options on Discovery</li>
+      <li>Storage Accessible on  Discovery</li>
     
     
 
@@ -175,11 +181,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="storage-options-on-discovery">
-<span id="discovery-storage"></span><h1>Storage Options on Discovery<a class="headerlink" href="#storage-options-on-discovery" title="Permalink to this headline">¶</a></h1>
-<p>There are several storage options available to you on Discovery. These options have specific quotas and limitations.
-The list below details the storage options available to you if you have an account on Discovery. These are storage options
-that are connected to Discovery and you should use when working on Discovery.</p>
+  <div class="section" id="storage-accessible-on-discovery">
+<span id="discovery-storage"></span><h1>Storage Accessible on  Discovery<a class="headerlink" href="#storage-accessible-on-discovery" title="Permalink to this headline">¶</a></h1>
+<p>There are two main storage systems connected to Discovery: /home and /scratch. These options have specific quotas and limitations.
+The list below details the storage options available to you on Discovery if you have an account on Discovery. These are storage options
+that are connected to Discovery, and you should use when working on Discovery.</p>
 <dl class="simple">
 <dt><strong>NAME:</strong> <code class="docutils literal notranslate"><span class="pre">/home/&lt;yourusername&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">yourusername</span></code> is your username, e.g. <code class="docutils literal notranslate"><span class="pre">/home/j.smith</span></code></dt><dd><ul class="simple">
 <li><p><strong>DESCRIPTION:</strong> You are given a <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory automatically when your Discovery account is created. This storage is mainly intended for environment tools and very low utilization. It is not performant storage.</p></li>
@@ -194,7 +200,7 @@ that are connected to Discovery and you should use when working on Discovery.</p
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can also request additional storage if needed. See <a class="reference internal" href="general_storage.html#general-storage"><span class="std std-ref">Research Computing Storage Options</span></a> for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.</p>
+<p>You can also request additional general data storage if needed. See <a class="reference internal" href="general_storage.html#general-storage"><span class="std std-ref">General Data Storage Options</span></a> for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.</p>
 </div>
 </div>
 
@@ -206,7 +212,7 @@ that are connected to Discovery and you should use when working on Discovery.</p
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="general_storage.html" class="btn btn-neutral float-right" title="Research Computing Storage Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="general_storage.html" class="btn btn-neutral float-right" title="General Data Storage Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../using-discovery/globus.html" class="btn btn-neutral float-left" title="Using Globus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

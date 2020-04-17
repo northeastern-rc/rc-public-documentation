@@ -1,12 +1,11 @@
 .. _discovery_storage:
 
-****************************
-Storage Options on Discovery
-****************************
-
-There are several storage options available to you on Discovery. These options have specific quotas and limitations.
-The list below details the storage options available to you if you have an account on Discovery. These are storage options
-that are connected to Discovery and you should use when working on Discovery.
+*********************************
+Storage Accessible on  Discovery
+*********************************
+There are two main storage systems connected to Discovery: /home and /scratch. These options have specific quotas and limitations.
+The list below details the storage options available to you on Discovery if you have an account on Discovery. These are storage options
+that are connected to Discovery, and you should use when working on Discovery.
 
 **NAME:** ``/home/<yourusername>`` where ``yourusername`` is your username, e.g. ``/home/j.smith``
  - **DESCRIPTION:** You are given a ``/home`` directory automatically when your Discovery account is created. This storage is mainly intended for environment tools and very low utilization. It is not performant storage.
@@ -21,4 +20,4 @@ that are connected to Discovery and you should use when working on Discovery.
    - **DESCRIPTION:** In addition to your automatically provided ``/home`` and ``/scratch`` directories, individuals and research groups can additional storage on ``/work``. You can request this extra storage through the `New Storage request <https://northeastern.service-now.com/research?id=sc_cat_item&sys_id=891235d31b20c0502dafc8415b4bcb0e>`_ on ServiceNow. Note that currently this storage tier is not performant storage.
 
 .. note::
-   You can also request additional storage if needed. See :ref:`general_storage` for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.
+   You can also request additional general data storage if needed. See :ref:`general_storage` for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.

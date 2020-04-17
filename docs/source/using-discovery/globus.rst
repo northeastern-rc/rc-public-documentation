@@ -24,7 +24,7 @@ Use the following instructions to setup an account with Globus using your myNort
 
 You will then be able to access the `Globus File Manager app <https://app.globus.org>`_.
 
-.. note::
+.. tip::
   If you received an account identity that includes your NUID number
   (for example 000123456@northeastern.edu), you can follow the “Creating and linking
   a new account identity” instructions below to get a different account identity if

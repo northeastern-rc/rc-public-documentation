@@ -1,8 +1,8 @@
 .. _general_storage:
 
-***********************************
-Research Computing Storage Options
-***********************************
+*****************************
+General Data Storage Options
+*****************************
 The Research Computing (RC) team is responsible for the procurement and ongoing
 maintenance of several data storage options, including active and archive
 storage solutions. If you are affiliated with Northeastern, you can request
@@ -14,7 +14,7 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
 
 .. note::
    If you have an account on Discovery, see :ref:`discovery_storage`
-   for details on the storage available to you specifically for use with Discovery's compute resources.
+   for details on the storage available to you specifically for use with Discovery's compute resources. The options listed below are not connected to Discovery.
 
 **NAME:** ``/research``
   - **DESCRIPTION:** This storage tier is intended to be a repository for data derived from equipment such as lab machines,
@@ -33,3 +33,9 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
     encrypted server, such as personally identifiable information (PII) data.
     You should first set up a consultation with a Research Computing staff member using the link above to
     determine if your data requires secure storage before requesting it.
+
+.. important::
+   If you are not connected to the campus internet, you must be connected to
+   the university's VPN (GlobalProtect) before you can access these storage systems.
+   You can find detailed information about downloading and using the GlobalProtect VPN 
+   in the `ServiceNow Knowledge Base <https://service.northeastern.edu/tech?id=kb_article&sys_id=4701e07adb93485084ba5595ce9619a9>`_.
