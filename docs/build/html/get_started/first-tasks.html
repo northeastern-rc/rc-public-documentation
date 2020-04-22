@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using Slurm" href="../using-discovery/usingslurm.html" />
+    <link rel="next" title="Hardware overview" href="../hardware/hardware_overview.html" />
     <link rel="prev" title="Getting Help" href="../welcome/gettinghelp.html" /> 
 </head>
 
@@ -96,10 +96,27 @@
 <li class="toctree-l3"><a class="reference internal" href="#sponsor-approval-process">Sponsor Approval Process</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#connecting-to-discovery">Connecting to Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-discovery">Connecting to Discovery</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mac">Mac</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#passwordless-ssh">Passwordless ssh</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#move-to-a-compute-node">Move to a compute node</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -111,13 +128,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Options on Discovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">Research Computing Storage Options</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Software on Discovery</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -216,6 +228,8 @@ look for the email with the link to the approval page to help expedite the proce
 <h2>Connecting to Discovery<a class="headerlink" href="#connecting-to-discovery" title="Permalink to this headline">¶</a></h2>
 <p>You connect to Discovery using a <a class="reference external" href="https://www.ssh.com/ssh/protocol/">secure shell</a> program and initiate an SSH session to
 log into Discovery.</p>
+<div class="section" id="mac">
+<h3>Mac<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h3>
 <p>Mac computers come with a Secure Shell (SSH) program called <a class="reference external" href="https://support.apple.com/guide/terminal/welcome/mac">Terminal</a>
 that you use to connect to Discovery using SSH.</p>
 <div class="admonition note">
@@ -232,12 +246,22 @@ that you use to connect to Discovery using SSH.</p>
 <li><p>Type your Northeastern password and press Enter.</p></li>
 </ol>
 <p>You are now connected to Discovery at a login node.</p>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>Never launch a job from the login node.
-Jobs that are launched from the login node will be terminated.
-Move to a compute node before running any jobs.</p>
+<div class="section" id="passwordless-ssh">
+<h4>Passwordless ssh<a class="headerlink" href="#passwordless-ssh" title="Permalink to this headline">¶</a></h4>
+<p>If you will be using x11 forwarding, you need to setup passwordless ssh to ensure that your application will launch without any issues. You also
+need to make sure that your keys are added to the authorized.key file. This needs to be done anytime you regenerate your keys. If you’re having
+an issue with opening an application that uses x11 forwarding, such as Matlab or Schrodinger, and you recently regenerated your keys, make sure to
+add your keys to the authorized.key file.</p>
+<p><strong>To setup passwordless ssh</strong></p>
+<ol class="arabic simple">
+<li><p>Connect to Discovery.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> and then accept all of the defaults. This generates your public and private keys.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/.ssh</span> <span class="pre">;</span> <span class="pre">cat</span> <span class="pre">id_rsa.pub</span> <span class="pre">&gt;&gt;</span> <span class="pre">authorized_keys</span></code>. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file</p></li>
+</ol>
 </div>
+</div>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <p>Before you can connect to Discovery on a Windows computer, you’ll need to download a terminal program,
 such as MobaXterm or PuTTY. We recommend MobaXterm, as you can also use it for file transfer,
 whereas with other SSH programs, you would need a separate file transfer program.</p>
@@ -255,6 +279,7 @@ whereas with other SSH programs, you would need a separate file transfer program
 <p>Never launch a job from the login node.
 Jobs that are launched from the login node will be terminated.
 Move to a compute node before running any jobs.</p>
+</div>
 </div>
 </div>
 <div class="section" id="move-to-a-compute-node">
@@ -275,7 +300,7 @@ Move to a compute node before running any jobs.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../using-discovery/usingslurm.html" class="btn btn-neutral float-right" title="Using Slurm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../hardware/hardware_overview.html" class="btn btn-neutral float-right" title="Hardware overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../welcome/gettinghelp.html" class="btn btn-neutral float-left" title="Getting Help" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

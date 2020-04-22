@@ -30,7 +30,7 @@ Every user on Discovery needs to have a sponsor approve their request, usually a
 Students (undergraduate or graduate), visiting researchers, or staff members must have a sponsor approve their request. When you fill out the
 ServiceNow form and enter the name of your sponsor, an email goes to the sponsor when you submit the request. Sponsors will continue to receive email
 reminders until they approve the request through the link in the email to ServiceNow. We recommended that before you submit an access request, let your sponsor know to
-look for the email with the link to the approval page to help expedite the process. 
+look for the email with the link to the approval page to help expedite the process.
 
 Connecting to Discovery
 =======================
@@ -39,7 +39,7 @@ log into Discovery.
 
 
 Mac
-~~~~
++++
 Mac computers come with a Secure Shell (SSH) program called `Terminal <https://support.apple.com/guide/terminal/welcome/mac>`_
 that you use to connect to Discovery using SSH.
 
@@ -58,14 +58,21 @@ that you use to connect to Discovery using SSH.
 
 You are now connected to Discovery at a login node.
 
-.. caution::
+Passwordless ssh
+~~~~~~~~~~~~~~~~
+If you will be using x11 forwarding, you need to setup passwordless ssh to ensure that your application will launch without any issues. You also
+need to make sure that your keys are added to the authorized.key file. This needs to be done anytime you regenerate your keys. If you're having
+an issue with opening an application that uses x11 forwarding, such as Matlab or Schrodinger, and you recently regenerated your keys, make sure to
+add your keys to the authorized.key file.
 
-   Never launch a job from the login node.
-   Jobs that are launched from the login node will be terminated.
-   Move to a compute node before running any jobs.
+**To setup passwordless ssh**
+
+1. Connect to Discovery.
+2. Type ``ssh-keygen`` and then accept all of the defaults. This generates your public and private keys.
+3. Type ``cd ~/.ssh ; cat id_rsa.pub >> authorized_keys``. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file
 
 Windows
-~~~~~~~
++++++++
 Before you can connect to Discovery on a Windows computer, you’ll need to download a terminal program,
 such as MobaXterm or PuTTY. We recommend MobaXterm, as you can also use it for file transfer,
 whereas with other SSH programs, you would need a separate file transfer program.
