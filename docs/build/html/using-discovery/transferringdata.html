@@ -92,13 +92,26 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="slurmexamples.html">Slurm examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Transferring Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#data-transfer-node-using-mac">Data transfer node using Mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-transfer-node-using-mac">Data transfer node using Mac</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-sshfs">Using SSHFS</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#data-transfer-node-using-windows">Data transfer node using Windows</a></li>
 </ul>
 </li>
@@ -106,13 +119,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Options on Discovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">Research Computing Storage Options</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Software on Discovery</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -196,9 +204,17 @@ to another location as soon as possible.</p>
 <div class="section" id="data-transfer-node-using-mac">
 <h2>Data transfer node using Mac<a class="headerlink" href="#data-transfer-node-using-mac" title="Permalink to this headline">¶</a></h2>
 <p>You can use Terminal to transfer data to and from Discovery.</p>
-<p>Use this command to transfer a file to your /scratch space:</p>
+<p>For example, you can use this command to transfer a file to your /scratch space:</p>
 <p><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">&lt;filename&gt;</span> <span class="pre">&lt;yourusername&gt;&#64;xfer.discovery.neu.edu:/scratch/&lt;yourusername&gt;</span></code></p>
 <p>Where <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;</span></code> is the name of the file you want to transfer and <code class="docutils literal notranslate"><span class="pre">&lt;yourusername&gt;</span></code> is your Northeastern username.</p>
+<div class="section" id="using-sshfs">
+<h3>Using SSHFS<a class="headerlink" href="#using-sshfs" title="Permalink to this headline">¶</a></h3>
+<p>If you want to use <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, you will need to use this command with the dedicated transfer node <code class="docutils literal notranslate"><span class="pre">xfer.discovery.neu.edu</span></code>. It will not work on the login or compute nodes.</p>
+<p>Use this syntax to perform file transfers with <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshfs</span> <span class="o">&lt;</span><span class="n">yourusername</span><span class="o">&gt;</span><span class="nd">@xfer</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">neu</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">your</span><span class="o">/</span><span class="n">remote</span><span class="o">/</span><span class="n">path</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">your</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">path</span><span class="o">&gt;</span> <span class="o">-&lt;</span><span class="n">options</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="data-transfer-node-using-windows">
 <h2>Data transfer node using Windows<a class="headerlink" href="#data-transfer-node-using-windows" title="Permalink to this headline">¶</a></h2>

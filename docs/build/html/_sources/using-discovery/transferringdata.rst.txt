@@ -19,11 +19,19 @@ Data transfer node using Mac
 
 You can use Terminal to transfer data to and from Discovery.
 
-Use this command to transfer a file to your /scratch space:
+For example, you can use this command to transfer a file to your /scratch space:
 
 ``scp <filename> <yourusername>@xfer.discovery.neu.edu:/scratch/<yourusername>``
 
 Where ``<filename>`` is the name of the file you want to transfer and ``<yourusername>`` is your Northeastern username.
+
+Using SSHFS
+++++++++++++
+If you want to use ``sshfs``, you will need to use this command with the dedicated transfer node ``xfer.discovery.neu.edu``. It will not work on the login or compute nodes.
+
+Use this syntax to perform file transfers with ``sshfs``::
+
+  sshfs <yourusername>@xfer.discovery.neu.edu:</your/remote/path> <your/local/path> -<options>
 
 Data transfer node using Windows
 ================================
