@@ -20,10 +20,16 @@ ServiceNow
 You can submit a ticket on ServiceNow by selecting from the `Research Computing ServiceNow catalog <https://northeastern.service-now.com/nav_to.do?uri=%2Fcatalog_home.do%3Fv%3D1%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default>`_.
 You might need to sign in with your myNortheastern username and password to view the ServiceNow catalog page.
 
-Consultations (in person and online)
+Consultations (online)
 ====================================
 
-We offer scheduled consultation hours at the Snell Library most weekdays
-during normal business hours (9AM to 5PM). Note that we follow the Northeastern University
-holiday schedule, so there are no walk-in hours on holidays or during breaks.
+We encourage you to schedule a consultation with one of our staff members to get personal, one-on-one assistance for your research computing and data storage needs.
+Consultations are available to any Northeastern student, faculty, or staff member. We can assist you with getting up and running with Discovery, help to optimize your code, help you with benchmarking,
+provide assistance with installing and using software packages, detailing data storage options, and much more.
+
+We offer scheduled consultation hours most weekdays during normal business hours (9AM to 5PM). Note that we follow the Northeastern University
+holiday schedule, so there are no walk-in hours on holidays or during breaks. All of our consultations are conducted as online
+meetings through the Teams app.
+
 Use our Bookings page to see our availability and to schedule an appointment https://rc.northeastern.edu/support/consulting/.
+You will need to sign in using your /@/northeastern.edu email (for example, a.student/@/northeastern.edu).

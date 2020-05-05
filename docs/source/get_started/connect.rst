@@ -1,45 +1,11 @@
-************
-First Tasks
-************
-.. _getting_access:
-
-Getting Access
-==============
-You must first have an account before you can access Discovery. You request an account through ServiceNow. You will need a Northeastern username and password to access ServiceNow. If you are new to the university or a visiting researcher, work with your sponsor to get an Northeastern username and password.
-
-**To request an account, follow these steps:**
-
-1. Go to `ServiceNow <https://northeastern.service-now.com/research?id=nurc_category>`_.
-
-2. Fill out the form, check the acknowledgement box, and click Submit.
-
-Your request can take up to 24 hours to process after it has been approved by your sponsor (see Sponsor Approval Process below). You will receive a confirmation email when your access has been granted.
-After you have access, if you are not familiar with using Discovery, high performance computing, or Linux, you should take one of our training courses.
-See the `Research Computing website <https://rc.northeastern.edu/support/training/>`_ for more information on our training and services.
-
-.. _instructor_access:
-
-Principal Investigator(PI)/Professor/Instructor Access
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-If you are a PI, professor, or instructor at Northeastern, and you need access to Discovery, you should use the access form in the
-above procedure, and in the Sponsor name field on the form, enter your own name.
-
-Sponsor Approval Process
-+++++++++++++++++++++++++++
-Every user on Discovery needs to have a sponsor approve their request, usually a PI or professor at Northeastern. PIs, professors, and instructors can sponsor themselves.
-Students (undergraduate or graduate), visiting researchers, or staff members must have a sponsor approve their request. When you fill out the
-ServiceNow form and enter the name of your sponsor, an email goes to the sponsor when you submit the request. Sponsors will continue to receive email
-reminders until they approve the request through the link in the email to ServiceNow. We recommended that before you submit an access request, let your sponsor know to
-look for the email with the link to the approval page to help expedite the process.
-
+*************************
 Connecting to Discovery
-=======================
+*************************
 You connect to Discovery using a `secure shell <https://www.ssh.com/ssh/protocol/>`_ program and initiate an SSH session to
-log into Discovery.
-
+log into Discovery. Mac and Windows have slightly different procedures for connecting, as detailed below.
 
 Mac
-+++
+===
 Mac computers come with a Secure Shell (SSH) program called `Terminal <https://support.apple.com/guide/terminal/welcome/mac>`_
 that you use to connect to Discovery using SSH.
 
@@ -59,7 +25,7 @@ that you use to connect to Discovery using SSH.
 You are now connected to Discovery at a login node.
 
 Passwordless ssh
-~~~~~~~~~~~~~~~~
++++++++++++++++++
 If you will be using x11 forwarding, you need to setup passwordless ssh to ensure that your application will launch without any issues. You also
 need to make sure that your keys are added to the authorized.key file. This needs to be done anytime you regenerate your keys. If you're having
 an issue with opening an application that uses x11 forwarding, such as Matlab or Schrodinger, and you recently regenerated your keys, make sure to
@@ -72,7 +38,7 @@ add your keys to the authorized.key file.
 3. Type ``cd ~/.ssh ; cat id_rsa.pub >> authorized_keys``. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file
 
 Windows
-+++++++
+========
 Before you can connect to Discovery on a Windows computer, you’ll need to download a terminal program,
 such as MobaXterm or PuTTY. We recommend MobaXterm, as you can also use it for file transfer,
 whereas with other SSH programs, you would need a separate file transfer program.

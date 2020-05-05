@@ -15,9 +15,10 @@ Northeastern University Research Computing
 
 .. toctree::
   :maxdepth: 2
-  :caption: Get Started
+  :caption: Getting Started with Discovery
 
-  get_started/first-tasks
+  get_started/get_access
+  get_started/connect
 
 .. toctree::
    :maxdepth: 2
@@ -32,7 +33,7 @@ Northeastern University Research Computing
 
    software/modules
    software/software
-   
+
 .. toctree::
   :maxdepth: 2
   :caption: Using Discovery

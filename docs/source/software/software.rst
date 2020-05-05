@@ -30,7 +30,10 @@ software packages to your local path. Please refer to the Spack documentation fo
 6. After you have the Spack commands in your path, type ``spack list`` to see all of the software that you can install with Spack.
 7. Type ``spack info <software name>`` to see information about a specific software package, including options and dependencies. Make sure to note the options and/or dependencies that you want to add or not add before installing the software.
 8. Type ``spack install <software name> +<any dependencies or options>`` to install a software package plus any dependencies or options. You can also specify ``-<any dependencies or options>``.You can list ``+`` or ``-`` different options and dependencies within the same line. Do not put a space between each option/dependency that you list.
+9. Type ``spack find`` to view your installed software packages, or type ``spack find <software package name>`` to view information about a specific installed package.
 
+When you have installed a software package, you can add it to the module system by typing:
+``. $SPACK_ROOT/share/spack/setup-env.sh``
 
 Using Make
 ==========

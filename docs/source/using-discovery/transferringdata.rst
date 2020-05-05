@@ -27,7 +27,7 @@ Where ``<filename>`` is the name of the file you want to transfer and ``<youruse
 
 Using SSHFS
 ++++++++++++
-If you want to use ``sshfs``, you will need to use this command with the dedicated transfer node ``xfer.discovery.neu.edu``. It will not work on the login or compute nodes.
+If you want to use ``sshfs``, you will need to use it with the dedicated transfer node ``xfer.discovery.neu.edu``. It will not work on the login or compute nodes.
 
 Use this syntax to perform file transfers with ``sshfs``::
 

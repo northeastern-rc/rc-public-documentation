@@ -88,9 +88,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Get Started</span></p>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
@@ -103,6 +114,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#using-cuda">Using CUDA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-gpus-with-pytorch">Using GPUs with PyTorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-tensorflow">Using Tensorflow</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
@@ -110,13 +122,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Options on Discovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">Research Computing Storage Options</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Software on Discovery</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -324,6 +331,32 @@ or your request will fail.</p>
 <span class="n">conda</span> <span class="n">activate</span> <span class="n">pytorch_env</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="n">pytorch</span><span class="o">==</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span> <span class="n">torchvision</span><span class="o">==</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">0</span> <span class="n">cudatoolkit</span><span class="o">=</span><span class="mf">9.2</span> <span class="o">-</span><span class="n">c</span> <span class="n">pytorch</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">c</span><span class="s1">&#39;import torch; print(torch.cuda.is_available())&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-tensorflow">
+<h2>Using Tensorflow<a class="headerlink" href="#using-tensorflow" title="Permalink to this headline">¶</a></h2>
+<p>The current version of Tensorflow is 2.1.0. This version does not work with Cuda 10.0, which is the latest version of Cuda on Discovery. To work with Tensorflow on Discovery,
+you’ll need to use Tensorflow 2.0. Use the procedures below to first load a conda environment that contains Tensorflow 2.0, which you can
+then use in a conda environment with Cuda 10.0.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">anaconda3</span><span class="o">/</span><span class="mf">3.7</span>
+<span class="n">module</span> <span class="n">load</span> <span class="n">cuda</span><span class="o">/</span><span class="mf">10.0</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">TF_env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span> <span class="n">anaconda</span> <span class="c1">#where TC_env is the name of the conda environment</span>
+<span class="n">source</span>  <span class="n">activate</span> <span class="n">TF_env</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">tensorflow</span><span class="o">-</span><span class="n">gpu</span><span class="o">==</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>If you want to test your environment, first make sure you are on GPU node, then type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;import tensorflow as tf;  print(tf.test.is_built_with_cuda())&#39;</span>
+</pre></div>
+</div>
+<p>You should see the result <code class="docutils literal notranslate"><span class="pre">True</span></code> if successful.</p>
+<p>To get the name of the GPU, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;import tensorflow as tf;  print(tf.test.gpu_device_name())&#39;</span>
+</pre></div>
+</div>
+<p>For example, you should see output like the line below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">physical</span> <span class="n">GPU</span> <span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Tesla</span> <span class="n">K40m</span><span class="p">,</span> <span class="n">pci</span> <span class="n">bus</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">0000</span><span class="p">:</span><span class="mi">0</span><span class="n">b</span><span class="p">:</span><span class="mf">00.0</span><span class="p">,</span> <span class="n">compute</span> <span class="n">capability</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">)</span> <span class="o">/</span><span class="n">device</span><span class="p">:</span><span class="n">GPU</span><span class="p">:</span><span class="mi">0</span>
 </pre></div>
 </div>
 </div>

@@ -119,3 +119,29 @@ The following is an example of using a conda virtual environment with PyTorch. M
   conda activate pytorch_env
   conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=9.2 -c pytorch
   python -c'import torch; print(torch.cuda.is_available())'
+
+Using Tensorflow
+================
+The current version of Tensorflow is 2.1.0. This version does not work with Cuda 10.0, which is the latest version of Cuda on Discovery. To work with Tensorflow on Discovery,
+you'll need to use Tensorflow 2.0. Use the procedures below to first load a conda environment that contains Tensorflow 2.0, which you can
+then use in a conda environment with Cuda 10.0.::
+
+  module load anaconda3/3.7
+  module load cuda/10.0
+  conda create --name TF_env python=3.7 anaconda #where TC_env is the name of the conda environment
+  source  activate TF_env
+  pip install tensorflow-gpu==2.0.0
+
+If you want to test your environment, first make sure you are on GPU node, then type::
+
+   python -c 'import tensorflow as tf;  print(tf.test.is_built_with_cuda())'
+
+You should see the result ``True`` if successful.
+
+To get the name of the GPU, type::
+
+   python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
+
+For example, you should see output like the line below::
+
+   physical GPU (device: 0, name: Tesla K40m, pci bus id: 0000:0b:00.0, compute capability: 3.5) /device:GPU:0
