@@ -114,7 +114,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#using-cuda">Using CUDA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-gpus-with-pytorch">Using GPUs with PyTorch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#using-tensorflow">Using Tensorflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-tensorflow">Using TensorFlow</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
@@ -335,9 +335,9 @@ or your request will fail.</p>
 </div>
 </div>
 <div class="section" id="using-tensorflow">
-<h2>Using Tensorflow<a class="headerlink" href="#using-tensorflow" title="Permalink to this headline">¶</a></h2>
-<p>The current version of Tensorflow is 2.1.0. This version does not work with Cuda 10.0, which is the latest version of Cuda on Discovery. To work with Tensorflow on Discovery,
-you’ll need to use Tensorflow 2.0. Use the procedures below to first load a conda environment that contains Tensorflow 2.0, which you can
+<h2>Using TensorFlow<a class="headerlink" href="#using-tensorflow" title="Permalink to this headline">¶</a></h2>
+<p>The current, default version of TensorFlow is 2.1.0. This version does not work with CUDA 10.0, which is the latest version of CUDA on Discovery. To work with TensorFlow on Discovery,
+you’ll need to use TensorFlow 2.0. Use the procedures below to first load a conda environment that contains TensorFlow 2.0, which you can
 then use in a conda environment with Cuda 10.0.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">anaconda3</span><span class="o">/</span><span class="mf">3.7</span>
 <span class="n">module</span> <span class="n">load</span> <span class="n">cuda</span><span class="o">/</span><span class="mf">10.0</span>

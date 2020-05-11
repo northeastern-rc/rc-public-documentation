@@ -9,6 +9,13 @@ You must first have an account before you can access Discovery. You request an a
 You will need a Northeastern username and password to access ServiceNow. If you are new to the university or a visiting researcher,
 work with your sponsor to get a Northeastern username and password.
 
+.. important::
+  If you previously had access to Discovery, but you are now working with a different PI,
+  submit a `ServiceNow access request form <https://northeastern.service-now.com/research?id=nurc_category>`_
+  and enter the name of your current PI in the Sponsor field. This will link your
+  account to your current PI. This is important to help expidite the process for updating your account
+  with any of your current PI's resources on Discovery, such as shared storage or a private partition.
+
 **To request an account, follow these steps:**
 
 1. Go to `ServiceNow <https://northeastern.service-now.com/research?id=nurc_category>`_.
