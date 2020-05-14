@@ -11,14 +11,14 @@ work with your sponsor to get a Northeastern username and password.
 
 .. important::
   If you previously had access to Discovery, but you are now working with a different PI,
-  submit a `ServiceNow access request form <https://northeastern.service-now.com/research?id=nurc_category>`_
+  submit a `ServiceNow Research Computing Access Request form <https://northeastern.service-now.com/research?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c>`_
   and enter the name of your current PI in the Sponsor field. This will link your
   account to your current PI. This is important to help expidite the process for updating your account
   with any of your current PI's resources on Discovery, such as shared storage or a private partition.
 
 **To request an account, follow these steps:**
 
-1. Go to `ServiceNow <https://northeastern.service-now.com/research?id=nurc_category>`_.
+1. Go to the `ServiceNow Research Computing Access Request form <https://northeastern.service-now.com/research?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c>`_.
 
 2. Fill out the form, check the acknowledgement box, and click Submit.
 

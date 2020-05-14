@@ -7,6 +7,10 @@ There are two main storage systems connected to Discovery: /home and /scratch. T
 The list below details the storage options available to you on Discovery if you have an account on Discovery. These are storage options
 that are connected to Discovery, and you should use when working on Discovery.
 
+.. important::
+   The /scratch space is only for temporary storage. It is not backed up, and there is a purge policy for data older than 28 days on scratch. Please review
+   the scratch policy on our Policy page: https://rc.northeastern.edu/policy/
+
 **NAME:** ``/home/<yourusername>`` where ``yourusername`` is your username, e.g. ``/home/j.smith``
  - **DESCRIPTION:** You are given a ``/home`` directory automatically when your Discovery account is created. This storage is mainly intended for environment tools and very low utilization. It is not performant storage.
  - **QUOTA:** 50GB
