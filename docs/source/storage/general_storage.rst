@@ -21,6 +21,7 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
     instruments, etc. The performance capabilities are not intended for parallel or high performance workloads.
     Data are backed up and a second copy is created. Storage on ``/research`` can be
     requested through the `New Storage request <https://northeastern.service-now.com/research?id=sc_cat_item&sys_id=891235d31b20c0502dafc8415b4bcb0e>`_ on ServiceNow
+    See the section "Connecting to /research" below for information on how to connect to this storage.
   - **QUOTA:** Up to 10TB per research group.
 
 **NAME:** ``/nese``
@@ -37,5 +38,28 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
 .. important::
    If you are not connected to the campus internet, you must be connected to
    the university's VPN (GlobalProtect) before you can access these storage systems.
-   You can find detailed information about downloading and using the GlobalProtect VPN 
+   You can find detailed information about downloading and using the GlobalProtect VPN
    in the `ServiceNow Knowledge Base <https://service.northeastern.edu/tech?id=kb_article&sys_id=4701e07adb93485084ba5595ce9619a9>`_.
+
+Connecting to /research
+========================
+After you have received notification that your shared storage folder on /reaserch is ready for you to use, you
+can connect to it on your laptop. Use the following procedures to connect to /research from either a Windows PC or a Macbook.
+If you are not on the campus internet, you will need to first be connected to Northeastern's VPN before you can connect to /research.
+
+**Windows**
+
+ 1. Open **File Explorer**.
+ 2. In the left pane, select **This PC**.
+ 3. On the **Computer** tab, select **Map network drive**.
+ 4. Select any letter not currently mapped to a drive. It does not matter what letter.
+ 5. In the **Folder** box, type ``\\nunet.neu.edu\rc-shares\<sharename>``, where ``<sharename>`` is the name of your shared storage. If you want this drive to reconnect automaically every time you log in, check Reconnect at sign in.
+ 6. Click Finish. Your shared folder now be available in File Explorer.
+
+**Mac**
+
+ 1. Click the **Finder** icon, and in the **Finder** window, select **Go**, then click **Connect to Server**.
+ 2. In the **Server Address** field type ``smb://nunet.neu.edu/rc-shares/<sharename>`` where ``<sharename>`` is the name of the share you want to connect to.
+ 3. Click Connect.
+ 4. If you are prompted to enter your name and password for the nunet server, select **Connect as Registered User**, in the **Name** field type ``NUNET\<yourusername>``, (where ``<yourusername>`` is your NU username) and type your NU password in the **Password** field. If you want to connect to /research automatically when you log in to your computer, select **Remember this password in my keychain**.
+ 5. Click Connect. Your share should appear as a folder in the Finder window.

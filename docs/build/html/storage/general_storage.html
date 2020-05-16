@@ -88,9 +88,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Get Started</span></p>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
 <ul>
@@ -113,7 +114,10 @@
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="discovery_storage.html">Storage Accessible on  Discovery</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">General Data Storage Options</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">General Data Storage Options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-research">Connecting to /research</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -201,7 +205,8 @@ for details on the storage available to you specifically for use with Discovery�
 <li><p><strong>DESCRIPTION:</strong> This storage tier is intended to be a repository for data derived from equipment such as lab machines,
 instruments, etc. The performance capabilities are not intended for parallel or high performance workloads.
 Data are backed up and a second copy is created. Storage on <code class="docutils literal notranslate"><span class="pre">/research</span></code> can be
-requested through the <a class="reference external" href="https://northeastern.service-now.com/research?id=sc_cat_item&amp;sys_id=891235d31b20c0502dafc8415b4bcb0e">New Storage request</a> on ServiceNow</p></li>
+requested through the <a class="reference external" href="https://northeastern.service-now.com/research?id=sc_cat_item&amp;sys_id=891235d31b20c0502dafc8415b4bcb0e">New Storage request</a> on ServiceNow
+See the section “Connecting to /research” below for information on how to connect to this storage.</p></li>
 <li><p><strong>QUOTA:</strong> Up to 10TB per research group.</p></li>
 </ul>
 </dd>
@@ -225,6 +230,33 @@ determine if your data requires secure storage before requesting it.</p></li>
 the university’s VPN (GlobalProtect) before you can access these storage systems.
 You can find detailed information about downloading and using the GlobalProtect VPN
 in the <a class="reference external" href="https://service.northeastern.edu/tech?id=kb_article&amp;sys_id=4701e07adb93485084ba5595ce9619a9">ServiceNow Knowledge Base</a>.</p>
+</div>
+<div class="section" id="connecting-to-research">
+<h2>Connecting to /research<a class="headerlink" href="#connecting-to-research" title="Permalink to this headline">¶</a></h2>
+<p>After you have received notification that your shared storage folder on /reaserch is ready for you to use, you
+can connect to it on your laptop. Use the following procedures to connect to /research from either a Windows PC or a Macbook.
+If you are not on the campus internet, you will need to first be connected to Northeastern’s VPN before you can connect to /research.</p>
+<p><strong>Windows</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Open <strong>File Explorer</strong>.</p></li>
+<li><p>In the left pane, select <strong>This PC</strong>.</p></li>
+<li><p>On the <strong>Computer</strong> tab, select <strong>Map network drive</strong>.</p></li>
+<li><p>Select any letter not currently mapped to a drive. It does not matter what letter.</p></li>
+<li><p>In the <strong>Folder</strong> box, type <code class="docutils literal notranslate"><span class="pre">\\nunet.neu.edu\rc-shares\&lt;sharename&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;sharename&gt;</span></code> is the name of your shared storage. If you want this drive to reconnect automaically every time you log in, check Reconnect at sign in.</p></li>
+<li><p>Click Finish. Your shared folder now be available in File Explorer.</p></li>
+</ol>
+</div></blockquote>
+<p><strong>Mac</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Click the <strong>Finder</strong> icon, and in the <strong>Finder</strong> window, select <strong>Go</strong>, then click <strong>Connect to Server</strong>.</p></li>
+<li><p>In the <strong>Server Address</strong> field type <code class="docutils literal notranslate"><span class="pre">smb://nunet.neu.edu/rc-shares/&lt;sharename&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">&lt;sharename&gt;</span></code> is the name of the share you want to connect to.</p></li>
+<li><p>Click Connect.</p></li>
+<li><p>If you are prompted to enter your name and password for the nunet server, select <strong>Connect as Registered User</strong>, in the <strong>Name</strong> field type <code class="docutils literal notranslate"><span class="pre">NUNET\&lt;yourusername&gt;</span></code>, (where <code class="docutils literal notranslate"><span class="pre">&lt;yourusername&gt;</span></code> is your NU username) and type your NU password in the <strong>Password</strong> field. If you want to connect to /research automatically when you log in to your computer, select <strong>Remember this password in my keychain</strong>.</p></li>
+<li><p>Click Connect. Your share should appear as a folder in the Finder window.</p></li>
+</ol>
+</div></blockquote>
 </div>
 </div>
 

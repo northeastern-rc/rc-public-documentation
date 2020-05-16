@@ -52,7 +52,7 @@ You can also have more than one environment with different packages for testing 
 
 1. To check what version of Python you have installed, type ``which python``.
 2. To load anaconda, type ``module load anaconda3/3.7``.
-3. To create your environment, type ``conda create -n <yourenvironmentname> python3.7 anaconda``, where <yourenvironmentname> is the name you want to give your environment. Tip: to see a list of all of your conda environments, type ``conda info -e``.
+3. To create your environment, type ``conda create -n <yourenvironmentname> python=3.7 anaconda``, where <yourenvironmentname> is the name you want to give your environment. Tip: to see a list of all of your conda environments, type ``conda info -e``.
 4. Follow the prompts to complete the conda install.
 5. To activate your conda environment, type ``source activate <yourenvironmentname>``. Note that ``conda activate`` will not work on Discovery.
 6. To install a specific package, type ``conda install -n <yourenvironmentname> [package]``.
