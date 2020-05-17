@@ -43,7 +43,7 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
 
 Connecting to /research
 ========================
-After you have received notification that your shared storage folder on /reaserch is ready for you to use, you
+After you have received notification that your shared storage folder on /research is ready for you to use, you
 can connect to it on your laptop. Use the following procedures to connect to /research from either a Windows PC or a Macbook.
 If you are not on the campus internet, you will need to first be connected to Northeastern's VPN before you can connect to /research.
 
