@@ -35,7 +35,7 @@ folder is where you'll save your job data.
   c. In the **Number of computational threads to use on each worker** option, type a number between 1 and 16. This field represents the number of threads that each worker will possess. This corresponds to ``cpus-per-task`` in Slurm. Do not exceed the number of available cores on the node.
 
 9. When you have finished editing your properties, click **Done**.
-10. (OPTIONAL) Click the Validiate tab, ensure all of the stages are checked, then click Validate. This will check the properties of your profile.
+10. (OPTIONAL) Click the Validate tab, ensure all of the stages are checked, then click Validate. This will check the properties of your profile.
 11. (OPTIONAL) In the **Cluster Profile** column, right-click on the Discovery profile name and select **Set as Default**. This sets your profile as the default profile.
 
 Now that you have set up your profile, you can use the default cluster profile you just created (*Discovery*) with the following commands::
