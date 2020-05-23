@@ -33,6 +33,7 @@ Northeastern University Research Computing
 
    software/modules
    software/software
+   software/matlab
 
 .. toctree::
   :maxdepth: 2

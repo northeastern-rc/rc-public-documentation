@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Working with MATLAB Parallel Computing Toolbox &mdash; Northeastern University Research Computing 0.0.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using Slurm" href="../using-discovery/usingslurm.html" />
+    <link rel="prev" title="Installing Software" href="software.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/NU_logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working with MATLAB Parallel Computing Toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-parcluster-example">Using parcluster example</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classroom/class_use.html">Using Discovery with your class FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Northeastern University Research Computing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Working with MATLAB Parallel Computing Toolbox</li>
+    
+    
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="working-with-matlab-parallel-computing-toolbox">
+<h1>Working with MATLAB Parallel Computing Toolbox<a class="headerlink" href="#working-with-matlab-parallel-computing-toolbox" title="Permalink to this headline">¶</a></h1>
+<p>The Discovery cluster has MATLAB Parallel Server installed. This topic page will detail how you
+can setup and use MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB 2020a. There are
+several parts to this walkthrough. We suggest that you read it through completely before starting.</p>
+<p>This walkthrough will use Open onDemand, the web portal on Discovery, to launch MATLAB. You’ll then create a
+cluster profile. This allows you to define cluster properties that will be applied to your jobs. Supported
+functions are <em>batch, parpool, and parcluster</em>. The Parallel Computing Toolbox comes with a cluster profile
+called <em>local</em>, which you will change in the walkthrough below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This walkthrough is for submitting jobs from Discovery, not using MATLAB on your local desktop or laptop.</p>
+</div>
+<p>Before starting, you should create a folder in your /scratch/&lt;yourusername&gt; directory. This
+folder is where you’ll save your job data.</p>
+<ol class="arabic simple">
+<li><p>Go to your /scratch directory: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/scratch/&lt;yourusername&gt;</span></code> where &lt;yourusername&gt; is your NU username</p></li>
+<li><p>Make a new folder. We suggest calling it <em>matlab-metadata</em>: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">matlab-metadata</span></code></p></li>
+</ol>
+<p><strong>To start MATLAB and add a Cluster Profile, do the following:</strong></p>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="http://ood.discovery.neu.edu">http://ood.discovery.neu.edu</a>. Sign in with your Discovery username and password if needed.</p></li>
+<li><p>Click <strong>Interactive Apps</strong>, and select <strong>MATLAB</strong>.</p></li>
+<li><p>Select <strong>MATLAB version 2020a</strong>, and keep the default time of 1 hour and default memory of 2GB. Click <strong>Launch</strong>.</p></li>
+<li><p>If necessary, adjust the <strong>Compression</strong> and <strong>Image Quality</strong>, and then click <strong>Launch MATLAB</strong>.</p></li>
+<li><p>On the MATLAB Home tab, in the <strong>Environment</strong> section, select <strong>Parallel</strong>, then click <strong>Create and Manage Clusters</strong>. This opens the Cluster Profile Manager window.</p></li>
+<li><p>On the Cluster Profile Manager window, select <strong>Add Cluster Profile</strong>, then click <strong>Slurm</strong>. If prompted, click <strong>OK</strong> to the notice about needing Parallel Server.</p></li>
+<li><p>Double click the new profile name in the Cluster Profile column, and type in the name Discovery. Press <strong>Enter</strong> to save the change.</p></li>
+<li><p>Select <strong>Edit</strong> in the <strong>Manage Profile</strong> section. This lets you edit the options on the <strong>Properties</strong> tab. For this walkthrough, make the following edits:</p></li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>In the <strong>Folder where job data is stored on the client</strong> option, type <code class="docutils literal notranslate"><span class="pre">/scratch/&lt;yourusername&gt;/matlab-metadata</span></code> (this is the directory that you created in the first procedure above).</p></li>
+<li><p>In the <strong>Numnber of workers available to cluster</strong> option, type a number between 100 to 200. This field is the number of MPI processes you intend to run. This corresponds to the <code class="docutils literal notranslate"><span class="pre">--ntasks</span></code> Slurm option. The maximum is 1024 per job; however, for this task, we recommend keeping it lower and use threading inside the nodes.</p></li>
+<li><p>In the <strong>Number of computational threads to use on each worker</strong> option, type a number between 1 and 16. This field represents the number of threads that each worker will possess. This corresponds to <code class="docutils literal notranslate"><span class="pre">cpus-per-task</span></code> in Slurm. Do not exceed the number of available cores on the node.</p></li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li><p>When you have finished editing your properties, click <strong>Done</strong>.</p></li>
+<li><p>(OPTIONAL) Click the Validiate tab, ensure all of the stages are checked, then click Validate. This will check the properties of your profile.</p></li>
+<li><p>(OPTIONAL) In the <strong>Cluster Profile</strong> column, right-click on the Discovery profile name and select <strong>Set as Default</strong>. This sets your profile as the default profile.</p></li>
+</ol>
+<p>Now that you have set up your profile, you can use the default cluster profile you just created (<em>Discovery</em>) with the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#with parpool
+parallel.defaultClusterProfile(‘Discovery’)
+parpool
+
+#with parcluster
+c = parcluster(‘Discovery’)
+</pre></div>
+</div>
+<div class="section" id="using-parcluster-example">
+<h2>Using parcluster example<a class="headerlink" href="#using-parcluster-example" title="Permalink to this headline">¶</a></h2>
+<p>This section will detail how to submit batch jobs to the cluster to perform scaling calculations for an integer factorization sample problem.
+It is a computationally intensive problem, where the complexity of the factorization increases with the magnitude of the number. We will use the myParallelAlgorithmFcn.m MATLAB function.
+This section assumes you have configured MATLAB Cluster Profile according to the procedure above.</p>
+<p>On Discovery, there are benchmarking scripts and examples located in the <code class="docutils literal notranslate"><span class="pre">/shared/centos7/matlab/R2020a/examples/parallel/main</span></code> folder.
+To add the path to this folder to the list of available paths, do one of the following:</p>
+<ul class="simple">
+<li><p>On the MATLAB Home tab, in the <strong>Environment</strong> section, click <strong>Set Path</strong> and add the path to the script.</p></li>
+<li><p>Alternatively, provide the full path of the script in the MATLAB command line.</p></li>
+</ul>
+<p>The contents of myParallelAlgorithmFcn is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="p">[</span><span class="n">numWorkers</span><span class="p">,</span><span class="n">time</span><span class="p">]</span> <span class="o">=</span> <span class="n">myParallelAlgorithmFcn</span> <span class="p">()</span>
+
+<span class="n">complexities</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">2</span><span class="o">^</span><span class="mi">18</span> <span class="mi">2</span><span class="o">^</span><span class="mi">20</span> <span class="mi">2</span><span class="o">^</span><span class="mi">21</span> <span class="mi">2</span><span class="o">^</span><span class="mi">22</span><span class="p">];</span>
+<span class="n">numWorkers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">4</span> <span class="mi">6</span> <span class="mi">16</span> <span class="mi">32</span> <span class="mi">64</span><span class="p">];</span>
+
+<span class="n">time</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">numel</span><span class="p">(</span><span class="n">numWorkers</span><span class="p">),</span><span class="n">numel</span><span class="p">(</span><span class="n">complexities</span><span class="p">));</span>
+
+<span class="o">%</span> <span class="n">To</span> <span class="n">obtain</span> <span class="n">obtain</span> <span class="n">predictable</span> <span class="n">sequences</span> <span class="n">of</span> <span class="n">composite</span> <span class="n">numbers</span><span class="p">,</span> <span class="n">fix</span> <span class="n">the</span> <span class="n">seed</span>
+<span class="o">%</span> <span class="n">of</span> <span class="n">the</span> <span class="n">random</span> <span class="n">number</span> <span class="n">generator</span><span class="o">.</span>
+<span class="n">rng</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;twister&#39;</span><span class="p">);</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">numel</span><span class="p">(</span><span class="n">complexities</span><span class="p">)</span>
+
+   <span class="n">primeNumbers</span> <span class="o">=</span> <span class="n">primes</span><span class="p">(</span><span class="n">complexities</span><span class="p">(</span><span class="n">c</span><span class="p">));</span>
+   <span class="n">compositeNumbers</span> <span class="o">=</span>    <span class="n">primeNumbers</span><span class="o">.*</span><span class="n">primeNumbers</span><span class="p">(</span><span class="n">randperm</span><span class="p">(</span><span class="n">numel</span><span class="p">(</span><span class="n">primeNumbers</span><span class="p">)));</span>
+   <span class="n">factors</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">numel</span><span class="p">(</span><span class="n">primeNumbers</span><span class="p">),</span><span class="mi">2</span><span class="p">);</span>
+
+   <span class="k">for</span> <span class="n">w</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">numel</span><span class="p">(</span><span class="n">numWorkers</span><span class="p">)</span>
+       <span class="n">tic</span><span class="p">;</span>
+       <span class="n">parfor</span> <span class="p">(</span><span class="n">idx</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">numel</span><span class="p">(</span><span class="n">compositeNumbers</span><span class="p">),</span> <span class="n">numWorkers</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
+          <span class="n">factors</span><span class="p">(</span><span class="n">idx</span><span class="p">,:)</span> <span class="o">=</span> <span class="n">factor</span><span class="p">(</span><span class="n">compositeNumbers</span><span class="p">(</span><span class="n">idx</span><span class="p">));</span>
+       <span class="n">end</span>
+       <span class="n">time</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="o">=</span> <span class="n">toc</span><span class="p">;</span>
+   <span class="n">end</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+<p><strong>To submit myParallelAlgorithmFcn as a batch job, in the MATLAB Command Window, type</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">totalNumberOfWorkers</span> <span class="o">=</span> <span class="mi">65</span><span class="p">;</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">parcluster</span><span class="p">(</span><span class="s1">&#39;Discovery&#39;</span><span class="p">);</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">batch</span><span class="p">(</span><span class="n">cluster</span><span class="p">,</span><span class="s1">&#39;myParallelAlgorithmFcn&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Pool&#39;</span><span class="p">,</span><span class="n">totalNumberOfWorkers</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;CurrentFolder&#39;</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This specifies the <code class="docutils literal notranslate"><span class="pre">totalNumberOfWorkers</span></code> as 65, where 64 workers will be issued to run <em>parfor</em> in parallel
+(so the pool is set as 64), and the additional worker will run the main process.</p>
+<p>To monitor the job after you submit it, click <strong>Parallel</strong>, then <strong>Monitor Jobs</strong> to open the Job Monitor.
+You can view some job information, such as the state of the job (i.e. running, failed, finished etc.),
+as well as the ability to fetch outputs if you right-click on the job line.</p>
+<p>You can close MATLAB after you submit the job the scheduler. The job monitor tool will keep track of the jobs.</p>
+<p>If you want to block MATLAB until the jobs are finished, type <code class="docutils literal notranslate"><span class="pre">Wait(job)</span></code>.</p>
+<p>When the jobs complete, you can transfer the outputs of the function using the <code class="docutils literal notranslate"><span class="pre">fetchOutputs</span></code> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">outputs</span> <span class="o">=</span> <span class="n">fetchOutputs</span><span class="p">(</span><span class="n">job</span><span class="p">);</span>
+<span class="n">numWorkers</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">outputs</span><span class="p">{</span><span class="mi">2</span><span class="p">};</span>
+</pre></div>
+</div>
+<p>You can plot the performance (speedup) by typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span>
+<span class="n">speedup</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="mi">1</span><span class="p">,:)</span><span class="o">./</span><span class="n">time</span><span class="p">;</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">numWorkers</span><span class="p">,</span><span class="n">speedup</span><span class="p">);</span>
+<span class="n">legend</span><span class="p">(</span><span class="s1">&#39;Problem complexity 1&#39;</span><span class="p">,</span><span class="s1">&#39;Problem complexity 2&#39;</span><span class="p">,</span><span class="s1">&#39;Problem complexity 3&#39;</span><span class="p">,</span><span class="s1">&#39;Problem complexity 4&#39;</span><span class="p">,</span><span class="s1">&#39;Location&#39;</span><span class="p">,</span><span class="s1">&#39;northwest&#39;</span><span class="p">);</span>
+<span class="n">title</span><span class="p">(</span><span class="s1">&#39;Speedup vs complexity&#39;</span><span class="p">);</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of workers&#39;</span><span class="p">);</span>
+<span class="n">xticks</span><span class="p">(</span><span class="n">numWorkers</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">end</span><span class="p">));</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Speedup&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../using-discovery/usingslurm.html" class="btn btn-neutral float-right" title="Using Slurm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="software.html" class="btn btn-neutral float-left" title="Installing Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2020, Northeastern University Research Computing
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
