@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -91,6 +100,7 @@
 <p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/recommended_tools.html">Recommended Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
@@ -102,6 +112,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
@@ -197,8 +208,8 @@ The node name is <code class="docutils literal notranslate"><span class="pre">&l
 <p>You can also transfer files using Globus. This is highly recommended if you need to transfer large amounts of data.
 See <a class="reference internal" href="globus.html#using-globus"><span class="std std-ref">Using Globus</span></a> for more information.</p>
 <div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>The /scratch directory is for temporary file storage only. It is not backed up.
+<p class="first admonition-title">Caution</p>
+<p class="last">The /scratch directory is for temporary file storage only. It is not backed up.
 If you have directed your output files to /scratch, you should transfer your data from /scratch
 to another location as soon as possible.</p>
 </div>
@@ -223,21 +234,21 @@ to another location as soon as possible.</p>
 The Files menu in Open onDemand (OOD) also allows you to transfer files. See <a class="reference internal" href="../using-ood/fileexplore.html#file-explorer"><span class="std std-ref">Using OOD’s File Explorer</span></a> for more information.</p>
 <p><strong>To transfer data using MobaXterm:</strong></p>
 <ol class="arabic simple">
-<li><p>Open MobaXterm.</p></li>
-<li><p>Click <strong>Session</strong>, then select <strong>SFTP</strong>.</p></li>
-<li><p>In the <strong>Remote host</strong> field, type <code class="docutils literal notranslate"><span class="pre">xfer.discovery.neu.edu</span></code></p></li>
-<li><p>In the <strong>Username</strong> field, type your Northeastern username.</p></li>
-<li><p>In the <strong>Port</strong> field, type 22.</p></li>
-<li><p>In the <strong>Password</strong> box, type your Northeastern password and click <strong>OK</strong>. Click <strong>No</strong> if prompted to save your password.</p></li>
+<li>Open MobaXterm.</li>
+<li>Click <strong>Session</strong>, then select <strong>SFTP</strong>.</li>
+<li>In the <strong>Remote host</strong> field, type <code class="docutils literal notranslate"><span class="pre">xfer.discovery.neu.edu</span></code></li>
+<li>In the <strong>Username</strong> field, type your Northeastern username.</li>
+<li>In the <strong>Port</strong> field, type 22.</li>
+<li>In the <strong>Password</strong> box, type your Northeastern password and click <strong>OK</strong>. Click <strong>No</strong> if prompted to save your password.</li>
 </ol>
 <p>You will now be connected to the transfer node and can transfer files through MobaXterm.</p>
 <p><strong>To transfer data using FileZilla:</strong></p>
 <ol class="arabic simple">
-<li><p>Open FileZilla.</p></li>
-<li><p>In the <strong>Host</strong> field, type <code class="docutils literal notranslate"><span class="pre">sftp://xfer.discovery.neu.edu</span></code></p></li>
-<li><p>In the <strong>Username</strong> field, type your Northeastern username.</p></li>
-<li><p>In the <strong>Password</strong> field, type your Northeastern password.</p></li>
-<li><p>In the <strong>Port</strong> field, type 22.</p></li>
+<li>Open FileZilla.</li>
+<li>In the <strong>Host</strong> field, type <code class="docutils literal notranslate"><span class="pre">sftp://xfer.discovery.neu.edu</span></code></li>
+<li>In the <strong>Username</strong> field, type your Northeastern username.</li>
+<li>In the <strong>Password</strong> field, type your Northeastern password.</li>
+<li>In the <strong>Port</strong> field, type 22.</li>
 </ol>
 <p>You will now be connected to the transfer node and can transfer files through FileZilla.</p>
 </div>

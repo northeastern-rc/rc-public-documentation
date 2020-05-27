@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -91,6 +100,7 @@
 <p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/recommended_tools.html">Recommended Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
@@ -102,6 +112,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -188,25 +199,27 @@
 The list below details the storage options available to you on Discovery if you have an account on Discovery. These are storage options
 that are connected to Discovery, and you should use when working on Discovery.</p>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The /scratch space is only for temporary storage. It is not backed up, and there is a purge policy for data older than 28 days on scratch. Please review
+<p class="first admonition-title">Important</p>
+<p class="last">The /scratch space is only for temporary storage. It is not backed up, and there is a purge policy for data older than 28 days on scratch. Please review
 the scratch policy on our Policy page: <a class="reference external" href="https://rc.northeastern.edu/policy/">https://rc.northeastern.edu/policy/</a></p>
 </div>
-<dl class="simple">
-<dt><strong>NAME:</strong> <code class="docutils literal notranslate"><span class="pre">/home/&lt;yourusername&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">yourusername</span></code> is your username, e.g. <code class="docutils literal notranslate"><span class="pre">/home/j.smith</span></code></dt><dd><ul class="simple">
-<li><p><strong>DESCRIPTION:</strong> You are given a <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory automatically when your Discovery account is created. This storage is mainly intended for environment tools and very low utilization. It is not performant storage.</p></li>
-<li><p><strong>QUOTA:</strong> 50GB</p></li>
+<dl class="docutils">
+<dt><strong>NAME:</strong> <code class="docutils literal notranslate"><span class="pre">/home/&lt;yourusername&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">yourusername</span></code> is your username, e.g. <code class="docutils literal notranslate"><span class="pre">/home/j.smith</span></code></dt>
+<dd><ul class="first last simple">
+<li><strong>DESCRIPTION:</strong> You are given a <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory automatically when your Discovery account is created. This storage is mainly intended for environment tools and very low utilization. It is not performant storage.</li>
+<li><strong>QUOTA:</strong> 50GB</li>
 </ul>
 </dd>
-<dt><strong>NAME:</strong> <code class="docutils literal notranslate"><span class="pre">/scratch/&lt;yourusername&gt;</span></code></dt><dd><ul class="simple">
-<li><p><strong>DESCRIPTION:</strong> You are given a <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> directory automatically when your Discovery account is created. This is a shared space for all users. The total storage available is 1.8PB; however, while this is performant storage, it is for temporary use only. It is not backed up. Data on <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> should be moved as soon as possible to another location for permanent storage.</p></li>
-<li><p><strong>QUOTA:</strong> N/A</p></li>
+<dt><strong>NAME:</strong> <code class="docutils literal notranslate"><span class="pre">/scratch/&lt;yourusername&gt;</span></code></dt>
+<dd><ul class="first last simple">
+<li><strong>DESCRIPTION:</strong> You are given a <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> directory automatically when your Discovery account is created. This is a shared space for all users. The total storage available is 1.8PB; however, while this is performant storage, it is for temporary use only. It is not backed up. Data on <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> should be moved as soon as possible to another location for permanent storage.</li>
+<li><strong>QUOTA:</strong> N/A</li>
 </ul>
 </dd>
 </dl>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can also request additional general data storage if needed. See <a class="reference internal" href="general_storage.html#general-storage"><span class="std std-ref">General Data Storage Options</span></a> for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">You can also request additional general data storage if needed. See <a class="reference internal" href="general_storage.html#general-storage"><span class="std std-ref">General Data Storage Options</span></a> for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.</p>
 </div>
 </div>
 

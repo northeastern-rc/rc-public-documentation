@@ -18,6 +18,7 @@ Northeastern University Research Computing
   :caption: Getting Started with Discovery
 
   get_started/get_access
+  get_started/recommended_tools
   get_started/connect
 
 .. toctree::

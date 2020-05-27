@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -88,26 +97,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Get Started</span></p>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/recommended_tools.html">Recommended Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Understanding storage options</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Options on Discovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">Research Computing Storage Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul class="current">
@@ -184,29 +202,29 @@ applications is one hour. It is recommended that you keep the default. If you as
 hour, you will need to wait for Slurm to allocate a resource that can run for your requested time,
 which could take a long time to be allocated, depending on how busy the cluster is.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to
+<p class="first admonition-title">Note</p>
+<p class="last">Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to
 open an app, and you believe that you should have access to it, please email <a class="reference external" href="mailto:rchelp&#37;&#52;&#48;northeastern&#46;edu">rchelp<span>&#64;</span>northeastern<span>&#46;</span>edu</a> with your username,
 research group, the app you are trying to access, a screenshot of the error that you are getting, and we will
 look into the issue.</p>
 </div>
 <ol class="arabic simple">
-<li><p>In a web browser, go to ood.discovery.neu.edu. If prompted, enter your myNortheastern username and password.</p></li>
-<li><p>Select <strong>Interactive Apps</strong>, then select the application you want to use.</p></li>
-<li><p>Accept the default of 1 hour, and click <strong>Launch</strong>. You might have to wait a
-minute or two for a compute node to be allocated with your requested time and resource.</p></li>
+<li>In a web browser, go to ood.discovery.neu.edu. If prompted, enter your myNortheastern username and password.</li>
+<li>Select <strong>Interactive Apps</strong>, then select the application you want to use.</li>
+<li>Accept the default of 1 hour, and click <strong>Launch</strong>. You might have to wait a
+minute or two for a compute node to be allocated with your requested time and resource.</li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you request more than one hour, you might have to wait much longer for a compute node to be allocated to you.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">If you request more than one hour, you might have to wait much longer for a compute node to be allocated to you.</p>
 </div>
 <ol class="arabic simple" start="4">
-<li><p>If you selected Jupyter Notebook, click <strong>Connect to Jupyter</strong>.
-A Jupyter Notebook opens in a new tab on your browser.</p></li>
+<li>If you selected Jupyter Notebook, click <strong>Connect to Jupyter</strong>.
+A Jupyter Notebook opens in a new tab on your browser.</li>
 </ol>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>On the Jupyter Notebook Home tab, click <strong>New</strong>, then select the kernel you want to use.
+<p class="first admonition-title">Tip</p>
+<p class="last">On the Jupyter Notebook Home tab, click <strong>New</strong>, then select the kernel you want to use.
 Your selected kernel opens in a new tab on your browser. Click the <strong>Running</strong> tab to see a
 list of what Notebooks you already have running.
 If you already have a Notebook saved to your home directory, on the <strong>Files</strong> tab,

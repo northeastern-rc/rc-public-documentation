@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -35,7 +44,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using Slurm" href="../using-discovery/usingslurm.html" />
+    <link rel="next" title="Working with MATLAB Parallel Computing Toolbox" href="matlab.html" />
     <link rel="prev" title="Using Module" href="modules.html" /> 
 </head>
 
@@ -91,6 +100,7 @@
 <p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/recommended_tools.html">Recommended Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
@@ -109,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#installing-matlab-toolboxes">Installing Matlab toolboxes</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -206,15 +217,15 @@ to incompatibility with the hardware on Discovery.</p>
 <p>We recommend that you try using <a class="reference external" href="https://spack.io/">Spack</a> to install software locally to your path. Spack is a tool that conveniently installs
 software packages to your local path. Please refer to the Spack documentation for the latest information on using Spack.</p>
 <ol class="arabic simple">
-<li><p>Connect to Discovery.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/spack/spack.git</span></code>  to copy Spack to your /home directory.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">-p</span> <span class="pre">short</span> <span class="pre">--pty</span> <span class="pre">--export=ALL</span> <span class="pre">-N</span> <span class="pre">1</span> <span class="pre">-n</span> <span class="pre">28</span> <span class="pre">--exclusive</span> <span class="pre">/bin/bash</span></code> to allocate an interactive node. Spack will attempt to run <code class="docutils literal notranslate"><span class="pre">make</span></code> in parallel, so this <code class="docutils literal notranslate"><span class="pre">srun</span></code> request is for 28 cores on one node (-N 1 -n 28).</p></li>
-<li><p>To have Spack in your local environment so you can use the Spack commands, type <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">SPACK_ROOT=/home/&lt;yourusername&gt;/spack</span></code>.</p></li>
-<li><p>Then type <code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">$SPACK_ROOT/share/spack/setup-env.sh</span></code>.</p></li>
-<li><p>After you have the Spack commands in your path, type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">list</span></code> to see all of the software that you can install with Spack.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">info</span> <span class="pre">&lt;software</span> <span class="pre">name&gt;</span></code> to see information about a specific software package, including options and dependencies. Make sure to note the options and/or dependencies that you want to add or not add before installing the software.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">install</span> <span class="pre">&lt;software</span> <span class="pre">name&gt;</span> <span class="pre">+&lt;any</span> <span class="pre">dependencies</span> <span class="pre">or</span> <span class="pre">options&gt;</span></code> to install a software package plus any dependencies or options. You can also specify <code class="docutils literal notranslate"><span class="pre">-&lt;any</span> <span class="pre">dependencies</span> <span class="pre">or</span> <span class="pre">options&gt;</span></code>.You can list <code class="docutils literal notranslate"><span class="pre">+</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code> different options and dependencies within the same line. Do not put a space between each option/dependency that you list.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">find</span></code> to view your installed software packages, or type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">find</span> <span class="pre">&lt;software</span> <span class="pre">package</span> <span class="pre">name&gt;</span></code> to view information about a specific installed package.</p></li>
+<li>Connect to Discovery.</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/spack/spack.git</span></code>  to copy Spack to your /home directory.</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">-p</span> <span class="pre">short</span> <span class="pre">--pty</span> <span class="pre">--export=ALL</span> <span class="pre">-N</span> <span class="pre">1</span> <span class="pre">-n</span> <span class="pre">28</span> <span class="pre">--exclusive</span> <span class="pre">/bin/bash</span></code> to allocate an interactive node. Spack will attempt to run <code class="docutils literal notranslate"><span class="pre">make</span></code> in parallel, so this <code class="docutils literal notranslate"><span class="pre">srun</span></code> request is for 28 cores on one node (-N 1 -n 28).</li>
+<li>To have Spack in your local environment so you can use the Spack commands, type <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">SPACK_ROOT=/home/&lt;yourusername&gt;/spack</span></code>.</li>
+<li>Then type <code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">$SPACK_ROOT/share/spack/setup-env.sh</span></code>.</li>
+<li>After you have the Spack commands in your path, type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">list</span></code> to see all of the software that you can install with Spack.</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">info</span> <span class="pre">&lt;software</span> <span class="pre">name&gt;</span></code> to see information about a specific software package, including options and dependencies. Make sure to note the options and/or dependencies that you want to add or not add before installing the software.</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">install</span> <span class="pre">&lt;software</span> <span class="pre">name&gt;</span> <span class="pre">+&lt;any</span> <span class="pre">dependencies</span> <span class="pre">or</span> <span class="pre">options&gt;</span></code> to install a software package plus any dependencies or options. You can also specify <code class="docutils literal notranslate"><span class="pre">-&lt;any</span> <span class="pre">dependencies</span> <span class="pre">or</span> <span class="pre">options&gt;</span></code>.You can list <code class="docutils literal notranslate"><span class="pre">+</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code> different options and dependencies within the same line. Do not put a space between each option/dependency that you list.</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">find</span></code> to view your installed software packages, or type <code class="docutils literal notranslate"><span class="pre">spack</span> <span class="pre">find</span> <span class="pre">&lt;software</span> <span class="pre">package</span> <span class="pre">name&gt;</span></code> to view information about a specific installed package.</li>
 </ol>
 <p>When you have installed a software package, you can add it to the module system by typing:
 <code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">$SPACK_ROOT/share/spack/setup-env.sh</span></code></p>
@@ -232,58 +243,61 @@ After you have set the install path, you need to compile the code using <code cl
 <p>Using a locally installed conda virtual environment is highly recommended so that you can install the specific packages that you need.
 You can also have more than one environment with different packages for testing purposes.</p>
 <ol class="arabic simple">
-<li><p>To check what version of Python you have installed, type <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code>.</p></li>
-<li><p>To load anaconda, type <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda3/3.7</span></code>.</p></li>
-<li><p>To create your environment, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">&lt;yourenvironmentname&gt;</span> <span class="pre">python=3.7</span> <span class="pre">anaconda</span></code>, where &lt;yourenvironmentname&gt; is the name you want to give your environment. Tip: to see a list of all of your conda environments, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span> <span class="pre">-e</span></code>.</p></li>
-<li><p>Follow the prompts to complete the conda install.</p></li>
-<li><p>To activate your conda environment, type <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">&lt;yourenvironmentname&gt;</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> will not work on Discovery.</p></li>
-<li><p>To install a specific package, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-n</span> <span class="pre">&lt;yourenvironmentname&gt;</span> <span class="pre">[package]</span></code>.</p></li>
-<li><p>To deactivate the current, active conda environment, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code>.</p></li>
-<li><p>To delete a conda environment and all of its related packages, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">remove</span> <span class="pre">-n</span> <span class="pre">&lt;yourenvironmentname&gt;</span> <span class="pre">--all</span></code>.</p></li>
+<li>To check what version of Python you have installed, type <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code>.</li>
+<li>To load anaconda, type <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda3/3.7</span></code>.</li>
+<li>To create your environment, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">&lt;yourenvironmentname&gt;</span> <span class="pre">python=3.7</span> <span class="pre">anaconda</span></code>, where &lt;yourenvironmentname&gt; is the name you want to give your environment. Tip: to see a list of all of your conda environments, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span> <span class="pre">-e</span></code>.</li>
+<li>Follow the prompts to complete the conda install.</li>
+<li>To activate your conda environment, type <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">&lt;yourenvironmentname&gt;</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> will not work on Discovery.</li>
+<li>To install a specific package, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-n</span> <span class="pre">&lt;yourenvironmentname&gt;</span> <span class="pre">[package]</span></code>.</li>
+<li>To deactivate the current, active conda environment, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code>.</li>
+<li>To delete a conda environment and all of its related packages, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">remove</span> <span class="pre">-n</span> <span class="pre">&lt;yourenvironmentname&gt;</span> <span class="pre">--all</span></code>.</li>
 </ol>
 </div>
 <div class="section" id="installing-matlab-toolboxes">
 <h2>Installing Matlab toolboxes<a class="headerlink" href="#installing-matlab-toolboxes" title="Permalink to this headline">¶</a></h2>
 <p>Use the following procedure if you need to install a Matlab toolbox:</p>
 <ol class="arabic">
-<li><p>Download the toolbox from its source website.</p></li>
-<li><p>Connect to Discovery.</p></li>
-<li><p>Create a directory in your /home directory. We recommend creating a directory called <code class="docutils literal notranslate"><span class="pre">matlab</span></code>:</p>
+<li><p class="first">Download the toolbox from its source website.</p>
+</li>
+<li><p class="first">Connect to Discovery.</p>
+</li>
+<li><p class="first">Create a directory in your /home directory. We recommend creating a directory called <code class="docutils literal notranslate"><span class="pre">matlab</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">matlab</span>  <span class="c1">#where &lt;username&gt; is your username</span>
 </pre></div>
 </div>
 </li>
-<li><p>Go to the directory you just created:</p>
+<li><p class="first">Go to the directory you just created:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">matlab</span>
 </pre></div>
 </div>
 </li>
-<li><p>Unzip the toolbox file:</p>
+<li><p class="first">Unzip the toolbox file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unzip</span> <span class="o">&lt;</span><span class="n">toolboxname</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
-<li><p>Load Matlab:</p>
+<li><p class="first">Load Matlab:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">matlab</span>
 </pre></div>
 </div>
 </li>
-<li><p>Start Matlab:</p>
+<li><p class="first">Start Matlab:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matlab</span>
 </pre></div>
 </div>
 </li>
-<li><p>Add the toolbox to your PATH:</p>
+<li><p class="first">Add the toolbox to your PATH:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">addpath</span><span class="p">(</span><span class="s1">&#39;/home/&lt;username&gt;/matlab/&lt;toolbox&gt;&#39;</span><span class="p">)</span> <span class="c1">#where &lt;toolbox&gt; is the name of the toolbox you just unzipped</span>
 </pre></div>
 </div>
 </li>
-<li><p>If this is a toolbox you want to use more than once, you should save it to your path:</p>
+<li><p class="first">If this is a toolbox you want to use more than once, you should save it to your path:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">savepath</span><span class="p">()</span>
 </pre></div>
 </div>
 </li>
-<li><p>You can now use the toolbox within Matlab. When you are done, type <code class="docutils literal notranslate"><span class="pre">quit</span></code>.</p></li>
+<li><p class="first">You can now use the toolbox within Matlab. When you are done, type <code class="docutils literal notranslate"><span class="pre">quit</span></code>.</p>
+</li>
 </ol>
 </div>
 </div>
@@ -296,7 +310,7 @@ You can also have more than one environment with different packages for testing 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../using-discovery/usingslurm.html" class="btn btn-neutral float-right" title="Using Slurm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matlab.html" class="btn btn-neutral float-right" title="Working with MATLAB Parallel Computing Toolbox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="modules.html" class="btn btn-neutral float-left" title="Using Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

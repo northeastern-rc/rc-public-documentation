@@ -1,6 +1,9 @@
+.. _intro_connect:
+
 *************************
 Connecting to Discovery
 *************************
+
 You connect to Discovery using a `secure shell <https://www.ssh.com/ssh/protocol/>`_ program and initiate an SSH session to
 log into Discovery. Mac and Windows have slightly different procedures for connecting, as detailed below.
 
@@ -49,7 +52,7 @@ whereas with other SSH programs, you would need a separate file transfer program
 
 2. Click **Session**, then click **SSH** as the connection type.
 
-3. In **Remote Host**, type ``login.discovery.neu.edu``, make sure **Port** is set to 22, and click **OK**. You do not need to enter a username.
+3. In **Remote Host**, type ``login.discovery.neu.edu``, make sure **Port** is set to 22, and click **OK**. If you don't add your Northeastern username, you will be prompted for it each time you log in.
 
 4. At the prompt, type your Northeastern username and press Enter.
 

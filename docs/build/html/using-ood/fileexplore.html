@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -88,27 +97,45 @@
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Get Started</span></p>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/recommended_tools.html">Recommended Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Open OnDemand (OOD)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using OOD’s File Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classroom/class_use.html">Using Discovery with your class FAQ</a></li>
 </ul>
 
             
@@ -174,22 +201,22 @@ you can work with your files and directories through the OOD Files feature as de
 For example, you can download a Jupyter Notebook file in OOD that you’ve been working
 on to your local hard drive, rename a file, or delete a file that you no longer need.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Your home directory has a file size limit of 100GB. Be sure to check your home
+<p class="first admonition-title">Note</p>
+<p class="last">Your home directory has a file size limit of 100GB. Be sure to check your home
 directory regularly, and remove any files you do not need to ensure you do not run out of space.</p>
 </div>
 <ol class="arabic simple">
-<li><p>In a web browser, go to <a class="reference external" href="https://ood.discovery.neu.edu">ood.discovery.neu.edu</a>. If prompted, enter your myNortheastern username and password.</p></li>
-<li><p>Select <strong>Files &gt; Home Directory</strong>. The contents of your home directory display in a new tab.</p></li>
-<li><p>To download a file to your hard drive, navigate to the file you want to download,
+<li>In a web browser, go to <a class="reference external" href="https://ood.discovery.neu.edu">ood.discovery.neu.edu</a>. If prompted, enter your myNortheastern username and password.</li>
+<li>Select <strong>Files &gt; Home Directory</strong>. The contents of your home directory display in a new tab.</li>
+<li>To download a file to your hard drive, navigate to the file you want to download,
 select the file, and click <strong>Download</strong>. If prompted by your browser,
-click <strong>OK</strong> to save your file to your hard drive.</p></li>
-<li><p>To navigate to another folder on the Discovery file system, click <strong>Go To</strong>,
-enter the path to the folder you want to access, and click <strong>OK</strong>.</p></li>
+click <strong>OK</strong> to save your file to your hard drive.</li>
+<li>To navigate to another folder on the Discovery file system, click <strong>Go To</strong>,
+enter the path to the folder you want to access, and click <strong>OK</strong>.</li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>From the <strong>Files &gt; Home Directory</strong> view, the <strong>Edit</strong> button will not launch your
+<p class="first admonition-title">Note</p>
+<p class="last">From the <strong>Files &gt; Home Directory</strong> view, the <strong>Edit</strong> button will not launch your
 .ipynb file in a Jupyter Notebook. It will open the file in a text editor. You have
 to be in Jupyter Notebook in order to launch a .ipynb file from your /home directory.
 See <a class="reference internal" href="interactiveapps.html#accessing-ood"><span class="std std-ref">Using OOD’s Interactive Apps</span></a> for how to access a Jupyter Notebook through OOD.</p>

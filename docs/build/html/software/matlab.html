@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -91,6 +100,7 @@
 <p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/recommended_tools.html">Recommended Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
@@ -196,37 +206,37 @@ cluster profile. This allows you to define cluster properties that will be appli
 functions are <em>batch, parpool, and parcluster</em>. The Parallel Computing Toolbox comes with a cluster profile
 called <em>local</em>, which you will change in the walkthrough below.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This walkthrough is for submitting jobs from Discovery, not using MATLAB on your local desktop or laptop.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">This walkthrough is for submitting jobs from Discovery, not using MATLAB on your local desktop or laptop.</p>
 </div>
 <p>Before starting, you should create a folder in your /scratch/&lt;yourusername&gt; directory. This
 folder is where you’ll save your job data.</p>
 <ol class="arabic simple">
-<li><p>Go to your /scratch directory: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/scratch/&lt;yourusername&gt;</span></code> where &lt;yourusername&gt; is your NU username</p></li>
-<li><p>Make a new folder. We suggest calling it <em>matlab-metadata</em>: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">matlab-metadata</span></code></p></li>
+<li>Go to your /scratch directory: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/scratch/&lt;yourusername&gt;</span></code> where &lt;yourusername&gt; is your NU username</li>
+<li>Make a new folder. We suggest calling it <em>matlab-metadata</em>: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">matlab-metadata</span></code></li>
 </ol>
 <p><strong>To start MATLAB and add a Cluster Profile, do the following:</strong></p>
 <ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="http://ood.discovery.neu.edu">http://ood.discovery.neu.edu</a>. If prompted, sign in with your Discovery username and password.</p></li>
-<li><p>Click <strong>Interactive Apps</strong>, and select <strong>MATLAB</strong>.</p></li>
-<li><p>Select <strong>MATLAB version 2020a</strong>, and keep the default time of 1 hour and default memory of 2GB. Click <strong>Launch</strong>.</p></li>
-<li><p>If necessary, adjust the <strong>Compression</strong> and <strong>Image Quality</strong>, and then click <strong>Launch MATLAB</strong>.</p></li>
-<li><p>On the MATLAB Home tab, in the <strong>Environment</strong> section, select <strong>Parallel</strong>, then click <strong>Create and Manage Clusters</strong>. This opens the Cluster Profile Manager window.</p></li>
-<li><p>On the Cluster Profile Manager window, select <strong>Add Cluster Profile</strong>, then click <strong>Slurm</strong>. If prompted, click <strong>OK</strong> to the notice about needing Parallel Server.</p></li>
-<li><p>Double click the new profile name in the Cluster Profile column, and type the name <code class="docutils literal notranslate"><span class="pre">Discovery</span></code>. Press <strong>Enter</strong> to save the change.</p></li>
-<li><p>Select <strong>Edit</strong> in the <strong>Manage Profile</strong> section. This lets you edit the options on the <strong>Properties</strong> tab. For this walkthrough, make the following edits:</p></li>
+<li>Go to <a class="reference external" href="http://ood.discovery.neu.edu">http://ood.discovery.neu.edu</a>. If prompted, sign in with your Discovery username and password.</li>
+<li>Click <strong>Interactive Apps</strong>, and select <strong>MATLAB</strong>.</li>
+<li>Select <strong>MATLAB version 2020a</strong>, and keep the default time of 1 hour and default memory of 2GB. Click <strong>Launch</strong>.</li>
+<li>If necessary, adjust the <strong>Compression</strong> and <strong>Image Quality</strong>, and then click <strong>Launch MATLAB</strong>.</li>
+<li>On the MATLAB Home tab, in the <strong>Environment</strong> section, select <strong>Parallel</strong>, then click <strong>Create and Manage Clusters</strong>. This opens the Cluster Profile Manager window.</li>
+<li>On the Cluster Profile Manager window, select <strong>Add Cluster Profile</strong>, then click <strong>Slurm</strong>. If prompted, click <strong>OK</strong> to the notice about needing Parallel Server.</li>
+<li>Double click the new profile name in the Cluster Profile column, and type the name <code class="docutils literal notranslate"><span class="pre">Discovery</span></code>. Press <strong>Enter</strong> to save the change.</li>
+<li>Select <strong>Edit</strong> in the <strong>Manage Profile</strong> section. This lets you edit the options on the <strong>Properties</strong> tab. For this walkthrough, make the following edits:</li>
 </ol>
 <blockquote>
 <div><ol class="loweralpha simple">
-<li><p>In the <strong>Folder where job data is stored on the client</strong> option, type <code class="docutils literal notranslate"><span class="pre">/scratch/&lt;yourusername&gt;/matlab-metadata</span></code> (this is the directory that you created in the first procedure above).</p></li>
-<li><p>In the <strong>Number of workers available to cluster</strong> option, type a number between 100 to 200. This field is the number of MPI processes you intend to run. This corresponds to the <code class="docutils literal notranslate"><span class="pre">--ntasks</span></code> Slurm option. The maximum is 1024 per job; however, for this task, we recommend keeping it lower and use threading inside the nodes. The number you set here will be the default maximum for the job. You can set it for less than or equal to this number in the MATLAB Command Window when submitting your job.</p></li>
-<li><p>In the <strong>Number of computational threads to use on each worker</strong> option, type a number between 1 and 16. This field represents the number of threads that each worker will possess. This corresponds to <code class="docutils literal notranslate"><span class="pre">cpus-per-task</span></code> in Slurm. Do not exceed the number of available cores on the node.</p></li>
+<li>In the <strong>Folder where job data is stored on the client</strong> option, type <code class="docutils literal notranslate"><span class="pre">/scratch/&lt;yourusername&gt;/matlab-metadata</span></code> (this is the directory that you created in the first procedure above).</li>
+<li>In the <strong>Number of workers available to cluster</strong> option, type a number between 100 to 200. This field is the number of MPI processes you intend to run. This corresponds to the <code class="docutils literal notranslate"><span class="pre">--ntasks</span></code> Slurm option. The maximum is 1024 per job; however, for this task, we recommend keeping it lower and use threading inside the nodes. The number you set here will be the default maximum for the job. You can set it for less than or equal to this number in the MATLAB Command Window when submitting your job.</li>
+<li>In the <strong>Number of computational threads to use on each worker</strong> option, type a number between 1 and 16. This field represents the number of threads that each worker will possess. This corresponds to <code class="docutils literal notranslate"><span class="pre">cpus-per-task</span></code> in Slurm. Do not exceed the number of available cores on the node.</li>
 </ol>
 </div></blockquote>
 <ol class="arabic simple" start="9">
-<li><p>When you have finished editing your properties, click <strong>Done</strong>.</p></li>
-<li><p>(OPTIONAL) Click the <strong>Validate</strong> tab, ensure all of the stages are checked, then click <strong>Validate</strong>. This will check the properties of your profile. You might need to wait a minute or two for this to complete.</p></li>
-<li><p>(OPTIONAL) In the <strong>Cluster Profile</strong> column, right-click on the <em>Discovery</em> profile name and select <strong>Set as Default</strong>. This sets your profile as the default profile.</p></li>
+<li>When you have finished editing your properties, click <strong>Done</strong>.</li>
+<li>(OPTIONAL) Click the <strong>Validate</strong> tab, ensure all of the stages are checked, then click <strong>Validate</strong>. This will check the properties of your profile. You might need to wait a minute or two for this to complete.</li>
+<li>(OPTIONAL) In the <strong>Cluster Profile</strong> column, right-click on the <em>Discovery</em> profile name and select <strong>Set as Default</strong>. This sets your profile as the default profile.</li>
 </ol>
 <p>Now that you have set up your profile, you can use the default cluster profile you just created (<em>Discovery</em>) with the following commands:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#with parpool
@@ -245,8 +255,8 @@ This section assumes you have configured MATLAB Cluster Profile according to the
 <p>On Discovery, there are benchmarking scripts and examples located in the <code class="docutils literal notranslate"><span class="pre">/shared/centos7/matlab/R2020a/examples/parallel/main</span></code> folder.
 To add the path to this folder to the list of available paths, do one of the following:</p>
 <ul class="simple">
-<li><p>On the MATLAB Home tab, in the <strong>Environment</strong> section, click <strong>Set Path</strong> and add the path to the script.</p></li>
-<li><p>Alternatively, provide the full path of the script in the MATLAB command line.</p></li>
+<li>On the MATLAB Home tab, in the <strong>Environment</strong> section, click <strong>Set Path</strong> and add the path to the script.</li>
+<li>Alternatively, provide the full path of the script in the MATLAB command line.</li>
 </ul>
 <p>The contents of myParallelAlgorithmFcn is as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="p">[</span><span class="n">numWorkers</span><span class="p">,</span><span class="n">time</span><span class="p">]</span> <span class="o">=</span> <span class="n">myParallelAlgorithmFcn</span> <span class="p">()</span>

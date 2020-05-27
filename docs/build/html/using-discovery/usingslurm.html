@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -36,7 +45,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Slurm examples" href="slurmexamples.html" />
-    <link rel="prev" title="First Tasks" href="../get_started/first-tasks.html" /> 
+    <link rel="prev" title="Working with MATLAB Parallel Computing Toolbox" href="../software/matlab.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,9 +97,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Get Started</span></p>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/recommended_tools.html">Recommended Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
@@ -104,19 +126,24 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classroom/class_use.html">Using Discovery with your class FAQ</a></li>
 </ul>
 
             
@@ -179,9 +206,9 @@
 <p>Slurm (Simple Linux Utility Resource Management) is the software on Discovery
 that lets you do the following:</p>
 <ul class="simple">
-<li><p>view information about the cluster</p></li>
-<li><p>schedule your jobs on Discovery</p></li>
-<li><p>monitor your jobs</p></li>
+<li>view information about the cluster</li>
+<li>schedule your jobs on Discovery</li>
+<li>monitor your jobs</li>
 </ul>
 <p><a class="reference internal" href="slurmexamples.html#slurm-examples"><span class="std std-ref">Slurm examples</span></a> provides you with a few examples to help get you familiar
 with Slurm and be able to submit and monitor basic jobs on Discovery.
@@ -190,22 +217,22 @@ For in-depth information on Slurm, see <a class="reference external" href="https
 <h2>Viewing Cluster Information<a class="headerlink" href="#viewing-cluster-information" title="Permalink to this headline">¶</a></h2>
 <p>Use the following commands to view information about the cluster. This information can help you better understand the
 hardware that is available in order to customize your scripts.</p>
-<table class="colwidths-given docutils align-default">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col width="17%" />
+<col width="83%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Slurm Command</p></th>
-<th class="head"><p>Function</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Slurm Command</th>
+<th class="head">Function</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sinfo</span> <span class="pre">&lt;options&gt;</span></code></p></td>
-<td><p>View partition and node information. Use option -a to view all partitions.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">sinfo</span> <span class="pre">&lt;options&gt;</span></code></td>
+<td>View partition and node information. Use option -a to view all partitions.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">smap</span> <span class="pre">&lt;options&gt;</span></code></p></td>
-<td><p>View details about the cluster in a visual format</p></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">smap</span> <span class="pre">&lt;options&gt;</span></code></td>
+<td>View details about the cluster in a visual format</td>
 </tr>
 </tbody>
 </table>
@@ -214,47 +241,47 @@ hardware that is available in order to customize your scripts.</p>
 <span id="submitting-jobs"></span><h2>Controlling Jobs<a class="headerlink" href="#controlling-jobs" title="Permalink to this headline">¶</a></h2>
 <p>There are two main commands for submitting jobs to Discovery: <code class="docutils literal notranslate"><span class="pre">srun</span></code> and <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>.
 To run a job interactively, use <code class="docutils literal notranslate"><span class="pre">srun</span></code>. To submit a job to run in the back ground with a script, use <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>.</p>
-<table class="colwidths-given docutils align-default">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col width="17%" />
+<col width="83%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Slurm Command</p></th>
-<th class="head"><p>Function</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Slurm Command</th>
+<th class="head">Function</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">srun</span></code></p></td>
-<td><p>Run an interactive job on the cluster</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">srun</span></code></td>
+<td>Run an interactive job on the cluster</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">&lt;scriptname.script&gt;</span></code></p></td>
-<td><p>Submit a script to the scheduler for running a job</p></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">&lt;scriptname.script&gt;</span></code></td>
+<td>Submit a script to the scheduler for running a job</td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">scancel</span> <span class="pre">&lt;jobid&gt;</span></code></p></td>
-<td><p>Cancel a pending or running job on the cluster</p></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">scancel</span> <span class="pre">&lt;jobid&gt;</span></code></td>
+<td>Cancel a pending or running job on the cluster</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="monitoring-jobs">
 <h2>Monitoring Jobs<a class="headerlink" href="#monitoring-jobs" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-given docutils align-default">
+<table border="1" class="colwidths-given docutils">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col width="17%" />
+<col width="83%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Slurm Command</p></th>
-<th class="head"><p>Function</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Slurm Command</th>
+<th class="head">Function</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">seff</span> <span class="pre">&lt;jobid&gt;</span></code></p></td>
-<td><p>Reports the computational efficiency of your calculations</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">seff</span> <span class="pre">&lt;jobid&gt;</span></code></td>
+<td>Reports the computational efficiency of your calculations</td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">squeue</span></code></p></td>
-<td><p>View job status</p></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">squeue</span></code></td>
+<td>View job status</td>
 </tr>
 </tbody>
 </table>
@@ -271,12 +298,12 @@ The general format for submitting a job to the scheduler is as follows:</p>
 <p>Where <code class="docutils literal notranslate"><span class="pre">example.script</span></code> is a script detailing the parameters of the job you want to run.
 See <a class="reference internal" href="slurmexamples.html#slurm-examples"><span class="std std-ref">Slurm examples</span></a> for more information on writing scheduler scripts.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The default time limit depends on the partition that you specify in your submission script using the
+<p class="first admonition-title">Note</p>
+<p class="last">The default time limit depends on the partition that you specify in your submission script using the
 <code class="docutils literal notranslate"><span class="pre">--partition=&lt;partition</span> <span class="pre">name&gt;</span></code> option.
 If your job does not complete within the requested time limit,
 Slurm will automatically terminate the job.
-See <a class="reference internal" href="../welcome/welcome.html#partition-names"><span class="std std-ref">Partitions</span></a> for the most up-to-date partition names and parameters.</p>
+See <a class="reference internal" href="../hardware/partitions.html#partition-names"><span class="std std-ref">Partitions</span></a> for the most up-to-date partition names and parameters.</p>
 </div>
 </div>
 </div>
@@ -293,7 +320,7 @@ See <a class="reference internal" href="../welcome/welcome.html#partition-names"
         <a href="slurmexamples.html" class="btn btn-neutral float-right" title="Slurm examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../get_started/first-tasks.html" class="btn btn-neutral float-left" title="First Tasks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../software/matlab.html" class="btn btn-neutral float-left" title="Working with MATLAB Parallel Computing Toolbox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

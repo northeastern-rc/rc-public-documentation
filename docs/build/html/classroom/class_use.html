@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -87,9 +96,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Get Started</span></p>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/recommended_tools.html">Recommended Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -101,13 +123,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Options on Discovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">Research Computing Storage Options</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Software on Discovery</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -208,31 +225,31 @@ This is to ensure that we only get one request for the software. Students in one
 so having all requests go through the professor or instructor reduces this overlap.</p>
 <p>To request additional software (instructors only):</p>
 <ol class="arabic simple">
-<li><p>Go to the <a class="reference external" href="https://service.northeastern.edu/tech?id=sc_cat_item&amp;sys_id=777c510bdbebd340a37cd206ca9619b0">ServiceNow software request ticket</a>. If prompted, sign into ServiceNow with your myNortheastern username and password to access the form</p></li>
-<li><p>In the Sponsor’s Name field, enter your name.</p></li>
-<li><p>Make sure to follow the instructions on the form regarding either providing the URL of the open source software library or uploading the installation package in your home directory if it requires you to register it first. The request will not be completed without this information.</p></li>
-<li><p>Select the acknowledgement checkbox, and click <strong>Submit</strong>.</p></li>
+<li>Go to the <a class="reference external" href="https://service.northeastern.edu/tech?id=sc_cat_item&amp;sys_id=777c510bdbebd340a37cd206ca9619b0">ServiceNow software request ticket</a>. If prompted, sign into ServiceNow with your myNortheastern username and password to access the form</li>
+<li>In the Sponsor’s Name field, enter your name.</li>
+<li>Make sure to follow the instructions on the form regarding either providing the URL of the open source software library or uploading the installation package in your home directory if it requires you to register it first. The request will not be completed without this information.</li>
+<li>Select the acknowledgement checkbox, and click <strong>Submit</strong>.</li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Software requests can take up to 24 hours to verify, and then additional time is needed
+<p class="first admonition-title">Note</p>
+<p class="last">Software requests can take up to 24 hours to verify, and then additional time is needed
 to complete the installation. We might not be able to install every software application requested. If this is the case
 we will notify you and try to provide alternative software to meet your needs.</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>You and your students can install software locally to your PATH on Discovery, which may be a better option in some cases,
+<p class="first admonition-title">Tip</p>
+<p class="last">You and your students can install software locally to your PATH on Discovery, which may be a better option in some cases,
 such as installing multiple conda environments. See <a class="reference internal" href="../software/software.html#installing-software"><span class="std std-ref">Installing Software</span></a> for more information.</p>
 </div>
 <p><strong>How do I get my class access to Discovery?</strong></p>
 <p>We need a list of your students’ names and emails, and we will create accounts for them.
 An easy way to get a list of student emails is in Blackboard.</p>
 <ol class="arabic simple">
-<li><p>In Blackboard, click <strong>Course Tools</strong>, then select <strong>Student Email Addresses</strong>.</p></li>
-<li><p>Click <strong>Spreadsheet</strong>.</p></li>
-<li><p>Select <strong>Open with Microsoft Excel</strong>, and click <strong>OK</strong>.</p></li>
-<li><p>In the spreadsheet that opens, select the emails and course number/section (CRN) of the course that you want to work on Discovery.
-Note: The spreadsheet contains the student emails of all of your active courses, so only select the emails of the students who need access.</p></li>
+<li>In Blackboard, click <strong>Course Tools</strong>, then select <strong>Student Email Addresses</strong>.</li>
+<li>Click <strong>Spreadsheet</strong>.</li>
+<li>Select <strong>Open with Microsoft Excel</strong>, and click <strong>OK</strong>.</li>
+<li>In the spreadsheet that opens, select the emails and course number/section (CRN) of the course that you want to work on Discovery.
+Note: The spreadsheet contains the student emails of all of your active courses, so only select the emails of the students who need access.</li>
 </ol>
 <p>Send the list of student names and emails to <a class="reference external" href="mailto:rchelp&#37;&#52;&#48;northeastern&#46;edu">rchelp<span>&#64;</span>northeastern<span>&#46;</span>edu</a> along with your name, your course name, number, and dates the course is running.</p>
 <p><strong>I just need my class to access Open onDemand. How do I request that?</strong></p>
@@ -256,7 +273,7 @@ to provide us with information about your class.</p>
 <p>Students will have access to Discovery for the full duration of the class, and then for one term following the end of the class.
 If they want to continue to have access to Discovery after that time period, they’ll need to request an individual account.</p>
 <p><strong>How do I get an account on Discovery?</strong></p>
-<p>If you are a professor or instructor at Northeastern, you can request an account on Discovery. See <a class="reference internal" href="../get_started/first-tasks.html#instructor-access"><span class="std std-ref">Principal Investigator(PI)/Professor/Instructor Access</span></a> for more information.</p>
+<p>If you are a professor or instructor at Northeastern, you can request an account on Discovery. See <a class="reference internal" href="../get_started/get_access.html#instructor-access"><span class="std std-ref">Principal Investigator(PI)/Professor/Instructor Access</span></a> for more information.</p>
 <p><strong>How do my students get help with Discovery?</strong></p>
 <p>You and/or your students can either submit a <a class="reference external" href="https://service.northeastern.edu/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default">ServiceNow ticket</a> or email <a class="reference external" href="mailto:rchelp&#37;&#52;&#48;northeastern&#46;edu">rchelp<span>&#64;</span>northeastern<span>&#46;</span>edu</a>.</p>
 </div>

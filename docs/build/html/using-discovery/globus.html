@@ -20,11 +20,20 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.2',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -88,9 +97,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Get Started</span></p>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/recommended_tools.html">Recommended Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
 <ul>
@@ -101,6 +112,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
@@ -204,18 +216,18 @@ through another institution, you can also link your accounts.</p>
 <h2>Globus Account Set Up<a class="headerlink" href="#globus-account-set-up" title="Permalink to this headline">¶</a></h2>
 <p>Use the following instructions to setup an account with Globus using your myNortheastern credentials.</p>
 <ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://www.globus.org">Globus</a>.</p></li>
-<li><p>Click <strong>Log In</strong>.</p></li>
-<li><p>From the Use your existing organizational login, select <strong>Northeastern University</strong>, and then click <strong>Continue</strong>.</p></li>
-<li><p>Enter your myNortheastern username and password.</p></li>
-<li><p>If you do not have a previous Globus account, click <strong>Continue</strong>. If you have a previous account, click Link to existing account.</p></li>
-<li><p>Check the agreement checkbox, and then click <strong>Continue</strong>.</p></li>
-<li><p>Click <strong>Allow</strong> to give Globus permissions to access your files.</p></li>
+<li>Go to <a class="reference external" href="https://www.globus.org">Globus</a>.</li>
+<li>Click <strong>Log In</strong>.</li>
+<li>From the Use your existing organizational login, select <strong>Northeastern University</strong>, and then click <strong>Continue</strong>.</li>
+<li>Enter your myNortheastern username and password.</li>
+<li>If you do not have a previous Globus account, click <strong>Continue</strong>. If you have a previous account, click Link to existing account.</li>
+<li>Check the agreement checkbox, and then click <strong>Continue</strong>.</li>
+<li>Click <strong>Allow</strong> to give Globus permissions to access your files.</li>
 </ol>
 <p>You will then be able to access the <a class="reference external" href="https://app.globus.org">Globus File Manager app</a>.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If you received an account identity that includes your NUID number
+<p class="first admonition-title">Tip</p>
+<p class="last">If you received an account identity that includes your NUID number
 (for example <a class="reference external" href="mailto:000123456&#37;&#52;&#48;northeastern&#46;edu">000123456<span>&#64;</span>northeastern<span>&#46;</span>edu</a>), you can follow the “Creating and linking
 a new account identity” instructions below to get a different account identity if
 you want a more user-friendly account identity. You can then link the two accounts together.</p>
@@ -227,15 +239,15 @@ login and received a username that includes your NUID, you can create a new iden
 with a different username and then link the two accounts together. A username that you have selected,
 as opposed to one with your NUID, can make it easier for you to remember your login credentials.</p>
 <ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://www.globus.org">Globus</a>.</p></li>
-<li><p>Click <strong>Log In</strong>.</p></li>
-<li><p>Click <strong>Globus ID</strong> to sign in.</p></li>
-<li><p>Click <strong>Need a Globus ID? Sign up</strong>.</p></li>
-<li><p>Enter your Globus ID information.</p></li>
-<li><p>Enter the verification code that Globus sends to your email.</p></li>
-<li><p>Click <strong>Link to an existing account</strong> to link this new account with your primary account.</p></li>
-<li><p>Select Northeastern University from the dropdown box, and click <strong>Continue</strong> to be taken to the Northeastern University single sign on page.</p></li>
-<li><p>Enter your myNortheastern username and password.</p></li>
+<li>Go to <a class="reference external" href="https://www.globus.org">Globus</a>.</li>
+<li>Click <strong>Log In</strong>.</li>
+<li>Click <strong>Globus ID</strong> to sign in.</li>
+<li>Click <strong>Need a Globus ID? Sign up</strong>.</li>
+<li>Enter your Globus ID information.</li>
+<li>Enter the verification code that Globus sends to your email.</li>
+<li>Click <strong>Link to an existing account</strong> to link this new account with your primary account.</li>
+<li>Select Northeastern University from the dropdown box, and click <strong>Continue</strong> to be taken to the Northeastern University single sign on page.</li>
+<li>Enter your myNortheastern username and password.</li>
 </ol>
 <p>You should now be able to see your two accounts linked in the Account section on the <a class="reference external" href="https://app.globus.org/account/identities">Globus web app</a>.</p>
 </div>
@@ -246,12 +258,12 @@ as opposed to one with your NUID, can make it easier for you to remember your lo
 You first need to install GCP using the following procedure.
 You need to be logged into Globus before you can install GCP.</p>
 <ol class="arabic simple">
-<li><p>Go to <a class="reference external" href="https://app.globus.org/file-manager/gcp">Globus File Manager</a>.</p></li>
-<li><p>Enter a name for your endpoint in the Endpoint Display Name field.</p></li>
-<li><p>Click <strong>Generate Setup Key</strong> to generate a setup key for your endpoint.</p></li>
-<li><p>Click the <strong>Copy</strong> icon next to the setup key that was generated to copy the key to your clipboard. You will need this key during the installation of GCP in step 6.</p></li>
-<li><p>Click the appropriate OS icon for your computer to download the installation file.</p></li>
-<li><p>After the installation file has been downloaded to your computer, double click on the file to launch the installer.</p></li>
+<li>Go to <a class="reference external" href="https://app.globus.org/file-manager/gcp">Globus File Manager</a>.</li>
+<li>Enter a name for your endpoint in the Endpoint Display Name field.</li>
+<li>Click <strong>Generate Setup Key</strong> to generate a setup key for your endpoint.</li>
+<li>Click the <strong>Copy</strong> icon next to the setup key that was generated to copy the key to your clipboard. You will need this key during the installation of GCP in step 6.</li>
+<li>Click the appropriate OS icon for your computer to download the installation file.</li>
+<li>After the installation file has been downloaded to your computer, double click on the file to launch the installer.</li>
 </ol>
 <p>Accept the defaults on the install wizard. After the install completes, you can now use your laptop as an endpoint within Globus.</p>
 </div>
@@ -268,14 +280,14 @@ Using the File Manager interface, you can easily change directories, switch the 
 personal computer, but with the flexibility of the File Manager interface, you can adjust the endpoints, file view, direction of the transfer, and many other options.</p>
 <p><strong>To transfer files from Discovery to your personal computer, do the following</strong></p>
 <ol class="arabic simple">
-<li><p>Create an endpoint on your computer using the procedure above “Install Globus Connect”, if you have not done so already.</p></li>
-<li><p>In the File Manager on the Globus web app, in the <strong>Collections</strong> textbox, type Northeastern, then in the collection list click the <code class="docutils literal notranslate"><span class="pre">northeastern#discovery</span></code> endpoint.</p></li>
-<li><p>In the right-pane menu, click <strong>Transfer or Sync to</strong>.</p></li>
-<li><p>Click in the <strong>Search</strong> text box, and then in on the <strong>Your Collections</strong> tab, click the name of your personal endpoint. You now can see the list of your files on Discovery on the left and a list of your files on your personal computer on the right.</p></li>
-<li><p>Select the file or files from the right-side list of Discovery files that you want to transfer to your personal computer.</p></li>
-<li><p>Select the destination folder from the left-side list of the files on your personal computer.</p></li>
-<li><p>(Optional) Click <strong>Transfer &amp; Sync Options</strong> and select the transfer options that you need.</p></li>
-<li><p>Click <strong>Start</strong>.</p></li>
+<li>Create an endpoint on your computer using the procedure above “Install Globus Connect”, if you have not done so already.</li>
+<li>In the File Manager on the Globus web app, in the <strong>Collections</strong> textbox, type Northeastern, then in the collection list click the <code class="docutils literal notranslate"><span class="pre">northeastern#discovery</span></code> endpoint.</li>
+<li>In the right-pane menu, click <strong>Transfer or Sync to</strong>.</li>
+<li>Click in the <strong>Search</strong> text box, and then in on the <strong>Your Collections</strong> tab, click the name of your personal endpoint. You now can see the list of your files on Discovery on the left and a list of your files on your personal computer on the right.</li>
+<li>Select the file or files from the right-side list of Discovery files that you want to transfer to your personal computer.</li>
+<li>Select the destination folder from the left-side list of the files on your personal computer.</li>
+<li>(Optional) Click <strong>Transfer &amp; Sync Options</strong> and select the transfer options that you need.</li>
+<li>Click <strong>Start</strong>.</li>
 </ol>
 </div>
 <div class="section" id="command-line-interface-cli">
