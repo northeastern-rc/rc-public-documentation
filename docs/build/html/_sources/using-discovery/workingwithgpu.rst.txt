@@ -4,30 +4,37 @@ Working with GPUs
 The Discovery cluster has a number of Graphics Processing Units (GPUs) available, as detailed in the table below.
 
 .. list-table::
-  :widths: 40 40 40
+  :widths: 40 40 40 40
   :header-rows: 1
 
   * - GPU Type
     - Number of nodes/GPUs
     - CPU Type
+    - RAM per node
   * - k20m
     - 23 nodes with 1 GPU each
     - E5-2650\@\2.00GHz
+    - 128GB
   * - k40m
     - 16 nodes with 1 GPU each
     - E5-2690v3\@\2.60GHz
+    - 128GB
   * - k80
     - 8 nodes with 8 GPUs each
     - E5-2680v4\@\2.40GHz
+    - 512GB
   * - p100
     - 12 nodes with 4 GPUs each
     - E5-2680v4\@\2.40GHz
+    - 512GB
   * - v100
     - 4 nodes with 2 GPUs each
     - AMD EPYC 7351\@\2.60GHz
+    - 480GB
   * - v100-sxm2
     - 24 nodes with 4 GPUs each
     - Intel Gold 6132\@\2.60Ghz
+    - 187GB
 
 These GPUs are available within two partitions, named ``gpu`` and ``multigpu``. Note that partitions on Discovery are not physical partitions, they  are virtual partitions. The differences between the two partitions are the number of GPUs that you can request per job, as well as the time
 limit on each job. Both partitions give you access to all of the above GPU types. See the table below for the differences between the two partitions.
