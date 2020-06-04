@@ -11,6 +11,17 @@ applications is one hour. It is recommended that you keep the default. If you as
 hour, you will need to wait for Slurm to allocate a resource that can run for your requested time,
 which could take a long time to be allocated, depending on how busy the cluster is.
 
+Available Apps (June 2020)
+==========================
+
+* Jupyter Notebook (includes Python 3 and R 3.6.1 kernels)
+* RStudio
+* SAS
+* MATLAB
+* Gaussian
+* Schrodinger (Maestro)
+* Comsol (restricted to license owners)
+
 .. note::
    Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to
    open an app, and you believe that you should have access to it, please email rchelp@northeastern.edu with your username,
@@ -24,14 +35,11 @@ which could take a long time to be allocated, depending on how busy the cluster 
 3. Accept the default of 1 hour, and click **Launch**. You might have to wait a
    minute or two for a compute node to be allocated with your requested time and resource.
 
-.. note::
-   If you request more than one hour, you might have to wait much longer for a compute node to be allocated to you.
-
 4. If you selected Jupyter Notebook, click **Connect to Jupyter**.
    A Jupyter Notebook opens in a new tab on your browser.
 
 .. tip::
-  On the Jupyter Notebook Home tab, click **New**, then select the kernel you want to use.
+  On the Jupyter Notebook Home tab, click **New**, then select the kernel you want to use, such as Python or R.
   Your selected kernel opens in a new tab on your browser. Click the **Running** tab to see a
   list of what Notebooks you already have running.
   If you already have a Notebook saved to your home directory, on the **Files** tab,
