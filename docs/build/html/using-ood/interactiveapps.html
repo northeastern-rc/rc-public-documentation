@@ -131,7 +131,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Open OnDemand (OOD)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileexplore.html">Using OOD’s File Explorer</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Using OOD’s Interactive Apps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using OOD’s Interactive Apps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#available-apps-june-2020">Available Apps (June 2020)</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
 <ul>
@@ -201,6 +204,17 @@ a predetermined number of cores and amount of memory. The default time for runni
 applications is one hour. It is recommended that you keep the default. If you ask for more than one
 hour, you will need to wait for Slurm to allocate a resource that can run for your requested time,
 which could take a long time to be allocated, depending on how busy the cluster is.</p>
+<div class="section" id="available-apps-june-2020">
+<h2>Available Apps (June 2020)<a class="headerlink" href="#available-apps-june-2020" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Jupyter Notebook (includes Python 3 and R 3.6.1 kernels)</li>
+<li>RStudio</li>
+<li>SAS</li>
+<li>MATLAB</li>
+<li>Gaussian</li>
+<li>Schrodinger (Maestro)</li>
+<li>Comsol (restricted to license owners)</li>
+</ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to
@@ -213,22 +227,17 @@ look into the issue.</p>
 <li>Select <strong>Interactive Apps</strong>, then select the application you want to use.</li>
 <li>Accept the default of 1 hour, and click <strong>Launch</strong>. You might have to wait a
 minute or two for a compute node to be allocated with your requested time and resource.</li>
-</ol>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you request more than one hour, you might have to wait much longer for a compute node to be allocated to you.</p>
-</div>
-<ol class="arabic simple" start="4">
 <li>If you selected Jupyter Notebook, click <strong>Connect to Jupyter</strong>.
 A Jupyter Notebook opens in a new tab on your browser.</li>
 </ol>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">On the Jupyter Notebook Home tab, click <strong>New</strong>, then select the kernel you want to use.
+<p class="last">On the Jupyter Notebook Home tab, click <strong>New</strong>, then select the kernel you want to use, such as Python or R.
 Your selected kernel opens in a new tab on your browser. Click the <strong>Running</strong> tab to see a
 list of what Notebooks you already have running.
 If you already have a Notebook saved to your home directory, on the <strong>Files</strong> tab,
 click the name of the file to restart the Notebook in a new tab on your browser.</p>
+</div>
 </div>
 </div>
 
