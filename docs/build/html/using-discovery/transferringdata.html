@@ -125,6 +125,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#data-transfer-node-using-windows">Data transfer node using Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transfering-data-to-from-a-compute-node">Transfering Data to/from a Compute Node</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
@@ -251,6 +252,14 @@ The Files menu in Open onDemand (OOD) also allows you to transfer files. See <a 
 <li>In the <strong>Port</strong> field, type 22.</li>
 </ol>
 <p>You will now be connected to the transfer node and can transfer files through FileZilla.</p>
+</div>
+<div class="section" id="transfering-data-to-from-a-compute-node">
+<h2>Transfering Data to/from a Compute Node<a class="headerlink" href="#transfering-data-to-from-a-compute-node" title="Permalink to this headline">¶</a></h2>
+<p>If your compute job requires access to the internet to transfer data <em>during</em> a job, you need configure the job as follows. (If you just need to transfer data before or after a job, use the methods outlined above.) Otherwise, compute nodes do not have access to the internet.</p>
+<p><a class="reference internal" href="../software/modules.html#using-module"><span class="std std-ref">Using Module</span></a>, add the <code class="docutils literal notranslate"><span class="pre">discovery</span></code> module to configure the <code class="docutils literal notranslate"><span class="pre">http(s)_proxy</span></code> for your current environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module add discovery
+</pre></div>
+</div>
 </div>
 </div>
 

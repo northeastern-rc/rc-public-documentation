@@ -67,3 +67,13 @@ You will now be connected to the transfer node and can transfer files through Mo
 5. In the **Port** field, type 22.
 
 You will now be connected to the transfer node and can transfer files through FileZilla.
+
+Transfering Data to/from a Compute Node
+=======================================
+If your compute job requires access to the internet to transfer data *during* a job, you need configure the job as follows. (If you just need to transfer data before or after a job, use the methods outlined above.) Otherwise, compute nodes do not have access to the internet. 
+
+:ref:`using_module`, add the ``discovery`` module to configure the ``http(s)_proxy`` for your current environment
+
+.. code-block:: bash
+
+   module add discovery
