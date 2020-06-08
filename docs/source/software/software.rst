@@ -44,6 +44,8 @@ Then, you must set the installation path to a directory where you have write acc
 You can use ``./configure`` to do this, such as  ``./configure --prefix=/home/<yourusername>/software``
 After you have set the install path, you need to compile the code using ``make`` and then install the software using ``make install``.
 
+.. _creating_python:
+
 Creating a Python Environment
 ==============================
 
