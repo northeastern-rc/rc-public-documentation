@@ -106,6 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#using-spack">Using Spack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-make">Using Make</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-a-python-environment">Creating a Python Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-packrat-environment-for-r">Creating a Packrat Environment (for R)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installing-matlab-toolboxes">Installing Matlab toolboxes</a></li>
 </ul>
 </li>
@@ -242,6 +243,33 @@ You can also have more than one environment with different packages for testing 
 <li><p>To deactivate the current, active conda environment, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code>.</p></li>
 <li><p>To delete a conda environment and all of its related packages, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">remove</span> <span class="pre">-n</span> <span class="pre">&lt;yourenvironmentname&gt;</span> <span class="pre">--all</span></code>.</p></li>
 </ol>
+</div>
+<div class="section" id="creating-a-packrat-environment-for-r">
+<h2>Creating a Packrat Environment (for R)<a class="headerlink" href="#creating-a-packrat-environment-for-r" title="Permalink to this headline">¶</a></h2>
+<p>Packrat is an application that helps you manage packages for R. After you create a new directory for your R project, you can then use Packrat
+to store your package dependencies inside it. For more information about Packrat, see the website: <a class="reference external" href="https://rstudio.github.io/packrat/">https://rstudio.github.io/packrat/</a>.
+Use the following procedure to install Packrat to use on Discovery.</p>
+<ol class="arabic">
+<li><p>Connect to Discovery.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">R/3.6.2</span></code>.</p></li>
+<li><p>Create a new directory for your R project by typing, <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">/scratch/&lt;yourusername&gt;/&lt;directoryname&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">yourusername</span></code> is your user name, and <code class="docutils literal notranslate"><span class="pre">directoryname</span></code> is the name of the directory you want to create for your R project. For example, <code class="docutils literal notranslate"><span class="pre">/scratch/j.smith/r_testlab</span></code></p></li>
+<li><p>Open the R interface and install Packrat:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;packrat&quot;</span><span class="p">)</span> <span class="c1">#during the installation, you will be prompted to install in a local directory, as you cannot install as root</span>
+</pre></div>
+</div>
+</li>
+<li><p>Initialize the environment where R packages will be written to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">packrat</span><span class="p">::</span><span class="n">init</span><span class="p">(</span><span class="s2">&quot;/scratch/&lt;yourusername&gt;/&lt;directoryname&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>You can then install R packages that you need. For example, to install a package called <code class="docutils literal notranslate"><span class="pre">rtracklayer</span></code>, type the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
+install.packages(&quot;BiocManager&quot;)
+BiocManager::install(&quot;rtracklayer&quot;)
+</pre></div>
+</div>
 </div>
 <div class="section" id="installing-matlab-toolboxes">
 <h2>Installing Matlab toolboxes<a class="headerlink" href="#installing-matlab-toolboxes" title="Permalink to this headline">¶</a></h2>

@@ -130,11 +130,12 @@ The following is an example of using a conda virtual environment with PyTorch. M
 
 Using TensorFlow
 ================
-We recommend that you use CUDA 10.2 with the latest version of TensorFlow. You can find the compatibility of CUDA and TensorFlow versions here – https://www.tensorflow.org/install/source#gpu.::
+We recommend that you use CUDA 10.2 with the latest version of TensorFlow.
+You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.::
 
   module load anaconda3/3.7
   module load cuda/10.2
-  conda create --name TF_env python=3.7 anaconda #where TC_env is the name of the conda environment
+  conda create --name TF_env python=3.7 anaconda #where TF_env is the name of the conda environment
   conda  activate TF_env
   conda install -c anaconda tensorflow-gpu
 

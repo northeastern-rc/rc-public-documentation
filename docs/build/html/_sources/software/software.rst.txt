@@ -61,6 +61,31 @@ You can also have more than one environment with different packages for testing 
 7. To deactivate the current, active conda environment, type ``conda deactivate``.
 8. To delete a conda environment and all of its related packages, type ``conda remove -n <yourenvironmentname> --all``.
 
+Creating a Packrat Environment (for R)
+======================================
+
+Packrat is an application that helps you manage packages for R. After you create a new directory for your R project, you can then use Packrat
+to store your package dependencies inside it. For more information about Packrat, see the website: https://rstudio.github.io/packrat/.
+Use the following procedure to install Packrat to use on Discovery.
+
+1. Connect to Discovery.
+2. Type ``module load R/3.6.2``.
+3. Create a new directory for your R project by typing, ``mkdir /scratch/<yourusername>/<directoryname>`` where ``yourusername`` is your user name, and ``directoryname`` is the name of the directory you want to create for your R project. For example, ``/scratch/j.smith/r_testlab``
+4. Open the R interface and install Packrat::
+
+    install.packages("packrat") #during the installation, you will be prompted to install in a local directory, as you cannot install as root
+
+5. Initialize the environment where R packages will be written to::
+
+    packrat::init("/scratch/<yourusername>/<directoryname>")
+
+You can then install R packages that you need. For example, to install a package called ``rtracklayer``, type the following::
+
+   if (!requireNamespace("BiocManager", quietly = TRUE))
+   install.packages("BiocManager")
+   BiocManager::install("rtracklayer")
+
+
 Installing Matlab toolboxes
 ===========================
 
