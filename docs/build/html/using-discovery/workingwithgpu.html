@@ -331,10 +331,11 @@ or your request will fail.</p>
 </div>
 <div class="section" id="using-cuda">
 <h2>Using CUDA<a class="headerlink" href="#using-cuda" title="Permalink to this headline">¶</a></h2>
-<p>Currently, there are three versions of CUDA on Discovery:</p>
+<p>Currently, there are four versions of CUDA on Discovery:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cuda</span><span class="o">/</span><span class="mf">9.0</span>
 <span class="n">cuda</span><span class="o">/</span><span class="mf">9.2</span>
 <span class="n">cuda</span><span class="o">/</span><span class="mf">10.0</span>
+<span class="n">cuda</span><span class="o">/</span><span class="mf">10.2</span>
 </pre></div>
 </div>
 <p>You can always use the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> command to check for the latest software versions on Discovery as well.</p>
@@ -344,25 +345,24 @@ or your request will fail.</p>
 <h2>Using GPUs with PyTorch<a class="headerlink" href="#using-gpus-with-pytorch" title="Permalink to this headline">¶</a></h2>
 <p>You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery.</p>
 <p>The following is an example of using a conda virtual environment with PyTorch. Make sure that you are on a GPU node before loading the environment:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">cuda</span><span class="o">/</span><span class="mf">10.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">cuda</span><span class="o">/</span><span class="mf">10.2</span>
 <span class="n">module</span> <span class="n">load</span> <span class="n">anaconda3</span><span class="o">/</span><span class="mf">3.7</span>
-<span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">pytorch_env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="n">anaconda</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">pytorch_env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span> <span class="n">anaconda</span>
 <span class="n">conda</span> <span class="n">activate</span> <span class="n">pytorch_env</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="n">pytorch</span><span class="o">==</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span> <span class="n">torchvision</span><span class="o">==</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">0</span> <span class="n">cudatoolkit</span><span class="o">=</span><span class="mf">9.2</span> <span class="o">-</span><span class="n">c</span> <span class="n">pytorch</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">pytorch</span> <span class="n">torchvision</span> <span class="n">cudatoolkit</span><span class="o">=</span><span class="mf">10.2</span> <span class="o">-</span><span class="n">c</span> <span class="n">pytorch</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">c</span><span class="s1">&#39;import torch; print(torch.cuda.is_available())&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="using-tensorflow">
 <h2>Using TensorFlow<a class="headerlink" href="#using-tensorflow" title="Permalink to this headline">¶</a></h2>
-<p>The current, default version of TensorFlow is 2.1.0. This version does not work with CUDA 10.0, which is the latest version of CUDA on Discovery. To work with TensorFlow on Discovery,
-you’ll need to use TensorFlow 2.0. Use the procedures below to first load a conda environment that contains TensorFlow 2.0, which you can
-then use in a conda environment with Cuda 10.0.:</p>
+<p>We recommend that you use CUDA 10.2 with the latest version of TensorFlow.
+You can find the compatibility of CUDA and TensorFlow versions at the following website <a class="reference external" href="https://www.tensorflow.org/install/source#gpu">https://www.tensorflow.org/install/source#gpu</a>.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">anaconda3</span><span class="o">/</span><span class="mf">3.7</span>
-<span class="n">module</span> <span class="n">load</span> <span class="n">cuda</span><span class="o">/</span><span class="mf">10.0</span>
-<span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">TF_env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span> <span class="n">anaconda</span> <span class="c1">#where TC_env is the name of the conda environment</span>
-<span class="n">source</span>  <span class="n">activate</span> <span class="n">TF_env</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">tensorflow</span><span class="o">-</span><span class="n">gpu</span><span class="o">==</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">module</span> <span class="n">load</span> <span class="n">cuda</span><span class="o">/</span><span class="mf">10.2</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">TF_env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span> <span class="n">anaconda</span> <span class="c1">#where TF_env is the name of the conda environment</span>
+<span class="n">conda</span>  <span class="n">activate</span> <span class="n">TF_env</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="n">tensorflow</span><span class="o">-</span><span class="n">gpu</span>
 </pre></div>
 </div>
 <p>If you want to test your environment, first make sure you are on GPU node, then type:</p>

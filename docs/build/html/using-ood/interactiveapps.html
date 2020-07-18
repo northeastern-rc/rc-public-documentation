@@ -133,6 +133,7 @@
 <li class="toctree-l1"><a class="reference internal" href="fileexplore.html">Using OOD’s File Explorer</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using OOD’s Interactive Apps</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#available-apps-june-2020">Available Apps (June 2020)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-jupyter-notebook-custom-anaconda-environment">Working with Jupyter Notebook [Custom Anaconda Environment]</a></li>
 </ul>
 </li>
 </ul>
@@ -238,6 +239,42 @@ list of what Notebooks you already have running.
 If you already have a Notebook saved to your home directory, on the <strong>Files</strong> tab,
 click the name of the file to restart the Notebook in a new tab on your browser.</p>
 </div>
+</div>
+<div class="section" id="working-with-jupyter-notebook-custom-anaconda-environment">
+<h2>Working with Jupyter Notebook [Custom Anaconda Environment]<a class="headerlink" href="#working-with-jupyter-notebook-custom-anaconda-environment" title="Permalink to this headline">¶</a></h2>
+<p>One of the interactive apps on OOD is Jupyter Notebook Custom Anaconda Environment. You need to do some initial
+setup in order to use this app effectively. This section will provide a walkthrough of setting up and using this app.
+The general workflow is to first create a virtual python environment; ensure that Jupyter Notebook is installed in your virtual
+environment; and then reference this environment when you start the Jupyter Notebook [Custom Anaconda Environment] OOD interactive app.</p>
+<p><strong>Virtual python environment</strong></p>
+<ol class="arabic simple">
+<li>First set up a virtual python environment. See <a class="reference internal" href="../software/software.html#creating-python"><span class="std std-ref">Creating a Python Environment</span></a> for how to set up a virtual python environment on Discovery using the terminal.</li>
+<li>When your environment is ready, in the terminal type <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span></code> to activate the base environment.</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">conda</span></code> to get the full path of your environment. Make a note of the full path name.</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">&lt;yourenvironmentname&gt;</span></code> where <em>&lt;yourenvironmentname&gt;</em> is the name of your custom environment to activate the environment you just created.</li>
+<li>Type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">jupyterlab</span></code> to install jupyterlab in your environment.</li>
+</ol>
+<p><strong>Using OOD to launch Jupyter Notebook</strong></p>
+<ol class="arabic simple">
+<li>Go to www.ood.discovery.neu.edu.</li>
+<li>Click <strong>Interactive Apps</strong>, then select <strong>Jupyter Notebook [Custom Anaconda Environment]</strong>.</li>
+<li>Select the compute node features for the job:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>In the <strong>Time</strong> field, enter the number of hour(s) needed for the job. Minimum is one hour, maximum is 8 hours.</li>
+<li>In the <strong>Memory (in Gb)</strong> field, enter the amount of memory you need for the job. Minimum is 2GB, maximum is 128GB.</li>
+<li>If you need GPU, check <strong>Use GPU</strong> box.</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>Select the Anaconda version that you used to create your virtual python environment in the <strong>System-wide Conda Module</strong> field.</li>
+<li>Check <strong>Custom Anaconda Environment</strong> box, and enter the name of your custom virtual python environment in the <strong>Name of Custom Conda Environment</strong> field.</li>
+<li>Click <strong>Launch</strong>. This will put you in the queue for a compute node. Note that this might take a few minutes, depending on the resources you requested.</li>
+<li>When you have been allocated a compute node, click <strong>Connect to Jupyter</strong>.</li>
+</ol>
+<p>When your Juypter Notebook is running and open, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all
+of your available packages.</p>
 </div>
 </div>
 

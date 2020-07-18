@@ -104,11 +104,12 @@ Note that specifying one type of GPU could result in a longer wait time for that
 
 Using CUDA
 ===========
-Currently, there are three versions of CUDA on Discovery::
+Currently, there are four versions of CUDA on Discovery::
 
   cuda/9.0
   cuda/9.2
   cuda/10.0
+  cuda/10.2
 
 You can always use the ``module avail`` command to check for the latest software versions on Discovery as well.
 
@@ -120,24 +121,23 @@ You should use PyTorch with a conda virtual environment if you need to run the e
 
 The following is an example of using a conda virtual environment with PyTorch. Make sure that you are on a GPU node before loading the environment::
 
-  module load cuda/10.0
+  module load cuda/10.2
   module load anaconda3/3.7
-  conda create --name pytorch_env python=3.6 anaconda
+  conda create --name pytorch_env python=3.7 anaconda
   conda activate pytorch_env
-  conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=9.2 -c pytorch
+  conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
   python -c'import torch; print(torch.cuda.is_available())'
 
 Using TensorFlow
 ================
-The current, default version of TensorFlow is 2.1.0. This version does not work with CUDA 10.0, which is the latest version of CUDA on Discovery. To work with TensorFlow on Discovery,
-you'll need to use TensorFlow 2.0. Use the procedures below to first load a conda environment that contains TensorFlow 2.0, which you can
-then use in a conda environment with Cuda 10.0.::
+We recommend that you use CUDA 10.2 with the latest version of TensorFlow.
+You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.::
 
   module load anaconda3/3.7
-  module load cuda/10.0
-  conda create --name TF_env python=3.7 anaconda #where TC_env is the name of the conda environment
-  source  activate TF_env
-  pip install tensorflow-gpu==2.0.0
+  module load cuda/10.2
+  conda create --name TF_env python=3.7 anaconda #where TF_env is the name of the conda environment
+  conda  activate TF_env
+  conda install -c anaconda tensorflow-gpu
 
 If you want to test your environment, first make sure you are on GPU node, then type::
 
