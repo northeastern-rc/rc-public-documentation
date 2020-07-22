@@ -110,6 +110,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -208,7 +209,7 @@ that you use to connect to Discovery using SSH.</p>
 <p><strong>To connect to Discovery on a Mac:</strong></p>
 <ol class="arabic simple">
 <li><p>Open Terminal.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;username&gt;&#64;login.discovery.neu.edu</span></code> , where <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> is your Northeastern username. If you need to use X 11 forwarding, type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-Y</span> <span class="pre">&lt;username&gt;&#64;login.discovery.neu.edu</span></code>.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;username&gt;&#64;login.discovery.neu.edu</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> is your Northeastern username. If you need to use x11 forwarding, type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-Y</span> <span class="pre">&lt;username&gt;&#64;login.discovery.neu.edu</span></code>.</p></li>
 <li><p>Type your Northeastern password and press Enter.</p></li>
 </ol>
 <p>You are now connected to Discovery at a login node.</p>
@@ -220,9 +221,19 @@ an issue with opening an application that uses x11 forwarding, such as Matlab or
 add your keys to the authorized.key file.</p>
 <p><strong>To setup passwordless ssh</strong></p>
 <ol class="arabic simple">
-<li><p>Connect to Discovery.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> and then accept all of the defaults. This generates your public and private keys.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/.ssh</span> <span class="pre">;</span> <span class="pre">cat</span> <span class="pre">id_rsa.pub</span> <span class="pre">&gt;&gt;</span> <span class="pre">authorized_keys</span></code>. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file</p></li>
+<li><p>On your local computer in Terminal type, <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/.ssh</span></code>. This moves you to your ssh folder.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">rsa</span></code> to generate two files: <code class="docutils literal notranslate"><span class="pre">id_rsa</span></code> and <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>.</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to all of the prompts (do not generate a passphrase).</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span> <span class="pre">-i</span> <span class="pre">~/.ssh/id_rsa.pub</span> <span class="pre">&lt;yourusername&gt;&#64;login.discovery.neu.edu</span></code> to copy <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code> to your /home directory. Enter your NU password if prompted.</p></li>
+<li><p>Connect to Discovery by typing <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;yourusername&gt;&#64;login.discovery.neu.edu</span></code>.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/.ssh</span> <span class="pre">;</span> <span class="pre">cat</span> <span class="pre">id_rsa.pub</span> <span class="pre">&gt;&gt;</span> <span class="pre">authorized_keys</span></code>. This moves you to your ssh folder and adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.</p></li>
+<li><p>Log out by typing <code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p></li>
+<li><p>Connect to Discovery again by typing <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;yourusername&gt;&#64;login.discovery.neu.edu</span></code>.</p></li>
+<li><p>Move to a compute node by typing <code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">--pty</span> <span class="pre">/bin/bash</span></code>.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/.ssh</span></code> to move to your ssh folder.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">rsa</span></code> to generate your key files.</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to all of the prompts (do not generate a passphrase).</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">id_rsa.pub</span> <span class="pre">&gt;&gt;</span> <span class="pre">authorized_keys</span></code>. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.</p></li>
 </ol>
 </div>
 </div>

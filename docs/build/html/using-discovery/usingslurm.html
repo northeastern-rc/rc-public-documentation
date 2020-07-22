@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Slurm examples" href="slurmexamples.html" />
-    <link rel="prev" title="First Tasks" href="../get_started/first-tasks.html" /> 
+    <link rel="prev" title="Working with MATLAB Parallel Computing Toolbox" href="../software/matlab.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,9 +88,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Get Started</span></p>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
@@ -104,19 +116,24 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="slurmexamples.html">Slurm examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classroom/class_use.html">Using Discovery with your class FAQ</a></li>
 </ul>
 
             
@@ -189,7 +206,7 @@ For in-depth information on Slurm, see <a class="reference external" href="https
 <div class="section" id="viewing-cluster-information">
 <h2>Viewing Cluster Information<a class="headerlink" href="#viewing-cluster-information" title="Permalink to this headline">¶</a></h2>
 <p>Use the following commands to view information about the cluster. This information can help you better understand the
-hardware that is available in order to customize your scripts.</p>
+hardware that is available in order to customize your job scripts.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -260,8 +277,8 @@ To run a job interactively, use <code class="docutils literal notranslate"><span
 </table>
 <div class="section" id="batch-jobs">
 <span id="id2"></span><h3>Batch Jobs<a class="headerlink" href="#batch-jobs" title="Permalink to this headline">¶</a></h3>
-<p>You use the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command with a batch script to specify the
-resources you need to run your jobs, such as which nodes you want to run your jobs
+<p>You use the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command with a bash script to specify the
+resources you need to run your jobs, such as the number of nodes you want to run your jobs
 on and how much memory you’ll need. Slurm then schedules your job based on the
 availability of the resources you’ve specified.
 The general format for submitting a job to the scheduler is as follows:</p>
@@ -276,7 +293,7 @@ See <a class="reference internal" href="slurmexamples.html#slurm-examples"><span
 <code class="docutils literal notranslate"><span class="pre">--partition=&lt;partition</span> <span class="pre">name&gt;</span></code> option.
 If your job does not complete within the requested time limit,
 Slurm will automatically terminate the job.
-See <a class="reference internal" href="../welcome/welcome.html#partition-names"><span class="std std-ref">Partitions</span></a> for the most up-to-date partition names and parameters.</p>
+See <a class="reference internal" href="../hardware/partitions.html#partition-names"><span class="std std-ref">Partitions</span></a> for the most up-to-date partition names and parameters.</p>
 </div>
 </div>
 </div>
@@ -293,7 +310,7 @@ See <a class="reference internal" href="../welcome/welcome.html#partition-names"
         <a href="slurmexamples.html" class="btn btn-neutral float-right" title="Slurm examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../get_started/first-tasks.html" class="btn btn-neutral float-left" title="First Tasks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../software/matlab.html" class="btn btn-neutral float-left" title="Working with MATLAB Parallel Computing Toolbox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

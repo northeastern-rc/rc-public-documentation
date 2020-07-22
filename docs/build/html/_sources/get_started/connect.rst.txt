@@ -18,7 +18,7 @@ that you use to connect to Discovery using SSH.
 
 1. Open Terminal.
 
-2. Type ``ssh <username>@login.discovery.neu.edu`` , where ``<username>`` is your Northeastern username. If you need to use X 11 forwarding, type ``ssh -Y <username>@login.discovery.neu.edu``.
+2. Type ``ssh <username>@login.discovery.neu.edu``, where ``<username>`` is your Northeastern username. If you need to use x11 forwarding, type ``ssh -Y <username>@login.discovery.neu.edu``.
 
 3. Type your Northeastern password and press Enter.
 
@@ -33,9 +33,19 @@ add your keys to the authorized.key file.
 
 **To setup passwordless ssh**
 
-1. Connect to Discovery.
-2. Type ``ssh-keygen`` and then accept all of the defaults. This generates your public and private keys.
-3. Type ``cd ~/.ssh ; cat id_rsa.pub >> authorized_keys``. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file
+1. On your local computer in Terminal type, ``cd ~/.ssh``. This moves you to your ssh folder.
+2. Type ``ssh-keygen -t rsa`` to generate two files: ``id_rsa`` and ``id_rsa.pub``.
+3. Press ``Enter`` to all of the prompts (do not generate a passphrase).
+4. Type ``ssh-copy-id -i ~/.ssh/id_rsa.pub <yourusername>@login.discovery.neu.edu`` to copy ``id_rsa.pub`` to your /home directory. Enter your NU password if prompted.
+5. Connect to Discovery by typing ``ssh <yourusername>@login.discovery.neu.edu``.
+6. Type ``cd ~/.ssh ; cat id_rsa.pub >> authorized_keys``. This moves you to your ssh folder and adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.
+7. Log out by typing ``exit``.
+8. Connect to Discovery again by typing ``ssh <yourusername>@login.discovery.neu.edu``.
+9. Move to a compute node by typing ``srun --pty /bin/bash``.
+10. Type ``cd ~/.ssh`` to move to your ssh folder.
+11. Type ``ssh-keygen -t rsa`` to generate your key files.
+12. Press ``Enter`` to all of the prompts (do not generate a passphrase).
+13. Type ``cat id_rsa.pub >> authorized_keys``. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.
 
 Windows
 ========

@@ -4,7 +4,7 @@
 **********
 Partitions
 **********
-:sub:`Updated April 3, 2020`
+:sub:`Updated July 22, 2020`
 
 .. note::
    As of February 2020, the partition names were updated. You should refer to the table below for
@@ -49,7 +49,7 @@ For more information see :ref:`partition_access` and the RC website: https://rc.
      - 4 hours/24 Hours
      - 50/500
      - 5000
-     - 1024
+     - 128
      - 25TB
    * - long
      - **Yes**
@@ -92,9 +92,19 @@ For more information see :ref:`partition_access` and the RC website: https://rc.
      - 12
      - 12
 
-You can view all of the partitions by using the Slurm command ``sinfo -a``. To specify a partition in
-your job submission script, use the option ``--partition=<partition name>``.
-For more information about Slurm, see :ref:`using_slurm`.
+You can view all of the partitions by using the Slurm command ``sinfo -a``. For more information about Slurm, see :ref:`using_slurm`.
+
+Allocating partitions in your jobs
+===================================
+To specify a partition in your job submission script, use the option ``--partition=<partition name>``.
+
+When using a partition with your job and specifying the options of ``--nodes=`` and ``--ntasks=``, make sure that you are requesting options that best fit your job.
+**Requesting the maximum number of nodes or tasks will not make your job run faster or give you higher priority in the job queue.** It can actually have
+the opposite effect on jobs that are better suited to running on a single node, as you have to wait for the extra resources that your job will not use. See .. _slurm_examples: for more information on using ``srun`` and ``sbatch`` to run jobs.
+
+.. tip::
+   The ``short`` partition has a limit of 2 nodes (``--nodes=2``) and a maximum number of cores (``--ntasks=128``). If you are working on jobs that require more nodes, such as
+   large MPI jobs, that also need to run for more than an hour, you should submit an application to use the ``large`` partition. See the section below for the link to apply to use the ``large`` partition.
 
 .. _partition_access:
 

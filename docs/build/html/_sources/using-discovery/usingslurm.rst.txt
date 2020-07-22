@@ -15,11 +15,12 @@ that lets you do the following:
 with Slurm and be able to submit and monitor basic jobs on Discovery.
 For in-depth information on Slurm, see https://slurm.schedmd.com/.
 
+
 Viewing Cluster Information
 ===========================
 
 Use the following commands to view information about the cluster. This information can help you better understand the
-hardware that is available in order to customize your scripts.
+hardware that is available in order to customize your job scripts.
 
 .. list-table::
    :widths: 20 100
@@ -72,8 +73,8 @@ Monitoring Jobs
 Batch Jobs
 ~~~~~~~~~~
 
-You use the ``sbatch`` command with a batch script to specify the
-resources you need to run your jobs, such as which nodes you want to run your jobs
+You use the ``sbatch`` command with a bash script to specify the
+resources you need to run your jobs, such as the number of nodes you want to run your jobs
 on and how much memory you’ll need. Slurm then schedules your job based on the
 availability of the resources you’ve specified.
 The general format for submitting a job to the scheduler is as follows::

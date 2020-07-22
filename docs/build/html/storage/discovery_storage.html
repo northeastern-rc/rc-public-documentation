@@ -102,6 +102,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -186,28 +187,34 @@
 <span id="discovery-storage"></span><h1>Storage Accessible on  Discovery<a class="headerlink" href="#storage-accessible-on-discovery" title="Permalink to this headline">¶</a></h1>
 <p>There are two main storage systems connected to Discovery: /home and /scratch. These options have specific quotas and limitations.
 The list below details the storage options available to you on Discovery if you have an account on Discovery. These are storage options
-that are connected to Discovery, and you should use when working on Discovery.</p>
+that are connected to Discovery, and you should use when working on Discovery. Every individual with an account on Discovery has
+both a /home and /scratch directory. Research groups can request additional storage on the /work storage system. Note that currently
+this storage is not provisioned to individuals.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The /scratch space is only for temporary storage. It is not backed up, and there is a purge policy for data older than 28 days on scratch. Please review
-the scratch policy on our Policy page: <a class="reference external" href="https://rc.northeastern.edu/policy/">https://rc.northeastern.edu/policy/</a></p>
+<p>The /scratch space is only for temporary storage. It is not backed up, and there is a purge policy for data older than 28 days on /scratch. Please review
+the /scratch policy on our Policy page: <a class="reference external" href="https://rc.northeastern.edu/policy/">https://rc.northeastern.edu/policy/</a></p>
 </div>
-<dl class="simple">
+<dl>
 <dt><strong>NAME:</strong> <code class="docutils literal notranslate"><span class="pre">/home/&lt;yourusername&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">yourusername</span></code> is your username, e.g. <code class="docutils literal notranslate"><span class="pre">/home/j.smith</span></code></dt><dd><ul class="simple">
-<li><p><strong>DESCRIPTION:</strong> You are given a <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory automatically when your Discovery account is created. This storage is mainly intended for environment tools and very low utilization. It is not performant storage.</p></li>
+<li><p><strong>DESCRIPTION:</strong> You are given a <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory automatically when your Discovery account is created. This storage is mainly intended for storing relatively small files such as script files, source code, software installation files, and other small files that you need for your work on Discovery. While it is permanent storage that is backed up and replicated, it is not performant storage. It also has a small quota, so you should frequently check your space usage (use a command such as <code class="docutils literal notranslate"><span class="pre">du</span> <span class="pre">-h</span> <span class="pre">/home/&lt;yourusername&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">&lt;yourusername&gt;</span></code> is your user name, to see the total space usage). For running jobs and directing output files, you should use your <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> directory.</p></li>
 <li><p><strong>QUOTA:</strong> 50GB</p></li>
 </ul>
 </dd>
 <dt><strong>NAME:</strong> <code class="docutils literal notranslate"><span class="pre">/scratch/&lt;yourusername&gt;</span></code></dt><dd><ul class="simple">
-<li><p><strong>DESCRIPTION:</strong> You are given a <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> directory automatically when your Discovery account is created. This is a shared space for all users. The total storage available is 1.8PB; however, while this is performant storage, it is for temporary use only. It is not backed up. Data on <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> should be moved as soon as possible to another location for permanent storage.</p></li>
+<li><p><strong>DESCRIPTION:</strong> You are given a <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> directory automatically when your Discovery account is created. Scratch is a shared space for all users. The total storage available is 1.8PB; however, while this is performant storage, it is for temporary use only. <strong>It is not backed up.</strong> Data on <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> should be moved as soon as possible to another location for permanent storage. You should run your jobs from <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> and direct your output files to your <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> directory for best performance, but it is best practice to move your files off of scratch to avoid any potential data loss.</p></li>
 <li><p><strong>QUOTA:</strong> N/A</p></li>
 </ul>
 </dd>
-</dl>
+<dt><strong>NAME:</strong> <code class="docutils literal notranslate"><span class="pre">/work/&lt;yourusername&gt;</span></code></dt><dd><ul class="simple">
+<li><p><strong>DESCRIPTION:</strong> Research groups can request additional storage on <code class="docutils literal notranslate"><span class="pre">/work</span></code>. A PI can request this extra storage through the <a class="reference external" href="https://northeastern.service-now.com/research?id=sc_cat_item&amp;sys_id=891235d31b20c0502dafc8415b4bcb0e">New Storage request</a> on ServiceNow.</p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can also request additional general data storage if needed. See <a class="reference internal" href="general_storage.html#general-storage"><span class="std std-ref">General Data Storage Options</span></a> for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.</p>
 </div>
+</dd>
+</dl>
 </div>
 
 

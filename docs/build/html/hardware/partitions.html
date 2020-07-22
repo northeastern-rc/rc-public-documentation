@@ -88,14 +88,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Get Started</span></p>
+<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../get_started/first-tasks.html">First Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="hardware_overview.html">Hardware overview</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Partitions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#allocating-partitions-in-your-jobs">Allocating partitions in your jobs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#partition-access-request">Partition Access Request</a></li>
 </ul>
 </li>
@@ -104,6 +106,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -115,8 +118,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Options on Discovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">Research Computing Storage Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
@@ -186,7 +189,7 @@
             
   <div class="section" id="partitions">
 <span id="partition-names"></span><h1>Partitions<a class="headerlink" href="#partitions" title="Permalink to this headline">¶</a></h1>
-<p><sub>Updated April 3, 2020</sub></p>
+<p><sub>Updated July 22, 2020</sub></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As of February 2020, the partition names were updated. You should refer to the table below for
@@ -243,7 +246,7 @@ For more information see <a class="reference internal" href="#partition-access">
 <td><p>4 hours/24 Hours</p></td>
 <td><p>50/500</p></td>
 <td><p>5000</p></td>
-<td><p>1024</p></td>
+<td><p>128</p></td>
 <td><p>25TB</p></td>
 </tr>
 <tr class="row-odd"><td><p>long</p></td>
@@ -303,9 +306,19 @@ For more information see <a class="reference internal" href="#partition-access">
 </tr>
 </tbody>
 </table>
-<p>You can view all of the partitions by using the Slurm command <code class="docutils literal notranslate"><span class="pre">sinfo</span> <span class="pre">-a</span></code>. To specify a partition in
-your job submission script, use the option <code class="docutils literal notranslate"><span class="pre">--partition=&lt;partition</span> <span class="pre">name&gt;</span></code>.
-For more information about Slurm, see <a class="reference internal" href="../using-discovery/usingslurm.html#using-slurm"><span class="std std-ref">Using Slurm</span></a>.</p>
+<p>You can view all of the partitions by using the Slurm command <code class="docutils literal notranslate"><span class="pre">sinfo</span> <span class="pre">-a</span></code>. For more information about Slurm, see <a class="reference internal" href="../using-discovery/usingslurm.html#using-slurm"><span class="std std-ref">Using Slurm</span></a>.</p>
+<div class="section" id="allocating-partitions-in-your-jobs">
+<h2>Allocating partitions in your jobs<a class="headerlink" href="#allocating-partitions-in-your-jobs" title="Permalink to this headline">¶</a></h2>
+<p>To specify a partition in your job submission script, use the option <code class="docutils literal notranslate"><span class="pre">--partition=&lt;partition</span> <span class="pre">name&gt;</span></code>.</p>
+<p>When using a partition with your job and specifying the options of <code class="docutils literal notranslate"><span class="pre">--nodes=</span></code> and <code class="docutils literal notranslate"><span class="pre">--ntasks=</span></code>, make sure that you are requesting options that best fit your job.
+<strong>Requesting the maximum number of nodes or tasks will not make your job run faster or give you higher priority in the job queue.</strong> It can actually have
+the opposite effect on jobs that are better suited to running on a single node, as you have to wait for the extra resources that your job will not use.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">short</span></code> partition has a limit of 2 nodes (<code class="docutils literal notranslate"><span class="pre">--nodes=2</span></code>) and a maximum number of cores (<code class="docutils literal notranslate"><span class="pre">--ntasks=128</span></code>). If you are working on jobs that require more nodes, such as
+large MPI jobs, that also need to run for more than an hour, you should submit an application to use the <code class="docutils literal notranslate"><span class="pre">large</span></code> partition. See the section below for the link to apply to use the <code class="docutils literal notranslate"><span class="pre">large</span></code> partition.</p>
+</div>
+</div>
 <div class="section" id="partition-access-request">
 <span id="partition-access"></span><h2>Partition Access Request<a class="headerlink" href="#partition-access-request" title="Permalink to this headline">¶</a></h2>
 <p>If you need access to the large, long, or multigpu partition, you need to submit a <a class="reference external" href="https://service.northeastern.edu/tech?id=sc_cat_item&amp;sys_id=0c34d402db0b0010a37cd206ca9619b7">ServiceNow ticket</a>.

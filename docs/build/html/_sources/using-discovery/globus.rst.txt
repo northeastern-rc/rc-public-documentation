@@ -65,6 +65,10 @@ You need to be logged into Globus before you can install GCP.
 
 Accept the defaults on the install wizard. After the install completes, you can now use your laptop as an endpoint within Globus.
 
+.. note::
+   You can't modify an endpoint after you have created it. If you need an endpoint with different options, you'll need to completely delete
+   the endpoint and recreate it. Follow the instructions on the Globus website for `deleting and recreating an endpoint <https://docs.globus.org/faq/globus-connect-endpoints/#how_do_i_get_a_new_setup_key_for_a_reinstallation_of_globus_connect_personal>`_.
+
 Working with Globus
 ===================
 After you have an account and set up a personal endpoint using Globus Connect personal, you can perform basic file management tasks using the Globus File Manager interface
