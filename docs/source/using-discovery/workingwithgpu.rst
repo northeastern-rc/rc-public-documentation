@@ -36,7 +36,8 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
     - Intel Gold 6132\@\2.60Ghz
     - 187GB
 
-These GPUs are available within two partitions, named ``gpu`` and ``multigpu``. Note that partitions on Discovery are not physical partitions, they  are virtual partitions. The differences between the two partitions are the number of GPUs that you can request per job, as well as the time
+These GPUs are available within two partitions, named ``gpu`` and ``multigpu``. Note that partitions on Discovery are not physical partitions, they  are virtual partitions.
+The differences between the two partitions are the number of GPUs that you can request per job, as well as the time
 limit on each job. Both partitions give you access to all of the above GPU types. See the table below for the differences between the two partitions.
 
 .. list-table::
@@ -72,8 +73,8 @@ limit on each job. Both partitions give you access to all of the above GPU types
      - 8
 
 Anyone with an account on Discovery can use the ``gpu`` partition. Using ```multigpu`` requires an application process, which includes documenting
-the need for using ``multigpu``. You can find the application for ``multigpu`` and how to submit it in the Policies section on the
-`RC website <https://rc.northeastern.edu/files/2020/02/access_request_multigpu.docx>`_.
+the need for using ``multigpu``. To request temporary access to multigpu for testing or to submit an application for full access, you need to fill out and submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_.
+All requests are evaluated by members of the RC team, and multigpu requests are also evaluated by two faculty members. This is to ensure that the resources in this partition will be used appropriately.
 
 Requesting GPUs with ``srun`` or ``sbatch``
 ===========================================

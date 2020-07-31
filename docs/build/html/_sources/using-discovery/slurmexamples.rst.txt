@@ -118,10 +118,10 @@ need more memory than the default.
   #SBATCH --nodes=4
   #SBATCH --tasks-per-node=2
   #SBATCH --cpus-per-task=1
-  #SBATCH --time=4:00:00
+  #SBATCH --time=00:30:00
   #SBATCH --job-name=MyJobName
   #SBATCH --mem=100Gb
-  #SBATCH --partition=short
+  #SBATCH --partition=express
   <commands to execute>
 
 

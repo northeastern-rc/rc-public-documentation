@@ -58,14 +58,8 @@ To request additional software (instructors only):
 
 **How do I get my class access to Discovery?**
 
-We need a list of your students' names and emails, and we will create accounts for them.
-An easy way to get a list of student emails is in Blackboard.
-
-1. In Blackboard, click **Course Tools**, then select **Student Email Addresses**.
-2. Click **Spreadsheet**.
-3. Select **Open with Microsoft Excel**, and click **OK**.
-4. In the spreadsheet that opens, select the emails and course number/section (CRN) of the course that you want to work on Discovery.
-   Note: The spreadsheet contains the student emails of all of your active courses, so only select the emails of the students who need access.
+We need a list of your students' names and emails, and we will create accounts for them. Follow the steps in the article
+`How to Download a List of Student Email Addresses from Canvas <https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981>`_ to get a list of your students' emails.
 
 Send the list of student names and emails to rchelp@northeastern.edu along with your name, your course name, number, and dates the course is running.
 

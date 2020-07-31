@@ -20,7 +20,6 @@ Use the ``module avail`` command to show a list of the most currently available 
    Use the ``which`` command to display which version of a software package you have in your path.
    For example, ``which python`` will display the version of python that you have in your path.
 
-
 Module commands
 ===============
 The following are common module commands that are useful for interacting with software packages on Discovery.
