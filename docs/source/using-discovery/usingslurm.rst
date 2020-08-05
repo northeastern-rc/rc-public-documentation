@@ -8,13 +8,17 @@ Slurm (Simple Linux Utility Resource Management) is the software on Discovery
 that lets you do the following:
 
 * view information about the cluster
-* schedule your jobs on Discovery
 * monitor your jobs
+* schedule your jobs on Discovery
 
-:ref:`slurm_examples` provides you with a few examples to help get you familiar
-with Slurm and be able to submit and monitor basic jobs on Discovery.
-For in-depth information on Slurm, see https://slurm.schedmd.com/.
+:ref:`using_srun` and :ref:`using_sbatch` provide you with a few examples to help get you familiar
+with Slurm and be able to submit basic jobs on Discovery.
 
+.. important::
+   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options also often have both short and verbose versions, such as
+   ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the
+   verbose version of the options for clarity, but you can use the short version if you prefer.
+   Refer to the official Slurm documentation to get in-depth information about these commands and their options: `Slurm documentation website <https://slurm.schedmd.com/archive/slurm-17.11.6/srun.html>`_.
 
 Viewing Cluster Information
 ===========================
@@ -67,26 +71,3 @@ Monitoring Jobs
      - Reports the computational efficiency of your calculations
    * - ``squeue``
      - View job status
-
-.. _batch_jobs:
-
-Batch Jobs
-~~~~~~~~~~
-
-You use the ``sbatch`` command with a bash script to specify the
-resources you need to run your jobs, such as the number of nodes you want to run your jobs
-on and how much memory you’ll need. Slurm then schedules your job based on the
-availability of the resources you’ve specified.
-The general format for submitting a job to the scheduler is as follows::
-
-   sbatch example.script
-
-Where ``example.script`` is a script detailing the parameters of the job you want to run.
-See :ref:`slurm_examples` for more information on writing scheduler scripts.
-
-.. note::
-  The default time limit depends on the partition that you specify in your submission script using the
-  ``--partition=<partition name>`` option.
-  If your job does not complete within the requested time limit,
-  Slurm will automatically terminate the job.
-  See :ref:`partition_names` for the most up-to-date partition names and parameters.

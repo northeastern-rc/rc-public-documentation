@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Slurm examples &mdash; Northeastern University Research Computing 0.0.2 documentation</title>
+  <title>Using sbatch &mdash; Northeastern University Research Computing 0.0.2 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Working with GPUs" href="workingwithgpu.html" />
+    <link rel="next" title="Using srun" href="srun.html" />
     <link rel="prev" title="Using Slurm" href="usingslurm.html" /> 
 </head>
 
@@ -107,8 +107,7 @@
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="usingslurm.html">Using Slurm</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Slurm examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#srun-examples">SRUN Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using sbatch</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#sbatch-examples">SBATCH Examples</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#job-requesting-one-node">Job requesting one node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#job-requesting-one-node-and-additional-memory">Job requesting one node and additional memory</a></li>
@@ -123,6 +122,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#using-arrays">Using Arrays</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="srun.html">Using srun</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
@@ -186,7 +186,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Slurm examples</li>
+      <li>Using sbatch</li>
     
     
 
@@ -198,37 +198,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="slurm-examples">
-<span id="id1"></span><h1>Slurm examples<a class="headerlink" href="#slurm-examples" title="Permalink to this headline">¶</a></h1>
-<p>You can submit jobs using <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>. <code class="docutils literal notranslate"><span class="pre">srun</span></code> is for submitting interactive jobs, while you use <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> with a script.
-You should review the examples on this page to have a general understanding of the types
-of jobs you can submit to the scheduler.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. The examples on this page all use the
-verbose version of the options. The examples represent basic requests for hardware (such as cores, CPUs per task, and memory) and run time. You should refer
-to the official Slurm documentation to get in-depth information about these commands and their options: <a class="reference external" href="https://slurm.schedmd.com">https://slurm.schedmd.com</a>.</p>
-</div>
-<div class="section" id="srun-examples">
-<h2>SRUN Examples<a class="headerlink" href="#srun-examples" title="Permalink to this headline">¶</a></h2>
-<p>Use <code class="docutils literal notranslate"><span class="pre">srun</span></code> to start an interactive job. Note that you need to use <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">&lt;yourusername&gt;</span></code> after you submit an interactive job
-to view the job.</p>
-<p>A simple <code class="docutils literal notranslate"><span class="pre">srun</span></code> example is to move to a compute node after you first log into Discovery.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srun</span> <span class="o">--</span><span class="n">pty</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+  <div class="section" id="using-sbatch">
+<span id="id1"></span><h1>Using sbatch<a class="headerlink" href="#using-sbatch" title="Permalink to this headline">¶</a></h1>
+<p>You use the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command with a bash script to specify the
+resources you need to run your jobs, such as the number of nodes you want to run your jobs
+on and how much memory you’ll need. Slurm then schedules your job based on the
+availability of the resources you’ve specified.
+The general format for submitting a job to the scheduler is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sbatch</span> <span class="n">example</span><span class="o">.</span><span class="n">script</span>
 </pre></div>
 </div>
-<p>To allocate one node and one task for 30 minutes with X11 forwarding on the short partition, type:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srun</span> <span class="o">--</span><span class="n">partition</span><span class="o">=</span><span class="n">short</span> <span class="o">--</span><span class="n">pty</span> <span class="o">--</span><span class="n">export</span><span class="o">=</span><span class="n">ALL</span> <span class="o">--</span><span class="n">node</span><span class="o">=</span><span class="mi">1</span> <span class="o">--</span><span class="n">ntasks</span><span class="o">=</span><span class="mi">1</span> <span class="o">--</span><span class="n">x11</span> <span class="o">--</span><span class="n">mem</span><span class="o">=</span><span class="mi">10</span><span class="n">Gb</span> <span class="o">--</span><span class="n">time</span><span class="o">=</span><span class="mi">00</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">00</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
-</pre></div>
-</div>
-<p>To allocate a GPU node, you should specify the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> partition and use the –gres option:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srun</span> <span class="o">--</span><span class="n">partition</span><span class="o">=</span><span class="n">gpu</span> <span class="o">--</span><span class="n">node</span><span class="o">=</span><span class="n">node</span> <span class="mi">1</span> <span class="o">--</span><span class="n">ntasks</span><span class="o">=</span><span class="mi">1</span> <span class="o">--</span><span class="n">pty</span> <span class="o">--</span><span class="n">export</span><span class="o">=</span><span class="n">ALL</span> <span class="o">--</span><span class="n">gres</span><span class="o">=</span><span class="n">gpu</span><span class="p">:</span><span class="mi">1</span> <span class="o">--</span><span class="n">mem</span><span class="o">=</span><span class="mi">1</span><span class="n">Gb</span> <span class="o">--</span><span class="n">time</span><span class="o">=</span><span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
-</pre></div>
-</div>
-<p>When Discovery has maintenance, you can specify the <code class="docutils literal notranslate"><span class="pre">t2sd</span></code> (“time to shutdown”) script with the <code class="docutils literal notranslate"><span class="pre">--time</span></code> option along with your usual SRUN options:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>srun --time=$( t2sd )
-</pre></div>
-</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">example.script</span></code> is a script detailing the parameters of the job you want to run.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default time limit depends on the partition that you specify in your submission script using the
+<code class="docutils literal notranslate"><span class="pre">--partition=&lt;partition</span> <span class="pre">name&gt;</span></code> option.
+If your job does not complete within the requested time limit,
+Slurm will automatically terminate the job.
+See <a class="reference internal" href="../hardware/partitions.html#partition-names"><span class="std std-ref">Partitions</span></a> for the most up-to-date partition names and parameters.</p>
 </div>
 <div class="section" id="sbatch-examples">
 <h2>SBATCH Examples<a class="headerlink" href="#sbatch-examples" title="Permalink to this headline">¶</a></h2>
@@ -335,7 +322,7 @@ line to your sbatch script:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="workingwithgpu.html" class="btn btn-neutral float-right" title="Working with GPUs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="srun.html" class="btn btn-neutral float-right" title="Using srun" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="usingslurm.html" class="btn btn-neutral float-left" title="Using Slurm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

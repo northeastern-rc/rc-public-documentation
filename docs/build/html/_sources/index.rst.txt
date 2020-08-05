@@ -41,6 +41,7 @@ Northeastern University Research Computing
 
   using-discovery/usingslurm
   using-discovery/slurmexamples
+  using-discovery/srun
   using-discovery/workingwithgpu
   using-discovery/transferringdata
   using-discovery/globus

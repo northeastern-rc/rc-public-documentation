@@ -124,14 +124,14 @@ Allocating partitions in your jobs
 ===================================
 To specify a partition when running jobs, use the option ``--partition=<partition name>`` with either ``srun`` or ``sbatch``. When using a partition with your job and
 specifying the options of ``--nodes=`` and ``--ntasks=``, make sure that you are requesting options that best fit your job. **Requesting the maximum number of nodes or tasks will not make your job run faster or give you higher priority in the job queue.** It can actually have
-the opposite effect on jobs that are better suited to running with smaller requirements, as you have to wait for the extra resources that your job will not use. See :ref:`slurm_examples` for more information on using ``srun`` and ``sbatch`` to run jobs.
+the opposite effect on jobs that are better suited to running with smaller requirements, as you have to wait for the extra resources that your job will not use. See :ref:`using_slurm` for more information on using Slurm to run jobs.
 
 .. tip::
    You should always try to have job requests that will attempt to allocate the best resources for the job you want to run. For example, if you are running a job that is not parallelized, you only need to request one node (``--nodes=1``). For some parallel jobs, such as a small MPI job, you can also use one node (``--nodes=1``) with the ``–-ntasks=`` option set to correspond to the number of MPI ranks (tasks) in your code. For example, for a job that has 12 MPI ranks, request 1 node and 12 tasks within that node (``--nodes=1 –-ntasks=12``). If you request 12 nodes, Slurm is going to run code between those nodes, which could slow your job down significantly if it isn’t optimized to run between nodes.
 
    If your code is optimized to run on more than 2 nodes and needs less than one hour to run, you can use the express partition. If your code needs to run on more than 2 nodes for more than one hour, you should apply to use the large partition. See the section Partition Access Request below for more information.
 
-   
+
 .. _partition_access:
 
 Partition Access Request

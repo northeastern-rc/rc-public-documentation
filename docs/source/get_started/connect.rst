@@ -76,8 +76,6 @@ You are now connected to Discovery at a login node.
 Move to a compute node
 ======================
 
-You should never launch any jobs from the login node ``[username@login-00~]``. Any job launched from the login node will be terminated. You can move to a compute node using the srun command or use the sbatch command to run a job on an interactive compute node.
-
-- To move to a compute node, at the command prompt type ``srun --pty /bin/bash``
-
-- See :ref:`batch_jobs` for information about using ``sbatch``.
+You should never launch any jobs from the login node ``[username@login-00~]``. Any job launched from the login node will be terminated.
+You can move to a compute node using the srun command or use the sbatch command to run a job on an interactive compute node.
+See :ref:`using_srun` and :ref:`using_sbatch` for more information.

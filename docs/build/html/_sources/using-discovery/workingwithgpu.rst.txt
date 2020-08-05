@@ -1,3 +1,5 @@
+.. _working_gpus:
+
 ******************
 Working with GPUs
 ******************

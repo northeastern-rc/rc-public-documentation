@@ -1,39 +1,26 @@
-.. _slurm_examples:
+.. _using_sbatch:
 
-***************
-Slurm examples
-***************
+*************
+Using sbatch
+*************
 
-You can submit jobs using ``srun`` or ``sbatch``. ``srun`` is for submitting interactive jobs, while you use ``sbatch`` with a script.
-You should review the examples on this page to have a general understanding of the types
-of jobs you can submit to the scheduler.
+You use the ``sbatch`` command with a bash script to specify the
+resources you need to run your jobs, such as the number of nodes you want to run your jobs
+on and how much memory you’ll need. Slurm then schedules your job based on the
+availability of the resources you’ve specified.
+The general format for submitting a job to the scheduler is as follows::
 
-.. important::
-   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. The examples on this page all use the
-   verbose version of the options. The examples represent basic requests for hardware (such as cores, CPUs per task, and memory) and run time. You should refer
-   to the official Slurm documentation to get in-depth information about these commands and their options: https://slurm.schedmd.com.
+   sbatch example.script
 
-SRUN Examples
-=============
+Where ``example.script`` is a script detailing the parameters of the job you want to run.
 
-Use ``srun`` to start an interactive job. Note that you need to use ``squeue -u <yourusername>`` after you submit an interactive job
-to view the job.
+.. note::
+  The default time limit depends on the partition that you specify in your submission script using the
+  ``--partition=<partition name>`` option.
+  If your job does not complete within the requested time limit,
+  Slurm will automatically terminate the job.
+  See :ref:`partition_names` for the most up-to-date partition names and parameters.
 
-A simple ``srun`` example is to move to a compute node after you first log into Discovery. ::
-
-  srun --pty /bin/bash
-
-To allocate one node and one task for 30 minutes with X11 forwarding on the short partition, type::
-
-  srun --partition=short --pty --export=ALL --node=1 --ntasks=1 --x11 --mem=10Gb --time=00:30:00 /bin/bash
-
-To allocate a GPU node, you should specify the ``gpu`` partition and use the --gres option::
-
-  srun --partition=gpu --node=node 1 --ntasks=1 --pty --export=ALL --gres=gpu:1 --mem=1Gb --time=01:00:00 /bin/bash
-
-When Discovery has maintenance, you can specify the ``t2sd`` ("time to shutdown") script with the ``--time`` option along with your usual SRUN options::
-
-  srun --time=$( t2sd )
 
 SBATCH Examples
 ================
