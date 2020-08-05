@@ -108,7 +108,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using Slurm</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#viewing-cluster-information">Viewing Cluster Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#controlling-jobs">Controlling Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submitting-jobs">Submitting Jobs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#monitoring-jobs">Monitoring Jobs</a></li>
 </ul>
 </li>
@@ -202,15 +202,15 @@ that lets you do the following:</p>
 with Slurm and be able to submit basic jobs on Discovery.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options also often have both short and verbose versions, such as
+<p>Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options also usually have both short and verbose versions, such as
 <code class="docutils literal notranslate"><span class="pre">--nodes</span></code> and <code class="docutils literal notranslate"><span class="pre">-n</span></code> (both mean the same thing). The examples in this documentation all use the
-verbose version of the options for clarity, but you can use the short version if you prefer.
+verbose version of the options for clarity, but you can use the short version if you prefer. For example, <code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">-p</span> <span class="pre">short</span> <span class="pre">-N</span> <span class="pre">1</span> <span class="pre">-n</span> <span class="pre">1</span></code> means the exact same thing as <code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">--partition=short</span> <span class="pre">--nodes=1</span> <span class="pre">--ntasks=1</span></code>
 Refer to the official Slurm documentation to get in-depth information about these commands and their options: <a class="reference external" href="https://slurm.schedmd.com/archive/slurm-17.11.6/srun.html">Slurm documentation website</a>.</p>
 </div>
 <div class="section" id="viewing-cluster-information">
 <h2>Viewing Cluster Information<a class="headerlink" href="#viewing-cluster-information" title="Permalink to this headline">¶</a></h2>
 <p>Use the following commands to view information about the cluster. This information can help you better understand the
-hardware that is available in order to customize your job scripts.</p>
+hardware that is available in order to customize your job scripts. Also see <a class="reference internal" href="../hardware/hardware_overview.html#hardware-overview"><span class="std std-ref">Hardware overview</span></a> for more information.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -231,10 +231,10 @@ hardware that is available in order to customize your job scripts.</p>
 </tbody>
 </table>
 </div>
-<div class="section" id="controlling-jobs">
-<span id="submitting-jobs"></span><h2>Controlling Jobs<a class="headerlink" href="#controlling-jobs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="submitting-jobs">
+<span id="id2"></span><h2>Submitting Jobs<a class="headerlink" href="#submitting-jobs" title="Permalink to this headline">¶</a></h2>
 <p>There are two main commands for submitting jobs to Discovery: <code class="docutils literal notranslate"><span class="pre">srun</span></code> and <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>.
-To run a job interactively, use <code class="docutils literal notranslate"><span class="pre">srun</span></code>. To submit a job to run in the back ground with a script, use <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>.</p>
+To run a job interactively, use <code class="docutils literal notranslate"><span class="pre">srun</span></code>. To submit a job to run in the background with a script, use <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -247,10 +247,10 @@ To run a job interactively, use <code class="docutils literal notranslate"><span
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">srun</span></code></p></td>
-<td><p>Run an interactive job on the cluster</p></td>
+<td><p>Run an interactive job on the cluster. See <a class="reference internal" href="srun.html#using-srun"><span class="std std-ref">Using srun</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">&lt;scriptname.script&gt;</span></code></p></td>
-<td><p>Submit a script to the scheduler for running a job</p></td>
+<td><p>Submit a script to the scheduler for running a job. See <a class="reference internal" href="slurmexamples.html#using-sbatch"><span class="std std-ref">Using sbatch</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">scancel</span> <span class="pre">&lt;jobid&gt;</span></code></p></td>
 <td><p>Cancel a pending or running job on the cluster</p></td>
@@ -272,10 +272,13 @@ To run a job interactively, use <code class="docutils literal notranslate"><span
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">seff</span> <span class="pre">&lt;jobid&gt;</span></code></p></td>
-<td><p>Reports the computational efficiency of your calculations</p></td>
+<td><p>Reports the computational efficiency of your calculations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">squeue</span></code></p></td>
-<td><p>View job status</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">&lt;your</span> <span class="pre">user</span> <span class="pre">name&gt;</span></code></p></td>
+<td><p>Displays your job status in the job queue. Good to use with <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">scontrol</span> <span class="pre">show</span> <span class="pre">jobid</span> <span class="pre">-d</span> <span class="pre">&lt;JOBID&gt;</span></code></p></td>
+<td><p>Displays your job information. Good to use with <code class="docutils literal notranslate"><span class="pre">srun</span></code>.</p></td>
 </tr>
 </tbody>
 </table>

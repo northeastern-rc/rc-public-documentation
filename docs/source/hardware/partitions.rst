@@ -135,7 +135,7 @@ the opposite effect on jobs that are better suited to running with smaller requi
 .. _partition_access:
 
 Partition Access Request
-==========================
+=========================
 
 If you need access to the large, long, or multigpu partition, you need to submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_.
 Access is not automatically granted. You will need to provide details and test results that demonstrate your need for access for these partitions.
