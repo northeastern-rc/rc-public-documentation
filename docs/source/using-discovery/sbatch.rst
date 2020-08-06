@@ -44,13 +44,14 @@ The default memory per allocated core is 1GB. If your calculations try to use
 more memory than what is allocated, Slurm automatically terminates your job.
 You should request a specific amount of memory in your job script if your
 calculations need more memory than the default. The example script below is
-requesting 100GB of memory (mem=100Gb).::
+requesting 100GB of memory (--mem=100G). Use one capital letter to abbreviate
+the unit of memory (K,M,G,T) with the ``--mem=`` option, as that is what Slurm expects to see. ::
 
   #!/bin/bash
   #SBATCH --nodes=1
   #SBATCH --time=4:00:00
   #SBATCH --job-name=MyJobName
-  #SBATCH --mem=100Gb
+  #SBATCH --mem=100G
   #SBATCH --partition=short
   <commands to execute>
 
@@ -60,7 +61,7 @@ Job requesting one node with exclusive use of a node
 
 If you need exclusive use of a node, such as when you have a job that has high
 I/O requirements, you can use the exclusive flag. The example script below
-specifies exclusive use of 1 node in the short partition for four hours.::
+specifies exclusive use of 1 node in the short partition for four hours. ::
 
   #!/bin/bash
   #SBATCH --nodes=1
@@ -88,11 +89,11 @@ need more memory than the default.
 
   #!/bin/bash
   #SBATCH --nodes=1
-  #SBATCH --tasks-per-node=8
+  #SBATCH --ntasks-per-node=8
   #SBATCH --cpus-per-task=1
   #SBATCH --time=4:00:00
   #SBATCH --job-name=MyJobName
-  #SBATCH --mem=100Gb
+  #SBATCH --mem=100G
   #SBATCH --partition=short
   <commands to execute>
 
@@ -103,11 +104,11 @@ need more memory than the default.
 
   #!/bin/bash
   #SBATCH --nodes=4
-  #SBATCH --tasks-per-node=2
+  #SBATCH --ntasks-per-node=2
   #SBATCH --cpus-per-task=1
   #SBATCH --time=00:30:00
   #SBATCH --job-name=MyJobName
-  #SBATCH --mem=100Gb
+  #SBATCH --mem=100G
   #SBATCH --partition=express
   <commands to execute>
 

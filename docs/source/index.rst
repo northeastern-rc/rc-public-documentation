@@ -40,7 +40,7 @@ Northeastern University Research Computing
   :caption: Using Discovery
 
   using-discovery/usingslurm
-  using-discovery/slurmexamples
+  using-discovery/sbatch
   using-discovery/srun
   using-discovery/workingwithgpu
   using-discovery/transferringdata

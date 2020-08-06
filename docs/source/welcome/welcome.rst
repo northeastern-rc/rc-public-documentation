@@ -12,7 +12,7 @@ This help system is updated frequently to reflect the latest information about D
 as to add new topics to help you with your research. Check back often to view our updates.
 
 We want your feedback! If you have any comments or suggestions for topics you'd like
-to see covered in this documentation, submit a `documentation ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=c58d8492dbb08090a37cd206ca9619b6>`_.
+to see covered in this documentation, submit a `Research Computing Documentation request <https://bit.ly/NURC-Documentation>`_.
 
 What is Discovery
 =================

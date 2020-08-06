@@ -22,7 +22,7 @@ this storage is not provisioned to individuals.
  - **QUOTA:** N/A
 
 **NAME:** ``/work/<yourusername>``
- - **DESCRIPTION:** Research groups can request additional storage on ``/work``. A PI can request this extra storage through the `New Storage request <https://northeastern.service-now.com/research?id=sc_cat_item&sys_id=891235d31b20c0502dafc8415b4bcb0e>`_ on ServiceNow.
+ - **DESCRIPTION:** Research groups can request additional storage on ``/work``. A PI can request this extra storage through the `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ .
 
  .. note::
     You can also request additional general data storage if needed. See :ref:`general_storage` for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.

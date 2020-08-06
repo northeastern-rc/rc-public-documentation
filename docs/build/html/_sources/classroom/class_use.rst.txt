@@ -42,7 +42,7 @@ so having all requests go through the professor or instructor reduces this overl
 
 To request additional software (instructors only):
 
-1.	Go to the `ServiceNow software request ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=777c510bdbebd340a37cd206ca9619b0>`_. If prompted, sign into ServiceNow with your myNortheastern username and password to access the form
+1.	Go to the `Discovery Cluster Software Request <https://bit.ly/NURC-Software>`_. If prompted, sign into ServiceNow with your myNortheastern username and password to access the form
 2.	In the Sponsor’s Name field, enter your name.
 3.	Make sure to follow the instructions on the form regarding either providing the URL of the open source software library or uploading the installation package in your home directory if it requires you to register it first. The request will not be completed without this information.
 4.	Select the acknowledgement checkbox, and click **Submit**.
@@ -58,10 +58,9 @@ To request additional software (instructors only):
 
 **How do I get my class access to Discovery?**
 
-We need a list of your students' names and emails, and we will create accounts for them. Follow the steps in the article
-`How to Download a List of Student Email Addresses from Canvas <https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981>`_ to get a list of your students' emails.
-
-Send the list of student names and emails to rchelp@northeastern.edu along with your name, your course name, number, and dates the course is running.
+You fill out a `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ ticket. The form requests you to submit a list of your students' names and emails. We will create accounts on Discovery for them.
+Follow the steps in the article `How to Download a List of Student Email Addresses from Canvas <https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981>`_ to get a list of your students' emails.
+If your class roster is not complete, you can attach a preliminary list to the ticket, and then follow up with us on the same ticket with an updated roster when the add/drop period is over.
 
 **I just need my class to access Open onDemand. How do I request that?**
 
@@ -83,7 +82,7 @@ all users.
 **Is there any training on Discovery for my class?**
 
 Yes, we can provide in-classroom training, either in person or in an online webinar format, for your class on using Discovery. We can customize it to
-focus on the resources you will be using with them for the class. Please use the `ServiceNow training ticket <https://service.northeastern.edu/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D200f98d6dbf08090a37cd206ca9619c8%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default>`_
+focus on the resources you will be using with them for the class. Please use the `Research Computing Training Request <https://bit.ly/NURC-Training>`_ ticket
 to provide us with information about your class.
 
 **How long do my students have access to Discovery?**
@@ -97,4 +96,4 @@ If you are a professor or instructor at Northeastern, you can request an account
 
 **How do my students get help with Discovery?**
 
-You and/or your students can either submit a `ServiceNow ticket <https://service.northeastern.edu/nav_to.do?uri=%2Fcom.glideapp.servicecatalog_cat_item_view.do%3Fv%3D1%26sysparm_id%3D0a0bfc5adb9f1fc075892f17d4961993%26sysparm_link_parent%3D8314ddd2db379300a37cd206ca9619ea%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default>`_ or email rchelp@northeastern.edu.
+You and/or your students can either submit a `Get Assistance with Research Computing <https://bit.ly/NURC-Assistance>`_ ticket or email rchelp@northeastern.edu.

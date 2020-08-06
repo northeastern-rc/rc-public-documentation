@@ -97,7 +97,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#move-to-a-compute-node">Move to a compute node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next steps</a></li>
 </ul>
 </li>
 </ul>
@@ -115,7 +115,7 @@
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../using-discovery/slurmexamples.html">Using sbatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/sbatch.html">Using sbatch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/srun.html">Using srun</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
@@ -222,18 +222,17 @@ an issue with opening an application that uses x11 forwarding, such as Matlab or
 add your keys to the authorized.key file.</p>
 <p><strong>To setup passwordless ssh</strong></p>
 <ol class="arabic simple">
-<li><p>On your local computer in Terminal type, <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/.ssh</span></code>. This moves you to your ssh folder.</p></li>
+<li><p>On your local computer in Terminal type, <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/.ssh</span></code>. This moves you to the ssh folder on your local computer.</p></li>
 <li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">rsa</span></code> to generate two files: <code class="docutils literal notranslate"><span class="pre">id_rsa</span></code> and <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>.</p></li>
 <li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to all of the prompts (do not generate a passphrase).</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span> <span class="pre">-i</span> <span class="pre">~/.ssh/id_rsa.pub</span> <span class="pre">&lt;yourusername&gt;&#64;login.discovery.neu.edu</span></code> to copy <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code> to your /home directory. Enter your NU password if prompted.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span> <span class="pre">-i</span> <span class="pre">~/.ssh/id_rsa.pub</span> <span class="pre">&lt;yourusername&gt;&#64;login.discovery.neu.edu</span></code> to copy <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code> to your /home/.ssh folder on Discovery. Enter your NU password if prompted.</p></li>
 <li><p>Connect to Discovery by typing <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;yourusername&gt;&#64;login.discovery.neu.edu</span></code>.</p></li>
 <li><p>Type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/.ssh</span> <span class="pre">;</span> <span class="pre">cat</span> <span class="pre">id_rsa.pub</span> <span class="pre">&gt;&gt;</span> <span class="pre">authorized_keys</span></code>. This moves you to your ssh folder and adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.</p></li>
 <li><p>Log out by typing <code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p></li>
 <li><p>Connect to Discovery again by typing <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;yourusername&gt;&#64;login.discovery.neu.edu</span></code>.</p></li>
-<li><p>Move to a compute node by typing <code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">--pty</span> <span class="pre">/bin/bash</span></code>.</p></li>
 <li><p>Type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/.ssh</span></code> to move to your ssh folder.</p></li>
 <li><p>Type <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">rsa</span></code> to generate your key files.</p></li>
-<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to all of the prompts (do not generate a passphrase).</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to all of the prompts (do not generate a passphrase). If prompted to overwrite a file, type <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p></li>
 <li><p>Type <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">id_rsa.pub</span> <span class="pre">&gt;&gt;</span> <span class="pre">authorized_keys</span></code>. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.</p></li>
 </ol>
 </div>
@@ -247,23 +246,18 @@ whereas with other SSH programs, you would need a separate file transfer program
 <ol class="arabic simple">
 <li><p>Open MobaXterm.</p></li>
 <li><p>Click <strong>Session</strong>, then click <strong>SSH</strong> as the connection type.</p></li>
-<li><p>In <strong>Remote Host</strong>, type <code class="docutils literal notranslate"><span class="pre">login.discovery.neu.edu</span></code>, make sure <strong>Port</strong> is set to 22, and click <strong>OK</strong>. You do not need to enter a username.</p></li>
+<li><p>In <strong>Remote Host</strong>, type <code class="docutils literal notranslate"><span class="pre">login.discovery.neu.edu</span></code>, make sure <strong>Port</strong> is set to 22, and click <strong>OK</strong>.
+(OPTIONAL: You can type your Northeastern username and password on MobaXterm, and it will save that information every time you sign in. If you opt to do this, you will be connected to Discovery after you click OK.)</p></li>
 <li><p>At the prompt, type your Northeastern username and press Enter.</p></li>
 <li><p>Type your Northeastern password and press Enter. Note that the cursor does not move as you type your password. This is expected behavior.</p></li>
 </ol>
 <p>You are now connected to Discovery at a login node.</p>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>Never launch a job from the login node.
-Jobs that are launched from the login node will be terminated.
-Move to a compute node before running any jobs.</p>
 </div>
-</div>
-<div class="section" id="move-to-a-compute-node">
-<h2>Move to a compute node<a class="headerlink" href="#move-to-a-compute-node" title="Permalink to this headline">¶</a></h2>
-<p>You should never launch any jobs from the login node <code class="docutils literal notranslate"><span class="pre">[username&#64;login-00~]</span></code>. Any job launched from the login node will be terminated.
-You can move to a compute node using the srun command or use the sbatch command to run a job on an interactive compute node.
-See <a class="reference internal" href="../using-discovery/srun.html#using-srun"><span class="std std-ref">Using srun</span></a> and <a class="reference internal" href="../using-discovery/slurmexamples.html#using-sbatch"><span class="std std-ref">Using sbatch</span></a> for more information.</p>
+<div class="section" id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
+<p>After you are connected, you can run jobs either in interactive mode with srun or submit a script using sbatch. See <a class="reference internal" href="../using-discovery/srun.html#using-srun"><span class="std std-ref">Using srun</span></a> and <a class="reference internal" href="../using-discovery/sbatch.html#using-sbatch"><span class="std std-ref">Using sbatch</span></a> for more information.</p>
+<p>To load and run software, see <a class="reference internal" href="../software/modules.html#using-module"><span class="std std-ref">Using Module</span></a> and <a class="reference internal" href="../software/software.html#installing-software"><span class="std std-ref">Installing Software</span></a>.</p>
+<p>To find out more about the hardware and partitions on Discovery, see <a class="reference internal" href="../hardware/hardware_overview.html#hardware-overview"><span class="std std-ref">Hardware overview</span></a> and <a class="reference internal" href="../hardware/partitions.html#partition-names"><span class="std std-ref">Partitions</span></a>.</p>
 </div>
 </div>
 

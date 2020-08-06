@@ -19,8 +19,7 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
 **NAME:** ``/research``
   - **DESCRIPTION:** This storage tier is intended to be a repository for data derived from equipment such as lab machines,
     instruments, etc. The performance capabilities are not intended for parallel or high performance workloads.
-    Data are backed up and a second copy is created. Storage on ``/research`` can be
-    requested through the `New Storage request <https://northeastern.service-now.com/research?id=sc_cat_item&sys_id=891235d31b20c0502dafc8415b4bcb0e>`_ on ServiceNow
+    Data are backed up and a second copy is created. You can request storage on ``/research`` by submitting a `New Storage Space request <https://bit.ly/NURC-NewStorage>`_.
     See the section "Connecting to /research" below for information on how to connect to this storage.
   - **QUOTA:** Up to 10TB per research group.
 

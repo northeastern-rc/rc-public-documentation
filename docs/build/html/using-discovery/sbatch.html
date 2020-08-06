@@ -237,12 +237,13 @@ See <a class="reference internal" href="../hardware/partitions.html#partition-na
 more memory than what is allocated, Slurm automatically terminates your job.
 You should request a specific amount of memory in your job script if your
 calculations need more memory than the default. The example script below is
-requesting 100GB of memory (mem=100Gb).:</p>
+requesting 100GB of memory (–mem=100G). Use one capital letter to abbreviate
+the unit of memory (K,M,G,T) with the <code class="docutils literal notranslate"><span class="pre">--mem=</span></code> option, as that is what Slurm expects to see.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --nodes=1</span>
 <span class="c1">#SBATCH --time=4:00:00</span>
 <span class="c1">#SBATCH --job-name=MyJobName</span>
-<span class="c1">#SBATCH --mem=100Gb</span>
+<span class="c1">#SBATCH --mem=100G</span>
 <span class="c1">#SBATCH --partition=short</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
@@ -252,7 +253,7 @@ requesting 100GB of memory (mem=100Gb).:</p>
 <h3>Job requesting one node with exclusive use of a node<a class="headerlink" href="#job-requesting-one-node-with-exclusive-use-of-a-node" title="Permalink to this headline">¶</a></h3>
 <p>If you need exclusive use of a node, such as when you have a job that has high
 I/O requirements, you can use the exclusive flag. The example script below
-specifies exclusive use of 1 node in the short partition for four hours.:</p>
+specifies exclusive use of 1 node in the short partition for four hours.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --nodes=1</span>
 <span class="c1">#SBATCH --time=4:00:00</span>
@@ -277,11 +278,11 @@ need more memory than the default.</p>
 <h3>8-task job, one node and additional memory<a class="headerlink" href="#task-job-one-node-and-additional-memory" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --nodes=1</span>
-<span class="c1">#SBATCH --tasks-per-node=8</span>
+<span class="c1">#SBATCH --ntasks-per-node=8</span>
 <span class="c1">#SBATCH --cpus-per-task=1</span>
 <span class="c1">#SBATCH --time=4:00:00</span>
 <span class="c1">#SBATCH --job-name=MyJobName</span>
-<span class="c1">#SBATCH --mem=100Gb</span>
+<span class="c1">#SBATCH --mem=100G</span>
 <span class="c1">#SBATCH --partition=short</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
@@ -291,11 +292,11 @@ need more memory than the default.</p>
 <h3>8-task job, multiple nodes and additional memory<a class="headerlink" href="#task-job-multiple-nodes-and-additional-memory" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --nodes=4</span>
-<span class="c1">#SBATCH --tasks-per-node=2</span>
+<span class="c1">#SBATCH --ntasks-per-node=2</span>
 <span class="c1">#SBATCH --cpus-per-task=1</span>
 <span class="c1">#SBATCH --time=00:30:00</span>
 <span class="c1">#SBATCH --job-name=MyJobName</span>
-<span class="c1">#SBATCH --mem=100Gb</span>
+<span class="c1">#SBATCH --mem=100G</span>
 <span class="c1">#SBATCH --partition=express</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
