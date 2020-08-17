@@ -9,12 +9,9 @@ You must first have an account before you can access Discovery. You request an a
 You will need a Northeastern username and password to access ServiceNow. If you are new to the university or a visiting researcher,
 work with your sponsor to get a Northeastern username and password.
 
-.. important::
-  If you previously had access to Discovery, but you are now working with a different PI,
-  submit a `ServiceNow Research Computing Access Request form <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c>`_
-  and enter the name of your current PI in the Sponsor field. This will link your
-  account to your current PI. This is important to help expedite the process for updating your account
-  with any of your current PI's resources on Discovery, such as shared storage or a private partition.
+.. sidebar:: Valid NU Credentials
+
+   Access to Discovery is limited to people affiliated with Northeastern who have a valid Northeastern username and password. Research Computing is not able to create or renew Northeastern accounts. You must work with your sponsor to obtain or update a valid Northeastern username and password.
 
 **To request an account, follow these steps:**
 
@@ -25,6 +22,13 @@ work with your sponsor to get a Northeastern username and password.
 Your request can take up to 24 hours to process after it has been approved by your sponsor (see Sponsor Approval Process below). You will receive a confirmation email when your access has been granted.
 After you have access, if you are not familiar with using Discovery, high performance computing, or Linux, you should take one of our training courses.
 See the `Research Computing website <https://rc.northeastern.edu/support/training/>`_ for more information on our training and services.
+
+.. important::
+  If you previously had access to Discovery, but you are now working with a different PI,
+  submit a `ServiceNow Research Computing Access Request form <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c>`_
+  and enter the name of your current PI in the Sponsor field. This will link your
+  account to your current PI. This is important to help expedite the process for updating your account
+  with any of your current PI's resources on Discovery, such as shared storage or a private partition.
 
 .. _instructor_access:
 

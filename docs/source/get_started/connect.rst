@@ -24,6 +24,10 @@ that you use to connect to Discovery using SSH.
 
 You are now connected to Discovery at a login node.
 
+.. tip::
+   If you used the -Y option to enable x11 forwarding, you can test to see if it is working by typing ``xeyes``. This will run a small program that makes
+   a pair of eyes appear to follow your cursor. 
+
 Passwordless ssh
 +++++++++++++++++
 If you will be using x11 forwarding, you need to setup passwordless ssh to ensure that your application will launch without any issues. You also
@@ -74,3 +78,5 @@ After you are connected, you can run jobs either in interactive mode with srun o
 To load and run software, see :ref:`using_module` and :ref:`installing_software`.
 
 To find out more about the hardware and partitions on Discovery, see :ref:`hardware_overview` and :ref:`partition_names`.
+
+To watch an introductory training video, go to `Northeastern's LinkedIn Learning page <https://www.linkedin.com/checkpoint/enterprise/login/74653650?pathWildcard=74653650&application=learning&redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fcontent%2F1139340%3Fu%3D74653650>`_.

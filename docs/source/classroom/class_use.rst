@@ -18,16 +18,28 @@ There are several ways you can use Discovery in your classroom. You class can us
 specific software packages and working environments, as well as learn how to utilize high performance computing (HPC) resources for
 large and complex data processing, such as machine learning, AI and molecular simulations and more.
 
+**How do I get my class access to Discovery?**
+
+You fill out a `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ ticket. The form requests you to submit a list of your students' names and emails. We will create accounts on Discovery for them.
+Follow the steps in the article `How to Download a List of Student Email Addresses from Canvas <https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981>`_ to get a list of your students' emails.
+If your class roster is not complete, you can attach a preliminary list to the ticket, and then follow up with us on the same ticket with an updated roster when the add/drop period is over.
+
+**Is there any training on Discovery for my class?**
+
+Yes, we can provide in-classroom training, either in person or in an online webinar format, for your class on using Discovery. We can customize it to
+focus on the resources you will be using with them for the class. Please use the `Research Computing Training Request <https://bit.ly/NURC-Training>`_ ticket
+to provide us with information about your class.
+
 **Do my students have to learn Linux to work with Discovery?**
 
 Depending on your class assignments, many students can work with the Open onDemand web portal, which
 does not require any knowledge of Linux to use. In cases where you want them to work on the command line,
-they should have a basic understanding of Linux commands. Please see the question "Is there any training on Discovery for my class" below if
+they should have a basic understanding of Linux commands. Please see the question "Is there any training on Discovery for my class" above if
 you would like us to provide your class with a basic training course prior to using Discovery.
 
 **What software is available to use with my class on Discovery?**
 
-There are many software packages available, including popular software apps such as Jupyter Notebook, Rstudio, and Matlab.
+There are many software packages available, including popular software apps such as Jupyter Notebook, RStudio, and MATLAB.
 If you have an account on Discovery, you can see the list of available software by using the ``module avail`` command. See :ref:`using_module` for more information.
 Students have access to all of the modules on Discovery. They can also use the interactive apps available on Open onDemand. See :ref:`using_ood` for more information.
 We can also install additional modules and libraries specifically for your class as needed.
@@ -56,12 +68,6 @@ To request additional software (instructors only):
    You and your students can install software locally to your PATH on Discovery, which may be a better option in some cases,
    such as installing multiple conda environments. See :ref:`installing_software` for more information.
 
-**How do I get my class access to Discovery?**
-
-You fill out a `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ ticket. The form requests you to submit a list of your students' names and emails. We will create accounts on Discovery for them.
-Follow the steps in the article `How to Download a List of Student Email Addresses from Canvas <https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981>`_ to get a list of your students' emails.
-If your class roster is not complete, you can attach a preliminary list to the ticket, and then follow up with us on the same ticket with an updated roster when the add/drop period is over.
-
 **I just need my class to access Open onDemand. How do I request that?**
 
 Open onDemand is a web portal that lets you access the resources on Discovery through an easy-to-navigate web browser interface. You request course access the same way you would to get access to
@@ -78,12 +84,6 @@ expected use, we can always increase your reservation. But, if a reservation is 
 need for the requested resources, and adjust the reservation accordingly. We understand that sometimes it is difficult to determine exactly
 what your resource needs will be, but we do need to keep a reservation to a reasonable limit so that we keep the shared resources available to
 all users.
-
-**Is there any training on Discovery for my class?**
-
-Yes, we can provide in-classroom training, either in person or in an online webinar format, for your class on using Discovery. We can customize it to
-focus on the resources you will be using with them for the class. Please use the `Research Computing Training Request <https://bit.ly/NURC-Training>`_ ticket
-to provide us with information about your class.
 
 **How long do my students have access to Discovery?**
 

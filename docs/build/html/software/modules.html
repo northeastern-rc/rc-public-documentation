@@ -102,6 +102,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using Module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-commands">Module commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-example">Module example</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
@@ -233,10 +234,23 @@ For example, <code class="docutils literal notranslate"><span class="pre">which<
 <td><p>Remove a single software package from your environment</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">purge</span></code></p></td>
-<td><p>Removes all of the loaded software packages from your environment</p></td>
+<td><p>Removes all of the loaded software packages from your environment.</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">purge</span></code> will purge all modules from your environment, including the default module <code class="docutils literal notranslate"><span class="pre">discovery/2019-02-21</span></code>.
+This module contains the http proxy needed for nodes to have internet access.
+If you accidentally purge this module, it will be automatically reloaded the next time you log out and
+log back in again. You can also load it manually if you have purged it by using the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code> command.</p>
+</div>
+</div>
+<div class="section" id="module-example">
+<h2>Module example<a class="headerlink" href="#module-example" title="Permalink to this headline">¶</a></h2>
+<p>In the figure below, the software module stata/15 was loaded and then unloaded. After loading and unloading, module list was used
+to check that the STATA was loaded and unloaded.</p>
+<img alt="../_images/moduleload.jpg" src="../_images/moduleload.jpg" />
 </div>
 </div>
 

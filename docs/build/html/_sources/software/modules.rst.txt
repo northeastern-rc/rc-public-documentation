@@ -42,4 +42,17 @@ The following are common module commands that are useful for interacting with so
    * - ``module unload <module name>``
      - Remove a single software package from your environment
    * - ``module purge``
-     - Removes all of the loaded software packages from your environment
+     - Removes all of the loaded software packages from your environment.
+
+.. caution::
+   Using ``module purge`` will purge all modules from your environment, including the default module ``discovery/2019-02-21``.
+   This module contains the http proxy needed for nodes to have internet access.
+   If you accidentally purge this module, it will be automatically reloaded the next time you log out and
+   log back in again. You can also load it manually if you have purged it by using the ``module load`` command.
+
+Module example
+===============
+In the figure below, the software module stata/15 was loaded and then unloaded. After loading and unloading, module list was used
+to check that the STATA was loaded and unloaded.
+
+.. image:: /images/moduleload.jpg
