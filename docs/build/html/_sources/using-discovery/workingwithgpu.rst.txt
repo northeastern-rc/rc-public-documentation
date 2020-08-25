@@ -37,6 +37,10 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
     - 24 nodes with 4 GPUs each
     - Intel Gold 6132\@\2.60Ghz
     - 187GB
+  * - T4
+    - 2 nodes with 4 GPUs each
+    - Intel Gold 6132\@\2.60Ghz
+    - 187GB
 
 These GPUs are available within two partitions, named ``gpu`` and ``multigpu``. Note that partitions on Discovery are not physical partitions, they  are virtual partitions.
 The differences between the two partitions are the number of GPUs that you can request per job, as well as the time
@@ -103,7 +107,7 @@ You can add a specific type of GPU to the ``--gres=`` option (with either ``srun
 
   --gres=gpu:k40m:1
 
-Note that specifying one type of GPU could result in a longer wait time for that specific resource.
+Note that specifying one type of GPU could result in a longer wait time for that specific resource. For a list of GPU types, refer to the GPU Types column in the table at the top of this page. 
 
 Using CUDA
 ===========

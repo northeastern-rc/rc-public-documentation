@@ -241,6 +241,11 @@
 <td><p>Intel Gold 6132&#64;2.60Ghz</p></td>
 <td><p>187GB</p></td>
 </tr>
+<tr class="row-even"><td><p>T4</p></td>
+<td><p>2 nodes with 4 GPUs each</p></td>
+<td><p>Intel Gold 6132&#64;2.60Ghz</p></td>
+<td><p>187GB</p></td>
+</tr>
 </tbody>
 </table>
 <p>These GPUs are available within two partitions, named <code class="docutils literal notranslate"><span class="pre">gpu</span></code> and <code class="docutils literal notranslate"><span class="pre">multigpu</span></code>. Note that partitions on Discovery are not physical partitions, they  are virtual partitions.
@@ -318,7 +323,7 @@ or your request will fail.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">gres</span><span class="o">=</span><span class="n">gpu</span><span class="p">:</span><span class="n">k40m</span><span class="p">:</span><span class="mi">1</span>
 </pre></div>
 </div>
-<p>Note that specifying one type of GPU could result in a longer wait time for that specific resource.</p>
+<p>Note that specifying one type of GPU could result in a longer wait time for that specific resource. For a list of GPU types, refer to the GPU Types column in the table at the top of this page.</p>
 </div>
 </div>
 <div class="section" id="using-cuda">
