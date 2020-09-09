@@ -4,6 +4,12 @@ Connecting to Discovery
 You connect to Discovery using a `secure shell <https://www.ssh.com/ssh/protocol/>`_ program and initiate an SSH session to
 log into Discovery. Mac and Windows have slightly different procedures for connecting, as detailed below.
 
+.. 2FA Authentication with DUO
+.. ============================
+.. When you connect to Discovery you are required to complete two-factor authentication (2FA) using the app Duo. All Northeastern staff, faculty, and students
+.. should already have Duo, as it is used with many other online campus resources, such as Canvas and myNortheastern. To learn more about using Duo,
+.. go to `Northeastern's 2FA informational website <https://get2fa.northeastern.edu/>`_.
+
 Mac
 ===
 Mac computers come with a Secure Shell (SSH) program called `Terminal <https://support.apple.com/guide/terminal/welcome/mac>`_
@@ -26,7 +32,7 @@ You are now connected to Discovery at a login node.
 
 .. tip::
    If you used the -Y option to enable x11 forwarding, you can test to see if it is working by typing ``xeyes``. This will run a small program that makes
-   a pair of eyes appear to follow your cursor. 
+   a pair of eyes appear to follow your cursor.
 
 Passwordless ssh
 +++++++++++++++++

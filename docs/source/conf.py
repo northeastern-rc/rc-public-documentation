@@ -29,9 +29,7 @@ release = '0.0.3'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    'sphinx_markdown_tables',
-]
+extensions = ['sphinx_markdown_tables',]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -51,16 +49,10 @@ html_theme = 'sphinx_rtd_theme'
 
 #add logo to the upper left in the help system
 html_logo = 'images/NU_logo_small.png'
-html_theme_options = {
-    'logo_only': True
-}
+html_theme_options = {'logo_only': True}
 
-# These folders are copied to the documentation's HTML output
-html_static_path = ['_static']
-
-# These paths are either relative to html_static_path
-# or fully qualified paths (eg. https://...)
-html_css_files = ['custom.css']
+# custom css file
+html_css_files = ['css/custom.css']
 
 #If true, “(C) Copyright …” is shown in the HTML footer. Default is True.
 html_show_copyright = True

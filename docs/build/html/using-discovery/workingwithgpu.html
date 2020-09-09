@@ -33,7 +33,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Transferring Data" href="transferringdata.html" />
@@ -305,7 +305,7 @@ All requests are evaluated by members of the RC team, and multigpu requests are 
 <div class="section" id="requesting-gpus-with-srun-or-sbatch">
 <h2>Requesting GPUs with <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code><a class="headerlink" href="#requesting-gpus-with-srun-or-sbatch" title="Permalink to this headline">¶</a></h2>
 <p>Use <code class="docutils literal notranslate"><span class="pre">srun</span></code> for interactive mode and <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> for batch mode.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">srun</span></code> example below is requesting 1 node and 1 GPU with 1GB of memory in the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> partition. Note that on the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> partition, you cannot request more than 1 GPU (<code class="docutils literal notranslate"><span class="pre">--gres=gpu:1</span></code>)
+<p>The <code class="docutils literal notranslate"><span class="pre">srun</span></code> example below is requesting 1 node and 1 GPU with 1GB of memory in the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> partition. You must use the <code class="docutils literal notranslate"><span class="pre">--gres=</span></code> option to request a gpu. Note that on the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> partition, you cannot request more than 1 GPU (<code class="docutils literal notranslate"><span class="pre">--gres=gpu:1</span></code>)
 or your request will fail.</p>
 <p><code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">--partition=gpu</span> <span class="pre">--nodes=1</span> <span class="pre">--pty</span> <span class="pre">--export=All</span> <span class="pre">--gres=gpu:1</span> <span class="pre">--mem=1G</span> <span class="pre">--time=00:30:00</span> <span class="pre">/bin/bash</span></code></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> example below is the similar to the <code class="docutils literal notranslate"><span class="pre">srun</span></code> example above, except for giving the job a name and directing the output to a file:</p>
@@ -320,7 +320,7 @@ or your request will fail.</p>
 </div>
 <div class="section" id="specifying-a-gpu-type">
 <h3>Specifying a GPU type<a class="headerlink" href="#specifying-a-gpu-type" title="Permalink to this headline">¶</a></h3>
-<p>You can add a specific type of GPU to the <code class="docutils literal notranslate"><span class="pre">--gres=</span></code> option (with either <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>). For example:</p>
+<p>You can add a specific type of GPU to the <code class="docutils literal notranslate"><span class="pre">--gres=</span></code> option (with either <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>). The following example is requesting one k40m gpu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">gres</span><span class="o">=</span><span class="n">gpu</span><span class="p">:</span><span class="n">k40m</span><span class="p">:</span><span class="mi">1</span>
 </pre></div>
 </div>
@@ -329,11 +329,12 @@ or your request will fail.</p>
 </div>
 <div class="section" id="using-cuda">
 <h2>Using CUDA<a class="headerlink" href="#using-cuda" title="Permalink to this headline">¶</a></h2>
-<p>Currently, there are four versions of CUDA on Discovery:</p>
+<p>There are several versions of CUDA on Discovery, as listed below.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cuda</span><span class="o">/</span><span class="mf">9.0</span>
 <span class="n">cuda</span><span class="o">/</span><span class="mf">9.2</span>
 <span class="n">cuda</span><span class="o">/</span><span class="mf">10.0</span>
 <span class="n">cuda</span><span class="o">/</span><span class="mf">10.2</span>
+<span class="n">cuda</span><span class="o">/</span><span class="mf">11.0</span>
 </pre></div>
 </div>
 <p>You can always use the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> command to check for the latest software versions on Discovery as well.</p>

@@ -86,7 +86,7 @@ Requesting GPUs with ``srun`` or ``sbatch``
 ===========================================
 Use ``srun`` for interactive mode and ``sbatch`` for batch mode.
 
-The ``srun`` example below is requesting 1 node and 1 GPU with 1GB of memory in the ``gpu`` partition. Note that on the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``)
+The ``srun`` example below is requesting 1 node and 1 GPU with 1GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu. Note that on the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``)
 or your request will fail.
 
 ``srun --partition=gpu --nodes=1 --pty --export=All --gres=gpu:1 --mem=1G --time=00:30:00 /bin/bash``
@@ -103,20 +103,21 @@ The ``sbatch`` example below is the similar to the ``srun`` example above, excep
 
 Specifying a GPU type
 +++++++++++++++++++++
-You can add a specific type of GPU to the ``--gres=`` option (with either ``srun`` or ``sbatch``). For example::
+You can add a specific type of GPU to the ``--gres=`` option (with either ``srun`` or ``sbatch``). The following example is requesting one k40m gpu::
 
   --gres=gpu:k40m:1
 
-Note that specifying one type of GPU could result in a longer wait time for that specific resource. For a list of GPU types, refer to the GPU Types column in the table at the top of this page. 
+Note that specifying one type of GPU could result in a longer wait time for that specific resource. For a list of GPU types, refer to the GPU Types column in the table at the top of this page.
 
 Using CUDA
 ===========
-Currently, there are four versions of CUDA on Discovery::
+There are several versions of CUDA on Discovery, as listed below.::
 
   cuda/9.0
   cuda/9.2
   cuda/10.0
   cuda/10.2
+  cuda/11.0
 
 You can always use the ``module avail`` command to check for the latest software versions on Discovery as well.
 
