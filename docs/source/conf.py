@@ -52,7 +52,7 @@ html_logo = 'images/NU_logo_small.png'
 html_theme_options = {'logo_only': True}
 
 # custom css file
-html_css_files = ['css/custom.css']
+html_css_files = ['_static/custom.css']
 
 #If true, “(C) Copyright …” is shown in the HTML footer. Default is True.
 html_show_copyright = True
