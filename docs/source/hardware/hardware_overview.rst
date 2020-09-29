@@ -65,7 +65,7 @@ See the tables below for details on CPUs and GPUs that are available on Discover
     - 12 nodes with 4 GPUs each
     - E5-2680v4\@\2.40GHz
     - 512GB
-  * - v100
+  * - v100-pcie
     - 4 nodes with 2 GPUs each
     - AMD EPYC 7351\@\2.60GHz
     - 480GB
@@ -73,3 +73,5 @@ See the tables below for details on CPUs and GPUs that are available on Discover
     - 24 nodes with 4 GPUs each
     - Intel Gold 6132\@\2.60Ghz
     - 187GB
+
+See :ref:`working_gpus` for more information on using GPUs with your jobs.    

@@ -29,7 +29,7 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
     - 12 nodes with 4 GPUs each
     - E5-2680v4\@\2.40GHz
     - 512GB
-  * - v100
+  * - v100-pcie
     - 4 nodes with 2 GPUs each
     - AMD EPYC 7351\@\2.60GHz
     - 480GB

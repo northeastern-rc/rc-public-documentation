@@ -1,6 +1,6 @@
 .. Northeastern University Research Computing documentation master file, created by
    sphinx-quickstart on Thu Jul 25 17:26:00 2019.
-   
+
 
 Northeastern University Research Computing
 ===========================================

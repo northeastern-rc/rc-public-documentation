@@ -12,7 +12,7 @@ See :ref:`using_globus` for more information.
 
    The /scratch directory is for temporary file storage only. It is not backed up.
    If you have directed your output files to /scratch, you should transfer your data from /scratch
-   to another location as soon as possible.
+   to another location as soon as possible. See :ref: `discovery_storage` for more information.
 
 Data transfer node using Mac
 ============================

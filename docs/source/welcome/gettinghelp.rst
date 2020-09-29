@@ -1,6 +1,6 @@
-************
+*************
 Getting Help
-************
+*************
 
 You can get help from the Research Computing team by sending an email,
 submitting a ticket on ServiceNow, or making an appointment to meet with one of
@@ -18,7 +18,7 @@ Submit a ticket
 ===============
 
 You can submit a ticket on ServiceNow by selecting from the `Research Computing ServiceNow catalog <https://northeastern.service-now.com/nav_to.do?uri=%2Fcatalog_home.do%3Fv%3D1%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dcatalog_default>`_.
-You might need to sign in with your myNortheastern username and password to view the ServiceNow catalog page.
+You might need to sign in with your Northeastern username and password to view the ServiceNow catalog page.
 
 You can also use the short URLs below to go directly to a ticket with the service that you need:
 
@@ -42,7 +42,7 @@ Consultations are available to any Northeastern student, faculty, or staff membe
 provide assistance with installing and using software packages, detailing data storage options, and much more.
 
 We offer scheduled consultation hours most weekdays during normal business hours (9AM to 5PM). Note that we follow the Northeastern University
-holiday schedule, so there are no walk-in hours on holidays or during breaks. All of our consultations are conducted as online
+holiday schedule, so there are no consultation hours on holidays or during breaks. All of our consultations are conducted as online
 meetings through the Teams app.
 
 Use our Bookings page to see our availability and to schedule an appointment https://rc.northeastern.edu/support/consulting/.

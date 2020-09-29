@@ -22,7 +22,7 @@ copyright = '2019-2020, Northeastern University Research Computing'
 author = 'Northeastern University Research Computing'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.3'
+release = '1.0.1'
 
 # -- General configuration ---------------------------------------------------
 
