@@ -16,18 +16,18 @@ a ServiceNow ticket if you need further information.
 
 There are several ways you can use Discovery in your classroom. You class can use Discovery for accessing
 specific software packages and working environments, as well as learn how to utilize high performance computing (HPC) resources for
-large and complex data processing, such as machine learning, AI and molecular simulations and more.
+large and complex data processing, such as machine learning; AI and molecular simulations; and more.
 
 **How do I get my class access to Discovery?**
 
-You fill out a `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ ticket. The form requests you to submit a list of your students' names and emails. We will create accounts on Discovery for them.
+You fill out a `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ ticket. The form asks you to submit a list of your students' names and emails. We will create accounts on Discovery for them.
 Follow the steps in the article `How to Download a List of Student Email Addresses from Canvas <https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981>`_ to get a list of your students' emails.
 If your class roster is not complete, you can attach a preliminary list to the ticket, and then follow up with us on the same ticket with an updated roster when the add/drop period is over.
 
 **Is there any training on Discovery for my class?**
 
-Yes, we can provide in-classroom training, either in person or in an online webinar format, for your class on using Discovery. We can customize it to
-focus on the resources you will be using with them for the class. Please use the `Research Computing Training Request <https://bit.ly/NURC-Training>`_ ticket
+Yes, currently provide online training for your class on using Discovery. In the past, we have also given in-person presentations during a class period on the Boston campus.
+We hope to provide in-person training again in 2021. We can customize the training to focus on the resources you will be using with them for the class. Please use the `Research Computing Training Request <https://bit.ly/NURC-Training>`_ ticket
 to provide us with information about your class.
 
 **Do my students have to learn Linux to work with Discovery?**
@@ -44,7 +44,7 @@ If you have an account on Discovery, you can see the list of available software 
 Students have access to all of the modules on Discovery. They can also use the interactive apps available on Open onDemand. See :ref:`using_ood` for more information.
 We can also install additional modules and libraries specifically for your class as needed.
 
-**My class  needs access to a specific software application that I do not see installed on Discovery or Open onDemand. What should I do?**
+**My class  needs access to a specific software application that I do not see installed on Discovery or Open onDemand (OOD). What should I do?**
 
 If you class requires software not currently installed on Discovery or OOD, follow the procedure below to request that software be installed on Discovery.
 You must be a professor or instructor to initiate this request. Students in your class should not make this request.
@@ -54,7 +54,7 @@ so having all requests go through the professor or instructor reduces this overl
 
 To request additional software (instructors only):
 
-1.	Go to the `Discovery Cluster Software Request <https://bit.ly/NURC-Software>`_. If prompted, sign into ServiceNow with your myNortheastern username and password to access the form
+1.	Go to the `Discovery Cluster Software Request <https://bit.ly/NURC-Software>`_. If prompted, sign in to ServiceNow with your Northeastern username and password to access the form.
 2.	In the Sponsor’s Name field, enter your name.
 3.	Make sure to follow the instructions on the form regarding either providing the URL of the open source software library or uploading the installation package in your home directory if it requires you to register it first. The request will not be completed without this information.
 4.	Select the acknowledgement checkbox, and click **Submit**.
@@ -71,7 +71,7 @@ To request additional software (instructors only):
 **I just need my class to access Open onDemand. How do I request that?**
 
 Open onDemand is a web portal that lets you access the resources on Discovery through an easy-to-navigate web browser interface. You request course access the same way you would to get access to
-Discovery, as outlined in the question above. Please specify that you'd like your course to be on Open onDemand for your students, in
+Discovery, as outlined above. Please specify that you'd like your course to be on Open onDemand for your students, in
 addition to the information we request above.
 
 **I'd like my class to use specific resources on Discovery. Can you create a reservation on Discovery for my class?**

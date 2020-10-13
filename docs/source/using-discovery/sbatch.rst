@@ -117,12 +117,11 @@ Using Arrays
 =============
 
 Using a job array can often help in situations where you need to submit multiple similar jobs.
-To use an array with your jobs, in your sbatch script, use the ``array=`` option.
+To use an array with your jobs, in your ``sbatch`` script, use the ``array=`` option.
 
 For example, if you want to run a 10 job array, one job at a time, you would add the following
 line to your sbatch script:
 
 ``#SBATCH --array=1-10%1``
 
-Go `here <https://slurm.schedmd.com/job_array.html>`_ for more information about using the
-``array=`` option.
+For more information on this command, go to the  `Slurm documentation page <https://slurm.schedmd.com/job_array.html>`_.

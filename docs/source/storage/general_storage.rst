@@ -28,11 +28,11 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
     who need to have a long-term storage option for their data.
   - **QUOTA:** Up to 25TB per research group.
 
-**NAME:** ``/secure``
-  - **DESCRIPTION:** Secure data storage is restricted to data that must be stored in a secure,
-    encrypted server, such as personally identifiable information (PII) data.
-    You should first set up a consultation with a Research Computing staff member using the link above to
-    determine if your data requires secure storage before requesting it.
+..**NAME:** ``/secure``
+..  - **DESCRIPTION:** Secure data storage is restricted to data that must be stored in a secure,
+..    encrypted server, such as personally identifiable information (PII) data.
+..    You should first set up a consultation with a Research Computing staff member using the link above to
+..    determine if your data requires secure storage before requesting it.
 
 .. important::
    If you are not connected to the campus internet, you must be connected to
