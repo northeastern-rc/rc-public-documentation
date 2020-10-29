@@ -75,8 +75,8 @@ limit on each job. Both partitions give you access to all of the above GPU types
      - 50/100
      - N/A
      - N/A
-     - 8
-     - 8
+     - 12
+     - 12
 
 Anyone with an account on Discovery can use the ``gpu`` partition. Using ```multigpu`` requires an application process, which includes documenting
 the need for using ``multigpu``. To request temporary access to multigpu for testing or to submit an application for full access, you need to fill out and submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_.
