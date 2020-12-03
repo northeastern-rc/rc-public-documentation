@@ -11,6 +11,9 @@ applications is one hour. It is recommended that you keep the default. If you as
 hour, you will need to wait for Slurm to allocate a resource that can run for your requested time,
 which could take a long time to be allocated, depending on how busy the cluster is.
 
+If you are attempting to run a job on one of the interactive apps on OOD that launches a graphical user interface (GUI), such as Maestro, you might get an error if your passwordless ssh is not set up
+correctly. See :ref:`using_x11` for tips and troubleshooting information opening applications that use X11 forwarding.
+
 Available Apps (June 2020)
 ==========================
 

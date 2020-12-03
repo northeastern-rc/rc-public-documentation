@@ -104,6 +104,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using Module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-commands">Module commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-example">Module example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-software-applications-with-x11-forwarding">Using software applications with X11 Forwarding</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
@@ -252,6 +253,12 @@ log back in again. You can also load it manually if you have purged it by using 
 <p>In the figure below, the software module stata/15 was loaded and then unloaded. After loading and unloading, module list was used
 to check that the STATA was loaded and unloaded.</p>
 <img alt="../_images/moduleload.jpg" src="../_images/moduleload.jpg" />
+</div>
+<div class="section" id="using-software-applications-with-x11-forwarding">
+<h2>Using software applications with X11 Forwarding<a class="headerlink" href="#using-software-applications-with-x11-forwarding" title="Permalink to this headline">¶</a></h2>
+<p>If you are attempting to open a GUI-based software application that  uses X11 forwarding to display, such as MATLAB or Maestro, and
+you get an error such as <code class="docutils literal notranslate"><span class="pre">Error:</span> <span class="pre">unable</span> <span class="pre">to</span> <span class="pre">open</span> <span class="pre">display</span> <span class="pre">localhost:19.0</span></code>, this is most likely due to an issue with passwordless SSH.
+See <a class="reference internal" href="../get_started/connect.html#using-x11"><span class="std std-ref">Using X11</span></a> for tips and troubleshooting information opening applications that use X11 forwarding.</p>
 </div>
 </div>
 

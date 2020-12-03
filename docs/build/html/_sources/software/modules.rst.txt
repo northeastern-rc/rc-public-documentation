@@ -56,3 +56,9 @@ In the figure below, the software module stata/15 was loaded and then unloaded. 
 to check that the STATA was loaded and unloaded.
 
 .. image:: /images/moduleload.jpg
+
+Using software applications with X11 Forwarding
+================================================
+If you are attempting to open a GUI-based software application that  uses X11 forwarding to display, such as MATLAB or Maestro, and
+you get an error such as ``Error: unable to open display localhost:19.0``, this is most likely due to an issue with passwordless SSH.
+See :ref:`using_x11` for tips and troubleshooting information opening applications that use X11 forwarding.
