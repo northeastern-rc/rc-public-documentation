@@ -15,7 +15,7 @@ a ServiceNow ticket if you need further information.
 **How can I use Discovery with my class?**
 
 There are several ways you can use Discovery in your classroom. You class can use Discovery for accessing
-specific software packages and working environments, as well as learn how to utilize high performance computing (HPC) resources for
+specific software packages and working environments, as well as learning how to utilize high performance computing (HPC) resources for
 large and complex data processing, such as machine learning; AI and molecular simulations; and more.
 
 **How do I get my class access to Discovery?**
@@ -26,7 +26,7 @@ If your class roster is not complete, you can attach a preliminary list to the t
 
 **Is there any training on Discovery for my class?**
 
-Yes, currently provide online training for your class on using Discovery. In the past, we have also given in-person presentations during a class period on the Boston campus.
+Yes, we currently provide online training for your class on using Discovery. In the past, we have also given in-person presentations during a class period on the Boston campus.
 We hope to provide in-person training again in 2021. We can customize the training to focus on the resources you will be using with them for the class. Please use the `Research Computing Training Request <https://bit.ly/NURC-Training>`_ ticket
 to provide us with information about your class.
 
@@ -44,7 +44,7 @@ If you have an account on Discovery, you can see the list of available software 
 Students have access to all of the modules on Discovery. They can also use the interactive apps available on Open onDemand. See :ref:`using_ood` for more information.
 We can also install additional modules and libraries specifically for your class as needed.
 
-**My class  needs access to a specific software application that I do not see installed on Discovery or Open onDemand (OOD). What should I do?**
+**My class needs access to a specific software application that I do not see installed on Discovery or Open onDemand (OOD). What should I do?**
 
 If you class requires software not currently installed on Discovery or OOD, follow the procedure below to request that software be installed on Discovery.
 You must be a professor or instructor to initiate this request. Students in your class should not make this request.
@@ -87,8 +87,7 @@ all users.
 
 **How long do my students have access to Discovery?**
 
-Students will have access to Discovery for the full duration of the class, and then for one term following the end of the class.
-If they want to continue to have access to Discovery after that time period, they'll need to request an individual account.
+Students will have access to Discovery for the full duration of the class. If they want to continue to have access to Discovery after that time period, they'll need to request an individual account.
 
 **How do I get an account on Discovery?**
 

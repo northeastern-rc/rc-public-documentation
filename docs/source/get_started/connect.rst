@@ -69,7 +69,7 @@ is turned on by default. If you use the Terminal program on Mac, you'll need to 
 
 Passwordless ssh
 +++++++++++++++++
-You need to setup passwordless ssh to ensure that GUI-based application will launch without any issues. You also
+You need to setup passwordless ssh to ensure that GUI-based applications will launch without any issues. You also
 need to make sure that your keys are added to the authorized.key file. This needs to be done anytime you regenerate your keys. If you're having
 an issue with opening an application that need X11 forwarding, such as MATLAB or Schrodinger, and you recently regenerated your keys, make sure to
 add your keys to the authorized.key file.

@@ -6,18 +6,18 @@ Using Globus
 
 Globus is a data management system that you can use to transfer and share files.
 Northeastern has a subscription to Globus, and you can setup a Globus account with
-your myNortheastern credentials. If you have another account, either personal or
+your Northeastern credentials. If you have another account, either personal or
 through another institution, you can also link your accounts.
 
 Globus Account Set Up
 ======================
 
-Use the following instructions to setup an account with Globus using your myNortheastern credentials.
+Use the following instructions to setup an account with Globus using your Northeastern credentials.
 
 1. Go to `Globus <https://www.globus.org>`_.
 2. Click **Log In**.
 3. From the Use your existing organizational login, select **Northeastern University**, and then click **Continue**.
-4. Enter your myNortheastern username and password.
+4. Enter your Northeastern username and password.
 5. If you do not have a previous Globus account, click **Continue**. If you have a previous account, click Link to existing account.
 6. Check the agreement checkbox, and then click **Continue**.
 7. Click **Allow** to give Globus permissions to access your files.
@@ -45,7 +45,7 @@ as opposed to one with your NUID, can make it easier for you to remember your lo
 6.	Enter the verification code that Globus sends to your email.
 7.	Click **Link to an existing account** to link this new account with your primary account.
 8.	Select Northeastern University from the dropdown box, and click **Continue** to be taken to the Northeastern University single sign on page.
-9.  Enter your myNortheastern username and password.
+9.  Enter your Northeastern username and password.
 
 You should now be able to see your two accounts linked in the Account section on the `Globus web app <https://app.globus.org/account/identities>`_.
 
@@ -72,7 +72,7 @@ Accept the defaults on the install wizard. After the install completes, you can 
 Working with Globus
 ===================
 After you have an account and set up a personal endpoint using Globus Connect personal, you can perform basic file management tasks using the Globus File Manager interface
-such as transferring files, renaming files, and creating new folders. You can also download and use the Globus Command Line Interface (CLI) tool. GLobus also has extensive documentation and
+such as transferring files, renaming files, and creating new folders. You can also download and use the Globus Command Line Interface (CLI) tool. Globus also has extensive documentation and
 training files for you to practice with.
 
 Northeastern endpoint
