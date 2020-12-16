@@ -78,9 +78,10 @@ add your keys to the authorized.key file.
    Errors that you can see on both Mac and Windows when launching a GUI-based program include the following:
 
    ``Error: unable to open display localhost:19.0``
+
    ``Launch failed: non-zero return code``
 
-  If you are getting these types of errors, follow the steps below to set up passwordless ssh. If you are on a Mac, complete steps 1 through 12.
+  If you are getting these types of errors, follow the steps below to set up passwordless ssh. If you are on a Mac, complete all of the steps.
   If you are on Windows, sign in to Discovery using MobaXterm, then follow the procedure below starting at **step 9**.
 
 
