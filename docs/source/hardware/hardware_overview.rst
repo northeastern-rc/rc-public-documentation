@@ -9,7 +9,7 @@ provides 3 PB of available storage on a high-performance GPFS parallel filesyste
 Compute nodes are connected with either 10 GbE or a high-performance HDR100 InfiniBand (IB) interconnect
 running at 100 Gbps, supporting all types and scales of computational workloads.
 Full HDR IB connections (200 Gbps) are also available, if needed.
-See the tables below for details on CPUs and GPUs that are available on Discovery.
+See the tables below for details on CPUs and GPUs that are available on Discovery. See :ref:`partition_names` for more information about the partitions on Discovery.
 
 .. list-table::
   :widths: 40 10 10 10 10
@@ -74,4 +74,4 @@ See the tables below for details on CPUs and GPUs that are available on Discover
     - Intel Gold 6132\@\2.60Ghz
     - 187GB
 
-See :ref:`working_gpus` for more information on using GPUs with your jobs.    
+See :ref:`working_gpus` for more information on using GPUs with your jobs.

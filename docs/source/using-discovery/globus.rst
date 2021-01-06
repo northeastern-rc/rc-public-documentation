@@ -9,6 +9,10 @@ Northeastern has a subscription to Globus, and you can setup a Globus account wi
 your Northeastern credentials. If you have another account, either personal or
 through another institution, you can also link your accounts.
 
+To use Globus, you must first set up an account as detailed below. Then, you must install Globus Connect to create an endpoint on your local computer, as also detailed below.
+After you have completed these two initial setup procedures, you can then use the Globus web app to perform file transfers. See :ref: `using_nuendpoint` for a walkthrough of using the Northeastern endpoint on Globus.
+
+
 Globus Account Set Up
 ======================
 
@@ -75,8 +79,9 @@ After you have an account and set up a personal endpoint using Globus Connect pe
 such as transferring files, renaming files, and creating new folders. You can also download and use the Globus Command Line Interface (CLI) tool. Globus also has extensive documentation and
 training files for you to practice with.
 
-Northeastern endpoint
-+++++++++++++++++++++
+.. _using_nuendpoint:
+Using the Northeastern endpoint
++++++++++++++++++++++++++++++++
 To access the Northeastern endpoint on Globus, on the Globus web app, click **File Manager**, then in the **Collection** text box, type Northeastern. The endpoints owned by Northeastern University display in the collection area.
 The general Northeastern endpoint is ``northeastern#discovery``.
 Using the File Manager interface, you can easily change directories, switch the direction of transferring to and from, and specify options such as transferring only new or changed files. Below is a procedure for transferring files from Discovery to your
