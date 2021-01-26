@@ -47,3 +47,9 @@ meetings through the Teams app.
 
 Use our Bookings page to see our availability and to schedule an appointment https://rc.northeastern.edu/support/consulting/.
 You will need to sign in using your /@/northeastern.edu email (for example, a.student/@/northeastern.edu).
+
+Status page
+============
+
+We post important information, such as power outages and maintenance windows, to the ITS Systems Status page: https://northeastern.statuspage.io/
+You can subscribe to this page to receive email updates on the status of ITS systems. 

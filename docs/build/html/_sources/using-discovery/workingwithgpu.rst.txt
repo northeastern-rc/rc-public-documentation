@@ -44,7 +44,7 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
 
 These GPUs are available within two partitions, named ``gpu`` and ``multigpu``. Note that partitions on Discovery are not physical partitions, they  are virtual partitions.
 The differences between the two partitions are the number of GPUs that you can request per job, as well as the time
-limit on each job. Both partitions give you access to all of the above GPU types. See the table below for the differences between the two partitions.
+limit on each job. Both partitions give you access to all of the above GPU types. See the table below for the differences between the two partitions. See :ref:`partition_names` for more information about all of the partitions on Discovery.
 
 .. list-table::
    :widths: 20 20 20 20 20 20 20 20 20
@@ -80,7 +80,7 @@ limit on each job. Both partitions give you access to all of the above GPU types
 
 Anyone with an account on Discovery can use the ``gpu`` partition. Using ```multigpu`` requires an application process, which includes documenting
 the need for using ``multigpu``. To request temporary access to multigpu for testing or to submit an application for full access, you need to fill out and submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_.
-All requests are evaluated by members of the RC team, and multigpu requests are also evaluated by two faculty members. This is to ensure that the resources in this partition will be used appropriately.
+After you submit a request, it is evaluated by members of the RC team. This is to ensure that the resources in this partition will be used appropriately.
 
 Requesting GPUs with ``srun`` or ``sbatch``
 ===========================================
@@ -129,11 +129,11 @@ You should use PyTorch with a conda virtual environment if you need to run the e
 
 The following is an example of using a conda virtual environment with PyTorch. Make sure that you are on a GPU node before loading the environment::
 
-  module load cuda/10.2
+  module load cuda/11.0
   module load anaconda3/3.7
   conda create --name pytorch_env python=3.7 anaconda
   conda activate pytorch_env
-  conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
+  conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
   python -c'import torch; print(torch.cuda.is_available())'
 
 Using TensorFlow

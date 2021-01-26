@@ -251,7 +251,7 @@
 </table>
 <p>These GPUs are available within two partitions, named <code class="docutils literal notranslate"><span class="pre">gpu</span></code> and <code class="docutils literal notranslate"><span class="pre">multigpu</span></code>. Note that partitions on Discovery are not physical partitions, they  are virtual partitions.
 The differences between the two partitions are the number of GPUs that you can request per job, as well as the time
-limit on each job. Both partitions give you access to all of the above GPU types. See the table below for the differences between the two partitions.</p>
+limit on each job. Both partitions give you access to all of the above GPU types. See the table below for the differences between the two partitions. See <a class="reference internal" href="../hardware/partitions.html#partition-names"><span class="std std-ref">Partitions</span></a> for more information about all of the partitions on Discovery.</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 11%" />
@@ -301,7 +301,7 @@ limit on each job. Both partitions give you access to all of the above GPU types
 </table>
 <p>Anyone with an account on Discovery can use the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> partition. Using <code class="docutils literal notranslate"><span class="pre">`multigpu</span></code> requires an application process, which includes documenting
 the need for using <code class="docutils literal notranslate"><span class="pre">multigpu</span></code>. To request temporary access to multigpu for testing or to submit an application for full access, you need to fill out and submit a <a class="reference external" href="https://service.northeastern.edu/tech?id=sc_cat_item&amp;sys_id=0c34d402db0b0010a37cd206ca9619b7">ServiceNow ticket</a>.
-All requests are evaluated by members of the RC team, and multigpu requests are also evaluated by two faculty members. This is to ensure that the resources in this partition will be used appropriately.</p>
+After you submit a request, it is evaluated by members of the RC team. This is to ensure that the resources in this partition will be used appropriately.</p>
 <div class="section" id="requesting-gpus-with-srun-or-sbatch">
 <h2>Requesting GPUs with <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code><a class="headerlink" href="#requesting-gpus-with-srun-or-sbatch" title="Permalink to this headline">¶</a></h2>
 <p>Use <code class="docutils literal notranslate"><span class="pre">srun</span></code> for interactive mode and <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> for batch mode.</p>
@@ -344,11 +344,11 @@ or your request will fail.</p>
 <h2>Using GPUs with PyTorch<a class="headerlink" href="#using-gpus-with-pytorch" title="Permalink to this headline">¶</a></h2>
 <p>You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery.</p>
 <p>The following is an example of using a conda virtual environment with PyTorch. Make sure that you are on a GPU node before loading the environment:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">cuda</span><span class="o">/</span><span class="mf">10.2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">cuda</span><span class="o">/</span><span class="mf">11.0</span>
 <span class="n">module</span> <span class="n">load</span> <span class="n">anaconda3</span><span class="o">/</span><span class="mf">3.7</span>
 <span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">pytorch_env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span> <span class="n">anaconda</span>
 <span class="n">conda</span> <span class="n">activate</span> <span class="n">pytorch_env</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="n">pytorch</span> <span class="n">torchvision</span> <span class="n">cudatoolkit</span><span class="o">=</span><span class="mf">10.2</span> <span class="o">-</span><span class="n">c</span> <span class="n">pytorch</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">pytorch</span> <span class="n">torchvision</span> <span class="n">torchaudio</span> <span class="n">cudatoolkit</span><span class="o">=</span><span class="mf">11.0</span> <span class="o">-</span><span class="n">c</span> <span class="n">pytorch</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">c</span><span class="s1">&#39;import torch; print(torch.cuda.is_available())&#39;</span>
 </pre></div>
 </div>

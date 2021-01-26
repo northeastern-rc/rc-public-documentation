@@ -80,6 +80,7 @@ such as transferring files, renaming files, and creating new folders. You can al
 training files for you to practice with.
 
 .. _using_nuendpoint:
+
 Using the Northeastern endpoint
 +++++++++++++++++++++++++++++++
 To access the Northeastern endpoint on Globus, on the Globus web app, click **File Manager**, then in the **Collection** text box, type Northeastern. The endpoints owned by Northeastern University display in the collection area.
