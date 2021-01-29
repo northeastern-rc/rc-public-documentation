@@ -86,8 +86,9 @@ specified for your job. For more information about running jobs, see :ref:`using
 
 Updated node feature names (February 2021)
 +++++++++++++++++++++++++++++++++++++++++++
-As of February 2021, all previous node feature names will be updated to human-friendly feature names following the
-archspec microarchitecture specification (https://archspec.readthedocs.io/en/latest/index.html). The following table shows the new feature names and
+As of February 2021, all previous CPU node feature names will be updated to human-friendly feature names following the
+archspec microarchitecture specification (https://archspec.readthedocs.io/en/latest/index.html). This update is only to the CPU node feature names.
+GPU node feature names remain unchanged at this time. The following table shows the new feature names and
 their corresponding previous feature names. Note that the previous feature names will be removed from use with your jobs as of February 2021.
 You should update your scripts accordingly in order to continue to use these features with your scripts.
 
