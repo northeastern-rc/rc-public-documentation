@@ -50,11 +50,11 @@ This will check the properties of your profile. You might need to wait a minute 
 Now that you have set up your profile, you can use the default cluster profile you just created (*TestProfile*) with the following commands::
 
      #with parpool
-     parallel.defaultClusterProfile(‘Discovery’)
+     parallel.defaultClusterProfile(‘TestProfile’)
      parpool
 
      #with parcluster
-     c = parcluster(‘Discovery’)
+     c = parcluster(‘TestProfile’)
 
 Using parcluster example
 ========================
