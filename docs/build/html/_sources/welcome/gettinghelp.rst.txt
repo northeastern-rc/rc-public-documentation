@@ -25,7 +25,6 @@ You can also use the short URLs below to go directly to a ticket with the servic
  * Get Assistance with Research Computing https://bit.ly/NURC-Assistance
  * Research Computing Access Request https://bit.ly/NURC-AccessRequest
  * Discovery Cluster Software Request https://bit.ly/NURC-Software
- * Research Computing Training Request https://bit.ly/NURC-Training
  * Research Computing Documentation Request https://bit.ly/NURC-Documentation
  * Discovery Cluster Partition Access https://bit.ly/NURC-PartitionAccess
  * New Storage Space request https://bit.ly/NURC-NewStorage
@@ -52,4 +51,4 @@ Status page
 ============
 
 We post important information, such as power outages and maintenance windows, to the ITS Systems Status page: https://northeastern.statuspage.io/
-You can subscribe to this page to receive email updates on the status of ITS systems. 
+You can subscribe to this page to receive email updates on the status of ITS systems.

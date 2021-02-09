@@ -27,8 +27,8 @@ If your class roster is not complete, you can attach a preliminary list to the t
 **Is there any training on Discovery for my class?**
 
 Yes, we currently provide online training for your class on using Discovery. In the past, we have also given in-person presentations during a class period on the Boston campus.
-We hope to provide in-person training again in 2021. We can customize the training to focus on the resources you will be using with them for the class. Please use the `Research Computing Training Request <https://bit.ly/NURC-Training>`_ ticket
-to provide us with information about your class.
+We hope to provide in-person training again in 2021. We can customize the training to focus on the resources you will be using with them for the class. Email us at rchelp@northeastern.edu and provide us with some details about your class
+and what training you would like us to provide. 
 
 **Do my students have to learn Linux to work with Discovery?**
 

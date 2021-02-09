@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using Slurm &mdash; Northeastern University Research Computing 1.0.1 documentation</title>
+  <title>Using Slurm &mdash; Northeastern University Research Computing 1.0.2 documentation</title>
   
 
   
@@ -111,6 +111,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#viewing-cluster-information">Viewing Cluster Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#submitting-jobs">Submitting Jobs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#monitoring-jobs">Monitoring Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#account-information">Account information</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sbatch.html">Using sbatch</a></li>
@@ -198,6 +199,7 @@ that lets you do the following:</p>
 <li><p>view information about the cluster</p></li>
 <li><p>monitor your jobs</p></li>
 <li><p>schedule your jobs on Discovery</p></li>
+<li><p>view information about your account</p></li>
 </ul>
 <p><a class="reference internal" href="srun.html#using-srun"><span class="std std-ref">Using srun</span></a> and <a class="reference internal" href="sbatch.html#using-sbatch"><span class="std std-ref">Using sbatch</span></a> provide you with a few examples to help get you familiar
 with Slurm and be able to submit basic jobs on Discovery.</p>
@@ -284,6 +286,29 @@ To run a job interactively, use <code class="docutils literal notranslate"><span
 </tbody>
 </table>
 </div>
+<div class="section" id="account-information">
+<h2>Account information<a class="headerlink" href="#account-information" title="Permalink to this headline">¶</a></h2>
+<p>Some Discovery users have more than one Discovery group account associated with their username. For example, a student might be in a class that is using Discovery,
+and also be in a student club that is using Discovery for a club project. In this case, the student would have two group accounts associated with their username.
+When running a job with either <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>, if you have more than one account associated with your username, we recommend that you use the <code class="docutils literal notranslate"><span class="pre">--account=</span></code> flag and specify the account
+that corresponds to the project you are working on. In the example with a student associated with a class and a student club, if the student is on Discovery submitting a job for a project
+for his or her class, set the <code class="docutils literal notranslate"><span class="pre">account=</span></code> flag to the name of the class account. If the student is working on a project for the club, set the <code class="docutils literal notranslate"><span class="pre">account=</span></code> flag to the name of the student club account.</p>
+<p>To find out what account(s) your usesrname is associated with, use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sacctmgr</span> <span class="n">show</span> <span class="n">associations</span> <span class="o">&lt;</span><span class="n">yourusername</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>After you have determined what accounts your username is associated with, if you have more than one account association, you can use the <code class="docutils literal notranslate"><span class="pre">account=</span></code> flag with your usual <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> commands.</p>
+<p>For example, if you are associated with an account named <code class="docutils literal notranslate"><span class="pre">dataclub</span></code> and an account named <code class="docutils literal notranslate"><span class="pre">info7500</span></code>, and you’re currently doing work that should be associated with the
+<code class="docutils literal notranslate"><span class="pre">dataclub</span></code> account, in your <code class="docutils literal notranslate"><span class="pre">srun</span></code> command, you can add the <code class="docutils literal notranslate"><span class="pre">--account=dataclub</span></code> flag to specify that account.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">srun</span> <span class="o">--</span><span class="n">account</span><span class="o">=</span><span class="n">dataclub</span> <span class="o">--</span><span class="n">partition</span><span class="o">=</span><span class="n">short</span> <span class="o">--</span><span class="n">nodes</span><span class="o">=</span><span class="mi">1</span> <span class="o">--</span><span class="n">ntasks</span><span class="o">=</span><span class="mi">28</span> <span class="o">--</span><span class="n">mem</span><span class="o">=</span><span class="mi">0</span> <span class="o">--</span><span class="n">pty</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do not have more than one account associated with your username, you do not need to use the <code class="docutils literal notranslate"><span class="pre">--account=</span></code> flag. Most users on Discovery have only one account
+associated with their username.</p>
+</div>
+</div>
 </div>
 
 
@@ -306,7 +331,7 @@ To run a job interactively, use <code class="docutils literal notranslate"><span
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019-2020, Northeastern University Research Computing
+        &copy; Copyright 2019-2021, Northeastern University Research Computing
 
     </p>
   </div> 

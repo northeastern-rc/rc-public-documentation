@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Working with MATLAB Parallel Computing Toolbox &mdash; Northeastern University Research Computing 1.0.1 documentation</title>
+  <title>Working with MATLAB Parallel Computing Toolbox &mdash; Northeastern University Research Computing 1.0.2 documentation</title>
   
 
   
@@ -240,11 +240,11 @@ If you accidentally click the green Validate button, click <strong>Stop</strong>
 <p>(OPTIONAL) In the <strong>Cluster Profile</strong> column, right-click on the TestProfile name and select <strong>Set as Default</strong>. This sets your profile to be the default.</p>
 <p>Now that you have set up your profile, you can use the default cluster profile you just created (<em>TestProfile</em>) with the following commands:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#with parpool
-parallel.defaultClusterProfile(‘Discovery’)
+parallel.defaultClusterProfile(‘TestProfile’)
 parpool
 
 #with parcluster
-c = parcluster(‘Discovery’)
+c = parcluster(‘TestProfile’)
 </pre></div>
 </div>
 <div class="section" id="using-parcluster-example">
@@ -339,7 +339,7 @@ as well as the ability to fetch outputs if you right-click on the job line.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019-2020, Northeastern University Research Computing
+        &copy; Copyright 2019-2021, Northeastern University Research Computing
 
     </p>
   </div> 

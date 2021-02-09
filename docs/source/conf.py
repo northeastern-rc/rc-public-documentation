@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Northeastern University Research Computing'
-copyright = '2019-2020, Northeastern University Research Computing'
+copyright = '2019-2021, Northeastern University Research Computing'
 author = 'Northeastern University Research Computing'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.1'
+release = '1.0.2'
 
 # -- General configuration ---------------------------------------------------
 
