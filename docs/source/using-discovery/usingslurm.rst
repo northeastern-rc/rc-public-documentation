@@ -86,7 +86,7 @@ for his or her class, set the ``account=`` flag to the name of the class account
 
 To find out what account(s) your usesrname is associated with, use the following command::
 
-  sacctmgr show associations <yourusername>
+  sacctmgr show associations user=<yourusername>
 
 After you have determined what accounts your username is associated with, if you have more than one account association, you can use the ``account=`` flag with your usual ``srun`` or ``sbatch`` commands.
 
