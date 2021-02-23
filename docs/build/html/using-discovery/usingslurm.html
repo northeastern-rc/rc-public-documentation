@@ -294,7 +294,7 @@ When running a job with either <code class="docutils literal notranslate"><span 
 that corresponds to the project you are working on. In the example with a student associated with a class and a student club, if the student is on Discovery submitting a job for a project
 for his or her class, set the <code class="docutils literal notranslate"><span class="pre">account=</span></code> flag to the name of the class account. If the student is working on a project for the club, set the <code class="docutils literal notranslate"><span class="pre">account=</span></code> flag to the name of the student club account.</p>
 <p>To find out what account(s) your usesrname is associated with, use the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sacctmgr</span> <span class="n">show</span> <span class="n">associations</span> <span class="o">&lt;</span><span class="n">yourusername</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sacctmgr</span> <span class="n">show</span> <span class="n">associations</span> <span class="n">user</span><span class="o">=&lt;</span><span class="n">yourusername</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>After you have determined what accounts your username is associated with, if you have more than one account association, you can use the <code class="docutils literal notranslate"><span class="pre">account=</span></code> flag with your usual <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> commands.</p>

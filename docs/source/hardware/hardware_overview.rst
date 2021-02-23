@@ -4,93 +4,19 @@
 Hardware overview
 ******************
 The Discovery cluster provides you with access to over 24,000 CPU cores and over 200 GPUs. Discovery is connected
-to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer, and Discovery
-provides 3 PB of available storage on a high-performance GPFS parallel filesystem.
-Compute nodes are connected with either 10 GbE or a high-performance HDR100 InfiniBand (IB) interconnect
-running at 100 Gbps, supporting all types and scales of computational workloads.
-Full HDR IB connections (200 Gbps) are also available, if needed.
-See the tables below for details on CPUs and GPUs that are available on Discovery. See :ref:`partition_names` for more information about the partitions on Discovery.
+to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer.
+Compute nodes are connected to each other with either 10 GbE or a high-performance HDR200 InfiniBand (IB) interconnect
+running at 200 Gbps (with some nodes running HDR100 IB, if HDR200 IB is not supported on those nodes).
 
-.. list-table::
-  :widths: 40 10 10 10 10
-  :header-rows: 1
+CPU nodes and their feature names
+=================================
+As of February 2021, all previous CPU node feature names were updated to human-friendly feature names following the
+archspec microarchitecture specification (https://archspec.readthedocs.io/en/latest/index.html). **This update is only to the CPU node feature names.**
+GPU node feature names remain unchanged at this time. Table 1 shows the new feature names and
+their corresponding previous feature names. Note that the old feature names will be removed from use with your jobs as of March 3, 2021.
+Make sure to update your scripts with the new feature names if you had used any of the old feature names previously.
 
-  * - CPU Type
-    - Cores per Node
-    - Number of Nodes
-    - Total Cores
-    - RAM per node
-  * - E5-2680v2\@\2.8 GHz
-    - 20
-    - 76
-    - 1520
-    - 64GB
-  * - E5-2690v3\@\2.6 GHz
-    - 24
-    - 184
-    - 4416
-    - 128GB
-  * - E5-2680v4\@\2.4 GHz
-    - 28
-    - 408
-    - 11424
-    - 256GB
-  * - Platinum 8276\@\2.2 GHz
-    - 56
-    - 128
-    - 7168
-    - 192GB
-
-.. list-table::
-  :widths: 40 40 40 40
-  :header-rows: 1
-
-  * - GPU Type
-    - Number of nodes/GPUs
-    - CPU Type
-    - RAM per node
-  * - k20m
-    - 23 nodes with 1 GPU each
-    - E5-2650\@\2.00GHz
-    - 128GB
-  * - k40m
-    - 16 nodes with 1 GPU each
-    - E5-2690v3\@\2.60GHz
-    - 128GB
-  * - k80
-    - 8 nodes with 8 GPUs each
-    - E5-2680v4\@\2.40GHz
-    - 512GB
-  * - p100
-    - 12 nodes with 4 GPUs each
-    - E5-2680v4\@\2.40GHz
-    - 512GB
-  * - v100-pcie
-    - 4 nodes with 2 GPUs each
-    - AMD EPYC 7351\@\2.60GHz
-    - 480GB
-  * - v100-sxm2
-    - 24 nodes with 4 GPUs each
-    - Intel Gold 6132\@\2.60Ghz
-    - 187GB
-
-See :ref:`working_gpus` for more information on using GPUs with your jobs.
-
-Using the ``--constraint`` flag
-================================
-When using ``srun`` or ``sbatch``, you can specify specific hardware features as part of your job by using the ``--constraint=`` flag.
-For example, if you want to only include nodes that are connected by InfiniBand (IB) with a job that needs to use multiple nodes, you can
-specify ``--constraint=ib`` in your ``srun`` command or as a line in your ``sbatch`` script. Using a constraint can mean that you
-will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have
-specified for your job. For more information about running jobs, see :ref:`using_slurm`.
-
-Updated node feature names (February 2021)
-+++++++++++++++++++++++++++++++++++++++++++
-As of February 2021, all previous CPU node feature names will be updated to human-friendly feature names following the
-archspec microarchitecture specification (https://archspec.readthedocs.io/en/latest/index.html). This update is only to the CPU node feature names.
-GPU node feature names remain unchanged at this time. The following table shows the new feature names and
-their corresponding previous feature names. Note that the previous feature names will be removed from use with your jobs as of February 2021.
-You should update your scripts accordingly in order to continue to use these features with your scripts.
+**Table 1: CPU Nodes**
 
 .. list-table::
   :widths: 30 10 5
@@ -189,3 +115,17 @@ You should update your scripts accordingly in order to continue to use these fea
   * - XeonGold6132\@\2.60GHz
     - skylake_avx512
     - 3
+
+If you are looking for information about GPUs, see :ref:`working_gpus`.
+
+If you are looking for information about the partitions on Discovery, see :ref:`partition_names`.
+
+
+Using the ``--constraint`` flag
+================================
+When using ``srun`` or ``sbatch``, you can specify specific hardware features as part of your job by using the ``--constraint=`` flag. Currently,
+there are two supported options with the ``--constraint=`` flag: ``ib`` and ``micro-architecture``.
+For example, if you want to only include nodes that are connected by InfiniBand (IB) with a job that needs to use multiple nodes, you can
+specify ``--constraint=ib`` in your ``srun`` command or as a line in your ``sbatch`` script. Using a constraint can mean that you
+will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have
+specified for your job. For more information about running jobs, see :ref:`using_slurm`.
