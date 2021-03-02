@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Working with MATLAB Parallel Computing Toolbox &mdash; Northeastern University Research Computing 1.0.2 documentation</title>
+  <title>Working with MATLAB on Discovery &mdash; Northeastern University Research Computing 1.0.2 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using Slurm" href="../using-discovery/usingslurm.html" />
-    <link rel="prev" title="Installing Software" href="software.html" /> 
+    <link rel="next" title="Working with Conda/Miniconda/Anaconda" href="conda.html" />
+    <link rel="prev" title="Software overview" href="softwareoverview.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -102,11 +102,17 @@
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="software.html">Installing Software</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Working with MATLAB Parallel Computing Toolbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#using-parcluster-example">Using parcluster example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="softwareoverview.html">Software overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working with MATLAB on Discovery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-matlab-toolboxes">Installing Matlab toolboxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-matlab-parallel-server">Using MATLAB Parallel Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-parcluster-example">Using parcluster example</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conda.html">Working with Conda/Miniconda/Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spack.html">Using Spack</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -176,7 +182,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Working with MATLAB Parallel Computing Toolbox</li>
+      <li>Working with MATLAB on Discovery</li>
     
     
 
@@ -188,9 +194,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="working-with-matlab-parallel-computing-toolbox">
-<h1>Working with MATLAB Parallel Computing Toolbox<a class="headerlink" href="#working-with-matlab-parallel-computing-toolbox" title="Permalink to this headline">¶</a></h1>
-<p>The Discovery cluster has MATLAB Parallel Server installed. This topic page will detail an example of how you
+  <div class="section" id="working-with-matlab-on-discovery">
+<h1>Working with MATLAB on Discovery<a class="headerlink" href="#working-with-matlab-on-discovery" title="Permalink to this headline">¶</a></h1>
+<p>MATLAB is available as a module (see :ref: <cite>using_module</cite> for more information) and
+it is also an interactive app on Open onDemand (see :ref: <cite>using_ood</cite> for more information).</p>
+<div class="section" id="installing-matlab-toolboxes">
+<h2>Installing Matlab toolboxes<a class="headerlink" href="#installing-matlab-toolboxes" title="Permalink to this headline">¶</a></h2>
+<p>Use the following procedure if you need to install a Matlab toolbox:</p>
+<ol class="arabic">
+<li><p>Download the toolbox from its source website.</p></li>
+<li><p>Connect to Discovery.</p></li>
+<li><p>Create a directory in your /home directory. We recommend creating a directory called <code class="docutils literal notranslate"><span class="pre">matlab</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">matlab</span>  <span class="c1">#where &lt;username&gt; is your username</span>
+</pre></div>
+</div>
+</li>
+<li><p>Go to the directory you just created:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">matlab</span>
+</pre></div>
+</div>
+</li>
+<li><p>Unzip the toolbox file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unzip</span> <span class="o">&lt;</span><span class="n">toolboxname</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Load Matlab:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">matlab</span>
+</pre></div>
+</div>
+</li>
+<li><p>Start Matlab:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matlab</span>
+</pre></div>
+</div>
+</li>
+<li><p>Add the toolbox to your PATH:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">addpath</span><span class="p">(</span><span class="s1">&#39;/home/&lt;username&gt;/matlab/&lt;toolbox&gt;&#39;</span><span class="p">)</span> <span class="c1">#where &lt;toolbox&gt; is the name of the toolbox you just unzipped</span>
+</pre></div>
+</div>
+</li>
+<li><p>If this is a toolbox you want to use more than once, you should save it to your path:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">savepath</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>You can now use the toolbox within Matlab. When you are done, type <code class="docutils literal notranslate"><span class="pre">quit</span></code>.</p></li>
+</ol>
+</div>
+<div class="section" id="using-matlab-parallel-server">
+<h2>Using MATLAB Parallel Server<a class="headerlink" href="#using-matlab-parallel-server" title="Permalink to this headline">¶</a></h2>
+<p>The Discovery cluster has MATLAB Parallel Server installed. This section details an example of how you
 can setup and use the MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB 2020a launched as an interactive
 app on the Open onDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting.
 The parameters presented represent only one scenario.</p>
@@ -248,7 +302,7 @@ c = parcluster(‘TestProfile’)
 </pre></div>
 </div>
 <div class="section" id="using-parcluster-example">
-<h2>Using parcluster example<a class="headerlink" href="#using-parcluster-example" title="Permalink to this headline">¶</a></h2>
+<h3>Using parcluster example<a class="headerlink" href="#using-parcluster-example" title="Permalink to this headline">¶</a></h3>
 <p>This section will detail how to submit batch jobs to the cluster to perform scaling calculations for an integer factorization sample problem.
 It’s a computationally intensive problem, where the complexity of the factorization increases with the magnitude of the number. We’ll use the myParallelAlgorithmFcn.m MATLAB function.
 This section assumes you have configured a MATLAB Cluster Profile according to the procedure above.</p>
@@ -318,6 +372,7 @@ as well as the ability to fetch outputs if you right-click on the job line.</p>
 </div>
 </div>
 </div>
+</div>
 
 
            </div>
@@ -327,10 +382,10 @@ as well as the ability to fetch outputs if you right-click on the job line.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../using-discovery/usingslurm.html" class="btn btn-neutral float-right" title="Using Slurm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="conda.html" class="btn btn-neutral float-right" title="Working with Conda/Miniconda/Anaconda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="software.html" class="btn btn-neutral float-left" title="Installing Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="softwareoverview.html" class="btn btn-neutral float-left" title="Software overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

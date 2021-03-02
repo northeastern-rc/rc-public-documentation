@@ -1,7 +1,49 @@
-***********************************************
-Working with MATLAB Parallel Computing Toolbox
-***********************************************
-The Discovery cluster has MATLAB Parallel Server installed. This topic page will detail an example of how you
+**********************************
+Working with MATLAB on Discovery
+**********************************
+MATLAB is available as a module (see :ref: `using_module` for more information) and
+it is also an interactive app on Open onDemand (see :ref: `using_ood` for more information).
+
+Installing Matlab toolboxes
+===========================
+
+Use the following procedure if you need to install a Matlab toolbox:
+
+1. Download the toolbox from its source website.
+2. Connect to Discovery.
+3. Create a directory in your /home directory. We recommend creating a directory called ``matlab``::
+
+    mkdir /home/<username>/matlab  #where <username> is your username
+
+4. Go to the directory you just created::
+
+    cd /home/<username>/matlab
+
+5. Unzip the toolbox file::
+
+    unzip <toolboxname>
+
+6. Load Matlab::
+
+    module load matlab
+
+7. Start Matlab::
+
+    matlab
+
+8. Add the toolbox to your PATH::
+
+    addpath('/home/<username>/matlab/<toolbox>') #where <toolbox> is the name of the toolbox you just unzipped
+
+9. If this is a toolbox you want to use more than once, you should save it to your path::
+
+    savepath()
+
+10. You can now use the toolbox within Matlab. When you are done, type ``quit``.
+
+Using MATLAB Parallel Server
+============================
+The Discovery cluster has MATLAB Parallel Server installed. This section details an example of how you
 can setup and use the MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB 2020a launched as an interactive
 app on the Open onDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting.
 The parameters presented represent only one scenario.
@@ -57,7 +99,7 @@ Now that you have set up your profile, you can use the default cluster profile y
      c = parcluster(‘TestProfile’)
 
 Using parcluster example
-========================
++++++++++++++++++++++++++
 This section will detail how to submit batch jobs to the cluster to perform scaling calculations for an integer factorization sample problem.
 It's a computationally intensive problem, where the complexity of the factorization increases with the magnitude of the number. We'll use the myParallelAlgorithmFcn.m MATLAB function.
 This section assumes you have configured a MATLAB Cluster Profile according to the procedure above.

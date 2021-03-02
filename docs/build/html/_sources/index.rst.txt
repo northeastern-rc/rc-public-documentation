@@ -30,9 +30,12 @@ Northeastern University Research Computing
    :maxdepth: 2
    :caption: Software on Discovery
 
+   software/softwareoverview
    software/modules
-   software/software
    software/matlab
+   software/conda
+   software/spack
+   software/r
 
 .. toctree::
   :maxdepth: 2
