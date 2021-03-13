@@ -24,6 +24,8 @@ You can also have more than one environment with different packages for testing 
 7. To deactivate the current, active Conda environment, type ``conda deactivate``.
 8. To delete a Conda environment and all of its related packages, type ``conda remove -n <yourenvironmentname> --all``.
 
+.. _mini_conda:
+
 Working with a Miniconda environment
 ======================================
 This procedure assumes that you have not installed Miniconda previously. If you need to update Miniconda, don't use the installation procedure. Use the

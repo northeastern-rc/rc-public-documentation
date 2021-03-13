@@ -47,6 +47,7 @@ Northeastern University Research Computing
   using-discovery/workingwithgpu
   using-discovery/transferringdata
   using-discovery/globus
+  using-discovery/bashrc
 
 .. toctree::
    :maxdepth: 2
