@@ -35,7 +35,7 @@ Miniconda3 with Python 3.7.
 **To install Miniconda:**
 
 1. If you are on a login node, move to a compute node by typing ``srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash``.
-2. Type ``wget --quiet https//repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`` to get the latest version of Miniconda.
+2. Type ``wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`` to get the latest version of Miniconda.
 3. Type ``sha256sum Miniconda3-latest-Linux-x86_64.sh`` to check the hash key of the package.
 4. Type ``bash Miniconda3-latest-Linux-x86_64.sh`` to start the installation.
 5. Press ``Enter`` to review the license agreement.
