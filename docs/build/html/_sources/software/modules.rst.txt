@@ -36,7 +36,7 @@ The following are common module commands that are useful for interacting with so
    * - ``module list``
      - Displays a list of the software packages currently loaded in your path
    * - ``module show <module name>``
-     - View the details of a software package
+     - View the details of a software package (see the section "Module Show" below for more information)
    * - ``module load <module name>``
      - Load a software package into your environment
    * - ``module unload <module name>``
@@ -50,8 +50,18 @@ The following are common module commands that are useful for interacting with so
    If you accidentally purge this module, it will be automatically reloaded the next time you log out and
    log back in again. You can also load it manually if you have purged it by using the ``module load`` command.
 
-Module example
-===============
+Module show example
+====================
+Before loading a module, type ``module show <name of module>`` to see if there are any dependencies or commands that you need to execute
+before loading the module. In some cases, a module might depend on having other modules loaded to work as expected. While modules are a convenient
+way of loading software to use on Discovery, scientific software can come with many packages and dependencies. In addition to module, you should review
+other ways of loading software on Discovery. See :ref:`software_overview` for more information on different ways you can install software on Discovery.
+The figure below shows an example of ``module show`` with the software package called amber.
+
+.. image:: /images/moduleshow.jpg
+
+Module load and unload example
+===============================
 In the figure below, the software module stata/15 was loaded and then unloaded. After loading and unloading, module list was used
 to check that the STATA was loaded and unloaded.
 

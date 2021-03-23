@@ -104,7 +104,8 @@
 <li class="toctree-l1"><a class="reference internal" href="softwareoverview.html">Software overview</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using Module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-commands">Module commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-example">Module example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-show-example">Module show example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-load-and-unload-example">Module load and unload example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-software-applications-with-x11-forwarding">Using software applications with X11 Forwarding</a></li>
 </ul>
 </li>
@@ -231,7 +232,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">which<
 <td><p>Displays a list of the software packages currently loaded in your path</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
-<td><p>View the details of a software package</p></td>
+<td><p>View the details of a software package (see the section “Module Show” below for more information)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">&lt;module</span> <span class="pre">name&gt;</span></code></p></td>
 <td><p>Load a software package into your environment</p></td>
@@ -252,8 +253,17 @@ If you accidentally purge this module, it will be automatically reloaded the nex
 log back in again. You can also load it manually if you have purged it by using the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code> command.</p>
 </div>
 </div>
-<div class="section" id="module-example">
-<h2>Module example<a class="headerlink" href="#module-example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-show-example">
+<h2>Module show example<a class="headerlink" href="#module-show-example" title="Permalink to this headline">¶</a></h2>
+<p>Before loading a module, type <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">&lt;name</span> <span class="pre">of</span> <span class="pre">module&gt;</span></code> to see if there are any dependencies or commands that you need to execute
+before loading the module. In some cases, a module might depend on having other modules loaded to work as expected. While modules are a convenient
+way of loading software to use on Discovery, scientific software can come with many packages and dependencies. In addition to module, you should review
+other ways of loading software on Discovery. See <a class="reference internal" href="softwareoverview.html#software-overview"><span class="std std-ref">Software overview</span></a> for more information on different ways you can install software on Discovery.
+The figure below shows an example of <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">show</span></code> with the software package called amber.</p>
+<img alt="../_images/moduleshow.jpg" src="../_images/moduleshow.jpg" />
+</div>
+<div class="section" id="module-load-and-unload-example">
+<h2>Module load and unload example<a class="headerlink" href="#module-load-and-unload-example" title="Permalink to this headline">¶</a></h2>
 <p>In the figure below, the software module stata/15 was loaded and then unloaded. After loading and unloading, module list was used
 to check that the STATA was loaded and unloaded.</p>
 <img alt="../_images/moduleload.jpg" src="../_images/moduleload.jpg" />

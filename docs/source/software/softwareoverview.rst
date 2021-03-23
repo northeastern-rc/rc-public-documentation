@@ -1,3 +1,5 @@
+.. _software_overview:
+
 ******************
 Software overview
 ******************
@@ -30,4 +32,4 @@ If the software that you need is not a module on Discovery, cannot be installed 
 self-installation (such as using ``make``), you can submit a `ServiceNow
 software request ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=777c510bdbebd340a37cd206ca9619b0>`_.
 Be aware that there might be packages that cannot be installed on Discovery due
-to incompatibility with the hardware on Discovery. 
+to incompatibility with the hardware on Discovery.

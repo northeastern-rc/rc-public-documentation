@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Working with Conda/Miniconda/Anaconda" href="conda.html" />
-    <link rel="prev" title="Software overview" href="softwareoverview.html" /> 
+    <link rel="prev" title="Using Module" href="modules.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,10 +101,10 @@
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="softwareoverview.html">Software overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Working with MATLAB on Discovery</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installing-matlab-toolboxes">Installing Matlab toolboxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-matlab-toolboxes">Installing MATLAB toolboxes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-matlab-parallel-server">Using MATLAB Parallel Server</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#using-parcluster-example">Using parcluster example</a></li>
 </ul>
@@ -113,6 +113,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="conda.html">Working with Conda/Miniconda/Anaconda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spack.html">Using Spack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="r.html">Working with R</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -122,6 +123,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/bashrc.html">Working with your bashrc file</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
@@ -196,50 +198,52 @@
             
   <div class="section" id="working-with-matlab-on-discovery">
 <h1>Working with MATLAB on Discovery<a class="headerlink" href="#working-with-matlab-on-discovery" title="Permalink to this headline">¶</a></h1>
-<p>MATLAB is available as a module (see :ref: <cite>using_module</cite> for more information) and
-it is also an interactive app on Open onDemand (see :ref: <cite>using_ood</cite> for more information).</p>
+<p>MATLAB is available as a module on Discovery (see <a class="reference internal" href="modules.html#using-module"><span class="std std-ref">Using Module</span></a> for more information), and
+it is also an interactive app on Open onDemand (see <a class="reference internal" href="../using-ood/introduction.html#using-ood"><span class="std std-ref">Introduction to Open OnDemand (OOD)</span></a> for more information).
+You can also download MATLAB for use with your personal computer through the <a class="reference external" href="https://www.mathworks.com/academia/tah-portal/northeastern-university-30294223.html">Northeastern portal on the MATLAB website</a>.
+Note that the procedures detailed below are specific to using MATLAB on Discovery and not with using MATLAB on your personal computer.</p>
 <div class="section" id="installing-matlab-toolboxes">
-<h2>Installing Matlab toolboxes<a class="headerlink" href="#installing-matlab-toolboxes" title="Permalink to this headline">¶</a></h2>
-<p>Use the following procedure if you need to install a Matlab toolbox:</p>
+<h2>Installing MATLAB toolboxes<a class="headerlink" href="#installing-matlab-toolboxes" title="Permalink to this headline">¶</a></h2>
+<p>Use the following procedure if you need to install a MATLAB toolbox:</p>
 <ol class="arabic">
 <li><p>Download the toolbox from its source website.</p></li>
 <li><p>Connect to Discovery.</p></li>
-<li><p>Create a directory in your /home directory. We recommend creating a directory called <code class="docutils literal notranslate"><span class="pre">matlab</span></code>:</p>
+<li><p>Create a directory in your /home directory. We recommend creating a directory called <code class="docutils literal notranslate"><span class="pre">matlab</span></code> by typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">matlab</span>  <span class="c1">#where &lt;username&gt; is your username</span>
 </pre></div>
 </div>
 </li>
-<li><p>Go to the directory you just created:</p>
+<li><p>Go to the directory you just created by typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/&lt;</span><span class="n">username</span><span class="o">&gt;/</span><span class="n">matlab</span>
 </pre></div>
 </div>
 </li>
-<li><p>Unzip the toolbox file:</p>
+<li><p>Unzip the toolbox file by typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unzip</span> <span class="o">&lt;</span><span class="n">toolboxname</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
-<li><p>Load Matlab:</p>
+<li><p>Load MATLAB by typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">matlab</span>
 </pre></div>
 </div>
 </li>
-<li><p>Start Matlab:</p>
+<li><p>Start MATLAB by typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matlab</span>
 </pre></div>
 </div>
 </li>
-<li><p>Add the toolbox to your PATH:</p>
+<li><p>Add the toolbox to your PATH by typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">addpath</span><span class="p">(</span><span class="s1">&#39;/home/&lt;username&gt;/matlab/&lt;toolbox&gt;&#39;</span><span class="p">)</span> <span class="c1">#where &lt;toolbox&gt; is the name of the toolbox you just unzipped</span>
 </pre></div>
 </div>
 </li>
-<li><p>If this is a toolbox you want to use more than once, you should save it to your path:</p>
+<li><p>If this is a toolbox you want to use more than once, you should save it to your path by typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">savepath</span><span class="p">()</span>
 </pre></div>
 </div>
 </li>
-<li><p>You can now use the toolbox within Matlab. When you are done, type <code class="docutils literal notranslate"><span class="pre">quit</span></code>.</p></li>
+<li><p>You can now use the toolbox within MATLAB. When you are done, type <code class="docutils literal notranslate"><span class="pre">quit</span></code>.</p></li>
 </ol>
 </div>
 <div class="section" id="using-matlab-parallel-server">
@@ -385,7 +389,7 @@ as well as the ability to fetch outputs if you right-click on the job line.</p>
         <a href="conda.html" class="btn btn-neutral float-right" title="Working with Conda/Miniconda/Anaconda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="softwareoverview.html" class="btn btn-neutral float-left" title="Software overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-left" title="Using Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

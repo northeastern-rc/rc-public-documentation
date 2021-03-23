@@ -13,7 +13,7 @@ Use the following procedure if you need to install a MATLAB toolbox:
 
 1. Download the toolbox from its source website.
 2. Connect to Discovery.
-3. Create a directory in your /home directory. We recommend creating a directory called ``matlab``by typing::
+3. Create a directory in your /home directory. We recommend creating a directory called ``matlab`` by typing::
 
     mkdir /home/<username>/matlab  #where <username> is your username
 

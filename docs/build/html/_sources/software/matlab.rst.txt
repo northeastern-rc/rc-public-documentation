@@ -1,45 +1,47 @@
 **********************************
 Working with MATLAB on Discovery
 **********************************
-MATLAB is available as a module (see :ref: `using_module` for more information) and
-it is also an interactive app on Open onDemand (see :ref: `using_ood` for more information).
+MATLAB is available as a module on Discovery (see :ref:`using_module` for more information), and
+it is also an interactive app on Open onDemand (see :ref:`using_ood` for more information).
+You can also download MATLAB for use with your personal computer through the `Northeastern portal on the MATLAB website <https://www.mathworks.com/academia/tah-portal/northeastern-university-30294223.html>`_.
+Note that the procedures detailed below are specific to using MATLAB on Discovery and not with using MATLAB on your personal computer.
 
-Installing Matlab toolboxes
+Installing MATLAB toolboxes
 ===========================
 
-Use the following procedure if you need to install a Matlab toolbox:
+Use the following procedure if you need to install a MATLAB toolbox:
 
 1. Download the toolbox from its source website.
 2. Connect to Discovery.
-3. Create a directory in your /home directory. We recommend creating a directory called ``matlab``::
+3. Create a directory in your /home directory. We recommend creating a directory called ``matlab`` by typing::
 
     mkdir /home/<username>/matlab  #where <username> is your username
 
-4. Go to the directory you just created::
+4. Go to the directory you just created by typing::
 
     cd /home/<username>/matlab
 
-5. Unzip the toolbox file::
+5. Unzip the toolbox file by typing::
 
     unzip <toolboxname>
 
-6. Load Matlab::
+6. Load MATLAB by typing::
 
     module load matlab
 
-7. Start Matlab::
+7. Start MATLAB by typing::
 
     matlab
 
-8. Add the toolbox to your PATH::
+8. Add the toolbox to your PATH by typing::
 
     addpath('/home/<username>/matlab/<toolbox>') #where <toolbox> is the name of the toolbox you just unzipped
 
-9. If this is a toolbox you want to use more than once, you should save it to your path::
+9. If this is a toolbox you want to use more than once, you should save it to your path by typing::
 
     savepath()
 
-10. You can now use the toolbox within Matlab. When you are done, type ``quit``.
+10. You can now use the toolbox within MATLAB. When you are done, type ``quit``.
 
 Using MATLAB Parallel Server
 ============================

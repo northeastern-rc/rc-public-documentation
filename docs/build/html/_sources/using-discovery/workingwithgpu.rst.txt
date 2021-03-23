@@ -37,7 +37,7 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
     - 24 nodes with 4 GPUs each
     - Intel Gold 6132\@\2.60Ghz
     - 187GB
-  * - T4
+  * - t4
     - 2 nodes with 4 GPUs each
     - Intel Gold 6132\@\2.60Ghz
     - 187GB
