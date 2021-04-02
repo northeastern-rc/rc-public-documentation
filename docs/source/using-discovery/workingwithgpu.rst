@@ -13,10 +13,6 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
     - Number of nodes/GPUs
     - CPU Type
     - RAM per node
-  * - k20m
-    - 23 nodes with 1 GPU each
-    - E5-2650\@\2.00GHz
-    - 128GB
   * - k40m
     - 16 nodes with 1 GPU each
     - E5-2690v3\@\2.60GHz
