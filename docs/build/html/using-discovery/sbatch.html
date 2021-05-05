@@ -101,9 +101,12 @@
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/softwareoverview.html">Software overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB on Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/conda.html">Working with Conda/Miniconda/Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/spack.html">Using Spack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/r.html">Working with R</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
@@ -127,6 +130,7 @@
 <li class="toctree-l1"><a class="reference internal" href="workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bashrc.html">Working with your bashrc file</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
@@ -224,10 +228,10 @@ See <a class="reference internal" href="../hardware/partitions.html#partition-na
 <h3>Job requesting one node<a class="headerlink" href="#job-requesting-one-node" title="Permalink to this headline">¶</a></h3>
 <p>Run a job on one node for 4 hours on the short partition:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH –-nodes=1</span>
-<span class="c1">#SBATCH –-time=4:00:00</span>
-<span class="c1">#SBATCH –-job-name=MyJobName</span>
-<span class="c1">#SBATCH –-partition=short</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --time=4:00:00</span>
+<span class="c1">#SBATCH --job-name=MyJobName</span>
+<span class="c1">#SBATCH --partition=short</span>
 <span class="o">&lt;</span><span class="n">commands</span> <span class="n">to</span> <span class="n">execute</span><span class="o">&gt;</span>
 </pre></div>
 </div>

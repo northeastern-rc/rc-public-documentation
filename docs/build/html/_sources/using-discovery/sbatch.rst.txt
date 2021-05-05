@@ -26,15 +26,15 @@ SBATCH Examples
 ================
 
 Job requesting one node
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Run a job on one node for 4 hours on the short partition::
 
   #!/bin/bash
-  #SBATCH –-nodes=1
-  #SBATCH –-time=4:00:00
-  #SBATCH –-job-name=MyJobName
-  #SBATCH –-partition=short
+  #SBATCH --nodes=1
+  #SBATCH --time=4:00:00
+  #SBATCH --job-name=MyJobName
+  #SBATCH --partition=short
   <commands to execute>
 
 Job requesting one node and additional memory
