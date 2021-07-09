@@ -43,10 +43,6 @@ To allocate a GPU node, you should specify the ``gpu`` partition and use the --g
 
 For more information about working with GPUs, see :ref:`working_gpus`.
 
-When Discovery has maintenance, you can specify the ``t2sd`` ("time to shutdown") script with the ``--time`` option along with your usual SRUN options::
-
- srun --time=$( t2sd )
-
 Monitor your jobs
 ~~~~~~~~~~~~~~~~~~
 You can monitor your jobs by using the Slurm ``scontrol`` command. Type ``scontrol show jobid -d <JOBID>``, where ``JOBID`` is the number of your job.

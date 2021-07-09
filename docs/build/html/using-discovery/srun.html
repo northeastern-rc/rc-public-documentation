@@ -101,9 +101,13 @@
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/softwareoverview.html">Software overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB on Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/conda.html">Working with Conda/Miniconda/Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/spack.html">Using Spack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/r.html">Working with R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/mpi.html">Message Passing Interface (MPI) Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul class="current">
@@ -119,6 +123,7 @@
 <li class="toctree-l1"><a class="reference internal" href="workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="globus.html">Using Globus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bashrc.html">Working with your bashrc file</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
@@ -228,10 +233,6 @@ for your particular job.</p>
 </pre></div>
 </div>
 <p>For more information about working with GPUs, see <a class="reference internal" href="workingwithgpu.html#working-gpus"><span class="std std-ref">Working with GPUs</span></a>.</p>
-<p>When Discovery has maintenance, you can specify the <code class="docutils literal notranslate"><span class="pre">t2sd</span></code> (“time to shutdown”) script with the <code class="docutils literal notranslate"><span class="pre">--time</span></code> option along with your usual SRUN options:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>srun --time=$( t2sd )
-</pre></div>
-</div>
 <div class="section" id="monitor-your-jobs">
 <h3>Monitor your jobs<a class="headerlink" href="#monitor-your-jobs" title="Permalink to this headline">¶</a></h3>
 <p>You can monitor your jobs by using the Slurm <code class="docutils literal notranslate"><span class="pre">scontrol</span></code> command. Type <code class="docutils literal notranslate"><span class="pre">scontrol</span> <span class="pre">show</span> <span class="pre">jobid</span> <span class="pre">-d</span> <span class="pre">&lt;JOBID&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">JOBID</span></code> is the number of your job.

@@ -36,6 +36,7 @@ Northeastern University Research Computing
    software/conda
    software/spack
    software/r
+   software/mpi
 
 .. toctree::
   :maxdepth: 2
