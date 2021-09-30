@@ -66,7 +66,7 @@ To request additional software (instructors only):
 
 .. tip::
    You and your students can install software locally to your PATH on Discovery, which may be a better option in some cases,
-   such as installing multiple conda environments. See :ref:`installing_software` for more information.
+   such as installing multiple conda environments. See :ref:`software_overview` for more information.
 
 **I just need my class to access Open onDemand. How do I request that?**
 
