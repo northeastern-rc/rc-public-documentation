@@ -25,7 +25,7 @@ OOD provides you with a number of resources for interacting with the Discovery c
 .. .. raw:: html
 ..
 ..   <video width="710" autoplay mute controls>
-..   <source src="../video/" type="video/mp4">
+..   <source src="../video/XXXXXXX.mp4" type="video/mp4">
 ..   Your browser does not support embedded videos.
 ..   </video>
 
