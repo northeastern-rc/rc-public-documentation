@@ -1,71 +1,36 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Working with R &mdash; Northeastern University Research Computing 2.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/../css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/../css/custom.css" type="text/css" />
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Message Passing Interface (MPI) Overview" href="mpi.html" />
     <link rel="prev" title="Using Spack" href="spack.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html">
-          
-
-          
-            
             <img src="../_static/NU_logo_small.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -73,33 +38,23 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Welcome</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Welcome</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Getting Started with Discovery</span></p>
+<p class="caption" role="heading"><span class="caption-text">Getting Started with Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/get_access.html">Getting Access</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../get_started/connect.html">Connecting to Discovery</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<p class="caption" role="heading"><span class="caption-text">Hardware on Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<p class="caption" role="heading"><span class="caption-text">Software on Discovery</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="softwareoverview.html">Software overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Using Module</a></li>
@@ -112,7 +67,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mpi.html">Message Passing Interface (MPI) Overview</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<p class="caption" role="heading"><span class="caption-text">Using Discovery</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/sbatch.html">Using sbatch</a></li>
@@ -122,84 +77,51 @@
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/bashrc.html">Working with your bashrc file</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<p class="caption" role="heading"><span class="caption-text">Understanding storage options</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
+<p class="caption" role="heading"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
+<p class="caption" role="heading"><span class="caption-text">Using Discovery in your classroom</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../classroom/class_use.html">Using Discovery with your class FAQ</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Northeastern University Research Computing</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Working with R</li>
-    
-    
 
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="working-with-r">
-<h1>Working with R<a class="headerlink" href="#working-with-r" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="working-with-r">
+<h1>Working with R<a class="headerlink" href="#working-with-r" title="Permalink to this headline"></a></h1>
 <p><a class="reference external" href="https://www.r-project.org/">R</a> is available as a module (see <a class="reference internal" href="modules.html#using-module"><span class="std std-ref">Using Module</span></a> for more information) and
 it is also an interactive app on Open onDemand (see <a class="reference internal" href="../using-ood/introduction.html#using-ood"><span class="std std-ref">Introduction to Open OnDemand (OOD)</span></a> for more information). You can also use R with Anaconda. See <a class="reference internal" href="conda.html#working-conda"><span class="std std-ref">Working with Conda/Miniconda/Anaconda</span></a> and the <a class="reference external" href="https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/">Anaconda documentation</a> for more information</p>
 <p>If you work with R packages, using a Packrat environment can be helpful. Use the procedure below to create a Packrat environment on Discovery.</p>
-<div class="section" id="creating-a-packrat-environment-for-r">
-<h2>Creating a Packrat Environment (for R)<a class="headerlink" href="#creating-a-packrat-environment-for-r" title="Permalink to this headline">¶</a></h2>
+<section id="creating-a-packrat-environment-for-r">
+<h2>Creating a Packrat Environment (for R)<a class="headerlink" href="#creating-a-packrat-environment-for-r" title="Permalink to this headline"></a></h2>
 <p>Packrat is an application that helps you manage packages for R. After you create a new directory for your R project, you can then use Packrat
 to store your package dependencies inside it. For more information about Packrat, see the website: <a class="reference external" href="https://rstudio.github.io/packrat/">https://rstudio.github.io/packrat/</a>.</p>
 <ol class="arabic">
@@ -223,55 +145,35 @@ install.packages(&quot;BiocManager&quot;)
 BiocManager::install(&quot;rtracklayer&quot;)
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mpi.html" class="btn btn-neutral float-right" title="Message Passing Interface (MPI) Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="spack.html" class="btn btn-neutral float-left" title="Using Spack" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="spack.html" class="btn btn-neutral float-left" title="Using Spack" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mpi.html" class="btn btn-neutral float-right" title="Message Passing Interface (MPI) Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019-2021, Northeastern University Research Computing
+    <p>&#169; Copyright 2019-2021, Northeastern University Research Computing.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
