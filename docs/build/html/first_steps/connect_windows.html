@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Connecting to Discovery with Windows &mdash; Northeastern University Research Computing 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/../css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hardware overview" href="../hardware/hardware_overview.html" />
+    <link rel="prev" title="Connecting to Discovery with a Mac" href="connect_mac.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/NU_logo_small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../welcome/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../welcome/gettinghelp.html">Getting Help</a></li>
+</ul>
+<p class="caption"><span class="caption-text">First Steps with Discovery</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="get_access.html">Getting Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect_mac.html">Connecting to Discovery with a Mac</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Connecting to Discovery with Windows</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Hardware on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/hardware_overview.html">Hardware overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/partitions.html">Partitions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software on Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/softwareoverview.html">Software overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB on Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/conda.html">Working with Conda/Miniconda/Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/spack.html">Using Spack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/r.html">Working with R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/mpi.html">Message Passing Interface (MPI) Overview</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/usingslurm.html">Using Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/sbatch.html">Using sbatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/srun.html">Using srun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/bashrc.html">Working with your bashrc file</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding storage options</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../storage/discovery_storage.html">Storage Accessible on  Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../storage/general_storage.html">General Data Storage Options</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Open OnDemand (OOD)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/introduction.html">Introduction to Open OnDemand (OOD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/fileexplore.html">Using OOD’s File Explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-ood/interactiveapps.html">Using OOD’s Interactive Apps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Discovery in your classroom</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classroom/class_use.html">Using Discovery with your class FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Northeastern University Research Computing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Connecting to Discovery with Windows</li>
+    
+    
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="connecting-to-discovery-with-windows">
+<h1>Connecting to Discovery with Windows<a class="headerlink" href="#connecting-to-discovery-with-windows" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../hardware/hardware_overview.html" class="btn btn-neutral float-right" title="Hardware overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="connect_mac.html" class="btn btn-neutral float-left" title="Connecting to Discovery with a Mac" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2021, Northeastern University Research Computing
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

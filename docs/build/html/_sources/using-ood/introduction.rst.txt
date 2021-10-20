@@ -20,12 +20,12 @@ OOD provides you with a number of resources for interacting with the Discovery c
 
 * View, download, copy, and delete files using the File Explorer feature. See :ref:`file_explorer` for more information.
 
-.. View this video for an overview of OOD. If you do not see any controls on the video, right click on the video to see viewing options.
+.. Watch this video for an overview of OOD. If you do not see any controls on the video, right click on the video to see viewing options.
 
 .. .. raw:: html
 ..
 ..   <video width="710" autoplay mute controls>
-..   <source src="../video/" type="video/mp4">
+..   <source src="../video/XXXXXXX.mp4" type="video/mp4">
 ..   Your browser does not support embedded videos.
 ..   </video>
 
