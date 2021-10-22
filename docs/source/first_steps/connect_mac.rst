@@ -1,9 +1,10 @@
+.. _connect_mac:
+
 ***********************************
 Connecting to Discovery with a Mac
 ***********************************
 You connect to Discovery using a `secure shell <https://www.ssh.com/ssh/protocol/>`_ program to initiate an SSH session to
-sign in to Discovery. If you usually launch software
-from the command line that uses a graphical user interface (GUI), see :ref:`using_x11` for tips and troubleshooting information.
+sign in to Discovery. If you usually launch software from the command line that uses a graphical user interface (GUI), see :ref:`using_x11` for tips and troubleshooting information.
 
 .. 2FA Authentication with DUO
 .. ============================
@@ -48,7 +49,7 @@ Watch this video of how to connect to Discovery on a Mac. If you do not see any 
 Using X11
 ==========
 When you launch a software application that uses a graphical user interface (GUI) from the command line, this is completed through X11 forwarding. If you use MobaXterm on Windows, X11 forwarding
-is turned on by default. If you use the Terminal program on Mac, you'll need to login using the -Y option (``ssh -Y <yourusername>@login.discovery.neu.edu``).
+is turned on by default. If you use the Terminal program on Mac, you'll need to log in using the -Y option (``ssh -Y <yourusername>@login.discovery.neu.edu``).
 
 .. tip::
    If you used the -Y option to enable X11 forwarding on your Mac, you can test to see if it is working by typing ``xeyes``. This will run a small program that makes
