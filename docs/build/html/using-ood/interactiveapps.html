@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using OOD’s Interactive Apps &mdash; Northeastern University Research Computing 1.0.2 documentation</title>
+  <title>Using OOD’s Interactive Apps &mdash; Northeastern University Research Computing 2.0.0 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/../css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Using Discovery with your class FAQ" href="../classroom/class_use.html" />
@@ -101,9 +101,13 @@
 </ul>
 <p class="caption"><span class="caption-text">Software on Discovery</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../software/softwareoverview.html">Software overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../software/modules.html">Using Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/software.html">Installing Software</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB Parallel Computing Toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/matlab.html">Working with MATLAB on Discovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/conda.html">Working with Conda/Miniconda/Anaconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/spack.html">Using Spack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/r.html">Working with R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/mpi.html">Message Passing Interface (MPI) Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Discovery</span></p>
 <ul>
@@ -113,6 +117,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/workingwithgpu.html">Working with GPUs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/transferringdata.html">Transferring Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-discovery/globus.html">Using Globus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../using-discovery/bashrc.html">Working with your bashrc file</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding storage options</span></p>
 <ul>
@@ -242,7 +247,7 @@ The general workflow is to first create a virtual python environment; ensure tha
 environment; and then reference this environment when you start the Jupyter Notebook [Custom Anaconda Environment] OOD interactive app.</p>
 <p><strong>Virtual python environment</strong></p>
 <ol class="arabic simple">
-<li><p>First set up a virtual python environment. See <a class="reference internal" href="../software/software.html#creating-python"><span class="std std-ref">Creating a Python Environment</span></a> for how to set up a virtual python environment on Discovery using the terminal.</p></li>
+<li><p>First set up a virtual python environment. See <a class="reference internal" href="../software/conda.html#creating-python"><span class="std std-ref">Creating a Conda virtual environment with Anaconda</span></a> for how to set up a virtual python environment on Discovery using the terminal.</p></li>
 <li><p>When your environment is ready, in the terminal type <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span></code> to activate the base environment.</p></li>
 <li><p>Type <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">conda</span></code> to get the full path of your environment. Make a note of the full path name.</p></li>
 <li><p>Type <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">&lt;yourenvironmentname&gt;</span></code> where <em>&lt;yourenvironmentname&gt;</em> is the name of your custom environment to activate the environment you just created.</p></li>

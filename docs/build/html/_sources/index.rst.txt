@@ -14,10 +14,11 @@ Northeastern University Research Computing
 
 .. toctree::
   :maxdepth: 2
-  :caption: Getting Started with Discovery
+  :caption: First Steps with Discovery
 
-  get_started/get_access
-  get_started/connect
+  first_steps/get_access
+  first_steps/connect_mac
+  first_steps/connect_windows
 
 .. toctree::
    :maxdepth: 2

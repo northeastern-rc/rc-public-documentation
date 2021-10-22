@@ -22,7 +22,7 @@ copyright = '2019-2021, Northeastern University Research Computing'
 author = 'Northeastern University Research Computing'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.2'
+release = '2.0.0'
 
 # -- General configuration ---------------------------------------------------
 
@@ -52,7 +52,7 @@ html_logo = 'images/NU_logo_small.png'
 html_theme_options = {'logo_only': True}
 
 # custom css file
-html_css_files = ['custom.css']
+html_css_files = ['../css/custom.css']
 
 #If true, “(C) Copyright …” is shown in the HTML footer. Default is True.
 html_show_copyright = True

@@ -1,0 +1,23 @@
+a {
+
+  color: #8bc34a;
+
+}
+
+
+
+a:hover {
+
+  color: #f39304;
+
+}
+
+
+
+video {
+
+  height: 100%;
+
+  width: 100%;
+
+}
