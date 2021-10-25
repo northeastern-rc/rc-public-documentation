@@ -35,14 +35,14 @@ that you use to connect to Discovery using SSH. If you need to use software that
 
 You are now connected to Discovery at a login node.
 
-.. Watch this video of how to connect to Discovery on a Mac. If you do not see any controls on the video, right click on the video to see viewing options.
+Watch this video of how to connect to Discovery on a Mac. If you do not see any controls on the video, right click on the video to see viewing options.
 
-.. .. raw:: html
-..
-..    <video width="710" autoplay mute controls>
-..    <source src="../video/connect_mac_terminal.mp4" type="video/mp4">
-..    Your browser does not support embedded videos.
-..    </video>
+.. raw:: html
+
+  <video width="710" autoplay mute controls>
+  <source src="../_static/video/connect_mac_terminal.mp4" type="video/mp4">
+  Your browser does not support embedded videos.
+  </video>
 
 .. _using_x11:
 
