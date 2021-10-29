@@ -53,8 +53,8 @@ as opposed to one with your NUID, can make it easier for you to remember your lo
 
 You should now be able to see your two accounts linked in the Account section on the `Globus web app <https://app.globus.org/account/identities>`_.
 
-Install Globus Connect
-=======================
+Install Globus Connect Personal (GCP)
+=====================================
 
 Use Globus Connect Personal (GCP) to use your personal laptop as an endpoint.
 You first need to install GCP using the following procedure.
@@ -98,6 +98,21 @@ personal computer, but with the flexibility of the File Manager interface, you c
 6. Select the destination folder from the left-side list of the files on your personal computer.
 7. (Optional) Click **Transfer & Sync Options** and select the transfer options that you need.
 8. Click **Start**.
+
+Connecting to Google Drive
++++++++++++++++++++++++++++
+The version of Globus currently on Discovery allows you to connect to Google Drive by first setting up the connection in GCP. This will add your Google Drive to your current personal endpoint.
+You'll need to first have a personal endpoint, as outlined in the procedure above.This procedure is slightly different from using the Google Drive Connector with
+Globus version 5.5. You'll need your Google Drive `downloaded to your local computer <https://www.google.com/drive/download/>`_.
+
+**To add Google Drive to your personal endpoint, do the following**
+
+1. Open the GCP app. On Windows, right click on the **G** icon in your taskbar and select **Options**. On Mac, click the **G** icon in the menu bar and select **Preferences**.
+2. On the **Access** tab, click the + button to open the **Choose a directory** dialog box.
+3. Navigate to your Google Drive on your computer and click **Choose**.
+4. Click the **Shareable** checkbox to make this a shareable folder in Globus File Manager, and then click **Save**.
+
+You can now go to Globus File Manager and see that your Google Drive is available as a folder on your personal endpoint.
 
 Command Line Interface (CLI)
 ++++++++++++++++++++++++++++
