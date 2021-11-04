@@ -1,3 +1,5 @@
+.. _connect_windows:
+
 **************************************
 Connecting to Discovery using Windows
 **************************************
