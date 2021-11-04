@@ -26,7 +26,7 @@ right click on the video to see viewing options.
  .. raw:: html
 
    <video width="710" autoplay mute controls>
-   <source src="../video/OOD_access.mp4" type="video/mp4">
+   <source src="../_static/video/OOD_access.mp4" type="video/mp4">
    Your browser does not support embedded videos.
    </video>
 
