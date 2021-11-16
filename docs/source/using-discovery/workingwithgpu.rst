@@ -126,7 +126,7 @@ Using GPUs with PyTorch
 ========================
 You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery.
 
-The following is an example of using a conda virtual environment with PyTorch for CUDA versoin 11.1. Make sure that you are on a GPU node before loading the environment::
+The following is an example of using a conda virtual environment with PyTorch for CUDA version 11.1. Make sure that you are on a GPU node before loading the environment::
 
   module load cuda/11.1
   module load anaconda3/2021.11
