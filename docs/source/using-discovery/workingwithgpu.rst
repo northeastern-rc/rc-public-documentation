@@ -114,6 +114,9 @@ There are several versions of CUDA on Discovery, as listed below.::
   cuda/10.0
   cuda/10.2
   cuda/11.0
+  cuda/11.1
+  cuda/11.2
+  cuda/11.3
 
 You can always use the ``module avail`` command to check for the latest software versions on Discovery as well.
 
