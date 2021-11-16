@@ -114,6 +114,9 @@ There are several versions of CUDA on Discovery, as listed below.::
   cuda/10.0
   cuda/10.2
   cuda/11.0
+  cuda/11.1
+  cuda/11.2
+  cuda/11.3
 
 You can always use the ``module avail`` command to check for the latest software versions on Discovery as well.
 
@@ -123,14 +126,16 @@ Using GPUs with PyTorch
 ========================
 You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery.
 
-The following is an example of using a conda virtual environment with PyTorch. Make sure that you are on a GPU node before loading the environment::
+The following is an example of using a conda virtual environment with PyTorch for CUDA version 11.1. Make sure that you are on a GPU node before loading the environment::
 
-  module load cuda/11.0
-  module load anaconda3/3.7
-  conda create --name pytorch_env python=3.7 anaconda
-  conda activate pytorch_env
-  conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
+  module load cuda/11.1
+  module load anaconda3/2021.11
+  conda create --name pytorch_env python=3.7 -y
+  source activate pytorch_env
+  conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge -y
   python -c'import torch; print(torch.cuda.is_available())'
+
+As the latest version of Pytorch often depends the newst CUDA avaialble, please refer to the Pytorch documentation page for the installation instructions: https://pytorch.org/. 
 
 Using TensorFlow
 ================
