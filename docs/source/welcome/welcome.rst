@@ -22,4 +22,3 @@ in Holyoke, MA. MGHPCC is a 90,000 square foot, 15 megawatt research computing a
 houses computing resources for five institutions:  Northeastern, BU, Harvard, MIT, and UMass.
 
 .. image:: /images/discovery.png
-  :alt: an image of the data center at the Massachusetts Green High Performance Computing Center

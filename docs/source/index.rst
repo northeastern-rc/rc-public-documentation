@@ -19,7 +19,6 @@ Northeastern University Research Computing
   first_steps/get_access
   first_steps/connect_mac
   first_steps/connect_windows
-  first_steps/connect_ood
 
 .. toctree::
    :maxdepth: 2

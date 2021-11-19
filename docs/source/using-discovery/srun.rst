@@ -9,10 +9,9 @@ time. After typing your ``srun`` command and options on the command line and pre
 you specified. Depending on what you specified, it can take a few minutes for Slurm to allocate those resources. You can view all of the
 ``srun`` options on the `Slurm documentation website <https://slurm.schedmd.com/archive/slurm-17.11.6/srun.html>`_.
 
-The following image shows an example of an ``srun`` command as run on a command line.
+The following is an example of an ``srun`` command as run on a command line.
 
 .. image:: /images/srun_example.jpg
-  :alt: image of the command line showing an example srun command
 
 ``srun`` examples
 ==================

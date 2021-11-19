@@ -14,12 +14,16 @@ which could take a long time to be allocated, depending on how busy the cluster 
 If you are attempting to run a job on one of the interactive apps on OOD that launches a graphical user interface (GUI), such as Maestro, you might get an error if your passwordless ssh is not set up
 correctly. See :ref:`using_x11` for tips and troubleshooting information opening applications that use X11 forwarding.
 
-Available Apps (November 2021)
-================================
-On the Interactive Apps tab, you can view the list of available interactive apps through the OOD web interface.
+Available Apps (June 2020)
+==========================
 
-.. image:: /images/ood_apps_2021.jpg
-  :alt: A list of interactive apps on OOD including FSL, Gaussian, IGV, KNIME, MATLAB, Maestro, MySQL, SAS, SPSS, STATA, Jupyter Notebook.
+* Jupyter Notebook (includes Python 3 and R 3.6.1 kernels)
+* RStudio
+* SAS
+* MATLAB
+* Gaussian
+* Schrodinger (Maestro)
+* Comsol (restricted to license owners)
 
 .. note::
    Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to
@@ -31,7 +35,7 @@ On the Interactive Apps tab, you can view the list of available interactive apps
 
 2. Select **Interactive Apps**, then select the application you want to use.
 
-3. For most apps, keep the default options, and then click **Launch**. You might have to wait a
+3. Accept the default of 1 hour, and click **Launch**. You might have to wait a
    minute or two for a compute node to be allocated with your requested time and resource.
 
 4. If you selected Jupyter Notebook, click **Connect to Jupyter**.
