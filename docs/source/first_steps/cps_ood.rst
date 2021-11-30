@@ -31,7 +31,7 @@ For example: **ALY3070 JupyterLab**.
 For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab launches.
 
 .. note::
-   If **Working Directory** left blank, the session will launch in the main class folder (in this example `/work/cps/ALY3070`). This folder has read-only permissions. Additionally, each student has access to a personal working directory (read+write) under: `/work/cps/ALY3070/students/[username]`, where `[username]` is the student username on Discovery. 
+   If **Working Directory** left blank, the session will launch in the main class folder (in this example ``/work/cps/ALY3070``). Alternatively, start the session directly from your personal working directory by entering: ``/work/cps/ALY3070/students/[username]``, where ``[username]`` is your username on Discovery. The instructions below assume the field is left blank. 
 
 Wait until the session is successfully created and started (turns green).
 
@@ -92,7 +92,7 @@ A new file will be created inside your directory called **Untitled.ipynb**. You 
 This Python notebook has ready-to-use Python packages needed for your class.
 
 .. note:: 
-  **Permission Denied errors**
+  **Permission Denied errors:**
   Do not attempt to create, edit or write files that are outside of your personal student directory. Most "Permission Denied" errors are due to directories or files having read-only access permissions. 
 
 Step 3 - submit class assignments
@@ -111,23 +111,23 @@ Due to the write-only access permissions on the **assignments** directory, it is
  :width: 400
  :alt: open terminal.
 
-3. Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly) ::
+3. Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly):
 
-  cd /work/cps/ALY3070/students/$USER
+``cd /work/cps/ALY3070/students/$USER``
 
 Where ``$USER`` is a saved shell variable for your username. You can optionally also replace it with your username.
 
-4. Check that your assignment file is visible in the command line by typing ::
+4. Check that your assignment file is visible in the command line by typing:
 
-  ls
+``ls``
 
-5. Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name) ::
+5. Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name):
 
-  cp Assignment1.ipynb ../../assignments
+``cp Assignment1.ipynb ../../assignments``
 
-To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name) ::
+To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name):
 
-  rm ../../assignments/Assignment1.ipynb
+``rm ../../assignments/Assignment1.ipynb``
 
 .. image:: /images/cps-ood-commandline.png
  :width: 400
