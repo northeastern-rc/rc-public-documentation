@@ -77,16 +77,23 @@ Enter your personal class directory.
 
 Here you can create and edit files. 
 
-3. Open a new Python Notebook session by clicking the **Python 3 (ipykernel)**. You will see that a new file has been created inside your directory called **Untitled.ipynb**.
+3. Open a new Python Notebook session from the Launcher menu by clicking the **Python 3 (ipykernel)**. 
+
+.. image:: /images/cps-ood-jupyterlab-ipykernel-launcher.png
+ :width: 400
+ :alt: show inside ipykernel.
+
+A new file will be created inside your directory called **Untitled.ipynb**. You can rename it by right-click + Rename option. 
 
 .. image:: /images/cps-ood-jupyterlab-ipykernel.png
  :width: 400
  :alt: show inside ipykernel.
 
-You can now write your Python code in this notebook, and rename the file.
+This Python notebook has ready-to-use Python packages needed for your class.
 
 .. note:: 
-  Do not attempt to edit/write files outside your personal directory, which have read-only access permissions. The only exception is the **assignments** directory (discussed below).  
+  **Permission Denied errors**
+  Do not attempt to create, edit or write files that are outside of your personal student directory. Most "Permission Denied" errors are due to directories or files having read-only access permissions. 
 
 Step 3 - submit class assignments
 =================================
@@ -104,21 +111,21 @@ Due to the write-only access permissions on the **assignments** directory, it is
  :width: 400
  :alt: open terminal.
 
-3. Navigate to your personal directory by typing the following command (change the class name from `ALY3070` to your class name accordingly): ::
+3. Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly) ::
 
   cd /work/cps/ALY3070/students/$USER
 
-Where `$USER` is a saved shell variable for your username. You can optionally also replace it with your username.
+Where ``$USER`` is a saved shell variable for your username. You can optionally also replace it with your username.
 
-4. Check that your assignment file is visible in the command line by typing: ::
+4. Check that your assignment file is visible in the command line by typing ::
 
   ls
 
-5. Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name): ::
+5. Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name) ::
 
   cp Assignment1.ipynb ../../assignments
 
-To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name): ::
+To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name) ::
 
   rm ../../assignments/Assignment1.ipynb
 
