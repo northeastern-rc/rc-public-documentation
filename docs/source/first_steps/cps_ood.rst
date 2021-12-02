@@ -113,7 +113,8 @@ Due to the write-only access permissions on the **assignments** directory, it is
 
 3. Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly):
 
-``cd /work/cps/ALY3070/students/$USER``
+.. code-block:: console
+ cd /work/cps/ALY3070/students/$USER
 
 Where ``$USER`` is a saved shell variable for your username. You can optionally also replace it with your username.
 
