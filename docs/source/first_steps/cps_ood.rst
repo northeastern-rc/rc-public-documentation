@@ -99,39 +99,35 @@ Step 3 - submit class assignments
 =================================
 Due to the write-only access permissions on the **assignments** directory, it is required to use the command line interface to submit assignments. Copying the assignment file using the folder navigator menu will not work.
 
-1. To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab New Launcher by clicking the **File** top menu option, and then selecting **New Launcher**.
+To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab New Launcher by clicking the **File** top menu option, and then selecting **New Launcher**.
 
 .. image:: /images/cps-ood-jupyterlab-new-launcher.png
  :width: 400
  :alt: open new launcher.
 
-2. Click on the **Terminal** option under **Other** to open a Linux terminal.
+Click on the **Terminal** option under **Other** to open a Linux terminal.
 
 .. image:: /images/cps-ood-jupyterlab-open-terminal.png
  :width: 400
  :alt: open terminal.
 
-3. Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly):
+Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly)::
 
-.. code-block:: console
  cd /work/cps/ALY3070/students/$USER
 
 Where ``$USER`` is a saved shell variable for your username. You can optionally also replace it with your username.
 
-4. Check that your assignment file is visible in the command line by typing:
+Check that your assignment file is visible in the command line by typing ``ls``. Then, Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name)::
 
-``ls``
+ cp Assignment1.ipynb ../../assignments
 
-5. Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name):
+To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name)::
 
-``cp Assignment1.ipynb ../../assignments``
+ rm ../../assignments/Assignment1.ipynb
 
-To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name):
-
-``rm ../../assignments/Assignment1.ipynb``
+Close the Terminal tab when done.
 
 .. image:: /images/cps-ood-commandline.png
  :width: 400
  :alt: commandline commands.
 
-6. Close the Terminal tab when done.
