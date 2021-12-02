@@ -20,6 +20,7 @@ Northeastern University Research Computing
   first_steps/connect_mac
   first_steps/connect_windows
   first_steps/connect_ood
+  :includehidden:
   first_steps/cps_ood
 
 .. toctree::
