@@ -97,35 +97,35 @@ This Python notebook has ready-to-use Python packages needed for your class.
 
 Step 3 - submit class assignments
 =================================
-Due to the write-only access permissions on the **assignments** directory, it is required to use the command line interface to submit assignments. Copying the assignment file using the folder navigator menu will not work.
+Due to the write-only access permissions on the **assignments** directory, it is required to use the command line interface (Linux Terminal) to submit assignments. **Using other methods currently does not work**.
 
-To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab New Launcher by clicking the **File** top menu option, and then selecting **New Launcher**.
+1. To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab New Launcher by clicking the **File** top menu option, and then selecting **New Launcher**.
 
 .. image:: /images/cps-ood-jupyterlab-new-launcher.png
  :width: 400
  :alt: open new launcher.
 
-Click on the **Terminal** option under **Other** to open a Linux terminal.
+2. Click on the **Terminal** option under **Other** to open a Linux terminal.
 
 .. image:: /images/cps-ood-jupyterlab-open-terminal.png
  :width: 400
  :alt: open terminal.
 
-Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly)::
+3. Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly)::
 
  cd /work/cps/ALY3070/students/$USER
 
 Where ``$USER`` is a saved shell variable for your username. You can optionally also replace it with your username.
 
-Check that your assignment file is visible in the command line by typing ``ls``. Then, Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name)::
+4. Check that your assignment file is visible in the command line by typing ``ls``. Then, Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name)::
 
  cp Assignment1.ipynb ../../assignments
 
-To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name)::
+5. To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name)::
 
  rm ../../assignments/Assignment1.ipynb
 
-Close the Terminal tab when done.
+6. Close the Terminal tab when done.
 
 .. image:: /images/cps-ood-commandline.png
  :width: 400
