@@ -1,4 +1,4 @@
-.. _access_ood:
+.. _cps_ood:
 
 ****************************
 JupyterLab for CPS classes
