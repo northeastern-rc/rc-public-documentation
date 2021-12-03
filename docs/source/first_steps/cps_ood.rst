@@ -1,16 +1,16 @@
 .. _access_ood:
 
-******************************
-JupyterLab for your CPS class
-******************************
+****************************
+JupyterLab for CPS classes
+****************************
 These instructions describe the process of opening a CPS JupyterLab environment on the Open OnDemand (OOD) Discovery web portal and accessing class work directories.
 
 .. note::
-   Due to several reports about problems using the Safari browser on OOD, it is recommended to use Google Chrome, Mozilla Firefox or Microsoft Edge browsers for best experience. Use any modern browser that supports ECMAScript 2016 (see: `OnDemand Documentation <https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements>`_).  
+   Due to several reports about problems using the **Safari** browser on OOD, we recommended using **Google Chrome, Mozilla Firefox or Microsoft Edge** browsers for best experience. Use any modern browser that supports ECMAScript 2016 (see: `OnDemand Documentation <https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements>`_).  
 
-Step 1 - access your CPS Class JupyterLab environment
+Step 1 - access the CPS Class JupyterLab environment
 =====================================================
-#. Ensure with your class instructor that a `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ was requested by the instructor. You will only be able to find your class resources if a request was made. 
+#. The class instructor needs to fill in the: `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ You will only be able to find your class resources if a request was made. 
 
 #. In a web browser, go to http://ood.discovery.neu.edu. Login with your NU credentials (follow (see more information here :ref:`connect_ood`).
 
@@ -20,7 +20,7 @@ Step 1 - access your CPS Class JupyterLab environment
  :width: 400
  :alt: A menu dropdown list of classes, with a CPS ALY3070 class highlighted.
 
-For example: **ALY3070 JupyterLab**.
+ For example: **ALY3070 JupyterLab**.
 
 #. Select the default options and click **Launch**.
 
@@ -28,12 +28,12 @@ For example: **ALY3070 JupyterLab**.
  :width: 400
  :alt: A form of the cps jupyterlab options.
 
-For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab launches.
+ For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab launches.
 
 .. note::
    If **Working Directory** left blank, the session will launch in the main class folder (in this example ``/work/cps/ALY3070``). Alternatively, start the session directly from your personal working directory by entering: ``/work/cps/ALY3070/students/[username]``, where ``[username]`` is your username on Discovery. The instructions below assume the field is left blank. 
 
-Wait until the session is successfully created and started (turns green).
+ Wait until the session is successfully created and started (turns green).
 
 #. Click **Connect to Jupyter** to open JupyterLab.
  
@@ -41,7 +41,7 @@ Wait until the session is successfully created and started (turns green).
  :width: 400
  :alt: session created view. 
 
-This will open a JupyterLab interface in another tab.
+ This will open a JupyterLab interface in another tab.
 
 #. Select **Cancel** when prompted with the **Build Recommended** option. 
 
@@ -49,7 +49,7 @@ This will open a JupyterLab interface in another tab.
  :width: 400
  :alt: build window view.
 
-The package jupyterlab-dash does not require a build, and will not work when build is enabled.
+ The package jupyterlab-dash does not require a build, and will not work when build is enabled.
 
 Step 2 - access your class directories
 =======================================
@@ -61,7 +61,7 @@ After you are connected to a CPS JupyterLab session on OOD, you can access any s
  :width: 400
  :alt: show files.
 
-For instance, file **Example.ipynb** can be viewed using Python Jupyter Notebook (but not edited or removed).
+ For instance, file **Example.ipynb** can be viewed using Python Jupyter Notebook (but not edited or removed).
 
 #. Navigate to the **students** directory, where you will see another directory under your username.
 
@@ -69,13 +69,13 @@ For instance, file **Example.ipynb** can be viewed using Python Jupyter Notebook
  :width: 400
  :alt: show students folder.
 
-Enter your personal class directory.
+ Enter your personal class directory.
 
 .. image:: /images/cps-ood-jupyterlab-username-folder.png
  :width: 400
  :alt: show inside username folder.
 
-Here you can create and edit files. 
+ Here you can create and edit files. 
 
 #. Open a new Python Notebook session from the Launcher menu by clicking the **Python 3 (ipykernel)**. 
 
@@ -83,13 +83,13 @@ Here you can create and edit files.
  :width: 400
  :alt: show inside ipykernel.
 
-A new file will be created inside your directory called **Untitled.ipynb**. You can rename it by right-click + Rename option. 
+ A new file will be created inside your directory called **Untitled.ipynb**. You can rename it by right-click + Rename option. 
 
 .. image:: /images/cps-ood-jupyterlab-ipykernel.png
  :width: 400
  :alt: show inside ipykernel.
 
-This Python notebook has ready-to-use Python packages needed for your class.
+ This Python notebook has ready-to-use Python packages needed for your class.
 
 .. note:: 
   **Permission Denied errors:**
@@ -115,7 +115,7 @@ Due to the write-only access permissions on the **assignments** directory, it is
 
  cd /work/cps/ALY3070/students/$USER
 
-Where ``$USER`` is a saved shell variable for your username. You can optionally also replace it with your username.
+ Where ``$USER`` is a saved shell variable for your username. You can optionally also replace it with your username.
 
 #. Check that your assignment file is visible in the command line by typing ``ls``. Then, Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name)::
 
