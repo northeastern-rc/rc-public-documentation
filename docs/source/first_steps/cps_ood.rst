@@ -10,11 +10,11 @@ These instructions describe the process of opening a CPS JupyterLab environment 
 
 Step 1 - access your CPS Class JupyterLab environment
 =====================================================
-#. 1. Ensure with your class instructor that a `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ was requested by the instructor. You will only be able to find your class resources if a request was made. 
+#. Ensure with your class instructor that a `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ was requested by the instructor. You will only be able to find your class resources if a request was made. 
 
-#. 2. In a web browser, go to http://ood.discovery.neu.edu. Login with your NU credentials (follow (see more information here :ref:`connect_ood`).
+#. In a web browser, go to http://ood.discovery.neu.edu. Login with your NU credentials (follow (see more information here :ref:`connect_ood`).
 
-#. 3. Under the **Courses** menu, select your Class Name.
+#. Under the **Courses** menu, select your Class Name.
 
 .. image:: /images/cps-ood-menu.png
  :width: 400
@@ -22,7 +22,7 @@ Step 1 - access your CPS Class JupyterLab environment
 
 For example: **ALY3070 JupyterLab**.
 
-#. 4. Select the default options and click **Launch**.
+#. Select the default options and click **Launch**.
 
 .. image:: /images/cps-ood-jupyterform.png
  :width: 400
@@ -35,7 +35,7 @@ For more control of the session, modify **Time** for the session time (in hours)
 
 Wait until the session is successfully created and started (turns green).
 
-#. 5. Click **Connect to Jupyter** to open JupyterLab.
+#. Click **Connect to Jupyter** to open JupyterLab.
  
 .. image:: /images/cps-ood-jupyterlab-start-session.png
  :width: 400
@@ -43,7 +43,7 @@ Wait until the session is successfully created and started (turns green).
 
 This will open a JupyterLab interface in another tab.
 
-#. 6. Select **Cancel** when prompted with the **Build Recommended** option. 
+#. Select **Cancel** when prompted with the **Build Recommended** option. 
 
 .. image:: /images/cps-ood-build-window.png
  :width: 400
@@ -55,7 +55,7 @@ Step 2 - access your class directories
 =======================================
 After you are connected to a CPS JupyterLab session on OOD, you can access any shared class directories and your private class directory.
 
-#. 1. You can navigate between the class folders using the left menu. Your instructor may share files in this directory.
+#. You can navigate between the class folders using the left menu. Your instructor may share files in this directory.
 
 .. image:: /images/cps-ood-jupyterlab-folders-view.png
  :width: 400
@@ -63,7 +63,7 @@ After you are connected to a CPS JupyterLab session on OOD, you can access any s
 
 For instance, file **Example.ipynb** can be viewed using Python Jupyter Notebook (but not edited or removed).
 
-#. 2. Navigate to the **students** directory, where you will see another directory under your username.
+#. Navigate to the **students** directory, where you will see another directory under your username.
 
 .. image:: /images/cps-ood-jupyterlab-students-folder.png
  :width: 400
@@ -77,7 +77,7 @@ Enter your personal class directory.
 
 Here you can create and edit files. 
 
-#. 3. Open a new Python Notebook session from the Launcher menu by clicking the **Python 3 (ipykernel)**. 
+#. Open a new Python Notebook session from the Launcher menu by clicking the **Python 3 (ipykernel)**. 
 
 .. image:: /images/cps-ood-jupyterlab-ipykernel-launcher.png
  :width: 400
@@ -99,33 +99,33 @@ Step 3 - submit class assignments
 =================================
 Due to the write-only access permissions on the **assignments** directory, it is required to use the command line interface (Linux Terminal) to submit assignments. **Using other methods currently does not work**.
 
-#. 1. To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab New Launcher by clicking the **File** top menu option, and then selecting **New Launcher**.
+#. To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab New Launcher by clicking the **File** top menu option, and then selecting **New Launcher**.
 
 .. image:: /images/cps-ood-jupyterlab-new-launcher.png
  :width: 400
  :alt: open new launcher.
 
-#. 2. Click on the **Terminal** option under **Other** to open a Linux terminal.
+#. Click on the **Terminal** option under **Other** to open a Linux terminal.
 
 .. image:: /images/cps-ood-jupyterlab-open-terminal.png
  :width: 400
  :alt: open terminal.
 
-#. 3. Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly)::
+#. Navigate to your personal directory by typing the following command (change the class name from ``ALY3070`` to your class name accordingly)::
 
  cd /work/cps/ALY3070/students/$USER
 
 Where ``$USER`` is a saved shell variable for your username. You can optionally also replace it with your username.
 
-#. 4. Check that your assignment file is visible in the command line by typing ``ls``. Then, Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name)::
+#. Check that your assignment file is visible in the command line by typing ``ls``. Then, Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name)::
 
  cp Assignment1.ipynb ../../assignments
 
-#. 5. To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name)::
+#. To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name)::
 
  rm ../../assignments/Assignment1.ipynb
 
-#. 6. Close the Terminal tab when done.
+#. Close the Terminal tab when done.
 
 .. image:: /images/cps-ood-commandline.png
  :width: 400
