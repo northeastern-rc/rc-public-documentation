@@ -6,15 +6,15 @@ JupyterLab for CPS classes
 These instructions describe the process of opening a CPS JupyterLab environment on the Open OnDemand (OOD) Discovery web portal and accessing class work directories.
 
 .. note::
-   Due to several reports about problems using the **Safari** browser on OOD, we recommended using **Google Chrome, Mozilla Firefox or Microsoft Edge** browsers for best experience. Use any modern browser that supports ECMAScript 2016 (see: `OnDemand Documentation <https://osc.github.io/ood-documentation/latest/requirements.html#browser-requirements>`_).  
+   Due to problems with launching OOD on **Safari**, we recommend using **Google Chrome**, **Mozilla Firefox** or **Microsoft Edge** browsers instead for best experience.
 
 Accessing the CPS Class JupyterLab environment
 ===============================================
 
 .. important::
-  The class instructor needs to fill in the: `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ You will only be able to find your class resources if a request was made. 
+  The class instructor needs to fill in the: `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ You will only be able to find your class resources if a request was already made. 
 
-In a web browser, go to http://ood.discovery.neu.edu. Login with your NU credentials (follow (see more information here :ref:`connect_ood`).
+In a web browser, go to http://ood.discovery.neu.edu. Login with your NU credentials.
 
 Under the **Courses** menu, select your Class Name (For example: **ALY3070 JupyterLab**):
 
@@ -22,16 +22,16 @@ Under the **Courses** menu, select your Class Name (For example: **ALY3070 Jupyt
  :width: 400
  :alt: A menu dropdown list of classes, with a CPS ALY3070 class highlighted.
 
-Select the default options and click **Launch**. Wait until the session is successfully created and started (turns green).
+Select the default options and click **Launch**. Wait until the session is successfully created and ready to be launched (turns green).
 
 .. image:: /images/cps-ood-jupyterform.png
  :width: 400
  :alt: A form of the cps jupyterlab options.
 
-For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab launches.
+For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab will launch.
 
 .. note::
-   If **Working Directory** left blank, the session will launch in the main class folder (in this example ``/work/cps/ALY3070``). Alternatively, start the session directly from your personal working directory by entering: ``/work/cps/ALY3070/students/[username]``, where ``[username]`` is your username on Discovery. The instructions below assume the field is left blank. 
+   If **Working Directory** is left blank, the session will launch in the main class folder (in this example ``/work/cps/ALY3070``). Alternatively, start the session directly from your personal working directory by entering: ``/work/cps/ALY3070/students/[username]``, where ``[username]`` is your username on Discovery. The instructions below assume the field is left blank. 
 
 Click **Connect to Jupyter** to open JupyterLab:
  
@@ -81,7 +81,7 @@ Open a new Python Notebook session from the Launcher menu by clicking the **Pyth
  :width: 400
  :alt: show inside ipykernel.
 
-A new file will be created inside your directory called **Untitled.ipynb**. You can rename it by right-click + Rename option: 
+A new file will be created inside your directory called **Untitled.ipynb**. You can rename it by right-clicking on it and using the Rename option: 
 
 .. image:: /images/cps-ood-jupyterlab-ipykernel.png
  :width: 400
@@ -96,7 +96,7 @@ This Python notebook has ready-to-use Python packages needed for your class.
 Submit class assignments
 =========================
 .. important::
- Due to the write-only access permissions on the **assignments** directory, it is required to use the command line interface (Linux Terminal) to submit assignments. **Using other methods currently does not work**.
+ Due to the write-only access permissions on the **assignments** directory, it is required to use the command line interface (Linux Terminal) to submit assignments. **Using other methods, such as the JupyterLab interface or OOD File Explorer, currently do not work**.
 
 To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab New Launcher by clicking the **File** top menu option, and then selecting **New Launcher**:
 
