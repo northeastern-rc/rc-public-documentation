@@ -49,7 +49,7 @@ html_theme = 'sphinx_rtd_theme'
 
 #add logo to the upper left in the help system
 html_logo = 'images/NU_logo_small.png'
-html_theme_options = {'logo_only': True, 'includehidden': True}
+html_theme_options = {'logo_only': True, 'includehidden': False}
 
 # custom css file
 html_css_files = ['../css/custom.css']
