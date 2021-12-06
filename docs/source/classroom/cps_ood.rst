@@ -4,7 +4,7 @@
 CPS class-specific instructions
 *******************************
 
-.. important::
+.. Caution::
    **Note - the following instructions will only work for CPS classes.**
 
 These instructions describe the process of opening a CPS JupyterLab environment on the Open OnDemand (OOD) Discovery web portal and accessing class work directories.
