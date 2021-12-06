@@ -100,7 +100,7 @@ This Python notebook has ready-to-use Python packages needed for your class.
 Submit CPS class assignments
 ============================
 .. important::
- Due to the write-only access permissions on the **assignments** directory, it is required to use the command line interface (Linux Terminal) to submit assignments. **Using other methods, such as the JupyterLab interface or OOD File Explorer, currently do not work**.
+ Due to the write-only access permissions on the **assignments** directory, it is required to use the command line interface (Linux Terminal) to submit assignments. **Using other methods, such as the JupyterLab interface or OOD File Explorer, currently does not work**.
 
 To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab New Launcher by clicking the **File** top menu option, and then selecting **New Launcher**:
 
