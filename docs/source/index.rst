@@ -20,7 +20,6 @@ Northeastern University Research Computing
   first_steps/connect_mac
   first_steps/connect_windows
   first_steps/connect_ood
-  first_steps/cps_ood
 
 .. toctree::
    :maxdepth: 2
@@ -75,3 +74,4 @@ Northeastern University Research Computing
    :caption: Using Discovery in your classroom
 
    classroom/class_use
+   classroom/cps_ood
