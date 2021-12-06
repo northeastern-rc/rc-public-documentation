@@ -8,8 +8,8 @@ These instructions describe the process of opening a CPS JupyterLab environment 
 .. note::
    Due to problems with launching OOD on **Safari**, we recommend using **Google Chrome**, **Mozilla Firefox** or **Microsoft Edge** browsers instead for best experience.
 
-Accessing the CPS Class JupyterLab environment
-===============================================
+Access the CPS JupyterLab environment
+======================================
 
 .. important::
   The class instructor needs to fill in the: `Discovery Classroom Use Request <https://bit.ly/NURC-Classroom>`_ You will only be able to find your class resources if a request was already made. 
