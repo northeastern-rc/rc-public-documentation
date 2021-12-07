@@ -85,23 +85,25 @@ Use ``srun`` for interactive mode and ``sbatch`` for batch mode.
 The ``srun`` example below is requesting 1 node and 1 GPU with 1GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu. Note that on the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``)
 or your request will fail.
 
-``srun --partition=gpu --nodes=1 --pty --export=All --gres=gpu:1 --mem=1G --time=00:30:00 /bin/bash``
+``srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash``
 
 The ``sbatch`` example below is the similar to the ``srun`` example above, except for giving the job a name and directing the output to a file::
 
   #SBATCH --nodes=1
-  #SBATCH --time=0:30:00
+  #SBATCH --time=01:00:00
   #SBATCH --job-name=gpu_run
-  #SBATCH --mem=1G
+  #SBATCH --mem=4GB
+  #SBATCH --ntasks=1
   #SBATCH --gres=gpu:1
-  #SBATCH --output=exec.%j.out
+  #SBATCH --output=myjob.%j.out
+  #SBATCH --error=myjob.%j.err
   <your code>
 
 Specifying a GPU type
 +++++++++++++++++++++
-You can add a specific type of GPU to the ``--gres=`` option (with either ``srun`` or ``sbatch``). The following example is requesting one k40m gpu::
+You can add a specific type of GPU to the ``--gres=`` option (with either ``srun`` or ``sbatch``). The following example is requesting one k80 gpu::
 
-  --gres=gpu:k40m:1
+  --gres=gpu:k80:1
 
 Note that specifying one type of GPU could result in a longer wait time for that specific resource. For a list of GPU types, refer to the GPU Types column in the table at the top of this page.
 
@@ -127,7 +129,8 @@ Using GPUs with PyTorch
 You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery.
 
 The following is an example of using a conda virtual environment with PyTorch for CUDA version 11.1. Make sure that you are on a GPU node before loading the environment::
-
+  
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load cuda/11.1
   module load anaconda3/2021.11
   conda create --name pytorch_env python=3.7 -y
@@ -135,13 +138,21 @@ The following is an example of using a conda virtual environment with PyTorch fo
   conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge -y
   python -c'import torch; print(torch.cuda.is_available())'
 
-As the latest version of Pytorch often depends the newst CUDA avaialble, please refer to the Pytorch documentation page for the installation instructions: https://pytorch.org/. 
+As the latest version of PyTorch often depends the newst CUDA avaialble, please refer to the PyTorch documentation page for the installation instructions: https://pytorch.org/. 
+
+Alternatively, you can also use our existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0). For example: ::
+
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+  module load anaconda3/2021.05 
+  module load cuda/11.1 
+  source activate pytorch_env_training
 
 Using TensorFlow
 ================
-We recommend that you use CUDA 10.2 with the latest version of TensorFlow.
+We recommend that you use CUDA 10.2 with the latest version of TensorFlow (TF).
 You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.::
 
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load anaconda3/3.7
   module load cuda/10.2
   conda create --name TF_env python=3.7 anaconda #where TF_env is the name of the conda environment
@@ -161,3 +172,10 @@ To get the name of the GPU, type::
 For example, you should see output like the line below::
 
    physical GPU (device: 0, name: Tesla K40m, pci bus id: 0000:0b:00.0, compute capability: 3.5) /device:GPU:0
+
+Alternatively, you can use our existing TF build (`base` environemnt, TF version 2.2.0). For example: ::
+
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+  module load anaconda3/2021.07-TF 
+  module load cuda/10.2
+  source activate
