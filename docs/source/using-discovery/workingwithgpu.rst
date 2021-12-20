@@ -74,7 +74,7 @@ limit on each job. Both partitions give you access to all of the above GPU types
      - 12
      - 12
 
-Anyone with an account on Discovery can use the ``gpu`` partition. Using ```multigpu`` requires an application process, which includes documenting
+Anyone with an account on Discovery can use the ``gpu`` partition. Using ``multigpu`` requires an application process, which includes documenting
 the need for using ``multigpu``. To request temporary access to multigpu for testing or to submit an application for full access, you need to fill out and submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_.
 After you submit a request, it is evaluated by members of the RC team. This is to ensure that the resources in this partition will be used appropriately.
 
@@ -106,7 +106,9 @@ You can add a specific type of GPU to the ``--gres=`` option (with either ``srun
   --gres=gpu:p100:1
 
 .. note::
- Note that requesting a specific type of GPU could result in longer wait times based on GPU availability at that time. For a list of GPU types, refer to the GPU Types column in the table at the top of this page. 
+ Note that requesting a specific type of GPU could result in longer wait times based on GPU availability at that time. 
+
+For a list of available GPU types, refer to the GPU Types column in the table at the top of this page. 
 
 Using CUDA
 ===========
@@ -122,11 +124,11 @@ There are several versions of CUDA Toolkits on Discovery, as listed below.::
   cuda/11.3
   cuda/11.4
 
-Use the command ``nvidia-smi`` inside a GPU node to get the latest CUDA driver information, GPU type and utilization stats of your GPU.
-
 You can always use the ``module avail`` command to check for the latest software versions on Discovery as well. To see details on a specific CUDA toolkit version, use ``module show``. For example, ``module show cuda/11.4``.
 
 To add CUDA to your path use ``module load``. For example, type ``module load cuda/11.4`` to load version 11.4 to your path.
+
+Use the command ``nvidia-smi`` (NVIDIA System Management Interface) inside a GPU node to get the CUDA driver information and monitor the GPU device.
 
 Using GPUs with PyTorch
 ========================
