@@ -105,15 +105,12 @@ You can add a specific type of GPU to the ``--gres=`` option (with either ``srun
 
   --gres=gpu:p100:1
 
-.. Caution::
- NVIDIA provides CUDA support of up to version 11.3 for k80 and k40m GPUs.
-
 .. note::
- Note that requesting a specific type of GPU could result in a longer wait time based on its availability and resources requested at that time. For a list of GPU types, refer to the GPU Types column in the table at the top of this page.
+ Note that requesting a specific type of GPU could result in longer wait times based on GPU availability at that time. For a list of GPU types, refer to the GPU Types column in the table at the top of this page. 
 
 Using CUDA
 ===========
-There are several versions of CUDA on Discovery, as listed below.::
+There are several versions of CUDA Toolkits on Discovery, as listed below.::
 
   cuda/9.0
   cuda/9.2
@@ -123,28 +120,43 @@ There are several versions of CUDA on Discovery, as listed below.::
   cuda/11.1
   cuda/11.2
   cuda/11.3
+  cuda/11.4
 
-You can always use the ``module avail`` command to check for the latest software versions on Discovery as well.
+Use the command ``nvidia-smi`` inside a GPU node to get the latest CUDA driver information, GPU type and utilization stats of your GPU.
 
-To add CUDA to your path use ``module load``. For example, type ``module load cuda/10.0`` to load version 10 to your path.
+You can always use the ``module avail`` command to check for the latest software versions on Discovery as well. To see details on a specific CUDA toolkit version, use ``module show``. For example, ``module show cuda/11.4``.
+
+To add CUDA to your path use ``module load``. For example, type ``module load cuda/11.4`` to load version 11.4 to your path.
 
 Using GPUs with PyTorch
 ========================
 You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery.
 
-The following is an example of using a conda virtual environment with PyTorch for CUDA version 11.1. Make sure that you are on a GPU node before loading the environment::
+The following examples demonstrate how to build PyTorch inside a conda virtual environment for CUDA version 11.3. Make sure that you are on a GPU node before loading the environment.
+
+Lightweight installation::
   
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load cuda/11.1
+  module load cuda/11.3
   module load anaconda3/2021.11
   conda create --name pytorch_env python=3.7 -y
   source activate pytorch_env
-  conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge -y
+  conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=11.3 -c pytorch -c conda-forge -y
+  python -c'import torch; print(torch.cuda.is_available())'
+
+Heavyweight installation (with Anaconda libraries)::
+
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+  module load cuda/11.3
+  module load anaconda3/2021.11
+  conda create --name pytorch_env python=3.7 anaconda -y
+  source activate pytorch_env
+  conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
   python -c'import torch; print(torch.cuda.is_available())'
 
 As the latest version of PyTorch often depends the newst CUDA avaialble, please refer to the PyTorch documentation page for the installation instructions: https://pytorch.org/. 
 
-Alternatively, you can also use our existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0). For example: ::
+Alternatively, you can also use our existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1). To use it, type ::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load anaconda3/2021.05 
