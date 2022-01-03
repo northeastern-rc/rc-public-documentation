@@ -156,7 +156,7 @@ Heavyweight installation (with Anaconda libraries)::
   conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
   python -c'import torch; print(torch.cuda.is_available())'
 
-As the latest version of PyTorch often depends the newst CUDA avaialble, please refer to the PyTorch documentation page for the installation instructions: https://pytorch.org/. 
+As the latest version of PyTorch often depends on the newst CUDA avaialble, please refer to the PyTorch documentation page for the installation instructions: https://pytorch.org/. 
 
 Alternatively, you can also use our existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1). To use it, type ::
 
@@ -168,7 +168,9 @@ Alternatively, you can also use our existing Pytorch build (`pytorch_env_trainin
 Using TensorFlow
 ================
 We recommend that you use CUDA 10.2 with the latest version of TensorFlow (TF).
-You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.::
+You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.
+
+Heavyweight installation (with Anaconda libraries)::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load anaconda3/3.7
@@ -176,18 +178,15 @@ You can find the compatibility of CUDA and TensorFlow versions at the following 
   conda create --name TF_env python=3.7 anaconda #where TF_env is the name of the conda environment
   source activate TF_env #load the virtual conda environment "TF_env"
   conda install -c anaconda tensorflow-gpu -y #install GPU-enabled TF inside the virtual environment
+  python -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' #test if GPU device is detected with TF
 
-If you want to test your environment, first make sure you are on GPU node, then type::
-
-   python -c 'import tensorflow as tf;  print(tf.test.is_built_with_cuda())'
-
-You should see the result ``True`` if successful.
+You should see the result ``True`` if TF detected a GPU.
 
 To get the name of the GPU, type::
 
    python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
 
-For example, you should see output like the line below::
+If the installation is successful, then you should see the following output::
 
    physical GPU (device: 0, name: Tesla K40m, pci bus id: 0000:0b:00.0, compute capability: 3.5) /device:GPU:0
 
