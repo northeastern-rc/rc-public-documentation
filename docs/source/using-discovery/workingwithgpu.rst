@@ -186,7 +186,7 @@ To get the name of the GPU, type::
 
    python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
 
-If the installation is successful, then you should see the following output::
+For example, you should see output like the line below::
 
    physical GPU (device: 0, name: Tesla K40m, pci bus id: 0000:0b:00.0, compute capability: 3.5) /device:GPU:0
 
