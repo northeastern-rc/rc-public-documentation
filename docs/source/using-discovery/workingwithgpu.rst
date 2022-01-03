@@ -156,6 +156,8 @@ Heavyweight installation (with Anaconda libraries)::
   conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
   python -c'import torch; print(torch.cuda.is_available())'
 
+You should see the result ``True`` if CUDA is detected by PyTorch.
+
 As the latest version of PyTorch often depends on the newst CUDA avaialble, please refer to the PyTorch documentation page for the installation instructions: https://pytorch.org/. 
 
 Alternatively, you can also use our existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1). To use it, type ::
