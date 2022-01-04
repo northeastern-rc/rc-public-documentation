@@ -167,9 +167,9 @@ Alternatively, you can also use our existing Pytorch build (`pytorch_env_trainin
   module load cuda/11.1 
   source activate pytorch_env_training
 
-Using TensorFlow
-================
-We recommend that you use CUDA 10.2 with the latest version of TensorFlow (TF).
+Using GPUs with TensorFlow
+==========================
+We recommend that you use CUDA 10.2 when working on a GPU with the latest version of TensorFlow (TF).
 You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.
 
 Heavyweight installation (with Anaconda libraries)::
