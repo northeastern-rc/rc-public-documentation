@@ -74,7 +74,7 @@ limit on each job. Both partitions give you access to all of the above GPU types
      - 12
      - 12
 
-Anyone with an account on Discovery can use the ``gpu`` partition. Using ```multigpu`` requires an application process, which includes documenting
+Anyone with an account on Discovery can use the ``gpu`` partition. Using ``multigpu`` requires an application process, which includes documenting
 the need for using ``multigpu``. To request temporary access to multigpu for testing or to submit an application for full access, you need to fill out and submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_.
 After you submit a request, it is evaluated by members of the RC team. This is to ensure that the resources in this partition will be used appropriately.
 
@@ -82,32 +82,37 @@ Requesting GPUs with ``srun`` or ``sbatch``
 ===========================================
 Use ``srun`` for interactive mode and ``sbatch`` for batch mode.
 
-The ``srun`` example below is requesting 1 node and 1 GPU with 1GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu. Note that on the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``)
-or your request will fail.
+The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu. Note that on the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``)
+or your request will fail::
 
-``srun --partition=gpu --nodes=1 --pty --export=All --gres=gpu:1 --mem=1G --time=00:30:00 /bin/bash``
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 
-The ``sbatch`` example below is the similar to the ``srun`` example above, except for giving the job a name and directing the output to a file::
+The ``sbatch`` example below is similar to the ``srun`` example above, except for giving the job a name and directing the output to a file::
 
   #SBATCH --nodes=1
-  #SBATCH --time=0:30:00
+  #SBATCH --time=01:00:00
   #SBATCH --job-name=gpu_run
-  #SBATCH --mem=1G
+  #SBATCH --mem=4GB
+  #SBATCH --ntasks=1
   #SBATCH --gres=gpu:1
-  #SBATCH --output=exec.%j.out
+  #SBATCH --output=myjob.%j.out
+  #SBATCH --error=myjob.%j.err
   <your code>
 
 Specifying a GPU type
 +++++++++++++++++++++
-You can add a specific type of GPU to the ``--gres=`` option (with either ``srun`` or ``sbatch``). The following example is requesting one k40m gpu::
+You can add a specific type of GPU to the ``--gres=`` option (with either ``srun`` or ``sbatch``). The following example is requesting one p100 gpu::
 
-  --gres=gpu:k40m:1
+  --gres=gpu:p100:1
 
-Note that specifying one type of GPU could result in a longer wait time for that specific resource. For a list of GPU types, refer to the GPU Types column in the table at the top of this page.
+.. note::
+ Note that requesting a specific type of GPU could result in longer wait times based on GPU availability at that time. 
+
+For a list of available GPU types, refer to the GPU Types column in the table at the top of this page. 
 
 Using CUDA
 ===========
-There are several versions of CUDA on Discovery, as listed below.::
+There are several versions of CUDA Toolkits on Discovery, as listed below.::
 
   cuda/9.0
   cuda/9.2
@@ -117,47 +122,79 @@ There are several versions of CUDA on Discovery, as listed below.::
   cuda/11.1
   cuda/11.2
   cuda/11.3
+  cuda/11.4
 
-You can always use the ``module avail`` command to check for the latest software versions on Discovery as well.
+You can always use the ``module avail`` command to check for the latest software versions on Discovery as well. To see details on a specific CUDA toolkit version, use ``module show``. For example, ``module show cuda/11.4``.
 
-To add CUDA to your path use ``module load``. For example, type ``module load cuda/10.0`` to load version 10 to your path.
+To add CUDA to your path use ``module load``. For example, type ``module load cuda/11.4`` to load version 11.4 to your path.
+
+Use the command ``nvidia-smi`` (NVIDIA System Management Interface) inside a GPU node to get the CUDA driver information and monitor the GPU device.
 
 Using GPUs with PyTorch
 ========================
 You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery.
 
-The following is an example of using a conda virtual environment with PyTorch for CUDA version 11.1. Make sure that you are on a GPU node before loading the environment::
+The following examples demonstrate how to build PyTorch inside a conda virtual environment for CUDA version 11.3. Make sure that you are on a GPU node before loading the environment.
 
-  module load cuda/11.1
+Lightweight installation::
+  
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+  module load cuda/11.3
   module load anaconda3/2021.11
   conda create --name pytorch_env python=3.7 -y
   source activate pytorch_env
-  conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge -y
+  conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=11.3 -c pytorch -c conda-forge -y
   python -c'import torch; print(torch.cuda.is_available())'
 
-As the latest version of Pytorch often depends the newst CUDA avaialble, please refer to the Pytorch documentation page for the installation instructions: https://pytorch.org/. 
+Heavyweight installation (with Anaconda libraries)::
 
-Using TensorFlow
-================
-We recommend that you use CUDA 10.2 with the latest version of TensorFlow.
-You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.::
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+  module load cuda/11.3
+  module load anaconda3/2021.11
+  conda create --name pytorch_env python=3.7 anaconda -y
+  source activate pytorch_env
+  conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
+  python -c'import torch; print(torch.cuda.is_available())'
 
+You should see the result ``True`` if CUDA is detected by PyTorch.
+
+As the latest version of PyTorch often depends on the newest CUDA available, please refer to the PyTorch documentation page for the installation instructions: https://pytorch.org/. 
+
+Alternatively, you can also use our existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1). To use it, type ::
+
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+  module load anaconda3/2021.05 
+  module load cuda/11.1 
+  source activate pytorch_env_training
+
+Using GPUs with TensorFlow
+==========================
+We recommend that you use CUDA 10.2 when working on a GPU with the latest version of TensorFlow (TF).
+You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.
+
+Heavyweight installation (with Anaconda libraries)::
+
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load anaconda3/3.7
   module load cuda/10.2
   conda create --name TF_env python=3.7 anaconda #where TF_env is the name of the conda environment
-  conda  activate TF_env
-  conda install -c anaconda tensorflow-gpu
+  source activate TF_env #load the virtual conda environment "TF_env"
+  conda install -c anaconda tensorflow-gpu -y #install GPU-enabled TF inside the virtual environment
+  python -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' #test if GPU device is detected with TF
 
-If you want to test your environment, first make sure you are on GPU node, then type::
-
-   python -c 'import tensorflow as tf;  print(tf.test.is_built_with_cuda())'
-
-You should see the result ``True`` if successful.
+You should see the result ``True`` if TF detected a GPU.
 
 To get the name of the GPU, type::
 
    python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
 
-For example, you should see output like the line below::
+If the installation is successful, then, for example, you should see the following output::
 
    physical GPU (device: 0, name: Tesla K40m, pci bus id: 0000:0b:00.0, compute capability: 3.5) /device:GPU:0
+
+Alternatively, you can use our existing TF build (`base` environemnt, TF version 2.2.0). For example: ::
+
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+  module load anaconda3/2021.07-TF 
+  module load cuda/10.2
+  source activate
