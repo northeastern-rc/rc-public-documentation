@@ -83,11 +83,11 @@ Requesting GPUs with ``srun`` or ``sbatch``
 Use ``srun`` for interactive mode and ``sbatch`` for batch mode.
 
 The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu. Note that on the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``)
-or your request will fail.
+or your request will fail::
 
-``srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash``
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 
-The ``sbatch`` example below is the similar to ``srun`` example above, except for giving the job a name and directing the output to a file::
+The ``sbatch`` example below is similar to the ``srun`` example above, except for giving the job a name and directing the output to a file::
 
   #SBATCH --nodes=1
   #SBATCH --time=01:00:00
@@ -158,7 +158,7 @@ Heavyweight installation (with Anaconda libraries)::
 
 You should see the result ``True`` if CUDA is detected by PyTorch.
 
-As the latest version of PyTorch often depends on the newst CUDA avaialble, please refer to the PyTorch documentation page for the installation instructions: https://pytorch.org/. 
+As the latest version of PyTorch often depends on the newest CUDA available, please refer to the PyTorch documentation page for the installation instructions: https://pytorch.org/. 
 
 Alternatively, you can also use our existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1). To use it, type ::
 
@@ -188,7 +188,7 @@ To get the name of the GPU, type::
 
    python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
 
-For example, you should see output like the line below::
+If the installation is successful, then, for example, you should see the following output::
 
    physical GPU (device: 0, name: Tesla K40m, pci bus id: 0000:0b:00.0, compute capability: 3.5) /device:GPU:0
 
