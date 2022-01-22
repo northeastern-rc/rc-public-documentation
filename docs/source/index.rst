@@ -20,6 +20,7 @@ Northeastern University Research Computing
   first_steps/connect_mac
   first_steps/connect_windows
   first_steps/connect_ood
+  first_steps/bashrc
 
 .. toctree::
    :maxdepth: 2
@@ -50,7 +51,6 @@ Northeastern University Research Computing
   using-discovery/workingwithgpu
   using-discovery/transferringdata
   using-discovery/globus
-  using-discovery/bashrc
 
 .. toctree::
    :maxdepth: 2
