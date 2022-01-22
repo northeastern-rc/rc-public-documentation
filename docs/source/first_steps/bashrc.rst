@@ -63,3 +63,28 @@ Example procedure for editing your .bashrc file:
 
 7. Save the file and exit the editor.
 8. Sign out of Discovery and sign back in for the changes to take effect.
+
+Sourcing a Shell script example
+===============================
+A safe alternative to using .bashrc is to source a Shell script inside your runtime job environment. Below is an example script to load an Anaconda module and source a Conda environment which will then be used inside the Slurm script. 
+
+Create a Shell script `myenv.bash`::
+
+ #!/bin/bash
+ module load anaconda3/2021.05
+ module load cuda/11.1
+ source activate pytorch_env_training
+
+Then, source the Shell script inside your sbatch Slurm script (see :ref:`using_sbatch`)::
+
+ #SBATCH --nodes=1
+ #SBATCH --time=01:00:00
+ #SBATCH --job-name=gpu_run
+ #SBATCH --mem=4GB
+ #SBATCH --ntasks=1
+ #SBATCH --gres=gpu:1
+ #SBATCH --output=myjob.%j.out
+ #SBATCH --error=myjob.%j.err
+ 
+ source myenv.bash
+ python <myprogram>  
