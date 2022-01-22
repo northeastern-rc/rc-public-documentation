@@ -77,6 +77,7 @@ Create a Shell script `myenv.bash`::
 
 Then, source the Shell script inside your sbatch Slurm script (see :ref:`using_sbatch`)::
 
+ #!/bin/bash
  #SBATCH --nodes=1
  #SBATCH --time=01:00:00
  #SBATCH --job-name=gpu_run
