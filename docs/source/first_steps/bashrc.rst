@@ -7,13 +7,12 @@ Shell environment on Discovery
 The Discovery Shell environment and .bashrc
 +++++++++++++++++++++++++++++++++++++++++++
 
-Discovery uses a Linux-based Operating System (CentOS) that uses the Shell to interface with the user. Bash (Bourne Again SHell) is one of the most popular Shell implementations whichn is the default shell on Discovery.  
+Discovery uses a Linux-based Operating System (CentOS) that uses the Shell to interface with the user. Bash (Bourne Again SHell) is one of the most popular Shell implementations which is the default Shell on Discovery.  
 
-The Shell script .bashrc is used by Bash to initialize your Shell environment. For example, it can be used to define shell environemnt variables (such as `PATH`) or aliases and load modules.
+The Shell script .bashrc is used by Bash to initialize your Shell environment. For example, it can be used to define shell environemnt variables (such as ``PATH``) or aliases and load modules.
 Your .bashrc file lives in your /home directory. You can make changes to it with a text editor like `nano <https://www.nano-editor.org/>`_.
-Adding sections to your .bashrc file, such as adding modules to load when you sign in or assigning aliases for commands that you use frequently, can be time savers for your workflows.
 
-.. caution:: Making edits to your .bashrc file can result in issues, such as not able to launch an app or not able to execute commands. Incorrect changes to your `PATH` variable may result in the inavibility to use basic Shell commands.  
+.. caution:: Making edits to your .bashrc file can result in many issues. Some changes may prevent you from launching apps or executing commands. Modifying your ``PATH`` variable may result in the inavibility to use basic Shell commands (such as ``cd`` or ``ls``) if not done correctly.  
              Before making changes to your .bashrc file, make a backup of the default .bashrc file so you can restore it if necessary.
              If you need help with editing your .bashrc file, reach out to rchelp@northeastern.edu or `schedule a consultation with
              a staff member <https://outlook.office365.com/owa/calendar/ResearchComputing2@northeastern.onmicrosoft.com/bookings/>`_
@@ -27,7 +26,7 @@ You have a default .bashrc file in your home directory when your account is crea
 .. image:: /images/catbashrc.jpg
 
 .. important::
-  We recommend to keep .bashrc unchanged when using Discovery. You can source environment Shell scripts or load modules directly inside your jobs instead. This apprach can prevent potential runtime errors from loading incompatible modules, setting environment variables incorrectly, or from mixing multiple software environments. 
+  We recommend to keep .bashrc unchanged when using Discovery. You can source environment Shell scripts or load modules directly inside your job instead. This apprach can prevent some runtime errors from loading incompatible modules, setting environment variables incorrectly, or from mixing multiple software and Conda environments. 
 
 Conda and .bashrc
 ++++++++++++++++++
@@ -37,7 +36,7 @@ follow the procedure outlined in :ref:`mini_conda`, there will be a section adde
 
 .. image:: /images/minicondabashrc.jpg
 
-You should not modify this section in the .bashrc file directly. If it was change, remove this section manually using a file editor.
+You should not modify this section in the .bashrc file directly. If it was changed, remove this section manually using a file editor.
 
 .. caution:: We recommend removing the conda initialize section from your .bashrc as it may interfere with the correct startup environment when using Open OnDemand apps. You should always load your Conda environment after your job already started.
 
