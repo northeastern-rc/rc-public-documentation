@@ -31,8 +31,7 @@ You have a default .bashrc file in your home directory when your account is crea
 Conda and .bashrc
 ++++++++++++++++++
 
-In addition to editing your .bashrc file as outlined in the example above, programs that you install can also modify your .bashrc file. For example, if you
-follow the procedure outlined in :ref:`mini_conda`, there will be a section added to your .bashrc file that automatically loads your conda environment every time you sign in to Discovery. See the figure below for an example of this:
+In addition to editing your .bashrc file as outlined in the example above, programs that you install can also modify your .bashrc file. For example, if you follow the procedure outlined in :ref:`mini_conda`, there may be a section added to your .bashrc file (if you didn't use the ``-b`` batch option) that automatically loads your conda environment every time you sign in to Discovery. See the figure below for an example of this:
 
 .. image:: /images/minicondabashrc.jpg
 

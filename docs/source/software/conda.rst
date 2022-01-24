@@ -57,4 +57,4 @@ Conda best practices
 3. You can build Conda environments in different locations to save space on your home directory (see :ref:`discovery_storage`). You can use the ``--prefix`` flag when building your environment. For example: ``conda create myenv --prefix=/work/<mygroup>/<mydirectory>``.
 
 .. note::
-  It is not recommended to build your Miniconda and virtual Conda environments inside your /home directory due to its limited space qouta and lower performance of the file system (see :ref:`discovery_storage`). If your group does not have access to /work, the group PI can request it using the `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ .
+  It is not recommended to build your Miniconda and virtual Conda environments inside your /home directory due to its limited space qouta (see :ref:`discovery_storage`). Use the /work file system instead. If your group needs access to /work, the group PI can request it using: `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ .
