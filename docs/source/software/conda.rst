@@ -37,16 +37,13 @@ Miniconda3 with Python 3.7.
 1. If you are on a login node, move to a compute node by typing ``srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash``.
 2. Type ``wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`` to get the latest version of Miniconda.
 3. Type ``sha256sum Miniconda3-latest-Linux-x86_64.sh`` to check the hash key of the package.
-4. Type ``bash Miniconda3-latest-Linux-x86_64.sh`` to start the installation.
-5. Press ``Enter`` to review the license agreement.
-6. Type ``yes`` to agree to the license agreement.
-7. Press ``Enter`` to accept the default installation location (your /home directory, e.g. /home/<yourusername>/miniconda3), or enter a different location such as ``/work/<mygroup>/<mydirectory>`` (recommended).
-8. Type ``No`` if asked to initialize Miniconda using conda init to avoid modifications to your .bashrc file (see :ref:`bashrc`).
-9. Type ``source miniconda3/bin/activate`` (or ``source /work/<mygroup>/<mydirectory>/miniconda3/bin/activate``) to activate the miniconda environment.
+4. Type ``bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>`` to start the installation, where ``<dir>`` should be replaced with the full path to your desired installation directory. For example, set it to ``/work/<mygroup>/<mydirectory>/miniconda3`` (recommended).
+5. Type ``source <dir>/bin/activate`` to activate the miniconda environment.
+6. Another recommended step is to update your Conda version (possible only when using conda you own): ``conda update conda -y``
 
-After installing and activating Miniconda, you can create a Conda environment. In the example below, the Conda envinronment is named "my-python38environment" and installs Python version 3.8.
+After installing, activating and updating Miniconda, you can create a new virtual Conda environment. In the example below, the Conda envinronment is named "my-python38environment" and installs Python version 3.8.
 
-1. After completing steps 1 through 9 in the previous procedure, type ``conda create --name my-python38environment python=3.8``.
+1. After completing steps 1 through 6 in the previous procedure, type ``conda create --name my-python38environment python=3.8``.
 2. Type ``y`` if asked to proceed with the installation.
 3. Type ``conda activate my-python38environment`` to activate the environment.
 
@@ -58,3 +55,6 @@ Conda best practices
 1. Your .conda directory may get very large if you install multiple packages and create many virtual Conda environments. Make sure to clean the Conda cache and clean unused packages with: ``conda clean --all``.
 2. Clean unused Conda environments by first listing the environments with: ``conda env list`` , and then removing unused ones: ``conda env remove --name <yourenvironmentname>``.
 3. You can build Conda environments in different locations to save space on your home directory (see :ref:`discovery_storage`). You can use the ``--prefix`` flag when building your environment. For example: ``conda create myenv --prefix=/work/<mygroup>/<mydirectory>``.
+
+.. note::
+  It is not recommended to build your Miniconda and virtual Conda environments inside your /home directory due to its limited space qouta and lower performance of the file system (see :ref:`discovery_storage`). If your group does not have access to /work, the group PI can request it using the `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ .

@@ -7,12 +7,12 @@ Shell environment on Discovery
 The Discovery Shell environment and .bashrc
 +++++++++++++++++++++++++++++++++++++++++++
 
-Discovery uses a Linux-based Operating System (CentOS) that uses the Shell to interface with the user. Bash (Bourne Again SHell) is one of the most popular Shell implementations which is the default Shell on Discovery.  
+Discovery uses a Linux-based Operating System (CentOS), where the Shell program is used to interface with the user. Bash (Bourne Again SHell) is one of the most popular Shell implementations which is the default Shell on Discovery.  
 
-The Shell script .bashrc is used by Bash to initialize your Shell environment. For example, it can be used to define shell environemnt variables (such as ``PATH``) or aliases and load modules.
-Your .bashrc file lives in your /home directory. You can make changes to it with a text editor like `nano <https://www.nano-editor.org/>`_.
+The Shell script .bashrc is used by Bash to initialize your Shell environment. For example, it is typically used to define aliases, functions and load modules. Note that environment variables settings (such as ``PATH``) generally go in the .bash_profile or .profile files.
+Your .bashrc, .bash_profile and .profile files live in your /home directory. You can make changes to your .bashrc with a text editor like `nano <https://www.nano-editor.org/>`_.
 
-.. caution:: Making edits to your .bashrc file can result in many issues. Some changes may prevent you from launching apps or executing commands. Modifying your ``PATH`` variable may result in the inavibility to use basic Shell commands (such as ``cd`` or ``ls``) if not done correctly.  
+.. caution:: Making edits to your .bashrc file can result in many issues. Some changes may prevent you from launching apps or executing commands. Modifying your ``PATH`` variable may result in the inability to use basic Shell commands (such as ``cd`` or ``ls``) if not done correctly.  
              Before making changes to your .bashrc file, make a backup of the default .bashrc file so you can restore it if necessary.
              If you need help with editing your .bashrc file, reach out to rchelp@northeastern.edu or `schedule a consultation with
              a staff member <https://outlook.office365.com/owa/calendar/ResearchComputing2@northeastern.onmicrosoft.com/bookings/>`_
@@ -26,7 +26,7 @@ You have a default .bashrc file in your home directory when your account is crea
 .. image:: /images/catbashrc.jpg
 
 .. important::
-  We recommend to keep .bashrc unchanged when using Discovery. You can source environment Shell scripts or load modules directly inside your job instead. This apprach can prevent some runtime errors from loading incompatible modules, setting environment variables incorrectly, or from mixing multiple software and Conda environments. 
+  We recommend to keep .bashrc unchanged when using Discovery. You can source environment Shell scripts or load modules directly inside your job instead. This approach can prevent some runtime errors from loading incompatible modules, setting environment variables incorrectly, or from mixing multiple software and Conda environments. 
 
 Conda and .bashrc
 ++++++++++++++++++
@@ -38,7 +38,7 @@ follow the procedure outlined in :ref:`mini_conda`, there will be a section adde
 
 You should not modify this section in the .bashrc file directly. If it was changed, remove this section manually using a file editor.
 
-.. caution:: We recommend removing the conda initialize section from your .bashrc as it may interfere with the correct startup environment when using Open OnDemand apps. You should always load your Conda environment after your job already started.
+.. caution:: We recommend removing the conda initialization section from your .bashrc as it may interfere with the correct startup environment when using Open OnDemand apps. You should always load your Conda environment after your job already started.
 
 If you need help with your .bashrc file or would like it restored to its default, reach out to the RC team at rchelp@northeastern.edu, and we can provide you with
 a new, default .bashrc file and/or help troubleshoot issues with the file.
