@@ -16,8 +16,8 @@ Using a locally installed Conda virtual environment is highly recommended so tha
 You can also have more than one environment with different packages for testing purposes. This procedure uses the Anaconda module already loaded on Discovery.
 
 1. To check what version of Python you have installed, type ``which python``.
-2. To load anaconda, type ``module load anaconda3/3.7``.
-3. To create your environment, type ``conda create -n <yourenvironmentname> python=3.7 anaconda``, where <yourenvironmentname> is the name you want to give your environment. Tip: to see a list of all of your conda environments, type ``conda info -e``.
+2. To load anaconda, type ``module load anaconda3/2022.01``.
+3. To create your environment, type ``conda create -n <yourenvironmentname> python=3.7 anaconda``, where <yourenvironmentname> is the name you want to give your environment. Tip: to see a list of all of your conda environments, type ``conda info -e``. To save space, also use the ``--prefix=/work/<mygroup>/<mydirectory>`` flag to build in your work directory.
 4. Follow the prompts to complete the Conda install.
 5. To activate your Conda environment, type ``source activate <yourenvironmentname>``. Note that ``conda activate`` will not work on Discovery with this version.
 6. To install a specific package, type ``conda install -n <yourenvironmentname> [package]``.
@@ -37,17 +37,24 @@ Miniconda3 with Python 3.7.
 1. If you are on a login node, move to a compute node by typing ``srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash``.
 2. Type ``wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`` to get the latest version of Miniconda.
 3. Type ``sha256sum Miniconda3-latest-Linux-x86_64.sh`` to check the hash key of the package.
-4. Type ``bash Miniconda3-latest-Linux-x86_64.sh`` to start the installation.
-5. Press ``Enter`` to review the license agreement.
-6. Type ``yes`` to agree to the license agreement.
-7. Press ``Enter`` to accept the default installation location (your /home directory, e.g. /home/<yourusername>/miniconda3).
-8. Type ``yes`` if asked to initialize Miniconda using conda init.
-9. Type ``source miniconda3/bin/activate`` to activate the miniconda environment.
+4. Type ``bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>`` to start the installation, where ``<dir>`` should be replaced with the full path to your desired installation directory. For example, set it to ``/work/<mygroup>/<mydirectory>/miniconda3`` (recommended).
+5. Type ``source <dir>/bin/activate`` to activate the miniconda environment.
+6. Another recommended step is to update your Conda version (possible only when using conda you own): ``conda update conda -y``
 
-After installing and activating Miniconda, you can create a Conda environment. In the example below, the Conda envinronment is named "my-python38environment" and installs Python version 3.8.
+After installing, activating and updating Miniconda, you can create a new virtual Conda environment. In the example below, the Conda envinronment is named "my-python38environment" and installs Python version 3.8.
 
-1. After completing steps 1 through 9 in the previous procedure, type ``conda create --name my-python38environment python=3.8``.
+1. After completing steps 1 through 6 in the previous procedure, type ``conda create --name my-python38environment python=3.8``.
 2. Type ``y`` if asked to proceed with the installation.
 3. Type ``conda activate my-python38environment`` to activate the environment.
 
 To deactivate the environment, type ``conda deactivate``. You can type this command again to deactivate the Miniconda environment.
+
+Conda best practices
+====================
+
+1. Your .conda directory may get very large if you install multiple packages and create many virtual Conda environments. Make sure to clean the Conda cache and clean unused packages with: ``conda clean --all``.
+2. Clean unused Conda environments by first listing the environments with: ``conda env list`` , and then removing unused ones: ``conda env remove --name <yourenvironmentname>``.
+3. You can build Conda environments in different locations to save space on your home directory (see :ref:`discovery_storage`). You can use the ``--prefix`` flag when building your environment. For example: ``conda create myenv --prefix=/work/<mygroup>/<mydirectory>``.
+
+.. note::
+  It is not recommended to build your Miniconda and virtual Conda environments inside your /home directory due to its limited space qouta (see :ref:`discovery_storage`). Use the /work file system instead. If your group needs access to /work, the group PI can request it using: `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ .

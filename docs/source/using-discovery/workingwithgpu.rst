@@ -89,6 +89,7 @@ or your request will fail::
 
 The ``sbatch`` example below is similar to the ``srun`` example above, except for giving the job a name and directing the output to a file::
 
+  #!/bin/bash
   #SBATCH --nodes=1
   #SBATCH --time=01:00:00
   #SBATCH --job-name=gpu_run
@@ -140,7 +141,7 @@ Lightweight installation::
   
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load cuda/11.3
-  module load anaconda3/2021.11
+  module load anaconda3/2022.01
   conda create --name pytorch_env python=3.7 -y
   source activate pytorch_env
   conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=11.3 -c pytorch -c conda-forge -y
@@ -150,7 +151,7 @@ Heavyweight installation (with Anaconda libraries)::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load cuda/11.3
-  module load anaconda3/2021.11
+  module load anaconda3/2022.01
   conda create --name pytorch_env python=3.7 anaconda -y
   source activate pytorch_env
   conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
@@ -163,7 +164,7 @@ As the latest version of PyTorch often depends on the newest CUDA available, ple
 Alternatively, you can also use our existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1). To use it, type ::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load anaconda3/2021.05 
+  module load anaconda3/2022.01 
   module load cuda/11.1 
   source activate pytorch_env_training
 
@@ -175,7 +176,7 @@ You can find the compatibility of CUDA and TensorFlow versions at the following 
 Heavyweight installation (with Anaconda libraries)::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load anaconda3/3.7
+  module load anaconda3/2022.01
   module load cuda/10.2
   conda create --name TF_env python=3.7 anaconda #where TF_env is the name of the conda environment
   source activate TF_env #load the virtual conda environment "TF_env"
