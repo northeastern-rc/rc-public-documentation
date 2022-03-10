@@ -12,7 +12,7 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
   * - GPU Type
     - Number of nodes/GPUs
     - CPU Type
-    - Number of CPUs/node
+    - CPUs/node
     - RAM per node
   * - k40m
     - 16 nodes with 1 GPU each
