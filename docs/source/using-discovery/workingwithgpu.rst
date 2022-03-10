@@ -6,37 +6,49 @@ Working with GPUs
 The Discovery cluster has a number of Graphics Processing Units (GPUs) available, as detailed in the table below.
 
 .. list-table::
-  :widths: 40 40 40 40
+  :widths: 40 40 40 40 40
   :header-rows: 1
 
   * - GPU Type
     - Number of nodes/GPUs
     - CPU Type
+    - CPUs/node
     - RAM per node
   * - k40m
     - 16 nodes with 1 GPU each
     - E5-2690v3\@\2.60GHz
+    - 24
     - 128GB
   * - k80
     - 8 nodes with 8 GPUs each
     - E5-2680v4\@\2.40GHz
+    - 28
     - 512GB
   * - p100
     - 12 nodes with 4 GPUs each
     - E5-2680v4\@\2.40GHz
+    - 28
     - 512GB
   * - v100-pcie
     - 4 nodes with 2 GPUs each
     - AMD EPYC 7351\@\2.60GHz
+    - 32
     - 480GB
   * - v100-sxm2
     - 24 nodes with 4 GPUs each
     - Intel Gold 6132\@\2.60Ghz
+    - 28
     - 187GB
   * - t4
     - 2 nodes with 4 GPUs each
     - Intel Gold 6132\@\2.60Ghz
+    - 28  
     - 187GB
+  * - a100
+    - 1 node with 4 GPUs
+    - AMD EPYC 7543\@\2.80GHz
+    - 64  
+    - 512GB    
 
 These GPUs are available within two partitions, named ``gpu`` and ``multigpu``. Note that partitions on Discovery are not physical partitions, they  are virtual partitions.
 The differences between the two partitions are the number of GPUs that you can request per job, as well as the time
@@ -82,20 +94,23 @@ Requesting GPUs with ``srun`` or ``sbatch``
 ===========================================
 Use ``srun`` for interactive mode and ``sbatch`` for batch mode.
 
-The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu. Note that on the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``)
-or your request will fail::
+The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+
+.. note:: 
+   On the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``) or your request will fail. Also, you cannot request all CPUs on that node since they are reserved for other GPUs.
 
 The ``sbatch`` example below is similar to the ``srun`` example above, except for giving the job a name and directing the output to a file::
 
   #!/bin/bash
+  #SBATCH --partition=gpu
   #SBATCH --nodes=1
+  #SBATCH --gres=gpu:1
   #SBATCH --time=01:00:00
   #SBATCH --job-name=gpu_run
   #SBATCH --mem=4GB
   #SBATCH --ntasks=1
-  #SBATCH --gres=gpu:1
   #SBATCH --output=myjob.%j.out
   #SBATCH --error=myjob.%j.err
   <your code>
