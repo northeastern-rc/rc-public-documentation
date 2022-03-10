@@ -6,7 +6,7 @@ Working with GPUs
 The Discovery cluster has a number of Graphics Processing Units (GPUs) available, as detailed in the table below.
 
 .. list-table::
-  :widths: 40 40 40 40
+  :widths: 40 40 40 40 40
   :header-rows: 1
 
   * - GPU Type
@@ -94,11 +94,12 @@ Requesting GPUs with ``srun`` or ``sbatch``
 ===========================================
 Use ``srun`` for interactive mode and ``sbatch`` for batch mode.
 
-The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu. 
-.. note::
- On the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``) or your request will fail. Also, you cannot request all CPUs on that node since they are reserved for other GPUs.
+The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+
+.. note:: 
+   On the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``) or your request will fail. Also, you cannot request all CPUs on that node since they are reserved for other GPUs.
 
 The ``sbatch`` example below is similar to the ``srun`` example above, except for giving the job a name and directing the output to a file::
 
