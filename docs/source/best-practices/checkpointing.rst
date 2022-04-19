@@ -17,7 +17,7 @@ Checkpointing is a fault tolerance technique designed to overcome the “fail-st
     * Restore the algorithm to the previous error-free state - continue the calculation from the newly loaded state. 
 
 .. image:: /images/checkpointing.png
- :width: 400
+ :width: 300
  :alt: Checkpointing algorithm flow chart.
 
 Checkpointing types
@@ -82,7 +82,7 @@ To submit these jobs to the scheduler, use the command::
 Python TensorFlow Checkpointing example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This example demonstrates how implement a longer TensorFlow ML training using the **tf.keras** Checkpointing `API<https://www.tensorflow.org/tutorials/keras/save_and_load>`_ and multiple shorter Slurm job arrays on the gpu partition.
+This example demonstrates how implement a longer TensorFlow ML training using the **tf.keras** Checkpointing `API <https://www.tensorflow.org/tutorials/keras/save_and_load>`_ and multiple shorter Slurm job arrays on the gpu partition.
 Below the example **submit_tf_array.bash** script::
 
  #!/bin/bash
