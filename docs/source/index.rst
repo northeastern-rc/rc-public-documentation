@@ -59,6 +59,11 @@ Northeastern University Research Computing
    storage/discovery_storage
    storage/general_storage
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Discovery best practices
+
+   best-practices/checkpointing
 
 .. toctree::
    :maxdepth: 2
