@@ -152,17 +152,7 @@ You should use PyTorch with a conda virtual environment if you need to run the e
 
 The following examples demonstrate how to build PyTorch inside a conda virtual environment for CUDA version 11.3. Make sure that you are on a GPU node before loading the environment.
 
-Lightweight installation::
-  
-  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load cuda/11.3
-  module load anaconda3/2022.01
-  conda create --name pytorch_env python=3.7 -y
-  source activate pytorch_env
-  conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=11.3 -c pytorch -c conda-forge -y
-  python -c'import torch; print(torch.cuda.is_available())'
-
-Heavyweight installation (with Anaconda libraries)::
+PyTorch installation steps (with Anaconda libraries)::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load cuda/11.3
@@ -185,17 +175,17 @@ Alternatively, you can also use our existing Pytorch build (`pytorch_env_trainin
 
 Using GPUs with TensorFlow
 ==========================
-We recommend that you use CUDA 10.2 when working on a GPU with the latest version of TensorFlow (TF).
+We recommend that you use CUDA 11.2 (latest supported version) when working on a GPU with the latest version of TensorFlow (TF).
 You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.
 
-Heavyweight installation (with Anaconda libraries)::
+For the latest installation, use the TensorFlow pip package which includes GPU support for CUDA-enabled devices::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load anaconda3/2022.01
-  module load cuda/10.2
+  module load cuda/11.2
   conda create --name TF_env python=3.7 anaconda #where TF_env is the name of the conda environment
   source activate TF_env #load the virtual conda environment "TF_env"
-  conda install -c anaconda tensorflow-gpu -y #install GPU-enabled TF inside the virtual environment
+  pip install tensorflow
   python -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' #test if GPU device is detected with TF
 
 You should see the result ``True`` if TF detected a GPU.
@@ -208,7 +198,7 @@ If the installation is successful, then, for example, you should see the followi
 
    physical GPU (device: 0, name: Tesla K40m, pci bus id: 0000:0b:00.0, compute capability: 3.5) /device:GPU:0
 
-Alternatively, you can use our existing TF build (`base` environemnt, TF version 2.2.0). For example: ::
+Alternatively, you can also use our existing TF build (`base` environemnt, TF version 2.2.0). For example: ::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load anaconda3/2021.07-TF 

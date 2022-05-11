@@ -21,12 +21,14 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
     instruments, etc. The performance capabilities are not intended for parallel or high performance workloads.
     Data are backed up and a second copy is created. You can request storage on ``/research`` by submitting a `New Storage Space request <https://bit.ly/NURC-NewStorage>`_.
     See the section "Connecting to /research" below for information on how to connect to this storage.
-  - **QUOTA:** Up to 10TB per research group.
+  - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: ``/work/<groupname>``, ``/research`` () and ``/nese``.  
+
 
 **NAME:** ``/nese``
   - **DESCRIPTION:** This is archival, non-performant storage that is intended for researchers
     who need to have a long-term storage option for their data.
-  - **QUOTA:** Up to 25TB per research group.
+  - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: ``/work/<groupname>``, ``/research`` () and ``/nese``.  
+
 
 ..
      **NAME:** ``/secure``

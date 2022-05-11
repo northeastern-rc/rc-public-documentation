@@ -21,8 +21,8 @@ both a /home and /scratch directory. Research groups can request additional stor
  - **DESCRIPTION:** You are given a ``/scratch`` directory automatically when your Discovery account is created. Scratch is a shared space for all users. The total storage available is 1.8PB; however, while this is performant storage, it is for temporary use only. **It is not backed up.** Data on ``/scratch`` should be moved as soon as possible to another location for permanent storage. You should run your jobs from ``/scratch`` and direct your output files to your ``/scratch`` directory for best performance, but it is best practice to move your files off of scratch to avoid any potential data loss.
  - **QUOTA:** N/A
 
-**NAME:** ``/work/<yourusername>``
- - **DESCRIPTION:** Research groups can request additional storage on ``/work``. A PI can request this extra storage through the `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ .
+**NAME:** ``/work/<groupname>``
+ - **DESCRIPTION:** Research groups can request additional storage on ``/work``. A PI can request this extra storage through the `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ . This storage is performant and backed up and is meant for longer-term active data, and can be used by the entire research group. 
 
  .. note::
-    You can also request additional general data storage if needed. See :ref:`general_storage` for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University.
+    Your group can also request additional general data storage if needed. See :ref:`general_storage` for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University. Each group can request up to **35TB** of free storage across all supplemental storage tiers: ``/work/<groupname>``, ``/research`` () and ``/nese``.  

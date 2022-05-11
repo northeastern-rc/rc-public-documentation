@@ -25,7 +25,7 @@ For example, if you use the ``debug`` partition you're using the same hardware a
 detailed information on the current partitions. Note that PI-owned partitions only include the hardware that those PIs own and are only accessible to the members of the PI's group.
 
 .. note::
-   In the following table, the Running Jobs Per User/Per Research Group. RAM limit is per user, across all jobs.
+   In the following table, the Running Jobs Per User/Per Research Group. Core limit and RAM limit are set per user, across all running jobs (not pending).
 
 .. list-table::
    :widths: 20 20 20 20 30 20 20 30
@@ -60,7 +60,7 @@ detailed information on the current partitions. Note that PI-owned partitions on
      - 4 hours/24 Hours
      - 50/500
      - 5000
-     - 128
+     - 1024
      - 25TB
      - Best for serial or small parallel jobs (``--nodes=2`` max) that need to run for up to 24 hours.
    * - long
