@@ -131,9 +131,10 @@ Checkpointing using DMTCP
 The program runs in the background of your program, without significant performance loss, and saves the process states into checkpoint files.
 
 DMTCP is available on the cluster::
-   module avail dmtcp
-   module show dmtcp
-   module load dmtcp/2.6.0
+
+ module avail dmtcp
+ module show dmtcp
+ module load dmtcp/2.6.0
 
 As DMTCP runs in the background, it requires some changes to your Shell script. For an example of how to Checkpoint with DMTCP visit `here <https://github.com/NURC-Training/checkpointing-102021/tree/main/Exercise_3/array-job>`_. 
 The example demonstrates how to use DMTCP with a simple C++ program (scripts modified from `RSE-Cambridge <https://github.com/RSE-Cambridge/dmtcp-tests>`_).
@@ -142,16 +143,16 @@ The example demonstrates how to use DMTCP with a simple C++ program (scripts mod
 Checkpointing tips
 ~~~~~~~~~~~~~~~~~~~
 
-* **What data to save?** 
+**What data to save?** 
   * Non-temporary application data
   * Any application data that has been modified since the last checkpoint
   * Delete checkpoints that are no longer useful - keep only the most recent checkpoint file.
-* **How frequently to checkpoint?** 
+**How frequently to checkpoint?** 
   * Too often – will slow down your calculation, may be I/O heavy and memory-limited.
   * Too infrequently – leads to large/long rollbacks times.
   * Consider how long it takes to checkpoint and restart your calculation. 
   * In most cases a rate of every 10-15 minutes is ok.
-* **Which checkpointing method to use?**
+**Which checkpointing method to use?**
   * If your software already comes with built-in checkpointing, it is often the preferred option. It is probably the most optimized and efficient way to checkpoint.
   * Application-level Checkpointing is the easiest to use as it is already integrated in your applicaion. Does not require major changes to your scripts.
   * Application-level Checkpointing will save only the relevant data for your specific application.
