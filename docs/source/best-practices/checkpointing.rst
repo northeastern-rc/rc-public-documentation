@@ -143,16 +143,16 @@ The example demonstrates how to use DMTCP with a simple C++ program (scripts mod
 Checkpointing tips
 ~~~~~~~~~~~~~~~~~~~
 
-**What data to save?** 
+What data to save?
   * Non-temporary application data
   * Any application data that has been modified since the last checkpoint
   * Delete checkpoints that are no longer useful - keep only the most recent checkpoint file.
-**How frequently to checkpoint?** 
+How frequently to checkpoint? 
   * Too often – will slow down your calculation, may be I/O heavy and memory-limited.
   * Too infrequently – leads to large/long rollbacks times.
   * Consider how long it takes to checkpoint and restart your calculation. 
   * In most cases a rate of every 10-15 minutes is ok.
-**Which checkpointing method to use?**
+Which checkpointing method to use?
   * If your software already comes with built-in checkpointing, it is often the preferred option. It is probably the most optimized and efficient way to checkpoint.
   * Application-level Checkpointing is the easiest to use as it is already integrated in your applicaion. Does not require major changes to your scripts.
   * Application-level Checkpointing will save only the relevant data for your specific application.
