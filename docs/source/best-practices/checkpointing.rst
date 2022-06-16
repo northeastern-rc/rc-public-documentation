@@ -2,7 +2,7 @@
 Checkpoint/Restart Discovery Jobs
 *****************************************
 
-The complexity of HPC systems may introduce uncontrollable and unpredictable behaviors and may result in job failures due to hardware or software. Applying fault tolerance techniques in your HPC workflows allows your jobs to become more resilient to crashes, prtition time limits and hardware failures.
+The complexity of HPC systems may introduce unpredictable behaviors and may result in job failures due to hardware or software. Applying fault tolerance techniques to your HPC workflows allows your jobs to become more resilient to crashes, partition time limits and hardware failures.
   
 
 The Checkpointing technique
@@ -10,11 +10,8 @@ The Checkpointing technique
 
 Checkpointing is a fault tolerance technique designed to overcome the “fail-stop” failure type (interruption of the execution of a job). It is based on the BER technique (Backward error recovery or Rollback-recovery algorithm):
 
- * Use data redundancy - create checkpoint files saving all all of the necessary calculation state data. Checkpoint files are generally created at constant time intervals during the run. 
- * If a failure occures:
-    * Start from an error-free state - load a checkpoint file that contains the error-free state information. Often, it is the latest saved state.
-    * Checks for consistency - optional tests can be made to check the validity of the checkpoint file.
-    * Restore the algorithm to the previous error-free state - continue the calculation from the newly loaded state. 
+ * Use data redundancy - create checkpoint files saving all of the necessary calculation state data. Checkpoint files are generally created at constant time intervals during the run. 
+ * If a failure occures - start from an error-free state, check for consistency and restore the algorithm to the previous error-free state.
 
 .. image:: /images/checkpointing.png
  :width: 300
@@ -25,7 +22,7 @@ Checkpointing types
 
 Checkpointing can be implemented in different levels of your workflow:
 
-  * User-level Checkpointing - suitable if you develop your own code, or have sufficient knowledge of the application code to integrate Checkpointing techinques yourself. Generally, this approach is not recommended for most Discovery users.
+  * User-level Checkpointing - suitable if you develop your own code, or have sufficient knowledge of the application code to integrate checkpointing techinques yourself. Generally, this approach is not recommended for most Discovery users.
   * Application-level Checkpointing - recommended for most Discovery users. Utilize the Checkpointing tool that is already available in your software application. Most software designed for HPC have a Checkpointing option, and information on proper usage is often available in the software user manual. 
   * System-level Checkpointing - done on the system side, where the state of the entire process is being saved. This option is less efficient than User-level or Application-level Checkpointing as it introduces a lot of redundancy.   
 
@@ -134,7 +131,7 @@ The program runs in the background of your program, without significant performa
  module show dmtcp
  module load dmtcp/2.6.0
 
-As DMTCP runs in the background, it requires some changes to your Shell script. For examples of how to Checkpoint with DMTCP visit `here<https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_3>`_. 
+As DMTCP runs in the background, it requires some changes to your Shell script. For examples of how to Checkpoint with DMTCP visit `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_3>`_. 
 The example demonstrates how to use DMTCP with a simple C++ program (scripts modified from `RSE-Cambridge <https://github.com/RSE-Cambridge/dmtcp-tests>`_).
 
 
