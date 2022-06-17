@@ -185,19 +185,18 @@ For the latest installation, use the TensorFlow pip package which includes GPU s
   module load cuda/11.2
   conda create --name TF_env python=3.9 -y #where TF_env is the name of the conda environment
   source activate TF_env #load the virtual conda environment "TF_env"
+  export LD_LIBRARY_PATH=$HOME/.conda/envs/TF_env/lib:$LD_LIBRARY_PATH
   conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0 -y 
   pip install tensorflow
 
 Verify the installation::
 
-  # Verify the CPU setup:
+  # Verify the CPU setup (if successful, then a tensor is returned):
   python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
-  # verify the GPU setup (If a list of GPU devices is returned, you've installed TensorFlow successfully):
+  # verify the GPU setup (if successful, then a list of GPU devices is returned):
   python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-  # test if a GPU device is detected with TF (alternative):
+  # test if a GPU device is detected with TF (if successful, then True is returned):
   python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' 
-
-You should see the result ``True`` if TF detected a GPU.
 
 To get the name of the GPU, type::
 
@@ -205,11 +204,5 @@ To get the name of the GPU, type::
 
 If the installation is successful, then, for example, you should see the following output::
 
-   physical GPU (device: 0, name: Tesla K40m, pci bus id: 0000:0b:00.0, compute capability: 3.5) /device:GPU:0
+   2022-06-17 16:01:15.948857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /device:GPU:0 with 13795 MB memory:  -> device: 0, name: Tesla T4, pci bus id: 0000:3b:00.0, compute capability: 7.5 
 
-Alternatively, you can also use our existing TF build (`base` environemnt, TF version 2.2.0). For example: ::
-
-  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load anaconda3/2021.07-TF 
-  module load cuda/10.2
-  source activate
