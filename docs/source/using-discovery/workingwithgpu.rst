@@ -176,17 +176,21 @@ Alternatively, you can also use our existing Pytorch build (`pytorch_env_trainin
 Using GPUs with TensorFlow
 ==========================
 We recommend that you use CUDA 11.2 (latest supported version) when working on a GPU with the latest version of TensorFlow (TF).
-You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu.
+You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu and for detailed installation instructions also visit https://www.tensorflow.org/install/pip.
 
 For the latest installation, use the TensorFlow pip package which includes GPU support for CUDA-enabled devices::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load anaconda3/2022.01
+  module load anaconda3/2022.05
   module load cuda/11.2
-  conda create --name TF_env python=3.7 anaconda #where TF_env is the name of the conda environment
+  conda create --name TF_env python=3.9 -y #where TF_env is the name of the conda environment
   source activate TF_env #load the virtual conda environment "TF_env"
+  conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0 -y 
   pip install tensorflow
-  python -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' #test if GPU device is detected with TF
+  # verify the GPU setup (If a list of GPU devices is returned, you've installed TensorFlow successfully):
+  python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+  # test if a GPU device is detected with TF (alternative):
+  python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' 
 
 You should see the result ``True`` if TF detected a GPU.
 
