@@ -25,7 +25,7 @@ For example, if you use the ``debug`` partition you're using the same hardware a
 detailed information on the current partitions. Note that PI-owned partitions only include the hardware that those PIs own and are only accessible to the members of the PI's group.
 
 .. note::
-   In the following table, the Running Jobs Per User/Per Research Group. Core limit and RAM limit are set per user, across all running jobs (not pending).
+ In the following table, the Running Jobs Per User/Per Research Group. Core and RAM limits are set per user, across all running jobs (not pending).
 
 .. list-table::
    :widths: 20 20 20 20 30 20 20 30

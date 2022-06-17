@@ -187,6 +187,8 @@ For the latest installation, use the TensorFlow pip package which includes GPU s
   source activate TF_env #load the virtual conda environment "TF_env"
   conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0 -y 
   pip install tensorflow
+  # Verify the CPU setup:
+  python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
   # verify the GPU setup (If a list of GPU devices is returned, you've installed TensorFlow successfully):
   python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
   # test if a GPU device is detected with TF (alternative):

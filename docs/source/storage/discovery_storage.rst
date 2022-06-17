@@ -22,7 +22,7 @@ both a /home and /scratch directory. Research groups can request additional stor
  - **QUOTA:** N/A
 
 **NAME:** ``/work/<groupname>``
- - **DESCRIPTION:** Research groups can request additional storage on ``/work``. A PI can request this extra storage through the `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ . This storage is performant and backed up and is meant for longer-term active data, and can be used by the entire research group. 
+ - **DESCRIPTION:** Research groups can request additional storage on ``/work``. A PI can request this extra storage through the `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ . This is a performant, persistent, and long-term storage that is meant for storing data being actively used for research. It can be accessed by all members of the research group who have access permissions to this directory. 
 
  .. note::
-    Your group can also request additional general data storage if needed. See :ref:`general_storage` for details about the storage options that are not connected to Discovery, and that are available to anyone affiliated with Northeastern University. Each group can request up to **35TB** of free storage across all supplemental storage tiers: ``/work``, ``/research`` and ``/nese``.  
+  Your group can also request additional general data storage if needed. See :ref:general_storage for details about the storage options that are not associated with Discovery but are available to anyone affiliated with Northeastern University. Each group can request up to 35TB of free storage across all supplemental storage tiers: /work, /research and /nese.
