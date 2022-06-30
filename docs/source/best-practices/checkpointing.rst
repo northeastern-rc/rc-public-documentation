@@ -3,7 +3,12 @@ Checkpoint/Restart Discovery Jobs
 *****************************************
 
 The complexity of HPC systems may introduce unpredictable behaviors and may result in job failures due to hardware or software. Applying fault tolerance techniques to your HPC workflows allows your jobs to become more resilient to crashes, partition time limits and hardware failures.
-  
+
+Checkpointing will allow you to:
+
+ * Create resilient workflows in the existence of faults.
+ * Overcome most scheduler resource time limitations.
+ * Implement an early error detection approach by inspecting intermediate results.  
 
 The Checkpointing technique
 ================================
@@ -29,15 +34,6 @@ Checkpointing can be implemented in different levels of your workflow:
 .. note::
   If you are developing code using Python, Matlab or R, there are packages and functions that can be used to implement Checkpointing easily. Some examples include `Python Pytorch Checkpointing <https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_a_general_checkpoint.html>`_, `TensorFlow Checkpointing <https://www.tensorflow.org/guide/checkpoint>`_, `Python Pickle Checkpointing <https://deap.readthedocs.io/en/master/tutorials/advanced/checkpoint.html>`_, `MATLAB Checkpointing <https://www.mathworks.com/help/gads/work-with-checkpoint-files.html>`_ and `R Checkpointing <https://cran.r-project.org/web/packages/checkpoint/vignettes/checkpoint.html>`_. Additionally, many Computational Chemistry and Molecular Dynamics software have built-in Checkpointing options, such as `GROMACS <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_ and `LAMMPS <https://docs.lammps.org/restart.html>`_.  
 
-
-Checkpointing on Discovery 
-================================
-
-Checkpointing will allow you to: 
-
- * Create resilient workflows in the existence of faults.
- * Overcome most scheduler resource time limitations.
- * Implement an early error detection approach by inspecting intermediate results. 
 
 Checkpointing can be acheived by a combination of implementing Checkpointing at some level in your job with the use of `Slurm Job Arrays <https://slurm.schedmd.com/job_array.html>`_. 
 
@@ -79,7 +75,7 @@ To submit these jobs to the scheduler, use the command::
 Python TensorFlow Checkpointing example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This example demonstrates how implement a longer TensorFlow ML training using the **tf.keras** Checkpointing `API <https://www.tensorflow.org/tutorials/keras/save_and_load>`_ and multiple shorter Slurm job arrays on the gpu partition.
+This example demonstrates how to implement a longer TensorFlow ML job by training using the **tf.keras** Checkpointing `API <https://www.tensorflow.org/tutorials/keras/save_and_load>`_ and multiple shorter Slurm job arrays on the gpu partition.
 Below the example **submit_tf_array.bash** script::
 
  #!/bin/bash
@@ -117,7 +113,7 @@ The full scripts can be found `here <https://github.com/northeastern-rc/training
 The Slurm option ``--array=1-10%1`` will create 10 Slurm array tasks, and will run one task job at a time. Note that the saved variable ``%A`` denotes the main job ID, while variable ``%a`` denotes the task ID (spanning values 1-10). Note that also the output/error files are unique in order to prevent different jobs writing to the same files.
 The Shell variable ``SLURM_ARRAY_TASK_ID`` holds the unique task ID value and can be used within the Slurm Shell script to point to different files or variables.
 
-To submit these jobs to the scheduler, use the command::
+To submit this job to the scheduler, use the command::
    
   sbatch submit_tf_array.bash
 
@@ -131,7 +127,7 @@ The program runs in the background of your program, without significant performa
  module show dmtcp
  module load dmtcp/2.6.0
 
-As DMTCP runs in the background, it requires some changes to your Shell script. For examples of how to Checkpoint with DMTCP visit `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_3>`_. 
+As DMTCP runs in the background, it requires some changes to your Shell script. For examples of how to checkpoint with DMTCP visit `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_3>`_. 
 The example demonstrates how to use DMTCP with a simple C++ program (scripts modified from `RSE-Cambridge <https://github.com/RSE-Cambridge/dmtcp-tests>`_).
 
 
@@ -145,7 +141,7 @@ What data to save?
 
 How frequently to checkpoint? 
  * Too often – will slow down your calculation, may be I/O heavy and memory-limited.
- * Too infrequently – leads to large/long rollbacks times.
+ * Too infrequently – leads to large/long rollback times.
  * Consider how long it takes to checkpoint and restart your calculation. 
  * In most cases a rate of every 10-15 minutes is ok.
 
