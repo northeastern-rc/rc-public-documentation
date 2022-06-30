@@ -27,25 +27,27 @@ Checkpointing types
 
 Checkpointing can be implemented in different levels of your workflow:
 
-  * User-level Checkpointing - suitable if you develop your own code, or have sufficient knowledge of the application code to integrate checkpointing techinques yourself. Generally, this approach is not recommended for most Discovery users.
-  * Application-level Checkpointing - recommended for most Discovery users. Utilize the Checkpointing tool that is already available in your software application. Most software designed for HPC have a Checkpointing option, and information on proper usage is often available in the software user manual. 
-  * System-level Checkpointing - done on the system side, where the state of the entire process is being saved. This option is less efficient than User-level or Application-level Checkpointing as it introduces a lot of redundancy.   
+  * User-level checkpointing - suitable if you develop your own code, or have sufficient knowledge of the application code to integrate checkpointing techinques yourself. Generally, this approach is not recommended for most Discovery users.
+  * Application-level checkpointing - recommended for most Discovery users. Utilize the checkpointing tool that is already available in your software application. Most software designed for HPC have a checkpointing option, and information on proper usage is often available in the software user manual. 
+  * System-level checkpointing - done on the system side, where the state of the entire process is being saved. This option is less efficient than User-level or Application-level checkpointing as it introduces a lot of redundancy.   
 
 .. note::
-  If you are developing code using Python, Matlab or R, there are packages and functions that can be used to implement Checkpointing easily. Some examples include `Python Pytorch Checkpointing <https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_a_general_checkpoint.html>`_, `TensorFlow Checkpointing <https://www.tensorflow.org/guide/checkpoint>`_, `Python Pickle Checkpointing <https://deap.readthedocs.io/en/master/tutorials/advanced/checkpoint.html>`_, `MATLAB Checkpointing <https://www.mathworks.com/help/gads/work-with-checkpoint-files.html>`_ and `R Checkpointing <https://cran.r-project.org/web/packages/checkpoint/vignettes/checkpoint.html>`_. Additionally, many Computational Chemistry and Molecular Dynamics software have built-in Checkpointing options, such as `GROMACS <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_ and `LAMMPS <https://docs.lammps.org/restart.html>`_.  
+  If you are developing code using Python, Matlab or R, there are packages and functions that can be used to implement checkpointing easily. Some examples include `Python PyTorch checkpointing <https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_a_general_checkpoint.html>`_, `TensorFlow checkpointing <https://www.tensorflow.org/guide/checkpoint>`_, `Python Pickle checkpointing <https://deap.readthedocs.io/en/master/tutorials/advanced/checkpoint.html>`_, `MATLAB checkpointing <https://www.mathworks.com/help/gads/work-with-checkpoint-files.html>`_ and `R checkpointing <https://cran.r-project.org/web/packages/checkpoint/vignettes/checkpoint.html>`_. Additionally, many Computational Chemistry and Molecular Dynamics software have built-in checkpointing options, such as `GROMACS <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_ and `LAMMPS <https://docs.lammps.org/restart.html>`_.  
 
 
-Checkpointing can be acheived by a combination of implementing Checkpointing at some level in your job with the use of `Slurm Job Arrays <https://slurm.schedmd.com/job_array.html>`_. 
+Implementing checkpointing can be acheived by:
+ * Some save-and-load mechanism of your calculation state. 
+ * The use of `Slurm Job Arrays <https://slurm.schedmd.com/job_array.html>`_. 
 
 .. note::
-   To overcome partition time limits, replace your long single job with multiple shorter jobs. Using job arrays, set each job to run after another. Each job will write a checkpoint file if checkpointing is implemented. The next job in line will the latest checkpoint file to continue from the latest state of the calculation.
+   To overcome partition time limits, replace your single long job with multiple shorter jobs. Using job arrays, set each job to run one after the other. Each job will write a checkpoint file if checkpointing is implemented. The next job in line will be the latest checkpoint file to continue from the latest state of the calculation.
 
-GROMACS Checkpointing example
+GROMACS checkpointing example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This example demonstrates how to implement a longer `GROMACS <https://www.gromacs.org/>`_ 120 hour calculation on using multiple shorter jobs on the **short** partition with Slurm job arrays and the GROMACS built-in Checkpointing option (read more `here <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_).
+This example demonstrates how to implement a longer `GROMACS <https://www.gromacs.org/>`_ job of 120 hours by using multiple shorter jobs on the **short** partition. We use Slurm job arrays and the GROMACS built-in checkpointing option (read more `here <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_) to implement checkpointing.
 
-The following script **submit_mdrun_array.bash** creates a Slurm job array of ::
+The following script **submit_mdrun_array.bash** creates a Slurm job array of 10 individual array jobs::
 
  #!/bin/bash
  #SBATCH --partition=short
@@ -66,16 +68,16 @@ The following script **submit_mdrun_array.bash** creates a Slurm job array of ::
 
  srun --mpi=pmi2 -n $SLURM_NTASKS gmx_mpi mdrun -ntomp 1 -s myrun.tpr -v -dlb yes -cpi state
 
-Where we used the checkpoint flag followed by the file name ``-cpi state`` to be used to checkpointing. This directs mdrun to use the checkpoint file named ``state.cpt`` when loading the state. The Slurm option ``--array=1-10%1`` will create 10 Slurm array tasks, and will run one task job at a time for 12 hours. Note that the saved variable ``%A`` denotes the main job ID, while variable ``%a`` denotes the task ID (spanning values 1-10).
+In the above script, we use the checkpoint flag ``-cpi state`` followed by the file name to be used for checkpointing. This directs mdrun to use the checkpoint file named ``state.cpt`` when loading the state. The Slurm option ``--array=1-10%1`` will create 10 Slurm array tasks, and will run one task job at a time for 12 hours. Note that the saved variable ``%A`` denotes the main job ID, while variable ``%a`` denotes the task ID (spanning values 1-10).
 
-To submit these jobs to the scheduler, use the command::
+To submit this array job to the scheduler, use the following command::
 
    sbatch submit_mdrun_array.bash
 
-Python TensorFlow Checkpointing example
+Python TensorFlow checkpointing example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This example demonstrates how to implement a longer TensorFlow ML job by training using the **tf.keras** Checkpointing `API <https://www.tensorflow.org/tutorials/keras/save_and_load>`_ and multiple shorter Slurm job arrays on the gpu partition.
+This example demonstrates how to implement a longer TensorFlow ML job by training using the **tf.keras** checkpointing `API <https://www.tensorflow.org/tutorials/keras/save_and_load>`_ and multiple shorter Slurm job arrays on the gpu partition.
 Below the example **submit_tf_array.bash** script::
 
  #!/bin/bash
@@ -120,7 +122,7 @@ To submit this job to the scheduler, use the command::
 Checkpointing using DMTCP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`DMTCP <https://dmtcp.sourceforge.io/>`_ (Distributed MultiThreaded Checkpointing) is a Checkpointing tool that lets you Checkpoint without the need to change your code. It Works with most Linux applications such as Python, Matlab, R, GUI, MPI etc. 
+`DMTCP <https://dmtcp.sourceforge.io/>`_ (Distributed MultiThreaded checkpointing) is a checkpointing tool that lets you checkpoint without the need to change your code. It Works with most Linux applications such as Python, Matlab, R, GUI, MPI etc. 
 The program runs in the background of your program, without significant performance loss, and saves the process states into checkpoint files. DMTCP is available on the cluster ::
 
  module avail dmtcp
@@ -147,6 +149,6 @@ How frequently to checkpoint?
 
 Which checkpointing method to use?
  * If your software already comes with built-in checkpointing, it is often the preferred option. It is probably the most optimized and efficient way to checkpoint.
- * Application-level Checkpointing is the easiest to use as it is already integrated in your applicaion. Does not require major changes to your scripts.
- * Application-level Checkpointing will save only the relevant data for your specific application.
- * If you're writing your own code - use DMTCP or implement your own Checkpointing.
+ * Application-level checkpointing is the easiest to use as it is already integrated in your applicaion. Does not require major changes to your scripts.
+ * Application-level checkpointing will save only the relevant data for your specific application.
+ * If you're writing your own code - use DMTCP or implement your own checkpointing.
