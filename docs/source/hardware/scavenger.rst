@@ -1,5 +1,5 @@
 
-.. _Scavenger:
+.. _scavenger:
 
 **********
 Scavenger
