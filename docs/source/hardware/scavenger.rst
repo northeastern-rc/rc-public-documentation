@@ -1,5 +1,5 @@
 
-.. _scavenger:
+.. _partition_names:
 
 **********
 Scavenger
