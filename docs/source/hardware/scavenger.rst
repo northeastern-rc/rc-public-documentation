@@ -17,18 +17,18 @@ When to use scavenger
 
 From best to less-good case scenarios:
 
-* 1. Code that can be check-pointed
-* 2. Jobs that fit on a single node
-* 3. Jobs that require multiple nodes (eg, MPI)
-* 4. When waiting is too hard
+1. Code that can be check-pointed
+2. Jobs that fit on a single node
+3. Jobs that require multiple nodes (eg, MPI)
+4. When waiting is too hard
 
 How to use scavenger
 ===================
 
-To use partition ‘scavenger’, just add that to your partition list. As the partition list is a 
-comma-delimited list of values, srun --partition=short,scavenger is perfectly reasonable. For this example, 
-we will exclude partition ‘short’ and focus on ‘scavenger’. When you run the ‘squeue’ command, you can see 
-that your job has been assigned to the scavenger partition.::
+To use the ``scavenger`` partition, just add that to your partition list. As the partition list is a 
+comma-delimited list of values, ``srun --partition=short,scavenger`` is perfectly reasonable. For this example, 
+we will exclude partition ``short`` and focus on ``scavenger``. When you run the ``squeue`` command, you can see 
+that your job has been assigned to the scavenger partition::
 
   [m.joshi@login-01 ~]$ srun  -p scavenger --pty /bin/bash
   srun: job 23498584 queued and waiting for resources
@@ -38,6 +38,27 @@ that your job has been assigned to the scavenger partition.::
   JOBID    PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
   23498592      ctbp     bash  m.joshi  R       0:07      1 d3110
   23498584 scavenger     bash  m.joshi  R       2:19      1 d3110
+
+For the example provided on our checkpointing :ref:`checkpointing` page, you can use the scavenger partition as::
+
+ #!/bin/bash
+ #SBATCH --partition=short,scavenger
+ #SBATCH --constraint=cascadelake
+ #SBATCH --nodes=1
+ #SBATCH --time=12:00:00
+ #SBATCH --job-name=myrun
+ #SBATCH --ntasks=56
+ #SBATCH --array=1-10%1  #execute 10 array jobs, 1 at a time.
+ #SBATCH --output=myrun-%A_%a.out
+ #SBATCH --error=myrun-%A_%a.err
+ 
+ module load cuda/10.2
+ module load gcc/7.3.0
+ module load openmpi/4.0.5-skylake-gcc7.3
+ module load gromacs/2020.3-gpu-mpi
+ source /shared/centos7/gromacs/2020.3-gcc7.3/bin/GMXRC.bash
+
+ srun --mpi=pmi2 -n $SLURM_NTASKS gmx_mpi mdrun -ntomp 1 -s myrun.tpr -v -dlb yes -cpi state
 
 What is the downside
 ===================
