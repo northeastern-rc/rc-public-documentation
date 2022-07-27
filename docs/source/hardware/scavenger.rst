@@ -39,7 +39,7 @@ that your job has been assigned to the scavenger partition::
   23498592      ctbp     bash  m.joshi  R       0:07      1 d3110
   23498584 scavenger     bash  m.joshi  R       2:19      1 d3110
 
-For the example provided on our checkpointing :ref:`checkpointing` page, you can use the scavenger partition as::
+For the example provided on our `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html?highlight=array#gromacs-checkpointing-example>`_ page, you can use the scavenger partition as::
 
  #!/bin/bash
  #SBATCH --partition=short,scavenger
