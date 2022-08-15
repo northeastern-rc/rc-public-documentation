@@ -8,8 +8,8 @@ Scavenger
 
 Introduction
 ===================
-‘Scavenger’ is a new partition on Discovery that allows the research community to use resources associated with a 
-private partition on the cluster when they are idle. ‘Scavenger’ has hardware not otherwise available to the general research 
+‘Scavenger’ is a new partition on Discovery that allows the research community to use resources associated with 
+private partitions on the cluster when they are idle. ‘Scavenger’ has hardware not otherwise available to the general research 
 community and, in time, will double the resources accessible to users.
 
 When to use Scavenger
