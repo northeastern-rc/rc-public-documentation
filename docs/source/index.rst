@@ -28,7 +28,7 @@ Northeastern University Research Computing
 
    hardware/hardware_overview
    hardware/partitions
-   hardware/scavenger
+   hardware/lowpriority
 
 .. toctree::
    :maxdepth: 2
