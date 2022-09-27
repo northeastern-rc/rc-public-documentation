@@ -68,3 +68,8 @@ In the case of low priority partition, this means that if your job is running on
 submitted by the owner lab's member during this time, then your job will be automatically killed and re-queued 
 since the lab member's job has higher priority. If you use `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_, this would be less of an issue. 
 If your job gets killed this way, its restart time depends on the availability of resources at that time. 
+
+Low priority partition FAQs
++++++++++++++++++++++++++++
+
+The FAQs can go here (as a sub-menu but on same page)
