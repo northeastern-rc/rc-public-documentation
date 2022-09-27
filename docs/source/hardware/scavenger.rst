@@ -2,47 +2,47 @@
 .. _partition_names:
 
 **********
-Scavenger
+Low priority partition
 **********
 :sub:`Updated July, 2022`
 
 Introduction
 ===================
-‘Scavenger’ is a new partition on Discovery that allows the research community to use resources associated with 
-private partitions on the cluster when they are idle. ‘Scavenger’ has hardware not otherwise available to the general research 
+‘Low priority partition’ is a new partition on Discovery that allows the research community to use resources associated with 
+private partitions on the cluster when they are idle. The low priority partition has hardware not otherwise available to the general research 
 community and, in time, will double the resources accessible to users.
 
-When to use Scavenger
+When to use the low priority partition
 ===================
 
 From most to least-recommended scenarios:
 
-1. Code that can be check-pointed
+1. Code that can be checkpointed
 2. Jobs that fit on a single node
 3. Jobs that require multiple nodes (eg, MPI)
 4. When waiting is too hard
 
-How to use scavenger
+How to use the low priority partition
 ===================
 
-To use the ``scavenger`` partition, just add that to your partition list. As the partition list is a 
-comma-delimited list of values, ``srun --partition=short,scavenger`` is perfectly reasonable. For this example, 
-we will exclude partition ``short`` and focus on ``scavenger``. When you run the ``squeue`` command, you can see 
-that your job has been assigned to the scavenger partition::
+To use the low priority partition, just add ``lowpriority`` (no space between 'low' and 'priority') to your partition list. As the partition list is a 
+comma-delimited list of values, it will need to be specified as ``srun --partition=short,lowpriority``. For this example, 
+we will exclude partition ``short`` and focus on ``lowpriority``. When you run the ``squeue`` command, you can see 
+that your job has been assigned to the low priority partition::
 
-  $ srun -p scavenger --pty /bin/bash
+  $ srun -p lowpriority --pty /bin/bash
   srun: job 23498584 queued and waiting for resources
   srun: job 23498584 has been allocated resources
 
   $ squeue -u m.joshi
-  JOBID    PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-  23498592      ctbp     bash  m.joshi  R       0:07      1 d3110
-  23498584 scavenger     bash  m.joshi  R       2:19      1 d3110
+  JOBID      PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+  23498592        ctbp     bash  m.joshi  R       0:07      1 d3110
+  23498584 lowpriority     bash  m.joshi  R       2:19      1 d3110
 
-For the example provided on our `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html?highlight=array#gromacs-checkpointing-example>`_ page, you can use the scavenger partition as::
+For the example provided on our `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html?highlight=array#gromacs-checkpointing-example>`_ page, you can use the low priority partition as::
 
  #!/bin/bash
- #SBATCH --partition=short,scavenger
+ #SBATCH --partition=short,lowpriority
  #SBATCH --constraint=cascadelake
  #SBATCH --nodes=1
  #SBATCH --time=12:00:00
@@ -64,7 +64,7 @@ What is the downside
 ===================
 
 If labs have purchased a partition, the corresponding lab's members have priority access to those resources. 
-In the case of Scavenger, this means that if your job is running on another lab's private partition and a job is
+In the case of low priority partition, this means that if your job is running on another lab's private partition and a job is
 submitted by the owner lab's member during this time, then your job will be automatically killed and re-queued 
 since the lab member's job has higher priority. If you use `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_, this would be less of an issue. 
 If your job gets killed this way, its restart time depends on the availability of resources at that time. 
