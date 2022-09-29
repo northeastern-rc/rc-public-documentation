@@ -4,7 +4,12 @@
 **********
 Low priority partition
 **********
-:sub:`Updated July, 2022`
+:sub:`Updated September, 2022`
+
+Low priority partition FAQs
++++++++++++++++++++++++++++
+
+The FAQs can go here (as a sub-menu but on same page)
 
 Introduction
 ===================
@@ -70,6 +75,6 @@ since the lab member's job has higher priority. If you use `checkpointing <https
 If your job gets killed this way, its restart time depends on the availability of resources at that time. 
 
 Low priority partition FAQs
-+++++++++++++++++++++++++++
+====================
 
-The FAQs can go here (as a sub-menu but on same page)
+Or The FAQs can go here 
