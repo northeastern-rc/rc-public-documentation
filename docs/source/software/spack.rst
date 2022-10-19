@@ -12,7 +12,7 @@ Getting started with Spack
 
 1. Connect to Discovery.
 2. Type ``git clone https://github.com/spack/spack.git``  to copy Spack to your /home directory.
-3. Type ``srun -p short --pty --export=ALL -N 1 -n 28 --exclusive /bin/bash`` to allocate an interactive node. Spack will attempt to run ``make`` in parallel, so this ``srun`` request is for 28 cores on one node (-N 1 -n 28).
+3. Type ``srun --partition=short,lowpriority --pty --export=ALL -N 1 -n 28 --exclusive /bin/bash`` to allocate an interactive node. Spack will attempt to run ``make`` in parallel, so this ``srun`` request is for 28 cores on one node (-N 1 -n 28).
 4. To have Spack in your local environment so you can use the Spack commands, type ``export SPACK_ROOT=/home/<yourusername>/spack``.
 5. Then type ``. $SPACK_ROOT/share/spack/setup-env.sh``.
 6. After you have the Spack commands in your path, type ``spack list`` to see all of the software that you can install with Spack.

@@ -15,7 +15,7 @@ Creating a Conda virtual environment with Anaconda
 Using a locally installed Conda virtual environment is highly recommended so that you can install the specific packages that you need.
 You can also have more than one environment with different packages for testing purposes. This procedure uses the Anaconda module already loaded on Discovery.
 
-1. If you are on a login node, move to a compute node by typing ``srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash``. In the above example, we request for 1 node with 1 cpu core, but you can request for additional resources as per your requirements.
+1. If you are on a login node, move to a compute node by typing ``srun --partition=short,lowpriority --nodes=1 --cpus-per-task=1 --pty /bin/bash``. In the above example, we request for 1 node with 1 cpu core, but you can request for additional resources as per your requirements.
 2. To check what version of Python you have installed, type ``which python``.
 3. To load anaconda, type ``module load anaconda3/2022.01``.
 4. To create your environment, type ``conda create -n <yourenvironmentname> python=3.7 anaconda``, where <yourenvironmentname> is the name you want to give your environment. Tip: to see a list of all of your conda environments, type ``conda info -e``. To save space, also use the ``--prefix=/work/<mygroup>/<mydirectory>`` flag to build in your work directory.
@@ -35,7 +35,7 @@ Miniconda3 with Python 3.7.
 
 **To install Miniconda:**
 
-1. If you are on a login node, move to a compute node by typing ``srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash``.
+1. If you are on a login node, move to a compute node by typing ``srun --partition=short,lowpriority --nodes=1 --cpus-per-task=1 --pty /bin/bash``.
 2. Type ``wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`` to get the latest version of Miniconda.
 3. Type ``sha256sum Miniconda3-latest-Linux-x86_64.sh`` to check the hash key of the package.
 4. Type ``bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>`` to start the installation, where ``<dir>`` should be replaced with the full path to your desired installation directory. For example, set it to ``/work/<mygroup>/<mydirectory>/miniconda3`` (recommended).
