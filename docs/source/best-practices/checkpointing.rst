@@ -7,7 +7,7 @@ The complexity of HPC systems may introduce unpredictable behaviors and may resu
 Checkpointing will allow you to:
 
  * Create resilient workflows in the existence of faults.
- * Overcome most scheduler resource time limitations.
+ * Overcome most scheduler resource time limitations, and efficiently use the lowpriority partition.
  * Implement an early error detection approach by inspecting intermediate results.  
 
 The Checkpointing technique
@@ -40,17 +40,17 @@ Implementing checkpointing can be acheived by:
  * The use of `Slurm Job Arrays <https://slurm.schedmd.com/job_array.html>`_. 
 
 .. note::
-   To overcome partition time limits, replace your single long job with multiple shorter jobs. Using job arrays, set each job to run one after the other. Each job will write a checkpoint file if checkpointing is implemented. The next job in line will be the latest checkpoint file to continue from the latest state of the calculation.
+   To overcome partition time limits, or to use the lowpriority partition effectively, replace your single long job with multiple shorter jobs. Using job arrays, set each job to run one after the other. Each job will write a checkpoint file if checkpointing is implemented. The next job in line will be the latest checkpoint file to continue from the latest state of the calculation.
 
 GROMACS checkpointing example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This example demonstrates how to implement a longer `GROMACS <https://www.gromacs.org/>`_ job of 120 hours by using multiple shorter jobs on the **short** partition. We use Slurm job arrays and the GROMACS built-in checkpointing option (read more `here <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_) to implement checkpointing.
+This example demonstrates how to implement a longer `GROMACS <https://www.gromacs.org/>`_ job of 120 hours by using multiple shorter jobs on the **short** partition, or the **lowpriority** partition. We use Slurm job arrays and the GROMACS built-in checkpointing option (read more `here <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_) to implement checkpointing.
 
 The following script **submit_mdrun_array.bash** creates a Slurm job array of 10 individual array jobs::
 
  #!/bin/bash
- #SBATCH --partition=short
+ #SBATCH --partition=short,lowpriority
  #SBATCH --constraint=cascadelake
  #SBATCH --nodes=1
  #SBATCH --time=12:00:00
@@ -83,7 +83,7 @@ Below the example **submit_tf_array.bash** script::
  #!/bin/bash
  #SBATCH --job-name=myrun
  #SBATCH --time=00:10:00
- #SBATCH --partition=gpu
+ #SBATCH --partition=gpu,lowpriority
  #SBATCH --nodes=1
  #SBATCH --gres=gpu:1
  #SBATCH --mem=10Gb
