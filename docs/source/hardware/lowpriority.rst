@@ -6,16 +6,12 @@ Low priority partition
 **********
 :sub:`Updated September, 2022`
 
-Low priority partition FAQs
-+++++++++++++++++++++++++++
-
-The FAQs can go here (as a sub-menu but on same page)
 
 Introduction
 ===================
-‘Low priority partition’ is a new partition on Discovery that allows the research community to use resources associated with 
-private partitions on the cluster when they are idle. The low priority partition has hardware not otherwise available to the general research 
-community and, in time, will double the resources accessible to users.
+``lowpriority`` is a new partition on Discovery that allows the research community to use private resources on the HPC cluster when they are idle. 
+This new partition has hardware not otherwise available to the general research community and, in time, could double the resources available to NURC users. 
+This is a common practice in HPC clusters to optimize the use of idle private resources that consume power and cooling. 
 
 When to use the low priority partition
 ===================
@@ -68,11 +64,14 @@ For the example provided on our `checkpointing <https://rc-docs.northeastern.edu
 What is the downside
 ===================
 
-If labs have purchased a partition, the corresponding lab's members have priority access to those resources. 
-In the case of low priority partition, this means that if your job is running on another lab's private partition and a job is
-submitted by the owner lab's member during this time, then your job will be automatically killed and re-queued 
-since the lab member's job has higher priority. If you use `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_, this would be less of an issue. 
-If your job gets killed this way, its restart time depends on the availability of resources at that time. 
+Jobs running on the lowpriority partition always carry the risk of being suspended before their wall time ends if a 
+high priority job requests those resources while the low priority job is running. If labs have purchased a partition, 
+the corresponding lab’s members have priority access to those resources. This means that if If a job is submitted to 
+the lowpriority partition and a high priority job comes through that requires resources currently occupied by the 
+low priority job, then that low priority job will be stopped/suspended within 15s(?) and re-queued. If you have 
+`checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_, implemented in your 
+workflow, such abrupt suspension of jobs would not be an issue. If your job gets killed this way, it’s restart time 
+depends on the availability of resources at that time.
 
 Low priority partition FAQs
 ====================
