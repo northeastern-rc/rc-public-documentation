@@ -37,7 +37,7 @@ to make it easier to check on the progress of the installation.
 2. Type ``exit`` to exit from the compute node you requested in step 2 above.
 3. Type the following to request a GPU node for 8 hours::
 
-     srun --partition=gpu --nodes=1 --ntasks=14 --pty --export=All --gres=gpu:1 --mem=0 --time=08:00:00 /bin/bash
+     srun --partition=gpu,lowpriority --nodes=1 --ntasks=14 --pty --export=All --gres=gpu:1 --mem=0 --time=08:00:00 /bin/bash
 
 4. (Optional) Initiate a ``screen`` session:
 
