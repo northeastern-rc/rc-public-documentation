@@ -68,7 +68,7 @@ Jobs running on the lowpriority partition always carry the risk of being suspend
 high priority job requests those resources while the low priority job is running. If labs have purchased a partition, 
 the corresponding lab’s members have priority access to those resources. This means that if If a job is submitted to 
 the lowpriority partition and a high priority job comes through that requires resources currently occupied by the 
-low priority job, then that low priority job will be stopped/suspended within 15s(?) and re-queued. If you have 
+low priority job, then that low priority job will be stopped/suspended within 15s and re-queued. If you have 
 `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_, implemented in your 
 workflow, such abrupt suspension of jobs would not be an issue. If your job gets killed this way, it’s restart time 
 depends on the availability of resources at that time.
