@@ -142,7 +142,7 @@ For more information about these commands, see the Slurm documentation site http
 
 Allocating partitions in your jobs
 ===================================
-To specify a partition, without the option of ``lowpriority``, when running jobs, use ``--partition=<partition name>`` otherwise use ``--partition=<partition name>, lowpriority`` with either ``srun`` or ``sbatch``. More information on how to utilize the Low Priority partition can be found `here < >`_.  When using a partition with your job and
+To specify a partition (without the option of ``lowpriority``) when running jobs, use ``--partition=<partition name>`` otherwise use ``--partition=<partition name>,lowpriority`` with either ``srun`` or ``sbatch``. More information on how to utilize the Low Priority partition can be found `here < >`_.  When using a partition with your job and
 specifying the options of ``--nodes=`` and ``--ntasks=``, make sure that you are requesting options that best fit your job. **Requesting the maximum number of nodes or tasks will not make your job run faster or give you higher priority in the job queue.** It can actually have
 the opposite effect on jobs that are better suited to running with smaller requirements, as you have to wait for the extra resources that your job will not use. See :ref:`using_slurm` for more information on using Slurm to run jobs.
 
