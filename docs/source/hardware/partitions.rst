@@ -16,13 +16,25 @@ distribution of resources for all jobs being submitted to the cluster.
 
 On Discovery, there are several different partitions:
 
-* General access (``debug``, ``express``, ``short``, ``gpu``)
+* General access (``debug``, ``express``, ``short``, ``gpu``, ``lowpriority``)
 * Application only (``long``, ``large``, ``multigpu``)
-* PI owned (accessed only by members of the PIs’ group)
+* PI owned (accessed only by members of the PIs’ group unless the PI partition is a member of the ``lowpriority`` partition group)
 
-The general access and application only partitions span the hardware on Discovery, with ``gpu`` and ``multigpu`` spanning the GPUs on Discovery and the other partitions spanning the CPUs.
-For example, if you use the ``debug`` partition you're using the same hardware as ``short``, just with different time, job, and core limits. Refer to the tables below for
-detailed information on the current partitions. Note that PI-owned partitions only include the hardware that those PIs own and are only accessible to the members of the PI's group.
+The general access and application only partitions span a variety of
+hardware on Discovery. The ``gpu`` and ``multigpu`` partitions are
+meant for accesssing the GPU hardware on Discovery while the rest make
+CPUs available to the community.  For example, if you use the
+``debug`` partition you're using the same hardware as ``short``, just
+with different time, job, and core limits. Refer to the tables below
+for detailed information on the current partitions. 
+
+.. note::
+PI-owned partitions only include the hardware that those PIs own and
+are 'only' accessible to the members of the PI's group unless the
+PI-owned partition is also a member of the ``lowpriority`` partition
+group, in which case it could be available to general users as
+well. See `Low Priority Partition < >`_ .
+
 
 .. note::
  In the following table, the Running Jobs Per User/Per Research Group. Core and RAM limits are set per user, across all running jobs (not pending).
@@ -63,6 +75,14 @@ detailed information on the current partitions. Note that PI-owned partitions on
      - 1024
      - 25TB
      - Best for serial or small parallel jobs (``--nodes=2`` max) that need to run for up to 24 hours.
+   * - lowpriority
+     - No
+     - 4 hours/24 hours
+     - 50/500
+     - 5000
+     - 1024
+     - 25TB
+     - Best for jobs that do not lose much information if they were to end abruptly. See `Discovery Best Practices <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_
    * - long
      - **Yes**
      - 1 day/5 Days
@@ -78,7 +98,7 @@ detailed information on the current partitions. Note that PI-owned partitions on
      - 1000 per user/5000 per group
      - N/A
      - N/A
-     - Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.
+     - Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.     
 
 .. list-table::
    :widths: 20 20 20 20 20 20 20 30
@@ -122,7 +142,7 @@ For more information about these commands, see the Slurm documentation site http
 
 Allocating partitions in your jobs
 ===================================
-To specify a partition when running jobs, use the option ``--partition=<partition name>`` with either ``srun`` or ``sbatch``. When using a partition with your job and
+To specify a partition, without the option of ``lowpriority``, when running jobs, use ``--partition=<partition name>`` otherwise use ``--partition=<partition name>, lowpriority`` with either ``srun`` or ``sbatch``. More information on how to utilize the Low Priority partition can be found `here < >`_.  When using a partition with your job and
 specifying the options of ``--nodes=`` and ``--ntasks=``, make sure that you are requesting options that best fit your job. **Requesting the maximum number of nodes or tasks will not make your job run faster or give you higher priority in the job queue.** It can actually have
 the opposite effect on jobs that are better suited to running with smaller requirements, as you have to wait for the extra resources that your job will not use. See :ref:`using_slurm` for more information on using Slurm to run jobs.
 
@@ -140,5 +160,4 @@ Partition Access Request
 If you need access to the large, long, or multigpu partition, you need to submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_.
 Access is not automatically granted. You will need to provide details and test results that demonstrate your need for access for these partitions.
 If you need temporary access to multigpu to perform testing before applying for permanent access,
-you should also submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_. All requests are evaluated by members of the RC team,
-and multigpu requests are also evaluated by two faculty members.
+you should also submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_. All requests are evaluated by members of the RC team..
