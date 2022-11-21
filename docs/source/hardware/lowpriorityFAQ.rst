@@ -137,13 +137,13 @@ resources always have the highest priority. When submitting jobs to your private
 currently running on your servers will be killed and sent back to the queue, introducing a slight delay (~30s) on 
 the first job submitted. This new service is designed to favor partition owners heavily.
 
-**2. What is the downside of submitting a job to the ``lowpriority`` partition?**
+**2. What is the downside of submitting a job to the** ``lowpriority`` **partition?**
 
 If a job is submitted to the ``lowpriority`` partition and a high priority job comes through that requires resources 
 currently occupied by the low priority job, then that low priority job will be stopped/suspended within 30s(?) and 
 re-queued. 
 
-**3. When should I NOT use the ``lowpriority`` partition to run my jobs?**
+**3. When should I NOT use the** ``lowpriority`` **partition to run my jobs?**
 
 Jobs running on the ``lowpriority`` partition always carry the risk of being suspended before their wall time ends 
 if a high priority job requests those resources while the low priority job is running. If you have 
@@ -154,7 +154,7 @@ techniques implemented, and/or you expect your jobs to run for a while (and re-r
 preemption means it is going to start all over again and take even longer to complete), it is not ideal to use 
 the ``lowpriority`` partition. 
 
-**4. Will the ``lowpriority`` partition affect the limits on my own server(s)?**
+**4. Will the** ``lowpriority`` **partition affect the limits on my own server(s)?**
 
 The ``lowpriority`` partition will not affect current partition definitions — it is just an additional partition. As 
 is true now, PIs will be able to request their private partitions be configured according to their research 
