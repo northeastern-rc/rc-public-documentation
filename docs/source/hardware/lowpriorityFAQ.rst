@@ -8,7 +8,7 @@ Low priority partition FAQs
 Partition information
 ===================
 
-**1. What is the ``lowpriority`` partition and why is it important?**
+**1. What is the** ``lowpriority`` **partition and why is it important?**
 
 ``lowpriority`` is a new partition on Discovery that allows the research community to use **private resources** on 
 the cluster when they are idle. This new partition has hardware not otherwise available to the general research 
@@ -41,18 +41,18 @@ Jobs submitted to the ``lowpriority`` partition have the lowest priority of any 
 after all other normal/high priority jobs have been placed. Jobs submitted by private partition members to their own 
 partition always have higher priority. 
 
-**5. Will the ``lowpriority`` partition become the default partition?**
+**5. Will the** ``lowpriority`` **partition become the default partition?**
 
 No, the default partition will still be partition `short`. By default, jobs are not subject to preemption.
 
-**6. How do I submit a job to the ``lowpriority`` partition?**
+**6. How do I submit a job to the** ``lowpriority`` **partition?**
 
-The `lowpriority` partition is a distinct partition that must be requested explicitly. SLURM accepts a 
+The ``lowpriority`` partition is a distinct partition that must be requested explicitly. SLURM accepts a 
 comma-separated list of partitions. If a job is scheduled to run in the ``lowpriority`` partition, it may be 
 preempted and re-queued. This does not happen in other partitions. The ``lowpriority`` partition is the only partition 
 that can be preempted. See examples `here <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_.
 
-**7. How can I ensure that my ``lowpriority`` partition job can run on nodes with sufficient resources?**
+**7. How can I ensure that my** ``lowpriority`` **partition job can run on nodes with sufficient resources?**
 
 It is important to specify the required resources in the job script. For CPUs, this can include the number of cores 
 and the micro-architecture and for GPUs this is typically handled by “class”. The GPU classes that are configured on 
@@ -61,29 +61,29 @@ the HPC system include P100, V100, T4, and A100. See our documentation `here <ht
 Resources
 ===================
 
-**1. What are the time limits on the ``lowpriority`` partition?**
+**1. What are the time limits on the** ``lowpriority`` **partition?**
 
 Partition limits for the ``lowpriority`` partition are the same as the default partition (short), which has a 4h 
 default walltime and a 24h max-walltime.
 
-**2. What are the resource and job limits on the ``lowpriority`` partition?**
+**2. What are the resource and job limits on the** ``lowpriority`` **partition?**
 
 Currently, the resource limits and the number for CPU-supported low priority jobs on the ``lowpriority`` partition 
 are the same as the `default partition <https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html>`_. The 
 resource limits and the number for GPU-supported low priority jobs on the ``lowpriority`` partition are the same as 
 the `gpu partition <https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html>`_.
 
-**3. Is there a limit on the number of CPUs or GPUs that can be requested when trying to use the low-priority partition?**
+**3. Is there a limit on the number of CPUs or GPUs that can be requested when trying to use the** ``lowpriority`` **partition?**
 
 The maximum limit for number of CPUs, job time etc. will be the same as that of `short` partition. 
 Please check our `partitions <https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html>`_ page for the 
 core and RAM limits on `short` partition. 
 
-**4. What hardware will be part of the ``lowpriority`` partition?**
+**4. What hardware will be part of the** ``lowpriority`` **partition?**
 
 All PI-owned hardware purchased on or after 2019 will be part of the ``lowpriority`` partition.
 
-**5. Do you have a clear inventory of the various resources available through the ``lowpriority`` partition?**
+**5. Do you have a clear inventory of the various resources available through the** ``lowpriority`` **partition?**
 
 Throughout the testing phase, RC will be updating its `technical documentation <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_ 
 to reflect the resources that are part of public and private partitions. Please check the `documentation <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_ regularly for latest information. 
@@ -102,29 +102,29 @@ wall time ends if the private partition’s group member submits a job and reque
 
 **2. What do I need to know about preemption and are there any drawbacks for my research group?**
 
-**3. For private partition owners:** 
+**For private partition owners:** 
 When low priority jobs are running on your hardware, you may experience a slight delay (~30s) when submitting your 
 first job to your private partition. This is the time it will take the scheduler to kill/preempt low priority jobs 
 running on your partition. This new service is designed to minimize that delay.
 
-**4. For users of the ``lowpriority`` partition:** 
-Submitting jobs to this partition will make your jobs preemptable. 
-That means they may be stopped/suspended and re-queued at any time. We recommend that you use strategies such as 
+**For users of the** ``lowpriority`` **partition:** 
+Submitting jobs to this partition will make your jobs preemptable. That means they may be stopped/suspended and 
+re-queued at any time. We recommend that you use strategies such as 
 `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_ to take full advantage 
 of the ``lowpriority`` partition. RC is working on `detailed documentation <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_
 and training sessions that will be available later in the Fall 2022 semester, once the service is ready to be released.
 
-**5. How does re-queuing of preempted (stopped/suspended) low priority jobs work?**
+**3. How does re-queuing of preempted (stopped/suspended) low priority jobs work?**
 
-Preempted jobs are put back in the default partition queue (`short`) and scheduled normally.
+Preempted jobs are put back in the default partition queue (``short``) and scheduled normally.
 
-**6. I already have access to one or more of the large, long, and/or multigpu partition(s), do I benefit from 
+**4. I already have access to one or more of the large, long, and/or multigpu partition(s), do I benefit from 
 using the ``lowpriority`` partition?**
 
 The goal of ``lowpriority`` partition is to double the resources available to Discovery users. Hence, specifying 
 the ``lowpriority`` partition in your SLURM job header gives your job a higher chance of being allocated resources, 
 even when your first choice of partition is unavailable. For e.g., when you specify 
-`#SBATCH --partition=short,lowpriority`, your job can start running on the ``lowpriority`` partition even when `short` 
+``#SBATCH --partition=short,lowpriority``, your job can start running on the ``lowpriority`` partition even when ``short`` 
 is unavailable. 
 
 Caveats
@@ -166,7 +166,7 @@ As a private partition owner you will always have the highest priority when acce
 submitting jobs to your private partition, any low priority jobs currently running on your servers will be killed 
 and sent back to the queue. You will retrieve your server(s) within approximately 30s.
 
-**6. Will the software that my group use exclusively on our server(s) be available on other servers?**
+**6. Will the software that my group uses exclusively on our server(s) be available on other servers?**
 
 Yes, all software used in the private partitions is available on all servers. Software that is restricted to a 
 particular group’s license will remain restricted to members of that group, but they will be able to use that 
@@ -185,9 +185,7 @@ that they would be added to the ``lowpriority`` partition when it became availab
 
 **2. What is the understanding between RC and private partition owners?**
 
-The following understanding applies to all individual private partition owners 
-
-**Who purchased servers hosted at MGHPCC since 2019**:
+The following understanding applies to all individual private partition owners who purchased servers hosted at MGHPCC since 2019:
 
 RC racks, installs and maintains privately owned servers; RC purchases the equipment needed to connect these servers 
 to the infiniband network fabric; RC pays for power and cooling to operate the servers during their entire lifetime; 
@@ -231,10 +229,10 @@ owned by those groups will be part of the test partition.
 **3. How can I participate in the testing phase?**
 
 Let us know by sending an email to rchelp@northeastern.edu with the subject “lowpriority partition”. Members of your 
-group will get first access to all newly opened resources for the duration of the testing phase. Only hardware owned by PIs who 
-opt-in will be part of the testing phase.
+group will get first access to all newly opened resources for the duration of the testing phase. Only hardware owned 
+by PIs who opt-in will be part of the testing phase.
 
-**4. When will the ``lowpriority`` partition be officially released?**
+**4. When will the** ``lowpriority`` **partition be officially released?**
 
 Once testing, configuration, and documentation are complete, we will schedule an additional rollout of 
 the ``lowpriority`` partition and provide access to all users of the HPC cluster. We anticipate this to 
@@ -243,19 +241,19 @@ be in **late 2022/early 2023**.
 Miscellaneous
 ===================
 
-**1.Where can I learn more about the ``lowpriority`` partition?**
+**1.Where can I learn more about the** ``lowpriority`` **partition?**
 
-RC is working on a [detailed set of documentation](https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html), 
+RC is working on a `detailed set of documentation <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_, 
 service level objectives, and training sessions that will be available later in the Fall 2022 semester, once the 
 service is ready to be released.
 
 **2. Are there tools or resources available to help me better use and understand the ``lowpriority`` partition?**
 
-Use [checkpointing](https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html) to take full 
+Use `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_ to take full 
 advantage of the ``lowpriority`` partition. RC is working on a detailed set of documentation and training sessions 
 that will be available later in the Fall 2022 semester to coincide with the release of this new service.
 
 **3. I have additional questions that are not addressed in the FAQs, what do I do?**
 
-Kindly send your questions to [rchelp@northeastern.edu](mailto:rchelp@northeastern.edu) or schedule a consultation 
-with us [here](https://rc.northeastern.edu/support/consulting/).
+Kindly send your questions to `rchelp@northeastern.edu <mailto:rchelp@northeastern.edu>`_ or schedule a consultation 
+with us `here <https://rc.northeastern.edu/support/consulting/>`_.
