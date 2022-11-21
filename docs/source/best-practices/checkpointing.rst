@@ -45,7 +45,7 @@ Implementing checkpointing can be acheived by:
 GROMACS checkpointing example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This example demonstrates how to implement a longer `GROMACS <https://www.gromacs.org/>`_ job of 120 hours by using multiple shorter jobs on the **short** partition, or the **lowpriority** partition. We use Slurm job arrays and the GROMACS built-in checkpointing option (read more `here <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_) to implement checkpointing.
+This example demonstrates how to implement a longer `GROMACS <https://www.gromacs.org/>`_ job of 120 hours by using multiple shorter jobs on the ``short`` partition, or the ``lowpriority`` partition. We use Slurm job arrays and the GROMACS built-in checkpointing option (read more `here <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_) to implement checkpointing.
 
 The following script **submit_mdrun_array.bash** creates a Slurm job array of 10 individual array jobs::
 
