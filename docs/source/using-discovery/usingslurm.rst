@@ -17,8 +17,8 @@ with Slurm and be able to submit basic jobs on Discovery.
 
 .. important::
    Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options also usually have both short and verbose versions, such as
-   ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the
-   verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the exact same thing as ``srun --partition=short --nodes=1 --ntasks=1``
+   ``--nodes`` and ``-N`` (both mean the same thing). The examples in this documentation all use the
+   verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short,lowpriority -N 1 -n 1`` means the exact same thing as ``srun --partition=short,lowpriority --nodes=1 --ntasks=1``
    Refer to the official Slurm documentation to get in-depth information about these commands and their options: `Slurm documentation website <https://slurm.schedmd.com/archive/slurm-17.11.6/srun.html>`_.
 
 Viewing Cluster Information
