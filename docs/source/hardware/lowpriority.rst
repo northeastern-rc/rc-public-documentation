@@ -18,7 +18,7 @@ When to use the low priority partition
 
 From most to least-recommended scenarios:
 
-1. Code that can be checkpointed
+1. Code that can be `checkpointed <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html?highlight=array#gromacs-checkpointing-example>`_
 2. Jobs that fit on a single node
 3. Jobs that require multiple nodes (eg, MPI)
 4. When waiting for your jobs to get started is too hard
