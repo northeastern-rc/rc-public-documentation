@@ -43,7 +43,7 @@ partition always have higher priority.
 
 **5. Will the** ``lowpriority`` **partition become the default partition?**
 
-No, the default partition will still be partition `short`. By default, jobs are not subject to preemption.
+No, the default partition will still be partition `short`. This ensures that by default, jobs are not subject to preemption.
 
 **6. How do I submit a job to the** ``lowpriority`` **partition?**
 
