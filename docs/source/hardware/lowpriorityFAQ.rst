@@ -31,14 +31,14 @@ priority job is running.
 **4. How does SLURM handle low priority jobs?**
 
 In SLURM, jobs are submitted to partitions. SLURM is configured such that jobs submitted to the ``lowpriority`` 
-partition are considered for execution on private partitions only when they are idle. 
+partition are considered for execution on private partitions only when the requested job resources are idle. 
 
 In other words, a low priority job will be executed only if the private partition has resources to execute a 
 job submitted to it. However, if a member of the private partition submits a job during this time, then the low 
 priority job will be automatically stopped/suspended and re-queued (preempted). 
 
 Jobs submitted to the ``lowpriority`` partition have the lowest priority of any class of jobs and are only considered 
-after all other normal/high priority jobs have been placed. Jobs submitted by private partition members to their own 
+after all other high priority jobs have been placed. Jobs submitted by private partition members to their own 
 partition always have higher priority. 
 
 **5. Will the** ``lowpriority`` **partition become the default partition?**
@@ -54,9 +54,10 @@ that can be preempted. See examples `here <https://northeastern-university-rc-pu
 
 **7. How can I ensure that my** ``lowpriority`` **partition job can run on nodes with sufficient resources?**
 
-It is important to specify the required resources in the job script. For CPUs, this can include the number of cores 
+It is important to specify the required resources in the job script, including memory, CPUs and GPUs. For CPUs, this can include the number of cores 
 and the micro-architecture and for GPUs this is typically handled by “class”. The GPU classes that are configured on 
-the HPC system include P100, V100, T4, and A100. See our documentation `here <https://rc-docs.northeastern.edu/en/latest/using-discovery/workingwithgpu.html#working-gpus>`_.
+the HPC system include P100, V100, T4, and A100. See our documentation on `using slurm <https://rc-docs.northeastern.edu/en/latest/using-discovery/usingslurm.html>_` and 
+`working with GPUs <https://rc-docs.northeastern.edu/en/latest/using-discovery/workingwithgpu.html#working-gpus>`_ for additional information.
 
 Resources
 ===================
@@ -75,9 +76,9 @@ the `gpu partition <https://rc-docs.northeastern.edu/en/latest/hardware/partitio
 
 **3. Is there a limit on the number of CPUs or GPUs that can be requested when trying to use the** ``lowpriority`` **partition?**
 
-The maximum limit for number of CPUs, job time etc. will be the same as that of `short` partition. 
+The maximum limit for number of CPUs, GPUs, job time etc. will be the same as that on the `short` and `gpu` partitions. 
 Please check our `partitions <https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html>`_ page for the 
-core and RAM limits on `short` partition. 
+core and RAM limits on these partition. 
 
 **4. What hardware will be part of the** ``lowpriority`` **partition?**
 
