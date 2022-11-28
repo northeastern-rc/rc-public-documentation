@@ -56,7 +56,7 @@ that can be preempted. See examples `here <https://northeastern-university-rc-pu
 
 It is important to specify the required resources in the job script, including memory, CPUs and GPUs. For CPUs, this can include the number of cores 
 and the micro-architecture and for GPUs this is typically handled by “class”. The GPU classes that are configured on 
-the HPC system include P100, V100, T4, and A100. See our documentation on `using slurm <https://rc-docs.northeastern.edu/en/latest/using-discovery/usingslurm.html>_` and 
+the HPC system include P100, V100, T4, and A100. See our documentation on `using slurm <https://rc-docs.northeastern.edu/en/latest/using-discovery/usingslurm.html>`_ and 
 `working with GPUs <https://rc-docs.northeastern.edu/en/latest/using-discovery/workingwithgpu.html#working-gpus>`_ for additional information.
 
 Resources
