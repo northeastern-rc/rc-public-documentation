@@ -29,7 +29,7 @@ How to use the low priority partition
 To use the low priority partition, just add ``lowpriority`` (no space between 'low' and 'priority') to your partition list. 
 The partition list is a comma-delimited list of values indicating the order of preference for assigning the job to a particular partition. 
 Hence, the low priority partition must be specified after a general partition has been mentioned, as ``srun --partition=short,lowpriority``. 
-For the below example, we will exclude partition ``short`` and focus on ``lowpriority``. When you run the ``squeue`` command, you can see 
+For the example below, we will exclude partition ``short`` and focus on ``lowpriority``. When you run the ``squeue`` command, you can see 
 that your job has been assigned to the low priority partition::
 
   $ srun -p lowpriority --pty /bin/bash
@@ -37,8 +37,8 @@ that your job has been assigned to the low priority partition::
   srun: job 23498584 has been allocated resources
 
   $ squeue -u $USER
-  JOBID      PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-  23498584 lowpriority     bash  m.joshi  R       2:19      1 d3110
+  JOBID      PARTITION     NAME     USER   ST   TIME  NODES  NODELIST(REASON)
+  23498584 lowpriority     bash    $USER    R   2:19      1  d3110
 
 For the example provided on our `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html?highlight=array#gromacs-checkpointing-example>`_ page, 
 you can specify the low priority partition along with a shared partition as::
