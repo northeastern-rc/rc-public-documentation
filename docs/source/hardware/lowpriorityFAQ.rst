@@ -59,6 +59,23 @@ and the micro-architecture and for GPUs this is typically handled by “class”
 the HPC system include P100, V100, T4, and A100. See our documentation on `using slurm <https://rc-docs.northeastern.edu/en/latest/using-discovery/usingslurm.html>`_ and 
 `working with GPUs <https://rc-docs.northeastern.edu/en/latest/using-discovery/workingwithgpu.html#working-gpus>`_ for additional information.
 
+**8. What is the downside of submitting a job to the** ``lowpriority`` **partition?**
+
+If a job is submitted to the ``lowpriority`` partition and a high priority job comes through that requires resources 
+currently occupied by the low priority job, then that low priority job will be stopped/suspended within 30s and 
+re-queued. 
+
+**9. When should I NOT use the** ``lowpriority`` **partition to run my jobs?**
+
+Jobs running on the ``lowpriority`` partition always carry the risk of being suspended before their wall time ends 
+if a high priority job requests those resources while the low priority job is running. If you have 
+`checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_ implemented in your 
+workflow, such abrupt suspension of jobs would not be an issue, since your intermediate calculations/data are saved, 
+and you can re-start your jobs from the point of their suspension. However, if you do not have checkpointing 
+techniques implemented, and/or you expect your jobs to run for a while (and re-running them in the event of 
+preemption means it is going to start all over again and take even longer to complete), it is not ideal to use 
+the ``lowpriority`` partition. 
+
 Resources
 ===================
 
@@ -80,11 +97,30 @@ The maximum limit for number of CPUs, GPUs, job time etc. will be the same as th
 Please check our `partitions <https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html>`_ page for the 
 core and RAM limits on these partition. 
 
-**4. What hardware will be part of the** ``lowpriority`` **partition?**
+**4. I am an owner of a private partition, will this affect my group’s job wait time?**
+
+As a PI who purchased your own equipment, jobs submitted by the members of your private partition to your own 
+resources always have the highest priority. When submitting jobs to your private partition, any low priority jobs 
+currently running on your servers will be killed and sent back to the queue, introducing a slight delay (~30s) on 
+the first job submitted. This new service is designed to favor partition owners heavily.
+
+**5. Will the** ``lowpriority`` **partition affect the limits on my own server(s)?**
+
+The ``lowpriority`` partition will not affect current partition definitions — it is just an additional partition. As 
+is true now, PIs will be able to request their private partitions be configured according to their research 
+requirements. 
+
+**6. Will the software that my group uses exclusively on our server(s) be available on other servers?**
+
+Yes, all software used in the private partitions is available on all servers. Software that is restricted to a 
+particular group’s license will remain restricted to members of that group, but they will be able to use that 
+software on any server. 
+
+**7. What hardware will be part of the** ``lowpriority`` **partition?**
 
 All PI-owned hardware purchased on or after 2019 will be part of the ``lowpriority`` partition.
 
-**5. Do you have a clear inventory of the various resources available through the** ``lowpriority`` **partition?**
+**8. Do you have a clear inventory of the various resources available through the** ``lowpriority`` **partition?**
 
 Throughout the testing phase, RC will be updating its `technical documentation <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_ 
 to reflect the resources that are part of public and private partitions. Please check the `documentation <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_ regularly for latest information. 
@@ -119,7 +155,13 @@ and training sessions that will be available later in the Fall 2022 semester, on
 
 Preempted jobs are put back in the default partition queue (``short``) and scheduled normally.
 
-**4. I already have access to one or more of the large, long, and/or multigpu partition(s), do I benefit from 
+**4. My servers are being used by others, how fast can we retrieve them?**
+
+As a private partition owner you will always have the highest priority when accessing your own resources. When 
+submitting jobs to your private partition, any low priority jobs currently running on your servers will be killed 
+and sent back to the queue. You will retrieve your server(s) within approximately 30s.
+
+**5. I already have access to one or more of the large, long, and/or multigpu partition(s), do I benefit from 
 using the ``lowpriority`` partition?**
 
 The goal of ``lowpriority`` partition is to double the resources available to Discovery users. Hence, specifying 
@@ -127,52 +169,6 @@ the ``lowpriority`` partition in your SLURM job header gives your job a higher c
 even when your first choice of partition is unavailable. For e.g., when you specify 
 ``#SBATCH --partition=short,lowpriority``, your job can start running on the ``lowpriority`` partition even when ``short`` 
 is unavailable. 
-
-Caveats
-===================
-
-**1. I am an owner of a private partition, will this affect my group’s job wait time?**
-
-As a PI who purchased your own equipment, jobs submitted by the members of your private partition to your own 
-resources always have the highest priority. When submitting jobs to your private partition, any low priority jobs 
-currently running on your servers will be killed and sent back to the queue, introducing a slight delay (~30s) on 
-the first job submitted. This new service is designed to favor partition owners heavily.
-
-**2. What is the downside of submitting a job to the** ``lowpriority`` **partition?**
-
-If a job is submitted to the ``lowpriority`` partition and a high priority job comes through that requires resources 
-currently occupied by the low priority job, then that low priority job will be stopped/suspended within 30s(?) and 
-re-queued. 
-
-**3. When should I NOT use the** ``lowpriority`` **partition to run my jobs?**
-
-Jobs running on the ``lowpriority`` partition always carry the risk of being suspended before their wall time ends 
-if a high priority job requests those resources while the low priority job is running. If you have 
-`checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_ implemented in your 
-workflow, such abrupt suspension of jobs would not be an issue, since your intermediate calculations/data are saved, 
-and you can re-start your jobs from the point of their suspension. However, if you do not have checkpointing 
-techniques implemented, and/or you expect your jobs to run for a while (and re-running them in the event of 
-preemption means it is going to start all over again and take even longer to complete), it is not ideal to use 
-the ``lowpriority`` partition. 
-
-**4. Will the** ``lowpriority`` **partition affect the limits on my own server(s)?**
-
-The ``lowpriority`` partition will not affect current partition definitions — it is just an additional partition. As 
-is true now, PIs will be able to request their private partitions be configured according to their research 
-requirements. 
-
-**5. My servers are being used by others, how fast can we retrieve them?**
-
-As a private partition owner you will always have the highest priority when accessing your own resources. When 
-submitting jobs to your private partition, any low priority jobs currently running on your servers will be killed 
-and sent back to the queue. You will retrieve your server(s) within approximately 30s.
-
-**6. Will the software that my group uses exclusively on our server(s) be available on other servers?**
-
-Yes, all software used in the private partitions is available on all servers. Software that is restricted to a 
-particular group’s license will remain restricted to members of that group, but they will be able to use that 
-software on any server. 
-
 
 RC policy
 ===================

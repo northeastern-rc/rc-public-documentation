@@ -69,7 +69,7 @@ Jobs running on the ``lowpriority`` partition always carry the risk of being sus
 high priority job requests those resources while the low priority job is running (see our `FAQ <https://northeastern-university-rc-public-documentation--26.com.readthedocs.build/en/26/hardware/lowpriorityFAQ.html>`_ page 
 for a description of "low" and "high" priority jobs). The members of a PI's partition have priority access to the resources of that partition. 
 This means that if a job is submitted to the ``lowpriority`` partition and a high priority job comes through that requires resources currently occupied by the 
-low priority job, then that low priority job will be stopped/suspended within 15s and re-queued. If you have 
+low priority job, then that low priority job will be stopped/suspended within 30s and re-queued. If you have 
 `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_, implemented in your 
 workflow, such an abrupt suspension of the job would not be an issue. However, if your job gets suspended this way, then it’s restart time 
 will depend on the availability of resources at that time.
