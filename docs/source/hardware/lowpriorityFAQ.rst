@@ -43,7 +43,7 @@ partition always have higher priority.
 
 **5. Will the** ``lowpriority`` **partition become the default partition?**
 
-No, the default partition will still be partition `short`. This ensures that by default, jobs are not subject to preemption.
+No, the default partition will still be partition ``short``. This ensures that by default, jobs are not subject to preemption.
 
 **6. How do I submit a job to the** ``lowpriority`` **partition?**
 
@@ -81,7 +81,7 @@ Resources
 
 **1. What are the time limits on the** ``lowpriority`` **partition?**
 
-Partition limits for the ``lowpriority`` partition are the same as the default partition (short), which has a 4h 
+Partition limits for the ``lowpriority`` partition are the same as the default partition (``short``), which has a 4h 
 default walltime and a 24h max-walltime.
 
 **2. What are the resource and job limits on the** ``lowpriority`` **partition?**
@@ -93,7 +93,7 @@ the `gpu partition <https://rc-docs.northeastern.edu/en/latest/hardware/partitio
 
 **3. Is there a limit on the number of CPUs or GPUs that can be requested when trying to use the** ``lowpriority`` **partition?**
 
-The maximum limit for number of CPUs, GPUs, job time etc. will be the same as that on the `short` and `gpu` partitions. 
+The maximum limit for number of CPUs, GPUs, job time etc. will be the same as that on the ``short`` and ``gpu`` partitions. 
 Please check our `partitions <https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html>`_ page for the 
 core and RAM limits on these partition. 
 
