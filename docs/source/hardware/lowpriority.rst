@@ -9,9 +9,9 @@ Low priority partition
 
 Introduction
 ===================
-``lowpriority`` is a new partition on our high performance computing (HPC) cluster - Discovery, that allows the research community to use private resources on the HPC cluster when they are idle. 
-This new partition has hardware that is not otherwise available to the general research community and, in time, could double the resources available to NURC users. 
+``lowpriority`` is a new partition on our high performance computing (HPC) cluster, Discovery which allows the research community to use private resources on the HPC cluster when they are idle. 
 This is a common practice in HPC clusters to optimize the use of idle private resources that consume power and cooling. 
+This new partition has hardware that is not otherwise available to the general research community and, in time, could double the resources available to NURC users. 
 
 When to use the low priority partition
 ===================
@@ -20,7 +20,7 @@ From most to least-recommended scenarios:
 
 1. Code that can be `checkpointed <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html?highlight=array#gromacs-checkpointing-example>`_
 2. Jobs that fit on a single node
-3. Jobs that require multiple nodes (eg, `MPI <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/software/mpi.html>`_)
+3. Jobs that require multiple nodes (e.g., `MPI <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/software/mpi.html>`_)
 4. When waiting for your jobs to get started is too hard
 
 How to use the low priority partition
@@ -70,6 +70,6 @@ high priority job requests those resources while the low priority job is running
 for a description of "low" and "high" priority jobs). The members of a PI's partition have priority access to the resources of that partition. 
 This means that if a job is submitted to the ``lowpriority`` partition and a high priority job comes through that requires resources currently occupied by the 
 low priority job, then that low priority job will be stopped/suspended within 30s and re-queued. If you have 
-`checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_, implemented in your 
-workflow, such an abrupt suspension of the job would not be an issue. However, if your job gets suspended this way, then it’s restart time 
+`checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_ implemented in your 
+workflow, such an abrupt suspension of the job would not be an issue. However, if your job gets suspended this way, then its restart time 
 will depend on the availability of resources at that time.
