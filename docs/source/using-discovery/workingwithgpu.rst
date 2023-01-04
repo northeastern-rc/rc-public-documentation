@@ -150,17 +150,25 @@ Using GPUs with PyTorch
 ========================
 You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery.
 
-The following examples demonstrate how to build PyTorch inside a conda virtual environment for CUDA version 11.3. Make sure that you are on a GPU node before loading the environment.
+The following examples demonstrate how to build PyTorch inside a conda virtual environment for CUDA version 11.7. 
+Make sure that you are on a GPU node before loading the environment and also please note that the installation does not work on k40m or k80 GPU's
+
+.. note::
+ Note that you can reuse the tensorflow environment if you've already created one, no need to create a new one with the exact same setup
 
 PyTorch installation steps (with Anaconda libraries)::
 
-  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load cuda/11.3
-  module load anaconda3/2022.01
-  conda create --name pytorch_env python=3.7 anaconda -y
+  srun --partition=gpu --nodes=1 --pty --gres=gpu:v100-sxm2:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+  module load cuda/11.7
+  module load anaconda3/2022.05
+  conda create --name pytorch_env python=3.9 -y
   source activate pytorch_env
-  conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
+  conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia -y
   python -c'import torch; print(torch.cuda.is_available())'
+
+.. note::
+ If the installation times out, please ensure that your .condarc file doesn't contain additional channels.
+ Also consider cleaning your conda instance using the conda clean command
 
 You should see the result ``True`` if CUDA is detected by PyTorch.
 
