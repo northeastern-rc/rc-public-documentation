@@ -167,32 +167,41 @@ Python PyTorch
 ------------------
 
 Tips and Tricks
-The program runs in the background of your program without significant performance loss and saves the process states into checkpoint files. DMTCP is available on the cluster ::
+------------------
 
- module avail dmtcp
- module show dmtcp
- module load dmtcp/2.6.0
+Save Only the Model's State_dict
+""""""""""""""""""""""""""""""""
+It is recommended to save only the model's state_dict and the optimizer's state, as this allows us to save only the necessary information needed to resume training. In addition, this reduces the size of the checkpoint file and makes it easier to load the model.
 
-As DMTCP runs in the background, it requires some changes to your Shell script. For examples of how to checkpoint with DMTCP visit `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_3>`_.
-The example demonstrates how to use DMTCP with a simple C++ program (scripts modified from `RSE-Cambridge <https://github.com/RSE-Cambridge/dmtcp-tests>`_).
+Save Regularly
+""""""""""""""""""""
+It is best to save the checkpoint file regularly, such as after each epoch, to prevent losing progress in case of a crash or interruption.
 
+Save to Multiple Locations
+""""""""""""""""""""""""""""""""
+It is a good idea to save the checkpoint file to multiple locations, such as a local drive and the cloud, to ensure that the checkpoint is recovered in case of failure.
 
-Checkpointing tips
-~~~~~~~~~~~~~~~~~~~
+Use the Latest Versions of Libraries
+""""""""""""""""""""""""""""""""""""""""
+Using the latest version of PyTorch and other relevant libraries is vital, as changes in these libraries may cause compatibility issues with older checkpoints. With these best practices, you can ensure that your PyTorch models are saved efficiently and effectively and that your progress is not lost in case of a crash or interruption.
 
-What data to save?
- * Non-temporary application data
- * Any application data that has changed since the last checkpoint
- * Delete no longer proper checkpoints - keep only the most recent checkpoint file.
+Avoid Saving Unnecessary Information
+""""""""""""""""""""""""""""""""""""""""
+Avoid saving unnecessary information in the checkpoint file, such as irrelevant metadata or tensors that can be reconstructed during training. This will reduce the size of the checkpoint file and make it easier to manage.
 
-How frequently should we checkpoint?
- * Too often – will slow down your calculation, maybe I/O heavy and memory-limited.
- * Too infrequently – leads to large/long rollback times.
- * Consider how long it takes to a checkpoint and restart your calculation.
- * In most cases, a rate of every 10-15 minutes is ok.
+Naming Conventions
+""""""""""""""""""""
+Develop a consistent naming convention for checkpoint files, including information such as the date, time, and epoch number in the file name. This will make tracking multiple checkpoint files easier and choosing the proper checkpoint to load.
 
-Which checkpointing method to use?
- * If your software already comes with built-in checkpointing, it is often the preferred option. It is the most optimized and efficient way to the checkpoint.
- * Application-level checkpointing is the easiest to use, as it exists in your application: it does not require significant changes to your scripts.
- * Application-level checkpointing will save only the relevant data for your specific application.
- * If you're writing your code - use DMTCP or implement your own checkpointing.
+Validate the Checkpoint
+"""""""""""""""""""""""""""
+Validate the checkpoint after loading it to ensure that the model's state_dict and the optimizer's state are correctly loaded. This can be done by making a prediction using the loaded model and checking that the results are as expected.
+
+Periodic Clean-up
+""""""""""""""""""""
+Periodically remove old checkpoint files to avoid filling up storage. This can be done by keeping only the latest checkpoint or keeping only checkpoint files from the last few epochs.
+
+Documenting Checkpoints
+""""""""""""""""""""""""""
+Document the purpose of each checkpoint and what it contains, including the model architecture, the training data, the hyper-parameters, and the performance metrics. This will help to keep track of the progress and make it easier to compare different checkpoints. With these additional best practices, you can ensure that your checkpointing process is efficient, effective, and well-organized.
+
