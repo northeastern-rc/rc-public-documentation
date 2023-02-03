@@ -184,37 +184,51 @@ Tips and Tricks
 
 Save Only the Model's State_dict
 """"""""""""""""""""""""""""""""
-It is recommended to save only the model's state_dict and the optimizer's state, as this allows us to save only the necessary information needed to resume training. In addition, this reduces the size of the checkpoint file and makes it easier to load the model.
+It is recommended to save only the model's state_dict and the optimizer's state, as this allows us to save only the
+necessary information needed to resume training. In addition, this reduces the size of the checkpoint file and makes it
+easier to load the model.
 
 Save Regularly
 """"""""""""""""""""
-It is best to save the checkpoint file regularly, such as after each epoch, to prevent losing progress in case of a crash or interruption.
+It is best to save the checkpoint file regularly, such as after each epoch, to prevent losing progress in case of a
+crash or interruption.
 
 Save to Multiple Locations
 """"""""""""""""""""""""""""""""
-It is a good idea to save the checkpoint file to multiple locations, such as a local drive and the cloud, to ensure that the checkpoint is recovered in case of failure.
+It is a good idea to save the checkpoint file to multiple locations, such as a local drive and the cloud, to ensure that
+the checkpoint is recovered in case of failure.
 
 Use the Latest Versions of Libraries
 """"""""""""""""""""""""""""""""""""""""
-Using the latest version of PyTorch and other relevant libraries is vital, as changes in these libraries may cause compatibility issues with older checkpoints. With these best practices, you can ensure that your PyTorch models are saved efficiently and effectively and that your progress is not lost in case of a crash or interruption.
+Using the latest version of PyTorch and other relevant libraries is vital, as changes in these libraries may cause
+compatibility issues with older checkpoints. With these best practices, you can ensure that your PyTorch models are
+saved efficiently and effectively and that your progress is not lost in case of a crash or interruption.
 
 Avoid Saving Unnecessary Information
 """"""""""""""""""""""""""""""""""""""""
-Avoid saving unnecessary information in the checkpoint file, such as irrelevant metadata or tensors that can be reconstructed during training. This will reduce the size of the checkpoint file and make it easier to manage.
+Avoid saving unnecessary information in the checkpoint file, such as irrelevant metadata or tensors that can be
+reconstructed during training. This will reduce the size of the checkpoint file and make it easier to manage.
 
 Naming Conventions
 """"""""""""""""""""
-Develop a consistent naming convention for checkpoint files, including information such as the date, time, and epoch number in the file name. This will make tracking multiple checkpoint files easier and choosing the proper checkpoint to load.
+Develop a consistent naming convention for checkpoint files, including information such as the date, time, and epoch
+number in the file name. This will make tracking multiple checkpoint files easier and choosing the proper checkpoint to
+load.
 
 Validate the Checkpoint
 """""""""""""""""""""""""""
-Validate the checkpoint after loading it to ensure that the model's state_dict and the optimizer's state are correctly loaded. This can be done by making a prediction using the loaded model and checking that the results are as expected.
+Validate the checkpoint after loading it to ensure that the model's state_dict and the optimizer's state are correctly
+loaded. This can be done by making a prediction using the loaded model and checking that the results are as expected.
 
 Periodic Clean-up
 """"""""""""""""""""
-Periodically remove old checkpoint files to avoid filling up storage. This can be done by keeping only the latest checkpoint or keeping only checkpoint files from the last few epochs.
+Periodically remove old checkpoint files to avoid filling up storage. This can be done by keeping only the latest
+checkpoint or keeping only checkpoint files from the last few epochs.
 
 Documenting Checkpoints
 """"""""""""""""""""""""""
-Document the purpose of each checkpoint and what it contains, including the model architecture, the training data, the hyper-parameters, and the performance metrics. This will help to keep track of the progress and make it easier to compare different checkpoints. With these additional best practices, you can ensure that your checkpointing process is efficient, effective, and well-organized.
+Document the purpose of each checkpoint and what it contains, including the model architecture, the training data, the
+hyper-parameters, and the performance metrics. This will help to keep track of the progress and make it easier to
+compare different checkpoints. With these additional best practices, you can ensure that your checkpointing process is
+efficient, effective, and well-organized.
 
