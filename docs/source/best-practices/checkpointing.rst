@@ -118,6 +118,19 @@ How frequently should we checkpoint?
 ML Model-level checkpointing
 ============================
 
+Checkpointing is a technique used in training machine learning models to save the model's state during the training process periodically. Doing this allows the training process to be resumed from the saved checkpoint if the training is interrupted or terminated so that the progress made so far is not lost. The saved state typically includes the model's parameters, optimizer state, and training information, such as the epoch number and loss value (or the accuracy).
+
+The following instructions are helpful for long-running training jobs, as they enable faster recovery from failures and better tracking of the training process.
+
+Why Checkpointing is Important in Deep Learning?
+------------------------------------------------------
+
+Checkpointing is crucial in deep learning, as the training process can be time-consuming and require significant computational resources. In addition, the training process may sometimes get interrupted due to hardware or software issues. Checkpointing provides a solution to this problem, as it allows saving the current state of the model, which can then be resumed from where it was stopped.
+
+Moreover, checkpointing also saves the best-performing model, which can then be used for making predictions. For example, in deep learning, the model's performance can vary based on the initialization and the optimization algorithm, so checkpointing provides a way to select the best model based on a performance metric.
+
+In summary, checkpointing is essential in deep learning as it provides a way to save progress, resume training from where it was stopped, and select the best-performing model.
+
 Python TensorFlow
 ------------------
 
