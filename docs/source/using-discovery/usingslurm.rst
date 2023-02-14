@@ -98,3 +98,75 @@ For example, if you are associated with an account named ``dataclub`` and an acc
 .. note::
    If you do not have more than one account associated with your username, you do not need to use the ``--account=`` flag. Most users on Discovery have only one account
    associated with their username.
+
+SLURM Commands
+==============
+**Controlling Jobs**
+
+``scontrol hold <jobid>`` Place a hold on a pending job
+
+``scontrol release <jobid>`` Release a held job
+
+``scontrol requeue <jobid>`` Requeue a completed, failed, or cancelled job
+
+**Job Reporting**
+
+``sacct <options>`` Display job accounting information
+
+``sreport <options>`` Generate reports about cluster utilization and job statistics
+
+**Advanced Features**
+
+``sprio <options>`` Show the priority of jobs and job steps
+
+``sburst <options>`` Show the state of all burst buffer pools
+
+Note: The exact options and functions for each command may vary depending on the Slurm version and configuration. It is recommended to consult the Slurm documentation for more information on the full range of available commands and their usage.
+
+State of the Cluster and Specific Nodes
+=======================================
+Here are some more examples of using ``sinfo`` and ``scontrol`` to provide information about the state of the cluster and specific nodes:
+
+**Using sinfo**
+
+View information about all partitions::
+
+   sinfo -a
+
+This command will show information about all partitions in the cluster, including the partition name, available nodes, and status.
+
+View information about a specific partition::
+
+   sinfo -p <partition_name>
+
+This command will show information about a specific partition in the cluster, including the number of nodes, number of free nodes, and state of the partition.
+
+View detailed information about nodes::
+
+   sinfo -N -l
+
+This command will show detailed information about all nodes in the cluster, including the node name, state, CPU architecture, memory, and available features.
+
+**Using scontrol**
+
+View information about a specific node::
+
+   scontrol show node <node_name>
+
+This command will show information about a specific node in the cluster, including the node name, state, number of CPUs, and amount of memory.
+
+View information about a specific job::
+
+   scontrol show job <job_id>
+
+This command will show information about a specific job, including the job ID, state, user name, and partition name.
+
+View information about a specific reservation::
+
+   scontrol show reservation <reservation_name>
+
+This command will show information about a specific reservation in the cluster, including the reservation name, start time, end time, and nodes included in the reservation.
+
+These are just a few examples of what you can do with ``sinfo`` and ``scontrol`` to view information about the state of the cluster and specific nodes. There are many other options and commands available, and it is recommended to consult the `Slurm documentation`_ for more information on how to use these tools effectively.
+
+.. _Slurm documentation: https://slurm.schedmd.com/documentation.html
