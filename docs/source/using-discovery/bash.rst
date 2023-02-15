@@ -244,6 +244,41 @@ Syncing a remote server to a local directory while preserving symbolic links::
 
    $ rsync -avz --links user@remote.example.com:/remote/path /local/path
 These are just a few examples of ``rsync`` synchronizing files and directories between two locations. There are many more options available. Consult the `rsync(1) manual page`_ for more information on effectively using the tool.
+
+find
+-----
+``find`` is a powerful command line tool used to search for files and directories within a specified location. It operates by starting at a specified directory and recursively searching through its subdirectories. The user can select a range of criteria to match, such as the file name, size, modification time, and more, and ``find`` will return a list of all files and directories that match the specified criteria. ``find`` provides a range of options for further processing the results, such as executing a command on each matching file, printing the results, or performing other operations. As a result, it is a versatile tool for various tasks, including searching for specific files, cleaning up old files, and more.
+
+Examples
+^^^^^^^^^
+Here are several advanced examples of using the ``find`` command to search for files and directories:
+
+Finding files based on size::
+
+   $ find /path/to/dir -size +10M
+This will find all files in /path/to/dir that are larger than 10 MB.
+
+Finding files based on modification time::
+
+   $ find /path/to/dir -mtime +7
+This will find all files in /path/to/dir that have been modified more than 7 days ago.
+
+Finding files based on type::
+
+   $ find /path/to/dir -type f
+This will find all files in /path/to/dir that are regular files (not directories).
+
+Finding files based on name::
+
+   $ find /path/to/dir -name "*.txt"
+This will find all files in /path/to/dir that have a .txt file extension.
+
+Executing commands on matching files::
+
+   $ find /path/to/dir -name "*.txt" -exec chmod 644 {} \;
+This will find all files in ``/path/to/dir`` that have a ``.txt`` file extension and execute the ``chmod`` command on each file, changing its permissions to ``644``.
+
+These are just a few examples of the many advanced features available with the ``find`` command. See `find(1) manual page`_ for more information on how to use the command effectively.
 Text Editors
 ===============
 There are a few popular text editors that enable modifying text files from the terminal. Here, we provide include emacs, vim, and nano - each are available by default on discovery.
