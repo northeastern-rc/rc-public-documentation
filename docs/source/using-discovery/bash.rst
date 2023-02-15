@@ -274,7 +274,62 @@ Text Editors
 ===============
 There are a few popular text editors that enable modifying text files from the terminal. Here, we provide include emacs, vim, and nano - each are available by default on discovery.
 
-These are just a few examples of advanced Unix commands. There are many more commands available, and it is recommended to consult online resources or Unix/Linux documentation for more information on how to use these tools effectively.
+Emacs
+------
+Emacs is a popular text editor that is widely used for programming, writing, and other text-related tasks. Here is a basic tutorial on how to use emacs:
+
+**Starting emacs**
+
+Open a terminal and type the following command::
+
+   $ emacs
+**Opening a file**
+To open an existing file, use the following command::
+
+   C-x C-f
+This will open the file dialog, where you can enter the name of the file you want to open.
+
+**Saving a file**
+To save a file, use the following command::
+
+   C-x C-s
+**Closing a file**
+To close a file, use the following command::
+
+   C-x C-w
+**Moving the cursor**
+To move the cursor, use the arrow keys or the following commands::
+
+   C-p (previous line)
+   C-n (next line)
+   C-f (forward character)
+   C-b (backward character)
+**Cutting and pasting text**
+
+To cut text, use the following command::
+
+   C-w
+To paste text, use the following command::
+
+   C-y
+**Undo and redo**
+To undo, use the following command::
+
+   C-/
+To redo, use the following command::
+
+   C-x C-/
+**Searching for text**
+
+To search for text, use the following command::
+
+   C-s
+**Quitting emacs**
+
+To quit emacs, use the following command::
+
+   C-x C-c
+These are just a few basic commands for using emacs. There are many more commands available, and it is recommended to consult the emacs manual page or online resources for more information on how to use the text editor effectively.
 
 
 .. _find(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/find.1posix.html
