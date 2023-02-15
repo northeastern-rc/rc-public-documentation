@@ -281,3 +281,6 @@ These are just a few examples of advanced Unix commands. There are many more com
 .. _sed(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/sed.1.html
 .. _rsync(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/rsync.1.html
 .. _ssh(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/find.1posix.html
+.. _Git User Manual: https://git-scm.com/docs/user-manual
+.. _GNU Nano Manual: https://www.nano-editor.org/dist/latest/nano.pdf
+.. _VIM Manual: : https://www.vim.org/docs.php
