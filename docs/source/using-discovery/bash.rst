@@ -101,117 +101,120 @@ It's essential to be cautious when using the ``kill`` command, as terminating a 
 
 Advanced Commands
 =================
-Here is the output for the kill command::
-
-   $ kill <pid>
-
-Note: ``<pid>`` in the command should be replaced with the actual process ID of the process you want to terminate: the output of the kill command will typically be empty unless there is an error in executing the command.
-
-It's essential to be cautious when using the kill command, as terminating a process can cause data loss or corruption. Therefore, before using kill, you should always try to gracefully stop the process by sending a termination signal, such as SIGTERM, first. If that does not work, you can try a stronger signal, such as SIGKILL.
-
-
-Here are some advanced Unix commands, along with references and examples:
+Here are some advanced Unix commands, along with references and examples.
 
 ``find`` - Search for files and directories::
 
    $ find /path/to/search -name "*.txt"
-
-.. code-block::
-
    /path/to/search/file1.txt
    /path/to/search/file2.txt
-
 Reference: `find(1) manual page`_
 
 ``gzip`` - Compress or decompress files::
 
    $ gzip file1.txt
    $ ls
-
-
-.. code-block::
-
    file1.txt.gz
 ::
 
    $ gunzip file1.txt.gz
    $ ls
-
-.. code-block::
-
    file1.txt
-
 Reference: `gzip(1) manual page`_
 
 ``tar`` - Create or extract compressed archive files::
 
    $ tar cvf archive.tar file1.txt file2.txt
    $ ls
-
-.. code-block::
-
    archive.tar file1.txt file2.txt
 ::
+
    $ tar xvf archive.tar
    $ ls
-
-.. code-block::
-
    file1.txt file2.txt
-
 Reference: `tar(1) manual page`_
 
 awk - Process text data and perform actions based on patterns::
 
    $ cat file1.txt
-
-.. code-block::
-
    This is line 1
    This is line 2
    This is line 3
 ::
 
    $ awk '/line 2/ {print "Line 2 found"}' file1.txt
-
-.. code-block::
-
    Line 2 found
-
 Reference: `awk(1) manual page`_
 
 ``sed`` - Stream editor for filtering and transforming text::
 
    $ cat file1.txt
-
-.. code-block::
-
    This is line 1
    This is line 2
    This is line 3
 ::
 
    $ sed 's/line 1/Line 1/' file1.txt
-
-.. code-block::
-
    This is Line 1
    This is line 2
    This is line 3
-
 Reference: `sed(1) manual page`_
 
 ``rsync`` - Synchronize files between two locations::
 
    $ rsync -av /path/to/source/ /path/to/destination/
-
 Reference: `rsync(1) manual page`_
 
 ``ssh`` - Connect to a remote machine using Secure Shell (SSH)::
 
    $ ssh user@remote.example.com
-
 Reference: `ssh(1) manual page`_
+
+Regular expressions::
+
+   $ grep -E '^[A-Z][a-z]+$' file1.txt
+   John
+   Jane
+Parameter expansion::
+
+   $ name="John Doe"
+   $ echo ${name// /_}
+   John_Doe
+Command line options::
+
+   $ ls -lh
+   total 8.0K
+   drwxrwxr-x 2 user user 4.0K Feb 14 13:29 directory1
+   -rw-rw-r-- 1 user user   12 Feb 14 13:29 file1.txt
+   -rw-rw-r-- 1 user user   14 Feb 14 13:29 file2.txt
+Parameter substitution::
+
+   $ echo ${name:4:3}
+   Doe
+Arithmetic operations::
+
+   $ echo $((2 + 2))
+   4
+File tests::
+
+   $ file=file1.txt
+   $ if [ -f $file ]; then
+   >   echo "$file is a regular file"
+   > fi
+   file1.txt is a regular file
+String tests::
+
+   $ string="hello"
+   $ if [ "$string" == "hello" ]; then
+   >   echo "The strings match"
+   > fi
+   The strings match
+Command substitution with process substitution::
+
+   $ diff <(ls /path/to/dir1) <(ls /path/to/dir2)
+These are just a few more examples of advanced bash scripting techniques.
+
+The next few subsections provide more details on a few advanced bash tools that often come in handy.
 Text Editors
 ===============
 There are a few popular text editors that enable modifying text files from the terminal. Here, we provide include emacs, vim, and nano - each are available by default on discovery.
