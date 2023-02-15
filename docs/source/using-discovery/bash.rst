@@ -310,6 +310,46 @@ Printing the line number, the line text, and the length of each line in a file::
    $ awk '{print NR, $0, length($0)}' file.txt
 These are just a few examples of ``awk`` processing and manipulating text data. There are many more options and features available. Consult the `awk(1) manual page`_ for more information on effectively using the tool.
 
+
+Git Configurations: Tips and Tricks:
+----------------------------------
+Git is a distributed version control system for software development and other collaborative projects. It allows multiple users to work on a project simultaneously while keeping track of changes and enabling easy collaboration. With Git, users can commit their changes to a local repository and push them to a remote repository so that others can access and merge their changes into the main project. Git also provides a robust set of tools for managing branches, resolving conflicts, and performing other tasks related to version control.
+
+Git provides a range of configuration options that allow users to customize their behavior to suit their needs, including setting the user name and email, specifying a preferred text editor, setting up aliases for frequently used commands, and many others. In addition, users can configure Git globally, which applies the configuration to all of their Git repositories, or locally, which applies the configs to a specific repo. This flexibility allows users to work with Git in a way that suits their workflow and provides a high degree of control over how Git operates.
+
+Example Configurations
+^^^^^^^^^^^^^^^^^^^^^^
+Setting your user name and email::
+
+   $ git config --global user.name "Your Name"
+   $ git config --global user.email "your.email@example.com"
+Setting your preferred text editor::
+
+   $ git config --global core.editor nano
+Setting your preferred diff tool::
+
+   $ git config --global diff.tool emacs
+   $ git config --global difftool.prompt false
+Setting up aliases for frequently used Git commands::
+
+   $ git config --global alias.st status
+   $ git config --global alias.co checkout
+   $ git config --global alias.ci commit
+Setting up a default push behavior::
+
+   $ git config --global push.default simple
+Enabling colored output for Git commands::
+
+   $ git config --global color.ui true
+Ignoring files globally across all your Git repositories::
+
+   $ git config --global core.excludesfile ~/.gitignore_global
+Enabling automatic line wrapping in Git log output::
+
+   $ git config --global log.autoWrap true
+These are just a few examples of Git configuration options. There are many more options available. See `Git User Manual`_ for more information on how to customize Git to your needs.
+
+
 Text Editors
 ===============
 There are a few popular text editors that enable modifying text files from the terminal. Here, we provide include emacs, vim, and nano - each are available by default on discovery.
