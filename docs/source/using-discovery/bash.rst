@@ -279,6 +279,37 @@ Executing commands on matching files::
 This will find all files in ``/path/to/dir`` that have a ``.txt`` file extension and execute the ``chmod`` command on each file, changing its permissions to ``644``.
 
 These are just a few examples of the many advanced features available with the ``find`` command. See `find(1) manual page`_ for more information on how to use the command effectively.
+
+awk
+-----
+``awk`` is a powerful text processing tool widely used for data extraction, report generation, and other text-related tasks. It operates by reading a file line-by-line and processing each line based on a set of rules defined by the user. The regulations specify the conditions under which certain actions are performed, such as printing specific fields, performing calculations, or modifying the text in some way. ``awk`` is particularly useful for processing tabular data, such as that found in CSV files, and can extract and manipulate data in various ways. Additionally, ``awk`` provides a rich set of string and numerical manipulation functions, making it a powerful tool for working with large data sets.
+
+Examples
+^^^^^^^^^
+
+Printing the first field of each line in a file::
+
+   $ awk '{print $1}' file.txt
+Printing the second field of each line in a file, only if the first field is equal to a specific value::
+
+   $ awk '$1 == "value" {print $2}' file.txt
+Printing the sum of all numbers in the third field of a file::
+
+   $ awk '{sum+=$3} END {print sum}' file.txt
+Printing the average of all numbers in the fourth field of a file::
+
+   $ awk '{sum+=$4; count++} END {print sum/count}' file.txt
+Printing the line number and the line text for each line in a file that contains a specific word::
+
+   $ awk '/word/ {print NR, $0}' file.txt
+Printing the line number and the line text for each line in a file that starts with a specific string::
+
+   $ awk '$1 ~ /^string/ {print NR, $0}' file.txt
+Printing the line number, the line text, and the length of each line in a file::
+
+   $ awk '{print NR, $0, length($0)}' file.txt
+These are just a few examples of ``awk`` processing and manipulating text data. There are many more options and features available. Consult the `awk(1) manual page`_ for more information on effectively using the tool.
+
 Text Editors
 ===============
 There are a few popular text editors that enable modifying text files from the terminal. Here, we provide include emacs, vim, and nano - each are available by default on discovery.
