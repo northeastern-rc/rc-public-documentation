@@ -215,6 +215,35 @@ Command substitution with process substitution::
 These are just a few more examples of advanced bash scripting techniques.
 
 The next few subsections provide more details on a few advanced bash tools that often come in handy.
+
+rsync
+-----
+``rsync`` is a powerful and versatile file transfer utility commonly used to synchronize files and directories between different locations. It can transfer files over a network connection and run in various modes, including local and remote transfers, backup operations, and more. One of the key benefits of using ``rsync`` is its ability only to transfer the differences between the source and destination files, which can significantly reduce the amount of data transfer time required. Additionally, ``rsync`` supports various advanced features, including the ability to perform incremental backups and preserve symbolic links, making it a popular tool for system administrators and other advanced users.
+
+Examples
+^^^^^^^^^
+Syncing a local directory to a remote server::
+
+   $ rsync -avz /local/path user@remote.example.com:/remote/path
+Syncing a remote server to a local directory::
+
+   $ rsync -avz user@remote.example.com:/remote/path /local/path
+Syncing a local directory to a remote server with compression::
+
+   $ rsync -avz --compress /local/path user@remote.example.com:/remote/path
+Syncing a remote server to a local directory while preserving permissions::
+
+   $ rsync -avz --perms user@remote.example.com:/remote/path /local/path
+Syncing only files that have been modified in the last hour::
+
+   $ rsync -avz --update --min-age=3600 /local/path user@remote.example.com:/remote/path
+Syncing a local directory to a remote server while excluding certain files::
+
+   $ rsync -avz --exclude='*.log' /local/path user@remote.example.com:/remote/path
+Syncing a remote server to a local directory while preserving symbolic links::
+
+   $ rsync -avz --links user@remote.example.com:/remote/path /local/path
+These are just a few examples of ``rsync`` synchronizing files and directories between two locations. There are many more options available. Consult the `rsync(1) manual page`_ for more information on effectively using the tool.
 Text Editors
 ===============
 There are a few popular text editors that enable modifying text files from the terminal. Here, we provide include emacs, vim, and nano - each are available by default on discovery.
