@@ -270,6 +270,9 @@ Reference: `rsync(1) manual page`_
    $ ssh user@remote.example.com
 
 Reference: `ssh(1) manual page`_
+Text Editors
+===============
+There are a few popular text editors that enable modifying text files from the terminal. Here, we provide include emacs, vim, and nano - each are available by default on discovery.
 
 These are just a few examples of advanced Unix commands. There are many more commands available, and it is recommended to consult online resources or Unix/Linux documentation for more information on how to use these tools effectively.
 
