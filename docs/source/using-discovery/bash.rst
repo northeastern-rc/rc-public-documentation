@@ -401,6 +401,66 @@ To quit Vim, type the following command in normal mode::
    :q
 These are just a few basic commands for using Vim. There are many more commands available. Consult the `VIM Manual`_ for more information on using the text editor effectively.
 
+GNU Nano
+---------
+Nano is a simple, easy-to-use text editor commonly used in Unix-like operating systems. Here is a basic tutorial on how to use Nano:
+
+**Starting Nano**
+
+Open a terminal and type the following command::
+
+   $ nano
+**Opening a file**
+
+To open an existing file, type the following command::
+
+   nano filename
+**Saving a file**
+
+To save a file, press the following key combination::
+
+   Ctrl + O
+**Closing a file**
+
+To close a file, press the following key combination::
+
+   Ctrl + X
+**Moving the cursor**
+
+Use the arrow keys to move the cursor.
+
+**Cutting and pasting text**
+
+First, move the cursor to the start of the text you want to cut, then press the following key combination::
+
+   Alt + A
+Move the cursor to the end of the text you want to cut, then press the following key combination::
+
+   Ctrl + K
+To paste text, move the cursor to the location where you want to paste, then press the following key combination::
+
+   Ctrl + U
+**Undo and redo**
+
+To undo, press the following key combination::
+
+   Ctrl + T
+To redo, press the following key combination::
+
+   Ctrl + Y
+**Searching for text**
+
+To search for text, press the following key combination::
+
+   Ctrl + W
+**Quitting Nano**
+
+To quit Nano, press the following key combination::
+
+   Ctrl + X
+These are just a few basic commands for using Nano. There are many more commands available Consult the `GNU Nano Manual`_ or online resources for more information on how to use the text editor effectively.
+
+
 .. _find(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/find.1posix.html
 .. _gzip(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/gzip.1.html
 .. _tar(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/tar.1.html
