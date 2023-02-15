@@ -331,6 +331,75 @@ To quit emacs, use the following command::
    C-x C-c
 These are just a few basic commands for using emacs. There are many more commands available, and it is recommended to consult the emacs manual page or online resources for more information on how to use the text editor effectively.
 
+VIM
+------
+Vim is a popular text editor that is widely used for programming, writing, and other text-related tasks. Here is a basic tutorial on how to use Vim.
+
+**Starting Vim**
+
+Open a terminal and type the following command::
+
+   $ vim
+**Opening a file**
+
+To open an existing file, type the following command::
+
+   vim filename
+**Normal mode**
+
+When you start Vim, you are in normal mode. In normal mode, you can navigate through the text and perform various operations, but you cannot type or edit text.
+
+To enter insert mode, type the following command::
+
+   i
+**Saving a file**
+
+To save a file, type the following command in normal mode::
+
+   :w
+**Closing a file**
+
+To close a file, type the following command in normal mode::
+
+   :q
+**Moving the cursor**
+
+In normal mode, you can move the cursor using the following keys::
+
+   h (left)
+   j (down)
+   k (up)
+   l (right)
+**Cutting and pasting text**
+
+To cut text, first move the cursor to the start of the text you want to cut, then type the following command in normal mode::
+
+   v
+Move the cursor to the end of the text you want to cut, then type the following command in normal mode::
+
+   d
+To paste text, move the cursor to the location where you want to paste, then type the following command in normal mode::
+
+   p
+**Undo and redo**
+
+To undo, type the following command in normal mode::
+
+   u
+To redo, type the following command in normal mode::
+
+   Ctrl+r
+**Searching for text**
+
+To search for text, type the following command in normal mode::
+
+   /text
+**Quitting Vim**
+
+To quit Vim, type the following command in normal mode::
+
+   :q
+These are just a few basic commands for using Vim. There are many more commands available. Consult the `VIM Manual`_ for more information on using the text editor effectively.
 
 .. _find(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/find.1posix.html
 .. _gzip(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/gzip.1.html
