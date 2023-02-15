@@ -19,143 +19,85 @@ Basic Commands
 ``ls`` - List the contents of a directory::
 
    $ ls
-
-.. code-block::
-
    file1.txt  file2.txt  directory1
-
 ``cd`` - Change the current working directory::
 
-   $ cd directory1
+   $ cd ~/directory1
    $ pwd
-
-.. code-block::
-
-   /path/to/directory1
+   <$HOME>/directory1
+Note: ``~`` is shorthand for specifying the home directory of the current user.
 
 ``pwd`` - Print the current working directory::
 
    $ pwd
-
-.. code-block::
-
    /path/to/directory1
-
 ``mkdir`` - Create a new directory::
 
    $ mkdir directory2
    $ ls
-
-.. code-block::
-
    file1.txt  file2.txt  directory1  directory2
-
 ``rm`` - Remove a file or directory::
 
    $ rm file1.txt
    $ ls
-
-.. code-block::
-
    file2.txt  directory1  directory2
-
 ``cp`` - Copy a file or directory::
 
    $ cp file2.txt file3.txt
    $ ls
-
-.. code-block::
-
    file2.txt  file3.txt  directory1  directory2
-
 ``mv`` - Move or rename a file or directory::
 
    $ mv file2.txt file4.txt
    $ ls
-
-.. code-block::
-
    file3.txt  file4.txt  directory1  directory2
-
 ``echo`` - Display a message or the value of a variable::
 
    $ echo "Hello, world!"
-
-.. code-block::
-
    Hello, world!
-
 ``cat`` - Concatenate and display the contents of one or more files::
 
    $ cat file3.txt
-
-.. code-block::
-
    This is the contents of file3.txt
-
 ``grep`` - Search for a pattern in a file or input::
 
    $ grep "the" file3.txt
-
-.. code-block::
-
    This is the contents of file3.txt
-
 ``sort`` - Sort the lines of a file or input::
 
    $ sort file3.txt
-
-.. code-block::
-
    This is the contents of file3.txt
-
 ``uniq`` - Remove duplicates from a sorted file or input::
 
    $ sort file3.txt | uniq
-
-.. code-block::
-
    This is the contents of file3.txt
-
 ``wc`` - Count the number of lines, words, and characters in a file or input::
 
    $ wc file3.txt
-
-.. code-block::
-
    1   4  26 file3.txt
-
 ``head`` - Display the first lines of a file or input::
 
    $ head file3.txt
-
-.. code-block::
-
    This is the contents of file3.txt
-
 ``tail`` - Display the last lines of a file or input::
 
    $ tail file3.txt
-
-.. code-block::
-
    This is the contents of file3.txt
-
 ``less`` - View the contents of a file one page at a time::
 
    $ less file3.txt
-
 ``top`` - Show the currently running processes and system information::
 
    $ top
-
 ``ps`` - Show information about the currently running processes::
 
    $ ps
-
 ``kill`` - Terminate a process by its process ID::
 
    $ kill <pid>
+Note: ``<pid>`` in the command should be replaced with the actual process ID of the process you want to terminate: the output of the ``kill`` command will typically be empty unless there is an error in executing the command.
+
+It's essential to be cautious when using the ``kill`` command, as terminating a process can cause data loss or corruption. Therefore, before using ``kill``, you should always try to gracefully stop the process by sending a termination signal, such as ``SIGTERM``, first. If that does not work, you can try a stronger signal, such as ``SIGKILL``.
 
 Advanced Commands
 =================
