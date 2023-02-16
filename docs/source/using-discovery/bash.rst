@@ -64,6 +64,7 @@ To download Terminator, open a terminal (``Ctrl+Alt+T`` is the shortcut to do so
 Windows Users
 -------------
 Windows users must install a terminal. There are various flavors available. One suggestion is to visit the Windows Apps and download directly from Microsoft (`Download Windows Terminal`_).
+
 Basic Commands
 =================
 ``ls`` - List the contents of a directory::
