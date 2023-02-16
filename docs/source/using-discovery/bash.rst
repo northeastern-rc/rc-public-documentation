@@ -3,6 +3,14 @@
 ***********
 Using Bash
 ***********
+.. figure:: /images/bash-logo.png
+   :class: with-border
+   :width: 300
+   :alt: Bash (Bourne Again SHell) logo.
+   :align: center
+
+   Bash (Bourne Again SHell)
+
 Overview
 =================
 Bash (Bourne Again SHell) is a popular shell and command-line interface in Unix-like operating systems. A shell is an interface between the user and the underlying operating system, allowing users to interact with the system and perform tasks. Bash provides a range of features for running commands, managing files, and performing other tasks.
