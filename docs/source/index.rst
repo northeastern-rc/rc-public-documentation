@@ -45,6 +45,7 @@ Northeastern University Research Computing
   :maxdepth: 2
   :caption: Using Discovery
 
+  using-discovery/bash
   using-discovery/usingslurm
   using-discovery/sbatch
   using-discovery/srun

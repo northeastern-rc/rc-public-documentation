@@ -1,4 +1,4 @@
-.. _using_bash:
+.. _bash:
 
 ***********
 Using Bash
