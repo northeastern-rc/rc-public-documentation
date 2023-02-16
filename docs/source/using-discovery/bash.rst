@@ -558,6 +558,10 @@ To quit Nano, press the following key combination::
 These are just a few basic commands for using Nano. There are many more commands available Consult the `GNU Nano Manual`_ or online resources for more information on how to use the text editor effectively.
 
 
+.. _Download Windows Terminal: https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us&rtc=1
+.. _Homebrew: https://brew.sh/
+.. _iTerm2: : https://iterm2.com/
+.. _Terminator: https://gnome-terminator.org/
 .. _find(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/find.1posix.html
 .. _gzip(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/gzip.1.html
 .. _tar(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/tar.1.html
