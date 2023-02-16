@@ -31,6 +31,39 @@ In summary, Shell commands perform various tasks with the terminal, as depicted 
 
    Bash (Bourne Again SHell)
 
+Terminal
+=================
+
+Mac Users
+---------
+Mac OS comes with a default terminal program. There are various, more advanced terminals available, as well. `iTerm2`_ is one of the more popular choices.
+
+To launch the terminal:
+#. Press Command + Space Bar on your Mac keyboard (alternatively, press F4)
+#. Type in “Terminal”
+#. When you see Terminal in the Spotlight search list, click it to open the app.
+
+iTerm2 can be installed via the terminal using `Homebrew`_::
+
+   brew install --cask iterm2
+
+If Homebrew is not already installed, run the following command in the terminal before installing iTerm2::
+
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+Linux Users
+-----------
+Linux also comes with a default terminal program. And, again, there are various, more advanced terminals available. `Terminator`_ is one of the more popular choices.
+
+To download Terminator, open a terminal (``Ctrl+Alt+T`` is the shortcut to do so). Then, execute the following::
+
+   sudo add-apt-repository ppa:gnome-terminator
+   sudo apt-get update
+   sudo apt-get install terminator
+
+Windows Users
+-------------
+Windows users must install a terminal. There are various flavors available. One suggestion is to visit the Windows Apps and download directly from Microsoft (`Download Windows Terminal`_).
 Basic Commands
 =================
 ``ls`` - List the contents of a directory::
