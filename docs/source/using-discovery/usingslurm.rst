@@ -12,8 +12,7 @@ that lets you do the following:
 * schedule your jobs on Discovery
 * view information about your account
 
-:ref:`using_srun` and :ref:`using_sbatch` provide you with a few examples to help get you familiar
-with Slurm and be able to submit basic jobs on Discovery.
+:ref:`using_srun` and :ref:`using_sbatch` provide you with a few examples to help get you familiar with Slurm and be able to submit basic jobs on Discovery.
 
 .. important::
    Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options also usually have both short and verbose versions, such as
@@ -80,21 +79,18 @@ Account information
 
 Some Discovery users have more than one Discovery group account associated with their username. For example, a student might be in a class that is using Discovery,
 and also be in a student club that is using Discovery for a club project. In this case, the student would have two group accounts associated with their username.
-When running a job with either ``srun`` or ``sbatch``, if you have more than one account associated with your username, we recommend that you use the ``--account=`` flag and specify the account
-that corresponds to the project you are working on. In the example with a student associated with a class and a student club, if the student is on Discovery submitting a job for a project
-for his or her class, set the ``account=`` flag to the name of the class account. If the student is working on a project for the club, set the ``account=`` flag to the name of the student club account.
 
-To find out what account(s) your usesrname is associated with, use the following command::
+When running a job with either ``srun`` or ``sbatch``, if you have more than one account associated with your username, we recommend that you use the ``--account=`` flag and specify the account that corresponds to the project you are working on. In the example with a student associated with a class and a student club, if the student is on Discovery submitting a job for a project for his or her class, set the ``account=`` flag to the name of the class account. If the student is working on a project for the club, set the ``account=`` flag to the name of the student club account.
+
+To find out what account(s) your username is associated with, use the following command::
 
   sacctmgr show associations user=<yourusername>
-
 After you have determined what accounts your username is associated with, if you have more than one account association, you can use the ``account=`` flag with your usual ``srun`` or ``sbatch`` commands.
 
 For example, if you are associated with an account named ``dataclub`` and an account named ``info7500``, and you're currently doing work that should be associated with the
 ``dataclub`` account, in your ``srun`` command, you can add the ``--account=dataclub`` flag to specify that account.::
 
   srun --account=dataclub --partition=short --nodes=1 --ntasks=28 --mem=0 --pty /bin/bash
-
 .. note::
    If you do not have more than one account associated with your username, you do not need to use the ``--account=`` flag. Most users on Discovery have only one account
    associated with their username.
@@ -132,19 +128,16 @@ Here are some more examples of using ``sinfo`` and ``scontrol`` to provide infor
 View information about all partitions::
 
    sinfo -a
-
 This command will show information about all partitions in the cluster, including the partition name, available nodes, and status.
 
 View information about a specific partition::
 
    sinfo -p <partition_name>
-
 This command will show information about a specific partition in the cluster, including the number of nodes, number of free nodes, and state of the partition.
 
 View detailed information about nodes::
 
    sinfo -N -l
-
 This command will show detailed information about all nodes in the cluster, including the node name, state, CPU architecture, memory, and available features.
 
 **Using scontrol**
@@ -152,19 +145,16 @@ This command will show detailed information about all nodes in the cluster, incl
 View information about a specific node::
 
    scontrol show node <node_name>
-
 This command will show information about a specific node in the cluster, including the node name, state, number of CPUs, and amount of memory.
 
 View information about a specific job::
 
    scontrol show job <job_id>
-
 This command will show information about a specific job, including the job ID, state, user name, and partition name.
 
 View information about a specific reservation::
 
    scontrol show reservation <reservation_name>
-
 This command will show information about a specific reservation in the cluster, including the reservation name, start time, end time, and nodes included in the reservation.
 
 These are just a few examples of what you can do with ``sinfo`` and ``scontrol`` to view information about the state of the cluster and specific nodes. There are many other options and commands available, and it is recommended to consult the `Slurm documentation`_ for more information on how to use these tools effectively.
