@@ -15,10 +15,7 @@ Slurm (Simple Linux Utility Resource Management) is the software on Discovery th
 :ref:`using_srun` and :ref:`using_sbatch` provide you with a few examples to help get you familiar with Slurm and be able to submit basic jobs on Discovery.
 
 .. important::
-   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options also usually have both short and verbose versions, such as
-   ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the
-   verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the exact same thing as ``srun --partition=short --nodes=1 --ntasks=1``
-   Refer to the official Slurm documentation to get in-depth information about these commands and their options: `Slurm documentation website <https://slurm.schedmd.com/archive/slurm-17.11.6/srun.html>`_.
+   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options usually have short and verbose versions, such as ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the same thing as ``srun --partition=short --nodes=1 --ntasks=1`` Refer to the official Slurm documentation to get in-depth information about these commands and their options: `Slurm documentation`_.
 
 Viewing Cluster Information
 ===========================
@@ -77,23 +74,20 @@ Monitoring Jobs
 Account information
 ====================
 
-Some Discovery users have more than one Discovery group account associated with their username. For example, a student might be in a class that is using Discovery,
-and also be in a student club that is using Discovery for a club project. In this case, the student would have two group accounts associated with their username.
+Some Discovery users have more than one Discovery group account associated with their usernames. For example, a student might be in a class using Discovery and a student club using Discovery for a club project. In this case, the student would have two group accounts associated with their username.
 
-When running a job with either ``srun`` or ``sbatch``, if you have more than one account associated with your username, we recommend that you use the ``--account=`` flag and specify the account that corresponds to the project you are working on. In the example with a student associated with a class and a student club, if the student is on Discovery submitting a job for a project for his or her class, set the ``account=`` flag to the name of the class account. If the student is working on a project for the club, set the ``account=`` flag to the name of the student club account.
+When running a job with either ``srun`` or ``sbatch``, if you have more than one account associated with your username, we recommend you use the ``--account=`` flag and specify the account that corresponds to the respective project. In the example with a student associated with a class and a student club, if the student is on Discovery submitting a job for a project for their class, set the ``account=`` flag to the name of the class account. If the student is working on a project for the club, set the ``account=`` flag to the name of the student club account.
 
 To find out what account(s) your username is associated with, use the following command::
 
   sacctmgr show associations user=<yourusername>
 After you have determined what accounts your username is associated with, if you have more than one account association, you can use the ``account=`` flag with your usual ``srun`` or ``sbatch`` commands.
 
-For example, if you are associated with an account named ``dataclub`` and an account named ``info7500``, and you're currently doing work that should be associated with the
-``dataclub`` account, in your ``srun`` command, you can add the ``--account=dataclub`` flag to specify that account.::
+For example, if you are associated with an account named ``dataclub`` and an account named ``info7500``, and you're currently doing work that should be associated with the ``dataclub`` account, in your ``srun`` command, you can add the ``--account=dataclub`` flag to specify that account.::
 
   srun --account=dataclub --partition=short --nodes=1 --ntasks=28 --mem=0 --pty /bin/bash
 .. note::
-   If you do not have more than one account associated with your username, you do not need to use the ``--account=`` flag. Most users on Discovery have only one account
-   associated with their username.
+   If you do not have more than one account associated with your username, you do not need to use the ``--account=`` flag. Most users on Discovery have only one account associated with their username.
 
 SLURM Commands
 ==============
@@ -126,7 +120,7 @@ Advanced Features
 
 ``sburst <options>`` Show the state of all burst buffer pools
 
-Note: The exact options and functions for each command may vary depending on the Slurm version and configuration. It is recommended to consult the Slurm documentation for more information on the full range of available commands and their usage.
+**NOTE:** Each command's options and functions may vary depending on the Slurm version and configuration. We recommend consulting the Slurm documentation for more information on the full range of available commands and their usage.
 
 State of the Cluster and Specific Nodes
 =======================================
@@ -320,11 +314,7 @@ These are just a few examples of what you can do with ``sinfo`` and ``scontrol``
 .. _using_srun:
 Using srun
 -----------
-You can use the Slum command ``srun`` to allocate an interactive job. This means you use specific options with ``srun``
-on the command line to tell Slurm what resources you need to run your job, such as number of nodes, amount of memory, and amount of
-time. After typing your ``srun`` command and options on the command line and pressing enter, Slurm will find and then allocate the resources
-you specified. Depending on what you specified, it can take a few minutes for Slurm to allocate those resources. You can view all of the
-``srun`` options on the `Slurm documentation`_.
+Use the Slum command ``srun`` to allocate an interactive job. This means you use specific options with ``srun`` on the command line to tell Slurm what resources are needed to run your job, such as number of nodes, amount of memory, and amount of time. Enter ``srun`` command and options on the command line, the and press ``Return``. Slurm will find and then allocate the specified resources. Depending on the specifications, it may take a few minutes. All ``srun`` options can be found in the `Slurm documentation`_.
 
 The following image shows an example of an ``srun`` command as run on a command line.
 
@@ -369,7 +359,7 @@ You can monitor your jobs by using the Slurm ``scontrol`` command. Type ``scontr
 Using sbatch
 =============
 You use the ``sbatch`` command with a bash script to specify the
-resources you need to run your jobs, such as the number of nodes you want to run your jobs on and how much memory you’ll need. Slurm then schedules your job based on the availability of the resources you’ve specified.
+resources you need to run your jobs, such as the number of nodes wanted to run jobs on and the amount of memory required. Slurm then schedules your job based on the available resources specified.
 
 The general format for submitting a job to the scheduler is as follows::
 
@@ -402,7 +392,7 @@ Run a job on one node for 4 hours on the short partition::
 Job request: one node with additional memory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The default memory per allocated core is 1GB. If your calculations try to use more memory than what is allocated, Slurm automatically terminates your job. You should request a specific amount of memory in your job script if your calculations need more memory than the default. The example script below is requesting 100GB of memory (``--mem=100G``). Use one capital letter to abbreviate the unit of memory (K,M,G,T) with the ``--mem=`` option, as that is what Slurm expects to see. ::
+The default memory per allocated core is 1GB. If calculations attempt to access more memory than allocated, Slurm automatically terminates thw job. Request a specific amount of memory in the job script if calculations require more than the default. The example script below requests 100GB of memory (``--mem=100G``). Use one capital letter to abbreviate the unit of memory (K, M, G, T) with the ``--mem=`` option, as that is what Slurm expects to see. ::
 
   #!/bin/bash
   #SBATCH --nodes=1
@@ -413,7 +403,7 @@ The default memory per allocated core is 1GB. If your calculations try to use mo
   <commands to execute>
 Job request: one node with exclusive use of a node
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies exclusive use of 1 node in the short partition for four hours. ::
+If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies the exclusive use of 1 node in the short partition for four hours. ::
 
   #!/bin/bash
   #SBATCH --nodes=1
@@ -424,8 +414,7 @@ If you need exclusive use of a node, such as when you have a job that has high I
   <commands to execute>
 Example Parallel Job Scripts
 ----------------------------
-Parallel jobs should be used with code that is configured to use the reserved resources. If your code is not optimized for running in parallel, your job could fail. The following script examples all allocate additional memory. The default memory per allocated core is 1GB. If your calculations try to use more memory than what is allocated, Slurm automatically terminates your job. You should request a specific amount of memory in your job script if your calculations
-need more memory than the default.
+Parallel jobs should use code configured to use the reserved resources. Running unoptimized code in parallel could fail. The following script examples all allocate additional memory. The default memory per allocated core is 1GB. If your calculations try to use more memory than allocated, Slurm automatically terminates your job. You should request a specific amount of memory in your job script if your calculations need more than the default.
 
 8-task job, one node and additional memory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
