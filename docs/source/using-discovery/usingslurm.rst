@@ -123,28 +123,176 @@ State of the Cluster and Specific Nodes
 =======================================
 Here are some more examples of using ``sinfo`` and ``scontrol`` to provide information about the state of the cluster and specific nodes:
 
-**Using sinfo**
+Using sinfo
+-----------
+The ``sinfo`` command will show information about all partitions in the cluster, including the partition name, available nodes, and status. By default, ``sinfo`` reports:
 
+.. list-table::
+   :widths: 20 100
+   :header-rows: 0
+
+   * - ``PARTITION``
+     - The list of the cluster’s partitions. It’s a set of compute nodes grouped logically
+   * - ``AVAIL``
+     - The active state of the partition. (up, down, idle)
+   * - ``TIMELIMIT``
+     - The maximum job execution walltime per partition.
+   * - ``NODES``
+     - The total number of nodes per partition.
+   * - ``STATE``
+     - See STATE table below.
+   * - ``NODELIST(REASON)``
+     - The list of nodes per partition.
+
+**STATE Table**
+
+.. list-table::
+   :widths: 20 100
+   :header-rows: 1
+
+   * - State
+     - Description
+   * - ``mix``
+     - Only part of the node is allocated to one or more jobs and the rest in an Idle state.
+   * - ``alloc``
+     - The entire resource on the node(s) is being utilized.
+   * - ``idle``
+     - The node is in an idle start and has none of it’s resources being used.
+Example Uses
+^^^^^^^^^^^^
 View information about all partitions::
 
-   sinfo -a
-This command will show information about all partitions in the cluster, including the partition name, available nodes, and status.
+   $ sinfo -a
+Or, a specific partition::
 
+   $ sinfo -p gpu
+   PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+   gpu          up    8:00:00      5 drain* c[2171,2184,2188],d[1008,1014]
+   gpu          up    8:00:00      3  down* c2162,d[1006,1017]
+   gpu          up    8:00:00      1  drain d1025
+   gpu          up    8:00:00      2   resv c2177,d1029
+   gpu          up    8:00:00     50    mix c[2160,2163-2170,2172-2176,2178-2179,2185-2187,2189-2195,2204-2207],d[1001,1003-1005,1007,1009-1013,1016,1018,1020-1024,1026-1028]
+   gpu          up    8:00:00      3  alloc d[1002,1015,1019]
+   gpu          up    8:00:00      4   idle c[2180-2183]
+which give all the nodes and the states the nodes are in at the current time.
+
+The current TimeLimit for the queues::
+
+   sinfo  -o "%12P %.10A %.11l"
+   PARTITION    NODES(A/I)   TIMELIMIT
+   debug           402/174       20:00
+   express         403/180     1:00:00
+   short*          401/178  1-00:00:00
+   long             224/47  5-00:00:00
+   large           376/172     6:00:00
+   gpu               41/17     8:00:00
+   multigpu          41/17  1-00:00:00
+   lowpriority     118/102  1-00:00:00
+   reservation     617/402 100-00:00:0
+   ai-jumpstart       2/15  2-00:00:00
+   allshouse           5/7    infinite
+   bansil             15/4 30-00:00:00
+   ce-mri             3/10 30-00:00:00
+   chen               0/12 30-00:00:00
+   ctbp               0/20 30-00:00:00
+   .
+   .
+   .
 View information about a specific partition::
 
    sinfo -p <partition_name>
+Or, only view nodes in a certain state::
+
+   sinfo -p <partition> -t <state>
+For example::
+
+   $ sinfo -p gpu -t idle
+   PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+   gpu          up    8:00:00      1  drain d1025
+   gpu          up    8:00:00      2   resv c2177,d1029
+   gpu          up    8:00:00     13   idle c[2160,2163-2164,2166,2168-2170,2175,2179-2183]
 This command will show information about a specific partition in the cluster, including the number of nodes, number of free nodes, and state of the partition.
+
+You can use the ``--Format`` flag to get more information or a specific format for the output::
+
+   sinfo -p <partition> -t idle --Format=gres,nodes
+For example::
+
+   $ sinfo -p gpu -t idle --Format=gres,nodes
+   GRES                NODES
+   gpu:t4:4(S:0-1)     1
+   gpu:k80:8(S:0-1)    5
+   gpu:a100:4          1
+   gpu:k40m:1          8
+   gpu:k80:7(S:0-1)    1
+gpu:a100:4 - The number after : i.e 4 indicates that 1 node has 4 gpu:a100s.
 
 View detailed information about nodes::
 
    sinfo -N -l
 This command will show detailed information about all nodes in the cluster, including the node name, state, CPU architecture, memory, and available features.
 
-**Using scontrol**
+View what features a node has::
 
+   sinfo -n <node> --Format=nodes,nodelist,statecompact,features
+For Example::
+
+   $ sinfo -n d0139 --Format=nodes,nodelist,statecompact,features
+   NODES               NODELIST            STATE               AVAIL_FEATURES
+   1                   d0139               mix                 zen2,ib,prod
+View what nodes have what features in a partition::
+
+   sinfo -p <partition> --Format=nodes,cpus,features,nodelist
+For example::
+
+   $ sinfo -p short --Format=nodes,cpus,features,nodelist
+   NODES               CPUS                AVAIL_FEATURES      NODELIST
+   13                  28                  broadwell,next      c[0699-0711]
+   8                   56                  ib,cascadelake,next d[0001-0008]
+   120                 56                  ib,cascadelake,prod d[0009-0128]
+   32                  20                  ivybridge,prod      c[3000-3006,3008-303
+   115                 24                  lenovo,rapl,haswell,c[0156,0158-0159,016
+   381                 28                  broadwell,prod      c[0336-0343,0376-040
+   4                   16                  sandybridge,largememc[2000-2003]
+   2                   112                 cascadelake,ib,prod d[0129-0130]
+   20                  128                 zen2,ib,prod        d[0131-0150]
+View what nodes are in what state in a partition using ``statecompact``::
+
+   sinfo -p lopez --Format=time,nodes,statecompact,features,memory,cpus,nodelist
+Using scontrol
+--------------
+The ``scontrol`` command is used for monitoring and modifying queued, running jobs, and reservations.
+
+Example Uses
+^^^^^^^^^^^^
 View information about a specific node::
 
-   scontrol show node <node_name>
+   scontrol show node -d <node_name>
+For example::
+
+   $ scontrol show node -d c2180
+   NodeName=c2180 Arch=x86_64 CoresPerSocket=14
+   CPUAlloc=0 CPUTot=28 CPULoad=0.01
+   AvailableFeatures=broadwell,prod
+   ActiveFeatures=broadwell,prod
+   Gres=gpu:k80:7(S:0-1)
+   GresDrain=N/A
+   GresUsed=gpu:k80:0(IDX:N/A)
+   NodeAddr=c2180 NodeHostName=c2180 Version=21.08.8-2
+   OS=Linux 3.10.0-1160.25.1.el7.x86_64 #1 SMP Wed Apr 28 21:49:45 UTC 2021
+   RealMemory=512000 AllocMem=0 FreeMem=486591 Sockets=2 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=6 Owner=N/A MCS_label=N/A
+   Partitions=gpu,multigpu,reservation
+   BootTime=2022-12-14T07:23:47 SlurmdStartTime=2022-12-23T07:40:56
+   LastBusyTime=2023-01-19T14:40:02
+   CfgTRES=cpu=28,mem=500G,billing=728,gres/gpu=7
+   AllocTRES=
+   CapWatts=n/a
+   CurrentWatts=0 AveWatts=0
+   ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
+For information on all reservations::
+
+   scontrol show reservations
 This command will show information about a specific node in the cluster, including the node name, state, number of CPUs, and amount of memory.
 
 View information about a specific job::
