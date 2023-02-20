@@ -456,5 +456,17 @@ For example, if you want to run a 10 job array, one job at a time, you would add
 
 For more information on this command, go to the `Slurm documentation`_.
 
+Best Practices
+===============
+#. Use the proper resource request syntax: Slurm uses a specific syntax to request resources, such as the number of CPUs, memory, and time required for your job. Make sure to use the proper syntax to avoid any errors.
+#. Specify an appropriate job name: Giving your job a descriptive name will help you and other users identify it easily.
+#. Submit jobs using batch scripts: It's best to submit jobs using batch scripts instead of typing commands manually. Batch scripts allow you to automate the process and make it easier to run multiple jobs at once.
+#. Use the correct partition: Slurm HPC has several partitions, each designed for specific purposes. Choose the proper partition for your job to ensure you use the most appropriate resources.
+#. Monitor your job's progress: Keep an eye on your job's progress to ensure it's running correctly and identify any issues that may arise.
+#. Avoid overloading the system: Be mindful of the resources you're requesting and avoid overloading the system, as it ensures that other users have access to the resources they need.
+#. Use checkpoints: If your job is long-running, consider using checkpoints to save your progress, allowing for resuming jobs if interrupted.
+#. Use environment modules: Slurm uses environment modules to manage software installations. Make sure to load the appropriate modules before running your job.
+#. Use the appropriate file system: Slurm HPC typically has several file systems with different performance characteristics. Use the proper file system for your job to ensure you get the best performance.
+#. Please clean up after your job: Make sure to remove any files or directories that your job created after it's finished running. It helps keep the system clean and frees up resources for other users.
 
 .. _Slurm documentation: https://slurm.schedmd.com/documentation.html
