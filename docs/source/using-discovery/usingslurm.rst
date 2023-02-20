@@ -97,22 +97,31 @@ For example, if you are associated with an account named ``dataclub`` and an acc
 
 SLURM Commands
 ==============
-**Controlling Jobs**
+List of typical Slurm commands for working on Discovery.
 
+These functions are fully documented for the version of SLURM installed on in the manual pages. To get the manual pages for the SLURM functions, run::
+
+   man <SLURM_command>
+on the HPC which lists all the parameters and keywords that you can use with the given SLURM commands. You can also run::
+
+   <SLURM_command> --help
+which will list the help page for the SLURM function. These two give you the full possibilities of what these functions can do. The following sections are helpful/commonly used SLURM commands that are good to know for different ticket requests and common checks on the cluster.
+Controlling Jobs
+----------------
 ``scontrol hold <jobid>`` Place a hold on a pending job
 
 ``scontrol release <jobid>`` Release a held job
 
 ``scontrol requeue <jobid>`` Requeue a completed, failed, or cancelled job
 
-**Job Reporting**
-
+Job Reporting
+-------------
 ``sacct <options>`` Display job accounting information
 
 ``sreport <options>`` Generate reports about cluster utilization and job statistics
 
-**Advanced Features**
-
+Advanced Features
+------------------
 ``sprio <options>`` Show the priority of jobs and job steps
 
 ``sburst <options>`` Show the state of all burst buffer pools
