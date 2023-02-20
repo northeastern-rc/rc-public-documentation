@@ -3,6 +3,8 @@
 ***********
 Using Slurm
 ***********
+.. contents:: Table of Contents
+   :depth: 4
 
 Slurm (Simple Linux Utility Resource Management) is the software on Discovery that lets you do the following:
 
