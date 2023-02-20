@@ -159,4 +159,156 @@ This command will show information about a specific reservation in the cluster, 
 
 These are just a few examples of what you can do with ``sinfo`` and ``scontrol`` to view information about the state of the cluster and specific nodes. There are many other options and commands available, and it is recommended to consult the `Slurm documentation`_ for more information on how to use these tools effectively.
 
+
+.. _using_srun:
+Using srun
+-----------
+You can use the Slum command ``srun`` to allocate an interactive job. This means you use specific options with ``srun``
+on the command line to tell Slurm what resources you need to run your job, such as number of nodes, amount of memory, and amount of
+time. After typing your ``srun`` command and options on the command line and pressing enter, Slurm will find and then allocate the resources
+you specified. Depending on what you specified, it can take a few minutes for Slurm to allocate those resources. You can view all of the
+``srun`` options on the `Slurm documentation`_.
+
+The following image shows an example of an ``srun`` command as run on a command line.
+
+.. image:: /images/srun_example.jpg
+  :alt: image of the command line showing an example srun command
+
+Example Uses
+^^^^^^^^^^^^
+This section details a few examples using ``srun``. You should first review the :ref:`hardware_overview` and :ref:`partition_names` sections
+to be familiar with the available hardware and partition limits on Discovery. This way, you can tailor your request to fit both the needs of your job
+and the limits of the partitions. For example, if you specify ``--partition=debug`` and ``--time=01:00:00``, you'll get an error because the
+time you've specified exceeds the limit for that partition. Also keep in mind that while these examples are all valid, general examples, they might not work
+for your particular job.
+
+simple ``srun`` example is to move to a compute node after you first log into Discovery. ::
+
+ srun --pty /bin/bash
+
+To request one node and one task for 30 minutes with X11 forwarding on the short partition, type::
+
+ srun --partition=short --export=ALL --nodes=1 --ntasks=1 --x11 --mem=10G --time=00:30:00 --pty /bin/bash
+
+To request one node, with 10 tasks and 2 CPUs per task (a total of 20 CPUs), 1GB of memory, for one hour on the express partition, type::
+
+ srun --partition=express  --nodes 1 --ntasks 10 --cpus-per-task 2 --pty --export=ALL --mem=1G --time=01:00:00 /bin/bash
+
+To request two nodes, each with 10 tasks per node and 2 CPUs per task (a total of 40 CPUs), 1GB of memory, for one hour on the express partition, type::
+
+ srun --partition=express  --nodes=2 --ntasks 10 --cpus-per-task 2 --pty --export=ALL --mem=1G --time=01:00:00 /bin/bash
+
+To allocate a GPU node, you should specify the ``gpu`` partition and use the --gres option::
+
+ srun --partition=gpu --nodes=1 --ntasks=1 --export=ALL --gres=gpu:1 --mem=1Gb --time=01:00:00 --pty /bin/bash
+
+For more information about working with GPUs, see :ref:`working_gpus`.
+
+Monitor your jobs
+~~~~~~~~~~~~~~~~~~
+You can monitor your jobs by using the Slurm ``scontrol`` command. Type ``scontrol show jobid -d <JOBID>``, where ``JOBID`` is the number of your job. In the figure at the top of the page, you can see that when you submit your ``srun`` command, Slurm displays the unique ID number of your job (``job 12962519``). This is the number you use with ``scontrol`` to monitor your job.
+
+.. _using_sbatch:
+Using sbatch
+=============
+You use the ``sbatch`` command with a bash script to specify the
+resources you need to run your jobs, such as the number of nodes you want to run your jobs on and how much memory you’ll need. Slurm then schedules your job based on the availability of the resources you’ve specified.
+
+The general format for submitting a job to the scheduler is as follows::
+
+   sbatch example.script
+
+Where ``example.script`` is a script detailing the parameters of the job you want to run.
+
+.. note::
+  The default time limit depends on the partition that you specify in your submission script using the
+  ``--partition=<partition name>`` option.
+  If your job does not complete within the requested time limit,
+  Slurm will automatically terminate the job.
+  See :ref:`partition_names` for the most up-to-date partition names and parameters.
+
+
+SBATCH Examples
+---------------
+
+Job request: one node
+^^^^^^^^^^^^^^^^^^^^^^^
+Run a job on one node for 4 hours on the short partition::
+
+  #!/bin/bash
+  #SBATCH --nodes=1
+  #SBATCH --time=4:00:00
+  #SBATCH --job-name=MyJobName
+  #SBATCH --partition=short
+  <commands to execute>
+
+Job request: one node with additional memory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The default memory per allocated core is 1GB. If your calculations try to use more memory than what is allocated, Slurm automatically terminates your job. You should request a specific amount of memory in your job script if your calculations need more memory than the default. The example script below is requesting 100GB of memory (``--mem=100G``). Use one capital letter to abbreviate the unit of memory (K,M,G,T) with the ``--mem=`` option, as that is what Slurm expects to see. ::
+
+  #!/bin/bash
+  #SBATCH --nodes=1
+  #SBATCH --time=4:00:00
+  #SBATCH --job-name=MyJobName
+  #SBATCH --mem=100G
+  #SBATCH --partition=short
+  <commands to execute>
+Job request: one node with exclusive use of a node
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies exclusive use of 1 node in the short partition for four hours. ::
+
+  #!/bin/bash
+  #SBATCH --nodes=1
+  #SBATCH --time=4:00:00
+  #SBATCH --job-name=MyJobName
+  #SBATCH --exclusive
+  #SBATCH --partition=short
+  <commands to execute>
+Example Parallel Job Scripts
+----------------------------
+Parallel jobs should be used with code that is configured to use the reserved resources. If your code is not optimized for running in parallel, your job could fail. The following script examples all allocate additional memory. The default memory per allocated core is 1GB. If your calculations try to use more memory than what is allocated, Slurm automatically terminates your job. You should request a specific amount of memory in your job script if your calculations
+need more memory than the default.
+
+8-task job, one node and additional memory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+::
+
+  #!/bin/bash
+  #SBATCH --nodes=1
+  #SBATCH --ntasks-per-node=8
+  #SBATCH --cpus-per-task=1
+  #SBATCH --time=4:00:00
+  #SBATCH --job-name=MyJobName
+  #SBATCH --mem=100G
+  #SBATCH --partition=short
+  <commands to execute>
+
+8-task job, multiple nodes and additional memory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+::
+
+  #!/bin/bash
+  #SBATCH --nodes=4
+  #SBATCH --ntasks-per-node=2
+  #SBATCH --cpus-per-task=1
+  #SBATCH --time=00:30:00
+  #SBATCH --job-name=MyJobName
+  #SBATCH --mem=100G
+  #SBATCH --partition=express
+  <commands to execute>
+
+
+Using Arrays
+------------
+
+Using a job array can often help in situations where you need to submit multiple similar jobs. To use an array with your jobs, in your ``sbatch`` script, use the ``array=`` option.
+
+For example, if you want to run a 10 job array, one job at a time, you would add the following line to your sbatch script:
+
+``#SBATCH --array=1-10%1``
+
+For more information on this command, go to the `Slurm documentation`_.
+
+
 .. _Slurm documentation: https://slurm.schedmd.com/documentation.html
