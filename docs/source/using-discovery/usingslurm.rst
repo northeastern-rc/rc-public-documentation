@@ -27,13 +27,13 @@ Use the following commands to view information about the cluster. This informati
 hardware that is available in order to customize your job scripts. Also see :ref:`hardware_overview` for more information.
 
 .. list-table::
-   :widths: 20 100
+   :widths: 35 85
    :header-rows: 1
 
    * - Slurm Command
      - Function
    * - ``sinfo <options>``
-     - View partition and node information. Use option -a to view all partitions.
+     - View partition and node information. Use option ``-a`` to view all partitions.
    * - ``smap <options>``
      - View details about the cluster in a visual format
 
@@ -46,7 +46,7 @@ There are two main commands for submitting jobs to Discovery: ``srun`` and ``sba
 To run a job interactively, use ``srun``. To submit a job to run in the background with a script, use ``sbatch``.
 
 .. list-table::
-   :widths: 20 100
+   :widths: 30 90
    :header-rows: 1
 
    * - Slurm Command
@@ -62,7 +62,7 @@ Monitoring Jobs
 ===============
 
 .. list-table::
-   :widths: 20 100
+   :widths: 40 80
    :header-rows: 1
 
    * - Slurm Command
