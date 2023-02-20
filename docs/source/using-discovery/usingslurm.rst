@@ -4,13 +4,13 @@
 Using Slurm
 ***********
 
-Slurm (Simple Linux Utility Resource Management) is the software on Discovery
-that lets you do the following:
+Slurm (Simple Linux Utility Resource Management) is the software on Discovery that lets you do the following:
 
 * view information about the cluster
-* monitor your jobs
 * schedule your jobs on Discovery
+* monitor your jobs
 * view information about your account
+* check the state of the cluster and specific nodes
 
 :ref:`using_srun` and :ref:`using_sbatch` provide you with a few examples to help get you familiar with Slurm and be able to submit basic jobs on Discovery.
 
