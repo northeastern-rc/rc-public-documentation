@@ -20,16 +20,23 @@ Another critical feature of SLURM is its ability to handle complex workflows and
 
 Overall, SLURM is a powerful and versatile tool for managing HPC resources. Its flexibility, scalability, and reliability make it an essential tool for many HPC environments.
 
+SLURM on Discovery
+--------------------
+Slurm is the software on Discovery. To be most effective, one must have a basic understanding of SLURM. This page provides knowledge needed for working on Discovery.
+
+By following the contents of this page, the user will be able to
+
 * view information about the cluster
-* schedule your jobs on Discovery
-* monitor your jobs
-* view information about your account
-* check the state of the cluster and specific nodes
+* submit jobs on Discovery
+* monitor jobs
+* view account information
+* check the cluster state, along with that of specific nodes
+* gain knowledge of various best practices when using SLURM
 
-.. important::
-   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options usually have short and verbose versions, such as ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the same thing as ``srun --partition=short --nodes=1 --ntasks=1`` Refer to the official Slurm documentation to get in-depth information about these commands and their options: `Slurm documentation`_.
+This page is specific for Discovery. For more in-depth and general information, we refer the reader to the official `Slurm documentation`_.
 
-SLURM Commands
+
+SLURM CLI
 ==============
 List of typical Slurm commands for working on Discovery.
 
@@ -40,6 +47,10 @@ on the HPC which lists all the parameters and keywords that you can use with the
 
    <SLURM_command> --help
 which will list the help page for the SLURM function. These two give you the full possibilities of what these functions can do. The following sections are helpful/commonly used SLURM commands that are good to know for different ticket requests and common checks on the cluster.
+
+.. important::
+   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options usually have short and verbose versions, such as ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the same thing as ``srun --partition=short --nodes=1 --ntasks=1``
+
 Controlling Jobs
 ----------------
 ``scontrol hold <jobid>`` Place a hold on a pending job
