@@ -6,7 +6,19 @@ Using Slurm
 .. contents:: Table of Contents
    :depth: 4
 
-Slurm (Simple Linux Utility Resource Management) is the software on Discovery that lets you do the following:
+Overview
+========
+SLURM (Simple Linux Utility for Resource Management) is an open-source job scheduler and resource manager for high-performance computing (HPC) clusters. It is designed to efficiently allocate and reasonably manage resources, such as CPUs, memory, and GPUs, among multiple users and jobs.
+
+SLURM was developed at Lawrence Livermore National Laboratory and is now widely used in many HPC environments, including academic and research institutions, government labs, and private industry. It is known for its scalability, reliability, and flexibility.
+
+SLURM provides various features to support the efficient management of HPC resources, including job submission, scheduling, prioritization, and accounting. For example, it allows users to submit jobs and request resources and manages the allocation and distribution of resources across the cluster. SLURM can also handle job dependencies, allowing users to define dependencies between jobs and specify when specific jobs should start.
+
+One of the key features of SLURM is its ability to support heterogeneous clusters, where different compute nodes have varying hardware specifications. SLURM can manage resources on various hardware and software configurations. It provides a way to specify the job requirements to ensure scheduling with the appropriate nodes.
+
+Another critical feature of SLURM is its ability to handle complex workflows and dependencies. For example, users can specify complex workflows of jobs where specific jobs depend on others, and SLURM will manage the scheduling and execution of these workflows.
+
+Overall, SLURM is a powerful and versatile tool for managing HPC resources. Its flexibility, scalability, and reliability make it an essential tool for many HPC environments.
 
 * view information about the cluster
 * schedule your jobs on Discovery
