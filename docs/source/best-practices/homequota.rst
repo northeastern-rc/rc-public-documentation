@@ -5,7 +5,7 @@ It is vital to stay under your /home/<username> quota to prevent issues in using
 
 Utlilize /scratch and /work Directories
 =======================================================
-For long term research work storage, /work should be used. If your PI does not have space in /work setup, they can request it using the following form https://bit.ly/NURC-NewStorage and can request additional storage using https://bit.ly/NURC-StorageExtension. More details of /work can be found at :ref:`_discovery_storage` For temporary job files you can utilize /scratch/<username>. Please be mindful of the purge policy of /scratch which is covered in :ref:`_discovery_storage.rst`.
+For long term research work storage, /work should be used. If your PI does not have space in /work setup, they can request it using the following form https://bit.ly/NURC-NewStorage and can request additional storage using https://bit.ly/NURC-StorageExtension. More details of /work can be found at :ref:`discovery_storage` For temporary job files you can utilize /scratch/<username>. Please be mindful of the purge policy of /scratch which is covered in :ref:`discovery_storage.rst`.
 
 Determine Large Files/Directories in /home/<username>
 =======================================================
