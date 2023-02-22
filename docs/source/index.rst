@@ -64,6 +64,7 @@ Northeastern University Research Computing
    :caption: Discovery best practices
 
    best-practices/checkpointing
+   best-practices/homequota
 
 .. toctree::
    :maxdepth: 2
