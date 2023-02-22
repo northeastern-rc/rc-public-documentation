@@ -134,8 +134,8 @@ In summary, checkpointing is essential in deep learning as it provides a way to 
 Python TensorFlow
 ------------------
 
-This example demonstrates how to implement a longer TensorFlow ML job by training using the **tf.keras** checkpointing `API <https://www.tensorflow.org/tutorials/keras/save_and_load>`_ and multiple shorter Slurm job arrays on the gpu partition.
-Below the example **submit_tf_array.bash** script::
+The following example demonstrates how to implement a longer TensorFlow ML job by training using the **tf.keras** checkpointing `API <https://www.tensorflow.org/tutorials/keras/save_and_load>`_ and multiple shorter Slurm job arrays on the gpu partition.
+Below is the example **submit_tf_array.bash** script::
 
  #!/bin/bash
  #SBATCH --job-name=myrun
@@ -157,7 +157,7 @@ Below the example **submit_tf_array.bash** script::
  # run the python code, and save all output to a log file corresponding the current job task that is running:
  python train_with_checkpoints.py $numOfSteps &> log.$SLURM_ARRAY_TASK_ID
 
-Where the checkpointing implementation is given in this code snippet of ``train_with_checkpoints.py``::
+The checkpointing implementation is given in this code snippet of ``train_with_checkpoints.py``::
 
  checkpoint_path = "training_2/{epoch:d}.ckpt"
  checkpoint_dir = os.path.dirname(checkpoint_path)
@@ -169,8 +169,8 @@ Where the checkpointing implementation is given in this code snippet of ``train_
 
 The entire scripts can be found `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_2>`_ and were modified from `TensorFlow Save and load models <https://www.tensorflow.org/tutorials/keras/save_and_load>`_.
 
-The Slurm option ``--array=1-10%1`` will create 10 Slurm array tasks and run one task at a time. Note that the saved variable ``%A`` denotes the main job ID, while variable ``%a`` indicates the task ID (spanning values 1-10). Note that the output/error files are also unique to prevent different jobs from writing to the same files.
-The Shell variable ``SLURM_ARRAY_TASK_ID`` holds the unique task ID value and can be used within the Slurm Shell script to point to different files or variables.
+The Slurm option, ``--array=1-10%1``, will create 10 Slurm array tasks and run one task at a time. Note that the saved variable ``%A`` denotes the main job ID, while variable ``%a`` indicates the task ID (spanning values 1-10). Note that the output/error files are also unique to prevent different jobs from writing to the same files.
+The Shell variable, ``SLURM_ARRAY_TASK_ID``, holds the unique task ID value and can be used within the Slurm Shell script to point to different files or variables.
 
 To submit this job to the scheduler, use the command::
 
@@ -179,55 +179,54 @@ To submit this job to the scheduler, use the command::
 Python PyTorch
 ------------------
 
-Tips and Tricks
+Tips and tricks
 ------------------
 
-Save Only the Model's State_dict
+Save only the model's State_dict
 """"""""""""""""""""""""""""""""
-It is recommended to save only the model's state_dict and the optimizer's state, as this allows us to save only the
+Save only the model's state_dict and the optimizer's state, as this allows us to save only the
 necessary information needed to resume training. In addition, this reduces the size of the checkpoint file and makes it
 easier to load the model.
 
-Save Regularly
+Save regularly
 """"""""""""""""""""
-It is best to save the checkpoint file regularly, such as after each epoch, to prevent losing progress in case of a
-crash or interruption.
+To prevent losing progress in case of a crash or interruption, save the checkpoint file regularly (i.e., after each epoch).
 
-Save to Multiple Locations
+Save to multiple locations
 """"""""""""""""""""""""""""""""
-It is a good idea to save the checkpoint file to multiple locations, such as a local drive and the cloud, to ensure that
+Save the checkpoint file to multiple locations, such as a local drive and the cloud, to ensure that
 the checkpoint is recovered in case of failure.
 
-Use the Latest Versions of Libraries
+Use the latest versions of libraries
 """"""""""""""""""""""""""""""""""""""""
-Using the latest version of PyTorch and other relevant libraries is vital, as changes in these libraries may cause
+Using the latest version of PyTorch and other relevant libraries is vital; changes in these libraries may cause
 compatibility issues with older checkpoints. With these best practices, you can ensure that your PyTorch models are
 saved efficiently and effectively and that your progress is not lost in case of a crash or interruption.
 
-Avoid Saving Unnecessary Information
+Avoid saving unnecessary information
 """"""""""""""""""""""""""""""""""""""""
 Avoid saving unnecessary information in the checkpoint file, such as irrelevant metadata or tensors that can be
 reconstructed during training. This will reduce the size of the checkpoint file and make it easier to manage.
 
-Naming Conventions
+Naming conventions
 """"""""""""""""""""
-Develop a consistent naming convention for checkpoint files, including information such as the date, time, and epoch
-number in the file name. This will make tracking multiple checkpoint files easier and choosing the proper checkpoint to
+Develop a consistent naming convention for checkpoint files; include information such as the date, time, and epoch
+number in the file name to make tracking multiple checkpoint files easier and ensure you are choosing the proper checkpoint to
 load.
 
-Validate the Checkpoint
+Validate the checkpoint
 """""""""""""""""""""""""""
 Validate the checkpoint after loading it to ensure that the model's state_dict and the optimizer's state are correctly
-loaded. This can be done by making a prediction using the loaded model and checking that the results are as expected.
+loaded by making a prediction using the loaded model and checking that the results are as expected.
 
-Periodic Clean-up
+Periodic clean-up
 """"""""""""""""""""
-Periodically remove old checkpoint files to avoid filling up storage. This can be done by keeping only the latest
+Periodically, remove old checkpoint files to avoid filling up storage. This can be done by keeping only the latest
 checkpoint or keeping only checkpoint files from the last few epochs.
 
-Documenting Checkpoints
+Documenting checkpoints
 """"""""""""""""""""""""""
-Document the purpose of each checkpoint and what it contains, including the model architecture, the training data, the
+Document the purpose of each checkpoint and what it contains; include the model architecture, the training data, the
 hyper-parameters, and the performance metrics. This will help to keep track of the progress and make it easier to
 compare different checkpoints. With these additional best practices, you can ensure that your checkpointing process is
 efficient, effective, and well-organized.
