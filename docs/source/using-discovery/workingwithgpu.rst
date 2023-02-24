@@ -188,21 +188,26 @@ You can find the compatibility of CUDA and TensorFlow versions at the following 
 
 For the latest installation, use the TensorFlow pip package which includes GPU support for CUDA-enabled devices::
 
-  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+  srun --partition=gpu --gres=gpu:1 --nodes=1 --ntasks=1 --mem=10GB --time=01:00:00 --pty /bin/bash
   module load anaconda3/2022.05
   module load cuda/11.2
-  conda create --name TF_env python=3.9 -y #where TF_env is the name of the conda environment
-  source activate TF_env #load the virtual conda environment "TF_env"
-  export LD_LIBRARY_PATH=$HOME/.conda/envs/TF_env/lib:$LD_LIBRARY_PATH
-  conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0 -y 
-  pip install tensorflow
+  conda create --name TF_env python=3.9 -y
+  source activate TF_env
+  conda install -c conda-forge cudatoolkit=11.2.2 cudnn=8.1.0 -y
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
+  mkdir -p $CONDA_PREFIX/etc/conda/activate.d
+  echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+  pip install --upgrade pip
+  pip install tensorflow==2.11.*
 
 Verify the installation::
 
   # Verify the CPU setup (if successful, then a tensor is returned):
   python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
   # verify the GPU setup (if successful, then a list of GPU devices is returned):
   python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
   # test if a GPU device is detected with TF (if successful, then True is returned):
   python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' 
 
@@ -210,7 +215,6 @@ To get the name of the GPU, type::
 
    python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
 
-If the installation is successful, then, for example, you should see the following output::
+If the installation is successful, then you should see the following output, for example,::
 
-   2022-06-17 16:01:15.948857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /device:GPU:0 with 13795 MB memory:  -> device: 0, name: Tesla T4, pci bus id: 0000:3b:00.0, compute capability: 7.5 
-
+   2023-02-24 16:39:35.798186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /device:GPU:0 with 10785 MB memory:  -> device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7 /device:GPU:0
