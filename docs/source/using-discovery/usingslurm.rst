@@ -20,7 +20,7 @@ Overall, Slurm is a powerful and versatile tool for managing HPC resources. Its 
 
 Slurm on Discovery
 --------------------
-Slurm is the software on Discovery. To be most effective, one must have a basic understanding of SLURM. This page provides knowledge needed for working on Discovery.
+Slurm is the software on Discovery. To be most effective, one must have a basic understanding of Slurm. This page provides knowledge needed for working on Discovery.
 
 By following the contents of this page, the user will be able to
 
