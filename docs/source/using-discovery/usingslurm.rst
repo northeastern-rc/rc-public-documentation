@@ -8,50 +8,42 @@ Using Slurm
 
 Overview
 ========
-SLURM (Simple Linux Utility for Resource Management) is an open-source job scheduler and resource manager for high-performance computing (HPC) clusters. It is designed to efficiently allocate and reasonably manage resources, such as CPUs, memory, and GPUs, among multiple users and jobs.
+Slurm (Simple Linux Utility for Resource Management) is an open-source job scheduler and resource manager developed at Lawrence Livermore National Laboratory and is widely-used in high-performance computing (HPC) environments, including academic and research institutions, government labs, and private industry. Slurm is designed to efficiently allocate and reasonably manage resources (e.g., CPUs, memory, GPUs) among multiple users and jobs, and is known for its scalability, reliability, and flexibility.
 
-SLURM was developed at Lawrence Livermore National Laboratory and is now widely used in many HPC environments, including academic and research institutions, government labs, and private industry. It is known for its scalability, reliability, and flexibility.
+Slurm provides features to support the efficient management of HPC resources, including job submission, scheduling, prioritization, and accounting. For example, Slurm allows users to submit jobs and request resources and manages the allocation and distribution of resources across the cluster. Slurm can also handle job dependencies, allowing users to define dependencies between jobs and specify when specific jobs should start.
 
-SLURM provides various features to support the efficient management of HPC resources, including job submission, scheduling, prioritization, and accounting. For example, it allows users to submit jobs and request resources and manages the allocation and distribution of resources across the cluster. SLURM can also handle job dependencies, allowing users to define dependencies between jobs and specify when specific jobs should start.
+One of the key features of Slurm is its ability to support heterogeneous clusters, where different compute nodes have varying hardware specifications. Slurm can manage resources on various hardware and software configurations. It provides a way to specify the job requirements to ensure scheduling with the appropriate nodes.
 
-One of the key features of SLURM is its ability to support heterogeneous clusters, where different compute nodes have varying hardware specifications. SLURM can manage resources on various hardware and software configurations. It provides a way to specify the job requirements to ensure scheduling with the appropriate nodes.
+Another critical feature of Slurm is its ability to handle complex workflows and dependencies. For example, users can specify complex workflows of jobs where specific jobs depend on others, and Slurm will manage the scheduling and execution of these workflows.
 
-Another critical feature of SLURM is its ability to handle complex workflows and dependencies. For example, users can specify complex workflows of jobs where specific jobs depend on others, and SLURM will manage the scheduling and execution of these workflows.
+Overall, Slurm is a powerful and versatile tool for managing HPC resources. Its flexibility, scalability, and reliability make it an essential tool for many HPC environments.
 
-Overall, SLURM is a powerful and versatile tool for managing HPC resources. Its flexibility, scalability, and reliability make it an essential tool for many HPC environments.
-
-SLURM on Discovery
+Slurm on Discovery
 --------------------
 Slurm is the software on Discovery. To be most effective, one must have a basic understanding of SLURM. This page provides knowledge needed for working on Discovery.
 
 By following the contents of this page, the user will be able to
 
-* view information about the cluster
-* submit jobs on Discovery
-* monitor jobs
-* view account information
-* check the cluster state, along with that of specific nodes
-* gain knowledge of various best practices when using SLURM
+* View information about the cluster
+* Submit jobs on Discovery
+* Monitor jobs
+* View account information
+* Check the cluster state, along with that of specific nodes
+* Gain knowledge of various best practices when using SLURM
 
-This page is specific for Discovery. For more in-depth and general information, we refer the reader to the official `Slurm documentation`_.
+This page is specific for using Slurm on Discovery. For more in-depth and general information, please refer to the official `Slurm documentation`_.
 
 
-SLURM CLI
+Slurm CLI
 ==============
 List of typical Slurm commands for working on Discovery.
 
-These functions are fully documented for the version of SLURM installed on in the manual pages. To get the manual pages for the SLURM functions, run::
-
-   man <SLURM_command>
-on the HPC which lists all the parameters and keywords that you can use with the given SLURM commands. You can also run::
-
-   <SLURM_command> --help
-which will list the help page for the SLURM function. These two give you the full possibilities of what these functions can do. The following sections are helpful/commonly used SLURM commands that are good to know for different ticket requests and common checks on the cluster.
+These functions are fully documented for the version of Slurm installed on in the manual pages. To get the manual pages for the Slurm functions, run ``man <SLURM_command>`` on the HPC. This command lists all the parameters and keywords that you can use with the given Slurm commands. You can also run ``<SLURM_command> --help``, which will list the help page for the Slurm function. These two give you the full possibilities of what these functions can do. The following sections are helpful/commonly used Slurm commands that are good to know for different ticket requests and common checks on the cluster.
 
 .. important::
-   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options usually have short and verbose versions, such as ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the same thing as ``srun --partition=short --nodes=1 --ntasks=1``
+   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options usually have both short and verbose versions, such as ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the same thing as ``srun --partition=short --nodes=1 --ntasks=1``
 
-Controlling Jobs
+Controlling jobs
 ----------------
 ``scontrol hold <jobid>`` Place a hold on a pending job
 
@@ -59,13 +51,13 @@ Controlling Jobs
 
 ``scontrol requeue <jobid>`` Requeue a completed, failed, or cancelled job
 
-Job Reporting
+Job reporting
 -------------
 ``sacct <options>`` Display job accounting information
 
 ``sreport <options>`` Generate reports about cluster utilization and job statistics
 
-Advanced Features
+Advanced features
 ------------------
 ``sprio <options>`` Show the priority of jobs and job steps
 
@@ -73,7 +65,7 @@ Advanced Features
 
 **NOTE:** Each command's options and functions may vary depending on the Slurm version and configuration. We recommend consulting the Slurm documentation for more information on the full range of available commands and their usage.
 
-Viewing Cluster Information
+Viewing cluster information
 ===========================
 
 Use the following commands to view information about the cluster. This information can help you better understand the
@@ -86,13 +78,13 @@ hardware that is available in order to customize your job scripts. Also see :ref
    * - Slurm Command
      - Function
    * - ``sinfo <options>``
-     - View partition and node information. Use option ``-a`` to view all partitions.
+     - View partition and node information; use option ``-a`` to view all partitions
    * - ``smap <options>``
      - View details about the cluster in a visual format
 
 .. _submitting_jobs:
 
-Submitting Jobs
+Submitting jobs
 ================
 
 There are two main commands for submitting jobs to Discovery: ``srun`` and ``sbatch``.
@@ -114,14 +106,12 @@ To run a job interactively, use ``srun``. To submit a job to run in the backgrou
 .. _using_srun:
 Using srun
 -----------
-Use the Slum command ``srun`` to allocate an interactive job. This means you use specific options with ``srun`` on the command line to tell Slurm what resources are needed to run your job, such as number of nodes, amount of memory, and amount of time. Enter ``srun`` command and options on the command line, the and press ``Return``. Slurm will find and then allocate the specified resources. Depending on the specifications, it may take a few minutes. All ``srun`` options can be found in the `Slurm documentation`_.
-
-The following image shows an example of an ``srun`` command as run on a command line.
+Use the Slum command ``srun`` to allocate an interactive job. This means you use specific options with ``srun`` on the command line to tell Slurm what resources are needed to run your job, such as number of nodes, amount of memory, and amount of time. Enter ``srun`` command and options on the command line, the and press ``Return``. Slurm will find, and then allocate, the specified resources. Depending on the specifications, this process may take a few minutes. All ``srun`` options can be found in the `Slurm documentation`_. The following image shows an example of an ``srun`` command as run on a command line.
 
 .. image:: /images/srun_example.jpg
   :alt: image of the command line showing an example srun command
 
-Example Uses
+Example uses
 ^^^^^^^^^^^^
 This section details a few examples using ``srun``. You should first review the :ref:`hardware_overview` and :ref:`partition_names` sections
 to be familiar with the available hardware and partition limits on Discovery. This way, you can tailor your request to fit both the needs of your job
@@ -129,7 +119,7 @@ and the limits of the partitions. For example, if you specify ``--partition=debu
 time you've specified exceeds the limit for that partition. Also keep in mind that while these examples are all valid, general examples, they might not work
 for your particular job.
 
-simple ``srun`` example is to move to a compute node after you first log into Discovery. ::
+This simple ``srun`` example is to move to a compute node after you first log into Discovery. ::
 
  srun --pty /bin/bash
 
@@ -171,12 +161,12 @@ Where ``example.script`` is a script detailing the parameters of the job you wan
   See :ref:`partition_names` for the most up-to-date partition names and parameters.
 
 
-SBATCH Examples
+SBATCH examples
 ^^^^^^^^^^^^^^^
 
 Job request: one node
 ~~~~~~~~~~~~~~~~~~~~~
-Run a job on one node for 4 hours on the short partition::
+Run a job on one node for four hours on the short partition::
 
   #!/bin/bash
   #SBATCH --nodes=1
@@ -187,7 +177,7 @@ Run a job on one node for 4 hours on the short partition::
 
 Job request: one node with additional memory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The default memory per allocated core is 1GB. If calculations attempt to access more memory than allocated, Slurm automatically terminates thw job. Request a specific amount of memory in the job script if calculations require more than the default. The example script below requests 100GB of memory (``--mem=100G``). Use one capital letter to abbreviate the unit of memory (K, M, G, T) with the ``--mem=`` option, as that is what Slurm expects to see. ::
+The default memory per allocated core is 1GB. If calculations attempt to access more memory than allocated, Slurm automatically terminates the job. Request a specific amount of memory in the job script if calculations require more than the default. The example script below requests 100GB of memory (``--mem=100G``). Use one capital letter to abbreviate the unit of memory (K, M, G, T) with the ``--mem=`` option, as that is what Slurm expects to see. ::
 
   #!/bin/bash
   #SBATCH --nodes=1
@@ -198,7 +188,7 @@ The default memory per allocated core is 1GB. If calculations attempt to access 
   <commands to execute>
 Job request: one node with exclusive use of a node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies the exclusive use of 1 node in the short partition for four hours. ::
+If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies the exclusive use of one node in the short partition for four hours. ::
 
   #!/bin/bash
   #SBATCH --nodes=1
@@ -207,7 +197,7 @@ If you need exclusive use of a node, such as when you have a job that has high I
   #SBATCH --exclusive
   #SBATCH --partition=short
   <commands to execute>
-Example Parallel Job Scripts
+Example parallel job scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Parallel jobs should use code configured to use the reserved resources. Running unoptimized code in parallel could fail. The following script examples all allocate additional memory. The default memory per allocated core is 1GB. If your calculations try to use more memory than allocated, Slurm automatically terminates your job. You should request a specific amount of memory in your job script if your calculations need more than the default.
 
@@ -240,7 +230,7 @@ Parallel jobs should use code configured to use the reserved resources. Running 
   <commands to execute>
 
 
-Using Arrays
+Using arrays
 ^^^^^^^^^^^^
 
 Using a job array can often help in situations where you need to submit multiple similar jobs. To use an array with your jobs, in your ``sbatch`` script, use the ``array=`` option.
@@ -251,7 +241,7 @@ For example, if you want to run a 10 job array, one job at a time, you would add
 
 For more information on this command, go to the `Slurm documentation`_.
 
-Monitoring Jobs
+Monitoring jobs
 ===============
 
 .. list-table::
@@ -261,11 +251,11 @@ Monitoring Jobs
    * - Slurm Command
      - Function
    * - ``seff <jobid>``
-     - Reports the computational efficiency of your calculations.
+     - Reports the computational efficiency of your calculations
    * - ``squeue -u <your user name>``
-     - Displays your job status in the job queue. Good to use with ``sbatch``.
+     - Displays your job status in the job queue; good to use with ``sbatch``
    * - ``scontrol show jobid -d <JOBID>``
-     - Displays your job information. Good to use with ``srun``.
+     - Displays your job information; good to use with ``srun``.
 
 You can monitor your jobs by using the Slurm ``scontrol`` command. Type ``scontrol show jobid -d <JOBID>``, where ``JOBID`` is the number of your job. In the figure at the top of the page, you can see that when you submit your ``srun`` command, Slurm displays the unique ID number of your job (``job 12962519``). This is the number you use with ``scontrol`` to monitor your job.
 
@@ -287,7 +277,7 @@ For example, if you are associated with an account named ``dataclub`` and an acc
 .. note::
    If you do not have more than one account associated with your username, you do not need to use the ``--account=`` flag. Most users on Discovery have only one account associated with their username.
 
-State of the Cluster and Specific Nodes
+State of the cluster and specific nodes
 =======================================
 Here are some more examples of using ``sinfo`` and ``scontrol`` to provide information about the state of the cluster and specific nodes:
 
@@ -300,17 +290,17 @@ The ``sinfo`` command will show information about all partitions in the cluster,
    :header-rows: 0
 
    * - ``PARTITION``
-     - The list of the cluster’s partitions. It’s a set of compute nodes grouped logically
+     - The list of the cluster’s partitions; a set of compute nodes grouped logically
    * - ``AVAIL``
-     - The active state of the partition. (up, down, idle)
+     - The active state of the partition (up, down, idle)
    * - ``TIMELIMIT``
-     - The maximum job execution walltime per partition.
+     - The maximum job execution walltime per partition
    * - ``NODES``
-     - The total number of nodes per partition.
+     - The total number of nodes per partition
    * - ``STATE``
-     - See STATE table below.
+     - See STATE table below
    * - ``NODELIST(REASON)``
-     - The list of nodes per partition.
+     - The list of nodes per partition
 
 **STATE Table**
 
@@ -321,17 +311,17 @@ The ``sinfo`` command will show information about all partitions in the cluster,
    * - State
      - Description
    * - ``mix``
-     - Only part of the node is allocated to one or more jobs and the rest in an Idle state.
+     - Only part of the node is allocated to one or more jobs and the rest in an Idle state
    * - ``alloc``
-     - The entire resource on the node(s) is being utilized.
+     - The entire resource on the node(s) is being utilized
    * - ``idle``
-     - The node is in an idle start and has none of it’s resources being used.
-Example Uses
+     - The node is in an idle start and has none of it’s resources being used
+Example uses
 ^^^^^^^^^^^^
 View information about all partitions::
 
    $ sinfo -a
-Or, a specific partition::
+Or, a specific partition, which gives all the nodes and the states the nodes are in at the current time::
 
    $ sinfo -p gpu
    PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
@@ -342,7 +332,7 @@ Or, a specific partition::
    gpu          up    8:00:00     50    mix c[2160,2163-2170,2172-2176,2178-2179,2185-2187,2189-2195,2204-2207],d[1001,1003-1005,1007,1009-1013,1016,1018,1020-1024,1026-1028]
    gpu          up    8:00:00      3  alloc d[1002,1015,1019]
    gpu          up    8:00:00      4   idle c[2180-2183]
-which give all the nodes and the states the nodes are in at the current time.
+
 
 The current TimeLimit for the queues::
 
@@ -372,14 +362,13 @@ View information about a specific partition::
 Or, only view nodes in a certain state::
 
    sinfo -p <partition> -t <state>
-For example::
+For example, this command will show information about a specific partition in the cluster, including the number of nodes, number of free nodes, and state of the partition::
 
    $ sinfo -p gpu -t idle
    PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
    gpu          up    8:00:00      1  drain d1025
    gpu          up    8:00:00      2   resv c2177,d1029
    gpu          up    8:00:00     13   idle c[2160,2163-2164,2166,2168-2170,2175,2179-2183]
-This command will show information about a specific partition in the cluster, including the number of nodes, number of free nodes, and state of the partition.
 
 You can use the ``--Format`` flag to get more information or a specific format for the output::
 
@@ -431,7 +420,7 @@ Using scontrol
 --------------
 The ``scontrol`` command is used for monitoring and modifying queued, running jobs, and reservations.
 
-Example Uses
+Example uses
 ^^^^^^^^^^^^
 View information about a specific node::
 
@@ -458,35 +447,32 @@ For example::
    CapWatts=n/a
    CurrentWatts=0 AveWatts=0
    ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
-For information on all reservations::
+For information on all reservations, this command will show information about a specific node in the cluster, including the node name, state, number of CPUs, and amount of memory::
 
    scontrol show reservations
-This command will show information about a specific node in the cluster, including the node name, state, number of CPUs, and amount of memory.
 
-View information about a specific job::
+View information about a specific job,this command will show information about a specific job, including the job ID, state, user name, and partition name. ::
 
    scontrol show job <job_id>
-This command will show information about a specific job, including the job ID, state, user name, and partition name.
 
-View information about a specific reservation::
+View information about a specific reservation, this command will show information about a specific reservation in the cluster, including the reservation name, start time, end time, and nodes included in the reservation::
 
    scontrol show reservation <reservation_name>
-This command will show information about a specific reservation in the cluster, including the reservation name, start time, end time, and nodes included in the reservation.
 
 These are just a few examples of what you can do with ``sinfo`` and ``scontrol`` to view information about the state of the cluster and specific nodes. There are many other options and commands available, and it is recommended to consult the `Slurm documentation`_ for more information on how to use these tools effectively.
 
 
-Best Practices
+Best practices
 ===============
 #. Use the proper resource request syntax: Slurm uses a specific syntax to request resources, such as the number of CPUs, memory, and time required for your job. Make sure to use the proper syntax to avoid any errors.
 #. Specify an appropriate job name: Giving your job a descriptive name will help you and other users identify it easily.
 #. Submit jobs using batch scripts: It's best to submit jobs using batch scripts instead of typing commands manually. Batch scripts allow you to automate the process and make it easier to run multiple jobs at once.
 #. Use the correct partition: Slurm HPC has several partitions, each designed for specific purposes. Choose the proper partition for your job to ensure you use the most appropriate resources.
-#. Monitor your job's progress: Keep an eye on your job's progress to ensure it's running correctly and identify any issues that may arise.
-#. Avoid overloading the system: Be mindful of the resources you're requesting and avoid overloading the system, as it ensures that other users have access to the resources they need.
+#. Monitor your job's progress: Keep an eye on your job's progress to ensure it's running correctly and you can identify any issues that may arise.
+#. Avoid overloading the system: Be mindful of the resources you're requesting and avoid overloading the system so that other users have access to the resources they need.
 #. Use checkpoints: If your job is long-running, consider using checkpoints to save your progress, allowing for resuming jobs if interrupted.
 #. Use environment modules: Slurm uses environment modules to manage software installations. Make sure to load the appropriate modules before running your job.
 #. Use the appropriate file system: Slurm HPC typically has several file systems with different performance characteristics. Use the proper file system for your job to ensure you get the best performance.
-#. Please clean up after your job: Make sure to remove any files or directories that your job created after it's finished running. It helps keep the system clean and frees up resources for other users.
+#. Please clean up after your job: Make sure to remove any files or directories that your job created after it's finished running. This practice helps keep the system clean and frees up resources for other users.
 
 .. _Slurm documentation: https://slurm.schedmd.com/documentation.html
