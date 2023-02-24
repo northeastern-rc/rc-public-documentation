@@ -11,7 +11,7 @@ Determine Large Files/Directories in /home/<username>
 =======================================================
 From a compute node, ``srun --pty /bin/bash``, run the following command from your /home/<username> directory ::
     
- du -shc .[!.]* *
+ du -shc .[^.]* *
 
 which will output the size of each file, directory, and hidden directory in your /home/<username> space with the sum total of your /home directory being the last line of the output. After determining the large files and directories, you can move them to the appropriate locations such as /work for research or you can back them up and delete them if they are no longer required.
 
