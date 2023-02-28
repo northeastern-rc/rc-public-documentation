@@ -16,7 +16,9 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
    If you have an account on Discovery, see :ref:`discovery_storage`
    for details on the storage available to you specifically for use with Discovery's compute resources. The options listed below are not connected to Discovery.
 
-:strike:`**NAME:** ``/research```
+:strike:`This will be crossed out.`
+
+Deprecated :strike:`**NAME:** ``/research```
   - **DESCRIPTION:** This storage tier is intended to be a repository for data derived from equipment such as lab machines,
     instruments, etc. The performance capabilities are not intended for parallel or high performance workloads.
     Data are backed up and a second copy is created. You can request storage on ``/research`` by submitting a `New Storage Space request <https://bit.ly/NURC-NewStorage>`_.
