@@ -1,5 +1,13 @@
 .. _general_storage:
 
+.. |ss| raw:: html
+
+    <strike>
+
+.. |se| raw:: html
+
+    </strike>
+
 *****************************
 General Data Storage Options
 *****************************
@@ -16,13 +24,11 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
    If you have an account on Discovery, see :ref:`discovery_storage`
    for details on the storage available to you specifically for use with Discovery's compute resources. The options listed below are not connected to Discovery.
 
-:strike:`This will be crossed out.`
 
-Deprecated :strike:`**NAME:** ``/research```
+Deprecated **NAME:** |ss| ``/research``|se|
   - **DESCRIPTION:** This storage tier is intended to be a repository for data derived from equipment such as lab machines,
     instruments, etc. The performance capabilities are not intended for parallel or high performance workloads.
-    Data are backed up and a second copy is created. You can request storage on ``/research`` by submitting a `New Storage Space request <https://bit.ly/NURC-NewStorage>`_.
-    See the section "Connecting to /research" below for information on how to connect to this storage.
+    Data are backed up and a second copy is created. 
   - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: ``/work/<groupname>``, ``/research`` () and ``/nese``.
 
 **NAME:** ``/nese``
