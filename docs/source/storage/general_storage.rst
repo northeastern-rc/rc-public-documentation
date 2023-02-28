@@ -25,12 +25,11 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
    for details on the storage available to you specifically for use with Discovery's compute resources. The options listed below are not connected to Discovery.
 
 
-DEPRECATED **NAME:** |ss| ``/research`` 
-  - **DESCRIPTION:** This storage tier is intended to be a repository for data derived from equipment such as lab machines,
-    instruments, etc. The performance capabilities are not intended for parallel or high performance workloads.
-    Data are backed up and a second copy is created. 
-  - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: ``/work/<groupname>``, ``/research`` () and ``/nese``.
-|se|
+DEPRECATED |ss| **NAME:** ``/research`` |se|
+  - **DESCRIPTION:** This storage tier is no longer provided. Please contact Research Computing if you are a former user of /research and have questions or issues related to this by submitting a ticket https://bit.ly/NURC-Assistance. Other storage options include /work (more information found here :ref:`discovery_storage` and requested request https://bit.ly/NURC-NewStorage), Sharepoint - https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012695, and OneDrive - https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012764. 
+
+
+
 
 **NAME:** ``/nese``
   - **DESCRIPTION:** This is archival, non-performant storage that is intended for researchers
