@@ -28,9 +28,6 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
 DEPRECATED |ss| **NAME:** ``/research`` |se|
   - **DESCRIPTION:** This storage tier is no longer provided. Please contact Research Computing if you are a former user of /research and have questions or issues related to this by submitting a ticket https://bit.ly/NURC-Assistance. Other storage options include /work (more information found here :ref:`discovery_storage` and requested request https://bit.ly/NURC-NewStorage), Sharepoint - https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012695, and OneDrive - https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012764. 
 
-
-
-
 **NAME:** ``/nese``
   - **DESCRIPTION:** This is archival, non-performant storage that is intended for researchers
     who need to have a long-term storage option for their data.
