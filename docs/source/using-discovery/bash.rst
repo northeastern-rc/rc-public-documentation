@@ -44,6 +44,7 @@ Mac Users
 Mac OS comes with a default terminal program, but there are more advanced terminals available; `iTerm2`_ is one of the more popular choices.
 
 To launch the terminal:
+
 #. Press Command + Space Bar on your Mac keyboard (alternatively, press F4)
 #. Type in “Terminal”
 #. When you see Terminal in the Spotlight search list, click it to open the app.
@@ -51,7 +52,6 @@ To launch the terminal:
 iTerm2 can be installed via the terminal using `Homebrew`_::
 
    brew install --cask iterm2
-
 If Homebrew is not already installed, run the following command in the terminal before installing iTerm2::
 
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -65,10 +65,11 @@ To download Terminator, open a terminal (``Ctrl+Alt+T`` is the shortcut to do so
    sudo add-apt-repository ppa:gnome-terminator
    sudo apt-get update
    sudo apt-get install terminator
-
 Windows Users
 -------------
 Windows users must install a terminal; you can visit Windows Apps and download the Windows Terminal directly from Microsoft (`Download Windows Terminal`_).
+
+Additionally, `Mobaxterm`_, an enhanced terminal for Windows with X11 server, tabbed SSH client, and network tools dubbed *the ultimate toolbox for remote computing*, is a great tool for connecting to the login node, explore the Discovery file system, and transfer files. Check out their `demo <https://mobaxterm.mobatek.net/demo.html>`_, `software features <https://mobaxterm.mobatek.net/features.html>`_, and `download <https://mobaxterm.mobatek.net/download.html>`_.
 
 Basic Commands
 =================
