@@ -248,57 +248,72 @@ Reference: `sed(1) manual page`_
 
 ``rsync`` - Synchronize files between two locations::
 
-   $ rsync -av /path/to/source/ /path/to/destination/
-Reference: `rsync(1) manual page`_
+   archive.tar file1.txt file2.txt
+::
 
-``ssh`` - Connect to a remote machine using Secure Shell (SSH)::
+   tar xvf archive.tar
+   ls
+::
 
-   $ ssh user@remote.example.com
-Reference: `ssh(1) manual page`_
+   file1.txt file2.txt
+Reference: `tar(1) manual page`_
 
 Regular expressions::
 
-   $ grep -E '^[A-Z][a-z]+$' file1.txt
+   grep -E '^[A-Z][a-z]+$' file1.txt
+::
+
    John
    Jane
 Parameter expansion::
 
-   $ name="John Doe"
-   $ echo ${name// /_}
+   name="John Doe"
+   echo ${name// /_}
+::
+
    John_Doe
 Command line options::
 
-   $ ls -lh
+   ls -lh
+::
+
    total 8.0K
    drwxrwxr-x 2 user user 4.0K Feb 14 13:29 directory1
    -rw-rw-r-- 1 user user   12 Feb 14 13:29 file1.txt
    -rw-rw-r-- 1 user user   14 Feb 14 13:29 file2.txt
 Parameter substitution::
 
-   $ echo ${name:4:3}
+   echo ${name:4:3}
+::
+
    Doe
 Arithmetic operations::
 
-   $ echo $((2 + 2))
+   echo $((2 + 2))
+::
+
    4
 File tests::
 
-   $ file=file1.txt
-   $ if [ -f $file ]; then
+   file=file1.txt
+   if [ -f $file ]; then
    >   echo "$file is a regular file"
    > fi
+::
+
    file1.txt is a regular file
 String tests::
 
-   $ string="hello"
-   $ if [ "$string" == "hello" ]; then
+   string="hello"
+   if [ "$string" == "hello" ]; then
    >   echo "The strings match"
    > fi
+::
+
    The strings match
 Command substitution with process substitution::
 
-   $ diff <(ls /path/to/dir1) <(ls /path/to/dir2)
-These are just a few more examples of advanced bash scripting techniques.
+   diff <(ls /path/to/dir1) <(ls /path/to/dir2)
 
 The next few subsections provide more details on a few advanced bash tools that often come in handy.
 
@@ -312,25 +327,25 @@ Below, we have listed a few examples of ``rsync`` synchronizing files and direct
 
 Syncing a local directory to a remote server::
 
-   $ rsync -avz /local/path user@remote.example.com:/remote/path
+   rsync -avz /local/path user@remote.example.com:/remote/path
 Syncing a remote server to a local directory::
 
-   $ rsync -avz user@remote.example.com:/remote/path /local/path
+   rsync -avz user@remote.example.com:/remote/path /local/path
 Syncing a local directory to a remote server with compression::
 
-   $ rsync -avz --compress /local/path user@remote.example.com:/remote/path
+   rsync -avz --compress /local/path user@remote.example.com:/remote/path
 Syncing a remote server to a local directory while preserving permissions::
 
-   $ rsync -avz --perms user@remote.example.com:/remote/path /local/path
+   rsync -avz --perms user@remote.example.com:/remote/path /local/path
 Syncing only files that have been modified in the last hour::
 
-   $ rsync -avz --update --min-age=3600 /local/path user@remote.example.com:/remote/path
+   rsync -avz --update --min-age=3600 /local/path user@remote.example.com:/remote/path
 Syncing a local directory to a remote server while excluding certain files::
 
-   $ rsync -avz --exclude='*.log' /local/path user@remote.example.com:/remote/path
+   rsync -avz --exclude='*.log' /local/path user@remote.example.com:/remote/path
 Syncing a remote server to a local directory while preserving symbolic links::
 
-   $ rsync -avz --links user@remote.example.com:/remote/path /local/path
+   rsync -avz --links user@remote.example.com:/remote/path /local/path
 
 find
 -----
@@ -342,27 +357,27 @@ Below are several advanced examples of using the ``find`` command to search for 
 
 Finding files based on size::
 
-   $ find /path/to/dir -size +10M
+   find /path/to/dir -size +10M
 This will find all files in /path/to/dir that are larger than 10 MB.
 
 Finding files based on modification time::
 
-   $ find /path/to/dir -mtime +7
+   find /path/to/dir -mtime +7
 This will find all files in /path/to/dir that have been modified more than 7 days ago.
 
 Finding files based on type::
 
-   $ find /path/to/dir -type f
+   find /path/to/dir -type f
 This will find all files in /path/to/dir that are regular files (not directories).
 
 Finding files based on name::
 
-   $ find /path/to/dir -name "*.txt"
+   find /path/to/dir -name "*.txt"
 This will find all files in /path/to/dir that have a .txt file extension.
 
 Executing commands on matching files::
 
-   $ find /path/to/dir -name "*.txt" -exec chmod 644 {} \;
+   find /path/to/dir -name "*.txt" -exec chmod 644 {} \;
 This will find all files in ``/path/to/dir`` that have a ``.txt`` file extension and execute the ``chmod`` command on each file, changing its permissions to ``644``.
 
 awk
@@ -375,26 +390,25 @@ Below are a few examples of ``awk`` processing and manipulating text data, but t
 
 Printing the first field of each line in a file::
 
-   $ awk '{print $1}' file.txt
+   awk '{print $1}' file.txt
 Printing the second field of each line in a file, only if the first field is equal to a specific value::
 
-   $ awk '$1 == "value" {print $2}' file.txt
+   awk '$1 == "value" {print $2}' file.txt
 Printing the sum of all numbers in the third field of a file::
 
-   $ awk '{sum+=$3} END {print sum}' file.txt
+   awk '{sum+=$3} END {print sum}' file.txt
 Printing the average of all numbers in the fourth field of a file::
 
-   $ awk '{sum+=$4; count++} END {print sum/count}' file.txt
+   awk '{sum+=$4; count++} END {print sum/count}' file.txt
 Printing the line number and the line text for each line in a file that contains a specific word::
 
-   $ awk '/word/ {print NR, $0}' file.txt
+   awk '/word/ {print NR, $0}' file.txt
 Printing the line number and the line text for each line in a file that starts with a specific string::
 
-   $ awk '$1 ~ /^string/ {print NR, $0}' file.txt
+   awk '$1 ~ /^string/ {print NR, $0}' file.txt
 Printing the line number, the line text, and the length of each line in a file::
 
-   $ awk '{print NR, $0, length($0)}' file.txt
-
+   awk '{print NR, $0, length($0)}' file.txt
 Git configurations tips and tricks:
 ----------------------------------
 Git is a distributed version control system for software development and other collaborative projects that allows multiple users to work on a project simultaneously, while keeping track of changes and enabling easy collaboration. With Git, users can commit their changes to a local repository and push them to a remote repository so that others can access and merge their changes into the main project. Git also provides a robust set of tools for managing branches, resolving conflicts, and performing other tasks related to version control.
@@ -407,33 +421,32 @@ Below you will find a few examples of Git configuration options. See `Git User M
 
 Setting your user name and email::
 
-   $ git config --global user.name "Your Name"
-   $ git config --global user.email "your.email@example.com"
+   git config --global user.name "Your Name"
+   git config --global user.email "your.email@example.com"
 Setting your preferred text editor::
 
-   $ git config --global core.editor nano
+   git config --global core.editor nano
 Setting your preferred diff tool::
 
-   $ git config --global diff.tool emacs
-   $ git config --global difftool.prompt false
+   git config --global diff.tool emacs
+   git config --global difftool.prompt false
 Setting up aliases for frequently used Git commands::
 
-   $ git config --global alias.st status
-   $ git config --global alias.co checkout
-   $ git config --global alias.ci commit
+   git config --global alias.st status
+   git config --global alias.co checkout
+   git config --global alias.ci commit
 Setting up a default push behavior::
 
-   $ git config --global push.default simple
+   git config --global push.default simple
 Enabling colored output for Git commands::
 
-   $ git config --global color.ui true
+   git config --global color.ui true
 Ignoring files globally across all your Git repositories::
 
-   $ git config --global core.excludesfile ~/.gitignore_global
+   git config --global core.excludesfile ~/.gitignore_global
 Enabling automatic line wrapping in Git log output::
 
-   $ git config --global log.autoWrap true
-
+   git config --global log.autoWrap true
 Text Editors
 ===============
 There are a few popular text editors that enable modifying text files from the terminal. In this section you will find brief descriptions for the text editors that are available by default on Discovery.
@@ -446,7 +459,7 @@ Emacs is a popular text editor that is widely used for programming, writing, and
 
 Open a terminal and type the following command::
 
-   $ emacs
+   emacs
 **Opening a file**
 
 To open an existing file, use the following command::
@@ -498,8 +511,6 @@ To search for text, use the following command::
 To quit emacs, use the following command::
 
    C-x C-c
-
-
 VIM
 ------
 Vim is a popular text editor that is widely used for programming, writing, and other text-related tasks. Consult the `VIM Manual`_ for more information on using the text editor effectively.
@@ -508,7 +519,7 @@ Vim is a popular text editor that is widely used for programming, writing, and o
 
 Open a terminal and type the following command::
 
-   $ vim
+   vim
 **Opening a file**
 
 To open an existing file, type the following command::
@@ -577,7 +588,7 @@ Nano is a simple, easy-to-use text editor commonly used in Unix-like operating s
 
 Open a terminal and type the following command::
 
-   $ nano
+   nano
 **Opening a file**
 
 To open an existing file, type the following command::
@@ -636,7 +647,6 @@ Here is a simple example of a shell script that prints the message, ``Hello, Wor
    #!/bin/bash
 
    echo "Hello, World!"
-
 Notice the line ``#!/bin/bash`` at the top of a shell script (i.e., the shebang line). This line specifies which shell interpreter will be used when running the script. In this case, line ``#!/bin/bash`` specifies that the script uses the bash shell.
 
 .. note::
@@ -644,10 +654,10 @@ Notice the line ``#!/bin/bash`` at the top of a shell script (i.e., the shebang 
 
 First we must make the file executable to run this script. This is done as follows::
 
-   $ chmod +x hello_world.sh
+   chmod +x hello_world.sh
 Then, run the script as follows::
 
-   $ ./hello_world.sh
+   ./hello_world.sh
 This will print the message ``Hello, World!`` to the screen.
 
 Shell scripts can do many tasks, including backups, system maintenance, and the commands covered in this tutorial. For example, you could create a script to automate the backup of your home directory by copying all of its files to a remote server. The script could include commands for compressing the files, copying them to the server, and logging the results.
