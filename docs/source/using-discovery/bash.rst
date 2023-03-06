@@ -11,13 +11,15 @@ Using Bash
 
    Bash (Bourne Again SHell)
 
+
 Overview
-=================
+=========
 Bash (Bourne Again SHell) is a popular shell and command-line interface. Specifically, a shell is an interface between the user and the underlying operating system, allowing users to interact with the system and perform tasks. Bash provides a range of features for running commands, managing files, navigating systems, and performing other tasks.
 
 Bash commands perform various tasks within the shell environment. Commands span more basic functionalities (e.g., ``ls``, ``cd``, ``cp``, ``mv``, and ``rm``), and more advanced (e.g., ``grep`` and ``awk``). We cover these commands, along with others, in this tutorial. Bash can also be used in scripts, allowing users to automate tasks and perform more complex operations via loops, conditional logic, and defining functions, which we cover at the end of this page.
 
 In summary, shell commands perform various tasks with the terminal.
+
 
 .. figure:: /images/terminal-view.png
    :class: with-border
@@ -28,7 +30,7 @@ In summary, shell commands perform various tasks with the terminal.
    Terminal View
 
 Terminal
-=================
+=========
 The terminal - aka the command line interface (CLI) - is a text-based interface for interacting with an operating system. It provides a way for users to interact with the system and perform tasks by typing commands and receiving text-based output.
 
 In contrast to graphical user interfaces (GUIs), the terminal provides a more direct and powerful way to interact with the system. Tasks that may require several steps in a GUI can often be accomplished much more quickly and efficiently in the terminal.
@@ -39,8 +41,8 @@ There are various terminal options (i.e., flavors) offered for different operati
 
 Next, let us explore options and specifics per operating system. Specifically, we cover Mac, Linux, and Windows terminals.
 
-Mac Users
----------
+MacOS
+------
 Mac OS comes with a default terminal program, but there are more advanced terminals available; `iTerm2`_ is one of the more popular choices.
 
 To launch the terminal:
@@ -56,8 +58,8 @@ If Homebrew is not already installed, run the following command in the terminal 
 
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-Linux Users
------------
+Linux
+------
 Linux also comes with a default terminal program, but there are also more advanced terminals available; `Terminator`_ is a the popular choice.
 
 To download Terminator, open a terminal (``Ctrl+Alt+T`` is the shortcut to do so). Next, execute the following::
@@ -65,252 +67,334 @@ To download Terminator, open a terminal (``Ctrl+Alt+T`` is the shortcut to do so
    sudo add-apt-repository ppa:gnome-terminator
    sudo apt-get update
    sudo apt-get install terminator
-Windows Users
--------------
+Windows
+-------
 Windows users must install a terminal; you can visit Windows Apps and download the Windows Terminal directly from Microsoft (`Download Windows Terminal`_).
 
 Additionally, `Mobaxterm`_, an enhanced terminal for Windows with X11 server, tabbed SSH client, and network tools dubbed *the ultimate toolbox for remote computing*, is a great tool for connecting to the login node, explore the Discovery file system, and transfer files. Check out their `demo <https://mobaxterm.mobatek.net/demo.html>`_, `software features <https://mobaxterm.mobatek.net/features.html>`_, and `download <https://mobaxterm.mobatek.net/download.html>`_.
 
 Basic Commands
-=================
+==============
 .. note::
    The ``~`` character is shorthand for specifying the home directory of the current user, i.e., ``~`` is the same as ``$HOME``.
 
-``ls`` - List the contents of a directory::
+``ls`` - List the contents of a directory.
 
-   ls
-::
+.. code-block:: shell
+  :emphasize-lines: 2
 
-   file1.txt  file2.txt  directory1
-``cd`` - Change the current working directory::
+  ls
+  file1.txt  file2.txt  directory1
 
-   cd ~/directory1
-   pwd
-::
+``cd`` - Change the current working directory.
 
-   <$HOME>/directory1
-``pwd`` - Print the current working directory::
+.. code-block:: shell
+  :emphasize-lines: 3
 
-   pwd
-::
+  cd ~/directory1
+  pwd
+  <$HOME>/directory1
 
-   /path/to/directory1
-``mkdir`` - Create a new directory::
+``pwd`` - Print the current working directory.
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  pwd
+  /path/to/directory1
+
+``mkdir`` - Create a new directory.
+
+.. code-block:: shell
+  :emphasize-lines: 3
 
    mkdir directory2
    ls
-::
-
    file1.txt  file2.txt  directory1  directory2
-``rm`` - Remove a file or directory::
+
+``rm`` - Remove a file or directory.
+
+.. code-block:: shell
+  :emphasize-lines: 3
 
    rm file1.txt
    ls
-::
-
    file2.txt  directory1  directory2
-``cp`` - Copy a file or directory::
+
+``cp`` - Copy a file or directory.
+
+.. code-block:: shell
+  :emphasize-lines: 3
 
    cp file2.txt file3.txt
    ls
-::
-
    file2.txt  file3.txt  directory1  directory2
-``mv`` - Move or rename a file or directory::
 
-   mv file2.txt file4.txt
-   ls
-::
+``mv`` - Move or rename a file or directory.
 
-   file3.txt  file4.txt  directory1  directory2
-``echo`` - Display a message or the value of a variable::
+.. code-block:: shell
+  :emphasize-lines: 3
 
-   echo "Hello, world!"
-::
+  mv file2.txt file4.txt
+  ls
+  file3.txt  file4.txt  directory1  directory2
 
-   Hello, world!
-``cat`` - Concatenate and display the contents of one or more files::
+``echo`` - Display a message or the value of a variable.
 
-   cat file3.txt
-::
+.. code-block:: shell
+  :emphasize-lines: 2
 
-   This is the contents of file3.txt
-``grep`` - Search for a pattern in a file or input::
+  echo "Hello, world!"
+  Hello, world!
 
-   grep "the" file3.txt
-::
+``cat`` - Concatenate and display the contents of one or more files.
 
-   This is the contents of file3.txt
-``sort`` - Sort the lines of a file or input::
+.. code-block:: shell
+  :emphasize-lines: 2
 
-   sort file3.txt
-::
+  cat file3.txt
+  This is the contents of file3.txt
 
-   This is the contents of file3.txt
-``uniq`` - Remove duplicates from a sorted file or input::
+``grep`` - Search for a pattern in a file or input.
 
-   sort file3.txt | uniq
-   This is the contents of file3.txt
-``wc`` - Count the number of lines, words, and characters in a file or input::
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  grep "the" file3.txt
+  This is the contents of file3.txt
+
+``sort`` - Sort the lines of a file or input.
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  sort file3.txt
+  This is the contents of file3.txt
+
+``uniq`` - Remove duplicates from a sorted file or input.
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  sort file3.txt | uniq
+  This is the contents of file3.txt
+
+``wc`` - Count the number of lines, words, and characters in a file or input.
+
+.. code-block:: shell
+  :emphasize-lines: 2
 
    wc file3.txt
-::
-
    1   4  26 file3.txt
-``head`` - Display the first lines of a file or input::
+
+``head`` - Display the first lines of a file or input.
+
+.. code-block:: shell
+  :emphasize-lines: 2
 
    head file3.txt
-::
-
    This is the contents of file3.txt
-``tail`` - Display the last lines of a file or input::
 
-   tail file3.txt
-::
+``tail`` - Display the last lines of a file or input.
 
-   This is the contents of file3.txt
-``less`` - View the contents of a file one page at a time::
+.. code-block:: shell
+  :emphasize-lines: 2
 
-   $ less file3.txt
-``top`` - Show the currently running processes and system information::
+  tail file3.txt
+  This is the contents of file3.txt
 
-   $ top
-``ps`` - Show information about the currently running processes::
+``less`` - View the contents of a file one page at a time.
 
-   $ ps
-``kill`` - Terminate a process by its process ID::
+.. code-block:: shell
 
-   $ kill <pid>
-Note: ``<pid>`` in the command should be replaced with the actual process ID of the process you want to terminate; the output of the ``kill`` command will typically be empty unless there is an error in executing the command.
+   less file3.txt
+
+``top`` - Show the currently running processes and system information.
+
+.. code-block:: shell
+
+   top
+
+To exit, press ``q``.
+
+``ps`` - Show information about the currently running processes.
+
+.. code-block:: shell
+
+   ps
+.. note::
+   ``<pid>`` (``PID``) in the command should be replaced with the actual process ID of the process you want to terminate; the output of the ``kill`` command will typically be empty unless there is an error in executing the command.
 
 It's essential to be cautious when using the ``kill`` command, as terminating a process can cause data loss or corruption. Therefore, before using ``kill``, you should always try to gracefully stop the process by sending a termination signal, such as ``SIGTERM``, first. If that does not work, you can try a stronger signal, such as ``SIGKILL``.
 
+``kill`` - Terminate a process by its process ID::
+
+   kill <pid>
 Advanced Commands
 =================
-Here are some advanced Unix commands, along with references and examples.
+In this section we will provide examples of some helpful advanced commands, and then take a closer look at three essential advanced commands.
 
-``find`` - Search for files and directories::
+``awk`` - Process text data and perform actions based on patterns.
 
-   $ find /path/to/search -name "*.txt"
-   /path/to/search/file1.txt
-   /path/to/search/file2.txt
-Reference: `find(1) manual page`_
+.. code-block:: shell
+  :emphasize-lines: 2,3,4
 
-``gzip`` - Compress or decompress files::
+  cat file1.txt
+  This is line 1
+  This is line 2
+  This is line 3
 
-   $ gzip file1.txt
-   $ ls
-   file1.txt.gz
-::
+.. code-block:: shell
+  :emphasize-lines: 2
 
-   $ gunzip file1.txt.gz
-   $ ls
-   file1.txt
-Reference: `gzip(1) manual page`_
-
-``tar`` - Create or extract compressed archive files::
-
-   $ tar cvf archive.tar file1.txt file2.txt
-   $ ls
-   archive.tar file1.txt file2.txt
-::
-
-   $ tar xvf archive.tar
-   $ ls
-   file1.txt file2.txt
-Reference: `tar(1) manual page`_
-
-``awk`` - Process text data and perform actions based on patterns::
-
-   $ cat file1.txt
-   This is line 1
-   This is line 2
-   This is line 3
-::
-
-   $ awk '/line 2/ {print "Line 2 found"}' file1.txt
+   awk '/line 2/ {print "Line 2 found"}' file1.txt
    Line 2 found
+
 Reference: `awk(1) manual page`_
 
-``sed`` - Stream editor for filtering and transforming text::
+``find`` - Search for files and directories.
 
-   $ cat file1.txt
-   This is line 1
-   This is line 2
-   This is line 3
-::
+.. code-block:: shell
+  :emphasize-lines: 3,4
+  find /path/to/search -name "*.txt"
+  /path/to/search/file1.txt
+  /path/to/search/file2.txt
 
-   $ sed 's/line 1/Line 1/' file1.txt
-   This is Line 1
-   This is line 2
-   This is line 3
-Reference: `sed(1) manual page`_
+Reference: `find(1) manual page`_
+
+``gzip`` - Compress or decompress files.
+
+.. code-block:: shell
+  :emphasize-lines: 3
+
+  gzip file1.txt
+  ls
+  file1.txt.gz
+
+.. code-block:: shell
+  :emphasize-lines: 3
+
+  gunzip file1.txt.gz
+  ls
+  file1.txt
+
+Reference: `gzip(1) manual page`_
 
 ``rsync`` - Synchronize files between two locations::
 
-   archive.tar file1.txt file2.txt
-::
+   rsync -av /path/to/source/ /path/to/destination/
+Reference: `rsync(1) manual page`_
 
-   tar xvf archive.tar
-   ls
-::
+``sed`` - Stream editor for filtering and transforming text.
 
-   file1.txt file2.txt
+.. code-block:: shell
+  :emphasize-lines: 2,3,4
+
+  cat file1.txt
+  This is line 1
+  This is line 2
+  This is line 3
+
+.. code-block:: shell
+  :emphasize-lines: 2,3,4
+
+  sed 's/line 1/Line 1/' file1.txt
+  This is Line 1
+  This is line 2
+  This is line 3
+
+Reference: `sed(1) manual page`_
+
+``ssh`` - Connect to a remote machine using Secure Shell (SSH)::
+
+   ssh user@remote.example.com
+Reference: `ssh(1) manual page`_
+
+``tar`` - Create or extract compressed archive files.
+
+.. code-block:: shell
+  :emphasize-lines: 3
+
+  tar cvf archive.tar file1.txt file2.txt
+  ls
+  archive.tar file1.txt file2.txt
+
+.. code-block:: shell
+  :emphasize-lines: 3
+
+  tar xvf archive.tar
+  ls
+  file1.txt file2.txt
+
 Reference: `tar(1) manual page`_
 
-Regular expressions::
+Regular expressions:
 
-   grep -E '^[A-Z][a-z]+$' file1.txt
-::
+.. code-block:: shell
+  :emphasize-lines: 2,3
 
-   John
-   Jane
-Parameter expansion::
+  grep -E '^[A-Z][a-z]+$' file1.txt
+  John
+  Jane
 
-   name="John Doe"
-   echo ${name// /_}
-::
+Parameter expansion:
 
-   John_Doe
-Command line options::
+.. code-block:: shell
+  :emphasize-lines: 3
 
-   ls -lh
-::
+  name="John Doe"
+  echo ${name// /_}
+  John_Doe
 
-   total 8.0K
-   drwxrwxr-x 2 user user 4.0K Feb 14 13:29 directory1
-   -rw-rw-r-- 1 user user   12 Feb 14 13:29 file1.txt
-   -rw-rw-r-- 1 user user   14 Feb 14 13:29 file2.txt
-Parameter substitution::
+Command line options:
 
-   echo ${name:4:3}
-::
+.. code-block:: shell
+  :emphasize-lines: 2,3,4,5
 
-   Doe
-Arithmetic operations::
+  ls -lh
+  total 8.0K
+  drwxrwxr-x 2 user user 4.0K Feb 14 13:29 directory1
+  -rw-rw-r-- 1 user user   12 Feb 14 13:29 file1.txt
+  -rw-rw-r-- 1 user user   14 Feb 14 13:29 file2.txt
 
-   echo $((2 + 2))
-::
+Parameter substitution:
 
-   4
-File tests::
+.. code-block:: shell
+  :emphasize-lines: 2
 
-   file=file1.txt
-   if [ -f $file ]; then
-   >   echo "$file is a regular file"
-   > fi
-::
+  echo ${name:4:3}
+  Doe
 
-   file1.txt is a regular file
-String tests::
+Arithmetic operations:
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  echo $((2 + 2))
+  4
+
+File tests:
+
+.. code-block:: shell
+  :emphasize-lines: 5
+
+  file=file1.txt
+  if [ -f $file ]; then
+  >   echo "$file is a regular file"
+  > fi
+  file1.txt is a regular file
+
+String tests:
+
+.. code-block:: shell
+  :emphasize-lines: 5
 
    string="hello"
    if [ "$string" == "hello" ]; then
    >   echo "The strings match"
    > fi
-::
-
    The strings match
+
 Command substitution with process substitution::
 
    diff <(ls /path/to/dir1) <(ls /path/to/dir2)
