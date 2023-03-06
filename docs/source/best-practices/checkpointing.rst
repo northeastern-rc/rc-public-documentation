@@ -6,9 +6,9 @@ The complexity of HPC systems may introduce unpredictable behaviors and result i
 
 Checkpointing will allow you to:
 
- * Create resilient workflows in the existence of faults.
- * Overcome most scheduler resource time limitations.
- * Implement an early error detection approach by inspecting intermediate results.
+ * Create resilient workflows in the existence of faults
+ * Overcome most scheduler resource time limitations
+ * Implement an early error detection approach by inspecting intermediate results
 
 The Checkpointing technique
 ================================
@@ -45,8 +45,8 @@ Which checkpointing method to use?
 
 
 Implementing checkpointing can be achieved by:
- * Some save-and-load mechanisms of your calculation state.
- * The use of `Slurm Job Arrays <https://slurm.schedmd.com/job_array.html>`_.
+ * Some save-and-load mechanisms of your calculation state
+ * The use of `Slurm Job Arrays <https://slurm.schedmd.com/job_array.html>`_
 
 .. note::
    To overcome partition time limits, replace your single long job with multiple shorter jobs. Then, using job arrays, set each job to run one after the other. Each job will write a checkpoint file if implemented. For example, the following job in line will be the latest checkpoint file to continue from the latest state of the calculation.
@@ -99,19 +99,19 @@ The program runs in the background of your program without significant performan
 As DMTCP runs in the background, it requires some changes to your Shell script. For examples of how to checkpoint with DMTCP visit `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_3>`_.
 The example demonstrates how to use DMTCP with a simple C++ program (scripts modified from `RSE-Cambridge <https://github.com/RSE-Cambridge/dmtcp-tests>`_).
 
-Tips and Tricks
+Tips and tricks
 ---------------------
 
 What data to save?
  * Non-temporary application data
  * Any application data that has changed since the last checkpoint
- * Delete no longer proper checkpoints - keep only the most recent checkpoint file.
+ * Delete no longer proper checkpoints - keep only the most recent checkpoint file
 
 How frequently should we checkpoint?
- * Too often – will slow down your calculation, maybe I/O heavy and memory-limited.
- * Too infrequently – leads to large/long rollback times.
- * Consider how long it takes to a checkpoint and restart your calculation.
- * In most cases, a rate of every 10-15 minutes is ok.
+ * Too often – will slow down your calculation, maybe I/O heavy and memory-limited
+ * Too infrequently – leads to large/long rollback times
+ * Consider how long it takes to a checkpoint and restart your calculation
+ * In most cases, a rate of every 10-15 minutes is ok
 
 .. _ML Model-level:
 
