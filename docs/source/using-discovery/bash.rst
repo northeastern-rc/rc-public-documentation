@@ -13,23 +13,19 @@ Using Bash
 
 Overview
 =================
-Bash (Bourne Again SHell) is a popular shell and command-line interface in Unix-like operating systems. A shell is an interface between the user and the underlying operating system, allowing users to interact with the system and perform tasks. Bash provides a range of features for running commands, managing files, and performing other tasks.
+Bash (Bourne Again SHell) is a popular shell and command-line interface. Specifically, a shell is an interface between the user and the underlying operating system, allowing users to interact with the system and perform tasks. Bash provides a range of features for running commands, managing files, navigating systems, and performing other tasks.
 
-Bash commands perform various tasks within the shell environment. Some common bash commands include ``ls`` for listing the contents of a directory, ``cd`` for changing the current directory, ``cp`` for copying files, ``mv`` for moving files, and ``rm`` for removing files. A few of the more advanced Bash commands are ``grep`` for searching for text within files, sed for performing text transformations, and ``awk`` for processing text data. We cover these commands, along with others, in this tutorial.
+Bash commands perform various tasks within the shell environment. Commands span more basic functionalities (e.g., ``ls``, ``cd``, ``cp``, ``mv``, and ``rm``), and more advanced (e.g., ``grep`` and ``awk``). We cover these commands, along with others, in this tutorial. Bash can also be used in scripts, allowing users to automate tasks and perform more complex operations via loops, conditional logic, and defining functions, which we cover at the end of this page.
 
-Bash also provides a rich set of features for scripting, allowing users to automate tasks and perform complex operations. Bash scripts are text files that contain a series of bash commands, and the shell can execute them to perform a specific task. As a result, scripts cover a range of tasks, including backups, system maintenance, and more.
-
-Bash is a powerful and versatile shell environment that provides a rich set of features for performing tasks on a Unix-like operating system. Whether a beginner or an advanced user, bash offers the tools to perform various functions from the command line.
-
-In summary, shell commands perform various tasks with the terminal, as depicted in the following figure.
+In summary, shell commands perform various tasks with the terminal.
 
 .. figure:: /images/terminal-view.png
    :class: with-border
    :width: 300
-   :alt: Bash (Bourne Again SHell) logo.
+   :alt: Terminal View.
    :align: center
 
-   Bash (Bourne Again SHell)
+   Terminal View
 
 Terminal
 =================
