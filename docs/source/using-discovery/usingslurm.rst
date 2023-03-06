@@ -230,16 +230,40 @@ Parallel jobs should use code configured to use the reserved resources. Running 
   <commands to execute>
 
 
-Using arrays
-^^^^^^^^^^^^
+Slurm Job Arrays
+================
+In high-performance computing (HPC) environments, users often need to run large numbers of jobs that are very similar, such as simulations with varying input parameters or the processing of multiple data files. Managing and tracking individual jobs can be a cumbersome and time-consuming process. Enter: Slurm job arrays.
 
-Using a job array can often help in situations where you need to submit multiple similar jobs. To use an array with your jobs, in your ``sbatch`` script, use the ``array=`` option.
+A job array is a collection of related jobs submitted to Slurm as a single entity. A unique index identifies each job in the array, which runs independently on a separate compute node. The index can specify different input files or parameters for each job, allowing for the efficient processing of many similar tasks.
 
-For example, if you want to run a 10 job array, one job at a time, you would add the following line to your sbatch script:
+There are several ways to define job arrays, such as specifying the range of indices or providing a list of indices in a file. Slurm also offers various features to manage and track job arrays, such as options to simultaneously suspend, resume, or cancel all jobs in the array.
+
+Usage
+------------
+Slurm Job Arrays can be a valuable tool when dealing with jobs that consist of numerous identical tasks. For example, when processing a large set of input files or running simulations with varying input parameters, a Job Array can simplify your submission process, improve code versatility, and reduce the load on the scheduler.
+
+
+To use an array with your jobs, in your ``sbatch`` script, use the ``array=`` option, which is exemplified throughout the following subsections. Let us assume that we want to run a 10 job array one job at a time. We would add the following line to your sbatch script:
 
 ``#SBATCH --array=1-10%1``
 
-For more information on this command, go to the `Slurm documentation`_.
+To illustrate, let's consider three possible ways to process a collection input files.
+
+#. Write a single script that loops through the input files and executes the processing code.
+#. Write a script that processes a single file and submits it multiple times, once for each file, with the filename accepted as a parameter.
+#. Use a job array, which allows you to apply a single-file script to a large set of input files without putting undue stress on the scheduler.
+
+In summary: (**1**) can be challenging to parallelize effectively;  (**2**) can create a large number of jobs, potentially putting undue stress on the job scheduler;  (**3**) can be helpful when developing a script that works well for both single and large groups of files. Furthermore, all sub-jobs in the array share the same base job ID, making it easy to group and organize your workflow.
+
+Using Slurm job arrays can simplify job management and streamline your workflow, mainly when dealing with large sets of identical tasks.
+
+Sample Data
+^^^^^^^^^^^
+See :download:`bash script to generate sample data <../resources/create_sample_array_data.sh>`. This script simply creates a data directory array_example_data and populates it with some text files.
+
+Batch Script and Array
+^^^^^^^^^^^^^^^^^^^^^^
+We will then use this script, which we sae as ``array_batch.sh`` to “evaluate” the data:
 
 Monitoring jobs
 ===============
@@ -476,3 +500,4 @@ Best practices
 #. Please clean up after your job: Make sure to remove any files or directories that your job created after it's finished running. This practice helps keep the system clean and frees up resources for other users.
 
 .. _Slurm documentation: https://slurm.schedmd.com/documentation.html
+.. _Training Slurm Job Arrays on GitHub: https://github.com/northeastern-rc/training-slurmarrayjobs
