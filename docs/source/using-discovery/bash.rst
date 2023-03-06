@@ -29,6 +29,15 @@ In summary, shell commands perform various tasks with the terminal.
 
 Terminal
 =================
+The terminal - aka the command line interface (CLI) - is a text-based interface for interacting with an operating system. It provides a way for users to interact with the system and perform tasks by typing commands and receiving text-based output.
+
+In contrast to graphical user interfaces (GUIs), the terminal provides a more direct and powerful way to interact with the system. Tasks that may require several steps in a GUI can often be accomplished much more quickly and efficiently in the terminal.
+
+Whether you are a beginner or an advanced user, the terminal provides a powerful and versatile interface for interacting with your operating system. With a little knowledge and practice, you can use the terminal to accomplish a wide range of tasks and take control of your system in new and powerful ways.
+
+There are various terminal options (i.e., flavors) offered for different operating systems. `Power Shell`_ is available for Windows, Linux, and MacOS.
+
+Next, let us explore options and specifics per operating system. Specifically, we cover Mac, Linux, and Windows terminals.
 
 Mac Users
 ---------
