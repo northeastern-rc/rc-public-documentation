@@ -653,7 +653,9 @@ This will print the message ``Hello, World!`` to the screen.
 Shell scripts can do many tasks, including backups, system maintenance, and the commands covered in this tutorial. For example, you could create a script to automate the backup of your home directory by copying all of its files to a remote server. The script could include commands for compressing the files, copying them to the server, and logging the results.
 
 
+.. _Power Shell: https://learn.microsoft.com/en-us/powershell/
 .. _Download Windows Terminal: https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us&rtc=1
+.. _Mobaxterm: https://mobaxterm.mobatek.net/
 .. _Homebrew: https://brew.sh/
 .. _iTerm2: : https://iterm2.com/
 .. _Terminator: https://gnome-terminator.org/
