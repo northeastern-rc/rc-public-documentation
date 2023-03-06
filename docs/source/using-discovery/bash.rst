@@ -80,69 +80,94 @@ Basic Commands
 
    ls
 ::
+
    file1.txt  file2.txt  directory1
 ``cd`` - Change the current working directory::
 
-   $ cd ~/directory1
-   $ pwd
-   <$HOME>/directory1
-Note: ``~`` is shorthand for specifying the home directory of the current user.
+   cd ~/directory1
+   pwd
+::
 
+   <$HOME>/directory1
 ``pwd`` - Print the current working directory::
 
-   $ pwd
+   pwd
+::
+
    /path/to/directory1
 ``mkdir`` - Create a new directory::
 
-   $ mkdir directory2
-   $ ls
+   mkdir directory2
+   ls
+::
+
    file1.txt  file2.txt  directory1  directory2
 ``rm`` - Remove a file or directory::
 
-   $ rm file1.txt
-   $ ls
+   rm file1.txt
+   ls
+::
+
    file2.txt  directory1  directory2
 ``cp`` - Copy a file or directory::
 
-   $ cp file2.txt file3.txt
-   $ ls
+   cp file2.txt file3.txt
+   ls
+::
+
    file2.txt  file3.txt  directory1  directory2
 ``mv`` - Move or rename a file or directory::
 
-   $ mv file2.txt file4.txt
-   $ ls
+   mv file2.txt file4.txt
+   ls
+::
+
    file3.txt  file4.txt  directory1  directory2
 ``echo`` - Display a message or the value of a variable::
 
-   $ echo "Hello, world!"
+   echo "Hello, world!"
+::
+
    Hello, world!
 ``cat`` - Concatenate and display the contents of one or more files::
 
-   $ cat file3.txt
+   cat file3.txt
+::
+
    This is the contents of file3.txt
 ``grep`` - Search for a pattern in a file or input::
 
-   $ grep "the" file3.txt
+   grep "the" file3.txt
+::
+
    This is the contents of file3.txt
 ``sort`` - Sort the lines of a file or input::
 
-   $ sort file3.txt
+   sort file3.txt
+::
+
    This is the contents of file3.txt
 ``uniq`` - Remove duplicates from a sorted file or input::
 
-   $ sort file3.txt | uniq
+   sort file3.txt | uniq
    This is the contents of file3.txt
 ``wc`` - Count the number of lines, words, and characters in a file or input::
 
-   $ wc file3.txt
+   wc file3.txt
+::
+
    1   4  26 file3.txt
 ``head`` - Display the first lines of a file or input::
 
-   $ head file3.txt
+   head file3.txt
+::
+
    This is the contents of file3.txt
 ``tail`` - Display the last lines of a file or input::
 
-   $ tail file3.txt
+   tail file3.txt
+::
+
    This is the contents of file3.txt
 ``less`` - View the contents of a file one page at a time::
 
