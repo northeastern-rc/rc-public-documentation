@@ -73,9 +73,13 @@ Additionally, `Mobaxterm`_, an enhanced terminal for Windows with X11 server, ta
 
 Basic Commands
 =================
+.. note::
+   The ``~`` character is shorthand for specifying the home directory of the current user, i.e., ``~`` is the same as ``$HOME``.
+
 ``ls`` - List the contents of a directory::
 
-   $ ls
+   ls
+::
    file1.txt  file2.txt  directory1
 ``cd`` - Change the current working directory::
 
