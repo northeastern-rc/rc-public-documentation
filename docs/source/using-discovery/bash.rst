@@ -537,64 +537,50 @@ There are a few popular text editors that enable modifying text files from the t
 
 Emacs
 ------
-Emacs is a popular text editor that is widely used for programming, writing, and other text-related tasks. You should consult the emacs manual page or online resources for more information on how to use the text editor effectively.
+Emacs is a popular text editor that is widely used for programming, writing, and other text-related tasks. You should consult the `Emacs Manual`_ or online resources for more information on how to use the text editor effectively.
 
-**Starting emacs**
-
-Open a terminal and type the following command::
+To start emacs, open a terminal and type the following command::
 
    emacs
-**Opening a file**
+Once open, the following table summarizes various keyboard shortcuts (i.e., commands) for working in the text editor.
 
-To open an existing file, use the following command::
+.. list-table:: Common Commands (``C-`` -> hold ``Ctrl``)
+   :widths: 40 20
+   :header-rows: 1
 
-   C-x C-f
-This will open the file dialog, where you can enter the name of the file you want to open.
+   * - Functionality
+     - Command
+   * - Open file
+     - ``C-x C-f``
+   * - Save file
+     - ``C-x C-s``
+   * - Close file
+     - ``C-x C-w``
+   * - Cut text
+     - ``C-k``
+   * - Paste text
+     - ``C-y``
+   * - Undo
+     - ``C-/``
+   * - Redo
+     - ``C-x C-/``
+   * - Search text
+     - ``C-s``
+   * - Quit Emacs
+     - ``C-s``
+   * - *Moving cursor*
+     - ``C-x C-c``
+   * - previous line
+     - ``C-p``
+   * - next line
+     - ``C-n``
+   * - forward character
+     - ``C-f``
+   * - backward character
+     - ``C-b``
 
-**Saving a file**
+For more commands, see `Emacs Cheat Sheet`_.
 
-To save a file, use the following command::
-
-   C-x C-s
-**Closing a file**
-
-To close a file, use the following command::
-
-   C-x C-w
-**Moving the cursor**
-
-To move the cursor, use the arrow keys or the following commands::
-
-   C-p (previous line)
-   C-n (next line)
-   C-f (forward character)
-   C-b (backward character)
-**Cutting and pasting text**
-
-To cut text, use the following command::
-
-   C-w
-To paste text, use the following command::
-
-   C-y
-**Undo and redo**
-
-To undo, use the following command::
-
-   C-/
-To redo, use the following command::
-
-   C-x C-/
-**Searching for text**
-
-To search for text, use the following command::
-
-   C-s
-**Quitting emacs**
-
-To quit emacs, use the following command::
-
-   C-x C-c
 VIM
 ------
 Vim is a popular text editor that is widely used for programming, writing, and other text-related tasks. Consult the `VIM Manual`_ for more information on using the text editor effectively.
@@ -761,5 +747,7 @@ Shell scripts can do many tasks, including backups, system maintenance, and the 
 .. _rsync(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/rsync.1.html
 .. _ssh(1) manual page: https://manpages.ubuntu.com/manpages/kinetic/en/man1/find.1posix.html
 .. _Git User Manual: https://git-scm.com/docs/user-manual
+.. _Emacs Manual: https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html
+.. _Emacs Cheat Sheet: https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
 .. _GNU Nano Manual: https://www.nano-editor.org/dist/latest/nano.pdf
 .. _VIM Manual: : https://www.vim.org/docs.php
