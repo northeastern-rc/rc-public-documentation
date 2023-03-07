@@ -652,49 +652,31 @@ Open a terminal and type the following command::
 To open an existing file, type the following command::
 
    nano filename
-**Saving a file**
 
-To save a file, press the following key combination::
+.. list-table:: Common Commands
+   :widths: 40 20
+   :header-rows: 1
 
-   Ctrl + O
-**Closing a file**
-
-To close a file, press the following key combination::
-
-   Ctrl + X
-**Moving the cursor**
-
-Use the arrow keys to move the cursor.
-
-**Cutting and pasting text**
-
-First, move the cursor to the start of the text you want to cut, then press the following key combination::
-
-   Alt + A
-Move the cursor to the end of the text you want to cut, then press the following key combination::
-
-   Ctrl + K
-To paste text, move the cursor to the location where you want to paste, then press the following key combination::
-
-   Ctrl + U
-**Undo and redo**
-
-To undo, press the following key combination::
-
-   Ctrl + T
-To redo, press the following key combination::
-
-   Ctrl + Y
-**Searching for text**
-
-To search for text, press the following key combination::
-
-   Ctrl + W
-**Quitting Nano**
-
-To quit Nano, press the following key combination::
-
-   Ctrl + X
+   * - Functionality
+     - Command
+   * - Save file
+     - ``Ctrl + O``
+   * - Close file
+     - ``Ctrl + X``
+   * - Cut text (from front)
+     - ``Alt + A``
+   * - Cut text (from end)
+     - ``Ctrl + K``
+   * - Paste text
+     - ``Ctrl + U``
+   * - Undo
+     - ``Ctrl + T``
+   * - Redo
+     - ``Ctrl + Y``
+   * - Search text
+     - ``Ctrl + W``
+   * - Quit Nano
+     - ``Ctrl + X``
 
 Shell Scripting
 ===============
