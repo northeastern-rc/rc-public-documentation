@@ -98,7 +98,8 @@ The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in 
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 
-.. note:: 
+.. note::
+Note:
    On the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``) or your request will fail. Also, you cannot request all CPUs on that node since they are reserved for other GPUs.
 
 The ``sbatch`` example below is similar to the ``srun`` example above, except for giving the job a name and directing the output to a file::
@@ -122,7 +123,8 @@ You can add a specific type of GPU to the ``--gres=`` option (with either ``srun
   --gres=gpu:p100:1
 
 .. note::
- Note that requesting a specific type of GPU could result in longer wait times based on GPU availability at that time. 
+Note:
+ Requesting a specific type of GPU could result in longer wait times based on GPU availability at that time. 
 
 For a list of available GPU types, refer to the GPU Types column in the table at the top of this page. 
 
@@ -154,7 +156,8 @@ The following examples demonstrate how to build PyTorch inside a conda virtual e
 Make sure that you are on a GPU node before loading the environment and also please note that the installation does not work on k40m or k80 GPU's
 
 .. note::
- Note that you can reuse the tensorflow environment if you've already created one, no need to create a new one with the exact same setup
+Note:
+ You can reuse the tensorflow environment if you've already created one, no need to create a new one with the exact same setup
 
 PyTorch installation steps (with Anaconda libraries)::
 
@@ -167,8 +170,8 @@ PyTorch installation steps (with Anaconda libraries)::
   python -c'import torch; print(torch.cuda.is_available())'
 
 .. note::
- If the installation times out, please ensure that your .condarc file doesn't contain additional channels.
- Also consider cleaning your conda instance using the conda clean command
+Note:
+ If the installation times out, please ensure that your .condarc file doesn't contain additional channels. Also consider cleaning your conda instance using the conda clean command
 
 You should see the result ``True`` if CUDA is detected by PyTorch.
 
