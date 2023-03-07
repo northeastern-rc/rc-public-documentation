@@ -599,56 +599,44 @@ To open an existing file, type the following command::
 
 When you start Vim, you are in normal mode. In normal mode, you can navigate through the text and perform various operations, but you cannot type or edit text.
 
-To enter insert mode, type the following command::
+.. list-table:: Common Commands
+   :widths: 50 20
+   :header-rows: 1
 
-   i
-**Saving a file**
-
-To save a file, type the following command in normal mode::
-
-   :w
-**Closing a file**
-
-To close a file, type the following command in normal mode::
-
-   :q
-**Moving the cursor**
-
-In normal mode, you can move the cursor using the following keys::
-
-   h (left)
-   j (down)
-   k (up)
-   l (right)
-**Cutting and pasting text**
-
-To cut text, first move the cursor to the start of the text you want to cut, then type the following command in normal mode::
-
-   v
-Move the cursor to the end of the text you want to cut, then type the following command in normal mode::
-
-   d
-To paste text, move the cursor to the location where you want to paste, then type the following command in normal mode::
-
-   p
-**Undo and redo**
-
-To undo, type the following command in normal mode::
-
-   u
-To redo, type the following command in normal mode::
-
-   Ctrl+r
-**Searching for text**
-
-To search for text, type the following command in normal mode::
-
-   /text
-**Quitting Vim**
-
-To quit Vim, type the following command in normal mode::
-
-   :q
+   * - Functionality
+     - Command
+   * - Enter insert mode
+     - ``i``
+   * - Enter normal mode
+     - ``esc``
+   * - Save file
+     - ``:w``
+   * - Close file
+     - ``:q``
+   * - Cut text (from front)
+     - ``v``
+   * - Cut text (from end)
+     - ``d``
+   * - Paste text
+     - ``p``
+   * - Undo
+     - ``u``
+   * - Redo
+     - ``Ctrl+r``
+   * - Search text
+     - ``/text``
+   * - Quit VIM
+     - ``:q``
+   * - *Moving cursor*
+     - ``C-x C-c``
+   * - Left
+     - ``h``
+   * - Down
+     - ``j``
+   * - Up
+     - ``k``
+   * - Right
+     - ``l``
 
 GNU Nano
 ---------
