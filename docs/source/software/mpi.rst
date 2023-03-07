@@ -80,6 +80,7 @@ Sample Code Snippets
 Here are a few code examples using MPI.
 
 .. note::
+Note:
    ℹ️ MPI programs often require careful design and implementation to achieve good performance and scalability.
    Good MPI programming practices include:
       - Avoiding communication and computation overlap.
