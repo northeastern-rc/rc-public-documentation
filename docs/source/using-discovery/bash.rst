@@ -237,23 +237,6 @@ Advanced Commands
 =================
 In this section we will provide examples of some helpful advanced commands, and then take a closer look at three essential advanced commands.
 
-``awk`` - Process text data and perform actions based on patterns.
-
-.. code-block:: shell
-  :emphasize-lines: 2,3,4
-
-  cat file1.txt
-  This is line 1
-  This is line 2
-  This is line 3
-
-.. code-block:: shell
-  :emphasize-lines: 2
-
-   awk '/line 2/ {print "Line 2 found"}' file1.txt
-   Line 2 found
-
-Reference: `awk(1) manual page`_
 
 ``find`` - Search for files and directories.
 
@@ -283,10 +266,6 @@ Reference: `find(1) manual page`_
 
 Reference: `gzip(1) manual page`_
 
-``rsync`` - Synchronize files between two locations::
-
-   rsync -av /path/to/source/ /path/to/destination/
-Reference: `rsync(1) manual page`_
 
 ``sed`` - Stream editor for filtering and transforming text.
 
@@ -475,27 +454,150 @@ Examples
 ^^^^^^^^^
 Below are a few examples of ``awk`` processing and manipulating text data, but there are many more options and features available. Consult the `awk(1) manual page`_ for more information on effectively using the tool.
 
-Printing the first field of each line in a file::
+ere is sample content for a file named sample_file.txt:
 
-   awk '{print $1}' file.txt
-Printing the second field of each line in a file, only if the first field is equal to a specific value::
+.. code-block:: shell
+  :emphasize-lines: 2,3,4,5,6
 
-   awk '$1 == "value" {print $2}' file.txt
-Printing the sum of all numbers in the third field of a file::
+  cat file1.txt
+  John Doe 25
+  Jane Doe 30
+  Jim Smith 40
+  Sara Johnson 35
+  Michael Brown 29
 
-   awk '{sum+=$3} END {print sum}' file.txt
-Printing the average of all numbers in the fourth field of a file::
+This file contains a list of names and ages, with each line representing a different person and their age. The first column is the name, and the second column is the age. The columns are separated by a space.
 
-   awk '{sum+=$4; count++} END {print sum/count}' file.txt
-Printing the line number and the line text for each line in a file that contains a specific word::
+This sample file can be used in the examples provided in the previous response to demonstrate the usage of awk command.
 
-   awk '/word/ {print NR, $0}' file.txt
-Printing the line number and the line text for each line in a file that starts with a specific string::
+Print the entire contents of a file:
 
-   awk '$1 ~ /^string/ {print NR, $0}' file.txt
-Printing the line number, the line text, and the length of each line in a file::
+.. code-block:: shell
+  :emphasize-lines: 2,3,4,5,6
 
-   awk '{print NR, $0, length($0)}' file.txt
+  awk '{print}' sample_file.txt
+  John Doe 25
+  Jane Doe 30
+  Jim Smith 40
+  Sara Johnson 35
+  Michael Brown 29
+
+Print specific columns from a tab-delimited file:
+
+.. code-block:: shell
+  :emphasize-lines: 2,3,4,5,6
+  :caption: Assuming the file is not tab-delimited.
+
+  awk -F "\t" '{print $2}' sample_file.txt
+  25
+  30
+  40
+  35
+  29
+
+Sum a column of numbers:
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  awk '{sum+=$2} END {print sum}' sample_file.txt
+  169
+
+Print only lines that match a pattern:
+
+.. code-block:: shell
+  :emphasize-lines: 2, 3
+
+  awk '/Doe/ {print}' sample_file.txt
+  John Doe 25
+  Jane Doe 30
+
+Format the output:
+
+.. code-block:: shell
+  :emphasize-lines: 2,3,4,5,6
+
+  awk '{printf "Name: %s, Age: %d\n", $1, $2}' sample_file.txt
+  Name: John Doe, Age: 25
+  Name: Jane Doe, Age: 30
+  Name: Jim Smith, Age: 40
+  Name: Sara Johnson, Age: 35
+  Name: Michael Brown, Age: 29
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+   awk '/Sara/ {print "Sara found"}' sample_file.txt
+   Sara found
+
+Printing the first field of each line in a file:
+
+.. code-block:: shell
+  :emphasize-lines: 2,3,4,5,6
+
+  awk '{print $1}' sample_file.txt
+  John
+  Jane
+  Jim
+  Sara
+  Michael
+
+Printing the second field of each line in a file, only if the first field is equal to a specific value:
+
+.. code-block:: shell
+  :emphasize-lines: 2,3
+
+  awk '$2 == "Doe" {print $1}' sample_file.txt
+  John
+  Jane
+
+Printing the sum of all numbers in the third field (Age) of a file:
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  awk '{sum+=$3} END {print sum}' sample_file.txt
+  159
+
+Printing the average of all numbers in the fourth field of a file:
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  awk '{sum+=$3; count++} END {print sum/count}' sample_file.txt
+  31.8
+
+Printing the line number and the line text for each line in a file that contains a specific word:
+
+.. code-block:: shell
+  :emphasize-lines: 2,3
+
+  awk '/Doe/ {print NR, $0}' sample_file.txt
+  1 John Doe 25
+  2 Jane Doe 30
+
+Printing the line number and the line text for each line in a file that starts with a specific string:
+
+.. code-block:: shell
+  :emphasize-lines: 2,3
+
+  awk '$1 ~ /^J/ {print NR, $0}' sample_file.txt
+  1 John Doe 25
+  2 Jane Doe 30
+  3 Jim Smith 40
+
+Printing the line number, the line text, and the length of each line in a file:
+
+.. code-block:: shell
+  :emphasize-lines: 2,3,4,5,6
+
+  awk '{print NR, $0, length($0)}' sample_file.txt
+  1 John Doe 25 11
+  2 Jane Doe 30 11
+  3 Jim Smith 40 12
+  4 Sara Johnson 35 15
+  5 Michael Brown 29 16
+
    
 Git configurations tips and tricks:
 ----------------------------------
