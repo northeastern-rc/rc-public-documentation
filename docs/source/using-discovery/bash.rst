@@ -454,7 +454,7 @@ Examples
 ^^^^^^^^^
 Below are a few examples of ``awk`` processing and manipulating text data, but there are many more options and features available. Consult the `awk(1) manual page`_ for more information on effectively using the tool.
 
-ere is sample content for a file named sample_file.txt:
+Here is sample content for a file named sample_file.txt:
 
 .. code-block:: shell
   :emphasize-lines: 2,3,4,5,6
@@ -598,7 +598,6 @@ Printing the line number, the line text, and the length of each line in a file:
   4 Sara Johnson 35 15
   5 Michael Brown 29 16
 
-   
 Git configurations tips and tricks:
 ----------------------------------
 Git is a distributed version control system for software development and other collaborative projects that allows multiple users to work on a project simultaneously, while keeping track of changes and enabling easy collaboration. With Git, users can commit their changes to a local repository and push them to a remote repository so that others can access and merge their changes into the main project. Git also provides a robust set of tools for managing branches, resolving conflicts, and performing other tasks related to version control.
