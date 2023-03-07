@@ -16,7 +16,7 @@ Overview
 =========
 Bash (Bourne Again SHell) is a popular shell and command-line interface. Specifically, a shell is an interface between the user and the underlying operating system, allowing users to interact with the system and perform tasks. Bash provides a range of features for running commands, managing files, navigating systems, and performing other tasks.
 
-Bash commands perform various tasks within the shell environment. Commands span more basic functionalities (e.g., ``ls``, ``cd``, ``cp``, ``mv``, and ``rm``), and more advanced (e.g., ``grep`` and ``awk``). We cover these commands, along with others, in this tutorial. Bash can also be used in scripts, allowing users to automate tasks and perform more complex operations via loops, conditional logic, and defining functions, which we cover at the end of this page.
+Bash commands perform various tasks within the shell environment. Commands span from basic functionalities (e.g., ``ls``, ``cd``, ``cp``, ``mv``, and ``rm``) to more advanced ones(e.g., ``grep`` and ``awk``). We cover these commands and more in this tutorial. Bash can also be used in scripts, allowing users to automate tasks and perform more complex operations via loops, conditional logic, and defining functions, which we cover at the end of this page.
 
 In summary, shell commands perform various tasks with the terminal.
 
@@ -31,15 +31,15 @@ In summary, shell commands perform various tasks with the terminal.
 
 Terminal
 =========
-The terminal - aka the command line interface (CLI) - is a text-based interface for interacting with an operating system. It provides a way for users to interact with the system and perform tasks by typing commands and receiving text-based output.
+The terminal - aka the command line interface (CLI) - is a text-based interface for interacting with an operating system. It is a way for users to interact with the system and perform tasks by typing commands and receiving text-based output.
 
 In contrast to graphical user interfaces (GUIs), the terminal provides a more direct and powerful way to interact with the system. Tasks that may require several steps in a GUI can often be accomplished much more quickly and efficiently in the terminal.
 
-Whether you are a beginner or an advanced user, the terminal provides a powerful and versatile interface for interacting with your operating system. With a little knowledge and practice, you can use the terminal to accomplish a wide range of tasks and take control of your system in new and powerful ways.
+Whether you are a beginner or an advanced user, the terminal provides a powerful and versatile interface for interacting with your operating system. With some theory and practice, you can use the terminal to accomplish a wide range of tasks and take control of your system in new and powerful ways.
 
 There are various terminal options (i.e., flavors) offered for different operating systems. `Power Shell`_ is available for Windows, Linux, and MacOS.
 
-Next, let us explore options and specifics per operating system. Specifically, we cover Mac, Linux, and Windows terminals.
+Let us explore options and specifics for each operating system; Mac, Linux, and Windows terminals.
 
 MacOS
 ------
@@ -47,7 +47,7 @@ Mac OS comes with a default terminal program, but there are more advanced termin
 
 To launch the terminal:
 
-#. Press Command + Space Bar on your Mac keyboard (alternatively, press F4)
+#. Press Command(⌘) + Space on your Mac keyboard (alternatively, press F4)
 #. Type in “Terminal”
 #. When you see Terminal in the Spotlight search list, click it to open the app.
 
@@ -60,22 +60,24 @@ If Homebrew is not already installed, run the following command in the terminal 
 
 Linux
 ------
-Linux also comes with a default terminal program, but there are also more advanced terminals available; `Terminator`_ is a the popular choice.
+Linux also comes with a default terminal program, but there are more advanced terminals available; `Terminator`_ is a popular choice.
 
 To download Terminator, open a terminal (``Ctrl+Alt+T`` is the shortcut to do so). Next, execute the following::
 
    sudo add-apt-repository ppa:gnome-terminator
    sudo apt-get update
    sudo apt-get install terminator
+   
 Windows
 -------
 Windows users must install a terminal; you can visit Windows Apps and download the Windows Terminal directly from Microsoft (`Download Windows Terminal`_).
 
-Additionally, `Mobaxterm`_, an enhanced terminal for Windows with X11 server, tabbed SSH client, and network tools dubbed *the ultimate toolbox for remote computing*, is a great tool for connecting to the login node, explore the Discovery file system, and transfer files. Check out their `demo <https://mobaxterm.mobatek.net/demo.html>`_, `software features <https://mobaxterm.mobatek.net/features.html>`_, and `download <https://mobaxterm.mobatek.net/download.html>`_.
+Additionally, `Mobaxterm`_, an enhanced terminal for Windows with X11 server, tabbed SSH client, and network tools dubbed *the ultimate toolbox for remote computing*, is a great tool for connecting to the login node, exploring the Discovery file system, and transfering files. Check out their `demo <https://mobaxterm.mobatek.net/demo.html>`_, `software features <https://mobaxterm.mobatek.net/features.html>`_, and `download <https://mobaxterm.mobatek.net/download.html>`_.
 
 Basic Commands
 ==============
 .. note::
+Note:
    The ``~`` character is shorthand for specifying the home directory of the current user, i.e., ``~`` is the same as ``$HOME``.
 
 ``ls`` - List the contents of a directory.
@@ -230,6 +232,7 @@ It's essential to be cautious when using the ``kill`` command, as terminating a 
 ``kill`` - Terminate a process by its process ID::
 
    kill <pid>
+   
 Advanced Commands
 =================
 In this section we will provide examples of some helpful advanced commands, and then take a closer look at three essential advanced commands.
@@ -403,7 +406,7 @@ The next few subsections provide more details on a few advanced bash tools that 
 
 rsync
 -----
-``rsync`` is a powerful and versatile file transfer utility commonly used to synchronize files and directories between different locations. It can transfer files over a network connection and run in various modes, including local and remote transfers and backup operations. One of the key benefits of using ``rsync`` is its ability only to transfer the differences between the source and destination files, which can significantly reduce the amount of data transfer time required. Additionally, ``rsync`` supports various advanced features, including the ability to perform incremental backups and preserve symbolic links, making it a popular tool for system administrators and other advanced users.
+``rsync`` is a powerful and versatile file transfer utility commonly used to synchronize files and directories between different locations. It can transfer files over a network connection and run in various modes, including local and remote transfers and backup operations. One of the key benefits of using ``rsync`` is its ability to transfer only the differences between the source and destination files, which can significantly reduce the amount of data transfer time required. Additionally, ``rsync`` supports various advanced features, including the ability to perform incremental backups and preserve symbolic links, making it a popular tool for system administrators and other advanced users.
 
 Examples
 ^^^^^^^^^
@@ -433,7 +436,7 @@ Syncing a remote server to a local directory while preserving symbolic links::
 
 find
 -----
-``find`` is a command line tool used to search for files and directories within a specified location. It operates by starting at a specified directory and recursively searching through its subdirectories. The user can select a range of criteria to match (e.g., file name, size, modification time), and ``find`` will return a list of all files and directories that match the specified criteria. ``find`` provides a range of options for further processing the results, such as executing a command on each matching file, printing the results, or performing other operations; as a result, it is a versatile tool for searching for specific files and cleaning up old files.
+``find`` is a command line tool used to search for files and directories within a specified location. It operates by starting at a specified directory and recursively searching through its subdirectories. The user can select a range of criteria to match (e.g., file name, size, modification time), and ``find`` will return a list of all files and directories that match the specified criteria. ``find`` provides a range of options for further processing the results, such as executing a command on each matching file, printing the results, or performing other operations. As a result, it is a versatile tool to search for specific files and to clean up old files.
 
 Examples
 ^^^^^^^^^
@@ -466,7 +469,7 @@ This will find all files in ``/path/to/dir`` that have a ``.txt`` file extension
 
 awk
 -----
-``awk`` is a text processing tool widely used for data extraction, report generation, and other text-related tasks. It operates by reading a file line-by-line and processing each line based on a set of rules defined by the user. The regulations specify the conditions under which certain actions are performed, such as printing specific fields, performing calculations, or modifying the text in some way. ``awk`` is particularly useful for processing tabular data, such as that found in CSV files, and can extract and manipulate data in various ways. Additionally, ``awk`` provides a rich set of string and numerical manipulation functions, making it a powerful tool for working with large data sets.
+``awk`` is a text-processing tool widely used for data extraction, report generation, and other text-related tasks. It operates by reading a file line-by-line and processing each line based on a set of rules defined by the user. The regulations specify the conditions under which certain actions are performed, such as printing specific fields, performing calculations, or modifying the text in some way. ``awk`` is particularly useful for processing tabular data, such as those found in CSV files, and extracting and manipulating data in various ways. Additionally, ``awk`` provides a rich set of string and numerical manipulation functions, making it a powerful tool for working with large data sets.
 
 Examples
 ^^^^^^^^^
@@ -493,11 +496,12 @@ Printing the line number and the line text for each line in a file that starts w
 Printing the line number, the line text, and the length of each line in a file::
 
    awk '{print NR, $0, length($0)}' file.txt
+   
 Git configurations tips and tricks:
 ----------------------------------
 Git is a distributed version control system for software development and other collaborative projects that allows multiple users to work on a project simultaneously, while keeping track of changes and enabling easy collaboration. With Git, users can commit their changes to a local repository and push them to a remote repository so that others can access and merge their changes into the main project. Git also provides a robust set of tools for managing branches, resolving conflicts, and performing other tasks related to version control.
 
-Git provides a range of configuration options that allow users to customize their behavior to suit their needs, including setting the user name and email, specifying a preferred text editor, and setting up aliases for frequently used commands. In addition, users can either configure Git globally, which will apply the configuration to all of their Git repositories, or configure locally, which will only apply the configuration to a specific repo. This flexibility allows users to work with Git in a way that suits their workflow.
+Git provides a range of configuration options that allow users to customize their behavior to suit their needs, including setting the user name and email, specifying a preferred text editor, and setting up aliases for frequently used commands. In addition, users can either configure Git globally, which will apply the configuration to all of their Git repositories, or configure locally, which will apply the configuration only to a specific repository. This flexibility allows users to work with Git in a way that suits their workflow.
 
 Example Configurations
 ^^^^^^^^^^^^^^^^^^^^^^
