@@ -2,13 +2,8 @@
 Checkpoint/Restart Discovery Jobs
 *****************************************
 
-The complexity of HPC systems may introduce unpredictable behaviors and result in job failures due to hardware or software. Applying fault tolerance techniques to your HPC workflows makes your jobs more resilient to crashes, partition time limits, and hardware failures.
+The complexity of HPC systems may introduce unpredictable behaviors in hardware or software components resulting in job failures. Applying fault tolerance techniques to your HPC workflows makes your jobs more resilient to crashes, partition time limits, and hardware failures.
 
-Checkpointing will allow you to:
-
- * Create resilient workflows in the existence of faults
- * Overcome most scheduler resource time limitations
- * Implement an early error detection approach by inspecting intermediate results
 
 The Checkpointing technique
 ================================
@@ -21,11 +16,15 @@ Checkpointing is a fault tolerance technique designed to overcome the “fail-st
 .. image:: /images/checkpointing.png
  :width: 300
  :alt: Checkpointing algorithm flow chart.
+ 
+ Checkpointing will allow you to:
 
-Checkpointing types
-================================
+ * Create resilient workflows in the existence of faults
+ * Overcome most scheduler resource time limitations
+ * Implement an early error detection approach by inspecting intermediate results
 
-Implement checkpoints at different levels of your workflow:
+Different levels of Checkpointing in workflow:
+==============================================
 
   * User-level checkpointing - suitable if you develop your code or have sufficient knowledge of the application code to integrate checkpointing techniques. We recommend this approach for some Discovery users.
   * Application-level checkpointing - recommended for most Discovery users. Utilize the checkpointing tool that is already available in your software application. For example, most software designed for HPC has a checkpointing option, and information on proper usage is often available in the software user manual.
@@ -34,13 +33,13 @@ Implement checkpoints at different levels of your workflow:
 
 Which checkpointing method to use?
 ----------------------------------
- * If your software already comes with built-in checkpointing, it is often the preferred option. It is the most optimized and efficient way to the checkpoint.
- * **Application-level** checkpointing is the easiest to use, as it exists in your application: it does not require significant changes to your scripts.
- * **Application-level** checkpointing will save only the relevant data for your specific application.
- * If you're writing your code - use DMTCP or implement your own checkpointing.
+ * If your software already comes with **built-in checkpointing**, it is often the preferred option. It is the most optimized and efficient way to the checkpoint.
+ * **Application-level** checkpointing is the easiest to use, as it exists in your application: it does not require significant changes to your scripts. It also saves only the relevant data for your specific application.
+ * **User-level** If you're writing your code - use DMTCP or implement your own checkpointing.
  * **ML Model-level** checkpointing is specific to model training and deployment (see `ML Model-level`_)
 
 .. note::
+Note:
   Some packages and functions allow for easy checkpointing if you are developing code using Python, Matlab, or R. Some examples include `Python PyTorch checkpointing <https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_a_general_checkpoint.html>`_, `TensorFlow checkpointing <https://www.tensorflow.org/guide/checkpoint>`_, `Python Pickle checkpointing <https://deap.readthedocs.io/en/master/tutorials/advanced/checkpoint.html>`_, `MATLAB checkpointing <https://www.mathworks.com/help/gads/work-with-checkpoint-files.html>`_ and `R checkpointing <https://cran.r-project.org/web/packages/checkpoint/vignettes/checkpoint.html>`_. Additionally, many Computational Chemistry and Molecular Dynamics software have built-in checkpointing options, such as `GROMACS <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_ and `LAMMPS <https://docs.lammps.org/restart.html>`_.
 
 
@@ -49,6 +48,7 @@ Implementing checkpointing can be achieved by:
  * The use of `Slurm Job Arrays <https://slurm.schedmd.com/job_array.html>`_
 
 .. note::
+Note:
    To overcome partition time limits, replace your single long job with multiple shorter jobs. Then, using job arrays, set each job to run one after the other. Each job will write a checkpoint file if implemented. For example, the following job in line will be the latest checkpoint file to continue from the latest state of the calculation.
 
 Application-level checkpointing
@@ -99,18 +99,18 @@ The program runs in the background of your program without significant performan
 As DMTCP runs in the background, it requires some changes to your Shell script. For examples of how to checkpoint with DMTCP visit `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_3>`_.
 The example demonstrates how to use DMTCP with a simple C++ program (scripts modified from `RSE-Cambridge <https://github.com/RSE-Cambridge/dmtcp-tests>`_).
 
-Tips and tricks
+Tips and Tricks
 ---------------------
 
 What data to save?
  * Non-temporary application data
  * Any application data that has changed since the last checkpoint
- * Delete no longer proper checkpoints - keep only the most recent checkpoint file
+ * Delete improper checkpoints - keep only the most recent checkpoint file
 
 How frequently should we checkpoint?
  * Too often – will slow down your calculation, maybe I/O heavy and memory-limited
- * Too infrequently – leads to large/long rollback times
- * Consider how long it takes to a checkpoint and restart your calculation
+ * Seldom – leads to large/long rollback times
+ * Consider how long it takes to run a checkpoint and restart your calculation
  * In most cases, a rate of every 10-15 minutes is ok
 
 .. _ML Model-level:
@@ -169,7 +169,7 @@ The checkpointing implementation is given in this code snippet of ``train_with_c
 
 The entire scripts can be found `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_2>`_ and were modified from `TensorFlow Save and load models <https://www.tensorflow.org/tutorials/keras/save_and_load>`_.
 
-The Slurm option, ``--array=1-10%1``, will create 10 Slurm array tasks and run one task at a time. Note that the saved variable ``%A`` denotes the main job ID, while variable ``%a`` indicates the task ID (spanning values 1-10). Note that the output/error files are also unique to prevent different jobs from writing to the same files.
+The Slurm option, ``--array=1-10%1``, will create 10 Slurm array tasks and run one task at a time. Note that the saved variable ``%A`` denotes the main job ID, while variable ``%a`` indicates the task ID (spanning values 1-10). Also note that the output/error files are unique to prevent different jobs from writing to the same files.
 The Shell variable, ``SLURM_ARRAY_TASK_ID``, holds the unique task ID value and can be used within the Slurm Shell script to point to different files or variables.
 
 To submit this job to the scheduler, use the command::
