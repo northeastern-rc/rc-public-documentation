@@ -73,13 +73,55 @@ Windows
 -------
 Windows users must install a terminal; you can visit Windows Apps and download the Windows Terminal directly from Microsoft (`Download Windows Terminal`_).
 
-Additionally, `Mobaxterm`_, an enhanced terminal for Windows with X11 server, tabbed SSH client, and network tools dubbed *the ultimate toolbox for remote computing*, is a great tool for connecting to the login node, exploring the Discovery file system, and transfering files. Check out their `demo <https://mobaxterm.mobatek.net/demo.html>`_, `software features <https://mobaxterm.mobatek.net/features.html>`_, and `download <https://mobaxterm.mobatek.net/download.html>`_.
+Additionally, `Mobaxterm`_, an enhanced terminal for Windows with X11 server, tabbed SSH client, and network tools dubbed *the ultimate toolbox for remote computing*, is a great tool for connecting to the login node, exploring the Discovery file system, and transferring files. Check out their `demo <https://mobaxterm.mobatek.net/demo.html>`_, `software features <https://mobaxterm.mobatek.net/features.html>`_, and `download <https://mobaxterm.mobatek.net/download.html>`_.
+
+Bash Manuals
+============
+The man command is used in the terminal to display manual pages for various tools and utilities. A manual page, or "man page," is a detailed documentation for a specific command or utility that provides information about its usage, options, and examples.
+
+To use the man command, simply type man followed by the name of the command or utility for which you want to view the manual page. For example, to view the manual page for the ls command, you would type the following::
+  
+  man ls
+
+The manual page will be displayed in a pager program such as less, which allows you to scroll through the text and search for specific information.
+
+The man command is a valuable tool for learning about new commands and utilities, and it is an essential resource for understanding how to use the terminal effectively. Whether you are a beginner or an advanced user, the man command provides the information you need to get the most out of your tools and utilities.
 
 Basic Commands
 ==============
+.. note:: 
+  See `_getting_access` for instructions on having a Discovery user account created.
+
+``ssh`` - Connect to a remote machine using Secure Shell (SSH)::
+
+   ssh <user-name>@login.discovery.neu.edu
+
+Reference: `ssh(1) manual page`_
+
 .. note::
-Note:
    The ``~`` character is shorthand for specifying the home directory of the current user, i.e., ``~`` is the same as ``$HOME``.
+
+``echo`` - Display a message or the value of a variable.
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  echo "Hello, world!"
+  Hello, world!
+
+.. note:: 
+  Variable names are accessible by appending its name to ``$`` (e.g., ${VARIABLE_NAME}, where ``{}`` are optional, but safer.)
+
+``pwd`` - Print the current working directory.
+
+.. code-block:: shell
+  :emphasize-lines: 2
+
+  pwd
+  /path/to/directory1
+
+.. note::
+  ``pwd`` is also stored as an environment variable, i.e., ``${PWD}``. Running ``echo ${PWD}`` prints the same output as ``pwd``, but has the advantage of being accessed as part of a file pointer (e.g., ``ls ${PWD}/directory2`` to print all contents of ``directory2`` in the working directory.)
 
 ``ls`` - List the contents of a directory.
 
@@ -87,7 +129,7 @@ Note:
   :emphasize-lines: 2
 
   ls
-  file1.txt  file2.txt  directory1
+  file1.txt file2.txt directory1
 
 ``cd`` - Change the current working directory.
 
@@ -98,14 +140,6 @@ Note:
   pwd
   <$HOME>/directory1
 
-``pwd`` - Print the current working directory.
-
-.. code-block:: shell
-  :emphasize-lines: 2
-
-  pwd
-  /path/to/directory1
-
 ``mkdir`` - Create a new directory.
 
 .. code-block:: shell
@@ -113,7 +147,7 @@ Note:
 
    mkdir directory2
    ls
-   file1.txt  file2.txt  directory1  directory2
+   file1.txt file2.txt directory1 directory2
 
 ``rm`` - Remove a file or directory.
 
@@ -122,7 +156,10 @@ Note:
 
    rm file1.txt
    ls
-   file2.txt  directory1  directory2
+   file2.txt directory1 directory2
+
+.. note:: 
+  To remove a directory, use ``rmdir`` if the folder is empty. Otherwise, recursively delete the directory and all of its contents via ``rm -r <FOLDER_PATH>``.
 
 ``cp`` - Copy a file or directory.
 
@@ -131,7 +168,10 @@ Note:
 
    cp file2.txt file3.txt
    ls
-   file2.txt  file3.txt  directory1  directory2
+   file2.txt file3.txt directory1 directory2
+
+.. note:: 
+  Similar to remove, ``cp`` works for files; to copy a folder, along with its contents, it must be done recursively via ``cp -r <FOLDER_PATH> <DESTINATION>``.
 
 ``mv`` - Move or rename a file or directory.
 
@@ -140,15 +180,7 @@ Note:
 
   mv file2.txt file4.txt
   ls
-  file3.txt  file4.txt  directory1  directory2
-
-``echo`` - Display a message or the value of a variable.
-
-.. code-block:: shell
-  :emphasize-lines: 2
-
-  echo "Hello, world!"
-  Hello, world!
+  file3.txt file4.txt directory1 directory2
 
 ``cat`` - Concatenate and display the contents of one or more files.
 
@@ -233,21 +265,27 @@ It's essential to be cautious when using the ``kill`` command, as terminating a 
 ``kill`` - Terminate a process by its process ID::
 
    kill <pid>
-   
+
 Advanced Commands
 =================
 In this section we will provide examples of some helpful advanced commands, and then take a closer look at three essential advanced commands.
 
-
-``find`` - Search for files and directories.
+``sed`` - Stream editor for filtering and transforming text.
 
 .. code-block:: shell
-  :emphasize-lines: 3,4
-  find /path/to/search -name "*.txt"
-  /path/to/search/file1.txt
-  /path/to/search/file2.txt
+  :emphasize-lines: 2-4, 7-9
 
-Reference: `find(1) manual page`_
+  cat file1.txt
+  This is line 1
+  This is line 2
+  This is line 3
+
+  sed 's/line 1/Line 1/' file1.txt
+  This is Line 1
+  This is line 2
+  This is line 3
+
+Reference: `sed(1) manual page`_
 
 ``gzip`` - Compress or decompress files.
 
@@ -266,32 +304,6 @@ Reference: `find(1) manual page`_
   file1.txt
 
 Reference: `gzip(1) manual page`_
-
-
-``sed`` - Stream editor for filtering and transforming text.
-
-.. code-block:: shell
-  :emphasize-lines: 2,3,4
-
-  cat file1.txt
-  This is line 1
-  This is line 2
-  This is line 3
-
-.. code-block:: shell
-  :emphasize-lines: 2,3,4
-
-  sed 's/line 1/Line 1/' file1.txt
-  This is Line 1
-  This is line 2
-  This is line 3
-
-Reference: `sed(1) manual page`_
-
-``ssh`` - Connect to a remote machine using Secure Shell (SSH)::
-
-   ssh user@remote.example.com
-Reference: `ssh(1) manual page`_
 
 ``tar`` - Create or extract compressed archive files.
 
@@ -314,7 +326,7 @@ Reference: `tar(1) manual page`_
 Regular expressions:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3
+  :emphasize-lines: 2-3
 
   grep -E '^[A-Z][a-z]+$' file1.txt
   John
@@ -332,7 +344,7 @@ Parameter expansion:
 Command line options:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3,4,5
+  :emphasize-lines: 2-5
 
   ls -lh
   total 8.0K
@@ -386,81 +398,100 @@ The next few subsections provide more details on a few advanced bash tools that 
 
 rsync
 -----
-``rsync`` is a powerful and versatile file transfer utility commonly used to synchronize files and directories between different locations. It can transfer files over a network connection and run in various modes, including local and remote transfers and backup operations. One of the key benefits of using ``rsync`` is its ability to transfer only the differences between the source and destination files, which can significantly reduce the amount of data transfer time required. Additionally, ``rsync`` supports various advanced features, including the ability to perform incremental backups and preserve symbolic links, making it a popular tool for system administrators and other advanced users.
+The ``rsync`` command is a powerful and versatile file transfer utility commonly used to synchronize files and directories between different locations. It can transfer files over a network connection and run in various modes, including local and remote transfers and backup operations. One of the key benefits of using ``rsync`` is its ability to transfer only the differences between the source and destination files, which can significantly reduce the amount of data transfer time required. Additionally, ``rsync`` supports various advanced features, including the ability to perform incremental backups and preserve symbolic links, making it a popular tool for system administrators and other advanced users.
 
-Examples
-^^^^^^^^^
-Below, we have listed a few examples of ``rsync`` synchronizing files and directories between two locations, but there are many more options available. Consult the `rsync(1) manual page`_ for more information on effectively using ``rsync``.
+.. important:: 
+   File transfers must be done using the transfer node on the Discovery, i.e., do not copy to or from the login node accessible via ``xfer.discovery.neu.edu``. See :ref:`transferring data` for more information.
+
+We have listed a few examples of ``rsync`` synchronizing files and directories between two locations, but there are many more options available. Consult the `rsync(1) manual page`_ for more information on effectively using ``rsync``.
 
 Syncing a local directory to a remote server::
 
-   rsync -avz /local/path user@remote.example.com:/remote/path
+   rsync -avz /local/path user@xfer.discovery.neu.edu:/remote/path
+
 Syncing a remote server to a local directory::
 
-   rsync -avz user@remote.example.com:/remote/path /local/path
+   rsync -avz user@xfer.discovery.neu.edu:/remote/path /local/path
+
 Syncing a local directory to a remote server with compression::
 
-   rsync -avz --compress /local/path user@remote.example.com:/remote/path
+   rsync -avz --compress /local/path user@xfer.discovery.neu.edu:/remote/path
+
 Syncing a remote server to a local directory while preserving permissions::
 
-   rsync -avz --perms user@remote.example.com:/remote/path /local/path
+   rsync -avz --perms user@xfer.discovery.neu.edu:/remote/path /local/path
+
 Syncing only files that have been modified in the last hour::
 
-   rsync -avz --update --min-age=3600 /local/path user@remote.example.com:/remote/path
+   rsync -avz --update --min-age=3600 /local/path user@xfer.discovery.neu.edu:/remote/path
+
 Syncing a local directory to a remote server while excluding certain files::
 
-   rsync -avz --exclude='*.log' /local/path user@remote.example.com:/remote/path
+   rsync -avz --exclude='*.log' /local/path user@xfer.discovery.neu.edu:/remote/path
+
 Syncing a remote server to a local directory while preserving symbolic links::
 
-   rsync -avz --links user@remote.example.com:/remote/path /local/path
+   rsync -avz --links user@xfer.discovery.neu.edu:/remote/path /local/path
 
 find
 -----
 ``find`` is a command line tool used to search for files and directories within a specified location. It operates by starting at a specified directory and recursively searching through its subdirectories. The user can select a range of criteria to match (e.g., file name, size, modification time), and ``find`` will return a list of all files and directories that match the specified criteria. ``find`` provides a range of options for further processing the results, such as executing a command on each matching file, printing the results, or performing other operations. As a result, it is a versatile tool to search for specific files and to clean up old files.
 
-Examples
-^^^^^^^^^
-Below are several advanced examples of using the ``find`` command to search for files and directories; see `find(1) manual page`_ for more information on how to use the command effectively.
+Here are several advanced examples of using the ``find`` command to search for files and directories; see `find(1) manual page`_ for more information on how to use the command effectively.
+
+To search for files and directories:
+
+.. code-block:: shell
+  :emphasize-lines: 2-3
+
+  find /path/to/search -name "*.txt"
+  /path/to/search/file1.txt
+  /path/to/search/file2.txt
 
 Finding files based on size::
 
    find /path/to/dir -size +10M
-This will find all files in /path/to/dir that are larger than 10 MB.
+
+This will find all files in ``/path/to/dir`` that are larger than 10 MB.
 
 Finding files based on modification time::
 
    find /path/to/dir -mtime +7
-This will find all files in /path/to/dir that have been modified more than 7 days ago.
+
+This will find all files in ``/path/to/dir`` that have been modified more than 7 days ago.
 
 Finding files based on type::
 
    find /path/to/dir -type f
-This will find all files in /path/to/dir that are regular files (not directories).
+
+This will find all files in ``/path/to/dir`` that are regular files (not directories).
 
 Finding files based on name::
 
    find /path/to/dir -name "*.txt"
-This will find all files in /path/to/dir that have a .txt file extension.
+
+This will find all files in ``/path/to/dir`` that have a ``.txt`` file extension.
 
 Executing commands on matching files::
 
    find /path/to/dir -name "*.txt" -exec chmod 644 {} \;
+
 This will find all files in ``/path/to/dir`` that have a ``.txt`` file extension and execute the ``chmod`` command on each file, changing its permissions to ``644``.
 
 awk
 -----
 ``awk`` is a text-processing tool widely used for data extraction, report generation, and other text-related tasks. It operates by reading a file line-by-line and processing each line based on a set of rules defined by the user. The regulations specify the conditions under which certain actions are performed, such as printing specific fields, performing calculations, or modifying the text in some way. ``awk`` is particularly useful for processing tabular data, such as those found in CSV files, and extracting and manipulating data in various ways. Additionally, ``awk`` provides a rich set of string and numerical manipulation functions, making it a powerful tool for working with large data sets.
 
-Examples
-^^^^^^^^^
 Below are a few examples of ``awk`` processing and manipulating text data, but there are many more options and features available. Consult the `awk(1) manual page`_ for more information on effectively using the tool.
 
-Here is sample content for a file named sample_file.txt:
+We will use a sample file ``awk-example.txt`` to work through this section.
+
+:download:`Download <../resources/awk-example.txt>`, or create and name a file as shown in the following block. Also, be sure to store in the working directory.
 
 .. code-block:: shell
-  :emphasize-lines: 2,3,4,5,6
+  :emphasize-lines: 2-6
 
-  cat file1.txt
+  cat awk-example.txt
   John Doe 25
   Jane Doe 30
   Jim Smith 40
@@ -469,14 +500,14 @@ Here is sample content for a file named sample_file.txt:
 
 This file contains a list of names and ages, with each line representing a different person and their age. The first column is the name, and the second column is the age. The columns are separated by a space.
 
-This sample file can be used in the examples provided in the previous response to demonstrate the usage of awk command.
+This sample file can be used in the examples provided in the previous response to demonstrate the usage of ``awk`` command.
 
 Print the entire contents of a file:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3,4,5,6
+  :emphasize-lines: 2-6
 
-  awk '{print}' sample_file.txt
+  awk '{print}' awk-example.txt
   John Doe 25
   Jane Doe 30
   Jim Smith 40
@@ -486,10 +517,10 @@ Print the entire contents of a file:
 Print specific columns from a tab-delimited file:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3,4,5,6
+  :emphasize-lines: 2-6
   :caption: Assuming the file is not tab-delimited.
 
-  awk -F "\t" '{print $2}' sample_file.txt
+  awk -F "\t" '{print $2}' awk-example.txt
   25
   30
   40
@@ -501,7 +532,7 @@ Sum a column of numbers:
 .. code-block:: shell
   :emphasize-lines: 2
 
-  awk '{sum+=$2} END {print sum}' sample_file.txt
+  awk '{sum+=$2} END {print sum}' awk-example.txt
   169
 
 Print only lines that match a pattern:
@@ -509,16 +540,16 @@ Print only lines that match a pattern:
 .. code-block:: shell
   :emphasize-lines: 2, 3
 
-  awk '/Doe/ {print}' sample_file.txt
+  awk '/Doe/ {print}' awk-example.txt
   John Doe 25
   Jane Doe 30
 
 Format the output:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3,4,5,6
+  :emphasize-lines: 2-6
 
-  awk '{printf "Name: %s, Age: %d\n", $1, $2}' sample_file.txt
+  awk '{printf "Name: %s, Age: %d\n", $1, $2}' awk-example.txt
   Name: John Doe, Age: 25
   Name: Jane Doe, Age: 30
   Name: Jim Smith, Age: 40
@@ -528,15 +559,15 @@ Format the output:
 .. code-block:: shell
   :emphasize-lines: 2
 
-   awk '/Sara/ {print "Sara found"}' sample_file.txt
-   Sara found
+  awk '/Sara/ {print "Sara found"}' awk-example.txt
+  Sara found
 
 Printing the first field of each line in a file:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3,4,5,6
+  :emphasize-lines: 2-6
 
-  awk '{print $1}' sample_file.txt
+  awk '{print $1}' awk-example.txt
   John
   Jane
   Jim
@@ -546,9 +577,9 @@ Printing the first field of each line in a file:
 Printing the second field of each line in a file, only if the first field is equal to a specific value:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3
+  :emphasize-lines: 2-3
 
-  awk '$2 == "Doe" {print $1}' sample_file.txt
+  awk '$2 == "Doe" {print $1}' awk-example.txt
   John
   Jane
 
@@ -557,7 +588,7 @@ Printing the sum of all numbers in the third field (Age) of a file:
 .. code-block:: shell
   :emphasize-lines: 2
 
-  awk '{sum+=$3} END {print sum}' sample_file.txt
+  awk '{sum+=$3} END {print sum}' awk-example.txt
   159
 
 Printing the average of all numbers in the fourth field of a file:
@@ -565,24 +596,24 @@ Printing the average of all numbers in the fourth field of a file:
 .. code-block:: shell
   :emphasize-lines: 2
 
-  awk '{sum+=$3; count++} END {print sum/count}' sample_file.txt
+  awk '{sum+=$3; count++} END {print sum/count}' awk-example.txt
   31.8
 
 Printing the line number and the line text for each line in a file that contains a specific word:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3
+  :emphasize-lines: 2-3
 
-  awk '/Doe/ {print NR, $0}' sample_file.txt
+  awk '/Doe/ {print NR, $0}' awk-example.txt
   1 John Doe 25
   2 Jane Doe 30
 
 Printing the line number and the line text for each line in a file that starts with a specific string:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3
+  :emphasize-lines: 2-4
 
-  awk '$1 ~ /^J/ {print NR, $0}' sample_file.txt
+  awk '$1 ~ /^J/ {print NR, $0}' awk-example.txt
   1 John Doe 25
   2 Jane Doe 30
   3 Jim Smith 40
@@ -696,25 +727,21 @@ Once open, the following table summarizes common keyboard shortcuts (i.e., comma
 
 For more commands, see `Emacs Cheat Sheet`_.
 
-VIM
+Vim
 ------
 Vim is a popular text editor that is widely used for programming, writing, and other text-related tasks. Consult the `VIM Manual`_ for more information on using the text editor effectively.
 
-**Starting Vim**
+Vim starts in in **normal mode**: a mode that allows for the navigation through the text and perform various operations (e.g., search), but in read-online mode (i.e., cannot edit text).
 
 Open a terminal and type the following command::
 
    vim
-**Opening a file**
 
 To open an existing file, type the following command::
 
    vim filename
-**Normal mode**
 
-When you start Vim, you are in normal mode. In normal mode, you can navigate through the text and perform various operations, but you cannot type or edit text.
-
-.. list-table:: Common Commands
+.. list-table:: Common Vim Commands
    :widths: 50 20
    :header-rows: 1
 
@@ -757,18 +784,17 @@ GNU Nano
 ---------
 Nano is a simple, easy-to-use text editor commonly used in Unix-like operating systems. Consult the `GNU Nano Manual`_ or online resources for more information on how to use the text editor effectively.
 
-**Starting Nano**
-
-Open a terminal and type the following command::
+Nano can launch one of two ways from a terminal: (1) to open to an empty, unnamed file, run::
 
    nano
-**Opening a file**
 
-To open an existing file, type the following command::
+To open a file by name, whether it already exists or needs to be created, run::
 
-   nano filename
+   nano filename.txt
 
-.. list-table:: Common Commands
+If the file does not exist, it will open an empty file that will persist upon saving.
+
+.. list-table:: Common Nano Commands
    :widths: 40 20
    :header-rows: 1
 
