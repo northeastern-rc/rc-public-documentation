@@ -54,6 +54,7 @@ To launch the terminal:
 iTerm2 can be installed via the terminal using `Homebrew`_::
 
    brew install --cask iterm2
+
 If Homebrew is not already installed, run the following command in the terminal before installing iTerm2::
 
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -589,68 +590,77 @@ Printing the line number and the line text for each line in a file that starts w
 Printing the line number, the line text, and the length of each line in a file:
 
 .. code-block:: shell
-  :emphasize-lines: 2,3,4,5,6
+  :emphasize-lines: 2-6
 
-  awk '{print NR, $0, length($0)}' sample_file.txt
+  awk '{print NR, $0, length($0)}' awk-example.txt
   1 John Doe 25 11
   2 Jane Doe 30 11
   3 Jim Smith 40 12
   4 Sara Johnson 35 15
   5 Michael Brown 29 16
 
-Git configurations tips and tricks:
+Git configurations tips and tricks
 ----------------------------------
 Git is a distributed version control system for software development and other collaborative projects that allows multiple users to work on a project simultaneously, while keeping track of changes and enabling easy collaboration. With Git, users can commit their changes to a local repository and push them to a remote repository so that others can access and merge their changes into the main project. Git also provides a robust set of tools for managing branches, resolving conflicts, and performing other tasks related to version control.
 
-Git provides a range of configuration options that allow users to customize their behavior to suit their needs, including setting the user name and email, specifying a preferred text editor, and setting up aliases for frequently used commands. In addition, users can either configure Git globally, which will apply the configuration to all of their Git repositories, or configure locally, which will apply the configuration only to a specific repository. This flexibility allows users to work with Git in a way that suits their workflow.
+Git provides a range of configuration options that allow users to customize their behavior to suit their needs, including setting the username and email, specifying a preferred text editor, and setting up aliases for frequently used commands. In addition, users can either configure Git globally, which will apply the configuration to all of their Git repositories, or configure locally, which will apply the configuration only to a specific repository. This flexibility allows users to work with Git in a way that suits their workflow.
 
-Example Configurations
+Custom Configurations
 ^^^^^^^^^^^^^^^^^^^^^^
 Below you will find a few examples of Git configuration options. See `Git User Manual`_ for more information on how to customize Git to your needs.
 
-Setting your user name and email::
+Setting your username and email::
 
    git config --global user.name "Your Name"
    git config --global user.email "your.email@example.com"
+
 Setting your preferred text editor::
 
    git config --global core.editor nano
+
 Setting your preferred diff tool::
 
    git config --global diff.tool emacs
    git config --global difftool.prompt false
+
 Setting up aliases for frequently used Git commands::
 
    git config --global alias.st status
    git config --global alias.co checkout
    git config --global alias.ci commit
+
 Setting up a default push behavior::
 
    git config --global push.default simple
+
 Enabling colored output for Git commands::
 
    git config --global color.ui true
+
 Ignoring files globally across all your Git repositories::
 
    git config --global core.excludesfile ~/.gitignore_global
+
 Enabling automatic line wrapping in Git log output::
 
    git config --global log.autoWrap true
+
 Text Editors
 ===============
-There are a few popular text editors that enable modifying text files from the terminal. In this section you will find brief descriptions for the text editors that are available by default on Discovery.
+There are a few popular text editors to create, view, and modify text files from a terminal: Emacs, Vim, and Nano. Here, we briefly describe these text editors, all of which are available by default on Discovery.
 
 Emacs
 ------
-Emacs is a popular text editor that is widely used for programming, writing, and other text-related tasks. You should consult the `Emacs Manual`_ or online resources for more information on how to use the text editor effectively.
+Emacs is a popular text editor that is widely used to program, write, and read text files. You should consult the `Emacs Manual`_ or online resources for more information on how to use the text editor effectively.
 
-To start emacs, open a terminal and type the following command::
+To start Emacs, open a terminal and type the following command::
 
    emacs
-Once open, the following table summarizes various keyboard shortcuts (i.e., commands) for working in the text editor.
 
-.. list-table:: Common Commands (``C-`` -> hold ``Ctrl``)
-   :widths: 40 20
+Once open, the following table summarizes common keyboard shortcuts (i.e., commands) for working in the text editor.
+
+.. list-table:: Common Emacs Commands (``C-`` -> hold ``Ctrl``)
+   :widths: 40 30
    :header-rows: 1
 
    * - Functionality
@@ -785,13 +795,14 @@ To open an existing file, type the following command::
 
 Shell Scripting
 ===============
-Shell scripting is a feature of bash that allows you to automate tasks and perform complex operations. A shell script is a text file containing a series of bash commands that the shell can execute to perform a specific task.
+Shell scripts are a feature of bash that allows you to automate tasks and perform complex operations. A shell script is a text file containing a series of bash commands that the shell can execute to perform a specific task.
 
 Here is a simple example of a shell script that prints the message, ``Hello, World!`` to the screen::
 
    #!/bin/bash
 
    echo "Hello, World!"
+
 Notice the line ``#!/bin/bash`` at the top of a shell script (i.e., the shebang line). This line specifies which shell interpreter will be used when running the script. In this case, line ``#!/bin/bash`` specifies that the script uses the bash shell.
 
 .. note::
@@ -800,9 +811,11 @@ Notice the line ``#!/bin/bash`` at the top of a shell script (i.e., the shebang 
 First we must make the file executable to run this script. This is done as follows::
 
    chmod +x hello_world.sh
+
 Then, run the script as follows::
 
    ./hello_world.sh
+
 This will print the message ``Hello, World!`` to the screen.
 
 Shell scripts can do many tasks, including backups, system maintenance, and the commands covered in this tutorial. For example, you could create a script to automate the backup of your home directory by copying all of its files to a remote server. The script could include commands for compressing the files, copying them to the server, and logging the results.
