@@ -3,11 +3,7 @@ Stay Under your Quota at /home/
 *******************************************************
 It is vital to stay under your ``/home/<username>`` quota to prevent issues using Open OnDemand and performing tasks on Discovery. Here are some suggestions to stay under quota and general best practices with using your ``/home/<username>`` directory.
 
-Utlilize /scratch and /work Directories
-=======================================================
-For long-term research work storage, ``/work`` should be used. If your PI does not have space in ``/work`` setup, they can request it using the following form https://bit.ly/NURC-NewStorage and can request additional storage using https://bit.ly/NURC-StorageExtension. More details of ``/work`` can be found at :ref:`discovery_storage`. For temporary job files you can utilize /scratch/<username>. Please be mindful of the purge policy of ``/scratch`` which is covered in :ref:`discovery_storage.rst`.
-
-Determine Large Files/Directories in /home/<username>
+Analyze Disk Usage
 =======================================================
 From a compute node, ``srun --pty /bin/bash``, run the following command from your ``/home/<username>`` directory ::
     
@@ -15,15 +11,9 @@ From a compute node, ``srun --pty /bin/bash``, run the following command from yo
 
 which will output the size of each file, directory, and hidden directory in your ``/home/<username>`` space, with the total of your ``/home`` directory being the last line of the output. After determining the large files and directories, you can move them to the appropriate locations such as ``/work`` for research or you can back them up and delete them if they are no longer required.
 
-Conda Environment Best Practices
+Utlilize /scratch and /work
 =======================================================
-Conda virtual environments should be used for all python based workflows and should be located in your PI's /work directory. To create a conda environment in a ``/work`` directory, please use the ``--prefix`` flag with conda as follows ::
-
- conda create myenv --prefix=/work/<project>/<my directory>
-
-where ``<project>`` is your PI's ``/work`` directory and ``<my directory>`` is an empty directory to store your conda environment. More information about creating custom conda environments can be found here :ref:`conda`
-
-Conda environments that are stored in a commonly accessibly directory in your PI's ``/work`` directory will be accessible by fellow group members will be able to ``source activate <env name>`` and utilize the same conda environment to save storage space and time in building duplicate conda environments. 
+For long-term research work storage, ``/work`` should be used. If your PI does not have space in ``/work`` setup, they can request it using the following form https://bit.ly/NURC-NewStorage and can request additional storage using https://bit.ly/NURC-StorageExtension. More details of ``/work`` can be found at :ref:`discovery_storage`. For temporary job files you can utilize /scratch/<username>. Please be mindful of the purge policy of ``/scratch`` which is covered in :ref:`discovery_storage.rst`.
 
 Clean ~/.conda Directory
 =======================================================
@@ -44,10 +34,6 @@ Remove any unused conda environments ::
  conda env list
  conda env remove --name <your environment>
 
-Singularity Container Best Practices
-=======================================================
-Containers that are pulled, built and maintained for research work should be stored in your PI's ``/work`` directory and not your ``/home/<username>`` directory. 
-
 Clean ~/.singularity Directory
 =======================================================
 If you have pulled any containers to Discovery using Singularity, you can clean your container cache in your ``/home/<username>`` directory by running from an srun session, ``srun --pty /bin/bash``, ::
@@ -61,3 +47,21 @@ To avoid your ``~/.singularity`` directory filling up, you can set a temporary d
  export SINGULARITY_TMPDIR=/work/<project>/singularity_tmp
 
 where ``<project>`` is your PI's ``/work`` directory. Then pull use singularity to pull your container as you normally would. 
+
+Best Practices
+=======================================================
+The following sections provided the current best practices if your work utilizes conda environments and containers to maintain your ``/home/<username>`` quota.
+
+Conda Environments
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Conda virtual environments should be used for all python based workflows and should be located in your PI's /work directory. To create a conda environment in a ``/work`` directory, please use the ``--prefix`` flag with conda as follows ::
+
+ conda create myenv --prefix=/work/<project>/<my directory>
+
+where ``<project>`` is your PI's ``/work`` directory and ``<my directory>`` is an empty directory to store your conda environment. More information about creating custom conda environments can be found here :ref:`conda`
+
+Conda environments that are stored in a commonly accessibly directory in your PI's ``/work`` directory will be accessible by fellow group members will be able to ``source activate <env name>`` and utilize the same conda environment to save storage space and time in building duplicate conda environments. 
+
+Singularity Containers
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Containers that are pulled, built and maintained for research work should be stored in your PI's ``/work`` directory and not your ``/home/<username>`` directory. 
