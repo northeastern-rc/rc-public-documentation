@@ -15,8 +15,7 @@ The Research Computing (RC) team is responsible for the procurement and ongoing
 maintenance of several data storage options, including active and archive
 storage solutions. If you are affiliated with Northeastern, you can request
 one or more storage solutions to meet your storage needs. If you anticipate needing storage as part of a grant requirement,
-please `schedule a consultation with an RC staff member <https://rc.northeastern.edu/support/consulting>`_. to understand what
-storage options would best meet your research needs.
+please `schedule a consultation with an RC staff member <https://rc.northeastern.edu/support/consulting>`_.
 
 .. note::
    If you have an account on Discovery, see :ref:`discovery_storage`
