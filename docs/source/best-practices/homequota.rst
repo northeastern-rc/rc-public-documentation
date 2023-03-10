@@ -1,5 +1,5 @@
 *******************************************************
-Stay Under your Quota at /home/
+Storage Quota at /home/
 *******************************************************
 It is vital to stay under your ``/home/<username>`` quota to prevent issues using Open OnDemand and performing tasks on Discovery. Here are some suggestions to stay under quota and general best practices with using your ``/home/<username>`` directory.
 
