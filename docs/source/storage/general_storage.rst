@@ -15,9 +15,8 @@ The Research Computing (RC) team is responsible for the procurement and ongoing
 maintenance of several data storage options, including active and archive
 storage solutions. If you are affiliated with Northeastern, you can request
 one or more storage solutions to meet your storage needs. If you anticipate needing storage as part of a grant requirement,
-please schedule a consultation with an RC staff member to understand what
+please `schedule a consultation with an RC staff member <https://rc.northeastern.edu/support/consulting>`_. to understand what
 storage options would best meet your research needs.
-You can schedule an online consultation on the `RC website <https://rc.northeastern.edu/support/consulting>`_.
 
 .. note::
    If you have an account on Discovery, see :ref:`discovery_storage`
@@ -39,7 +38,7 @@ You can schedule an online consultation on the `RC website <https://rc.northeast
    If you are not connected to the campus internet, you must be connected to
    the university's VPN (GlobalProtect) before you can access these storage systems.
    You can find detailed information about downloading and using the GlobalProtect VPN
-   in the `ServiceNow Knowledge Base <https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013983>`_.
+   in the `FAQ: VPN and remote access <https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013983>`_.
 
 .. note::
    The /research storage tier is no longer provided. If you are a former user of /research and have questions or issues related to /research, please `submit a ticket to RC <https://bit.ly/NURC-Assistance>`_. Other storage options include /work (more information found here, :ref:`discovery_storage`), `Sharepoint <https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012695>`_, and `OneDrive <https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012764>`_. 
