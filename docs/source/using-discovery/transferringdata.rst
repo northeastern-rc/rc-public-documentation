@@ -1,18 +1,60 @@
 ******************
 Transferring Data
 ******************
-Discovery has a dedicated transfer node that you must use to transfer data to and from the cluster.
-You are not allowed to transfer data from any other node.
-The node name is ``<username>@xfer.discovery.neu.edu:`` where ``<username>`` is your Northeastern username.
 
-You can also transfer files using Globus. This is highly recommended if you need to transfer large amounts of data.
-See :ref:`using_globus` for more information.
+This document will list various options to perform inter-cluster and intra-cluster data transfers.
+
+- Inter-cluster data transfer: Transfer data between Discovery cluster and an external machine.
+- Intra-cluster data transfer: Transfer data between two any two locations within the Discovery cluster.
+
+.. caution::
+
+	Discovery has a dedicated transfer node that you must use to transfer data to and from the cluster.
+	You are not allowed to transfer data from any other node.
+	The node name is ``<username>@xfer.discovery.neu.edu:`` where ``<username>`` is your Northeastern username.
 
 .. caution::
 
    The /scratch directory is for temporary file storage only. It is not backed up.
    If you have directed your output files to /scratch, you should transfer your data from /scratch
    to another location as soon as possible. See :ref:`discovery_storage` for more information.
+   
+   
+Using Open OnDemand's File Explorer
+===================================
+
+You can use Open OnDemand web portal for inter-cluster and intra-cluster data transfers.
+
+For details on how to use OOD's File Explorer, refer :ref:`file_explorer`
+
+Using SCP
+=========
+
+You can use SCP command on a terminal for inter-cluster data transfers.
+
+Transfer data from external machine to Discovery cluster
+--------------------------------------------------------
+
+The format of the scp command is as follows:
+
+``scp <-r if transfering folder> <path_to_file/folder_on_external_machine> <yourusername>@xfer.discovery.neu.edu:<path_to_destination_folder_on_discovery>``
+
+For example, to transfer test-data folder from local machine to /scratch/k.joisher, we need to execute the following command on the external machine's terminal:
+
+``scp -r test-data k.joisher@xfer.discovery.neu.edu:/scratch/k.joisher``
+
+.. image:: /images/scp.png	
+
+Transfer data from Discovery cluster to external machine
+--------------------------------------------------------
+
+Similar to transfering data from external machine to Discovery cluster, we can use scp to transfer data from the cluster to an external machine using the following command:
+
+``scp <yourusername>@xfer.discovery.neu.edu:<path_to_destination_folder_on_discovery> <-r if transfering folder> <path_to_file/folder_on_external_machine>``
+
+For example, to transfer test-data folder from Discovery to an external machine, we need to execute the following command on the external machine's terminal:
+
+``scp -r k.joisher@xfer.discovery.neu.edu:/scratch/k.joisher/test-data .``
 
 Data transfer node using Mac
 ============================
