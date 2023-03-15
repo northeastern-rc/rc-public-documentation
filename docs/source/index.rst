@@ -57,7 +57,6 @@ Northeastern University Research Computing
    :caption: Understanding storage options
 
    storage/discovery_storage
-   storage/general_storage
 
 .. toctree::
    :maxdepth: 2
