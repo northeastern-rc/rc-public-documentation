@@ -13,7 +13,7 @@ Data Storage
 ==================================
 
 There are two main storage systems connected to Northeastern's HPC cluster: ``/home`` and ``/scratch``; these options have specific quotas and limitations.
-The list below details the storage options available to you on Discovery if you have an account on Discovery. Every individual with an account on Discovery has
+The list below details the storage options available to you on the HPC cluster by having an account. Every individual with an account has
 both a ``/home`` and ``/scratch`` directory. While research groups can request additional storage on the ``/work`` storage system, 
 ``/work`` storage is not currently provisioned to individuals. 
 
@@ -21,11 +21,11 @@ both a ``/home`` and ``/scratch`` directory. While research groups can request a
    The ``/scratch`` space is only for temporary storage; this storage is not backed up, and there is a purge policy for data older than 28 days. Please review the ``/scratch`` policy on our `Policy page <https://rc.northeastern.edu/policy/>`_.
 
 **NAME:** ``/home/<yourusername>`` where ``yourusername`` is your username, e.g., ``/home/j.smith``
- - **DESCRIPTION:** All users are given a ``/home`` directory automatically when their Discovery account is created. This storage is mainly intended for storing relatively small files such as script files, source code, and software installation files. While ``/home`` is permanent storage that is backed up and replicated, ``/home`` is not performant storage. ``/home`` also has a small quota, so you should frequently check your space usage (use a command such as, ``du -h /home/<yourusername>`` where ``<yourusername>`` is your user name, to see the total space usage). For running jobs and directing output files, you should use your ``/scratch`` directory.
+ - **DESCRIPTION:** All users are given a ``/home`` directory automatically when their account is created. This storage is mainly intended for storing relatively small files such as script files, source code, and software installation files. While ``/home`` is permanent storage that is backed up and replicated, ``/home`` is not performant storage. ``/home`` also has a small quota, so you should frequently check your space usage (use a command such as, ``du -h /home/<yourusername>`` where ``<yourusername>`` is your user name, to see the total space usage). For running jobs and directing output files, you should use your ``/scratch`` directory.
  - **QUOTA:** 75GB
 
 **NAME:** ``/scratch/<yourusername>``
- - **DESCRIPTION:** All users are given a ``/scratch`` directory automatically when their Discovery account is created. Scratch is a shared space for all users. The total storage available is 1.8PB; however, while this is performant storage, it is for temporary use only. **It is not backed up.** Data on ``/scratch`` should be moved as soon as possible to another location for permanent storage. You should run your jobs from ``/scratch`` and direct your output files to your ``/scratch`` directory for best performance, but it is best practice to move your files off of scratch to avoid any potential data loss.
+ - **DESCRIPTION:** All users are given a ``/scratch`` directory automatically when their account is created. Scratch is a shared space for all users. The total storage available is 1.8PB; however, while this is performant storage, it is for temporary use only. **It is not backed up.** Data on ``/scratch`` should be moved as soon as possible to another location for permanent storage. You should run your jobs from ``/scratch`` and direct your output files to your ``/scratch`` directory for best performance, but it is best practice to move your files off of scratch to avoid any potential data loss.
  - **QUOTA:** N/A
 
 **NAME:** ``/work/<groupname>``
