@@ -30,7 +30,7 @@ both a ``/home`` and ``/scratch`` directory. While research groups can request a
 
 **NAME:** ``/work/<groupname>``
  - **DESCRIPTION:** Research groups can request additional storage on ``/work``. A PI can request this extra storage through the `New Storage Space request <https://bit.ly/NURC-NewStorage>`_. This is a performant, persistent, and long-term storage that is meant for storing data being actively used for research. ``/work`` can be accessed by all members of the research group who have access permissions to this directory. 
-- **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: ``/work/<groupname>`` and ``/nese``.  
+ - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: ``/work/<groupname>`` and ``/nese``.  
 
 .. note::
    The ``/research`` storage tier is no longer provided. Please contact Research Computing if you are a former user of ``/research`` and have questions or issues related to ``/research`` by `submitting a ticket <https://bit.ly/NURC-Assistance>`_. Other storage options include ``/work``, `Sharepoint <https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012695>`_, and `OneDrive <https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012764>`_. 
