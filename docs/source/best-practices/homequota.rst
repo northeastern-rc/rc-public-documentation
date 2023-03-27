@@ -60,7 +60,7 @@ Conda virtual environments should be used for all python based workflows and sho
 
  conda create myenv --prefix=/work/<project>/<my directory>
 
-More information about creating custom conda environments can be found here :ref:`conda`. 
+More information about creating custom conda environments can be found here :ref:`working_conda`. 
 
 Conda environments that are stored in a commonly accessible directory in your PI's ``/work`` directory can be used by fellow group members by running ``source activate <env name>``. Utilizing the same conda environment will save storage space and time in building duplicate conda environments for the same project. 
 
