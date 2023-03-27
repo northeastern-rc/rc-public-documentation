@@ -9,7 +9,7 @@ From a compute node, ``srun --pty /bin/bash``, run the following command from yo
     
  du -shc .[^.]* *
 
-This command will output the size of each file, directory, and hidden directory in your ``/home/<username>`` space, with the total of your ``/home`` directory being the last line of the output. After determining the large files and directories, you can move them to the appropriate location, (g.g., ``/work`` for research) or you can back up and delete the files and directories if they are no longer required.
+This command will output the size of each file, directory, and hidden directory in your ``/home/<username>`` space, with the total of your ``/home`` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location, (g.g., ``/work`` for research) or you can back up and delete the files and directories if they are no longer required.
 
 Utlilize /scratch and /work
 =======================================================
@@ -60,9 +60,9 @@ Conda virtual environments should be used for all python based workflows and sho
 
  conda create myenv --prefix=/work/<project>/<my directory>
 
-More information about creating custom conda environments can be found here :ref:`conda`
+More information about creating custom conda environments can be found here :ref:`conda`. 
 
-Conda environments that are stored in a commonly accessibly directory in your PI's ``/work`` directory will be accessible by fellow group members will be able to ``source activate <env name>`` and utilize the same conda environment to save storage space and time in building duplicate conda environments. 
+Conda environments that are stored in a commonly accessible directory in your PI's ``/work`` directory can be used by fellow group members by running ``source activate <env name>``. Utilizing the same conda environment will save storage space and time in building duplicate conda environments for the same project. 
 
 Singularity containers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
