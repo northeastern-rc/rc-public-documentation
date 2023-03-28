@@ -64,7 +64,7 @@ List of typical Slurm commands for working on Discovery.
 These functions are fully documented for the version of Slurm installed on in the manual pages. To get the manual pages for the Slurm functions, run ``man <SLURM_command>`` on the HPC. This command lists all the parameters and keywords that you can use with the given Slurm commands. You can also run ``<SLURM_command> --help``, which will list the help page for the Slurm function. These two give you the full possibilities of what these functions can do. The following sections are helpful/commonly used Slurm commands that are good to know for different ticket requests and common checks on the cluster.
 
 .. important::
-   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options usually have both short and verbose versions, such as ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the same thing as ``srun --partition=short --nodes=1 --ntasks=1``
+   Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options usually have both short and verbose versions, such as ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the same thing as ``srun --partition=short --nodes=1 --ntasks=1``.
 
 
 Job Reporting
@@ -73,7 +73,7 @@ Job Reporting
 
 ``sreport <options>`` Generate reports about cluster utilization and job statistics
 
-**NOTE:** Each command's options and functions may vary depending on the Slurm version and configuration. We recommend consulting the Slurm documentation for more information on the full range of available commands and their usage.
+**NOTE:** Each command's options and functions may vary depending on the Slurm version and configuration. We recommend consulting the Slurm documentation for more information on the full range of available commands and their usage. See `Slurm documentation`_ for details.
 
 Viewing cluster information
 ===========================
@@ -92,7 +92,6 @@ hardware that is available in order to customize your job scripts. Also see :ref
      - View details about the cluster in a visual format
 
 .. _submitting_jobs:
-
 Submitting jobs
 ================
 
@@ -106,9 +105,9 @@ To run a job interactively, use ``srun``. To submit a job to run in the backgrou
    * - Slurm Command
      - Function
    * - ``srun``
-     - Run an interactive job on the cluster. See :ref:`using_srun`
+     - Run an interactive job on the cluster. See :ref:`_using_srun`
    * - ``sbatch <scriptname.script>``
-     - Submit a script to the scheduler for running a job. See :ref:`using_sbatch`
+     - Submit a script to the scheduler for running a job. See :ref:`_using_sbatch`
    * - ``scancel <jobid>``
      - Cancel a pending or running job on the cluster
 
@@ -120,8 +119,8 @@ Use the Slurm command ``srun`` to allocate an interactive job. This means you us
 .. image:: /images/srun_example.jpg
   :alt: image of the command line showing an example ``srun`` command
 
-Example uses
-^^^^^^^^^^^^
+Examples using srun
+^^^^^^^^^^^^^^^^^^^
 This section details a few examples using ``srun``. You should first review the :ref:`hardware_overview` and :ref:`partition_names` sections
 to be familiar with the available hardware and partition limits on Discovery. This way, you can tailor your request to fit both the needs of your job
 and the limits of the partitions. For example, if you specify ``--partition=short`` and ``--time=01:00:00``, you'll get an error because the
@@ -169,8 +168,8 @@ Where ``example.script`` is a script detailing the parameters of the job you wan
   Slurm will automatically terminate the job.
   See :ref:`partition_names` for the most up-to-date partition names and parameters.
 
-SBATCH examples
-^^^^^^^^^^^^^^^
+Examples using sbatch
+^^^^^^^^^^^^^^^^^^^^^
 
 Job request: one node
 ~~~~~~~~~~~~~~~~~~~~~
@@ -437,8 +436,8 @@ The ``sinfo`` command will show information about all partitions in the cluster,
    * - ``idle``
      - The node is in an idle start and has none of its resources being used
 
-Example uses
-^^^^^^^^^^^^
+Examples using sinfo
+^^^^^^^^^^^^^^^^^^^^
 View information about all partitions::
 
    sinfo -a
@@ -560,8 +559,8 @@ Controlling Jobs
 
 ``scontrol requeue <jobid>`` Re-queue a completed, failed, or cancelled job
 
-Example Uses
-^^^^^^^^^^^^
+Examples using scontrol
+^^^^^^^^^^^^^^^^^^^^^^^
 View information about a specific node::
 
    scontrol show node -d <node_name>
@@ -605,14 +604,23 @@ These are just a few examples of what you can do with ``sinfo`` and ``scontrol``
 Best practices
 ===============
 #. Use the proper resource request syntax: Slurm follows a specific syntax to request resources, such as the number of CPUs, memory, and time required for your job. Make sure to use the proper syntax to avoid any errors.
+
 #. Specify an appropriate job name: Giving your job a descriptive name will help you and other users identify it easily.
+
 #. Submit jobs using batch scripts: It's best to submit jobs using batch scripts instead of typing commands manually. Batch scripts allow you to automate the process and make it easier to run multiple jobs at once.
+
 #. Use the correct partition: Slurm HPC has several partitions, each designed for specific purposes. Choose the proper partition for your job to ensure you use the most appropriate resources.
+
 #. Monitor your job's progress: Keep an eye on your job's progress to ensure it's running correctly, and you can identify any issues that may arise.
+
 #. Avoid overloading the system: Be mindful of the resources you're requesting and avoid overloading the system so that other users have access to the resources they need.
+
 #. Use checkpoints: If your job is long-running, consider using checkpoints to save your progress, allowing for resuming jobs if interrupted.
+
 #. Use environment modules: Slurm's environment is set via modules to manage software installations. Make sure to load the appropriate modules before running your job.
+
 #. Use the appropriate file system: Slurm HPC typically has several file systems with different performance characteristics. Use the proper file system for your job to ensure you get the best performance.
+
 #. Please clean up after your job: Make sure to remove any files or directories that your job created after it's finished running. This practice helps keep the system clean and frees up resources for other users.
 
 .. _Slurm documentation: https://slurm.schedmd.com/documentation.html
