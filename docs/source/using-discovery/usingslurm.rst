@@ -3,12 +3,10 @@
 ***********
 Using Slurm
 ***********
-.. contents:: Table of Contents
-   :depth: 4
 
 Overview
 ========
-Slurm (Simple Linux Utility for Resource Management) is an open-source job scheduler and resource manager developed at Lawrence Livermore National Laboratory and is widely-used in high-performance computing (HPC) environments, including academic and research institutions, government labs, and private industry. Slurm is designed to efficiently allocate and reasonably manage resources (e.g., CPUs, memory, GPUs) among multiple users and jobs, and is known for its scalability, reliability, and flexibility.
+Slurm (Simple Linux Utility for Resource Management) is an open-source job scheduler and resource manager developed at Lawrence Livermore National Laboratory and is widely-used in high-performance computing (HPC) environments, including academic and research institutions, government labs, and industry. Slurm is designed to efficiently allocate and reasonably manage resources (e.g., CPUs, memory, GPUs) among multiple users and jobs, and is known for its scalability, reliability, and flexibility.
 
 Slurm provides features to support the efficient management of HPC resources, including job submission, scheduling, prioritization, and accounting. For example, Slurm allows users to submit jobs and request resources and manages the allocation and distribution of resources across the cluster. Slurm can also handle job dependencies, allowing users to define dependencies between jobs and specify when specific jobs should start.
 
@@ -24,12 +22,37 @@ Slurm is the software on Discovery. To be most effective, one must have a basic 
 
 By following the contents of this page, the user will be able to
 
-* View information about the cluster
-* Submit jobs on Discovery
-* Monitor jobs
-* View account information
-* Check the cluster state, along with that of specific nodes
-* Gain knowledge of various best practices when using SLURM
+* View information about the cluster.
+* Submit jobs on Discovery.
+* Monitor jobs.
+* View account information.
+* Check the cluster state, along with that of specific nodes.
+* Gain knowledge of various best practices when using Slurm.
+
+Hence, Slurm is a job scheduler and batch manager. Here are main Slurm commands:
+
+.. list-table:: Common Slurm commands exemplified throughout this page.
+   :widths: 25 75
+   :header-rows: 1
+
+   * - Command
+     - Description
+   * - ``sbatch``
+     - Submit a job script.
+   * - ``srun``
+     - Run a command on allocated compute node(s).
+   * - ``scancel``
+     - Delete a job.
+   * - ``squeue``
+     - Show state of jobs.
+   * - ``sinfo``
+     - Show state of nodes and partitions (queues).
+   * - ``smap``
+     - Show jobs, partitions and nodes in a graphical network topology.
+   * - ``scontrol``
+     - Modify jobs or show information about various aspects of the cluster.
+
+Please continue reading for some good examples of each.
 
 This page is specific for using Slurm on Discovery. For more in-depth and general information, please refer to the official `Slurm documentation`_.
 
