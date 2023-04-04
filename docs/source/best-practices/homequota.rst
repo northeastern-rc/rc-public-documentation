@@ -63,7 +63,6 @@ The ``~/.cache`` directory can become large over time with general use of the HP
 
 Best practices
 =======================================================
-..The following sections provide best practices to maintain your ``/home/<username>`` quota for work that utilizes conda environments and containers.
 
 Conda environments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
