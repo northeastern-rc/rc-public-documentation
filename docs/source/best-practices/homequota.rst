@@ -9,7 +9,8 @@ From a compute node, ``srun --pty /bin/bash``, run the following command from yo
     
  du -shc .[^.]* *
 
-This command will output the size of each file, directory, and hidden directory in your ``/home/<username>`` space, with the total of your ``/home`` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location, (g.g., ``/work`` for research) or you can back up and delete the files and directories if they are no longer required. An example output would look like ::
+This command will output the size of each file, directory, and hidden directory in your ``/home/<username>`` space, with the total of your ``/home`` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location, (g.g., ``/work`` for research) or you can back up and delete the files and directories if they are no longer required. An example output would look like: ::
+ 
  [<username>@<host> directory]$  du -shc .[^.]* *
  39M	.git
  106M	discovery-examples
