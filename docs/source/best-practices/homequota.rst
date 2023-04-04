@@ -9,18 +9,26 @@ From a compute node, ``srun --pty /bin/bash``, run the following command from yo
     
  du -shc .[^.]* *
 
-This command will output the size of each file, directory, and hidden directory in your ``/home/<username>`` space, with the total of your ``/home`` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location, (g.g., ``/work`` for research) or you can back up and delete the files and directories if they are no longer required.
+This command will output the size of each file, directory, and hidden directory in your ``/home/<username>`` space, with the total of your ``/home`` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location, (g.g., ``/work`` for research) or you can back up and delete the files and directories if they are no longer required. An example output would look like
+.. code-block:: shell
+  :emphasize-lines: 6
+  [<username>@<host> directory]$  du -shc .[^.]* *
+   39M	.git
+   106M	discovery-examples
+   41K	README.md
+   3.3M	software-installation
+   147M	total
 
 Utlilize /scratch and /work
 =======================================================
-For long-term research work storage, ``/work`` should be used. If your PI does not have space in ``/work`` setup, they can request ``/work`` using the `New Storage Space Request <https://bit.ly/NURC-NewStorage>`_. PIs can also request additional storage using the `Storage Space Extension Request <https://bit.ly/NURC-StorageExtension>`_. More details of ``/work`` can be found at :ref:`discovery_storage`. 
+For long-term research work storage, ``/work`` should be used. If your PI does not have space in ``/work`` setup, they can request ``/work`` using the `New Storage Space Request <https://bit.ly/NURC-NewStorage>`_. PIs can also request additional storage using the `Storage Space Extension Request <https://bit.ly/NURC-StorageExtension>`_. More details of ``/work`` and ``/scratch`` can be found at :ref:`discovery_storage`. 
 
-For temporary job files, you can utilize ``/scratch/<username>``. Please be mindful of the ``/scratch`` purge policy, which is can be found on the `Research Computing Policy Page <https://rc.northeastern.edu/policy/>`_.
+For temporary job files, you can utilize ``/scratch/<username>``. Please be mindful of the ``/scratch`` purge policy, which can be found on the `Research Computing Policy Page <https://rc.northeastern.edu/policy/>`_.
 
 Clean ~/.conda directory
 =======================================================
 .. note::
-  Conda environments are part of your research and should be stored in your PI's ``/work`` directory. 
+  Conda environments are part of your research and should preferably be stored in your PI's ``/work`` directory. 
 
 If conda environments are stored in your ``/home/<username>`` directory, here are some suggestions to reduce storage size of the environments.
 
@@ -50,9 +58,13 @@ To avoid your ``~/.singularity`` directory filling up, you can set a temporary d
 
 Then, use singularity to pull your container as you normally would. 
 
+Clean ~/.cache directory
+=======================================================
+The ``~/.cache`` directory can become large over time with general use of the HPC and Open OnDemand. Make sure you are not running any processes or jobs at the time and you can safely remove this directory.
+
 Best practices
 =======================================================
-The following sections provide best practices to maintain your ``/home/<username>`` quota for work that utilizes conda environments and containers.
+..The following sections provide best practices to maintain your ``/home/<username>`` quota for work that utilizes conda environments and containers.
 
 Conda environments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
