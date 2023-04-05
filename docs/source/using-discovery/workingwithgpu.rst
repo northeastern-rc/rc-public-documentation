@@ -50,9 +50,9 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
     - 64  
     - 512GB    
 
-These GPUs are available within two partitions, named ``gpu`` and ``multigpu``. Note that partitions on Discovery are not physical partitions, they  are virtual partitions.
-The differences between the two partitions are the number of GPUs that you can request per job, as well as the time
-limit on each job. Both partitions give you access to all of the above GPU types. See the table below for the differences between the two partitions. See :ref:`partition_names` for more information about all of the partitions on Discovery.
+These GPUs are available within two partitions, named ``gpu`` and ``multigpu``. Partitions on Discovery are virtual partitions, not physical.
+The differences between the two partitions are the number of GPUs that you can request per job and the time
+limit on each job. Both partitions give you access to all of the above GPU types. The table below shows the differences between the two partitions. For more information about the partitions on Discovery, see :ref:`partition_names`.
 
 .. list-table::
    :widths: 20 20 20 20 20 20 20 20 20
@@ -86,23 +86,19 @@ limit on each job. Both partitions give you access to all of the above GPU types
      - 12
      - 12
 
-Anyone with an account on Discovery can use the ``gpu`` partition. Using ``multigpu`` requires an application process, which includes documenting
-the need for using ``multigpu``. To request temporary access to multigpu for testing or to submit an application for full access, you need to fill out and submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_.
-After you submit a request, it is evaluated by members of the RC team. This is to ensure that the resources in this partition will be used appropriately.
+Anyone with a Discovery account can use the ``gpu`` partition. However, you must submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_ to request temporary access to multigpu for testing, or to request full access to the ``multigpu`` partition.  
+Your request will be evaluated by members of the RC team to ensure that the resources in this partition will be used appropriately.
 
 Requesting GPUs with ``srun`` or ``sbatch``
 ===========================================
-Use ``srun`` for interactive mode and ``sbatch`` for batch mode.
-
-The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu::
+Use ``srun`` for interactive mode and ``sbatch`` for batch mode. The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 
 .. note::
-Note:
-   On the ``gpu`` partition, you cannot request more than 1 GPU (``--gres=gpu:1``) or your request will fail. Also, you cannot request all CPUs on that node since they are reserved for other GPUs.
+   On the ``gpu`` partition, requesting more than 1 GPU (``--gres=gpu:1``) will cause your request to fail. Also, you cannot request all CPUs on that node, since they are reserved for other GPUs.
 
-The ``sbatch`` example below is similar to the ``srun`` example above, except for giving the job a name and directing the output to a file::
+The ``sbatch`` example below is similar to the ``srun`` example above, but it gives the job a name and directs the output to a file::
 
   #!/bin/bash
   #SBATCH --partition=gpu
@@ -118,19 +114,16 @@ The ``sbatch`` example below is similar to the ``srun`` example above, except fo
 
 Specifying a GPU type
 +++++++++++++++++++++
-You can add a specific type of GPU to the ``--gres=`` option (with either ``srun`` or ``sbatch``). The following example is requesting one p100 gpu::
+You can add a specific type of GPU to the ``--gres=`` option (with either ``srun`` or ``sbatch``). For a list of available GPU types, refer to the GPU Types column in the table at the top of this page. The following example is a request for 1 p100 GPU::
 
   --gres=gpu:p100:1
 
 .. note::
-Note:
- Requesting a specific type of GPU could result in longer wait times based on GPU availability at that time. 
-
-For a list of available GPU types, refer to the GPU Types column in the table at the top of this page. 
+   Requesting a specific type of GPU could result in longer wait times, based on GPU availability at that time. 
 
 Using CUDA
 ===========
-There are several versions of CUDA Toolkits on Discovery, as listed below.::
+There are several versions of CUDA Toolkits on Discovery, including::
 
   cuda/9.0
   cuda/9.2
@@ -142,22 +135,19 @@ There are several versions of CUDA Toolkits on Discovery, as listed below.::
   cuda/11.3
   cuda/11.4
 
-You can always use the ``module avail`` command to check for the latest software versions on Discovery as well. To see details on a specific CUDA toolkit version, use ``module show``. For example, ``module show cuda/11.4``.
+Use the ``module avail`` command to check for the latest software versions on Discovery. To see details on a specific CUDA toolkit version, use ``module show``. For example, ``module show cuda/11.4``.
 
-To add CUDA to your path use ``module load``. For example, type ``module load cuda/11.4`` to load version 11.4 to your path.
+To add CUDA to your path, use ``module load``. For example, type ``module load cuda/11.4`` to load version 11.4 to your path.
 
 Use the command ``nvidia-smi`` (NVIDIA System Management Interface) inside a GPU node to get the CUDA driver information and monitor the GPU device.
 
 Using GPUs with PyTorch
 ========================
-You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery.
-
-The following examples demonstrate how to build PyTorch inside a conda virtual environment for CUDA version 11.7. 
-Make sure that you are on a GPU node before loading the environment and also please note that the installation does not work on k40m or k80 GPU's
+You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery. The following examples demonstrate how to build PyTorch inside a conda virtual environment for CUDA version 11.7. 
+Make sure that you are on a GPU node before loading the environment. Please note, the installation does not work on k40m or k80 GPU's
 
 .. note::
-Note:
- You can reuse the tensorflow environment if you've already created one, no need to create a new one with the exact same setup
+   You can reuse the TensorFlow environment if you've already created one, no need to create a new one with the exact same setup.
 
 PyTorch installation steps (with Anaconda libraries)::
 
@@ -170,14 +160,11 @@ PyTorch installation steps (with Anaconda libraries)::
   python -c'import torch; print(torch.cuda.is_available())'
 
 .. note::
-Note:
- If the installation times out, please ensure that your .condarc file doesn't contain additional channels. Also consider cleaning your conda instance using the conda clean command
+   If the installation times out, please ensure that your .condarc file doesn't contain additional channels. Also, consider cleaning your conda instance using the conda clean command.
 
-You should see the result ``True`` if CUDA is detected by PyTorch.
+If CUDA is detected by PyTorch, you should see the result, ``True``.
 
-As the latest version of PyTorch often depends on the newest CUDA available, please refer to the PyTorch documentation page for the installation instructions: https://pytorch.org/. 
-
-Alternatively, you can also use our existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1). To use it, type ::
+As the latest version of PyTorch often depends on the newest CUDA available, please refer to the `PyTorch documentation page <https://pytorch.org/>`_ for the installation instructions. Alternatively, you can use the existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1) by typing::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load anaconda3/2022.01 
@@ -187,9 +174,9 @@ Alternatively, you can also use our existing Pytorch build (`pytorch_env_trainin
 Using GPUs with TensorFlow
 ==========================
 We recommend that you use CUDA 11.2 (latest supported version) when working on a GPU with the latest version of TensorFlow (TF).
-You can find the compatibility of CUDA and TensorFlow versions at the following website https://www.tensorflow.org/install/source#gpu and for detailed installation instructions also visit https://www.tensorflow.org/install/pip.
+TensorFlow provides information on the `compatibility of CUDA and TensorFlow versions <https://www.tensorflow.org/install/source#gpu>`_, and `detailed installation instructions <https://www.tensorflow.org/install/pip>`_. 
 
-For the latest installation, use the TensorFlow pip package which includes GPU support for CUDA-enabled devices::
+For the latest installation, use the TensorFlow pip package, which includes GPU support for CUDA-enabled devices::
 
   srun --partition=gpu --gres=gpu:1 --nodes=1 --ntasks=1 --mem=10GB --time=01:00:00 --pty /bin/bash
   module load anaconda3/2022.05
@@ -218,6 +205,6 @@ To get the name of the GPU, type::
 
    python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
 
-If the installation is successful, then you should see the following output, for example,::
+If the installation is successful, then you should see the following output,::
 
    2023-02-24 16:39:35.798186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /device:GPU:0 with 10785 MB memory:  -> device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7 /device:GPU:0
