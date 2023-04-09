@@ -16,43 +16,47 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
     - RAM per node
   * - k40m
     - 16 nodes with 1 GPU each
-    - E5-2690v3\@\2.60GHz
+    - haswell
     - 24
     - 128GB
   * - k80
     - 8 nodes with 8 GPUs each
-    - E5-2680v4\@\2.40GHz
+    - broadwell
     - 28
     - 512GB
   * - p100
     - 12 nodes with 4 GPUs each
-    - E5-2680v4\@\2.40GHz
+    - broadwell
     - 28
     - 512GB
   * - v100-pcie
     - 4 nodes with 2 GPUs each
-    - AMD EPYC 7351\@\2.60GHz
+    - AMD zen
     - 32
     - 480GB
   * - v100-sxm2
     - 24 nodes with 4 GPUs each
-    - Intel Gold 6132\@\2.60Ghz
+    - Intel skylake_avx512
     - 28
     - 187GB
   * - t4
     - 2 nodes with 4 GPUs each
-    - Intel Gold 6132\@\2.60Ghz
+    - Intel skylake_avx512
     - 28  
     - 187GB
   * - a100
     - 1 node with 4 GPUs
-    - AMD EPYC 7543\@\2.80GHz
+    - AMD zen3
     - 64  
     - 512GB    
 
-These GPUs are available within two partitions, named ``gpu`` and ``multigpu``. Partitions on Discovery are virtual partitions, not physical.
-The differences between the two partitions are the number of GPUs that you can request per job and the time
-limit on each job. Both partitions give you access to all of the above GPU types. The table below shows the differences between the two partitions. For more information about the partitions on Discovery, see :ref:`partition_names`.
+These GPUs are available within two partitions, named ``gpu`` and
+``multigpu``. The differences between the two partitions are the
+number of GPUs that one can request per job and the time limit on each
+job. Both partitions give access to all of the above GPU types. The
+table below shows the differences between the two partitions. For more
+information about the partitions on Discovery, see
+:ref:`partition_names`.
 
 .. list-table::
    :widths: 20 20 20 20 20 20 20 20 20
