@@ -14,37 +14,31 @@ The Discovery cluster has a number of Graphics Processing Units (GPUs) available
     - CPU Type
     - CPUs/node
     - RAM per node
-  * - k40m
-    - 16 nodes with 1 GPU each
-    - haswell
-    - 24
-    - 128GB
-  * - k80
-    - 8 nodes with 8 GPUs each
-    - broadwell
-    - 28
-    - 512GB
-  * - p100
+    - GPU Memory
+    - Tensor Cores
+    - Cuda Capibility 
+  * - p100 (Pascal)
     - 12 nodes with 4 GPUs each
     - broadwell
     - 28
     - 512GB
-  * - v100-pcie
+    - 
+  * - v100-pcie (Volta)
     - 4 nodes with 2 GPUs each
     - AMD zen
     - 32
     - 480GB
-  * - v100-sxm2
+  * - v100-sxm2 (Volta)
     - 24 nodes with 4 GPUs each
     - Intel skylake_avx512
     - 28
     - 187GB
-  * - t4
+  * - t4 (Turing)
     - 2 nodes with 4 GPUs each
     - Intel skylake_avx512
     - 28  
     - 187GB
-  * - a100
+  * - a100 (Ampere)
     - 1 node with 4 GPUs
     - AMD zen3
     - 64  
@@ -150,9 +144,6 @@ Using GPUs with PyTorch
 You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery. The following examples demonstrate how to build PyTorch inside a conda virtual environment for CUDA version 11.7. 
 Make sure that you are on a GPU node before loading the environment. Please note, the installation does not work on k40m or k80 GPU's
 
-.. note::
-   You can reuse the TensorFlow environment if you've already created one, no need to create a new one with the exact same setup.
-
 PyTorch installation steps (with Anaconda libraries)::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:v100-sxm2:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
@@ -168,7 +159,9 @@ PyTorch installation steps (with Anaconda libraries)::
 
 If CUDA is detected by PyTorch, you should see the result, ``True``.
 
-As the latest version of PyTorch often depends on the newest CUDA available, please refer to the `PyTorch documentation page <https://pytorch.org/>`_ for the installation instructions. Alternatively, you can use the existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1) by typing::
+As the latest version of PyTorch often depends on the newest CUDA available, please refer to the `PyTorch documentation page <https://pytorch.org/>`_ for the installation instructions. 
+
+Alternatively, you can use the existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1 on any GPU including k40m & k80) by typing::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
   module load anaconda3/2022.01 
