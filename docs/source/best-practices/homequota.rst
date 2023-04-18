@@ -55,11 +55,15 @@ To avoid your ``~/.singularity`` directory filling up, you can set a temporary d
  mkdir /work/<project>/singularity_tmp
  export SINGULARITY_TMPDIR=/work/<project>/singularity_tmp
 
-Then, use singularity to pull your container as you normally would. 
+then pull the container using singularity as you normally would.
 
 Clean ~/.cache directory
 =======================================================
-The ``~/.cache`` directory can become large over time with general use of the HPC and Open OnDemand. Make sure you are not running any processes or jobs at the time and you can safely remove this directory.
+The ``~/.cache`` directory can become large over time with general use of the HPC and Open OnDemand. Make sure you are not running any processes or jobs at the time by running: ::
+ 
+ squeue -u <username>
+
+which will display any current running SLURM jobs you have on the HPC. If you have no jobs running you can safely remove this directory.
 
 Best practices
 =======================================================
@@ -68,7 +72,7 @@ Conda environments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Conda virtual environments should be used for all python based workflows and should be located in your PI's /work directory. To create a conda environment in a ``/work`` directory, please use the ``--prefix`` flag with conda as follows (where ``<project>`` is your PI's ``/work`` directory and ``<my directory>`` is an empty directory to store your conda environment): ::
 
- conda create myenv --prefix=/work/<project>/<my directory>
+ conda create --prefix=/work/<project>/<my conda env>
 
 More information about creating custom conda environments can be found here :ref:`working_conda`. 
 
