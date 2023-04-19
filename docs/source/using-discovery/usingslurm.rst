@@ -8,28 +8,24 @@ Overview
 ========
 Slurm (Simple Linux Utility for Resource Management) is an open-source job scheduler and resource manager developed at Lawrence Livermore National Laboratory and is widely-used in high-performance computing (HPC) environments, including academic and research institutions, government labs, and industry. Slurm is designed to efficiently allocate and reasonably manage resources (e.g., CPUs, memory, GPUs) among multiple users and jobs, and is known for its scalability, reliability, and flexibility.
 
-Slurm provides features to support the efficient management of high-performance computing (HPC) resources, including job submission, scheduling, prioritization, and accounting. For example, Slurm allows users to submit jobs and request resources and manages the allocation and distribution of resources across the cluster. Slurm can also handle job dependencies, allowing users to define dependencies between jobs and specify when specific jobs should start.
+Slurm on Discovery
+--------------------
+Slurm is the software on Discovery; to be most effective, a basic understanding of Slurm is essential. Slurm provides features to support the efficient management of high-performance computing (HPC) resources, including job submission, scheduling, prioritization, and accounting. For example, Slurm allows users to submit jobs and request resources and manages the allocation and distribution of resources across the cluster. Slurm can also handle job dependencies, allowing users to define dependencies between jobs and specify when specific jobs should start.
 
 One of the key features of Slurm is its ability to support heterogeneous clusters, where different compute nodes have varying hardware specifications. Slurm can manage resources on various hardware and software configurations. It provides a way to specify the job requirements to ensure scheduling with the appropriate nodes.
 
 Another critical feature of Slurm is its ability to handle complex workflows and dependencies. For example, users can specify complex workflows of jobs where specific jobs depend on others, and Slurm will manage the scheduling and execution of these workflows.
 
-Overall, Slurm is a powerful and versatile tool for managing HPC resources. Its flexibility, scalability, and reliability make it an essential tool for many HPC environments.
+Overall, Slurm is a powerful and versatile tool for managing HPC resources. Its flexibility, scalability, and reliability make it an essential tool for many HPC environments. By following the contents of this page, the user will be able to use Slurm to:
 
-Slurm on Discovery
---------------------
-Slurm is the software on Discovery. To be most effective, one must have a basic understanding of Slurm. This page provides knowledge needed for working on Discovery.
+* View information about the cluster
+* Submit jobs on Discovery, including Job arrays
+* Monitor jobs
+* View account information
+* Check the cluster state, along with that of specific nodes
+* Gain knowledge of various best practices when using Slurm
 
-By following the contents of this page, the user will be able to
-
-* View information about the cluster.
-* Submit jobs on Discovery.
-* Monitor jobs.
-* View account information.
-* Check the cluster state, along with that of specific nodes.
-* Gain knowledge of various best practices when using Slurm.
-
-Hence, Slurm is a job scheduler and batch manager. Here are the main Slurm commands:
+Slurm is a job scheduler and batch manager. Here are the main Slurm commands:
 
 .. list-table:: Common Slurm commands exemplified throughout this page.
    :widths: 25 75
@@ -38,19 +34,19 @@ Hence, Slurm is a job scheduler and batch manager. Here are the main Slurm comma
    * - Command
      - Description
    * - ``sbatch``
-     - Submit a job script.
+     - Submit a job script
    * - ``srun``
-     - Run a command on allocated compute node(s).
+     - Run a command on allocated compute node(s)
    * - ``scancel``
-     - Delete a job.
+     - Delete a job
    * - ``squeue``
-     - Show state of jobs.
+     - Show state of jobs
    * - ``sinfo``
-     - Show state of nodes and partitions (queues).
+     - Show state of nodes and partitions (queues)
    * - ``smap``
-     - Show jobs, partitions and nodes in a graphical network topology.
+     - Show jobs, partitions and nodes in a graphical network topology
    * - ``scontrol``
-     - Modify jobs or show information about various aspects of the cluster.
+     - Modify jobs or show information about various aspects of the cluster
 
 Please continue reading for some good examples of each.
 
@@ -67,11 +63,19 @@ These functions are fully documented for the version of Slurm installed, which i
    Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options usually have both short and verbose versions, such as ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the same thing as ``srun --partition=short --nodes=1 --ntasks=1``.
 
 
-Job Reporting
+Job reporting
 ==============
-``sacct <options>`` Display job accounting information
 
-``sreport <options>`` Generate reports about cluster utilization and job statistics
+.. list-table::
+   :widths: 35 85
+   :header-rows: 1
+   
+   * - Command
+     - Description
+   * - ``sacct <options>``
+     - Display job accounting information
+   * - ``sreport <options>``
+     - Generate reports about cluster utilization and job statistics
 
 .. note:: 
   Each command's options and functions may vary depending on the Slurm version and configuration. We recommend consulting the Slurm documentation for more information on the full range of available commands and their usage. See `Slurm documentation`_ for details.
@@ -106,11 +110,11 @@ To run a job interactively, use ``srun``. To submit a job to run in the backgrou
    * - Slurm Command
      - Function
    * - ``srun``
-     - Run an interactive job on the cluster.
+     - Run an interactive job on the cluster
    * - ``sbatch <scriptname.script>``
-     - Submit a script to the scheduler for running a job.
+     - Submit a script to the scheduler for running a job
    * - ``scancel <jobid>``
-     - Cancel a pending or running job on the cluster.
+     - Cancel a pending or running job on the cluster
 
 Using srun
 -----------
@@ -238,7 +242,7 @@ Parallel jobs should use code configured to use the reserved resources. Running 
   <commands to execute>
 
 
-Slurm Job Arrays
+Slurm job arrays
 ================
 In HPC environments, users often need to run large numbers of jobs that are very similar, such as simulations with varying input parameters or the processing of multiple data files. Managing and tracking individual jobs can be a cumbersome and time-consuming process. Enter: Slurm job arrays.
 
@@ -265,7 +269,7 @@ In summary: (**1**) can be challenging to parallelize effectively; (**2**) can c
 
 Using Slurm job arrays can simplify job management and streamline your workflow, mainly when dealing with large sets of identical tasks.
 
-Sample Data
+Sample data
 ^^^^^^^^^^^
 See :download:`bash script to generate sample data <../resources/create_sample_array_data.sh>`. This script simply creates a data directory array_example_data and populates it with some text files.
 
@@ -276,7 +280,7 @@ See :download:`bash script to generate sample data <../resources/create_sample_a
    :linenos:
 
 
-Batch Script and Array
+Batch script and array
 ^^^^^^^^^^^^^^^^^^^^^^
 We will then use this script, which we save as ``array_batch.sh`` to “evaluate” the data:
 
@@ -395,7 +399,7 @@ For example, if you are associated with an account named ``dataclub`` and an acc
 
 #. Use environment modules: Slurm's environment is set via modules to manage software installations. Make sure to load the appropriate modules before running your job.
 
-Cluster and Node States
+Cluster and node states
 =======================
 Here are some more examples of using ``sinfo`` and ``scontrol`` to provide information about the state of the cluster and specific nodes:
 
@@ -550,7 +554,7 @@ Some of the tasks that can done using ``scontrol`` include:
 
 Overall, ``scontrol`` is a powerful tool for managing Slurm jobs and job-related resources. Its command-line interface allows users to perform a wide range of tasks, from checking the status of jobs to modifying job properties and managing dependencies.
 
-Controlling Jobs
+Controlling jobs
 ^^^^^^^^^^^^
 ``scontrol hold <jobid>`` Place a hold on a pending job, i.e., prevent specified job from starting. <job_list> is either a space separate list of job IDs or job names.
 
