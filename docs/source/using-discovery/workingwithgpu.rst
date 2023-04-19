@@ -3,46 +3,72 @@
 ******************
 Working with GPUs
 ******************
-The Discovery cluster has a number of Graphics Processing Units (GPUs) available, as detailed in the table below.
+The Discovery cluster has a number of NVIDIA Graphics Processing Units (GPUs) available, as detailed in the table below. 
 
 .. list-table::
-  :widths: 40 40 40 40 40
+  :widths: 40 40 40 40 40 40
   :header-rows: 1
 
   * - GPU Type
-    - Number of nodes/GPUs
-    - CPU Type
-    - CPUs/node
-    - RAM per node
     - GPU Memory
     - Tensor Cores
-    - Cuda Capibility 
-  * - p100 (Pascal)
-    - 12 nodes with 4 GPUs each
-    - broadwell
-    - 28
-    - 512GB
-    - 
-  * - v100-pcie (Volta)
-    - 4 nodes with 2 GPUs each
-    - AMD zen
-    - 32
-    - 480GB
+    - CUDA Cores
+    - Number of nodes/GPUs - Shared
+    - Number of nodes/GPUs - Private
+  * - p100 (`Pascal <https://www.nvidia.com/en-us/data-center/tesla-p100/>`_)
+    - 12GB
+    - N/A 
+    - 3,584
+    - 12 with 3-4 GPUs each
+    - 3 with 4 GPUs each
+  * - v100-pcie (`Volta <https://www.nvidia.com/en-us/data-center/v100/>`_)
+    - 32GB 
+    - 640
+    - 5,120
+    - 4 with 2 GPUs each
+    - 1 with (16GB) 2 GPUs
   * - v100-sxm2 (Volta)
-    - 24 nodes with 4 GPUs each
-    - Intel skylake_avx512
-    - 28
-    - 187GB
-  * - t4 (Turing)
-    - 2 nodes with 4 GPUs each
-    - Intel skylake_avx512
-    - 28  
-    - 187GB
-  * - a100 (Ampere)
-    - 1 node with 4 GPUs
-    - AMD zen3
-    - 64  
-    - 512GB    
+    - 32GB
+    - 640
+    - 5,120
+    - 24 with 4 GPUs each
+    - 10 with 4 GPUs each & 16GB GPU memory; 8 with 4 GPUs & 32GB GPU memory
+  * - t4 (`Turing <https://www.nvidia.com/en-us/data-center/tesla-t4/>`_)
+    - 15GB
+    - 320
+    - 2,560
+    - 2 with 3-4 GPUs each
+    - 1 with 4 GPUs
+  * - quadro (`Quadro RTX 8000 <https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-rtx-8000-us-nvidia-946977-r1-web.pdf/>`_) 
+    - 46GB
+    - 576
+    - 4,608  
+    - 0
+    - 2 with 3 GPUs each
+  * - a30 ( `Ampere <https://www.nvidia.com/en-us/data-center/products/a30-gpu/>`_)
+    - 24GB
+    - 224
+    - 3,804
+    - 0
+    - 1 with 3 GPUs 
+  * - a100 (`Ampere <https://www.nvidia.com/en-us/data-center/a100/>`_)
+    - 41 & 82GB
+    - 432
+    - 6,912  
+    - 3 nodes with 4 GPUs each
+    - 15 nodes with 2-8 GPUs each
+  * - a5000 (`Ampere RTX A5000 <https://www.nvidia.com/en-us/design-visualization/rtx-a5000/>`_)
+    - 24GB
+    - 256
+    - 8,192  
+    - 0
+    - 6 with 8 GPUs each
+  * - a6000 (`Ampere RTX A6000 <https://www.nvidia.com/en-us/design-visualization/rtx-a6000/>`_)
+    - 49GB
+    - 336
+    - 10,752  
+    - 0
+    - 3 with 8 GPUs each
 
 These GPUs are available within two partitions, named ``gpu`` and
 ``multigpu``. The differences between the two partitions are the
