@@ -43,7 +43,7 @@ The Discovery cluster has a number of NVIDIA Graphics Processing Units (GPUs) av
     - 2,560
     - 2 with 3-4 GPUs each
     - 1 with 4 GPUs
-  * - quadro (`Quadro RTX 8000 <https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-rtx-8000-us-nvidia-946977-r1-web.pdf/>`_) 
+  * - quadro (`Quadro RTX 8000 <https://www.nvidia.com/en-us/design-visualization/previous-quadro-desktop-gpus/>`_) 
     - 46GB
     - 576
     - 4,608  
@@ -133,7 +133,7 @@ to request a gpu::
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 
 .. note:: 
-On the ``gpu`` partition, requesting more than 1 GPU
+   On the ``gpu`` partition, requesting more than 1 GPU
    (``--gres=gpu:1``) will cause your request to fail. Additionally,
    one cannot request all the CPUs on that gpu node as they are
    reserved for other GPUs. 
@@ -206,7 +206,7 @@ environment for CUDA version 11.7.
    environment. Additionally, the latest version of PyTorch is not
    compatible with GPUs with CUDA version 11.7 or less. Hence, the
    installation does not work on k40m or k80 GPU's. In order to see
-   what non-Kepler GPUs might be available, one can execute this
+   what ``non-Kepler`` GPUs might be available, one can execute this
    command::
 
      sinfo -p gpu --Format=nodes,cpus,memory,features,statecompact,nodelist,gres
