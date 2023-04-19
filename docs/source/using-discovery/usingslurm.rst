@@ -105,11 +105,11 @@ To run a job interactively, use ``srun``. To submit a job to run in the backgrou
    * - Slurm Command
      - Function
    * - ``srun``
-     - Run an interactive job on the cluster. See :ref:`_using-srun`
+     - Run an interactive job on the cluster. See `using-srun`_.
    * - ``sbatch <scriptname.script>``
-     - Submit a script to the scheduler for running a job. See :ref:`_using-sbatch`
+     - Submit a script to the scheduler for running a job. See `using-sbatch`_.
    * - ``scancel <jobid>``
-     - Cancel a pending or running job on the cluster
+     - Cancel a pending or running job on the cluster.
 
 .. _using-srun:
 Using srun
