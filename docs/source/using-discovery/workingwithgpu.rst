@@ -73,10 +73,10 @@ The Discovery cluster has a number of NVIDIA Graphics Processing Units (GPUs) av
 These GPUs are available within two partitions, named ``gpu`` and
 ``multigpu``. The differences between the two partitions are the
 number of GPUs that one can request per job and the time limit on each
-job. Both partitions give access to all of the above GPU types. The
-table below shows the differences between the two partitions. For more
-information about the partitions on Discovery, see
-:ref:`partition_names`.
+job. Both partitions give access to all of the public GPU types
+mentioned above. The table below shows the differences between the two
+partitions. For more information about the partitions on Discovery,
+see :ref:`partition_names`.
 
 .. list-table::
    :widths: 20 20 20 20 20 20 20 20 20
@@ -110,19 +110,34 @@ information about the partitions on Discovery, see
      - 12
      - 12
 
-Anyone with a Discovery account can use the ``gpu`` partition. However, you must submit a `ServiceNow ticket <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_ to request temporary access to multigpu for testing, or to request full access to the ``multigpu`` partition.  
-Your request will be evaluated by members of the RC team to ensure that the resources in this partition will be used appropriately.
+Anyone with a Discovery account can use the ``gpu``
+partition. However, you must submit a `ServiceNow ticket
+<https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7>`_
+to request temporary access to multigpu for testing, or to request
+full access to the ``multigpu`` partition.  Your request will be
+evaluated by members of the RC team to ensure that the resources in
+this partition will be used appropriately.
 
 Requesting GPUs with ``srun`` or ``sbatch``
 ===========================================
-Use ``srun`` for interactive mode and ``sbatch`` for batch mode. The ``srun`` example below is requesting 1 node and 1 GPU with 4GB of memory in the ``gpu`` partition. You must use the ``--gres=`` option to request a gpu::
+
+Use ``srun`` for interactive and ``sbatch`` for batch mode. The
+``srun`` example below is requesting 1 node and 1 GPU with 4GB of
+memory in the ``gpu`` partition. You must use the ``--gres=`` option
+to request a gpu::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 
-.. note::
-   On the ``gpu`` partition, requesting more than 1 GPU (``--gres=gpu:1``) will cause your request to fail. Also, you cannot request all CPUs on that node, since they are reserved for other GPUs.
+.. note:: 
 
-The ``sbatch`` example below is similar to the ``srun`` example above, but it gives the job a name and directs the output to a file::
+On the ``gpu`` partition, requesting more than 1 GPU
+   (``--gres=gpu:1``) will cause your request to fail. Additionally,
+   one cannot request all the CPUs on that gpu node as they are
+   reserved for other GPUs. 
+
+The ``sbatch`` example below is similar to the ``srun`` example above,
+but it submits the job in the background, gives it a name, and directs
+the output to a file::
 
   #!/bin/bash
   #SBATCH --partition=gpu
@@ -138,12 +153,18 @@ The ``sbatch`` example below is similar to the ``srun`` example above, but it gi
 
 Specifying a GPU type
 +++++++++++++++++++++
-You can add a specific type of GPU to the ``--gres=`` option (with either ``srun`` or ``sbatch``). For a list of available GPU types, refer to the GPU Types column in the table at the top of this page. The following example is a request for 1 p100 GPU::
+
+You can add a specific type of GPU to the ``--gres=`` option (with
+either ``srun`` or ``sbatch``). For a list of available GPU types,
+refer to the GPU Types column in the table, at the top of this page,
+that are listed as ``Public``. The following is an example for
+requesting a single p100 GPU::
 
   --gres=gpu:p100:1
 
 .. note::
-   Requesting a specific type of GPU could result in longer wait times, based on GPU availability at that time. 
+   Requesting a specific type of GPU could result in longer wait
+   times, based on GPU availability at that time.
 
 Using CUDA
 ===========
@@ -158,17 +179,27 @@ There are several versions of CUDA Toolkits on Discovery, including::
   cuda/11.2
   cuda/11.3
   cuda/11.4
+  cuda/11.7
 
-Use the ``module avail`` command to check for the latest software versions on Discovery. To see details on a specific CUDA toolkit version, use ``module show``. For example, ``module show cuda/11.4``.
+Use the ``module avail`` command to check for the latest software
+versions on Discovery. To see details on a specific CUDA toolkit
+version, use ``module show``. For example, ``module show cuda/11.4``.
 
-To add CUDA to your path, use ``module load``. For example, type ``module load cuda/11.4`` to load version 11.4 to your path.
+To add CUDA to your path, use ``module load``. For example, type
+``module load cuda/11.4`` to load version 11.4 to your path.
 
-Use the command ``nvidia-smi`` (NVIDIA System Management Interface) inside a GPU node to get the CUDA driver information and monitor the GPU device.
+Use the command ``nvidia-smi`` (NVIDIA System Management Interface)
+inside a GPU node to get the CUDA driver information and monitor the
+GPU device.
 
 Using GPUs with PyTorch
 ========================
-You should use PyTorch with a conda virtual environment if you need to run the environment on the Nvidia GPUs on Discovery. The following examples demonstrate how to build PyTorch inside a conda virtual environment for CUDA version 11.7. 
-Make sure that you are on a GPU node before loading the environment. Please note, the installation does not work on k40m or k80 GPU's
+You should use PyTorch with a conda virtual environment if you need to
+run the environment on the Nvidia GPUs on Discovery. The following
+examples demonstrate how to build PyTorch inside a conda virtual
+environment for CUDA version 11.7.  Make sure that you are on a GPU
+node before loading the environment. Please note, the installation
+does not work on k40m or k80 GPU's
 
 PyTorch installation steps (with Anaconda libraries)::
 
