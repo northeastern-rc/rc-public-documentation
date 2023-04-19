@@ -58,7 +58,7 @@ This page is specific for using Slurm on Discovery. For more in-depth and genera
 
 
 Slurm CLI
-==============
+----------
 List of typical Slurm commands for working on Discovery.
 
 These functions are fully documented for the version of Slurm installed, which is listed in the manual pages. To get the manual pages for the Slurm functions, run ``man <SLURM_command>`` on the HPC. This command lists all the parameters and keywords that you can use with the given Slurm commands. You can also run ``<SLURM_command> --help``, which will list the help page for the Slurm function. These two give you the full possibilities of what these functions can do. The following sections are helpful/commonly used Slurm commands that are good to know for different ticket requests and common checks on the cluster.
@@ -68,12 +68,13 @@ These functions are fully documented for the version of Slurm installed, which i
 
 
 Job Reporting
--------------
+==============
 ``sacct <options>`` Display job accounting information
 
 ``sreport <options>`` Generate reports about cluster utilization and job statistics
 
-**NOTE:** Each command's options and functions may vary depending on the Slurm version and configuration. We recommend consulting the Slurm documentation for more information on the full range of available commands and their usage. See `Slurm documentation`_ for details.
+.. note:: 
+  Each command's options and functions may vary depending on the Slurm version and configuration. We recommend consulting the Slurm documentation for more information on the full range of available commands and their usage. See `Slurm documentation`_ for details.
 
 Viewing cluster information
 ===========================
