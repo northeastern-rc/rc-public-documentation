@@ -10,7 +10,8 @@ running at 200 Gbps (with some nodes running HDR100 IB, if HDR200 IB is not supp
 
 CPU nodes
 =================================
-Table 1 shows the feature names, partition type (public, private, and total), and RAM memory range. We also show the archspec microachitecture specification (https://archspec.readthedocs.io/en/latest/index.html)
+Table 1 shows the feature names, number of nodes by partition type (public, private, and total), and the RAM memory range per node. The feature name follows archspec microachitecture specification (https://archspec.readthedocs.io/en/latest/index.html)
+
 **Table 1: CPU Nodes**
 
 .. list-table::
@@ -47,7 +48,7 @@ Table 1 shows the feature names, partition type (public, private, and total), an
 
 If you are looking for information about GPUs, see :ref:`working_gpus`.
 
-If you are looking for information about the partitions on Discovery, see :ref:`partition_names`.
+If you are looking for information about the partitions on Discovery, see :ref:`partition-names`. You can view more information about what is currently available on each node on a desired partition at :ref: `viewing-partition-info`. 
 
 
 Using the ``--constraint`` flag
@@ -59,6 +60,6 @@ When using ``srun`` or ``sbatch``, you can specify specific hardware features as
         srun --constraint=ib --pty /bin/bash  
         srun --constraint="[ivybridge|zen2]" --pty /bin/bash #this uses the OR operator | to select either an ivybridge or zen2 node. 
 
-Note, using a constraint can mean that you will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see :ref:`using_slurm`. Also, note that only the OR operator ``|`` is supported at this time. 
+Note, using a constraint can mean that you will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see :ref:`using_slurm`. Finally, at this time only the OR operator ``|`` is supported when using ``--contraint``. 
 
 
