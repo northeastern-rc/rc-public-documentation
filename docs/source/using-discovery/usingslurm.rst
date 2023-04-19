@@ -126,7 +126,7 @@ and the limits of the partitions. For example, if you specify ``--partition=shor
 time you've specified exceeds the limit for that partition. Also keep in mind that while these examples are all valid, general examples, they might not work
 for your particular job.
 
-This simple ``srun`` example is to move to a _compute_ node after you first log into Discovery.::
+This simple ``srun`` example is to move to a _compute_ node after you first log into Discovery::
 
  srun --pty /bin/bash
 
@@ -182,7 +182,7 @@ Run a job on one node for four hours on the short partition::
 
 Job request: one node with additional memory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The default memory per allocated core is 1GB. If calculations attempt to access more memory than allocated, Slurm automatically terminates the job. Request a specific amount of memory in the job script if calculations require more than the default. The example script below requests 100GB of memory (``--mem=100G``). Use one capital letter to abbreviate the unit of memory (K, M, G, T) with the ``--mem=`` option, as that is what Slurm expects to see. ::
+The default memory per allocated core is 1GB. If calculations attempt to access more memory than allocated, Slurm automatically terminates the job. Request a specific amount of memory in the job script if calculations require more than the default. The example script below requests 100GB of memory (``--mem=100G``). Use one capital letter to abbreviate the unit of memory (K, M, G, T) with the ``--mem=`` option, as that is what Slurm expects to see::
 
   #!/bin/bash
   #SBATCH --nodes=1
@@ -194,7 +194,7 @@ The default memory per allocated core is 1GB. If calculations attempt to access 
 
 Job request: one node with exclusive use of a node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies the exclusive use of one node in the short partition for four hours.::
+If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies the exclusive use of one node in the short partition for four hours::
 
   #!/bin/bash
   #SBATCH --nodes=1
@@ -386,7 +386,7 @@ To find out what account(s) your username is associated with, use the following 
 
 After you have determined what accounts your username is associated with, if you have more than one account association, you can use the ``account=`` flag with your usual ``srun`` or ``sbatch`` commands.
 
-For example, if you are associated with an account named ``dataclub`` and an account named ``info7500``, and you're currently doing work that should be associated with the ``dataclub`` account, in your ``srun`` command, you can add the ``--account=dataclub`` flag to specify that account.::
+For example, if you are associated with an account named ``dataclub`` and an account named ``info7500``, and you're currently doing work that should be associated with the ``dataclub`` account, in your ``srun`` command, you can add the ``--account=dataclub`` flag to specify that account::
 
   srun --account=dataclub --partition=short --nodes=1 --ntasks=28 --mem=0 --pty /bin/bash
 .. note::
@@ -595,7 +595,7 @@ Which is equivalent to both of the following commands::
    scontrol show reservation
    scontrol show res
 
-View information about a specific job. This command will show information about a specific job, including the job ID, state, username, and partition name.::
+View information about a specific job. This command will show information about a specific job, including the job ID, state, username, and partition name::
 
    scontrol show job <job_id>
 
