@@ -105,13 +105,12 @@ To run a job interactively, use ``srun``. To submit a job to run in the backgrou
    * - Slurm Command
      - Function
    * - ``srun``
-     - Run an interactive job on the cluster. See `using-srun`_.
+     - Run an interactive job on the cluster.
    * - ``sbatch <scriptname.script>``
-     - Submit a script to the scheduler for running a job. See `using-sbatch`_.
+     - Submit a script to the scheduler for running a job.
    * - ``scancel <jobid>``
      - Cancel a pending or running job on the cluster.
 
-.. _using-srun:
 Using srun
 -----------
 Use the Slurm command ``srun`` to allocate an interactive job. This means you use specific options with ``srun`` on the command line to tell Slurm what resources are needed to run your job, such as number of nodes, amount of memory, and amount of time. Enter ``srun`` command and options on the command line, the and press ``Return``. Slurm will find, and then allocate, the specified resources. Depending on the specifications, this process may take a few minutes. All ``srun`` options can be found in the `Slurm documentation`_. The following image shows an example of an ``srun`` command as run on a command line.
@@ -149,7 +148,6 @@ To allocate a GPU node, you should specify the ``gpu`` partition and use the --g
 
 For more information about working with GPUs, see :ref:`working_gpus`.
 
-.. _using-sbatch:
 Using sbatch
 ------------
 You use the ``sbatch`` command with a bash script to specify the
