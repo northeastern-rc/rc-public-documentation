@@ -196,34 +196,67 @@ Using GPUs with PyTorch
 ========================
 You should use PyTorch with a conda virtual environment if you need to
 run the environment on the Nvidia GPUs on Discovery. The following
-examples demonstrate how to build PyTorch inside a conda virtual
-environment for CUDA version 11.7.  Make sure that you are on a GPU
-node before loading the environment. Please note, the installation
-does not work on k40m or k80 GPU's
+example demonstrates how to build PyTorch inside a conda virtual
+environment for CUDA version 11.7.  
 
-PyTorch installation steps (with Anaconda libraries)::
+.. note:: 
+   Make sure to be on a GPU node before loading the
+   environment. Additionally, the latest version of PyTorch is not
+   compatible with GPUs with CUDA version 11.7 or less. Hence, the
+   installation does not work on k40m or k80 GPU's. In order to see
+   what non-Kepler GPUs might be available, one can execute this
+   command::
 
-  srun --partition=gpu --nodes=1 --pty --gres=gpu:v100-sxm2:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load cuda/11.7
-  module load anaconda3/2022.05
+     sinfo -p gpu --Format=nodes,cpus,memory,features,statecompact,nodelist,gres
+  
+   This will indicate the state (idle or not) of a certain gpu-type
+   that could be helpful in requesting an ``idle`` gpu. However, the
+   command does not give real-time information of the state and should
+   be used with caution.
+
+PyTorch installation steps (with a specific GPU-type other than k40m or k80)::
+
+  srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
+  module load anaconda3/2022.05 cuda/11.7
   conda create --name pytorch_env python=3.9 -y
   source activate pytorch_env
   conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia -y
   python -c'import torch; print(torch.cuda.is_available())'
 
 .. note::
-   If the installation times out, please ensure that your .condarc file doesn't contain additional channels. Also, consider cleaning your conda instance using the conda clean command.
+
+   If the installation times out, please ensure that your .condarc
+   file doesn't contain additional channels. Also, consider cleaning
+   your conda instance using the ``conda clean`` command. See `Conda
+   best practices
+   <https://rc-docs.northeastern.edu/en/latest/software/conda.html#conda-best-practices>`_ .
 
 If CUDA is detected by PyTorch, you should see the result, ``True``.
 
-As the latest version of PyTorch often depends on the newest CUDA available, please refer to the `PyTorch documentation page <https://pytorch.org/>`_ for the installation instructions. 
+As the latest version of PyTorch often depends on the newest CUDA
+available, please refer to the `PyTorch documentation page
+<https://pytorch.org/>`_ for the most up to date instructions on
+installation.
 
-Alternatively, you can use the existing Pytorch build (`pytorch_env_training` environment, PyTorch version 1.8.0, works with cuda/11.1 on any GPU including k40m & k80) by typing::
+The above PyTorch installation instructions will not include
+``jupyterlab`` and few other commonly used datascience packages in the
+environment. In order to include those one can execute the following
+command after activating the ``pytorch_env`` environment::
+
+  conda install pandas scikit-learn matplotlib seaborn jupyterlab
+
+One can also use an older Pytorch build (`pytorch_env_training`
+environment, PyTorch version 1.8.0 that works with cuda/11.1 on any
+GPU including k40m & k80) by typing::
 
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load anaconda3/2022.01 
-  module load cuda/11.1 
+  module load anaconda3/2022.01 cuda/11.1
   source activate pytorch_env_training
+
+.. note::
+   This environment also does not include ``jupyterlab`` or other
+   commonly used datascience packages. They will have to be installed
+   using the above ``conda install`` command.
 
 Using GPUs with TensorFlow
 ==========================
