@@ -13,7 +13,7 @@ The Discovery cluster has a number of NVIDIA Graphics Processing Units (GPUs) av
     - GPU Memory
     - Tensor Cores
     - CUDA Cores
-    - Number of nodes/GPUs - Shared
+    - Number of nodes/GPUs - Public
     - Number of nodes/GPUs - Private
   * - p100 (`Pascal <https://www.nvidia.com/en-us/data-center/tesla-p100/>`_)
     - 12GB
