@@ -5,6 +5,10 @@ Working with GPUs
 ******************
 The Discovery cluster has a number of NVIDIA Graphics Processing Units (GPUs) available, as detailed in the table below. 
 
+.. note::
+   The tables on this page slide from left-to-right. Make sure to
+   swipe to left to see the content on the right side of the table
+
 .. list-table::
   :widths: 40 40 40 40 40 40
   :header-rows: 1
@@ -129,7 +133,6 @@ to request a gpu::
   srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 
 .. note:: 
-
 On the ``gpu`` partition, requesting more than 1 GPU
    (``--gres=gpu:1``) will cause your request to fail. Additionally,
    one cannot request all the CPUs on that gpu node as they are
@@ -153,7 +156,6 @@ the output to a file::
 
 Specifying a GPU type
 +++++++++++++++++++++
-
 You can add a specific type of GPU to the ``--gres=`` option (with
 either ``srun`` or ``sbatch``). For a list of available GPU types,
 refer to the GPU Types column in the table, at the top of this page,
@@ -224,7 +226,6 @@ PyTorch installation steps (with a specific GPU-type other than k40m or k80)::
   python -c'import torch; print(torch.cuda.is_available())'
 
 .. note::
-
    If the installation times out, please ensure that your .condarc
    file doesn't contain additional channels. Also, consider cleaning
    your conda instance using the ``conda clean`` command. See `Conda
@@ -260,14 +261,18 @@ GPU including k40m & k80) by typing::
 
 Using GPUs with TensorFlow
 ==========================
-We recommend that you use CUDA 11.2 (latest supported version) when working on a GPU with the latest version of TensorFlow (TF).
-TensorFlow provides information on the `compatibility of CUDA and TensorFlow versions <https://www.tensorflow.org/install/source#gpu>`_, and `detailed installation instructions <https://www.tensorflow.org/install/pip>`_. 
+We recommend that you use CUDA 11.2 (latest supported version) when
+working on a GPU with the latest version of TensorFlow (TF).
+TensorFlow provides information on the `compatibility of CUDA and
+TensorFlow versions <https://www.tensorflow.org/install/source#gpu>`_,
+and `detailed installation instructions
+<https://www.tensorflow.org/install/pip>`_.
 
-For the latest installation, use the TensorFlow pip package, which includes GPU support for CUDA-enabled devices::
+For the latest installation, use the TensorFlow pip package, which
+includes GPU support for CUDA-enabled devices::
 
-  srun --partition=gpu --gres=gpu:1 --nodes=1 --ntasks=1 --mem=10GB --time=01:00:00 --pty /bin/bash
-  module load anaconda3/2022.05
-  module load cuda/11.2
+  srun --partition=gpu --gres=gpu:1 --nodes=1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
+  module load anaconda3/2022.05 cuda/11.2
   conda create --name TF_env python=3.9 -y
   source activate TF_env
   conda install -c conda-forge cudatoolkit=11.2.2 cudnn=8.1.0 -y
@@ -282,7 +287,7 @@ Verify the installation::
   # Verify the CPU setup (if successful, then a tensor is returned):
   python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
 
-  # verify the GPU setup (if successful, then a list of GPU devices is returned):
+  # verify the GPU setup (if successful, then a list of GPU device is returned):
   python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
   # test if a GPU device is detected with TF (if successful, then True is returned):
@@ -292,6 +297,11 @@ To get the name of the GPU, type::
 
    python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
 
-If the installation is successful, then you should see the following output,::
+If the installation is successful, then you should see the following,
+for example, as an output,::
 
    2023-02-24 16:39:35.798186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /device:GPU:0 with 10785 MB memory:  -> device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7 /device:GPU:0
+
+.. note::
+   Ignore the ``Warning`` messages that get generated after executiing
+   the above commands.
