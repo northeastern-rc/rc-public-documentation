@@ -7,7 +7,7 @@ The Discovery cluster has a number of NVIDIA Graphics Processing Units (GPUs) av
 
 .. note::
    The tables on this page slide from left-to-right. Make sure to
-   swipe to left to see the content on the right side of the table
+   swipe to right to see the content on the right side of the table
 
 .. list-table::
   :widths: 40 40 40 40 40 40
