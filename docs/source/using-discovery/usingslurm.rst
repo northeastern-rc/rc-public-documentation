@@ -8,7 +8,7 @@ Overview
 ========
 Slurm (Simple Linux Utility for Resource Management) is an open-source job scheduler and resource manager developed at Lawrence Livermore National Laboratory and is widely-used in high-performance computing (HPC) environments, including academic and research institutions, government labs, and industry. Slurm is designed to efficiently allocate and reasonably manage resources (e.g., CPUs, memory, GPUs) among multiple users and jobs, and is known for its scalability, reliability, and flexibility.
 
-Slurm provides features to support the efficient management of HPC resources, including job submission, scheduling, prioritization, and accounting. For example, Slurm allows users to submit jobs and request resources and manages the allocation and distribution of resources across the cluster. Slurm can also handle job dependencies, allowing users to define dependencies between jobs and specify when specific jobs should start.
+Slurm provides features to support the efficient management of high-performance computing (HPC) resources, including job submission, scheduling, prioritization, and accounting. For example, Slurm allows users to submit jobs and request resources and manages the allocation and distribution of resources across the cluster. Slurm can also handle job dependencies, allowing users to define dependencies between jobs and specify when specific jobs should start.
 
 One of the key features of Slurm is its ability to support heterogeneous clusters, where different compute nodes have varying hardware specifications. Slurm can manage resources on various hardware and software configurations. It provides a way to specify the job requirements to ensure scheduling with the appropriate nodes.
 
@@ -29,7 +29,7 @@ By following the contents of this page, the user will be able to
 * Check the cluster state, along with that of specific nodes.
 * Gain knowledge of various best practices when using Slurm.
 
-Hence, Slurm is a job scheduler and batch manager. Here are main Slurm commands:
+Hence, Slurm is a job scheduler and batch manager. Here are the main Slurm commands:
 
 .. list-table:: Common Slurm commands exemplified throughout this page.
    :widths: 25 75
@@ -61,7 +61,7 @@ Slurm CLI
 ==============
 List of typical Slurm commands for working on Discovery.
 
-These functions are fully documented for the version of Slurm installed on in the manual pages. To get the manual pages for the Slurm functions, run ``man <SLURM_command>`` on the HPC. This command lists all the parameters and keywords that you can use with the given Slurm commands. You can also run ``<SLURM_command> --help``, which will list the help page for the Slurm function. These two give you the full possibilities of what these functions can do. The following sections are helpful/commonly used Slurm commands that are good to know for different ticket requests and common checks on the cluster.
+These functions are fully documented for the version of Slurm installed, which is listed in the manual pages. To get the manual pages for the Slurm functions, run ``man <SLURM_command>`` on the HPC. This command lists all the parameters and keywords that you can use with the given Slurm commands. You can also run ``<SLURM_command> --help``, which will list the help page for the Slurm function. These two give you the full possibilities of what these functions can do. The following sections are helpful/commonly used Slurm commands that are good to know for different ticket requests and common checks on the cluster.
 
 .. important::
    Slurm commands have numerous options to help your jobs run efficiently by requesting specific resources. Options usually have both short and verbose versions, such as ``--nodes`` and ``-n`` (both mean the same thing). The examples in this documentation all use the verbose version of the options for clarity, but you can use the short version if you prefer. For example, ``srun -p short -N 1 -n 1`` means the same thing as ``srun --partition=short --nodes=1 --ntasks=1``.
@@ -105,13 +105,13 @@ To run a job interactively, use ``srun``. To submit a job to run in the backgrou
    * - Slurm Command
      - Function
    * - ``srun``
-     - Run an interactive job on the cluster. See :ref:`_using_srun`
+     - Run an interactive job on the cluster. See :ref:`_using-srun`
    * - ``sbatch <scriptname.script>``
-     - Submit a script to the scheduler for running a job. See :ref:`_using_sbatch`
+     - Submit a script to the scheduler for running a job. See :ref:`_using-sbatch`
    * - ``scancel <jobid>``
      - Cancel a pending or running job on the cluster
 
-.. _using_srun:
+.. _using-srun:
 Using srun
 -----------
 Use the Slurm command ``srun`` to allocate an interactive job. This means you use specific options with ``srun`` on the command line to tell Slurm what resources are needed to run your job, such as number of nodes, amount of memory, and amount of time. Enter ``srun`` command and options on the command line, the and press ``Return``. Slurm will find, and then allocate, the specified resources. Depending on the specifications, this process may take a few minutes. All ``srun`` options can be found in the `Slurm documentation`_. The following image shows an example of an ``srun`` command as run on a command line.
@@ -149,7 +149,7 @@ To allocate a GPU node, you should specify the ``gpu`` partition and use the --g
 
 For more information about working with GPUs, see :ref:`working_gpus`.
 
-.. _using_sbatch:
+.. _using-sbatch:
 Using sbatch
 ------------
 You use the ``sbatch`` command with a bash script to specify the
@@ -241,7 +241,7 @@ Parallel jobs should use code configured to use the reserved resources. Running 
 
 Slurm Job Arrays
 ================
-In high-performance computing (HPC) environments, users often need to run large numbers of jobs that are very similar, such as simulations with varying input parameters or the processing of multiple data files. Managing and tracking individual jobs can be a cumbersome and time-consuming process. Enter: Slurm job arrays.
+In HPC environments, users often need to run large numbers of jobs that are very similar, such as simulations with varying input parameters or the processing of multiple data files. Managing and tracking individual jobs can be a cumbersome and time-consuming process. Enter: Slurm job arrays.
 
 A job array is a collection of related jobs submitted to Slurm as a single entity. A unique index identifies each job in the array, which runs independently on a separate compute node. The index can specify different input files or parameters for each job, allowing for the efficient processing of many similar tasks.
 
@@ -256,7 +256,7 @@ To use an array with your jobs, in your ``sbatch`` script, use the ``array=`` op
 
    #SBATCH --array=1-10%1
 
-To illustrate, let's consider three possible ways to process a collection input files.
+To illustrate, let's consider three possible ways to process a collection of input files.
 
 #. Write a single script that loops through the input files and executes the processing code.
 #. Write a script that processes a single file and submits it multiple times, once for each file, with the filename accepted as a parameter.
@@ -329,7 +329,7 @@ We will then use this script, which we save as ``array_batch.sh`` to “evaluate
    fi
 
    # The action:
-   # In this case, nob much. We'll just shout out the host name and cat the contents
+   # In this case, not much. We'll just shout out the host name and cat the contents
    #  of the file.
    echo "Hosthame: `hostname`"
    echo "CPU codename: \n`cpu_codename`"
@@ -350,7 +350,7 @@ Then, submit the job as follows:
 
    sbatch --array=0-19 --output=job_array_example_%A_%a.out --error=job_array_example_%A_%a.err array_batch.sh
 
-``%A`` and ``%a`` will output the parent jobID and array index, respectively. Submitted this way, Slurm will generate 20 jobs; for each job, a unique index value (i.e., ``[0..19]``) will be assigned to the ``SLURM_ARRAY_TASK_ID`` environment variable, which has various uses. For example, as discussed in the script comments, it can define the input path name, or as we have done in this example, it can select the ``k-th`` file in the directory, or it can choose a set of user-defined input parameters, for example, from a JSON file, or it can be used simply as an input parameter.
+``%A`` and ``%a`` will output the parent ``jobID`` and array index, respectively. Submitted this way, Slurm will generate 20 jobs; for each job, a unique index value (i.e., ``[0, 1, ..., 19]``) will be assigned to the ``SLURM_ARRAY_TASK_ID`` environment variable, which has various uses. For example, as discussed in the script comments, it can define the input path name, or as we have done in this example, it can select the ``k-th`` file in the directory, or it can choose a set of user-defined input parameters, for example, from a JSON file, or it can be used simply as an input parameter.
 
 .. important::
    The example script above can be run as an array or against a single file, either interactively or as a batch script, without making any additional changes. Additionally, an optional parameter can specify the input filename (single task mode) or an input directory (array mode).
@@ -476,7 +476,7 @@ The current ``TimeLimit`` for the queues::
    .
    .
    .
-View information about a specific partition::
+View information about a specific partition (e.g., ``short``, ``gpu``, ``long``)::
 
    sinfo -p <partition_name>
 Or, only view nodes in a certain state::
@@ -553,11 +553,13 @@ Overall, ``scontrol`` is a powerful tool for managing Slurm jobs and job-related
 
 Controlling Jobs
 ^^^^^^^^^^^^
-``scontrol hold <jobid>`` Place a hold on a pending job
+``scontrol hold <jobid>`` Place a hold on a pending job, i.e., prevent specified job from starting. <job_list> is either a space separate list of job IDs or job names.
 
-``scontrol release <jobid>`` Release a held job
+``scontrol release <jobid>`` Release a held job, i.e., permit specified job to start (see hold).
 
 ``scontrol requeue <jobid>`` Re-queue a completed, failed, or cancelled job
+
+For more information on the commands listed above, along with a complete list of ``scontrol`` commands run ``scontrol --help``.
 
 Examples using scontrol
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -586,15 +588,20 @@ For example::
    CapWatts=n/a
    CurrentWatts=0 AveWatts=0
    ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
-For information on all reservations, this command will show information about a specific node in the cluster, including the node name, state, number of CPUs, and amount of memory:::
+For information on all reservations, this command will show information about a specific node in the cluster, including the node name, state, number of CPUs, and amount of memory::
 
    scontrol show reservations
+
+Which is equivalent to both of the following commands::
+
+   scontrol show reservation
+   scontrol show res
 
 View information about a specific job. This command will show information about a specific job, including the job ID, state, username, and partition name.::
 
    scontrol show job <job_id>
 
-View information about a specific reservation, this command will show information about a specific reservation in the cluster, including the reservation name, start time, end time, and nodes included in the reservation:::
+To view information about a specific reservation (e.g., found via ``scontrol show res`` listed above), and print information about a specific reservation in the cluster, including the reservation name, start time, end time, and nodes included in the reservation::
 
    scontrol show reservation <reservation_name>
 
