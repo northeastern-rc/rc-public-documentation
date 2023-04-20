@@ -59,6 +59,31 @@ For example, to transfer test-data folder from Discovery to an external machine,
 Using SSHFS
 ===========
 
+Installing SSHFS on MacOS
+-------------------------
+
+1. Go to https://osxfuse.github.io/
+2. Install macFuse
+
+.. image:: /images/sshfs_1_install_macfuse.jpeg
+3. Install SSHFS
+
+.. image:: /images/sshfs_2_install_sshfs.jpeg
+4. Enable system extensions: to do this, shut down the system. Then press and hold the power button to launch Startup Security Utility. In Startup Security Utility, enable kernel extensions from the Security Policy button.
+
+.. image:: /images/sshfs_3_enable_system_extensions.jpeg
+5. Enable system extensions from Benjamin Fleischer: Open Settings > Privacy & Security > Select "App Store and identified developers" option under Security. Then click on "Details" button. A new window will open, select "Benjamin Fleischer" in this window.
+
+.. image:: /images/sshfs_4_enable_Benjamin_developer.jpeg
+6. Restart your system
+
+.. image:: /images/sshfs_5_restart.jpeg
+
+You should now be able to use sshfs on your terminal.
+
+Using SSHFS
+-----------
+
 You can use SSHFS to mount a directory on Discovery cluster to your local machine. You can then perform inter-cluster data transfer using this mounted directory.
 
 Use the following command format to mount a directory on Discovery to your local machine.
