@@ -5,23 +5,30 @@ Using Spack
 **************
 We recommend that you try using `Spack <https://spack.io/>`_ to install software locally to your path. Spack is a tool that conveniently installs
 software packages to your local path. Please refer to the `Spack documentation <https://spack.readthedocs.io/en/latest/index.html>`_  for the latest information about the `packages <https://spack.readthedocs.io/en/latest/package_list.html#package-list>`_ that Spack contains.
-To use Spack, you first need to copy it to your /home directory, then have it in your local environment. Use the procedure below to get started with Spack on Discovery.
+To use Spack, you first need to copy it to your /home directory or a /work directory, then have it in your local environment. Use the procedure below to get started with Spack on a HPC.
 
 Getting started with Spack
 ==========================
+These instructions will demonstate how to install Spack in your local /home directory (step 2) and then how to add Spack to your local environment while on a compute node so you have access to the Spack commands (steps 4-5).
 
-1. Connect to Discovery.
-2. Type ``git clone https://github.com/spack/spack.git``  to copy Spack to your /home directory.
-3. Type ``srun -p short --pty --export=ALL -N 1 -n 28 --exclusive /bin/bash`` to allocate an interactive node. Spack will attempt to run ``make`` in parallel, so this ``srun`` request is for 28 cores on one node (-N 1 -n 28).
-4. To have Spack in your local environment so you can use the Spack commands, type ``export SPACK_ROOT=/home/<yourusername>/spack``.
-5. Then type ``. $SPACK_ROOT/share/spack/setup-env.sh``.
-6. After you have the Spack commands in your path, type ``spack list`` to see all of the software that you can install with Spack.
-7. Type ``spack info <software name>`` to see information about a specific software package, including options and dependencies. Make sure to note the options and/or dependencies that you want to add or not add before installing the software.
-8. Type ``spack install <software name> +<any dependencies or options>`` to install a software package plus any dependencies or options. You can also specify ``-<any dependencies or options>``.You can list ``+`` or ``-`` different options and dependencies within the same line. Do not put a space between each option/dependency that you list.
-9. Type ``spack find`` to view your installed software packages, or type ``spack find <software package name>`` to view information about a specific installed package.
+1. Connect to Discovery via ssh.
+2. From the terminal, type ``git clone -c feature.manyFiles=true https://github.com/spack/spack.git`` to copy Spack to your /home directory.
+3. Type ``srun -p short --pty -N 1 -n 28 /bin/bash`` to allocate an interactive job on a compute node. Spack will attempt to run ``make`` in parallel when it builds the software you choose to install, so this ``srun`` request is for 28 cores on one node (-N 1 -n 28).
+To use Spack, it needs to add it to your local environment on the compute node which is why this is completed after step 3.
+4. To use a newer version of python for compatibility with Spack, type: ``module load python/3.8.1``.
+5. To add Spack in your local environment so you can use the Spack commands, type ``export SPACK_ROOT=/home/<yourusername>/spack``.
+6. Then type ``. $SPACK_ROOT/share/spack/setup-env.sh``.
+7. After you have the Spack commands in your environment, type ``spack list`` to see all of the software that you can install with Spack.
+8. Type ``spack info <software name>`` to see information about a specific software package, including options and dependencies. Make sure to note the options and/or dependencies that you want to add or not add before installing the software.
+9. Type ``spack install <software name> +<any dependencies or options>`` to install a software package plus any dependencies or options. You can also specify ``-<any dependencies or options>``.You can list ``+`` or ``-`` different options and dependencies within the same line. Do not put a space between each option/dependency that you list.
+10.  Type ``spack find`` to view your installed software packages, or type ``spack find <software package name>`` to view information about a specific installed package.
 
 When you have installed a software package, you can add it to the module system by typing:
 ``. $SPACK_ROOT/share/spack/setup-env.sh``
+
+.. note::
+
+   Spack can be installed in a /work directory which enables members of the /work directory to use the programs that are installed with Spack in that directory.
 
 Installing LAMMPS with Spack example
 =====================================
