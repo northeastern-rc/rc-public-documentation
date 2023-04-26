@@ -1,17 +1,17 @@
 *******************************************************
-Storage Quota at /home/
+Home Directory Storage Quota
 *******************************************************
-Staying under your ``/home/<username>`` quota is vital in preventing issues using Open OnDemand and performing tasks on Discovery. Here are some suggestions to stay under quota and general best practices with using your ``/home/<username>`` directory.
+There are strict quotas for each home directory (i.e.,  ``/home/<username>``) and staying quota is vital in preventing issues using Open OnDemand and performing tasks on the HPC. For more information about the quota see :ref:`discovery_storage`. This page provides some best practices for staying under quota.
 
 Analyze disk usage
 =======================================================
-From a compute node, ``srun --pty /bin/bash``, run the following command from your ``/home/<username>`` directory: ::
+From an srun session, ``srun --pty /bin/bash``, run the following command from your ``/home/<username>`` directory: ::
     
- du -shc .[^.]* *
+ du -shc .[^.]* ~/*
 
 This command will output the size of each file, directory, and hidden directory in your ``/home/<username>`` space, with the total of your ``/home`` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location, (g.g., ``/work`` for research) or you can back up and delete the files and directories if they are no longer required. An example output would look like: ::
  
- [<username>@<host> directory]$  du -shc .[^.]* *
+ [<username>@<host> directory]$  du -shc .[^.]*
  39M	.git
  106M	discovery-examples
  41K	README.md
@@ -63,20 +63,20 @@ The ``~/.cache`` directory can become large over time with general use of the HP
  
  squeue -u <username>
 
-which will display any current running SLURM jobs you have on the HPC. If you have no jobs running you can safely remove this directory.
+which prints a table with ``JOBID``, ``PARTITION``, ``NAME``, ``USER ST``, ``TIME``, ``NODES``, and ``NODELIST (REASON)`` which is empty when no jobs are running (i.e., it is safe to remove ``~/.cache`` when no jobs are running). 
 
 Best practices
 =======================================================
 
 Conda environments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Conda virtual environments should be used for all python based workflows and should be located in your PI's /work directory. To create a conda environment in a ``/work`` directory, please use the ``--prefix`` flag with conda as follows (where ``<project>`` is your PI's ``/work`` directory and ``<my directory>`` is an empty directory to store your conda environment): ::
+Use conda environments for python on HPC. To create an environment in ``/work``, use the ``--prefix`` flag as follows: (where ``<project>`` is your PI's ``/work`` directory and ``<my conda env>`` is an empty directory to store your conda environment): ::
 
  conda create --prefix=/work/<project>/<my conda env>
 
 More information about creating custom conda environments can be found here :ref:`working_conda`. 
 
-Conda environments that are stored in a commonly accessible directory in your PI's ``/work`` directory can be used by fellow group members by running ``source activate <env name>``. Utilizing the same conda environment will save storage space and time in building duplicate conda environments for the same project. 
+Utilize the same conda environment to save storage space and time (i.e., avoiding duplicate conda environments). Hence, shared environments can be easily done for a project accessing the same ``/work`` directory. For more information about creating custom conda environments, see :ref:`working_conda`. 
 
 Singularity containers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
