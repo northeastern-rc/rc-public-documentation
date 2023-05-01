@@ -261,9 +261,9 @@ To use an array with your jobs, in your ``sbatch`` script, use the ``array=`` op
 
 To illustrate, let's consider three possible ways to process a collection of input files.
 
-#. Write a single script that loops through the input files and executes the processing code.
-#. Write a script that processes a single file and submits it multiple times, once for each file, with the filename accepted as a parameter.
-#. Use a job array, which allows you to apply a single-file script to a large set of input files without putting undue stress on the scheduler.
+* Write a single script that loops through the input files and executes the processing code.
+* Write a script that processes a single file and submits it multiple times, once for each file, with the filename accepted as a parameter.
+* Use a job array, which allows you to apply a single-file script to a large set of input files without putting undue stress on the scheduler.
 
 In summary: (**1**) can be challenging to parallelize effectively; (**2**) can create many jobs, potentially putting undue stress on the job scheduler; (**3**) can be helpful when developing a script that works well for both single and large groups of files. Furthermore, all sub-jobs in the array share the same base job ID, making it easy to group and organize your workflow.
 
@@ -569,6 +569,7 @@ Examples using scontrol
 View information about a specific node::
 
    scontrol show node -d <node_name>
+
 For example::
 
    scontrol show node -d c2180
@@ -613,25 +614,233 @@ These are just a few examples of what you can do with ``sinfo`` and ``scontrol``
 
 Best practices
 ===============
-#. Use the proper resource request syntax: Slurm follows a specific syntax to request resources, such as the number of CPUs, memory, and time required for your job. Make sure to use the proper syntax to avoid any errors.
+Proper resource request syntax:
+.. code:: 
 
-#. Specify an appropriate job name: Giving your job a descriptive name will help you and other users identify it easily.
+  #!/bin/bash
+  #SBATCH --job-name=my_job       # Job name
+  #SBATCH --ntasks=4              # Number of tasks
+  #SBATCH --cpus-per-task=2       # Number of CPUs per task
+  #SBATCH --mem-per-cpu=4G        # Memory per CPU
+  #SBATCH --time=02:00:00         # Time limit
+  #SBATCH --partition=my_partition # Partition (queue) to use
 
-#. Submit jobs using batch scripts: It's best to submit jobs using batch scripts instead of typing commands manually. Batch scripts allow you to automate the process and make it easier to run multiple jobs at once.
+* Submit jobs using batch scripts: Save the above sample code in a file named ``my_job.sh``. To submit the job, run the following command:
+.. code:: 
 
-#. Use the correct partition: Slurm HPC has several partitions, each designed for specific purposes. Choose the proper partition for your job to ensure you use the most appropriate resources.
+  sbatch my_job.sh
 
-#. Monitor your job's progress: Keep an eye on your job's progress to ensure it's running correctly, and you can identify any issues that may arise.
+* Monitor your job's progress: Use the ``squeue`` command to check the status of your submitted job:
+.. code:: 
 
-#. Avoid overloading the system: Be mindful of the resources you're requesting and avoid overloading the system so that other users have access to the resources they need.
+  squeue -u username
 
-#. Use checkpoints: If your job is long-running, consider using checkpoints to save your progress, allowing for resuming jobs if interrupted.
+* Use environment modules: Load the necessary modules before running your job. In this example, we load the Python and TensorFlow modules:
+.. code:: 
 
-#. Use environment modules: Slurm's environment is set via modules to manage software installations. Make sure to load the appropriate modules before running your job.
+  module load python/3.8
+  module load tensorflow/2.5.0
 
-#. Use the appropriate file system: Slurm HPC typically has several file systems with different performance characteristics. Use the proper file system for your job to ensure you get the best performance.
+Use the appropriate file system:
+For I/O-intensive tasks, use the local scratch storage (e.g., /scratch directory) for temporary files and I/O operations. In your job script, you could include:
+.. code:: 
 
-#. Please clean up after your job: Make sure to remove any files or directories that your job created after it's finished running. This practice helps keep the system clean and frees up resources for other users.
+  #!/bin/bash
+  # Other Slurm directives...
+
+  # Set the scratch directory
+  SCRATCH_DIR=/scratch/username/my_job_${SLURM_JOB_ID}
+  mkdir -p ${SCRATCH_DIR}
+
+  # Copy input files to the scratch directory
+  cp input_files/* ${SCRATCH_DIR}
+
+  # Execute the job in the scratch directory
+  cd ${SCRATCH_DIR}
+  python my_script.py
+
+  # Copy output files back to the home directory
+  cp output_files/* /home/username/output/
+
+  # Clean up the scratch directory
+  rm -r ${SCRATCH_DIR}
+Understand basic Slurm commands:
+View cluster information: sinfo
+Submit a job: sbatch my_job.sh
+View the job queue: squeue -u username
+Cancel a job: scancel job_id
+Manage and view job details: scontrol
+Choose the appropriate partition:
+To check available partitions and their specifications, use the sinfo command:
+
+.. code:: 
+
+  #!/bin/bash
+  #SBATCH --job-name=my_job       # Job name
+  #SBATCH --ntasks=4              # Number of tasks
+  #SBATCH --cpus-per-task=2       # Number of CPUs per task
+  #SBATCH --mem-per-cpu=4G        # Memory per CPU
+  #SBATCH --time=02:00:00         # Time limit
+  #SBATCH --partition=my_partition # Partition (queue) to use
+
+  # Load necessary modules
+  module load python/3.8
+  module load tensorflow/2.5.0
+
+  # Your script to run
+  python my_script.py
+
+
+* Avoid overloading the system: Request only the resources you need, without over- or under-allocating. Over-allocation can lead to longer wait times, while under-allocation may cause job failures.
+
+* Use checkpoints: For long-running jobs, use checkpointing to save intermediate results. This can help you recover your work in case of job failure or cluster issues. Here is an example for TensorFlow:
+
+.. code:: 
+
+  import tensorflow as tf
+
+  # Create a checkpoint callback
+  checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
+      filepath='checkpoints/model_{epoch:02d}.ckpt',
+      save_weights_only=True,
+      save_freq='epoch'
+  )
+
+  # Train the model with the checkpoint callback
+  model.fit(train_data, train_labels, epochs=100, callbacks=[checkpoint_callback])
+
+* Clean up after your job: Remove any files or directories that your job created after it's finished running. This practice helps keep the system clean and frees up resources for other users. In the code snippet provided for using the appropriate file system, we included an example of cleaning up the scratch directory after the job completion:
+
+.. code:: 
+
+  # Clean up the scratch directory
+  rm -r ${SCRATCH_DIR}
+
+
+* Use the proper resource request syntax: Slurm follows a specific syntax to request resources, such as the number of CPUs, memory, and time required for your job. Make sure to use the proper syntax to avoid any errors.
+* Specify an appropriate job name: Giving your job a descriptive name will help you and other users identify it easily.
+* Submit jobs using batch scripts: It's best to submit jobs using batch scripts instead of typing commands manually. Batch scripts allow you to automate the process and make it easier to run multiple jobs at once.
+* Use the correct partition: Slurm HPC has several partitions, each designed for specific purposes. Choose the proper partition for your job to ensure you use the most appropriate resources.
+* Monitor your job's progress: Keep an eye on your job's progress to ensure it's running correctly, and you can identify any issues that may arise.
+* Avoid overloading the system: Be mindful of the resources you're requesting and avoid overloading the system so that other users have access to the resources they need.
+* Use checkpoints: If your job is long-running, consider using checkpoints to save your progress, allowing for resuming jobs if interrupted.
+* Use environment modules: Slurm's environment is set via modules to manage software installations. Make sure to load the appropriate modules before running your job.
+* Use the appropriate file system: Slurm HPC typically has several file systems with different performance characteristics. Use the proper file system for your job to ensure you get the best performance.
+* Clean up after your job: Make sure to remove any files or directories that your job created after it's finished running. This practice helps keep the system clean and frees up resources for other users.
+
+* Understand the basic Slurm commands: Familiarize yourself with basic Slurm commands such as ``sinfo``, ``sbatch``, ``squeue``, ``scancel``, and ``scontrol``. These commands will help you manage and monitor your jobs on the HPC cluster.
+
+* Use the appropriate partition: Choose the right partition (queue) for your job based on resource requirements, such as CPU, memory, and time limit. Use the ``sinfo`` command to check available partitions and their specifications.
+
+.. code:: 
+
+  sinfo -a
+
+* Specify required resources: Clearly specify the resources needed for your job using ``--cpus-per-task``, ``--mem``, and ``--time`` options. Overestimating resource requirements can lead to longer wait times in the queue.
+
+.. code:: 
+
+  #SBATCH --cpus-per-task=4
+  #SBATCH --mem=8G
+  #SBATCH --time=02:00:00
+
+* Use job arrays for parallel tasks: If your research involves running many similar tasks, use job arrays to efficiently submit and manage them.
+
+.. code:: 
+
+  #SBATCH --array=1-100
+
+* Check job status and reason for pending: Use the ``squeue`` command to check the status of your job and understand why it's pending. This can help you identify any issues with your submission script.
+
+
+.. code:: 
+
+  squeue -u username
+
+* Cancel unnecessary jobs: If you realize that a submitted job is no longer required, cancel it to free up resources for other users.
+
+.. code:: 
+
+  scancel job_id
+
+* Test your jobs with small datasets: Before running a full-scale job, test your scripts with smaller datasets to ensure they work correctly and efficiently.
+* Use checkpointing for long-running jobs: If your job runs for a long time, use checkpointing to save intermediate results. This can help you recover your work in case of job failure or cluster issues.
+* Set email notifications: Use the ``--mail-type`` and ``--mail-user`` options to receive email notifications when your job starts, ends, or encounters errors.
+
+.. code:: 
+
+  #SBATCH --mail-type=ALL
+  #SBATCH --mail-user=your_email@northeastern.edu
+
+* Use local scratch storage for I/O intensive tasks: To improve performance, use the local scratch storage (e.g., /scratch directory) for temporary files and I/O operations.
+* Optimize code for parallel execution: Where possible, parallelize your code to take advantage of multiple CPU cores or nodes.
+* Monitor job performance: Use tools such as ``sstat`` and ``sreport`` to monitor the performance of your job, including CPU and memory usage.
+
+.. code:: 
+  
+  sstat --format=AveCPU,AveRSS,MaxRSS job_id
+
+Use environment modules: Load required software modules using the module command to maintain a clean and consistent environment for your jobs.
+
+.. code:: 
+
+  module load software_name/version
+  
+* Request resources as needed: Request only the resources you need, without over- or under-allocating. Over-allocation can lead to longer wait times, while under-allocation may cause job failures.
+
+* Document your job scripts: Use comments in your job scripts to explain resource requests, module loads, and other important information. This can help others understand your work and facilitate collaboration.
+
+.. code:: 
+  
+  #!/bin/bash
+  #SBATCH --job-name=my_job        # Job name
+  #SBATCH --output=my_job_%A.out   # Output file name
+  #SBATCH --error=my_job_%A.err    # Error file name
+  #SBATCH --ntasks=4               # Number of tasks
+  #SBATCH --mem=8G                 # Memory per task
+  #SBATCH --time=02:00:00          # Time limit
+  #SBATCH --partition=my_partition # Partition (queue) to use
+
+  # Load necessary modules
+  module load python/3.8
+  module load tensorflow/2.5.0
+
+  # Your script to run
+  python my_script.py
+
+Now, here are 10 best practices for running machine learning tasks on a Slurm-based HPC cluster:
+
+1. Use GPU resources: If your cluster has GPU nodes available, use them for training and inference tasks that can benefit from the parallel processing capabilities of GPUs.
+
+.. code:: 
+  
+  #SBATCH --gres=gpu:1
+
+* Efficiently manage GPU resources: Request only the required number of GPUs and set the ``CUDA_VISIBLE_DEVICES`` variable to limit the GPUs accessible to your code.
+
+.. code:: 
+  
+  export CUDA_VISIBLE_DEVICES=$SLURM_JOB_GPUS
+
+* Scale up with distributed training: If your cluster has multiple nodes, consider using distributed training techniques, such as Horovod or TensorFlow's tf.distribute API, to speed up training.
+* Use data parallelism: If your dataset is large, partition it across multiple nodes to speed up processing.
+* Implement checkpointing and early stopping: For long-running training jobs, implement checkpointing to save intermediate models and early stopping to end training when the model performance plateaus.
+* Tune hyperparameters: Perform hyperparameter tuning by creating job arrays to run multiple training jobs with different parameter combinations.
+
+.. code:: 
+  
+  #SBATCH --array=1-20
+
+* Monitor resource usage: Continuously track the resource usage of your jobs, including GPU, CPU, and memory, to identify performance bottlenecks and optimize your code.
+
+.. code:: 
+  
+  sstat --format=AveCPU,AveGPU,AveRSS,MaxRSS job_id
+
+* Use pre-built machine learning libraries: Leverage pre-built libraries, such as TensorFlow, PyTorch, and Scikit-learn, to streamline your machine learning tasks.
+* Preprocess data efficiently: Perform data preprocessing tasks, such as data normalization and augmentation, in parallel to minimize the time spent on data processing.
+* Optimize I/O operations: Store large datasets on a parallel filesystem, such as Lustre, to improve read and write performance. Also, consider using data loaders and iterators that support parallel I/O for efficient data access during training.
+
 
 .. _Slurm documentation: https://slurm.schedmd.com/documentation.html
 .. _Training Slurm Job Arrays on GitHub: https://github.com/northeastern-rc/training-slurmarrayjobs
