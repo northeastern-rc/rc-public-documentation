@@ -33,20 +33,19 @@ You can then install R packages that you need. For example, to install a package
 **When using Rstudio in the OOD App:**
 
 1. Launch an RStudio instance on the OOD.
-2. In the Rstudio console type ``install.packages("packrat)`` Note, this will install by default in ``$HOME/R/x86_64-pc-linux-gnu-library/<version>/`` as long as you don't have previous environments or those have been turned off (see below on how to turn-off other environments if they appear to be interfering with the location of your packrat directory). For packrat installation, it is best to specify a "project folder" in your $HOME, /scratch or /work directory (if you do not have /work please see here for access).
-The location /tmp/Rtmp8CbQCA/downloaded_packages would not work because /tmp corresponds to the compute node that you were on while running the R session. 
-Optimally, you would like to have the packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on. 
-3. In the Rstudio terminal (the second tab in the lower left quad) create the packrat project directory at the desired location using ``mkdir projectfolder``
-Or you can select "New Folder" when in the "Files" tab in the lower right hand side.   
+2. In the Rstudio console type ``install.packages("packrat)`` Note, this will install by default in ``$HOME/R/x86_64-pc-linux-gnu-library/<version>/`` as long as you don't have previous environments or those have been turned off (see below on how to turn-off other environments if they appear to be interfering with the location of your packrat directory). For packrat installation, it is best to specify a "project folder" in your $HOME, /scratch or /work directory (if you do not have /work please see here for access). The location /tmp/Rtmp8CbQCA/downloaded_packages would not work because /tmp corresponds to the compute node that you were on while running the R session. Optimally, you would like to have the packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on. 
+3. In the Rstudio terminal (the second tab in the lower left quad) create the packrat project directory at the desired location using ``mkdir projectfolder`` Or you can select "New Folder" when in the "Files" tab in the lower right hand side.
 4. Now you can initialize your packrat by running, in the Rstudio console: ``packrat::init("<path-to-project-folder>")`` Note, if your current directory is the project folder (i.e., ``getwd()`` == "packrat project folder") you can omit the path here.
 5. You can now record all the currently installed packages to your packrat with the command ``packrat::snapshot()`` This may take some time if you have installed a lot of packages.
-6. And now you can check on the status of your packrat with: ``packrat::status()`` 
+6. And now you can check on the status of your packrat with: ``packrat::status()``
 7. You can now install packages as normal, e.g.: ``install.packages("viridis")`` You should see the install location for your packrat project folder. E.g., "Installing package into ‘/work/groupname/username/packrat_R/"
 
 
 **A few Packrat tips**
 
 * At any time you can check the status of your packrat with: ``packrat::status()`` 
+
+* Packrat can be toggled on and off with ``packrat::on()`` and ``packrat::off()`` respectively. 
 
 * To disconnect packrat and allow for package installation outside of your packrat project folder: ``packrat::disable(project = NULL, restart = TRUE)`` Where project refers to the current packrat project folder, and restart = T will restart the R session.
 
@@ -58,12 +57,12 @@ Or you can select "New Folder" when in the "Files" tab in the lower right hand s
 
 Note, for most cases, having a single packrat directory is sufficient, unless you notice specific package conflicts or need different versions of the same package. A single packrat directory also saves from having to install the same dependencies.
 
-**To turn-off previously set environments **
-- mv ~/.rstudio ~/.rstudio-off
-- mv ~/.local ~/.local-off
-- mv ~/ondemand ~/ondemand.off
-- mv ~/.Rprofile ~/.Rprofile.off
-- mv ~/.Rhistory ~/.Rhistory.off
+**To turn-off previously set environments**
+``mv ~/.rstudio ~/.rstudio-off``
+``mv ~/.local ~/.local-off``
+``mv ~/ondemand ~/ondemand.off``
+``mv ~/.Rprofile ~/.Rprofile.off``
+``mv ~/.Rhistory ~/.Rhistory.off``
 - In some cases, these folders could also be present in user’s `/work/<project-name>`
 
  
