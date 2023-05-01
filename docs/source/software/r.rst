@@ -34,8 +34,10 @@ You can then install R packages that you need. For example, to install a package
 
 1. Launch an RStudio instance on the OOD.
 2. In the Rstudio console type ``install.packages("packrat)`` 
-.. Note::
-    This will install by default in ``$HOME/R/x86_64-pc-linux-gnu-library/<version>/`` as long as you don't have previous environments or those have been turned off (see below on how to turn-off other environments if they appear to be interfering with the location of your packrat directory). For packrat installation, it is best to specify a "project folder" in your $HOME, /scratch or /work directory (if you do not have /work please see here for access). The location /tmp/Rtmp8CbQCA/downloaded_packages would not work because /tmp corresponds to the compute node that you were on while running the R session. Optimally, you would like to have the packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on. 
+
+.. note::
+        This will install by default in ``$HOME/R/x86_64-pc-linux-gnu-library/<version>/`` as long as you don't have previous environments or those have been turned off (see below on how to turn-off other environments if they appear to be interfering with the location of your packrat directory). For packrat installation, it is best to specify a "project folder" in your $HOME, /scratch or /work directory (if you do not have /work please see here for access). The location /tmp/Rtmp8CbQCA/downloaded_packages would not work because /tmp corresponds to the compute node that you were on while running the R session. Optimally, you would like to have the packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on. 
+
 3. In the Rstudio terminal (the second tab in the lower left quad) create the packrat project directory at the desired location using ``mkdir projectfolder`` Or you can select "New Folder" when in the "Files" tab in the lower right hand side.
 4. In the Rstudio console, initialize the packrat: ``packrat::init("<path-to-project-folder>")`` If your current directory is the project folder (i.e., ``getwd()`` == "packrat project folder") you can omit the path here.
 5. You can now record all the currently installed packages to your packrat with the command ``packrat::snapshot()`` This may take some time if you have installed a lot of packages.
