@@ -3,24 +3,25 @@
 ******************
 Hardware overview
 ******************
-The Discovery cluster provides you with access to over 1024 CPU nodes, 50,000 CPU cores, and over 200 GPUs. Discovery is connected
+NEU's HPC provides you with access to over 1024 CPU nodes, 50,000 CPU cores, and over 200 GPUs and is connected
 to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer.
 Compute nodes are connected to each other with either 10 GbE or a high-performance HDR200 InfiniBand (IB) interconnect
 running at 200 Gbps (with some nodes running HDR100 IB, if HDR200 IB is not supported on those nodes).
 
 CPU nodes
 =================================
-Table 1 shows the feature names, number of nodes by partition type (public, private, and total), and the RAM memory range per node. The feature name follows archspec microachitecture specification (https://archspec.readthedocs.io/en/latest/index.html)
-
 **Table 1: CPU Nodes**
 
-.. list-table::
+.. list-table:: Table 1 shows the feature names, number of nodes by partition type (public, private, and total), and the RAM memory range per node. The feature name follows archspec microachitechture specification (https://archspec.readthedocs.io/en/latest/index.html). 
+
   :widths: 30 10 5
-  :header-rows: 1
+  :header-rows: 2
 
   * - Feature Name
-    - Number of Nodes (public, private, total)
-    - RAM memory per node
+    - Number of Nodes 
+        - (public, private, total)
+    - RAM memory 
+        - (per node)
   * - skylake
     - 0, 170, 170
     - 186 - 3094 GB
@@ -53,13 +54,21 @@ If you are looking for information about the partitions on Discovery, see :ref:`
 
 Using the ``--constraint`` flag
 ================================
-When using ``srun`` or ``sbatch``, you can specify specific hardware features as part of your job by using the ``--constraint=`` flag. Currently, you can use the ``--constraint=`` flag to restrict your job to a specific feature name (e.g., ``haswell``, ``ivybridge``) or you can use the flag: ``ib`` to only include nodes that are connected by InfiniBand (IB) with a job that needs to use multiple nodes. See below for a few simple examples using ``srun``. You can add the same flag as an additional line in your ``sbatch`` script via (``#SBATCH --constraint=haswell``)::
+When using ``srun`` or ``sbatch``, you can specify hardware features as part of your job by using the ``--constraint=`` flag. This may be particularily useful when benchmarking or if you're using code that was compilied on a certain micro-architechture. Currently, you can use the ``--constraint=`` flag to restrict your job to a specific feature name (e.g., ``haswell``, ``ivybridge``) or you can use the flag: ``ib`` to only include nodes that are connected by InfiniBand (IB) with a job that needs to use multiple nodes. 
 
+A few examples using ``srun``
+.. code::
         srun --constraint=haswell --pty /bin/bash
+.. code::
         srun --constraint=ivybridge --pty /bin/bash
+.. code::       
         srun --constraint=ib --pty /bin/bash  
+.. code::        
         srun --constraint="[ivybridge|zen2]" --pty /bin/bash #this uses the OR operator | to select either an ivybridge or zen2 node. 
 
-Note, using a constraint can mean that you will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see :ref:`using_slurm`. Finally, at this time only the OR operator ``|`` is supported when using ``--contraint``. 
+You can add these same flags as an additional line in your ``sbatch`` script via (``#SBATCH --constraint=haswell``)
+
+.. note:
+   Using the --constraint flag can mean that you will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see :ref:`using_slurm`. Finally, at this time only the OR operator ``|`` is supported when using ``--contraint``. 
 
 
