@@ -13,15 +13,15 @@ CPU nodes
 **Table 1: CPU Nodes**
 
 .. list-table:: Table 1 shows the feature names, number of nodes by partition type (public, private, and total), and the RAM memory range per node. The feature name follows archspec microachitechture specification (https://archspec.readthedocs.io/en/latest/index.html). 
-
   :widths: 30 10 5
   :header-rows: 2
 
   * - Feature Name
     - Number of Nodes 
-        - (public, private, total)
     - RAM memory 
-        - (per node)
+  * -
+    - public, private, total
+    - per node
   * - skylake
     - 0, 170, 170
     - 186 - 3094 GB
