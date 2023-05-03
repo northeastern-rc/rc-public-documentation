@@ -50,7 +50,7 @@ Table 1 below shows the feature names, number of nodes by partition type (public
 
 If you are looking for information about GPUs, see :ref:`working_gpus`.
 
-If you are looking for information about the partitions on Discovery, see :ref:`partitions`. You can view more information about what is currently available on each node on a desired partition at :ref:`viewing-partition-information`. 
+If you are looking for information about the partitions on Discovery, see :ref:`partition_names`. You can view more information about what is currently available on each node on a desired partition at :ref:`viewing_partition_information`. 
 
 
 Using the ``--constraint`` flag
