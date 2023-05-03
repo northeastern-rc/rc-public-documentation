@@ -50,7 +50,7 @@ Table 1 below shows the feature names, number of nodes by partition type (public
 
 If you are looking for information about GPUs, see :ref:`working_gpus`.
 
-If you are looking for information about the partitions on Discovery, see :ref:`partition_names`. You can view more information about what is currently available on each node on a desired partition at :ref:`viewing partition information`. 
+If you are interested in more information about the different partitions on NEU's HPC, including the number of nodes per partition, running time limits, job submission limits, and RAM limits, see :ref:`partition_names`. 
 
 
 Using the ``--constraint`` flag
@@ -59,7 +59,9 @@ When using ``srun`` or ``sbatch``, you can specify hardware features as part of 
 
 A few examples using ``srun``: 
 
-.. code-block:: 
+.. code-block:: bash
+   :linenos:
+ 
         srun --constraint=haswell --pty /bin/bash
         srun --constraint=ivybridge --pty /bin/bash
         srun --constraint=ib --pty /bin/bash  
