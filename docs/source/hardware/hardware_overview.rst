@@ -50,7 +50,7 @@ Table 1 below shows the feature names, number of nodes by partition type (public
 
 If you are looking for information about GPUs, see :ref:`working_gpus`.
 
-If you are looking for information about the partitions on Discovery, see :ref:`partition_names`. You can view more information about what is currently available on each node on a desired partition at :ref:`viewing_partitions`. 
+If you are looking for information about the partitions on Discovery, see :ref:`partition_names`. You can view more information about what is currently available on each node on a desired partition at :ref:`viewing partition information`. 
 
 
 Using the ``--constraint`` flag
@@ -58,7 +58,8 @@ Using the ``--constraint`` flag
 When using ``srun`` or ``sbatch``, you can specify hardware features as part of your job by using the ``--constraint=`` flag. This may be particularily useful when benchmarking or if you're using code that was compilied on a certain micro-architechture. Currently, you can use the ``--constraint=`` flag to restrict your job to a specific feature name (e.g., ``haswell``, ``ivybridge``) or you can use the flag: ``ib`` to only include nodes that are connected by InfiniBand (IB) with a job that needs to use multiple nodes. 
 
 A few examples using ``srun``: 
-.. code ::
+
+.. code-block:: 
         srun --constraint=haswell --pty /bin/bash
         srun --constraint=ivybridge --pty /bin/bash
         srun --constraint=ib --pty /bin/bash  
