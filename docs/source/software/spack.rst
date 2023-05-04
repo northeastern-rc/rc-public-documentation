@@ -18,7 +18,7 @@ To use Spack, it needs to add it to your local environment on the compute node w
 4. To use a newer version of python for compatibility with Spack, type: ``module load python/3.8.1``.
 5. To add Spack in your local environment so you can use the Spack commands, type ``export SPACK_ROOT=/home/<yourusername>/spack``.
 6. Then type ``. $SPACK_ROOT/share/spack/setup-env.sh``.
-7. After you have the Spack commands in your environment, type ``spack list`` to see all of the software that you can install with Spack.
+7. After you have the Spack commands in your environment, type ``spack help`` to ensure Spack is loaded in your environemnt and to see the commands you can use with Spack. You can also type ``spack list`` to see all of the software that you can install with Spack but note this command can take some time to populate the list.
 8. Type ``spack info <software name>`` to see information about a specific software package, including options and dependencies. Make sure to note the options and/or dependencies that you want to add or not add before installing the software.
 9. Type ``spack install <software name> +<any dependencies or options>`` to install a software package plus any dependencies or options. You can also specify ``-<any dependencies or options>``.You can list ``+`` or ``-`` different options and dependencies within the same line. Do not put a space between each option/dependency that you list.
 10.  Type ``spack find`` to view your installed software packages, or type ``spack find <software package name>`` to view information about a specific installed package.
