@@ -15,13 +15,14 @@ From a compute node, run the following command from your ``/home/<username>`` di
 
 This command will output the size of each file, directory, and hidden directory in your ``/home/<username>`` space, with the total of your ``/home`` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location, (g.g., ``/work`` for research) or you can back up and delete the files and directories if they are no longer required. An example output would look like: ::
 .. code-block:: bash
- :emphasize-lines: 6
- [<username>@<host> directory]$  du -shc .[^.]* ~/*
- 39M	.git
- 106M	discovery-examples
- 41K	README.md
- 3.3M	software-installation
- 147M	total
+  :emphasize-lines: 6
+  
+  [<username>@<host> directory]$  du -shc .[^.]* ~/*
+  39M	  .git
+  106M	discovery-examples
+  41K	  README.md
+  3.3M	software-installation
+  147M	total
 
 Utlilize /scratch and /work
 =======================================================
