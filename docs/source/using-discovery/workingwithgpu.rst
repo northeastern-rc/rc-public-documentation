@@ -291,4 +291,3 @@ the following as an output,::
    Ignore the ``Warning`` messages that get generated after executiing
    the above commands.
 
-test
