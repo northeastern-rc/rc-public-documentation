@@ -17,8 +17,8 @@ The Discovery cluster has a number of NVIDIA Graphics Processing Units (GPUs) av
     - GPU Memory
     - Tensor Cores
     - CUDA Cores
-    - Public number of nodes
-    - Private number of nodes
+    - Nodes in Public GPUs
+    - Nodes in Private GPUs
   * - p100 (`Pascal <https://www.nvidia.com/en-us/data-center/tesla-p100/>`_)
     - 12GB
     - N/A 
@@ -74,7 +74,7 @@ The Discovery cluster has a number of NVIDIA Graphics Processing Units (GPUs) av
     - 0
     - 3 with 8 GPUs each
 
-These GPUs are available within two partitions, named ``gpu`` and
+The public GPUs are available within two partitions, named ``gpu`` and
 ``multigpu``. The differences between the two partitions are the
 number of GPUs that one can request per job and the time limit on each
 job. Both partitions give access to all of the public GPU types
@@ -83,7 +83,7 @@ partitions. For more information about the partitions on Discovery,
 see :ref:`partition_names`.
 
 .. list-table::
-   :widths: 20 20 20 20 20 20 20 20 20
+   :widths: 20 20 20 20 20 20 20
    :header-rows: 1
 
    * - Name
@@ -91,8 +91,6 @@ see :ref:`partition_names`.
      - Time limit (Default/Max)
      - Running Jobs
      - Submitted Jobs
-     - Core Limit
-     - RAM Limit
      - GPU per job Limit
      - GPU per user Limit
    * - gpu
@@ -100,8 +98,6 @@ see :ref:`partition_names`.
      - 4 hours/8 Hours
      - 25/250
      - 50/100
-     - N/A
-     - N/A
      - 1
      - 8
    * - multigpu
@@ -109,8 +105,6 @@ see :ref:`partition_names`.
      - 4 hours/24 Hours
      - 25/100
      - 50/100
-     - N/A
-     - N/A
      - 12
      - 12
 
@@ -244,20 +238,8 @@ The above PyTorch installation instructions will not include
 environment. In order to include those one can execute the following
 command after activating the ``pytorch_env`` environment::
 
-  conda install pandas scikit-learn matplotlib seaborn jupyterlab
+  conda install pandas scikit-learn matplotlib seaborn jupyterlab -y
 
-One can also use an older Pytorch build (`pytorch_env_training`
-environment, PyTorch version 1.8.0 that works with cuda/11.1 on any
-GPU including k40m & k80) by typing::
-
-  srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-  module load anaconda3/2022.01 cuda/11.1
-  source activate pytorch_env_training
-
-.. note::
-   This environment also does not include ``jupyterlab`` or other
-   commonly used datascience packages. They will have to be installed
-   using the above ``conda install`` command.
 
 Using GPUs with TensorFlow
 ==========================
