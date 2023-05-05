@@ -177,6 +177,8 @@ There are several versions of CUDA Toolkits on Discovery, including::
   cuda/11.3
   cuda/11.4
   cuda/11.7
+  cuda/11.8
+  cuda/12.1
 
 Use the ``module avail`` command to check for the latest software
 versions on Discovery. To see details on a specific CUDA toolkit
@@ -211,7 +213,7 @@ environment for CUDA version 11.7.
    command does not give real-time information of the state and should
    be used with caution.
 
-PyTorch installation steps (with a specific GPU-type other than k40m or k80)::
+PyTorch installation steps (with a specific GPU-type)::
 
   srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
   module load anaconda3/2022.05 cuda/11.7
