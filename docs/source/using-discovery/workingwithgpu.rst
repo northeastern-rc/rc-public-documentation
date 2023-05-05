@@ -82,28 +82,29 @@ mentioned above. The table below shows the differences between the two
 partitions. For more information about the partitions on Discovery,
 see :ref:`partition_names`.
 
+.. note::
+   All user limits are subject to the availability of cluster
+   resources at the time of submission and will be honored according to that. 
+
 .. list-table::
-   :widths: 20 20 20 20 20 20 20
+   :widths: 20 20 20 20 20 20
    :header-rows: 1
 
    * - Name
      - Requires Approval?
      - Time limit (Default/Max)
-     - Running Jobs
      - Submitted Jobs
      - GPU per job Limit
-     - GPU per user Limit
+     - Max GPUs per user Limit
    * - gpu
      - No
      - 4 hours/8 Hours
-     - 25/250
      - 50/100
      - 1
      - 8
    * - multigpu
      - **Yes**
      - 4 hours/24 Hours
-     - 25/100
      - 50/100
      - 12
      - 12
