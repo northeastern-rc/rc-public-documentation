@@ -18,12 +18,12 @@ configuration: docs/conf.py
 
 # Optionally set the version of Python and requirements required to build your docs
 # This has been deprecated and replaced with the build block below
-#python:
-#  version: "3.8"
-#  install:
-#    - requirements: docs/requirements.txt
+python:
+  version: "3.8"
+  install:
+    - requirements: docs/requirements.txt
     
- build:
-  os: ubuntu-20.04
-  tools:
-    python: "3.7"
+ #build:
+  #os: 
+  #tools:
+   # python: "3.8"
