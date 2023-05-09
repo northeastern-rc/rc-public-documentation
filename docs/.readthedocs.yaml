@@ -23,7 +23,7 @@
 #  install:
 #    - requirements: docs/requirements.txt
    
-
+#new version and attempt to fix urllib3
 version: 2
 build:
   os: 

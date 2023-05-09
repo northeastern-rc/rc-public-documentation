@@ -11,7 +11,7 @@ running at 200 Gbps (with some nodes running HDR100 IB, if HDR200 IB is not supp
 CPU nodes
 =================================
 
-Table 1 below shows the feature names, number of nodes by partition type (public and private), and the RAM memory range per node. The feature name follows archspec microachitechture (specification <https://archspec.readthedocs.io/en/latest/index.html>_) . 
+Table 1 below shows the feature names, number of nodes by partition type (public and private), and the RAM memory range per node. The feature name follows archspec microachitechture `specification <https://archspec.readthedocs.io/en/latest/index.html>_`. 
 
 .. list-table::
   :widths: 30 10 5
