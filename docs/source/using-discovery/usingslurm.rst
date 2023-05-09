@@ -25,7 +25,20 @@ Overall, Slurm is a powerful and versatile tool for managing HPC resources. Its 
 * Check the cluster state, along with that of specific nodes
 * Gain knowledge of various best practices when using Slurm
 
+<<<<<<< Updated upstream
 Slurm is a job scheduler and batch manager. Here are the main Slurm commands:
+=======
+The contents of this page will allow the user to do the following:
+
+* View information about the cluster.
+* Submit jobs on Discovery.
+* Monitor jobs.
+* View account information.
+* Check the cluster state, along with that of specific nodes.
+* Gain knowledge of various best practices when using Slurm.
+
+Hence, Slurm is a job scheduler and batch manager. Here are the main Slurm commands:
+>>>>>>> Stashed changes
 
 .. list-table:: Common Slurm commands exemplified throughout this page.
    :widths: 25 75
