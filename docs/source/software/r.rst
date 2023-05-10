@@ -14,7 +14,7 @@ Packrat is an application that helps you manage packages for R. Packrat allows f
 **When using R in the command line:**
 
 1. Connect to Discovery.
-2. Type ``module load R/4.2.0`.
+2. Type ``module load R/4.2.1``
 3. Create a new directory for your R project by typing, ``mkdir /scratch/<yourusername>/<directoryname>`` where ``yourusername`` is your user name, and ``directoryname`` is the name of the directory you want to create for your R project. For example, ``/scratch/j.smith/packrat_r``
 4. Open the R interface and install Packrat::
 
