@@ -2,7 +2,7 @@
 Working with R
 ***************
 `R <https://www.r-project.org/>`_ is available as a module (see :ref:`using_module` for more information) and
-Rstudio is also an interactive app on Open onDemand (see :ref:`using_ood` for more information). You can also use R with Anaconda. See :ref:`working_conda` and the `Anaconda documentation <https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/>`_ for more information
+Rstudio is also an interactive app on Open OnDemand (see :ref:`using_ood` for more information). You can also use R with Anaconda. See :ref:`working_conda` and the `Anaconda documentation <https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/>`_ for more information
 
 If you work with R packages, using a Packrat environment can be helpful. Use the procedure below to create a Packrat environment on Discovery.
 
@@ -14,7 +14,7 @@ Packrat is an application that helps you manage packages for R. Packrat allows f
 **When using R in the command line:**
 
 1. Connect to Discovery.
-2. Type ``module load R/3.6.2``.
+2. Type ``module load R/4.2.0`.
 3. Create a new directory for your R project by typing, ``mkdir /scratch/<yourusername>/<directoryname>`` where ``yourusername`` is your user name, and ``directoryname`` is the name of the directory you want to create for your R project. For example, ``/scratch/j.smith/packrat_r``
 4. Open the R interface and install Packrat::
 
@@ -32,15 +32,17 @@ You can then install R packages that you need. For example, to install a package
 
 **When using Rstudio in the OOD App:**
 
-1. Launch an RStudio instance on the OOD.
+The instructions below can be applied on any RStudio "flavor" available (i.e., RStudio, Geospatial, and Tidyverse). Once a packrat snapshot is created it can easily be transfered between flavors and even machines (e.g., personal laptop, Discovery). 
+
+1. Launch an RStudio instance on the OOD. Specify the flavor and other parameters as usual.
 2. In the Rstudio console type:
 
          ``install.packages("packrat)`` 
 
 .. note::
-        This will install by default in ``$HOME/R/x86_64-pc-linux-gnu-library/<version>/`` as long as you don't have previous environments or those have been turned off (see below). For packrat installation, it is best to specify a "project folder" in your $HOME, /scratch or /work directory (if you do not have /work please see here for access). The location /tmp/Rtmp8CbQCA/downloaded_packages would not work because /tmp corresponds to the compute node that you were on while running the R session. Optimally, you would like to have the packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on. 
+        This will install by default in ``$HOME/R/x86_64-pc-linux-gnu-library/<version>/`` as long as you don't have previous environments or those have been turned off (see below). For packrat installation, it is best to specify a "project folder" in your $HOME, /scratch or /work directory (if you do not have /work please see `here <https://rc-docs.northeastern.edu/en/latest/storage/discovery_storage.html>`_  for access). The location /tmp/Rtmp8CbQCA/downloaded_packages would not work because /tmp corresponds to the compute node that you were on while running the R session. Optimally, you would like to have the packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on. 
 
-3. In the Rstudio terminal (the second tab in the lower left quad) create the packrat project directory at the desired location using ``mkdir``. Or you can select "New Folder" in the "Files" tab in the lower right hand side.
+3. Create a packrat project directory at the desired location by selecting "New Folder" in the "Files" tab in the lower right hand side of the RStudio screen. Alternatively, you can use the command ``mkdir`` which can be executed in the terminal tab on the lower left hand side of the RStudio screen. For example:
  
         ``mkdir projectfolder``
 
