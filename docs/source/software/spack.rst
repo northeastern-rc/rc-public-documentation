@@ -4,16 +4,15 @@
 Using Spack
 **************
 Research Computing recommends using `Spack <https://spack.io/>`_ to conveniently install software packages locally to your path.  Please refer to the `Spack documentation <https://spack.readthedocs.io/en/latest/index.html>`_  for the latest information about the `packages <https://spack.readthedocs.io/en/latest/package_list.html#package-list>`_ that Spack contains.
-To use Spack, you first need to copy it to your /home directory or a /work directory, then have it in your local environment.
+To use Spack, you first need to copy it to your /home directory or a /work directory, then you need to add it to your local environment.
 
 Getting started with Spack
 ==========================
 These instructions will demonstrate how to install Spack in your local /home directory (step 2) and then how to add Spack to your local environment while on a compute node so you have access to the Spack commands (steps 4-5).
 
-1. Connect to Discovery via ssh.
+1. Connect to Discovery via ssh (:ref:`_connect_mac` or :ref:`_connect_windows`).
 2. From the terminal, type ``git clone -c feature.manyFiles=true https://github.com/spack/spack.git`` to copy Spack to your /home directory.
-3. Type ``srun -p short --pty -N 1 -n 28 /bin/bash`` to allocate an interactive job on a compute node. Spack will attempt to run ``make`` in parallel when it builds the software you choose to install, so this ``srun`` request is for 28 cores on one node (-N 1 -n 28).
-To use Spack, it needs to add it to your local environment on the compute node, which is why this is completed after step 3.
+3. Type ``srun -p short --pty -N 1 -n 28 /bin/bash`` to allocate an interactive job on a compute node. Spack will attempt to run ``make`` in parallel when Spack builds the software you choose to install, so this ``srun`` request is for 28 cores on one node (-N 1 -n 28). To use Spack, it needs to add it to your local environment on the compute node, which is why this is completed after step 3.
 4. To use a newer version of python for compatibility with Spack, type: ``module load python/3.8.1``.
 5. To add Spack in your local environment so you can use the Spack commands, type ``export SPACK_ROOT=/home/<yourusername>/spack``.
 6. Next, type ``. $SPACK_ROOT/share/spack/setup-env.sh``.
