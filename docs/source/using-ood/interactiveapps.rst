@@ -76,3 +76,17 @@ environment; and then reference this environment when you start the Jupyter Note
 
 When your Juypter Notebook is running and open, type ``conda list`` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all
 of your available packages.
+
+Working with Xfce Desktop (Beta)
+================================
+This Open OnDemand application is a containerized desktop running on the HPC cluster. It has access to these tools/programs:
+
+- Slurm (for running Slurm commands via the terminal in the desktop and interacting the compute nodes on the HPC)
+- Module command (for loading and running HPC ready modules)
+- File explorer (able to traverse and view files that you have access to on the HPC)
+- Firefox web browser
+- VLC media player
+- Office Libre suite of applications (work processing, spreadsheets, presentation applications)
+
+.. note::
+  The desktop application is itself a Singularity container and has not been setup to run a Singularity container inside of it. If a user is trying to run a module or program that itself runs a container while inside of this application it will fail.
