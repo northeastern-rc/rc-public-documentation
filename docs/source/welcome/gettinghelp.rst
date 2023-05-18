@@ -47,6 +47,18 @@ meetings through the Teams app.
 Use our Bookings page to see our availability and to schedule an appointment https://rc.northeastern.edu/support/consulting/.
 You will need to sign in using your /@/northeastern.edu email (for example, a.student/@/northeastern.edu).
 
+Update on submitted ticket
+==========================
+
+To check for updates on a submitted ticket, please follow these steps:
+
+1. Go to the website https://service.northeastern.edu/tech and log in to your account.
+2. Look for the option "My Tickets" at the top of the page.
+3. Click on "My Tickets" to access a list of all your active tickets.
+4. In the ticket list, you will be able to view the latest updates made on each ticket.
+
+By following these steps, you can easily track the progress and stay informed about any updates related to your submitted tickets.
+
 Status page
 ============
 
