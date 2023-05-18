@@ -17,22 +17,53 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Northeastern University Research Computing'
-copyright = '2019-2021, Northeastern University Research Computing'
-author = 'Northeastern University Research Computing'
+project = "HPC Documentation"
+logo = "_static/logo-square.svg"
+copyright = "2023"
+author = "Research Computing, Northeastern University"
 
 # The full version, including alpha/beta/rc tags
-release = '2.0.0'
+release = "2.0.0"
 
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_markdown_tables',]
+extensions = [
+    # "myst_parser",
+    # "ablog",
+    "myst_nb",
+    # "numpydoc",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosectionlabel",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.viewcode",
+    # "sphinxcontrib.youtube",
+    "sphinx_copybutton",
+    "sphinx_design",  # https://pypi.org/project/sphinx_design/
+    # "sphinx_examples",
+    "sphinx_tabs.tabs",
+    # "sphinx_thebe",
+    "sphinx_togglebutton",  # https://sphinx-togglebutton.readthedocs.io/en/latest/use.html
+    # "sphinxcontrib.bibtex",
+    # "sphinxext.opengraph",
+    # For the kitchen sink
+    "sphinx.ext.todo",
+]
+
+intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
+
+myst_enable_extensions = [
+    "colon_fence",
+    "deflist",
+]
+
+
+# extensions = ['sphinx_markdown_tables',]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -45,24 +76,30 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = "sphinx_book_theme"
 
-#add logo to the upper left in the help system
-html_logo = 'images/NU_logo_small.png'
-html_theme_options = {'logo_only': True}
+# add logo to the upper left in the help system
+html_logo = "images/NU_logo_small.png"
+html_theme_options = {
+    "show_toc_level": 2,
+    "repository_url": "https://github.com/northeastern-rc/rc-public-documentation",
+    "use_repository_button": True,
+    "use_edit_page_button": False,
+    "use_issues_button": True,
+}
 
 # custom css file
-html_css_files = ['../css/custom.css']
+html_css_files = ["../css/custom.css"]
 
-#If true, “(C) Copyright …” is shown in the HTML footer. Default is True.
+# If true, “(C) Copyright …” is shown in the HTML footer. Default is True.
 html_show_copyright = True
-#If true, “Created using Sphinx” is shown in the HTML footer. Default is True.
+# If true, “Created using Sphinx” is shown in the HTML footer. Default is True.
 html_show_sphinx = False
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static','_static/video']
+html_static_path = ["_static", "_static/video"]
 
-master_doc = 'index'
-#source_suffix = ['.rst']
+master_doc = "index"
+source_suffix = ['.rst', '.md']
