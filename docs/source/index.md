@@ -1,3 +1,4 @@
+
 <!--#  NEU's HPC Docs-->
 
 # NU's High-Performance Computing (HPC)
@@ -10,11 +11,13 @@
 :::{grid-item}
 :columns: 12 4 4 4
 
-```{image}  _static/logo-square.png
+---
+```{image}
 :width: 200px
 :class: sd-m-auto
 :name: landing-page-logo
 ```
+---
 
 :::
 
@@ -23,42 +26,53 @@
 :child-align: justify
 :class: sd-fs-5
 
-```{rubric} Welcome to HPC Cluster online documentation.
+---
+```{rubric}
+
 ```
+---
 A dedicated platform for researchers, scholars, and students to access, learn, and leverage our state-of-the-art HPC resources.
 
-````{div} sd-d-flex-row
+---
+````{div}
 
 
-```{button-ref} welcome/welcome
+```
+---
 :ref-type: doc
 :color: primary
 :class: sd-rounded-pill sd-mr-3
 
 Get Started
+---
 ```
 
-```{button-ref} first_steps/get_access
+```
+---
 :ref-type: doc
 :color: secondary
 :class: sd-rounded-pill sd-mr-3
 
 Get Access
+---
 ```
-```{button-ref} welcome/gettinghelp
+
+```
+---
 :ref-type: doc
 :color: secondary
 :class: sd-rounded-pill
 
 Get Help
+---
 ```
-````
+
+```
+---
 
 :::
 
 ::::
-
----
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
@@ -95,9 +109,11 @@ Learn to optimize your projects by following some best practices.
 
 ::::
 
+---
 ```{note}
 Access to the HPC Cluster is subject to university policy and guidelines. Please ensure that you read and understand these guidelines before using the facility. If you require assistance or have any questions, please do not hesitate to contact our dedicated support team.
 ```
+---
 
 
 The Northeastern University HPC Cluster is a high-powered, multi-node, parallel computing system designed to meet the computational and data-intensive needs of various academic and industry-oriented research projects. The cluster incorporates cutting-edge computing technologies and robust storage solutions, providing an efficient and scalable environment for large-scale simulations, complex calculations, artificial intelligence, machine learning, big data analytics, bioinformatics, and more.
@@ -106,87 +122,105 @@ Whether you are a seasoned user or just beginning your journey into high-perform
 
 We invite you to explore the resources, tools, and services available through the portal. Join us as we endeavor to harness the power of high-performance computing, enabling breakthroughs in research and fostering innovation at Northeastern University.
 
+---
 ```{toctree}
 :hidden:
 :caption: 👋 Welcome
 
-welcome/welcome
-welcome/gettinghelp
+01_welcome/01_welcome
+02_welcome/02_gettinghelp
 ```
+---
 
+---
 ```{toctree}
 :hidden:
 :caption: 🔎 First Steps with Discovery
 
-first_steps/get_access
-first_steps/connect_mac
-first_steps/connect_windows
-first_steps/connect_ood
-first_steps/bashrc
+02_first_steps/01_get_access
+02_first_steps/02_connect_mac
+02_first_steps/03_connect_windows
+02_first_steps/04_connect_ood
+02_first_steps/05_bashrc
 ```
+---
+---
 ```{toctree}
 :hidden:
 :caption: 🖥️ Hardware on Discovery
 
-hardware/hardware_overview
-hardware/partitions
+03_hardware/01_hardware_overview
+03_hardware/02_partitions
 ```
+---
 
+---
 ```{toctree}
 :hidden:
 :caption: Using HPC
 
-using-discovery/usingslurm
-using-discovery/sbatch
-using-discovery/srun
-using-discovery/workingwithgpu
-using-discovery/transferringdata
-using-discovery/globus
+04_software/01_softwareoverview
+04_software/02_modules
+04_software/03_matlab
+04_software/04_conda
+04_software/05_spack
+04_software/06_r
+04_software/07_mpi
 ```
+---
 
+---
 ```{toctree}
 :hidden:
 :caption: 📚 Software Guides
 
-software/softwareoverview
-software/modules
-software/matlab
-software/conda
-software/spack
-software/r
-software/mpi
+05_using-discovery/01_usingslurm
+05_using-discovery/02_sbatch
+05_using-discovery/03_srum
+05_using-discovery/04_workingwithgpu
+05_using-discovery/05_transferringdata
+05_using-discovery/06_globus
 ```
+---
 
+---
 ```{toctree}
 :hidden:
 :caption: Understanding storage options
 
-storage/discovery_storage
-storage/general_storage
+06_storage/01_discovery_storage
+06_storage/02_general_storage
 ```
+---
 
+---
 ```{toctree}
 :hidden:
 :caption: Best practices
 
-best-practices/checkpointing
+07_best-practices/01_checkpointing
 ```
+---
 
+---
 ```{toctree}
 :hidden:
 :caption: 📖 Using Open OnDemand (OOD)
 
-   using-ood/introduction
-   using-ood/fileexplore
-   using-ood/interactiveapps
+08_using-ood/01_introduction
+08_using-ood/02_fileexplore
+08_using-ood/03_interactiveapps
 ```
+---
 
+---
 ```{toctree}
 :hidden:
 :caption: 🧑‍🏫 HPC for the classroom
 
-classroom/class_use
-classroom/cps_ood
+09_classroom/01_class_use
+09_classroom/02_cps_ood
 ```
+---
 
 
