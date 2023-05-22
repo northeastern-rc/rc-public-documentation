@@ -23,6 +23,11 @@ both a /home and /scratch directory. Research groups can request additional stor
 
 **NAME:** ``/work/<groupname>``
  - **DESCRIPTION:** Research groups can request additional storage on ``/work``. A PI can request this extra storage through the `New Storage Space request <https://bit.ly/NURC-NewStorage>`_ . This is a performant, persistent, and long-term storage that is meant for storing data being actively used for research. It can be accessed by all members of the research group who have access permissions to this directory. 
-
+ - **REQUESTING ACCESS:** Students working with research groups can request access to the PI’s space on ``/work``. To expedite the request process, we recommend that you inform the group owner they will be receiving an email requesting their permission to grant you access to ``/work`` before you submit the request.
+  
+   1. To request access to ``/work``, students can either create a  `ServiceNow ticket with RC <https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0a0bfc5adb9f1fc075892f17d4961993>`_ or send an email to rchelp@northeastern.edu to automatically generate a ticket in ServiceNow. Please include both the storage space name and the PI’s name.
+   2. Once you have been added to the unix group for the space on ``/work``, please ensure to close all open connections to discovery and login again for the changes to reflect on your end as unix groups are assigned at login time. To confirm you have been added to the group, you can run the command ``groups``.
+ - **DEFAULT PERMISSIONS:** By default, users are given read and write access when added to ``/work``. However, specific permissions might be granted at the PI’s request.
+   
  .. note::
   Your group can also request additional general data storage if needed. See :ref:general_storage for details about the storage options that are not associated with Discovery but are available to anyone affiliated with Northeastern University. Each group can request up to 35TB of free storage across all supplemental storage tiers: /work, /research and /nese.
