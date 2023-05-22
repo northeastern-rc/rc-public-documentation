@@ -3,7 +3,7 @@
 # Connecting to Discovery using Windows
 
 You connect to Discovery using a [secure shell](https://www.ssh.com/ssh/protocol/) program to initiate an SSH session to
-sign in to Discovery. This topic is about how to connect using Windows. See {ref}`connect_mac` for information about connecting with a Mac.
+sign in to Discovery. This topic is about how to connect using Windows. See [connect mac](./02_connect_mac.md) for information about connecting with a Mac.
 
 % 2FA Authentication with DUO
 
@@ -32,12 +32,8 @@ You are now connected to Discovery at a login node.
 
 Watch this video to see how to connect to Discovery with MobaXterm. If you do not see any controls on the video, right click on the video to see viewing options.
 
-```{raw} html
-<video width="710" autoplay mute controls>
-<source src="../_static/windows_moba_connect.mp4" type="video/mp4">
-Your browser does not support embedded videos.
-</video>
-```
+<video src="../_static/video/windows_moba_connect.mp4" controls title="Connect to Discovery using MOBA"></video>
+
 
 ## Passwordless ssh
 
@@ -78,9 +74,9 @@ The following video tutorial goes through this process.
 
 ### Next steps
 
-After you are connected, you can run jobs either in interactive mode with `srun` or submit a script using `sbatch`. See {ref}`using_srun` and {ref}`using_sbatch` for more information.
+After you are connected, you can run jobs either in interactive mode with `srun` or submit a script using `sbatch`. See [using srun](../05_using-discovery/03_srun.md#using-srun) and [using sbatch](../05_using-discovery/02_sbatch.md#using-sbatch) for more information.
 
-To load and run software, see {ref}`software_overview`.
-To find out more about the hardware and partitions on Discovery, see {ref}`hardware_overview` and {ref}`partition_names`.
+To load and run software, see [software overview](../04_software/01_softwareoverview.md).
+To find out more about the hardware and partitions on Discovery, see [hardware overview](../03_hardware/01_hardware_overview.md) and [partition names](../03_hardware/02_partitions.md#partitions).
 
 To watch an introductory training video, go to [Northeastern's LinkedIn Learning page](https://www.linkedin.com/checkpoint/enterprise/login/74653650?pathWildcard=74653650&application=learning&redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fcontent%2F1139340%3Fu%3D74653650).
