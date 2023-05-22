@@ -11,46 +11,41 @@ running at 200 Gbps (with some nodes running HDR100 IB, if HDR200 IB is not supp
 
 Table 1 below shows the feature names, number of nodes by partition type (public and private), and the RAM memory range per node. The feature name follows archspec microachitechture [specification](https://archspec.readthedocs.io/en/latest/index.html).
 
-```{eval-rst}
-.. list-table::
-  :widths: 30 10 5
-  :header-rows: 2
+```{list-table}
+:header-rows: 1
 
-  * - Feature Name
-    - Number of Nodes
-    - RAM memory
-  * -
-    - public, private
-    - per node
-  * - skylake
-    - 0, 170
-    - 186 - 3094 GB
-  * - zen2
-    - 40, 292
-    - 256 - 2000 GB
-  * - zen
-    - 40, 300
-    - 256 - 2000 GB
-  * - ivybridge
-    - 64, 130
-    - 31 - 1031 GB
-  * - sandybridge
-    - 8, 0
-    - 384 GB
-  * - haswell
-    - 230, 62
-    - 109 - 1031 GB
-  * - broadwell
-    - 756, 226
-    - 128 - 515 GB
-  * - cascadelake
-    - 260, 88
-    - 186 - 3094 GB
+* - Feature Name
+  - Number of Nodes - public, private
+  - RAM memory per node
+* - skylake
+  - 0, 170
+  - 186 - 3094 GB
+* - zen2
+  - 40, 292
+  - 256 - 2000 GB
+* - zen
+  - 40, 300
+  - 256 - 2000 GB
+* - ivybridge
+  - 64, 130
+  - 31 - 1031 GB
+* - sandybridge
+  - 8, 0
+  - 384 GB
+* - haswell
+  - 230, 62
+  - 109 - 1031 GB
+* - broadwell
+  - 756, 226
+  - 128 - 515 GB
+* - cascadelake
+  - 260, 88
+  - 186 - 3094 GB
 ```
 
-If you are looking for information about GPUs, see {ref}`working_gpus`.
+If you are looking for information about GPUs, see [Working with GPUs](../05_using-discovery/04_workingwithgpu.md#working-with-gpus).
 
-If you are interested in more information about the different partitions on Discovery, including the number of nodes per partition, running time limits, job submission limits, and RAM limits, see {ref}`partition_names`.
+If you are interested in more information about the different partitions on Discovery, including the number of nodes per partition, running time limits, job submission limits, and RAM limits, see [Partitions](./02_partitions.md#partitions).
 
 ## Using the `--constraint` flag
 
@@ -72,5 +67,3 @@ You can add these same flags as an additional line in your `sbatch` script via (
 :::{note}
 Using the --constraint flag can mean that you will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see {ref}`using_slurm`. Finally, at this time only the OR operator `|` is supported when using `--constraint`.
 :::
-
-test
