@@ -73,18 +73,18 @@ add your keys to the authorized.key file.
 
 **To setup passwordless ssh:**
 
-1. On a Mac, open Terminal and type, ``cd ~/.ssh``. This moves you to the ssh folder on your local computer. **Note**: Make sure you're on your local computer for steps 1 through 4. If you are connected to Discovery, type ``exit`` to return to your local computer.
+1. On a Mac, not yet connected to Discovery, open Terminal and type, ``cd ~/.ssh``. This moves you to the ssh folder on your local computer. **Note**: Make sure you're on your local computer for steps 1 through 4. If you are connected to Discovery, type ``exit`` to return to your local computer.
 2. Type ``ssh-keygen -t rsa`` to generate two files: ``id_rsa`` and ``id_rsa.pub``.
 3. Press ``Enter`` to all of the prompts (do not generate a passphrase).
-4. Type ``ssh-copy-id -i ~/.ssh/id_rsa.pub <yourusername>@login.discovery.neu.edu`` to copy ``id_rsa.pub`` to your /home/.ssh folder on Discovery. Enter your NU password if prompted.
-5. Connect to Discovery by typing ``ssh <yourusername>@login.discovery.neu.edu``.
-6. Type ``cd ~/.ssh ; cat id_rsa.pub >> authorized_keys``. This moves you to your ssh folder and adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.
-7. Log out by typing ``exit``.
-8. Connect to Discovery again by typing ``ssh <yourusername>@login.discovery.neu.edu``. **Note**: If you are using a Windows machine using MobaXterm, sign in to Discovery as usual, then complete steps 9 through 12 to complete the passwordless ssh setup.
-9. Type ``cd ~/.ssh`` to move to your ssh folder.
-10. Type ``ssh-keygen -t rsa`` to generate your key files.
-11. Press ``Enter`` to all of the prompts (do not generate a passphrase). If prompted to overwrite a file, type ``Y``.
-12. Type ``cat id_rsa.pub >> authorized_keys``. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.
+4. Type ``ssh-copy-id -i ~/.ssh/id_rsa.pub <yourusername>@login.discovery.neu.edu`` to copy ``id_rsa.pub`` to your /home/.ssh folder on Discovery. This step automatically copys your id_rsa.pub token to a file ''authorized_keys`` that will be generated if it doesn't already exist, and appeneded if it does exist. You will be prompted to enter your NU password.
+5. Connect to Discovery again by typing ``ssh <yourusername>@login.discovery.neu.edu``. You should now be connected without having to enter your password. 
+
+**Note**: If you are using a Windows machine using MobaXterm, sign in to Discovery as usual, then complete steps 6 through 9 to complete the passwordless ssh setup.
+
+6. Type ``cd ~/.ssh`` to move to your ssh folder.
+7. Type ``ssh-keygen -t rsa`` to generate your key files.
+8. Press ``Enter`` to all of the prompts (do not generate a passphrase). If prompted to overwrite a file, type ``Y``.
+9. Type ``cat id_rsa.pub >> authorized_keys``. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.
 
 Next steps
 ===========
