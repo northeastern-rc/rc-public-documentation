@@ -5,12 +5,12 @@ You are not allowed to transfer data from any other node.
 The node name is `<username>@xfer.discovery.neu.edu:` where `<username>` is your Northeastern username.
 
 You can also transfer files using Globus. This is highly recommended if you need to transfer large amounts of data.
-See {ref}`using_globus` for more information.
+See [Using Globus](./06_globus.md) for more information.
 
 :::{caution}
 The /scratch directory is for temporary file storage only. It is not backed up.
 If you have directed your output files to /scratch, you should transfer your data from /scratch
-to another location as soon as possible. See {ref}`discovery_storage` for more information.
+to another location as soon as possible. See [Storage Accessible on Discovery](../04_software/01_softwareoverview.md) for more information.
 :::
 
 ## Data transfer node using Mac
@@ -36,7 +36,7 @@ sshfs <yourusername>@xfer.discovery.neu.edu:</your/remote/path> <your/local/path
 ## Data transfer node using Windows
 
 You can use MobaXterm to transfer data to and from Discovery. You can also use a file transfer program, such as FileZilla.
-The Files menu in Open onDemand (OOD) also allows you to transfer files. See {ref}`file_explorer` for more information.
+The Files menu in Open onDemand (OOD) also allows you to transfer files. See [Using OOD's File Explorer](../08_using-ood/02_fileexplore.md) for more information.
 
 **To transfer data using MobaXterm:**
 
