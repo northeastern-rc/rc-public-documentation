@@ -10,7 +10,7 @@ that lets you do the following:
 - schedule your jobs on Discovery
 - view information about your account
 
-{ref}`using_srun` and {ref}`using_sbatch` provide you with a few examples to help get you familiar
+[Using srun](../05_using-discovery/03_srun.md) and [Using sbatch](../05_using-discovery/02_sbatch.md) provide you with a few examples to help get you familiar
 with Slurm and be able to submit basic jobs on Discovery.
 
 :::{important}
@@ -23,19 +23,17 @@ Refer to the official Slurm documentation to get in-depth information about thes
 ## Viewing Cluster Information
 
 Use the following commands to view information about the cluster. This information can help you better understand the
-hardware that is available in order to customize your job scripts. Also see {ref}`hardware_overview` for more information.
+hardware that is available in order to customize your job scripts. Also see [Hardware overview](../03_hardware/01_hardware_overview.md) for more information.
 
-```{eval-rst}
-.. list-table::
-   :widths: 20 100
-   :header-rows: 1
+```{list-table}
+:header-rows: 1
 
-   * - Slurm Command
-     - Function
-   * - ``sinfo <options>``
-     - View partition and node information. Use option -a to view all partitions.
-   * - ``smap <options>``
-     - View details about the cluster in a visual format
+* - Slurm Command
+  - Function
+* - ``sinfo <options>``
+  - View partition and node information. Use option -a to view all partitions.
+* - ``smap <options>``
+  - View details about the cluster in a visual format
 ```
 
 (submitting-jobs)=
@@ -45,36 +43,32 @@ hardware that is available in order to customize your job scripts. Also see {ref
 There are two main commands for submitting jobs to Discovery: `srun` and `sbatch`.
 To run a job interactively, use `srun`. To submit a job to run in the background with a script, use `sbatch`.
 
-```{eval-rst}
-.. list-table::
-   :widths: 20 100
-   :header-rows: 1
+```{list-table}
+:header-rows: 1
 
-   * - Slurm Command
-     - Function
-   * - ``srun``
-     - Run an interactive job on the cluster. See :ref:`using_srun`
-   * - ``sbatch <scriptname.script>``
-     - Submit a script to the scheduler for running a job. See :ref:`using_sbatch`
-   * - ``scancel <jobid>``
-     - Cancel a pending or running job on the cluster
+* - Slurm Command
+  - Function
+* - ``srun``
+  - Run an interactive job on the cluster. See :ref:`using_srun`
+* - ``sbatch <scriptname.script>``
+  - Submit a script to the scheduler for running a job. See :ref:`using_sbatch`
+* - ``scancel <jobid>``
+  - Cancel a pending or running job on the cluster
 ```
 
 ## Monitoring Jobs
 
-```{eval-rst}
-.. list-table::
-   :widths: 20 100
-   :header-rows: 1
+```{list-table}
+:header-rows: 1
 
-   * - Slurm Command
-     - Function
-   * - ``seff <jobid>``
-     - Reports the computational efficiency of your calculations.
-   * - ``squeue -u <your user name>``
-     - Displays your job status in the job queue. Good to use with ``sbatch``.
-   * - ``scontrol show jobid -d <JOBID>``
-     - Displays your job information. Good to use with ``srun``.
+* - Slurm Command
+  - Function
+* - ``seff <jobid>``
+  - Reports the computational efficiency of your calculations.
+* - ``squeue -u <your user name>``
+  - Displays your job status in the job queue. Good to use with ``sbatch``.
+* - ``scontrol show jobid -d <JOBID>``
+  - Displays your job information. Good to use with ``srun``.
 ```
 
 ## Account information
