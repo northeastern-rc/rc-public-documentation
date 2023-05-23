@@ -22,25 +22,23 @@ For example, `which python` will display the version of python that you have in 
 
 The following are common module commands that are useful for interacting with software packages on Discovery.
 
-```{eval-rst}
-.. list-table::
-   :widths: 20 100
-   :header-rows: 1
+```{list-table}
+:header-rows: 1
 
-   * - Module Command
-     - Function
-   * - ``module avail``
-     - View a list of all of the available software packages on Discovery that you can load
-   * - ``module list``
-     - Displays a list of the software packages currently loaded in your path
-   * - ``module show <module name>``
-     - View the details of a software package (see the section "Module Show" below for more information)
-   * - ``module load <module name>``
-     - Load a software package into your environment
-   * - ``module unload <module name>``
-     - Remove a single software package from your environment
-   * - ``module purge``
-     - Removes all of the loaded software packages from your environment.
+* - Module Command
+  - Function
+* - ``module avail``
+  - View a list of all of the available software packages on Discovery that you can load
+* - ``module list``
+  - Displays a list of the software packages currently loaded in your path
+* - ``module show <module name>``
+  - View the details of a software package (see the section "Module Show" below for more information)
+* - ``module load <module name>``
+  - Load a software package into your environment
+* - ``module unload <module name>``
+  - Remove a single software package from your environment
+* - ``module purge``
+  - Removes all of the loaded software packages from your environment.
 ```
 
 :::{caution}
@@ -55,22 +53,20 @@ log back in again. You can also load it manually if you have purged it by using 
 Before loading a module, type `module show <name of module>` to see if there are any dependencies or commands that you need to execute
 before loading the module. In some cases, a module might depend on having other modules loaded to work as expected. While modules are a convenient
 way of loading software to use on Discovery, scientific software can come with many packages and dependencies. In addition to module, you should review
-other ways of loading software on Discovery. See {ref}`software_overview` for more information on different ways you can install software on Discovery.
+other ways of loading software on Discovery. See [Software overview](./01_softwareoverview.md#software-overview) for more information on different ways you can install software on Discovery.
 The figure below shows an example of `module show` with the software package called amber.
 
-```{image} /images/moduleshow.jpg
-```
+![Alt text](../images/moduleshow.jpg)
 
 ## Module load and unload example
 
 In the figure below, the software module stata/15 was loaded and then unloaded. After loading and unloading, module list was used
 to check that the STATA was loaded and unloaded.
 
-```{image} /images/moduleload.jpg
-```
+![Alt text](../images/moduleload.jpg)
 
 ## Using software applications with X11 Forwarding
 
 If you are attempting to open a GUI-based software application that  uses X11 forwarding to display, such as MATLAB or Maestro, and
 you get an error such as `Error: unable to open display localhost:19.0`, this is most likely due to an issue with passwordless SSH.
-See {ref}`using_x11` for tips and troubleshooting information opening applications that use X11 forwarding.
+See [Using X11](../02_first_steps/02_connect_mac.md#using-x11) for tips and troubleshooting information opening applications that use X11 forwarding.

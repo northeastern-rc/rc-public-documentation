@@ -1,7 +1,7 @@
 # Working with MATLAB on Discovery
 
-MATLAB is available as a module on Discovery (see {ref}`using_module` for more information), and
-it is also an interactive app on Open onDemand (see {ref}`using_ood` for more information).
+MATLAB is available as a module on Discovery (see [Using Module](../04_software/02_modules.md#using-module) for more information), and
+it is also an interactive app on Open onDemand (see [Introduction to Open OnDemand (OOD)](../08_using-ood/01_introduction.md) for more information).
 You can also download MATLAB for use with your personal computer through the [Northeastern portal on the MATLAB website](https://www.mathworks.com/academia/tah-portal/northeastern-university-30294223.html).
 Note that the procedures detailed below are specific to using MATLAB on Discovery and not with using MATLAB on your personal computer.
 

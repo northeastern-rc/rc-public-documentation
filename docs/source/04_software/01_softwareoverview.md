@@ -9,13 +9,13 @@ modules on Discovery. The Research Computing team adds new modules regularly, so
 to view the most up to date list. You can also try using Spack, a software package manager available on Discovery. Spack has over 5000 packages that
 you can install.
 
-See {ref}`using_module` for more information about working with module.
+See [Using Module](./02_modules.md#using-module) for more information about working with module.
 
-See {ref}`accessing_ood` for more information about OOD.
+See [Using OOD's Interactive Apps](../08_using-ood/03_interactiveapps.md#using-oods-interactive-apps) for more information about OOD.
 
-See {ref}`using_spack` for more information about Spack.
+See [Using Spack](./05_spack.md#using-spack) for more information about Spack.
 
-You can also use Conda, Miniconda, and Anaconda to manage software packages. See {ref}`working_conda` for more information.
+You can also use Conda, Miniconda, and Anaconda to manage software packages. See [Working with Conda/Miniconda/Anaconda](./04_conda.md#working-with-condaminicondaanaconda) for more information.
 
 ## Using Make
 

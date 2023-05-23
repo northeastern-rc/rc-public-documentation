@@ -15,10 +15,7 @@ Checkpointing is a fault tolerance technique designed to overcome the “fail-st
 > - Use data redundancy - create checkpoint files saving all of the necessary calculation state data. Checkpoint files are generally created at constant time intervals during the run.
 > - If a failure occures - start from an error-free state, check for consistency and restore the algorithm to the previous error-free state.
 
-```{image} /images/checkpointing.png
-:alt: Checkpointing algorithm flow chart.
-:width: 300
-```
+![Alt text](../images/checkpointing.png)
 
 ## Checkpointing types
 

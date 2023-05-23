@@ -52,8 +52,8 @@ To deactivate the environment, type `conda deactivate`. You can type this comman
 
 1. Your .conda directory may get very large if you install multiple packages and create many virtual Conda environments. Make sure to clean the Conda cache and clean unused packages with: `conda clean --all`.
 2. Clean unused Conda environments by first listing the environments with: `conda env list` , and then removing unused ones: `conda env remove --name <yourenvironmentname>`.
-3. You can build Conda environments in different locations to save space on your home directory (see {ref}`discovery_storage`). You can use the `--prefix` flag when building your environment. For example: `conda create myenv --prefix=/work/<mygroup>/<mydirectory>`.
+3. You can build Conda environments in different locations to save space on your home directory (see [Storage Accessible on Discovery](../06_storage/01_discovery_storage.md)[Storage Accessible on Discovery](../06_storage/01_discovery_storage.md)). You can use the `--prefix` flag when building your environment. For example: `conda create myenv --prefix=/work/<mygroup>/<mydirectory>`.
 
 :::{note}
-It is not recommended to build your Miniconda and virtual Conda environments inside your /home directory due to its limited space qouta (see {ref}`discovery_storage`). Use the /work file system instead. If your group needs access to /work, the group PI can request it using: [New Storage Space request](https://bit.ly/NURC-NewStorage) .
+It is not recommended to build your Miniconda and virtual Conda environments inside your /home directory due to its limited space qouta (see [Storage Accessible on Discovery](../06_storage/01_discovery_storage.md)). Use the /work file system instead. If your group needs access to /work, the group PI can request it using: [New Storage Space request](https://bit.ly/NURC-NewStorage) .
 :::

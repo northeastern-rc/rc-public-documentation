@@ -26,90 +26,86 @@ detailed information on the current partitions. Note that PI-owned partitions on
 In the following table, the Running Jobs Per User/Per Research Group. Core and RAM limits are set per user, across all running jobs (not pending).
 :::
 
-```{eval-rst}
-.. list-table::
-   :widths: 20 20 20 20 30 20 20 30
-   :header-rows: 1
-
-   * - Name
-     - Requires approval?
-     - Time limit (default/max)
-     - Running jobs
-     - Submitted jobs
-     - Core limit (per user)
-     - RAM limit
-     - Use Case
-   * - debug
-     - No
-     - 20 minutes/20 minutes
-     - 10/25
-     - 5000
-     - 128
-     - 256GB
-     - Best for serial and parallel jobs that can run under 20 minutes. Good for testing code.
-   * - express
-     - No
-     - 30 minutes/60 minutes
-     - 50/250
-     - 5000
-     - 2048
-     - 25TB
-     - Best for serial and parallel jobs that can run under 60 minutes.
-   * - short
-     - No
-     - 4 hours/24 Hours
-     - 50/500
-     - 5000
-     - 1024
-     - 25TB
-     - Best for serial or small parallel jobs (``--nodes=2`` max) that need to run for up to 24 hours.
-   * - long
-     - **Yes**
-     - 1 day/5 Days
-     - 25/250
-     - 1000 per user/5000 per group
-     - 1024
-     - 25TB
-     - Primarily for serial or parallel jobs that need to run for more than 24 hours. Need to prove that your code cannot be checkpointed to use this partition.
-   * - large
-     - **Yes**
-     - 6 hours/6 Hours
-     - 100/100
-     - 1000 per user/5000 per group
-     - N/A
-     - N/A
-     - Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.
+```{list-table}
+:header-rows: 1
+* - Name
+  - Requires approval?
+  - Time limit (default/max)
+  - Running jobs
+  - Submitted jobs
+  - Core limit (per user)
+  - RAM limit
+  - Use Case
+* - debug
+  - No
+  - 20 minutes/20 minutes
+  - 10/25
+  - 5000
+  - 128
+  - 256GB
+  - Best for serial and parallel jobs that can run under 20 minutes. Good for testing code.
+* - express
+  - No
+  - 30 minutes/60 minutes
+  - 50/250
+  - 5000
+  - 2048
+  - 25TB
+  - Best for serial and parallel jobs that can run under 60 minutes.
+* - short
+  - No
+  - 4 hours/24 Hours
+  - 50/500
+  - 5000
+  - 1024
+  - 25TB
+  - Best for serial or small parallel jobs (``--nodes=2`` max) that need to run for up to 24 hours.
+* - long
+  - **Yes**
+  - 1 day/5 Days
+  - 25/250
+  - 1000 per user/5000 per group
+  - 1024
+  - 25TB
+  - Primarily for serial or parallel jobs that need to run for more than 24 hours. Need to prove that your code cannot be checkpointed to use this partition.
+* - large
+  - **Yes**
+  - 6 hours/6 Hours
+  - 100/100
+  - 1000 per user/5000 per group
+  - N/A
+  - N/A
+  - Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.
 ```
 
-```{eval-rst}
-.. list-table::
-   :widths: 20 20 20 20 20 20 20 30
-   :header-rows: 1
 
-   * - Name
-     - Requires approval?
-     - Time limit (default/max)
-     - Running jobs
-     - Submitted jobs
-     - GPU per job limit
-     - GPU per user limit
-     - Use Case
-   * - gpu
-     - No
-     - 4 hours/8 Hours
-     - 25/250
-     - 50/100
-     - 1
-     - 8
-     - For jobs that can run on a single GPU processor.
-   * - multigpu
-     - **Yes**
-     - 4 hours/24 Hours
-     - 25/100
-     - 50/100
-     - 12
-     - 12
-     - For jobs that require more than one GPU and take up to 24 hours to run.
+```{list-table}
+:widths: 20 20 20 20 30 20 20 30
+:header-rows: 1
+* - Name
+  - Requires approval?
+  - Time limit (default/max)
+  - Running jobs
+  - Submitted jobs
+  - GPU per job limit
+  - GPU per user limit
+  - Use Case
+* - gpu
+  - No
+  - 4 hours/8 Hours
+  - 25/250
+  - 50/100
+  - 1
+  - 8
+  - For jobs that can run on a single GPU processor.
+* - multigpu
+  - **Yes**
+  - 4 hours/24 Hours
+  - 25/100
+  - 50/100
+  - 12
+  - 12
+  - For jobs that require more than one GPU and take up to 24 hours to run.
 ```
 
 ## Viewing partition information
@@ -129,7 +125,7 @@ For more information about these commands, see the Slurm documentation site <htt
 
 To specify a partition when running jobs, use the option `--partition=<partition name>` with either `srun` or `sbatch`. When using a partition with your job and
 specifying the options of `--nodes=` and `--ntasks=`, make sure that you are requesting options that best fit your job. **Requesting the maximum number of nodes or tasks will not make your job run faster or give you higher priority in the job queue.** It can actually have
-the opposite effect on jobs that are better suited to running with smaller requirements, as you have to wait for the extra resources that your job will not use. See {ref}`using_slurm` for more information on using Slurm to run jobs.
+the opposite effect on jobs that are better suited to running with smaller requirements, as you have to wait for the extra resources that your job will not use. See [Using Slurm](../05_using-discovery/01_usingslurm.md#using-slurm) for more information on using Slurm to run jobs.
 
 :::{tip}
 You should always try to have job requests that will attempt to allocate the best resources for the job you want to run. For example, if you are running a job that is not parallelized, you only need to request one node (`--nodes=1`). For some parallel jobs, such as a small MPI job, you can also use one node (`--nodes=1`) with the `–-ntasks=` option set to correspond to the number of MPI ranks (tasks) in your code. For example, for a job that has 12 MPI ranks, request 1 node and 12 tasks within that node (`--nodes=1 –-ntasks=12`). If you request 12 nodes, Slurm is going to run code between those nodes, which could slow your job down significantly if it isn’t optimized to run between nodes.

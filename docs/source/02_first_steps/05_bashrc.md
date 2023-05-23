@@ -12,7 +12,7 @@ Your .bashrc, .bash_profile and .profile files live in your /home directory. You
 :::{caution}
 Making edits to your .bashrc file can result in many issues. Some changes may prevent you from launching apps or executing commands. Modifying your `PATH` variable may result in the inability to use basic Shell commands (such as `cd` or `ls`) if not done correctly.
 Before making changes to your .bashrc file, make a backup of the default .bashrc file so you can restore it if necessary.
-If you need help with editing your .bashrc file, reach out to <mailto:rchelp@northeastern.edu> or [schedule a consultation with
+If you need help with editing your .bashrc file, reach out to <rchelp@northeastern.edu> or [schedule a consultation with
 a staff member](https://outlook.office365.com/owa/calendar/ResearchComputing2@northeastern.onmicrosoft.com/bookings/)
 who can help suggest edits and troubleshoot any issues you might be having.
 :::
@@ -21,8 +21,8 @@ who can help suggest edits and troubleshoot any issues you might be having.
 
 You have a default .bashrc file in your home directory when your account is created. See the figure below for an example of a default .bashrc file.
 
-```{image} /images/catbashrc.jpg
-```
+![Alt text](../images/catbashrc.jpg)
+
 
 :::{important}
 We recommend to keep .bashrc unchanged when using Discovery. You can source environment Shell scripts or load modules directly inside your job instead. This approach can prevent some runtime errors from loading incompatible modules, setting environment variables incorrectly, or from mixing multiple software and Conda environments.
@@ -30,10 +30,9 @@ We recommend to keep .bashrc unchanged when using Discovery. You can source envi
 
 ## Conda and .bashrc
 
-In addition to editing your .bashrc file as outlined in the example above, programs that you install can also modify your .bashrc file. For example, if you follow the procedure outlined in {ref}`mini_conda`, there may be a section added to your .bashrc file (if you didn't use the `-b` batch option) that automatically loads your conda environment every time you sign in to Discovery. See the figure below for an example of this:
+In addition to editing your .bashrc file as outlined in the example above, programs that you install can also modify your .bashrc file. For example, if you follow the procedure outlined in [Working with a Miniconda environment](../04_software/04_conda.md#working-with-a-miniconda-environment), there may be a section added to your .bashrc file (if you didn't use the `-b` batch option) that automatically loads your conda environment every time you sign in to Discovery. See the figure below for an example of this:
 
-```{image} /images/minicondabashrc.jpg
-```
+![Alt text](../images/minicondabashrc.jpg)
 
 You should not modify this section in the .bashrc file directly. If it was changed, remove this section manually using a file editor.
 
@@ -41,7 +40,7 @@ You should not modify this section in the .bashrc file directly. If it was chang
 We recommend removing the conda initialization section from your .bashrc as it may interfere with the correct startup environment when using Open OnDemand apps. You should always load your Conda environment after your job already started.
 :::
 
-If you need help with your .bashrc file or would like it restored to its default, reach out to the RC team at <mailto:rchelp@northeastern.edu>, and we can provide you with
+If you need help with your .bashrc file or would like it restored to its default, reach out to the RC team at <rchelp@northeastern.edu>, and we can provide you with
 a new, default .bashrc file and/or help troubleshoot issues with the file.
 
 ### Editing your .bashrc file
@@ -64,8 +63,8 @@ Example procedure for editing your .bashrc file:
 
 6. Type the edits that you want to make to your file. In this example, an alias was added to create a shortcut to the user's /scratch space.
 
-   ```{image} /images/nanobashrc.png
-   ```
+   ![Alt text](../images/nanobashrc.png)
+   
 
 7. Save the file and exit the editor.
 
@@ -84,7 +83,7 @@ module load cuda/11.1
 source activate pytorch_env_training
 ```
 
-Then, source the Shell script inside your sbatch Slurm script (see {ref}`using_sbatch`):
+Then, source the Shell script inside your sbatch Slurm script (see [Using sbacth](../05_using-discovery/02_sbatch.md#using-sbatch)):
 
 ```
 #!/bin/bash

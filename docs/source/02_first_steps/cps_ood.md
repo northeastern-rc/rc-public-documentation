@@ -1,6 +1,6 @@
 (cps-ood)=
 
-# JupyterLab for CPS classes
+# ?JupyterLab for CPS classes
 
 These instructions describe the process of opening a CPS JupyterLab environment on the Open OnDemand (OOD) Discovery web portal and accessing class work directories.
 
