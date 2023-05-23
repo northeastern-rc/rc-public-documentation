@@ -12,7 +12,7 @@ storage options would best meet your research needs.
 You can schedule an online consultation on the [RC website](https://rc.northeastern.edu/support/consulting).
 
 :::{note}
-If you have an account on Discovery, see {ref}`discovery_storage`
+If you have an account on Discovery, see [Storage Accessible on Discovery](./01_discovery_storage.md)
 for details on the storage available to you specifically for use with Discovery's compute resources. The options listed below are not connected to Discovery.
 :::
 
