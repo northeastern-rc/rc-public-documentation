@@ -9,71 +9,69 @@ The tables on this page slide from left-to-right. Make sure to
 swipe to right to see the content on the right side of the table
 :::
 
-```{eval-rst}
-.. list-table::
-  :widths: 40 40 40 40 40 40
-  :header-rows: 1
+```{list-table}
+:header-rows: 1
 
-  * - GPU Type
-    - GPU Memory
-    - Tensor Cores
-    - CUDA Cores
-    - Nodes in Public GPUs
-    - Nodes in Private GPUs
-  * - p100 (`Pascal <https://www.nvidia.com/en-us/data-center/tesla-p100/>`_)
-    - 12GB
-    - N/A
-    - 3,584
-    - 12 with 3-4 GPUs each
-    - 3 with 4 GPUs each
-  * - v100-pcie (`Volta <https://www.nvidia.com/en-us/data-center/v100/>`_)
-    - 32GB
-    - 640
-    - 5,120
-    - 4 with 2 GPUs each
-    - 1 with (16GB) 2 GPUs
-  * - v100-sxm2 (Volta)
-    - 32GB
-    - 640
-    - 5,120
-    - 24 with 4 GPUs each
-    - 10 with 4 GPUs each & 16GB GPU memory; 8 with 4 GPUs & 32GB GPU memory
-  * - t4 (`Turing <https://www.nvidia.com/en-us/data-center/tesla-t4/>`_)
-    - 15GB
-    - 320
-    - 2,560
-    - 2 with 3-4 GPUs each
-    - 1 with 4 GPUs
-  * - quadro (`Quadro RTX 8000 <https://www.nvidia.com/en-us/design-visualization/previous-quadro-desktop-gpus/>`_)
-    - 46GB
-    - 576
-    - 4,608
-    - 0
-    - 2 with 3 GPUs each
-  * - a30 ( `Ampere <https://www.nvidia.com/en-us/data-center/products/a30-gpu/>`_)
-    - 24GB
-    - 224
-    - 3,804
-    - 0
-    - 1 with 3 GPUs
-  * - a100 (`Ampere <https://www.nvidia.com/en-us/data-center/a100/>`_)
-    - 41 & 82GB
-    - 432
-    - 6,912
-    - 3 nodes with 4 GPUs each
-    - 15 nodes with 2-8 GPUs each
-  * - a5000 (`Ampere RTX A5000 <https://www.nvidia.com/en-us/design-visualization/rtx-a5000/>`_)
-    - 24GB
-    - 256
-    - 8,192
-    - 0
-    - 6 with 8 GPUs each
-  * - a6000 (`Ampere RTX A6000 <https://www.nvidia.com/en-us/design-visualization/rtx-a6000/>`_)
-    - 49GB
-    - 336
-    - 10,752
-    - 0
-    - 3 with 8 GPUs each
+* - GPU Type
+  - GPU Memory
+  - Tensor Cores
+  - CUDA Cores
+  - Nodes in Public GPUs
+  - Nodes in Private GPUs
+* - p100 (`Pascal <https://www.nvidia.com/en-us/data-center/tesla-p100/>`_)
+  - 12GB
+  - N/A
+  - 3,584
+  - 12 with 3-4 GPUs each
+  - 3 with 4 GPUs each
+* - v100-pcie (`Volta <https://www.nvidia.com/en-us/data-center/v100/>`_)
+  - 32GB
+  - 640
+  - 5,120
+  - 4 with 2 GPUs each
+  - 1 with (16GB) 2 GPUs
+* - v100-sxm2 (Volta)
+  - 32GB
+  - 640
+  - 5,120
+  - 24 with 4 GPUs each
+  - 10 with 4 GPUs each & 16GB GPU memory; 8 with 4 GPUs & 32GB GPU memory
+* - t4 (`Turing <https://www.nvidia.com/en-us/data-center/tesla-t4/>`_)
+  - 15GB
+  - 320
+  - 2,560
+  - 2 with 3-4 GPUs each
+  - 1 with 4 GPUs
+* - quadro (`Quadro RTX 8000 <https://www.nvidia.com/en-us/design-visualization/previous-quadro-desktop-gpus/>`_)
+  - 46GB
+  - 576
+  - 4,608
+  - 0
+  - 2 with 3 GPUs each
+* - a30 ( `Ampere <https://www.nvidia.com/en-us/data-center/products/a30-gpu/>`_)
+  - 24GB
+  - 224
+  - 3,804
+  - 0
+  - 1 with 3 GPUs
+* - a100 (`Ampere <https://www.nvidia.com/en-us/data-center/a100/>`_)
+  - 41 & 82GB
+  - 432
+  - 6,912
+  - 3 nodes with 4 GPUs each
+  - 15 nodes with 2-8 GPUs each
+* - a5000 (`Ampere RTX A5000 <https://www.nvidia.com/en-us/design-visualization/rtx-a5000/>`_)
+  - 24GB
+  - 256
+  - 8,192
+  - 0
+  - 6 with 8 GPUs each
+* - a6000 (`Ampere RTX A6000 <https://www.nvidia.com/en-us/design-visualization/rtx-a6000/>`_)
+  - 49GB
+  - 336
+  - 10,752
+  - 0
+  - 3 with 8 GPUs each
 ```
 
 The public GPUs are available within two partitions, named `gpu` and
@@ -82,36 +80,34 @@ number of GPUs that one can request per job and the time limit on each
 job. Both partitions give access to all of the public GPU types
 mentioned above. The table below shows the differences between the two
 partitions. For more information about the partitions on Discovery,
-see {ref}`partition_names`.
+see [Partitions](../03_hardware/02_partitions.md).
 
 :::{note}
 All user limits are subject to the availability of cluster
 resources at the time of submission and will be honored according to that.
 :::
 
-```{eval-rst}
-.. list-table::
-   :widths: 20 20 20 20 20 20
-   :header-rows: 1
+```{list-table}
+:header-rows: 1
 
-   * - Name
-     - Requires Approval?
-     - Time limit (Default/Max)
-     - Submitted Jobs
-     - GPU per job Limit
-     - Max GPUs per user Limit
-   * - gpu
-     - No
-     - 4 hours/8 Hours
-     - 50/100
-     - 1
-     - 8
-   * - multigpu
-     - **Yes**
-     - 4 hours/24 Hours
-     - 50/100
-     - 12
-     - 12
+* - Name
+  - Requires Approval?
+  - Time limit (Default/Max)
+  - Submitted Jobs
+  - GPU per job Limit
+  - Max GPUs per user Limit
+* - gpu
+  - No
+  - 4 hours/8 Hours
+  - 50/100
+  - 1
+  - 8
+* - multigpu
+  - **Yes**
+  - 4 hours/24 Hours
+  - 50/100
+  - 12
+  - 12
 ```
 
 Anyone with a Discovery account can use the `gpu`
