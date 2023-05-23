@@ -16,14 +16,11 @@ correctly. See {ref}`using_x11` for tips and troubleshooting information opening
 
 On the Interactive Apps tab, you can view the list of available interactive apps through the OOD web interface.
 
-```{image} /images/ood_apps_2021.jpg
-:alt: A list of interactive apps on OOD including FSL, Gaussian, IGV, KNIME, MATLAB,
-:  Maestro, MySQL, SAS, SPSS, STATA, Jupyter Notebook.
-```
+![Alt text](../images/ood_apps_2021.jpg)
 
 :::{note}
 Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to
-open an app, and you believe that you should have access to it, please email <mailto:rchelp@northeastern.edu> with your username,
+open an app, and you believe that you should have access to it, please email <rchelp@northeastern.edu> with your username,
 research group, the app you are trying to access, a screenshot of the error that you are getting, and we will
 look into the issue.
 :::
@@ -52,7 +49,7 @@ environment; and then reference this environment when you start the Jupyter Note
 
 **Virtual python environment**
 
-1. First set up a virtual python environment. See {ref}`creating_python` for how to set up a virtual python environment on Discovery using the terminal.
+1. First set up a virtual python environment. See [Creating a Conda virtual environment with Anaconda](../04_software/04_conda.md#creating-a-conda-virtual-environment-with-anaconda) for how to set up a virtual python environment on Discovery using the terminal.
 2. When your environment is ready, in the terminal type `source activate` to activate the base environment.
 3. Type `which conda` to get the full path of your environment. Make a note of the full path name.
 4. Type `source activate <yourenvironmentname>` where *\<yourenvironmentname>* is the name of your custom environment to activate the environment you just created.

@@ -8,7 +8,7 @@ The easy-to-use Open onDemand web portal also offers a built-in visual file
 explorer for file viewing and transfer.
 
 The following Frequently Asked Questions section should help to answer most of your questions about how you can
-use the Discovery cluster for classroom use. You can also reach out to us at <mailto:rchelp@northeastern.edu> or submit
+use the Discovery cluster for classroom use. You can also reach out to us at <rchelp@northeastern.edu> or submit
 a ServiceNow ticket if you need further information.
 
 **How can I use Discovery with my class?**
@@ -26,7 +26,7 @@ If your class roster is not complete, you can attach a preliminary list to the t
 **Is there any training on Discovery for my class?**
 
 Yes, we currently provide online training for your class on using Discovery. In the past, we have also given in-person presentations during a class period on the Boston campus.
-We hope to provide in-person training again in 2021. We can customize the training to focus on the resources you will be using with them for the class. Email us at <mailto:rchelp@northeastern.edu> and provide us with some details about your class
+We hope to provide in-person training again in 2021. We can customize the training to focus on the resources you will be using with them for the class. Email us at <rchelp@northeastern.edu> and provide us with some details about your class
 and what training you would like us to provide.
 
 **Do my students have to learn Linux to work with Discovery?**
@@ -39,8 +39,8 @@ you would like us to provide your class with a basic training course prior to us
 **What software is available to use with my class on Discovery?**
 
 There are many software packages available, including popular software apps such as Jupyter Notebook, RStudio, and MATLAB.
-If you have an account on Discovery, you can see the list of available software by using the `module avail` command. See {ref}`using_module` for more information.
-Students have access to all of the modules on Discovery. They can also use the interactive apps available on Open onDemand. See {ref}`using_ood` for more information.
+If you have an account on Discovery, you can see the list of available software by using the `module avail` command. See [Using Module](../04_software/02_modules.md) for more information.
+Students have access to all of the modules on Discovery. They can also use the interactive apps available on Open onDemand. See [Introduction to Open OnDemand (OOD)](../08_using-ood/01_introduction.md) for more information.
 We can also install additional modules and libraries specifically for your class as needed.
 
 **My class needs access to a specific software application that I do not see installed on Discovery or Open onDemand (OOD). What should I do?**
@@ -92,8 +92,8 @@ Students will have access to Discovery for the full duration of the class. If th
 
 **How do I get an account on Discovery?**
 
-If you are a professor or instructor at Northeastern, you can request an account on Discovery. See {ref}`instructor_access` for more information.
+If you are a professor or instructor at Northeastern, you can request an account on Discovery. See [Principal Investigator(PI)/Professor/Instructor Access](../02_first_steps/01_get_access.md#principal-investigatorpiprofessorinstructor-access) for more information.
 
 **How do my students get help with Discovery?**
 
-You and/or your students can either submit a [Get Assistance with Research Computing](https://bit.ly/NURC-Assistance) ticket or email <mailto:rchelp@northeastern.edu>.
+You and/or your students can either submit a [Get Assistance with Research Computing](https://bit.ly/NURC-Assistance) ticket or email <rchelp@northeastern.edu>.
