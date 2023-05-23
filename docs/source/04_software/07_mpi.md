@@ -22,5 +22,5 @@ mvapich2/2.3.4-intel2020
 Use the `module show` command to view information about the compilers you need to use with these libraries and if
 they support InfiniBand (IB) or not. For example, `module show openmpi/4.1.0-zen2-gcc10.1`.
 
-For assistance with getting started with using MPI or troubleshooting using MPI libraries on Discovery, reach out to us at <mailto:rchelp@northeastern.edu>
+For assistance with getting started with using MPI or troubleshooting using MPI libraries on Discovery, reach out to us at <rchelp@northeastern.edu>
 or [schedule a consultation](https://rc.northeastern.edu/support/consulting/) with one of our team members.
