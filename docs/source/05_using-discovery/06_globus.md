@@ -26,7 +26,7 @@ You will then be able to access the [Globus File Manager app](https://app.globus
 
 :::{tip}
 If you received an account identity that includes your NUID number
-(for example <mailto:000123456@northeastern.edu>), you can follow the “Creating and linking
+(for example <000123456@northeastern.edu>), you can follow the “Creating and linking
 a new account identity” instructions below to get a different account identity if
 you want a more user-friendly account identity. You can then link the two accounts together.
 :::
