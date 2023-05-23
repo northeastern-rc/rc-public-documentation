@@ -2,8 +2,8 @@
 
 # CPS class-specific instructions
 
-:::{Caution}
-**Note - the following instructions will only work for CPS classes.**
+:::{caution}
+**Note - The following instructions will only work for CPS classes.**
 :::
 
 These instructions describe the process of opening a CPS JupyterLab environment on the Open OnDemand (OOD) Discovery web portal and accessing class work directories.
@@ -22,17 +22,11 @@ In a web browser, go to <http://ood.discovery.neu.edu>. Login with your NU crede
 
 Under the **Courses** menu, select your Class Name (For example: **ALY3070 JupyterLab**):
 
-```{image} /images/cps-ood-menu.png
-:alt: A menu dropdown list of classes, with a CPS ALY3070 class highlighted.
-:width: 400
-```
+![Alt text](../images/cps-ood-menu.png)
 
 Select the default options and click **Launch**. Wait until the session is successfully created and ready to be launched (turns green).
 
-```{image} /images/cps-ood-jupyterform.png
-:alt: A form of the cps jupyterlab options.
-:width: 400
-```
+![Alt text](../images/cps-ood-jupyterform.png)
 
 For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab will launch.
 
@@ -42,19 +36,13 @@ If **Working Directory** is left blank, the session will launch in the main clas
 
 Click **Connect to Jupyter** to open JupyterLab:
 
-```{image} /images/cps-ood-jupyterlab-start-session.png
-:alt: session created view.
-:width: 400
-```
+![Alt text](../images/cps-ood-jupyterlab-start-session.png)
 
 This will open a JupyterLab interface in another tab.
 
 Select **Cancel** when prompted with the **Build Recommended** option:
 
-```{image} /images/cps-ood-build-window.png
-:alt: build window view.
-:width: 400
-```
+![Alt text](../images/cps-ood-build-window.png)
 
 The package jupyterlab-dash does not require a build, and will not work when build is enabled.
 
@@ -64,42 +52,28 @@ After you are connected to a CPS JupyterLab session on OOD, you can access any s
 
 You can navigate between the class folders using the left menu. Your instructor may share files in this directory:
 
-```{image} /images/cps-ood-jupyterlab-folders-view.png
-:alt: show files.
-:width: 400
-```
+![Alt text](../images/cps-ood-jupyterlab-folders-view.png)
+
 
 For instance, file **Example.ipynb** can be viewed using Python Jupyter Notebook (but not edited or removed).
 
 Navigate to the **students** directory, where you will see another directory under your username:
 
-```{image} /images/cps-ood-jupyterlab-students-folder.png
-:alt: show students folder.
-:width: 400
-```
+![Alt text](../images/cps-ood-jupyterlab-students-folder.png)
 
 Enter your personal class directory (here, username `mariana.levi` is shown):
 
-```{image} /images/cps-ood-jupyterlab-username-folder.png
-:alt: show inside username folder.
-:width: 400
-```
+![Alt text](../images/cps-ood-jupyterlab-username-folder.png)
 
 Now you can create and edit Jupyter Notebook files.
 
 Open a new Python Notebook session from the Launcher menu by clicking the **Python 3 (ipykernel)**:
 
-```{image} /images/cps-ood-jupyterlab-ipykernel-launcher.png
-:alt: show inside ipykernel.
-:width: 400
-```
+![Alt text](../images/cps-ood-jupyterlab-ipykernel-launcher.png)
 
 A new file will be created inside your directory called **Untitled.ipynb**. You can rename it by right-clicking on it and using the Rename option:
 
-```{image} /images/cps-ood-jupyterlab-ipykernel.png
-:alt: show inside ipykernel.
-:width: 400
-```
+![Alt text](../images/cps-ood-jupyterlab-ipykernel.png)
 
 This Python notebook has ready-to-use Python packages needed for your class.
 
@@ -116,17 +90,11 @@ Due to the write-only access permissions on the **assignments** directory, it is
 
 To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab New Launcher by clicking the **File** top menu option, and then selecting **New Launcher**:
 
-```{image} /images/cps-ood-jupyterlab-new-launcher.png
-:alt: open new launcher.
-:width: 400
-```
+![Alt text](../images/cps-ood-jupyterlab-new-launcher.png)
 
 Click on the **Terminal** option under **Other** to open a Linux terminal:
 
-```{image} /images/cps-ood-jupyterlab-open-terminal.png
-:alt: open terminal.
-:width: 400
-```
+![Alt text](../images/cps-ood-jupyterlab-open-terminal.png)
 
 Navigate to your personal directory by typing the following command (change the class name from `ALY3070` to your class name accordingly):
 
@@ -150,7 +118,4 @@ rm ../../assignments/Assignment1.ipynb
 
 Close the Terminal tab when done.
 
-```{image} /images/cps-ood-commandline.png
-:alt: commandline commands.
-:width: 400
-```
+![Alt text](../images/cps-ood-commandline.png)
