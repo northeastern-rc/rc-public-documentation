@@ -9,7 +9,7 @@ To use Spack, you first need to copy it to your /home directory or a /work direc
 
 These instructions will demonstrate how to install Spack in your local /home directory (step 2) and then how to add Spack to your local environment while on a compute node so you have access to the Spack commands (steps 4-5).
 
-01. Connect to Discovery via ssh ({ref}`connect_mac` or {ref}`connect_windows`).
+01. Connect to Discovery via ssh ([Connecting to Discovery with a Mac](../02_first_steps/02_connect_mac.md) or [Connecting to Discovery using Windows](../02_first_steps/03_connect_windows.md)).
 02. From the terminal, type `git clone -c feature.manyFiles=true https://github.com/spack/spack.git` to copy Spack to your /home directory.
 03. Type `srun -p short --pty -N 1 -n 28 /bin/bash` to allocate an interactive job on a compute node. Spack will attempt to run `make` in parallel when Spack builds the software you choose to install, so this `srun` request is for 28 cores on one node (-N 1 -n 28). To use Spack, it needs to add it to your local environment on the compute node, which is why this is completed after step 3.
 04. To use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`.
