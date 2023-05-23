@@ -1,3 +1,4 @@
+
 (connect-mac)=
 
 # Connecting to Discovery with a Mac
@@ -33,11 +34,11 @@ the default Terminal program that comes with your Mac (see Step 1 in the procedu
 
 1. Go to Finder > Applications > Utilities, and then double click Terminal.
 2. At the prompt, type `ssh <username>@login.discovery.neu.edu`, where `<username>` is your Northeastern username. If you need to use X11 forwarding, type `ssh -Y <username>@login.discovery.neu.edu`.
-3. Type your Northeastern password and press Enter.
+3. Type your Northeastern password and press `Enter`.
 
 You are now connected to Discovery at a login node.
 
-Watch this video of how to connect to Discovery on a Mac. If you do not see any controls on the video, right click on the video to see viewing options.
+Watch this video of how to connect to Discovery on a Mac. If you do not see any controls on the video, right-click on the video to see viewing options.
 
 
 ![Alt text](../_static/video/connect_mac_terminal.mp4)
@@ -73,18 +74,26 @@ If you are getting these types of errors, follow the steps below to set up passw
 
 **To setup passwordless ssh:**
 
-01. On a Mac, open Terminal and type, `cd ~/.ssh`. This moves you to the ssh folder on your local computer. **Note**: Make sure you're on your local computer for steps 1 through 4. If you are connected to Discovery, type `exit` to return to your local computer.
-02. Type `ssh-keygen -t rsa` to generate two files: `id_rsa` and `id_rsa.pub`.
-03. Press `Enter` to all of the prompts (do not generate a passphrase).
-04. Type `ssh-copy-id -i ~/.ssh/id_rsa.pub <yourusername>@login.discovery.neu.edu` to copy `id_rsa.pub` to your /home/.ssh folder on Discovery. Enter your NU password if prompted.
-05. Connect to Discovery by typing `ssh <yourusername>@login.discovery.neu.edu`.
-06. Type `cd ~/.ssh ; cat id_rsa.pub >> authorized_keys`. This moves you to your ssh folder and adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.
-07. Log out by typing `exit`.
-08. Connect to Discovery again by typing `ssh <yourusername>@login.discovery.neu.edu`. **Note**: If you are using a Windows machine using MobaXterm, sign in to Discovery as usual, then complete steps 9 through 12 to complete the passwordless ssh setup.
-09. Type `cd ~/.ssh` to move to your ssh folder.
-10. Type `ssh-keygen -t rsa` to generate your key files.
-11. Press `Enter` to all of the prompts (do not generate a passphrase). If prompted to overwrite a file, type `Y`.
-12. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.
+:::{note}
+> Make sure you’re on your local computer for steps 1 through 4. If you are connected to Discovery, type `exit` to return to your local computer.
+:::
+
+
+1.  On a Mac, open Terminal and type `cd ~/.ssh`. This moves you to the ssh folder on your local computer.
+2.  Type `ssh-keygen -t rsa` to generate two files, `id_rsa` and `id_rsa.pub`.
+3.  Press `Enter` to all of the prompts (do not generate a passphrase).
+4.  Type `ssh-copy-id -i ~/.ssh/id_rsa.pub <yourusername>@login.discovery.neu.edu` to copy `id_rsa.pub` to your `/home/.ssh` folder on Discovery. Enter your NU password if prompted. This copies the token from `id_rsa.pub` file to the `authorized_keys` file which will either be generated or appended if it already exists.
+5.  Connect to Discovery via `ssh <yourusername>@login.discovery.neu.edu`. You should now be connected without having to enter your password.
+
+
+:::{note}
+> If you are using a Windows machine using MobaXterm, sign in to Discovery as usual, then complete steps 6 through 9 to complete the passwordless ssh setup.
+:::
+
+6. Type `cd ~/.ssh` to move to your ssh folder.
+7. Type `ssh-keygen -t rsa` to generate your key files.
+8. Press Enter to all the prompts (do not generate a passphrase). If prompted to overwrite a file, type `Y`.
+9. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in the `~/.ssh/authorized_keys` file.
 
 ## Next steps
 
