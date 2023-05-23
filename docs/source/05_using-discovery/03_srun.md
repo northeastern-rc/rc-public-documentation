@@ -10,13 +10,11 @@ you specified. Depending on what you specified, it can take a few minutes for Sl
 
 The following image shows an example of an `srun` command as run on a command line.
 
-```{image} /images/srun_example.jpg
-:alt: image of the command line showing an example srun command
-```
+![Alt text](../images/srun_example.jpg)
 
 ## `srun` examples
 
-This section details a few examples using `srun`. You should first review the {ref}`hardware_overview` and {ref}`partition_names` sections
+This section details a few examples using `srun`. You should first review the [Hardware overview](../03_hardware/01_hardware_overview.md) and [Partitions](../03_hardware/02_partitions.md) sections
 to be familiar with the available hardware and partition limits on Discovery. This way, you can tailor your request to fit both the needs of your job
 and the limits of the partitions. For example, if you specify `--partition=debug` and `--time=01:00:00`, you'll get an error because the
 time you've specified exceeds the limit for that partition. Also keep in mind that while these examples are all valid, general examples, they might not work
@@ -52,7 +50,7 @@ To allocate a GPU node, you should specify the `gpu` partition and use the --gre
 srun --partition=gpu --nodes=1 --ntasks=1 --export=ALL --gres=gpu:1 --mem=1Gb --time=01:00:00 --pty /bin/bash
 ```
 
-For more information about working with GPUs, see {ref}`working_gpus`.
+For more information about working with GPUs, see [Working with GPUs](../05_using-discovery/04_workingwithgpu.md).
 
 ### Monitor your jobs
 
