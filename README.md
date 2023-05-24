@@ -18,8 +18,9 @@ Clone repo and create python environment:
 git clone https://github.com/northeastern-rc/rc-public-documentation
 cd rc-public-documentation
 
-python3.9 -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
+pip install --upgrade pip
 ```
 Next, for those using Mac, install pre-commit via `brew`:
 ```bash
@@ -100,17 +101,7 @@ See the [Contributing Guide](https://myst-parser.readthedocs.io/en/latest/develo
 
 [github-ci]: https://github.com/executablebooks/MyST-Parser/workflows/continuous-integration/badge.svg?branch=master
 [github-link]: https://github.com/executablebooks/MyST-Parser
-[codecov-badge]: https://codecov.io/gh/executablebooks/MyST-Parser/branch/master/graph/badge.svg
-[codecov-link]: https://codecov.io/gh/executablebooks/MyST-Parser
 [rtd-badge]: https://readthedocs.org/projects/myst-parser/badge/?version=latest
 [rtd-link]: https://myst-parser.readthedocs.io/en/latest/?badge=latest
-[black-badge]: https://img.shields.io/badge/code%20style-black-000000.svg
-[pypi-badge]: https://img.shields.io/pypi/v/myst-parser.svg
-[pypi-link]: https://pypi.org/project/myst-parser
-[conda-badge]: https://anaconda.org/conda-forge/myst-parser/badges/version.svg
-[conda-link]: https://anaconda.org/conda-forge/myst-parser
-[black-link]: https://github.com/ambv/black
-[install-badge]: https://img.shields.io/pypi/dw/myst-parser?label=pypi%20installs
-[install-link]: https://pypistats.org/packages/myst-parser
 [install-vscode]: https://code.visualstudio.com/
 [myst-plugin-install]: https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight
