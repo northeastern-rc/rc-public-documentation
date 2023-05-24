@@ -15,7 +15,7 @@ Due to problems with launching OOD on **Safari**, we recommend using **Google Ch
 ## Open the CPS JupyterLab environment
 
 :::{important}
-The class instructor needs to fill in the: [Discovery Classroom Use Request](https://bit.ly/NURC-Classroom) You will only be able to find your class resources if a request was already made.
+The class instructor needs to fill in the: [Discovery Classroom Use Request] You will only be able to find your class resources if a request was already made.
 :::
 
 In a web browser, go to <http://ood.discovery.neu.edu>. Login with your NU credentials.
@@ -119,3 +119,6 @@ rm ../../assignments/Assignment1.ipynb
 Close the Terminal tab when done.
 
 ![Alt text](../images/cps-ood-commandline.png)
+
+
+[Discovery Classroom Use Request]: https://bit.ly/NURC-Classroom
