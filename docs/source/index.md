@@ -122,7 +122,7 @@ Whether you are a seasoned user or just beginning your journey into high-perform
 
 We invite you to explore the resources, tools, and services available through the portal. Join us as we endeavor to harness the power of high-performance computing, enabling breakthroughs in research and fostering innovation at Northeastern University.
 
----
+
 ```{toctree}
 :hidden:
 :caption: 👋 Welcome
@@ -130,7 +130,6 @@ We invite you to explore the resources, tools, and services available through th
 01_welcome/01_welcome
 02_welcome/02_gettinghelp
 ```
----
 
 ---
 ```{toctree}
