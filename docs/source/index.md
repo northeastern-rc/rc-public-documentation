@@ -78,33 +78,33 @@ Get Help
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`markdown;1.5em;screen-full` Open OnDemand (OOD)
-:link: using-ood/introduction.rst
-:link-type: ref
+:link: 08_using-ood/01_introduction
+:link-type: doc
 
 OOD provides a various available software interactively through your favorite browser.
 
 +++
-[Learn more »](using-ood/introduction.rst)
+[Learn more »](08_using-ood/01_introduction)
 :::
 
 :::{grid-item-card} {octicon}`plug;1.5em;sd-mr-1` Classroom Integration
-:link: roles-directives
-:link-type: ref
+:link: 09_classroom/01_class_use
+:link-type: doc
 
 Request a reservation devoted for the classroom, whether an entire curriculum or specific assignments and lessons.
 
 +++
-[Learn more »](classroom/class_use.rst)
+[Learn more »](09_classroom/01_class_use)
 :::
 
 :::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Best Practices
-:link: best-practices/checkpointing
+:link: 07_best-practices/01_checkpointing
 :link-type: doc
 
 Learn to optimize your projects by following some best practices.
 
 +++
-[Learn more »](best-practices/checkpointing.rst)
+[Learn more »](07_best-practices/01_checkpointing)
 :::
 
 ::::
