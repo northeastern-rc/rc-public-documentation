@@ -36,40 +36,6 @@ A dedicated platform for researchers, scholars, and students to access, learn, a
 ---
 ````{div}
 
-
-```
----
-:ref-type: doc
-:color: primary
-:class: sd-rounded-pill sd-mr-3
-
-Get Started
----
-```
-
-```
----
-:ref-type: doc
-:color: secondary
-:class: sd-rounded-pill sd-mr-3
-
-Get Access
----
-```
-
-```
----
-:ref-type: doc
-:color: secondary
-:class: sd-rounded-pill
-
-Get Help
----
-```
-
-```
----
-
 :::
 
 ::::
@@ -113,15 +79,11 @@ Learn to optimize your projects by following some best practices.
 ```{note}
 Access to the HPC Cluster is subject to university policy and guidelines. Please ensure that you read and understand these guidelines before using the facility. If you require assistance or have any questions, please do not hesitate to contact our dedicated support team.
 ```
----
-
-
 The Northeastern University HPC Cluster is a high-powered, multi-node, parallel computing system designed to meet the computational and data-intensive needs of various academic and industry-oriented research projects. The cluster incorporates cutting-edge computing technologies and robust storage solutions, providing an efficient and scalable environment for large-scale simulations, complex calculations, artificial intelligence, machine learning, big data analytics, bioinformatics, and more.
 
 Whether you are a seasoned user or just beginning your journey into high-performance computing, our portal offers comprehensive resources, including in-depth guides, tutorials, best practices, and troubleshooting tips. Furthermore, the platform provides a streamlined interface to monitor, submit, and manage your computational jobs on the HPC cluster.
 
 We invite you to explore the resources, tools, and services available through the portal. Join us as we endeavor to harness the power of high-performance computing, enabling breakthroughs in research and fostering innovation at Northeastern University.
-
 
 ```{toctree}
 :hidden:
@@ -131,7 +93,6 @@ We invite you to explore the resources, tools, and services available through th
 02_welcome/02_gettinghelp
 ```
 
----
 ```{toctree}
 :hidden:
 :caption: 🔎 First Steps with Discovery
@@ -142,8 +103,7 @@ We invite you to explore the resources, tools, and services available through th
 02_first_steps/04_connect_ood
 02_first_steps/05_bashrc
 ```
----
----
+
 ```{toctree}
 :hidden:
 :caption: 🖥️ Hardware on Discovery
@@ -151,9 +111,7 @@ We invite you to explore the resources, tools, and services available through th
 03_hardware/01_hardware_overview
 03_hardware/02_partitions
 ```
----
 
----
 ```{toctree}
 :hidden:
 :caption: Using HPC
@@ -166,9 +124,7 @@ We invite you to explore the resources, tools, and services available through th
 04_software/06_r
 04_software/07_mpi
 ```
----
 
----
 ```{toctree}
 :hidden:
 :caption: 📚 Software Guides
@@ -180,9 +136,7 @@ We invite you to explore the resources, tools, and services available through th
 05_using-discovery/05_transferringdata
 05_using-discovery/06_globus
 ```
----
 
----
 ```{toctree}
 :hidden:
 :caption: Understanding storage options
@@ -190,18 +144,14 @@ We invite you to explore the resources, tools, and services available through th
 06_storage/01_discovery_storage
 06_storage/02_general_storage
 ```
----
 
----
 ```{toctree}
 :hidden:
 :caption: Best practices
 
 07_best-practices/01_checkpointing
 ```
----
 
----
 ```{toctree}
 :hidden:
 :caption: 📖 Using Open OnDemand (OOD)
@@ -210,9 +160,7 @@ We invite you to explore the resources, tools, and services available through th
 08_using-ood/02_fileexplore
 08_using-ood/03_interactiveapps
 ```
----
 
----
 ```{toctree}
 :hidden:
 :caption: 🧑‍🏫 HPC for the classroom
@@ -220,6 +168,5 @@ We invite you to explore the resources, tools, and services available through th
 09_classroom/01_class_use
 09_classroom/02_cps_ood
 ```
----
 
 
