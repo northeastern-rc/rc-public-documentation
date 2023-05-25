@@ -1,8 +1,7 @@
 (partition-names)=
-
 # Partitions
 
-{sub}`Updated July 31, 2020`
+<!--{sub}`today`-->
 
 ## Introduction
 
@@ -12,7 +11,7 @@ team might need to make updates to the partitions based on monitoring job submis
 wait times. As our cluster grows, changes to the partitions also help to ensure the fair, efficient
 distribution of resources for all jobs being submitted to the cluster.
 
-On Discovery, there are several different partitions:
+On Discovery, there are several partitions:
 
 - General access (`debug`, `express`, `short`, `gpu`)
 - Application only (`long`, `large`, `multigpu`)
@@ -125,7 +124,7 @@ For more information about these commands, see the Slurm documentation site <htt
 
 To specify a partition when running jobs, use the option `--partition=<partition name>` with either `srun` or `sbatch`. When using a partition with your job and
 specifying the options of `--nodes=` and `--ntasks=`, make sure that you are requesting options that best fit your job. **Requesting the maximum number of nodes or tasks will not make your job run faster or give you higher priority in the job queue.** It can actually have
-the opposite effect on jobs that are better suited to running with smaller requirements, as you have to wait for the extra resources that your job will not use. See [Using Slurm](../05_using-discovery/01_usingslurm.md#using-slurm) for more information on using Slurm to run jobs.
+the opposite effect on jobs that are better suited to running with smaller requirements, as you have to wait for the extra resources that your job will not use. See {ref}`using-slurm' for more information on using Slurm to run jobs.
 
 :::{tip}
 You should always try to have job requests that will attempt to allocate the best resources for the job you want to run. For example, if you are running a job that is not parallelized, you only need to request one node (`--nodes=1`). For some parallel jobs, such as a small MPI job, you can also use one node (`--nodes=1`) with the `–-ntasks=` option set to correspond to the number of MPI ranks (tasks) in your code. For example, for a job that has 12 MPI ranks, request 1 node and 12 tasks within that node (`--nodes=1 –-ntasks=12`). If you request 12 nodes, Slurm is going to run code between those nodes, which could slow your job down significantly if it isn’t optimized to run between nodes.
