@@ -1,7 +1,7 @@
-# Working with MATLAB on Discovery
+# Using MATLAB
 
-MATLAB is available as a module on Discovery (see [Using Module](../04_software/02_modules.md#using-module) for more information), and
-it is also an interactive app on Open onDemand (see [Introduction to Open OnDemand (OOD)](../08_using-ood/01_introduction.md) for more information).
+MATLAB is available as a module on Discovery (see {ref}`using-module` for more information), and
+it is also an interactive app on Open onDemand (see {ref}`using-ood` for more information).
 You can also download MATLAB for use with your personal computer through the [Northeastern portal on the MATLAB website](https://www.mathworks.com/academia/tah-portal/northeastern-university-30294223.html).
 Note that the procedures detailed below are specific to using MATLAB on Discovery and not with using MATLAB on your personal computer.
 
@@ -74,10 +74,10 @@ This walkthrough details submitting jobs through Discovery's Open onDemand web p
 to other versions of MATLAB.
 :::
 
-Before starting, you should create a folder in your /scratch/\<yourusername> directory. This
+Before starting, you should create a folder in your `/scratch/<yourusername>` directory. This
 folder is where you'll save your job data.
 
-1. Go to your /scratch directory: `cd /scratch/<yourusername>` where \<yourusername> is your NU username
+1. Go to your /scratch directory: `cd /scratch/<yourusername>` where `<yourusername>` is your NU username
 2. Make a new folder. We suggest calling it *matlab-metadata*: `mkdir matlab-metadata`
 
 **To start MATLAB and add a Cluster Profile, do the following:**
