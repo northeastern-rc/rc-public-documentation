@@ -114,7 +114,7 @@ We invite you to explore the resources, tools, and services available through th
 
 ```{toctree}
 :hidden:
-:caption: Using HPC
+:caption: 📚 Software Guides
 
 04_software/01_softwareoverview
 04_software/02_modules
@@ -127,7 +127,7 @@ We invite you to explore the resources, tools, and services available through th
 
 ```{toctree}
 :hidden:
-:caption: 📚 Software Guides
+:caption: Using HPC
 
 05_using-discovery/01_usingslurm
 05_using-discovery/02_sbatch
