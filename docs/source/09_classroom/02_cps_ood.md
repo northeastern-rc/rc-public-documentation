@@ -1,6 +1,6 @@
 (cps-ood)=
 
-# CPS class-specific instructions
+# CPS Class Instructions
 
 :::{caution}
 **Note - The following instructions will only work for CPS classes.**

@@ -10,7 +10,7 @@ hour, you will need to wait for Slurm to allocate a resource that can run for yo
 which could take a long time to be allocated, depending on how busy the cluster is.
 
 If you are attempting to run a job on one of the interactive apps on OOD that launches a graphical user interface (GUI), such as Maestro, you might get an error if your passwordless ssh is not set up
-correctly. See {ref}`using_x11` for tips and troubleshooting information opening applications that use X11 forwarding.
+correctly. See {ref}`using-x11` for tips and troubleshooting information opening applications that use X11 forwarding.
 
 ## Available Apps (November 2021)
 
@@ -49,7 +49,7 @@ environment; and then reference this environment when you start the Jupyter Note
 
 **Virtual python environment**
 
-1. First set up a virtual python environment. See [Creating a Conda virtual environment with Anaconda](../04_software/04_conda.md#creating-a-conda-virtual-environment-with-anaconda) for how to set up a virtual python environment on Discovery using the terminal.
+1. First set up a virtual python environment. See {ref}`creating-python` for how to set up a virtual python environment on Discovery using the terminal.
 2. When your environment is ready, in the terminal type `source activate` to activate the base environment.
 3. Type `which conda` to get the full path of your environment. Make a note of the full path name.
 4. Type `source activate <yourenvironmentname>` where *\<yourenvironmentname>* is the name of your custom environment to activate the environment you just created.

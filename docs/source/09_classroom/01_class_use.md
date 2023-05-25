@@ -1,4 +1,4 @@
-# Using Discovery with your class FAQ
+# Classroom HPC: FAQ
 
 There are several use cases for teaching and learning with the Discovery cluster in a classroom. Discovery offers both a command line and web interface, allowing flexibility in access and instruction level. Using Discovery gives you and your students access to many popular scientific applications, and also allows you and your students to install other packages as needed. The easy-to-use Open onDemand web portal also offers a built-in visual file explorer for file viewing and transfer.
 
@@ -41,7 +41,7 @@ Software requests can take up to 24 hours to verify, and then additional time is
 :::
 
 :::{tip}
-You and your students can install software locally to your PATH on Discovery, which may be a better option in some cases, such as installing multiple conda environments. See {ref}`software_overview` for more information.
+You and your students can install software locally to your PATH on Discovery, which may be a better option in some cases, such as installing multiple conda environments. See {ref}`software-overview` for more information.
 :::
 
 **I just need my class to access Open onDemand. How do I request that?**
@@ -67,7 +67,7 @@ Students will have access to Discovery for the full duration of the class. If th
 
 **How do I get an account on Discovery?**
 
-If you are a professor or instructor at Northeastern, you can request an account on Discovery. See [Principal Investigator(PI)/Professor/Instructor Access] for more information.
+If you are a professor or instructor at Northeastern, you can request an account on Discovery. See {ref}`instructor-access` for more information.
 
 **How do my students get help with Discovery?**
 
@@ -79,5 +79,4 @@ You and/or your students can either submit a [Get Assistance with Research Compu
 [Get Assistance with Research Computing]: https://bit.ly/NURC-Assistance
 [How to Download a List of Student Email Addresses from Canvas]: https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981
 [Introduction to Open OnDemand (OOD)]: ../08_using-ood/01_introduction.md
-[Principal Investigator(PI)/Professor/Instructor Access]: ../02_first_steps/01_get_access.md#principal-investigatorpiprofessorinstructor-access
 [Using Module]: ../04_software/02_modules.md
