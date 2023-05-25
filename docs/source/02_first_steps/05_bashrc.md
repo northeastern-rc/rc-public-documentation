@@ -1,6 +1,6 @@
 (bashrc)=
 
-# Shell environment on Discovery
+# Shell Environment
 
 ## The Discovery Shell environment and .bashrc
 
@@ -30,7 +30,7 @@ We recommend to keep .bashrc unchanged when using Discovery. You can source envi
 
 ## Conda and .bashrc
 
-In addition to editing your .bashrc file as outlined in the example above, programs that you install can also modify your .bashrc file. For example, if you follow the procedure outlined in [Working with a Miniconda environment](../04_software/04_conda.md#working-with-a-miniconda-environment), there may be a section added to your .bashrc file (if you didn't use the `-b` batch option) that automatically loads your conda environment every time you sign in to Discovery. See the figure below for an example of this:
+In addition to editing your .bashrc file as outlined in the example above, programs that you install can also modify your .bashrc file. For example, if you follow the procedure outlined in {ref}`mini-conda`, there may be a section added to your .bashrc file (if you didn't use the `-b` batch option) that automatically loads your conda environment every time you sign in to Discovery. See the figure below for an example of this:
 
 ![Alt text](../images/minicondabashrc.jpg)
 
@@ -83,7 +83,7 @@ module load cuda/11.1
 source activate pytorch_env_training
 ```
 
-Then, source the Shell script inside your sbatch Slurm script (see [Using sbacth](../05_using-discovery/02_sbatch.md#using-sbatch)):
+Then, source the Shell script inside your sbatch Slurm script (see {ref}`using-sbatch`):
 
 ```
 #!/bin/bash
