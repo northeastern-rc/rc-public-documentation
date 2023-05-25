@@ -1,6 +1,6 @@
 (general-storage)=
 
-# General Data Storage Options
+# Storage Options
 
 The Research Computing (RC) team is responsible for the procurement and ongoing
 maintenance of several data storage options, including active and archive
