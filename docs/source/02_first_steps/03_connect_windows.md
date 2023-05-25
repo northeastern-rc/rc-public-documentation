@@ -32,7 +32,11 @@ You are now connected to Discovery at a login node.
 
 Watch this video to see how to connect to Discovery with MobaXterm. If you do not see any controls on the video, right click on the video to see viewing options.
 
-![Alt text](../_static/video/windows_moba_connect.mp4)
+<video width="720" height="480" controls>
+  <source src="../_static/video/windows_moba_connect.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<!-- ![Alt text](../_static/video/windows_moba_connect.mp4) -->
 
 
 ## Passwordless ssh

@@ -22,7 +22,11 @@ proceed with the following steps in order to access Discovery.
 Watch the following video for a short tutorial. If you do not see any controls on the video,
 right click on the video to see viewing options.
 
-![Alt text](../_static/video/OOD_access.mp4)
+<video width="720" height="480" controls>
+  <source src="../_static/video/OOD_access.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<!-- ![Alt text](../_static/video/OOD_access.mp4) -->
 
 ## Next steps
 
