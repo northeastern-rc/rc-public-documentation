@@ -90,7 +90,7 @@ We invite you to explore the resources, tools, and services available through th
 :caption: 👋 Welcome
 
 01_welcome/01_welcome
-02_welcome/02_gettinghelp
+01_welcome/02_gettinghelp
 ```
 
 ```{toctree}
@@ -131,7 +131,7 @@ We invite you to explore the resources, tools, and services available through th
 
 05_using-discovery/01_usingslurm
 05_using-discovery/02_sbatch
-05_using-discovery/03_srum
+05_using-discovery/03_srun
 05_using-discovery/04_workingwithgpu
 05_using-discovery/05_transferringdata
 05_using-discovery/06_globus
