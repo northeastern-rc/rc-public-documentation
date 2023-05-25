@@ -1,6 +1,6 @@
 (connect-windows)=
 
-# Connecting to Discovery using Windows
+# Connecting Windows
 
 You connect to Discovery using a [secure shell](https://www.ssh.com/ssh/protocol/) program to initiate an SSH session to
 sign in to Discovery. This topic is about how to connect using Windows. See [connect mac](./02_connect_mac.md) for information about connecting with a Mac.
@@ -39,7 +39,7 @@ Watch this video to see how to connect to Discovery with MobaXterm. If you do no
 <!-- ![Alt text](../_static/video/windows_moba_connect.mp4) -->
 
 
-## Passwordless ssh
+## Passwordless ssh on Windows
 
 You need to setup passwordless ssh to ensure that GUI-based applications will launch without any issues. You also
 need to make sure that your keys are added to the authorized.key file. This needs to be done anytime you regenerate your keys. If you're having
@@ -62,7 +62,7 @@ If you are getting these types of errors, follow the steps below to set up passw
 2. Type `cd ~/.ssh` to move to your ssh folder.
 3. Type `ssh-keygen -t rsa` to generate your key files.
 4. Press `Enter` to all of the prompts (do not generate a passphrase). If prompted to overwrite a file, type `Y`.
-5. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in the ~/.ssh/authorized_keys file.
+5. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in the `~/.ssh/authorized_keys`.
 
 The following video tutorial goes through this process.
 
@@ -76,11 +76,12 @@ The following video tutorial goes through this process.
 
 % </video>
 
+(windows-next-steps)=
 ### Next steps
 
-After you are connected, you can run jobs either in interactive mode with `srun` or submit a script using `sbatch`. See [using srun](../05_using-discovery/03_srun.md#using-srun) and [using sbatch](../05_using-discovery/02_sbatch.md#using-sbatch) for more information.
+After you are connected, you can run jobs either in interactive mode with `srun` or submit a script using `sbatch`. See {ref}`using-slurm` and {ref}`using-sbatch` for more information.
 
-To load and run software, see [software overview](../04_software/01_softwareoverview.md).
-To find out more about the hardware and partitions on Discovery, see [hardware overview](../03_hardware/01_hardware_overview.md) and [partition names](../03_hardware/02_partitions.md#partitions).
+To load and run software, see {ref}`software-overview`.
+To find out more about the hardware and partitions on Discovery, see {ref}`hardware-overview` and {ref}`partitions`.
 
 To watch an introductory training video, go to [Northeastern's LinkedIn Learning page](https://www.linkedin.com/checkpoint/enterprise/login/74653650?pathWildcard=74653650&application=learning&redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fcontent%2F1139340%3Fu%3D74653650).
