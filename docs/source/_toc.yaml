@@ -6,14 +6,14 @@ Northeastern University Research Computing
 ===========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Welcome
 
    welcome/welcome
    welcome/gettinghelp
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 3
   :caption: First Steps with Discovery
 
   first_steps/get_access
@@ -23,14 +23,14 @@ Northeastern University Research Computing
   first_steps/bashrc
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Hardware on Discovery
 
    hardware/hardware_overview
    hardware/partitions
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Software on Discovery
 
    software/softwareoverview
@@ -42,7 +42,7 @@ Northeastern University Research Computing
    software/mpi
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 3
   :caption: Using Discovery
 
   using-discovery/usingslurm
@@ -53,20 +53,20 @@ Northeastern University Research Computing
   using-discovery/globus
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Understanding storage options
 
    storage/discovery_storage
    storage/general_storage
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Discovery best practices
 
    best-practices/checkpointing
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Using Open OnDemand (OOD)
 
    using-ood/introduction
@@ -75,7 +75,7 @@ Northeastern University Research Computing
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Using Discovery in your classroom
 
    classroom/class_use
