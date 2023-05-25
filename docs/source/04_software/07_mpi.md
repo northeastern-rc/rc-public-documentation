@@ -1,4 +1,4 @@
-# Message Passing Interface (MPI) Overview
+# Using MPI
 
 [Message Passing Interface (MPI)](https://www.mpi-forum.org) is a standard for writing message-passing programs. MPI itself is not a
 language. It defines a library interface, aimed at establishing a practical and easy-to-use standard for message passing.
