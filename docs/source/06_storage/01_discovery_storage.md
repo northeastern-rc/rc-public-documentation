@@ -1,6 +1,6 @@
 (discovery-storage)=
 
-# Storage Accessible on  Discovery
+# HPC Storage
 
 There are two main storage systems connected to Discovery: /home and /scratch. These options have specific quotas and limitations.
 The list below details the storage options available to you on Discovery if you have an account on Discovery. These are storage options
