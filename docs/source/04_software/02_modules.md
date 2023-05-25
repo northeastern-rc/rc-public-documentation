@@ -53,7 +53,7 @@ log back in again. You can also load it manually if you have purged it by using 
 Before loading a module, type `module show <name of module>` to see if there are any dependencies or commands that you need to execute
 before loading the module. In some cases, a module might depend on having other modules loaded to work as expected. While modules are a convenient
 way of loading software to use on Discovery, scientific software can come with many packages and dependencies. In addition to module, you should review
-other ways of loading software on Discovery. See [Software overview](./01_softwareoverview.md#software-overview) for more information on different ways you can install software on Discovery.
+other ways of loading software on Discovery. See {ref}`software-overview` for more information on different ways you can install software on Discovery.
 The figure below shows an example of `module show` with the software package called amber.
 
 ![Alt text](../images/moduleshow.jpg)
@@ -69,4 +69,4 @@ to check that the STATA was loaded and unloaded.
 
 If you are attempting to open a GUI-based software application that  uses X11 forwarding to display, such as MATLAB or Maestro, and
 you get an error such as `Error: unable to open display localhost:19.0`, this is most likely due to an issue with passwordless SSH.
-See [Using X11](../02_first_steps/02_connect_mac.md#using-x11) for tips and troubleshooting information opening applications that use X11 forwarding.
+See {ref}`using-x11` for tips and troubleshooting information opening applications that use X11 forwarding.
