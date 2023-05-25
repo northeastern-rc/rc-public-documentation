@@ -1,6 +1,6 @@
 (hardware-overview)=
 
-# Hardware overview
+# Hardware Overview
 
 The Discovery computing cluster provides you with access to over 1024 CPU nodes, 50,000 CPU cores, and over 200 GPUs and is connected
 to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer.
@@ -43,13 +43,13 @@ Table 1 below shows the feature names, number of nodes by partition type (public
   - 186 - 3094 GB
 ```
 
-If you are looking for information about GPUs, see [Working with GPUs](../05_using-discovery/04_workingwithgpu.md#working-with-gpus).
+If you are looking for information about GPUs, see {ref}`working-gpus`.
 
-If you are interested in more information about the different partitions on Discovery, including the number of nodes per partition, running time limits, job submission limits, and RAM limits, see [Partitions](./02_partitions.md#partitions).
+If you are interested in more information about the different partitions on Discovery, including the number of nodes per partition, running time limits, job submission limits, and RAM limits, see {ref}`partitions`.
 
 ## Using the `--constraint` flag
 
-When using `srun` or `sbatch`, you can specify hardware features as part of your job by using the `--constraint=` flag. This may be particularily useful when benchmarking, optimizing, or if you're using code that was compiled on a certain micro-architechture. Currently, you can use the `--constraint=` flag to restrict your job to a specific feature name (e.g., `haswell`, `ivybridge`) or you can use the flag: `ib` to only include nodes that are connected by InfiniBand (IB) with a job that needs to use multiple nodes.
+When using `srun` or `sbatch`, you can specify hardware features as part of your job by using the `--constraint=` flag. This may be particularly useful when benchmarking, optimizing, or if you're using code that was compiled on a certain micro-architecture. Currently, you can use the `--constraint=` flag to restrict your job to a specific feature name (e.g., `haswell`, `ivybridge`) or you can use the flag: `ib` to only include nodes that are connected by InfiniBand (IB) with a job that needs to use multiple nodes.
 
 A few examples using `srun`:
 
@@ -65,5 +65,5 @@ A few examples using `srun`:
 You can add these same flags as an additional line in your `sbatch` script via (`#SBATCH --constraint=haswell`)
 
 :::{note}
-Using the --constraint flag can mean that you will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see {ref}`using_slurm`. Finally, at this time only the OR operator `|` is supported when using `--constraint`.
+Using the --constraint flag can mean that you will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see {ref}`using-slurm`. Finally, at this time only the OR operator `|` is supported when using `--constraint`.
 :::
