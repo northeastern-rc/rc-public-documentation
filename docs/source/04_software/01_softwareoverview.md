@@ -1,6 +1,6 @@
 (software-overview)=
 
-# Software overview
+# Software Overview
 
 Discovery offers you many options for working with software. Two of the easiest and most convenient ways are
 using the `module` command on the command line and using the interactive apps on Open onDemand (OOD), Discovery's web portal.
@@ -9,13 +9,13 @@ modules on Discovery. The Research Computing team adds new modules regularly, so
 to view the most up to date list. You can also try using Spack, a software package manager available on Discovery. Spack has over 5000 packages that
 you can install.
 
-See [Using Module](./02_modules.md#using-module) for more information about working with module.
+See {ref}`using-module` for more information about working with module.
 
-See [Using OOD's Interactive Apps](../08_using-ood/03_interactiveapps.md#using-oods-interactive-apps) for more information about OOD.
+See {ref}`accessing-ood` for more information about OOD.
 
-See [Using Spack](./05_spack.md#using-spack) for more information about Spack.
+See {ref}`using-spack` for more information about Spack.
 
-You can also use Conda, Miniconda, and Anaconda to manage software packages. See [Working with Conda/Miniconda/Anaconda](./04_conda.md#working-with-condaminicondaanaconda) for more information.
+You can also use Conda, Miniconda, and Anaconda to manage software packages. See {ref}`using-conda` for more information.
 
 ## Using Make
 
