@@ -43,7 +43,7 @@ A dedicated platform for researchers, scholars, and students to access, learn, a
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
-:::{grid-item-card} {octicon}`markdown;1.5em;screen-full` Open OnDemand (OOD)
+:::{grid-item-card} {octicon}`video;1.5em;screen-full` Open OnDemand (OOD)
 :link: 08_using-ood/01_introduction
 :link-type: doc
 
