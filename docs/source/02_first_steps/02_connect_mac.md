@@ -6,23 +6,13 @@
 You connect to Discovery using a [secure shell](https://www.ssh.com/ssh/protocol/) program to initiate an SSH session to
 sign in to Discovery. If you usually launch software from the command line that uses a graphical user interface (GUI), see {ref}`using-x11` for tips and troubleshooting information.
 
-% 2FA Authentication with DUO
-
-% ============================
-
-% When you connect to Discovery you are required to complete two-factor authentication (2FA) using the app Duo. All Northeastern staff, faculty, and students
-
-% should already have Duo, as it is used with many other online campus resources, such as Canvas and myNortheastern. To learn more about using Duo,
-
-% go to `Northeastern's 2FA informational website <https://get2fa.northeastern.edu/>`_.
-
 ## Mac
 
 Mac computers come with a Secure Shell (SSH) program called [Terminal](https://support.apple.com/guide/terminal/welcome/mac)
-that you use to connect to Discovery using SSH. If you need to use software that uses a GUI, such as Matlab or Maestro, make sure to use the -Y option in the second step below (see [Using X11](using-x11) for more tips and troubleshooting information).
+that you use to connect to the HPC using SSH. If you need to use software that uses a GUI, such as Matlab or Maestro, make sure to use the -Y option in the second step below (see [Using X11](using-x11) for more tips and troubleshooting information).
 
 :::{note}
-If you use Mac OS X version 10.8 or higher, and you have [XQuartz](https://www.xquartz.org/) running in the background to do X11 forwarding, you should execute the following command in Terminal once before connecting to Discovery:
+If you use Mac OS X version 10.8 or higher, and you have [XQuartz](https://www.xquartz.org/) running in the background to do X11 forwarding, you should execute the following command in Terminal once before connecting:
 
 `defaults write org.macosforge.xquartz.X11 enable_iglx -bool true`
 
@@ -78,7 +68,7 @@ If you are getting these types of errors, follow the steps below to set up passw
 **To setup passwordless ssh:**
 
 :::{note}
-> Make sure you’re on your local computer for steps 1 through 4. If you are connected to Discovery, type `exit` to return to your local computer.
+> Make sure you’re on your local computer for steps 1 through 4. If you are connected to the cluster, type `exit` to return to your local computer.
 :::
 
 
@@ -90,7 +80,7 @@ If you are getting these types of errors, follow the steps below to set up passw
 
 
 :::{note}
-> If you are using a Windows machine using MobaXterm, sign in to Discovery as usual, then complete steps 6 through 9 to complete the passwordless ssh setup.
+> If you are using a Windows machine using MobaXterm, sign in to the HPC as usual, then complete steps 6 through 9 to complete the passwordless ssh setup.
 :::
 
 6. Type `cd ~/.ssh` to move to your ssh folder.
@@ -98,11 +88,8 @@ If you are getting these types of errors, follow the steps below to set up passw
 8. Press Enter to all the prompts (do not generate a passphrase). If prompted to overwrite a file, type `Y`.
 9. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in the `~/.ssh/authorized_keys` file.
 
-## Next steps
+**Next Steps**
 
-After you are connected, you can run jobs either in interactive mode with `srun` or submit a script using `sbatch`. See {ref}`using-srun` and {ref}`using-sbatch` for more information.
+```{include} ../_snippets/next-steps.md
+```
 
-To load and run software, see {ref}`software-overview`.
-To find out more about the hardware and partitions on Discovery, see {ref}`hardware-overview` and {ref}`partitions`.
-
-To watch an introductory training video, go to [Northeastern's LinkedIn Learning page](https://www.linkedin.com/checkpoint/enterprise/login/74653650?pathWildcard=74653650&application=learning&redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fcontent%2F1139340%3Fu%3D74653650).
