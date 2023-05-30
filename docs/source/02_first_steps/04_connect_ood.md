@@ -1,3 +1,4 @@
+
 (access-ood)=
 
 # Accessing Open OnDemand
@@ -29,6 +30,6 @@ right-click on the video to see viewing options.
 <!-- ![Alt text](../_static/video/OOD_access.mp4) -->
 
 (ood-next-steps)=
-## Next steps
+## OOD: next steps
 
 After you are connected, you use the interactive apps in OOD. See {ref}`accessing-ood` for more information.
