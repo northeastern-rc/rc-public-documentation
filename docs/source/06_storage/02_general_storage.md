@@ -20,13 +20,13 @@ for details on the storage available to you specifically for use with Discovery'
 : - **DESCRIPTION:** This storage tier is intended to be a repository for data derived from equipment such as lab machines,
     instruments, etc. The performance capabilities are not intended for parallel or high performance workloads.
     Data are backed up and a second copy is created. You can request storage on `/research` by submitting a [New Storage Space request](https://bit.ly/NURC-NewStorage).
-    See the section "Connecting to /research" below for information on how to connect to this storage.
+    See the section {ref}`connecting-to-research` below for information on how to connect to this storage.
   - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>`, `/research` () and `/nese`.
 
 **NAME:** `/nese`
 : - **DESCRIPTION:** This is archival, non-performant storage that is intended for researchers
     who need to have a long-term storage option for their data.
-  - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>`, `/research` () and `/nese`.
+  - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>`, `/research` and `/nese`.
 
 % **NAME:** ``/secure``
 % - **DESCRIPTION:** Secure data storage is restricted to data that must be stored in a secure,
@@ -37,15 +37,14 @@ for details on the storage available to you specifically for use with Discovery'
 :::{important}
 If you are not connected to the campus internet, you must be connected to
 the university's VPN (GlobalProtect) before you can access these storage systems.
-You can find detailed information about downloading and using the GlobalProtect VPN
-in the [ServiceNow Knowledge Base](https://service.northeastern.edu/tech?id=kb_article&sys_id=4701e07adb93485084ba5595ce9619a9).
+You can find detailed information about downloading and using the GlobalProtect VPN in the [ServiceNow Knowledge Base](https://service.northeastern.edu/tech?id=kb_article&sys_id=4701e07adb93485084ba5595ce9619a9).
 :::
+(connecting-to-research)=
+## Connecting to `/research`
 
-## Connecting to /research
-
-After you have received notification that your shared storage folder on /research is ready for you to use, you
-can connect to it on your laptop. Use the following procedures to connect to /research from either a Windows PC or a Macbook.
-If you are not on the campus internet, you will need to first be connected to Northeastern's VPN before you can connect to /research.
+After you have received notification that your shared storage folder on `/research` is ready for you to use, you
+can connect to it on your laptop. Use the following procedures to connect to `/research` from either a Windows PC or a Macbook.
+If you are not on the campus internet, you will need to first be connected to Northeastern VPN before you can connect to `/research`.
 
 **Windows**
 
@@ -53,7 +52,7 @@ If you are not on the campus internet, you will need to first be connected to No
 > 2. In the left pane, select **This PC**.
 > 3. On the **Computer** tab, select **Map network drive**.
 > 4. Select any letter not currently mapped to a drive. It does not matter what letter.
-> 5. In the **Folder** box, type `\\nunet.neu.edu\rc-shares\<sharename>`, where `<sharename>` is the name of your shared storage. If you want this drive to reconnect automaically every time you log in, check Reconnect at sign in.
+> 5. In the **Folder** box, type `\\nunet.neu.edu\rc-shares\<sharename>`, where `<sharename>` is the name of your shared storage. If you want this drive to reconnect automatically every time you log in, check Reconnect at sign in.
 > 6. Click Finish. Your shared folder now be available in File Explorer.
 
 **Mac**
