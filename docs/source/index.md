@@ -1,7 +1,7 @@
 
 <!--#  NEU's HPC Docs-->
 
-# NU's High-Performance Computing (HPC)
+# Research Computing (RC)
 
 ::::{grid}
 :reverse:
@@ -95,7 +95,7 @@ We invite you to explore the resources, tools, and services available through th
 
 ```{toctree}
 :hidden:
-:caption: 🔎 First Steps with Discovery
+:caption: 1️⃣ First Steps
 
 02_first_steps/01_get_access
 02_first_steps/02_connect_mac
@@ -127,7 +127,7 @@ We invite you to explore the resources, tools, and services available through th
 
 ```{toctree}
 :hidden:
-:caption: Using HPC
+:caption: 🛠 Using HPC
 
 05_using-discovery/01_usingslurm
 05_using-discovery/02_sbatch
@@ -139,7 +139,7 @@ We invite you to explore the resources, tools, and services available through th
 
 ```{toctree}
 :hidden:
-:caption: Understanding storage options
+:caption: 🗄 Understanding storage
 
 06_storage/01_discovery_storage
 06_storage/02_general_storage
@@ -147,14 +147,14 @@ We invite you to explore the resources, tools, and services available through th
 
 ```{toctree}
 :hidden:
-:caption: Best practices
+:caption: 🚀 Best practices
 
 07_best-practices/01_checkpointing
 ```
 
 ```{toctree}
 :hidden:
-:caption: 📖 Using Open OnDemand (OOD)
+:caption: 📲 Using Open OnDemand (OOD)
 
 08_using-ood/01_introduction
 08_using-ood/02_fileexplore
