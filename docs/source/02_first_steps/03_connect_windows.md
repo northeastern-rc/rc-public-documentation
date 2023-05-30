@@ -1,19 +1,10 @@
+
 (connect-windows)=
 
 # Connecting Windows
 
 You connect to Discovery using a [secure shell](https://www.ssh.com/ssh/protocol/) program to initiate an SSH session to
 sign in to Discovery. This topic is about how to connect using Windows. See [connect mac](./02_connect_mac.md) for information about connecting with a Mac.
-
-% 2FA Authentication with DUO
-
-% ============================
-
-% When you connect to Discovery you are required to complete two-factor authentication (2FA) using the app Duo. All Northeastern staff, faculty, and students
-
-% should already have Duo, as it is used with many other online campus resources, such as Canvas and myNortheastern. To learn more about using Duo,
-
-% go to `Northeastern's 2FA informational website <https://get2fa.northeastern.edu/>`_.
 
 Before you can connect to Discovery on a Windows computer, you’ll need to download a terminal program,
 such as [MobaXterm](https://mobaxterm.mobatek.net/) or PuTTY. We recommend MobaXterm, as you can also use it for file transfer,
@@ -28,9 +19,9 @@ whereas with other SSH programs, you would need a separate file transfer program
 4. At the prompt, type your Northeastern username and press Enter.
 5. Type your Northeastern password and press Enter. Note that the cursor does not move as you type your password. This is expected behavior.
 
-You are now connected to Discovery at a login node.
+You are now connected to the cluster's login node.
 
-Watch this video to see how to connect to Discovery with MobaXterm. If you do not see any controls on the video, right click on the video to see viewing options.
+Watch this video to see how to connect to the cluster with MobaXterm. If you do not see any controls on the video, right click on the video to see viewing options.
 
 <video width="720" height="480" controls>
   <source src="../_static/video/windows_moba_connect.mp4" type="video/mp4">
@@ -64,24 +55,7 @@ If you are getting these types of errors, follow the steps below to set up passw
 4. Press `Enter` to all of the prompts (do not generate a passphrase). If prompted to overwrite a file, type `Y`.
 5. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in the `~/.ssh/authorized_keys`.
 
-The following video tutorial goes through this process.
+**Next Steps**
 
-% .. raw:: html
-
-% <video width="710" autoplay mute controls>
-
-% <source src="../video/windows_passwordless.mp4" type="video/mp4">
-
-% Your browser does not support embedded videos.
-
-% </video>
-
-(windows-next-steps)=
-### Next steps
-
-After you are connected, you can run jobs either in interactive mode with `srun` or submit a script using `sbatch`. See {ref}`using-slurm` and {ref}`using-sbatch` for more information.
-
-To load and run software, see {ref}`software-overview`.
-To find out more about the hardware and partitions on Discovery, see {ref}`hardware-overview` and {ref}`partitions`.
-
-To watch an introductory training video, go to [Northeastern's LinkedIn Learning page](https://www.linkedin.com/checkpoint/enterprise/login/74653650?pathWildcard=74653650&application=learning&redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fcontent%2F1139340%3Fu%3D74653650).
+```{include} ../_snippets/next-steps.md
+```
