@@ -2,11 +2,10 @@
 
 # Working with GPUs
 
-The Discovery cluster has a number of NVIDIA Graphics Processing Units (GPUs) available, as detailed in the table below.
+The Discovery cluster has various NVIDIA Graphics Processing Units (GPUs), as detailed in the table below.
 
 :::{note}
-The tables on this page slide from left-to-right. Make sure to
-swipe to right to see the content on the right side of the table
+The tables on this page slide from left-to-right. Make sure to swipe to right to see the content on the right side of the table
 :::
 
 ```{list-table}
@@ -18,55 +17,55 @@ swipe to right to see the content on the right side of the table
   - CUDA Cores
   - Nodes in Public GPUs
   - Nodes in Private GPUs
-* - p100 (`Pascal <https://www.nvidia.com/en-us/data-center/tesla-p100/>`_)
+* - p100 ([Pascal](https://www.nvidia.com/en-us/data-center/tesla-p100/))
   - 12GB
   - N/A
   - 3,584
   - 12 with 3-4 GPUs each
   - 3 with 4 GPUs each
-* - v100-pcie (`Volta <https://www.nvidia.com/en-us/data-center/v100/>`_)
+* - v100-pcie ([Volta](https://www.nvidia.com/en-us/data-center/v100/))
   - 32GB
   - 640
   - 5,120
   - 4 with 2 GPUs each
   - 1 with (16GB) 2 GPUs
-* - v100-sxm2 (Volta)
+* - v100-sxm2 ([Volta](https://www.nvidia.com/en-us/data-center/v100/))
   - 32GB
   - 640
   - 5,120
   - 24 with 4 GPUs each
   - 10 with 4 GPUs each & 16GB GPU memory; 8 with 4 GPUs & 32GB GPU memory
-* - t4 (`Turing <https://www.nvidia.com/en-us/data-center/tesla-t4/>`_)
+* - t4 ([Turing](https://www.nvidia.com/en-us/data-center/tesla-t4/))
   - 15GB
   - 320
   - 2,560
   - 2 with 3-4 GPUs each
   - 1 with 4 GPUs
-* - quadro (`Quadro RTX 8000 <https://www.nvidia.com/en-us/design-visualization/previous-quadro-desktop-gpus/>`_)
+* - quadro ([Quadro RTX 8000](https://www.nvidia.com/en-us/design-visualization/previous-quadro-desktop-gpus/))
   - 46GB
   - 576
   - 4,608
   - 0
   - 2 with 3 GPUs each
-* - a30 ( `Ampere <https://www.nvidia.com/en-us/data-center/products/a30-gpu/>`_)
+* - a30 ([Ampere](https://www.nvidia.com/en-us/data-center/products/a30-gpu/))
   - 24GB
   - 224
   - 3,804
   - 0
   - 1 with 3 GPUs
-* - a100 (`Ampere <https://www.nvidia.com/en-us/data-center/a100/>`_)
+* - a100 ([Ampere](https://www.nvidia.com/en-us/data-center/a100/))
   - 41 & 82GB
   - 432
   - 6,912
-  - 3 nodes with 4 GPUs each
+  - 3 with 4 GPUs each
   - 15 nodes with 2-8 GPUs each
-* - a5000 (`Ampere RTX A5000 <https://www.nvidia.com/en-us/design-visualization/rtx-a5000/>`_)
+* - a5000 ([Ampere RTX A5000](https://www.nvidia.com/en-us/design-visualization/rtx-a5000/))
   - 24GB
   - 256
   - 8,192
   - 0
   - 6 with 8 GPUs each
-* - a6000 (`Ampere RTX A6000 <https://www.nvidia.com/en-us/design-visualization/rtx-a6000/>`_)
+* - a6000 ([Ampere RTX A6000](https://www.nvidia.com/en-us/design-visualization/rtx-a6000/))
   - 49GB
   - 336
   - 10,752
@@ -77,14 +76,13 @@ swipe to right to see the content on the right side of the table
 The public GPUs are available within two partitions, named `gpu` and
 `multigpu`. The differences between the two partitions are the
 number of GPUs that one can request per job and the time limit on each
-job. Both partitions give access to all of the public GPU types
+job. Both partitions give access to all the public GPU types
 mentioned above. The table below shows the differences between the two
 partitions. For more information about the partitions on Discovery,
 see [Partitions](../03_hardware/02_partitions.md).
 
 :::{note}
-All user limits are subject to the availability of cluster
-resources at the time of submission and will be honored according to that.
+All user limits are subject to the availability of cluster resources at the time of submission and will be honored according to that.
 :::
 
 ```{list-table}
@@ -124,7 +122,7 @@ Use `srun` for interactive and `sbatch` for batch mode. The
 memory in the `gpu` partition. You must use the `--gres=` option
 to request a gpu:
 
-```
+```{code-block} bash
 srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 ```
 
@@ -139,7 +137,7 @@ The `sbatch` example below is similar to the `srun` example above,
 but it submits the job in the background, gives it a name, and directs
 the output to a file:
 
-```
+```{code-block} shell
 #!/bin/bash
 #SBATCH --partition=gpu
 #SBATCH --nodes=1
@@ -150,7 +148,8 @@ the output to a file:
 #SBATCH --ntasks=1
 #SBATCH --output=myjob.%j.out
 #SBATCH --error=myjob.%j.err
-<your code>
+
+## <your code>
 ```
 
 ### Specifying a GPU type
@@ -225,19 +224,21 @@ command does not give real-time information of the state and should
 be used with caution.
 :::
 
-PyTorch installation steps (with a specific GPU-type):
-
-```
+```{code-block} bash
+---
+caption: |
+    PyTorch's installation steps (with a specific GPU-type):
+---
 srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
 module load anaconda3/2022.05 cuda/11.7
 conda create --name pytorch_env python=3.9 -y
 source activate pytorch_env
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia -y
-python -c'import torch; print(torch.cuda.is_available())'
+python -c 'import torch; print(torch.cuda.is_available())'
 ```
 
 :::{note}
-If the installation times out, please ensure that your .condarc
+If the installation times out, please ensure that your `.condarc`
 file doesn't contain additional channels. Also, consider cleaning
 your conda instance using the `conda clean` command. See [Conda
 best practices](https://rc-docs.northeastern.edu/en/latest/software/conda.html#conda-best-practices) .
@@ -254,7 +255,7 @@ The above PyTorch installation instructions will not include
 environment. In order to include those one can execute the following
 command after activating the `pytorch_env` environment:
 
-```
+```{code-block} bash
 conda install pandas scikit-learn matplotlib seaborn jupyterlab -y
 ```
 
@@ -269,7 +270,7 @@ and [detailed installation instructions](https://www.tensorflow.org/install/pip)
 For the latest installation, use the TensorFlow pip package, which
 includes GPU support for CUDA-enabled devices:
 
-```
+```{code-block} bash
 srun --partition=gpu --gres=gpu:1 --nodes=1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
 module load anaconda3/2022.05 cuda/11.2
 conda create --name TF_env python=3.9 -y
@@ -284,7 +285,7 @@ pip install tensorflow==2.11.*
 
 Verify the installation:
 
-```
+```{code-block} bash
 # Verify the CPU setup (if successful, then a tensor is returned):
 python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
 
@@ -297,14 +298,14 @@ python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())'
 
 To get the name of the GPU, type:
 
-```
+```{code-block} bash
 python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
 ```
 
 If the installation is successful, then, for example, you should see
-the following as an output,:
+the following as an output:
 
-```
+```{code-block} bash
 2023-02-24 16:39:35.798186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /device:GPU:0 with 10785 MB memory:  -> device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7 /device:GPU:0
 ```
 
@@ -313,4 +314,3 @@ Ignore the `Warning` messages that get generated after executiing
 the above commands.
 :::
 
-test
