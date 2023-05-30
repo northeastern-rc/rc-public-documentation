@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = "HPC Documentation"
-logo = "_static/logo-square.svg"
+logo = "_static/logo-square.png"
 copyright = "2023"
 author = "Research Computing, Northeastern University"
 
@@ -31,19 +31,14 @@ release = "2.0.0"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    # "ablog",
     "myst_nb",
-    # "numpydoc",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
-    # "sphinxcontrib.youtube",
     "sphinx_copybutton",
     "sphinx_design",  # https://pypi.org/project/sphinx_design/
-    # "sphinx_examples",
     "sphinx_tabs.tabs",
-    # "sphinx_thebe",
     "sphinx_togglebutton",  # https://sphinx-togglebutton.readthedocs.io/en/latest/use.html
     # "sphinxcontrib.bibtex",
     # "sphinxext.opengraph",
@@ -67,7 +62,7 @@ templates_path = ["_templates"]
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ["02_first_steps/cps_ood.md"]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -78,7 +73,7 @@ exclude_patterns = []
 html_theme = "sphinx_book_theme"
 
 # add logo to the upper left in the help system
-html_logo = "images/NU_logo_small.png"
+html_logo = "_static/logo-square.png"
 html_theme_options = {
     "show_toc_level": 2,
     "repository_url": "https://github.com/northeastern-rc/rc-public-documentation",
