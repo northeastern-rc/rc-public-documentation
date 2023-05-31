@@ -175,20 +175,19 @@ times, based on GPU availability at that time.
 
 There are several versions of CUDA Toolkits on Discovery, including:
 
-```
-cuda/9.0
-cuda/9.2
-cuda/10.0
-cuda/10.2
-cuda/11.0
-cuda/11.1
-cuda/11.2
-cuda/11.3
-cuda/11.4
-cuda/11.7
-cuda/11.8
-cuda/12.1
-```
+
+    cuda/9.0
+    cuda/9.2
+    cuda/10.0
+    cuda/10.2
+    cuda/11.0
+    cuda/11.1
+    cuda/11.2
+    cuda/11.3
+    cuda/11.4
+    cuda/11.7
+    cuda/11.8
+    cuda/12.1
 
 Use the `module avail` command to check for the latest software
 versions on Discovery. To see details on a specific CUDA toolkit
