@@ -1,5 +1,15 @@
+# Install pre-commit hooks via
+# pre-commit install
+
+exclude: >
+    (?x)^(
+      \.vscode/settings\.json|
+      docs/conf\.py|
+    )$
+
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
     - id: check-json
@@ -7,36 +17,21 @@ repos:
     - id: check-yaml
     - id: end-of-file-fixer
     - id: trailing-whitespace
-    - id: mdformat-myst
     - id: destroyed-symlinks
     - id: requirements-txt-fixer
     - id: check-merge-conflict
     - id: check-symlinks
 
-- repo: https://github.com/tcort/markdown-link-check
-  rev: v3.11.2
-  hooks:
-    - id: markdown-link-check
-      args: [-q]
-
--   repo: https://github.com/pycqa/isort
-    rev: 5.12.0
+  - repo: https://github.com/tcort/markdown-link-check
+    rev: v3.11.2
     hooks:
-    - id: isort
+      - id: markdown-link-check
+        args: [-q]
 
--   repo: https://github.com/psf/black
-    rev: 23.3.0
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.16  # Use the ref you want to point at
     hooks:
-    - id: black
-      args: [--line-length=79]
-
--   repo: https://github.com/PyCQA/flake8
-    rev: 6.0.0
-    hooks:
-    - id: flake8
-
--   repo: https://github.com/commitizen-tools/commitizen
-    rev: master
-    hooks:
-    - id: commitizen
-      stages: [commit-msg]
+    - id: mdformat
+      # Optionally add plugins
+      additional_dependencies:
+      - mdformat-myst
