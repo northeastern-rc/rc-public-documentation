@@ -22,25 +22,25 @@ Users of Research Computing (RC) can request services via our ticket system. Ple
 ::::{grid} 2
 :gutter: 1
 
-:::{grid-item-card} [Get Assistance with RC](https://bit.ly/NURC-Assistance)
+:::{grid-item-card} {octicon}`question;1.5em;sd-mr-1` [Get Assistance with RC](https://bit.ly/NURC-Assistance)
 :::
-:::{grid-item-card} [RC Access Form](https://bit.ly/NURC-AccessRequest)
+:::{grid-item-card} {octicon}`key;1.5em;sd-mr-1` [RC Access Form](https://bit.ly/NURC-AccessRequest)
 :::
-:::{grid-item-card} [Software Request Form](https://bit.ly/NURC-Software)
+:::{grid-item-card} {octicon}`code;1.5em;sd-mr-1` [Software Request Form](https://bit.ly/NURC-Software)
 :::
-:::{grid-item-card} [Documentation Request](https://bit.ly/NURC-Documentation)
+:::{grid-item-card} {octicon}`note;1.5em;sd-mr-1` [Documentation Request](https://bit.ly/NURC-Documentation)
 :::
-:::{grid-item-card} [Partition Access Request](https://bit.ly/NURC-PartitionAccess)
+:::{grid-item-card} {octicon}`credit-card;1.5em;sd-mr-1` [Partition Access Request](https://bit.ly/NURC-PartitionAccess)
 :::
-:::{grid-item-card} [Storage Request](https://bit.ly/NURC-NewStorage)
+:::{grid-item-card} {octicon}`archive;1.5em;sd-mr-1` [Storage Request](https://bit.ly/NURC-NewStorage)
 :::
-:::{grid-item-card} [Storage Extension Request](https://bit.ly/NURC-StorageExtension)
+:::{grid-item-card} {octicon}`file-directory;1.5em;sd-mr-1` [Storage Extension Request](https://bit.ly/NURC-StorageExtension)
 :::
-:::{grid-item-card} [Data Transfer Consultation](https://bit.ly/NURC-DataTransfer)
+:::{grid-item-card} {octicon}`broadcast;1.5em;sd-mr-1` [Data Transfer Consultation](https://bit.ly/NURC-DataTransfer)
 :::
-:::{grid-item-card} [Classroom Request Form](https://bit.ly/NURC-Classroom)
+:::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` [Classroom Request Form](https://bit.ly/NURC-Classroom)
 :::
-:::{grid-item-card} [Unsubscribe](https://bit.ly/NURC-Unsubscribe)
+:::{grid-item-card} {octicon}`x-circle;1.5em;sd-mr-1`  [Unsubscribe](https://bit.ly/NURC-Unsubscribe)
 :::
 ::::
 
