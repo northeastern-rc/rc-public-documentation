@@ -200,7 +200,11 @@ Use the command `nvidia-smi` (NVIDIA System Management Interface)
 inside a GPU node to get the CUDA driver information and monitor the
 GPU device.
 
-## Using GPUs with PyTorch
+
+## GPUs for Deep Learning
+
+:::::{tab-set}
+::::{tab-item} PyTorch
 
 You should use PyTorch with a conda virtual environment if you need to
 run the environment on the Nvidia GPUs on Discovery. The following
@@ -212,7 +216,7 @@ Make sure to be on a GPU node before loading the
 environment. Additionally, the latest version of PyTorch is not
 compatible with GPUs with CUDA version 11.7 or less. Hence, the
 installation does not work on k40m or k80 GPU's. In order to see
-what `non-Kepler` GPUs might be available, one can execute this
+what `non-Kepler` GPUs might be available execute the following
 command:
 
 ```
@@ -225,7 +229,7 @@ command does not give real-time information of the state and should
 be used with caution.
 :::
 
-```{code-block} bash
+:::{code-block} bash
 ---
 caption: |
     PyTorch's installation steps (with a specific GPU-type):
@@ -236,7 +240,7 @@ conda create --name pytorch_env python=3.9 -y
 source activate pytorch_env
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia -y
 python -c 'import torch; print(torch.cuda.is_available())'
-```
+:::
 
 :::{note}
 If the installation times out, please ensure that your `.condarc`
@@ -256,13 +260,13 @@ The above PyTorch installation instructions will not include
 environment. In order to include those one can execute the following
 command after activating the `pytorch_env` environment:
 
-```{code-block} bash
+:::{code-block} bash
 conda install pandas scikit-learn matplotlib seaborn jupyterlab -y
-```
+:::
+::::
+::::{tab-item} TensorFlow
 
-## Using GPUs with TensorFlow
-
-We recommend that you use CUDA 11.2 (latest supported version) when
+We recommend that you use CUDA 11.2 (the latest supported version) when
 working on a GPU with the latest version of TensorFlow (TF).
 TensorFlow provides information on the [compatibility of CUDA and
 TensorFlow versions](https://www.tensorflow.org/install/source#gpu),
@@ -271,47 +275,52 @@ and [detailed installation instructions](https://www.tensorflow.org/install/pip)
 For the latest installation, use the TensorFlow pip package, which
 includes GPU support for CUDA-enabled devices:
 
-```{code-block} bash
+:::{code-block} bash
 srun --partition=gpu --gres=gpu:1 --nodes=1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
+
 module load anaconda3/2022.05 cuda/11.2
 conda create --name TF_env python=3.9 -y
 source activate TF_env
 conda install -c conda-forge cudatoolkit=11.2.2 cudnn=8.1.0 -y
+
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
 mkdir -p $CONDA_PREFIX/etc/conda/activate.d
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
 pip install --upgrade pip
 pip install tensorflow==2.11.*
-```
+:::
 
 Verify the installation:
 
-```{code-block} bash
+:::{code-block} bash
 # Verify the CPU setup (if successful, then a tensor is returned):
-python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal((1000, 1000))))"
 
 # verify the GPU setup (if successful, then a list of GPU device is returned):
 python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
 # test if a GPU device is detected with TF (if successful, then True is returned):
 python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())'
-```
+:::
 
 To get the name of the GPU, type:
 
-```{code-block} bash
+:::{code-block} bash
 python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
-```
+:::
 
 If the installation is successful, then, for example, you should see
 the following as an output:
 
-```{code-block} bash
+:::{code-block} bash
 2023-02-24 16:39:35.798186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /device:GPU:0 with 10785 MB memory:  -> device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7 /device:GPU:0
-```
+:::
 
 :::{note}
-Ignore the `Warning` messages that get generated after executiing
-the above commands.
+Ignore the `Warning` messages that get generated after executing the above commands.
 :::
+
+::::
+:::::
+
 
