@@ -21,56 +21,56 @@ The tables on this page slide from left-to-right. Make sure to swipe to right to
   - 12GB
   - N/A
   - 3,584
-  - 12 with 3-4 GPUs each
-  - 3 with 4 GPUs each
+  - 12 (x3-4 GPUs)
+  - 3 (x4 GPUs)
 * - v100-pcie ([Volta](https://www.nvidia.com/en-us/data-center/v100/))
   - 32GB
   - 640
   - 5,120
-  - 4 with 2 GPUs each
-  - 1 with (16GB) 2 GPUs
+  - 4 (x2 GPUs)
+  - 1 (x2 GPUs, 16GB)
 * - v100-sxm2 ([Volta](https://www.nvidia.com/en-us/data-center/v100/))
   - 32GB
   - 640
   - 5,120
-  - 24 with 4 GPUs each
-  - 10 with 4 GPUs each & 16GB GPU memory; 8 with 4 GPUs & 32GB GPU memory
+  - 24 (x4 GPUs)
+  - 10 (x4 GPUs, 16GB); 8 (x4 GPUs, 32GB)
 * - t4 ([Turing](https://www.nvidia.com/en-us/data-center/tesla-t4/))
   - 15GB
   - 320
   - 2,560
-  - 2 with 3-4 GPUs each
-  - 1 with 4 GPUs
+  - 2 (x3-4 GPUs)
+  - 1 (x4 GPUs)
 * - quadro ([Quadro RTX 8000](https://www.nvidia.com/en-us/design-visualization/previous-quadro-desktop-gpus/))
   - 46GB
   - 576
   - 4,608
   - 0
-  - 2 with 3 GPUs each
+  - 2 (x3 GPUs)
 * - a30 ([Ampere](https://www.nvidia.com/en-us/data-center/products/a30-gpu/))
   - 24GB
   - 224
   - 3,804
   - 0
-  - 1 with 3 GPUs
+  - 1 (x3 GPUs)
 * - a100 ([Ampere](https://www.nvidia.com/en-us/data-center/a100/))
   - 41 & 82GB
   - 432
   - 6,912
-  - 3 with 4 GPUs each
-  - 15 nodes with 2-8 GPUs each
+  - 3 (x4 GPUs)
+  - 15 (x2-8 GPUs)
 * - a5000 ([Ampere RTX A5000](https://www.nvidia.com/en-us/design-visualization/rtx-a5000/))
   - 24GB
   - 256
   - 8,192
   - 0
-  - 6 with 8 GPUs each
+  - 6 (x8 GPUs)
 * - a6000 ([Ampere RTX A6000](https://www.nvidia.com/en-us/design-visualization/rtx-a6000/))
   - 49GB
   - 336
   - 10,752
   - 0
-  - 3 with 8 GPUs each
+  - 3 (x8 GPUs)
 ```
 
 The public GPUs are available within two partitions, named `gpu` and
@@ -78,15 +78,17 @@ The public GPUs are available within two partitions, named `gpu` and
 number of GPUs that one can request per job and the time limit on each
 job. Both partitions give access to all the public GPU types
 mentioned above. The table below shows the differences between the two
-partitions. For more information about the partitions on Discovery,
+partitions. For more information about the partitions on the cluster,
 see [Partitions](../03_hardware/02_partitions.md).
 
 :::{note}
 All user limits are subject to the availability of cluster resources at the time of submission and will be honored according to that.
 :::
 
-```{list-table}
-:header-rows: 1
+:::{list-table}
+---
+header-rows: 1
+---
 
 * - Name
   - Requires Approval?
@@ -106,7 +108,7 @@ All user limits are subject to the availability of cluster resources at the time
   - 50/100
   - 12
   - 12
-```
+:::
 
 Anyone with a Discovery account can use the `gpu`
 partition. However, you must submit a [ServiceNow ticket](https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7)
@@ -115,16 +117,16 @@ full access to the `multigpu` partition.  Your request will be
 evaluated by members of the RC team to ensure that the resources in
 this partition will be used appropriately.
 
-## Requesting GPUs with `srun` or `sbatch`
+## Requesting GPUs with Slurm
 
 Use `srun` for interactive and `sbatch` for batch mode. The
 `srun` example below is requesting 1 node and 1 GPU with 4GB of
 memory in the `gpu` partition. You must use the `--gres=` option
 to request a gpu:
 
-```{code-block} bash
+:::{code-block} bash
 srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
-```
+:::
 
 :::{note}
 On the `gpu` partition, requesting more than 1 GPU
@@ -137,7 +139,7 @@ The `sbatch` example below is similar to the `srun` example above,
 but it submits the job in the background, gives it a name, and directs
 the output to a file:
 
-```{code-block} shell
+:::{code-block} shell
 #!/bin/bash
 #SBATCH --partition=gpu
 #SBATCH --nodes=1
@@ -150,7 +152,7 @@ the output to a file:
 #SBATCH --error=myjob.%j.err
 
 ## <your code>
-```
+:::
 
 ### Specifying a GPU type
 
@@ -160,9 +162,9 @@ refer to the GPU Types column in the table, at the top of this page,
 that are listed as `Public`. The following is an example for
 requesting a single p100 GPU:
 
-```
+:::{code-block} bash
 --gres=gpu:p100:1
-```
+:::
 
 :::{note}
 Requesting a specific type of GPU could result in longer wait
