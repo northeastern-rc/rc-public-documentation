@@ -11,9 +11,10 @@ running at 200 Gbps (with some nodes running HDR100 IB, if HDR200 IB is not supp
 
 Table 1 below shows the feature names, number of nodes by partition type (public and private), and the RAM memory range per node. The feature name follows archspec microachitechture [specification](https://archspec.readthedocs.io/en/latest/index.html).
 
-```{list-table}
-:header-rows: 1
-
+:::{list-table}
+---
+header-rows: 1
+---
 * - Feature Name
   - Number of Nodes - public, private
   - RAM memory per node
@@ -41,7 +42,7 @@ Table 1 below shows the feature names, number of nodes by partition type (public
 * - cascadelake
   - 260, 88
   - 186 - 3094 GB
-```
+:::
 
 If you are looking for information about GPUs, see {ref}`working-gpus`.
 
@@ -53,14 +54,15 @@ When using `srun` or `sbatch`, you can specify hardware features as part of your
 
 A few examples using `srun`:
 
-```{code-block} bash
-:linenos: true
-
+:::{code-block} bash
+---
+linenos: true
+---
      srun --constraint=haswell --pty /bin/bash
      srun --constraint=ivybridge --pty /bin/bash
      srun --constraint=ib --pty /bin/bash
      srun --constraint="[ivybridge|zen2]" --pty /bin/bash #this uses the OR operator | to select either an ivybridge or zen2 node.
-```
+:::
 
 You can add these same flags as an additional line in your `sbatch` script via (`#SBATCH --constraint=haswell`)
 

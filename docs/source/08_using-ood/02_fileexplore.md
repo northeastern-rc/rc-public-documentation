@@ -14,11 +14,11 @@ directory regularly, and remove any files you do not need to ensure you do not r
 :::
 
 1. In a web browser, go to [ood.discovery.neu.edu](https://ood.discovery.neu.edu). If prompted, enter your myNortheastern username and password.
-2. Select **Files > Home Directory**. The contents of your home directory display in a new tab.
-3. To download a file to your hard drive, navigate to the file you want to download,
+1. Select **Files > Home Directory**. The contents of your home directory display in a new tab.
+1. To download a file to your hard drive, navigate to the file you want to download,
    select the file, and click **Download**. If prompted by your browser,
    click **OK** to save your file to your hard drive.
-4. To navigate to another folder on the Discovery file system, click **Go To**,
+1. To navigate to another folder on the Discovery file system, click **Go To**,
    enter the path to the folder you want to access, and click **OK**.
 
 :::{note}

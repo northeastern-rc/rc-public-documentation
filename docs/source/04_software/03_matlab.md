@@ -9,53 +9,53 @@ Note that the procedures detailed below are specific to using MATLAB on Discover
 
 Use the following procedure if you need to install a MATLAB toolbox:
 
-01. Download the toolbox from its source website.
+1. Download the toolbox from its source website.
 
-02. Connect to Discovery.
+1. Connect to Discovery.
 
-03. Create a directory in your /home directory. We recommend creating a directory called `matlab` by typing:
+1. Create a directory in your /home directory. We recommend creating a directory called `matlab` by typing:
 
-    ```
-    mkdir /home/<username>/matlab  #where <username> is your username
-    ```
+   :::
+   mkdir /home/<username>/matlab  #where <username> is your username
+   :::
 
-04. Go to the directory you just created by typing:
+1. Go to the directory you just created by typing:
 
-    ```
-    cd /home/<username>/matlab
-    ```
+   :::
+   cd /home/<username>/matlab
+   :::
 
-05. Unzip the toolbox file by typing:
+1. Unzip the toolbox file by typing:
 
-    ```
-    unzip <toolboxname>
-    ```
+   :::
+   unzip <toolboxname>
+   :::
 
-06. Load MATLAB by typing:
+1. Load MATLAB by typing:
 
-    ```
-    module load matlab
-    ```
+   :::
+   module load matlab
+   :::
 
-07. Start MATLAB by typing:
+1. Start MATLAB by typing:
 
-    ```
-    matlab
-    ```
+   :::
+   matlab
+   :::
 
-08. Add the toolbox to your PATH by typing:
+1. Add the toolbox to your PATH by typing:
 
-    ```
-    addpath('/home/<username>/matlab/<toolbox>') #where <toolbox> is the name of the toolbox you just unzipped
-    ```
+   :::
+   addpath('/home/<username>/matlab/<toolbox>') #where <toolbox> is the name of the toolbox you just unzipped
+   :::
 
-09. If this is a toolbox you want to use more than once, you should save it to your path by typing:
+1. If this is a toolbox you want to use more than once, you should save it to your path by typing:
 
-    ```
-    savepath()
-    ```
+   :::
+   savepath()
+   :::
 
-10. You can now use the toolbox within MATLAB. When you are done, type `quit`.
+1. You can now use the toolbox within MATLAB. When you are done, type `quit`.
 
 ## Using MATLAB Parallel Server
 
@@ -78,26 +78,26 @@ Before starting, you should create a folder in your `/scratch/<yourusername>` di
 folder is where you'll save your job data.
 
 1. Go to your /scratch directory: `cd /scratch/<yourusername>` where `<yourusername>` is your NU username
-2. Make a new folder. We suggest calling it *matlab-metadata*: `mkdir matlab-metadata`
+1. Make a new folder. We suggest calling it *matlab-metadata*: `mkdir matlab-metadata`
 
 **To start MATLAB and add a Cluster Profile, do the following:**
 
 1. Go to <http://ood.discovery.neu.edu>. If prompted, sign in with your Discovery username and password.
-2. Click **Interactive Apps**, and select **MATLAB**.
-3. Select **MATLAB version 2020a**, and keep the default time of 1 hour and default memory of 2GB. Click **Launch**.
-4. If necessary, adjust the **Compression** and **Image Quality**, and then click **Launch MATLAB**.
-5. On the MATLAB Home tab, in the **Environment** section, select **Parallel**, then click **Create and Manage Clusters**. This opens the Cluster Profile Manager window.
-6. On the Cluster Profile Manager window, select **Add Cluster Profile**, then click **Slurm**. If prompted, click **OK** to the notice about needing Parallel Server.
-7. Double click the new profile name in the Cluster Profile column, and type a name such as **TestProfile**. Press **Enter** to save the change.
-8. Select **Edit** in the **Manage Profile** section. This lets you edit the options on the **Properties** tab. For this walkthrough, make the following edits:
+1. Click **Interactive Apps**, and select **MATLAB**.
+1. Select **MATLAB version 2020a**, and keep the default time of 1 hour and default memory of 2GB. Click **Launch**.
+1. If necessary, adjust the **Compression** and **Image Quality**, and then click **Launch MATLAB**.
+1. On the MATLAB Home tab, in the **Environment** section, select **Parallel**, then click **Create and Manage Clusters**. This opens the Cluster Profile Manager window.
+1. On the Cluster Profile Manager window, select **Add Cluster Profile**, then click **Slurm**. If prompted, click **OK** to the notice about needing Parallel Server.
+1. Double click the new profile name in the Cluster Profile column, and type a name such as **TestProfile**. Press **Enter** to save the change.
+1. Select **Edit** in the **Manage Profile** section. This lets you edit the options on the **Properties** tab. For this walkthrough, make the following edits:
 
-> 1. In the **Folder where job data is stored on the client** option, type `/scratch/<yourusername>/matlab-metadata` (this is the directory that you created in the first procedure above).
-> 2. In the **Number of workers available to cluster** option, type a number between between 1 and 10. This field is the number of MPI processes you intend to run. This corresponds to the `--ntasks` Slurm option. The maximum is 128 per job; however, for this task, we recommend keeping it lower and use threading inside the nodes. The number you set here will be the default maximum for the job. You can set it for less than or equal to this number in the MATLAB Command Window when submitting your job.
-> 3. In the **Number of computational threads to use on each worker** option, type a number between 1 and 10. This field represents the number of threads that each worker will possess. This corresponds to `cpus-per-task` in Slurm. Do not exceed the number of available cores on the node.
+   1. In the **Folder where job data is stored on the client** option, type `/scratch/<yourusername>/matlab-metadata` (this is the directory that you created in the first procedure above).
+   1. In the **Number of workers available to cluster** option, type a number between between 1 and 10. This field is the number of MPI processes you intend to run. This corresponds to the `--ntasks` Slurm option. The maximum is 128 per job; however, for this task, we recommend keeping it lower and use threading inside the nodes. The number you set here will be the default maximum for the job. You can set it for less than or equal to this number in the MATLAB Command Window when submitting your job.
+   1. In the **Number of computational threads to use on each worker** option, type a number between 1 and 10. This field represents the number of threads that each worker will possess. This corresponds to `cpus-per-task` in Slurm. Do not exceed the number of available cores on the node.
 
 9. When you have finished editing your properties, click **Done**.
+1. (Optional) If you want to validate your setup, click the **Validation** tab (next to the Properties tab). Ensure all the stages are checked, then click the **Validate** button at the bottom of the page.
 
-10\. (Optional) If you want to validate your setup, click the **Validation** tab (next to the Properties tab). Ensure all of the stages are checked, then click the **Validate** button at the bottom of the page.
 This will check the properties of your profile. You might need to wait a minute or two for this to complete.
 
 :::{caution}
@@ -109,14 +109,14 @@ If you accidentally click the green Validate button, click **Stop** to end the v
 
 Now that you have set up your profile, you can use the default cluster profile you just created (*TestProfile*) with the following commands:
 
-```
+:::{code-block} matlab
 #with parpool
 parallel.defaultClusterProfile(‘TestProfile’)
 parpool
 
 #with parcluster
 c = parcluster(‘TestProfile’)
-```
+:::
 
 ### Using parcluster example
 
@@ -130,9 +130,9 @@ To add the path to this folder to the list of available paths, do one of the fol
 - On the MATLAB Home tab, in the **Environment** section, click **Set Path** and add the path to the script.
 - Alternatively, provide the full path of the script in the MATLAB command line.
 
-The contents of myParallelAlgorithmFcn is as follows:
+The contents of myParallelAlgorithmFcn are as follows:
 
-```
+```{code-block} matlab
 function [numWorkers,time] = myParallelAlgorithmFcn ()
 
 complexities =  [2^18 2^20 2^21 2^22];
@@ -140,7 +140,7 @@ numWorkers = [1 2 4 6 16 32 64];
 
 time = zeros(numel(numWorkers),numel(complexities));
 
-% To obtain obtain predictable sequences of composite numbers, fix the seed
+% To obtain predictable sequences of composite numbers, fix the seed
 % of the random number generator.
 rng(0,'twister');
 
@@ -162,11 +162,11 @@ end
 
 **To submit myParallelAlgorithmFcn as a batch job, in the MATLAB Command Window, type**:
 
-```
+:::{code-block} matlab
 totalNumberOfWorkers = 65;
 cluster = parcluster('TestProfile');
 job = batch(cluster,'myParallelAlgorithmFcn',2,'Pool',totalNumberOfWorkers-1,'CurrentFolder','.');
-```
+:::
 
 This specifies the `totalNumberOfWorkers` as 65, where 64 workers will be issued to run *parfor* in parallel
 (so the pool is set as 64), and the additional worker will run the main process.
@@ -181,15 +181,15 @@ If you want to block MATLAB until the jobs are finished, type `Wait(job)`.
 
 When the jobs complete, you can transfer the outputs of the function using the `fetchOutputs` command:
 
-```
+:::
 outputs = fetchOutputs(job);
 numWorkers = outputs{1};
 time = outputs{2};
-```
+:::
 
 You can plot the performance (speedup) by typing:
 
-```
+:::{code-block} matlab
 figure
 speedup = time(1,:)./time;
 plot(numWorkers,speedup);
@@ -198,4 +198,4 @@ title('Speedup vs complexity');
 xlabel('Number of workers');
 xticks(numWorkers(2:end));
 ylabel('Speedup');
-```
+:::

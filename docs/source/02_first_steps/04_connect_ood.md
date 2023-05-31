@@ -1,4 +1,3 @@
-
 (access-ood)=
 
 # Accessing Open OnDemand
@@ -15,10 +14,9 @@ proceed with the following steps in order to access Discovery.
 
 **To Access Discovery through Open OnDemand (OOD), do the following**
 
-> 1. In a web browser, go to <http://ood.discovery.neu.edu>.
-> 2. At the prompt, enter your Northeastern username and password. Note that your username is the first part of your email without the @northeastern,
->    such as **j.smith**.
-> 3. Press **Enter** or click **Sign in**.
+1. In a web browser, go to <http://ood.discovery.neu.edu>.
+1. At the prompt, enter your Northeastern username and password. Note that your username is the first part of your email without the @northeastern, such as **j.smith**.
+1. Press **Enter** or click **Sign in**.
 
 Watch the following video for a short tutorial. If you do not see any controls on the video,
 right-click on the video to see viewing options.
@@ -30,6 +28,7 @@ right-click on the video to see viewing options.
 <!-- ![Alt text](../_static/video/OOD_access.mp4) -->
 
 (ood-next-steps)=
+
 ## OOD: next steps
 
 After you are connected, you use the interactive apps in OOD. See {ref}`accessing-ood` for more information.

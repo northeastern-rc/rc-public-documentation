@@ -22,9 +22,10 @@ For example, `which python` will display the version of python that you have in 
 
 The following are common module commands that are useful for interacting with software packages on Discovery.
 
-```{list-table}
-:header-rows: 1
-
+:::{list-table}
+---
+header-rows: 1
+---
 * - Module Command
   - Function
 * - ``module avail``
@@ -39,7 +40,7 @@ The following are common module commands that are useful for interacting with so
   - Remove a single software package from your environment
 * - ``module purge``
   - Removes all of the loaded software packages from your environment.
-```
+:::
 
 :::{caution}
 Using `module purge` will purge all modules from your environment, including the default module `discovery/2019-02-21`.

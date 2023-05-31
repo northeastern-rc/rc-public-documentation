@@ -32,9 +32,9 @@ You must be a professor or instructor to initiate this request. Students in your
 To request additional software (instructors only):
 
 1. Go to the [Discovery Cluster Software Request]. If prompted, sign in to ServiceNow with your Northeastern username and password to access the form.
-2. In the Sponsor’s Name field, enter your name.
-3. Make sure to follow the instructions on the form regarding either providing the URL of the open source software library or uploading the installation package in your home directory if it requires you to register it first. The request will not be completed without this information.
-4. Select the acknowledgement checkbox, and click **Submit**.
+1. In the Sponsor’s Name field, enter your name.
+1. Make sure to follow the instructions on the form regarding either providing the URL of the open source software library or uploading the installation package in your home directory if it requires you to register it first. The request will not be completed without this information.
+1. Select the acknowledgement checkbox, and click **Submit**.
 
 :::{note}
 Software requests can take up to 24 hours to verify, and then additional time is needed to complete the installation. We might not be able to install every software application requested. If this is the case we will notify you and try to provide alternative software to meet your needs.
@@ -74,9 +74,10 @@ If you are a professor or instructor at Northeastern, you can request an account
 You and/or your students can either submit a [Get Assistance with Research Computing] ticket or email <rchelp@northeastern.edu>.
 
 <!--LINKS-->
-[Discovery Classroom Use Request]: https://bit.ly/NURC-Classroom
-[Discovery Cluster Software Request]: https://bit.ly/NURC-Software
-[Get Assistance with Research Computing]: https://bit.ly/NURC-Assistance
-[How to Download a List of Student Email Addresses from Canvas]: https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981
-[Introduction to Open OnDemand (OOD)]: ../08_using-ood/01_introduction.md
-[Using Module]: ../04_software/02_modules.md
+
+[discovery classroom use request]: https://bit.ly/NURC-Classroom
+[discovery cluster software request]: https://bit.ly/NURC-Software
+[get assistance with research computing]: https://bit.ly/NURC-Assistance
+[how to download a list of student email addresses from canvas]: https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981
+[introduction to open ondemand (ood)]: ../08_using-ood/01_introduction.md
+[using module]: ../04_software/02_modules.md

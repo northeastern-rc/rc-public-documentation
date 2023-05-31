@@ -1,4 +1,3 @@
-
 <!--#  NEU's HPC Docs-->
 
 # Research Computing (RC)
@@ -168,5 +167,3 @@ We invite you to explore the resources, tools, and services available through th
 09_classroom/01_class_use
 09_classroom/02_cps_ood
 ```
-
-

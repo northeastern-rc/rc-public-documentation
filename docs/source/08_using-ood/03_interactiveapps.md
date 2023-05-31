@@ -16,7 +16,13 @@ correctly. See {ref}`using-x11` for tips and troubleshooting information opening
 
 On the Interactive Apps tab, you can view the list of available interactive apps through the OOD web interface.
 
-![Alt text](../images/ood_apps_2021.jpg)
+:::{image} ../images/ood_apps_2021.jpg
+---
+alt: an image the OOD apps (2021).
+scale: 30%
+align: right
+---
+:::
 
 :::{note}
 Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to
@@ -26,10 +32,10 @@ look into the issue.
 :::
 
 1. In a web browser, go to ood.discovery.neu.edu. If prompted, enter your myNortheastern username and password.
-2. Select **Interactive Apps**, then select the application you want to use.
-3. For most apps, keep the default options, and then click **Launch**. You might have to wait a
+1. Select **Interactive Apps**, then select the application you want to use.
+1. For most apps, keep the default options, and then click **Launch**. You might have to wait a
    minute or two for a compute node to be allocated with your requested time and resource.
-4. If you selected Jupyter Notebook, click **Connect to Jupyter**.
+1. If you selected Jupyter Notebook, click **Connect to Jupyter**.
    A Jupyter Notebook opens in a new tab on your browser.
 
 :::{tip}
@@ -50,25 +56,23 @@ environment; and then reference this environment when you start the Jupyter Note
 **Virtual python environment**
 
 1. First set up a virtual python environment. See {ref}`creating-python` for how to set up a virtual python environment on Discovery using the terminal.
-2. When your environment is ready, in the terminal type `source activate` to activate the base environment.
-3. Type `which conda` to get the full path of your environment. Make a note of the full path name.
-4. Type `source activate <yourenvironmentname>` where *\<yourenvironmentname>* is the name of your custom environment to activate the environment you just created.
-5. Type `conda install jupyterlab` to install jupyterlab in your environment.
+1. When your environment is ready, in the terminal type `source activate` to activate the base environment.
+1. Type `which conda` to get the full path of your environment. Make a note of the full path name.
+1. Type `source activate <yourenvironmentname>` where *\<yourenvironmentname>* is the name of your custom environment to activate the environment you just created.
+1. Type `conda install jupyterlab` to install jupyterlab in your environment.
 
 **Using OOD to launch Jupyter Notebook**
 
-1. Go to www.ood.discovery.neu.edu.
-2. Click **Interactive Apps**, then select **Jupyter Notebook \[Custom Anaconda Environment\]**.
-3. Select the compute node features for the job:
-
-> - In the **Time** field, enter the number of hour(s) needed for the job. Minimum is one hour, maximum is 8 hours.
-> - In the **Memory (in Gb)** field, enter the amount of memory you need for the job. Minimum is 2GB, maximum is 128GB.
-> - If you need GPU, check **Use GPU** box.
-
+1. Go to [https://www.ood.discovery.neu.edu/](https://www.ood.discovery.neu.edu/).
+1. Click **Interactive Apps**, then select **Jupyter Notebook \[Custom Anaconda Environment\]**.
+1. Select the compute node features for the job:
+   - In the **Time** field, enter the number of hour(s) needed for the job. Minimum is one hour, maximum is 8 hours.
+   - In the **Memory (in Gb)** field, enter the amount of memory you need for the job. Minimum is 2GB, maximum is 128GB.
+   - If you need GPU, check **Use GPU** box.
 4. Select the Anaconda version that you used to create your virtual python environment in the **System-wide Conda Module** field.
-5. Check **Custom Anaconda Environment** box, and enter the name of your custom virtual python environment in the **Name of Custom Conda Environment** field.
-6. Click **Launch**. This will put you in the queue for a compute node. Note that this might take a few minutes, depending on the resources you requested.
-7. When you have been allocated a compute node, click **Connect to Jupyter**.
+1. Check **Custom Anaconda Environment** box, and enter the name of your custom virtual python environment in the **Name of Custom Conda Environment** field.
+1. Click **Launch**. This will put you in the queue for a compute node. Note that this might take a few minutes, depending on the resources you requested.
+1. When you have been allocated a compute node, click **Connect to Jupyter**.
 
 When your Juypter Notebook is running and open, type `conda list` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all
 of your available packages.

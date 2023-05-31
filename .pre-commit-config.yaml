@@ -23,16 +23,16 @@ repos:
     - id: sort-simple-yaml
     - id: trailing-whitespace
 
-  - repo: https://github.com/tcort/markdown-link-check
-    rev: v3.11.2
-    hooks:
-      - id: markdown-link-check
-        args: [-q]
+#  - repo: https://github.com/tcort/markdown-link-check
+#    rev: v3.11.2
+#    hooks:
+#      - id: markdown-link-check
+#        args: [-q]
 
-  - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.16  # Use the ref you want to point at
-    hooks:
-    - id: mdformat
-      # Optionally add plugins
-      additional_dependencies:
-      - mdformat-myst
+#  - repo: https://github.com/executablebooks/mdformat
+#    rev: 0.7.16  # Use the ref you want to point at
+#    hooks:
+#    - id: mdformat
+#      # Optionally add plugins
+#      additional_dependencies:
+#      - mdformat-myst

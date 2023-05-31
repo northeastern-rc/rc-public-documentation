@@ -54,7 +54,6 @@ You can navigate between the class folders using the left menu. Your instructor 
 
 ![Alt text](../images/cps-ood-jupyterlab-folders-view.png)
 
-
 For instance, file **Example.ipynb** can be viewed using Python Jupyter Notebook (but not edited or removed).
 
 Navigate to the **students** directory, where you will see another directory under your username:
@@ -98,27 +97,25 @@ Click on the **Terminal** option under **Other** to open a Linux terminal:
 
 Navigate to your personal directory by typing the following command (change the class name from `ALY3070` to your class name accordingly):
 
-```
+:::
 cd /work/cps/ALY3070/students/$USER
-```
+:::
 
 Where `$USER` is a saved shell variable for your username. You can optionally also replace it with your username.
 
 Check that your assignment file is visible in the command line by typing `ls`. Then, Copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name):
 
-```
+:::
 cp Assignment1.ipynb ../../assignments
-```
+:::
 
 To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name):
 
-```
+:::
 rm ../../assignments/Assignment1.ipynb
-```
+:::
 
 Close the Terminal tab when done.
 
-![Alt text](../images/cps-ood-commandline.png)
 
-
-[Discovery Classroom Use Request]: https://bit.ly/NURC-Classroom
+[discovery classroom use request]: https://bit.ly/NURC-Classroom

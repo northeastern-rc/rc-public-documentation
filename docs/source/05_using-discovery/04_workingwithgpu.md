@@ -8,8 +8,10 @@ The Discovery cluster has various NVIDIA Graphics Processing Units (GPUs), as de
 The tables on this page slide from left-to-right. Make sure to swipe to right to see the content on the right side of the table
 :::
 
-```{list-table}
-:header-rows: 1
+:::{list-table}
+--------------
+header-rows: 1
+--------------
 
 * - GPU Type
   - GPU Memory
@@ -71,7 +73,7 @@ The tables on this page slide from left-to-right. Make sure to swipe to right to
   - 10,752
   - 0
   - 3 (x8 GPUs)
-```
+:::
 
 The public GPUs are available within two partitions, named `gpu` and
 `multigpu`. The differences between the two partitions are the
@@ -86,9 +88,9 @@ All user limits are subject to the availability of cluster resources at the time
 :::
 
 :::{list-table}
----
+--------------
 header-rows: 1
----
+--------------
 
 * - Name
   - Requires Approval?
@@ -152,6 +154,7 @@ the output to a file:
 #SBATCH --error=myjob.%j.err
 
 ## <your code>
+
 :::
 
 ### Specifying a GPU type
@@ -175,19 +178,20 @@ times, based on GPU availability at that time.
 
 There are several versions of CUDA Toolkits on Discovery, including:
 
-
-    cuda/9.0
-    cuda/9.2
-    cuda/10.0
-    cuda/10.2
-    cuda/11.0
-    cuda/11.1
-    cuda/11.2
-    cuda/11.3
-    cuda/11.4
-    cuda/11.7
-    cuda/11.8
-    cuda/12.1
+```
+cuda/9.0
+cuda/9.2
+cuda/10.0
+cuda/10.2
+cuda/11.0
+cuda/11.1
+cuda/11.2
+cuda/11.3
+cuda/11.4
+cuda/11.7
+cuda/11.8
+cuda/12.1
+```
 
 Use the `module avail` command to check for the latest software
 versions on Discovery. To see details on a specific CUDA toolkit
@@ -199,7 +203,6 @@ To add CUDA to your path, use `module load`. For example, type
 Use the command `nvidia-smi` (NVIDIA System Management Interface)
 inside a GPU node to get the CUDA driver information and monitor the
 GPU device.
-
 
 ## GPUs for Deep Learning
 
@@ -313,7 +316,7 @@ If the installation is successful, then, for example, you should see
 the following as an output:
 
 ::::{code-block} bash
-2023-02-24 16:39:35.798186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /device:GPU:0 with 10785 MB memory:  -> device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7 /device:GPU:0
+2023-02-24 16:39:35.798186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613\] Created device /device:GPU:0 with 10785 MB memory:  -> device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7 /device:GPU:0
 ::::
 
 ::::{note}

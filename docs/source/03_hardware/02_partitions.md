@@ -1,4 +1,5 @@
 (partition-names)=
+
 # Partitions
 
 <!--{sub}`today`-->
@@ -25,8 +26,10 @@ detailed information on the current partitions. Note that PI-owned partitions on
 In the following table, the Running Jobs Per User/Per Research Group. Core and RAM limits are set per user, across all running jobs (not pending).
 :::
 
-```{list-table}
-:header-rows: 1
+:::{list-table}
+---
+header-rows: 1
+---
 * - Name
   - Requires approval?
   - Time limit (default/max)
@@ -75,19 +78,22 @@ In the following table, the Running Jobs Per User/Per Research Group. Core and R
   - N/A
   - N/A
   - Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.
-```
+:::
 
+---
 
-```{list-table}
-:widths: 20 20 20 20 30 20 20 30
-:header-rows: 1
+:::{list-table}
+---
+widths: 20 20 20 20 30 20 20 30
+header-rows: 1
+---
 * - Name
   - Requires approval?
   - Time limit (default/max)
   - Running jobs
   - Submitted jobs
-  - GPU per job limit
-  - GPU per user limit
+  - GPU limit
+  - GPU limit
   - Use Case
 * - gpu
   - No
@@ -105,18 +111,18 @@ In the following table, the Running Jobs Per User/Per Research Group. Core and R
   - 12
   - 12
   - For jobs that require more than one GPU and take up to 24 hours to run.
-```
+:::
 
 ## Viewing partition information
 
 Slurm commands allow you to view information about the partitions. Three commands that can show you partition information are `sinfo`, `sacct`, and `scontrol`. The following are common options to use with these commands:
 
-```
+:::
 sinfo -p <partition name> #displays the state of the nodes on a specific partition
 sinfo -p <partition name> --Format=time,nodes,cpus,socketcorethread,memory,nodeai,features #displays more detailed information using the Format option, including features like the type of processors
 sacct --partition <partition name> #displays the jobs that have been run on this partition
 scontrol show partition <partition name> #displays the Slurm configuration of the partition
-```
+:::
 
 For more information about these commands, see the Slurm documentation site <https://slurm.schedmd.com/>.
 

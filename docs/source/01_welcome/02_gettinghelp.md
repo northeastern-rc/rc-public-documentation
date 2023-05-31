@@ -1,4 +1,3 @@
-
 # Getting Help
 
 If you need help, you can contact the Research Computing (RC) team via email, ServiceNow ticket, or by scheduling an appointment through our Bookings page.
@@ -12,7 +11,6 @@ To contact the RC team, email us at [rchelp@northeastern.edu](mailto:rchelp%40no
 To submit a ticket in ServiceNow, select from the [RC ServiceNow catalog](https://service.northeastern.edu/tech?id=tech_service_category&sys_id=ff07000fdb83b700a37cd206ca961969). You may need to sign in with your Northeastern username and password to view the catalog.
 
 RC users can request services using our ticket system. Please select the appropriate category below to access the online ticket.
-
 
 ::::{grid} 2
 :gutter: 1
@@ -51,14 +49,13 @@ Use our [Bookings page](https://rc.northeastern.edu/support/consulting/) to view
 
 We use the ITS Systems Status page to post important information, such as power outages and maintenance windows. You can subscribe to this page to receive email updates on the status of ITS systems.
 
-
-[Get Assistance with RC]: https://bit.ly/NURC-Assistance
-[RC Access Form]: https://bit.ly/NURC-AccessRequest
-[Software Request Form]: https://bit.ly/NURC-Software
-[Documentation Request]: https://bit.ly/NURC-Documentation
-[Partition Access Request]: https://bit.ly/NURC-PartitionAccess
-[Storage Request]: https://bit.ly/NURC-NewStorage
-[Storage Extension Request]: https://bit.ly/NURC-StorageExtension
-[Data Transfer Consultation]: https://bit.ly/NURC-DataTransfer
-[Classroom Request Form]: https://bit.ly/NURC-Classroom
-[Unsubscribe]: https://bit.ly/NURC-Unsubscribe
+[classroom request form]: https://bit.ly/NURC-Classroom
+[data transfer consultation]: https://bit.ly/NURC-DataTransfer
+[documentation request]: https://bit.ly/NURC-Documentation
+[get assistance with rc]: https://bit.ly/NURC-Assistance
+[partition access request]: https://bit.ly/NURC-PartitionAccess
+[rc access form]: https://bit.ly/NURC-AccessRequest
+[software request form]: https://bit.ly/NURC-Software
+[storage extension request]: https://bit.ly/NURC-StorageExtension
+[storage request]: https://bit.ly/NURC-NewStorage
+[unsubscribe]: https://bit.ly/NURC-Unsubscribe

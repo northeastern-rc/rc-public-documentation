@@ -9,7 +9,6 @@ modules on Discovery. The Research Computing team adds new modules regularly, so
 to view the most up-to-date list. You can also try using Spack, a software package manager available on Discovery. Spack has over 5,000 packages that
 you can install.
 
-
 ::::{grid} 3
 
 :::{grid-item-card} {ref}`using-module`
@@ -40,4 +39,4 @@ self-installation (such as using `make`), you can submit a [ServiceNow software 
 Be aware that there might be packages that cannot be installed on Discovery due
 to incompatibility with the hardware on Discovery.
 
-[ServiceNow software request ticket]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=777c510bdbebd340a37cd206ca9619b0
+[servicenow software request ticket]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=777c510bdbebd340a37cd206ca9619b0

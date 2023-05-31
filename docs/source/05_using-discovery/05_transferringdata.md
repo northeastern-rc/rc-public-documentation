@@ -29,9 +29,9 @@ If you want to use `sshfs`, you will need to use it with the dedicated transfer 
 
 Use this syntax to perform file transfers with `sshfs`:
 
-```
+:::
 sshfs <yourusername>@xfer.discovery.neu.edu:</your/remote/path> <your/local/path> -<options>
-```
+:::
 
 ## Data transfer node using Windows
 
@@ -41,20 +41,20 @@ The Files menu in Open onDemand (OOD) also allows you to transfer files. See [Us
 **To transfer data using MobaXterm:**
 
 1. Open MobaXterm.
-2. Click **Session**, then select **SFTP**.
-3. In the **Remote host** field, type `xfer.discovery.neu.edu`
-4. In the **Username** field, type your Northeastern username.
-5. In the **Port** field, type 22.
-6. In the **Password** box, type your Northeastern password and click **OK**. Click **No** if prompted to save your password.
+1. Click **Session**, then select **SFTP**.
+1. In the **Remote host** field, type `xfer.discovery.neu.edu`
+1. In the **Username** field, type your Northeastern username.
+1. In the **Port** field, type 22.
+1. In the **Password** box, type your Northeastern password and click **OK**. Click **No** if prompted to save your password.
 
 You will now be connected to the transfer node and can transfer files through MobaXterm.
 
 **To transfer data using FileZilla:**
 
 1. Open FileZilla.
-2. In the **Host** field, type `sftp://xfer.discovery.neu.edu`
-3. In the **Username** field, type your Northeastern username.
-4. In the **Password** field, type your Northeastern password.
-5. In the **Port** field, type 22.
+1. In the **Host** field, type `sftp://xfer.discovery.neu.edu`
+1. In the **Username** field, type your Northeastern username.
+1. In the **Password** field, type your Northeastern password.
+1. In the **Port** field, type 22.
 
 You will now be connected to the transfer node and can transfer files through FileZilla.

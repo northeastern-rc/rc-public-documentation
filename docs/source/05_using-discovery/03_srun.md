@@ -22,33 +22,33 @@ for your particular job.
 
 simple `srun` example is to move to a compute node after you first log into Discovery.
 
-```
+:::
 srun --pty /bin/bash
-```
+:::
 
 To request one node and one task for 30 minutes with X11 forwarding on the short partition, type:
 
-```
+:::
 srun --partition=short --export=ALL --nodes=1 --ntasks=1 --x11 --mem=10G --time=00:30:00 --pty /bin/bash
-```
+:::
 
 To request one node, with 10 tasks and 2 CPUs per task (a total of 20 CPUs), 1GB of memory, for one hour on the express partition, type:
 
-```
+:::
 srun --partition=express  --nodes 1 --ntasks 10 --cpus-per-task 2 --pty --export=ALL --mem=1G --time=01:00:00 /bin/bash
-```
+:::
 
 To request two nodes, each with 10 tasks per node and 2 CPUs per task (a total of 40 CPUs), 1GB of memory, for one hour on the express partition, type:
 
-```
+:::
 srun --partition=express  --nodes=2 --ntasks 10 --cpus-per-task 2 --pty --export=ALL --mem=1G --time=01:00:00 /bin/bash
-```
+:::
 
 To allocate a GPU node, you should specify the `gpu` partition and use the --gres option:
 
-```
+:::
 srun --partition=gpu --nodes=1 --ntasks=1 --export=ALL --gres=gpu:1 --mem=1Gb --time=01:00:00 --pty /bin/bash
-```
+:::
 
 For more information about working with GPUs, see [Working with GPUs](../05_using-discovery/04_workingwithgpu.md).
 

@@ -8,9 +8,9 @@ on and how much memory you’ll need. Slurm then schedules your job based on the
 availability of the resources you’ve specified.
 The general format for submitting a job to the scheduler is as follows:
 
-```
+:::
 sbatch example.script
-```
+:::
 
 Where `example.script` is a script detailing the parameters of the job you want to run.
 
@@ -28,14 +28,14 @@ See [Partitions](../03_hardware/02_partitions.md) for the most up-to-date partit
 
 Run a job on one node for 4 hours on the short partition:
 
-```
+:::
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --time=4:00:00
 #SBATCH --job-name=MyJobName
 #SBATCH --partition=short
 <commands to execute>
-```
+:::
 
 ### Job requesting one node and additional memory
 
@@ -46,7 +46,7 @@ calculations need more memory than the default. The example script below is
 requesting 100GB of memory (--mem=100G). Use one capital letter to abbreviate
 the unit of memory (K,M,G,T) with the `--mem=` option, as that is what Slurm expects to see.
 
-```
+:::
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --time=4:00:00
@@ -54,7 +54,7 @@ the unit of memory (K,M,G,T) with the `--mem=` option, as that is what Slurm exp
 #SBATCH --mem=100G
 #SBATCH --partition=short
 <commands to execute>
-```
+:::
 
 ### Job requesting one node with exclusive use of a node
 
@@ -62,7 +62,7 @@ If you need exclusive use of a node, such as when you have a job that has high
 I/O requirements, you can use the exclusive flag. The example script below
 specifies exclusive use of 1 node in the short partition for four hours.
 
-```
+:::
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --time=4:00:00
@@ -70,7 +70,7 @@ specifies exclusive use of 1 node in the short partition for four hours.
 #SBATCH --exclusive
 #SBATCH --partition=short
 <commands to execute>
-```
+:::
 
 ## Example Parallel Job Scripts
 
@@ -84,7 +84,7 @@ need more memory than the default.
 
 ### 8-task job, one node and additional memory
 
-```
+:::
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8
@@ -94,11 +94,11 @@ need more memory than the default.
 #SBATCH --mem=100G
 #SBATCH --partition=short
 <commands to execute>
-```
+:::
 
 ### 8-task job, multiple nodes and additional memory
 
-```
+:::
 #!/bin/bash
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=2
@@ -108,7 +108,7 @@ need more memory than the default.
 #SBATCH --mem=100G
 #SBATCH --partition=express
 <commands to execute>
-```
+:::
 
 ## Using Arrays
 
