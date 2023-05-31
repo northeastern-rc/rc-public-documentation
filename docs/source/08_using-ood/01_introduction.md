@@ -1,6 +1,6 @@
 (using-ood)=
 
-# Introduction to Open OnDemand (OOD)
+# Introduction to Open OnDemand
 
 Open OnDemand (OOD) is a web portal to the Discovery cluster. A Discovery account
 is necessary for you to access OOD. If you need an account, see [Request an account](../02_first_steps/01_get_access.md).
