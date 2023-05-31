@@ -23,11 +23,12 @@ Access to the cluster is limited to Northeastern affiliates with a valid NU user
 
 Your request may take up to 24 hours after your sponsor approves it (see Sponsor Approval Process below). You will receive an email confirmation when your access has been granted. Once you have access, if you are unfamiliar with Discovery, high-performance computing, or Linux, you may want to take one of our training courses. Visit the [Research Computing website] for more information about our training and services.
 
+
+:::{sidebar} PI and instructor access
+If you are a PI, professor, or instructor at Northeastern and need access to the cluster, use the access form in the above procedure and enter your name in the `Sponsor Name` field.
+:::
+
 (instructor-access)=
-### PI and instructor access
-
-If you are a PI, professor, or instructor at Northeastern and need access to Discovery, use the access form in the above procedure and enter your name in the Sponsor Name field.
-
 ### Sponsor Approval Process
 
 HPC users need a sponsor, usually a NU PI or professor, to approve their request. PIs, professors, and instructors can sponsor themselves. Students (undergraduate or graduate), visiting researchers, or staff members must have a sponsor approve their request. When you fill out the ServiceNow form, an email is sent to the specified sponsor upon submitting the request. Sponsors will receive email reminders until they approve the request through the link in the email to ServiceNow. We recommend letting your sponsor know to look for the email with the approval link before submitting an access request.
