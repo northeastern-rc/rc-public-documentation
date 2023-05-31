@@ -203,15 +203,15 @@ GPU device.
 
 ## GPUs for Deep Learning
 
-:::::{tab-set}
-::::{tab-item} PyTorch
+::::::{tab-set}
+:::::{tab-item} PyTorch
 
 You should use PyTorch with a conda virtual environment if you need to
 run the environment on the Nvidia GPUs on Discovery. The following
 example demonstrates how to build PyTorch inside a conda virtual
 environment for CUDA version 11.7.
 
-:::{note}
+::::{note}
 Make sure to be on a GPU node before loading the
 environment. Additionally, the latest version of PyTorch is not
 compatible with GPUs with CUDA version 11.7 or less. Hence, the
@@ -219,17 +219,17 @@ installation does not work on k40m or k80 GPU's. In order to see
 what `non-Kepler` GPUs might be available execute the following
 command:
 
-```
+:::
 sinfo -p gpu --Format=nodes,cpus,memory,features,statecompact,nodelist,gres
-```
+:::
 
 This will indicate the state (idle or not) of a certain gpu-type
 that could be helpful in requesting an `idle` gpu. However, the
 command does not give real-time information of the state and should
 be used with caution.
-:::
+::::
 
-:::{code-block} bash
+::::{code-block} bash
 ---
 caption: |
     PyTorch's installation steps (with a specific GPU-type):
@@ -240,14 +240,14 @@ conda create --name pytorch_env python=3.9 -y
 source activate pytorch_env
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia -y
 python -c 'import torch; print(torch.cuda.is_available())'
-:::
+::::
 
-:::{note}
+::::{note}
 If the installation times out, please ensure that your `.condarc`
 file doesn't contain additional channels. Also, consider cleaning
 your conda instance using the `conda clean` command. See [Conda
 best practices](https://rc-docs.northeastern.edu/en/latest/software/conda.html#conda-best-practices) .
-:::
+::::
 
 If CUDA is detected by PyTorch, you should see the result, `True`.
 
@@ -260,11 +260,11 @@ The above PyTorch installation instructions will not include
 environment. In order to include those one can execute the following
 command after activating the `pytorch_env` environment:
 
-:::{code-block} bash
+::::{code-block} bash
 conda install pandas scikit-learn matplotlib seaborn jupyterlab -y
-:::
 ::::
-::::{tab-item} TensorFlow
+:::::
+:::::{tab-item} TensorFlow
 
 We recommend that you use CUDA 11.2 (the latest supported version) when
 working on a GPU with the latest version of TensorFlow (TF).
@@ -275,7 +275,7 @@ and [detailed installation instructions](https://www.tensorflow.org/install/pip)
 For the latest installation, use the TensorFlow pip package, which
 includes GPU support for CUDA-enabled devices:
 
-:::{code-block} bash
+::::{code-block} bash
 srun --partition=gpu --gres=gpu:1 --nodes=1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
 
 module load anaconda3/2022.05 cuda/11.2
@@ -288,11 +288,11 @@ mkdir -p $CONDA_PREFIX/etc/conda/activate.d
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
 pip install --upgrade pip
 pip install tensorflow==2.11.*
-:::
+::::
 
 Verify the installation:
 
-:::{code-block} bash
+::::{code-block} bash
 # Verify the CPU setup (if successful, then a tensor is returned):
 python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal((1000, 1000))))"
 
@@ -301,26 +301,24 @@ python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'
 
 # test if a GPU device is detected with TF (if successful, then True is returned):
 python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())'
-:::
+::::
 
 To get the name of the GPU, type:
 
-:::{code-block} bash
+::::{code-block} bash
 python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
-:::
+::::
 
 If the installation is successful, then, for example, you should see
 the following as an output:
 
-:::{code-block} bash
+::::{code-block} bash
 2023-02-24 16:39:35.798186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /device:GPU:0 with 10785 MB memory:  -> device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7 /device:GPU:0
-:::
-
-:::{note}
-Ignore the `Warning` messages that get generated after executing the above commands.
-:::
-
 ::::
+
+::::{note}
+Ignore the `Warning` messages that get generated after executing the above commands.
+::::
+
 :::::
-
-
+::::::
