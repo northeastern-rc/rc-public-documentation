@@ -1,6 +1,6 @@
 (bashrc)=
 
-# Shell environment on Discovery
+# Shell Environment on the Cluster
 
 ## The Discovery Shell environment and .bashrc
 
