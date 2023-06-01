@@ -9,7 +9,7 @@ For example, you can download a Jupyter Notebook file in OOD that you’ve been 
 on to your local hard drive, rename a file, or delete a file that you no longer need.
 
 :::{note}
-Your home directory has a file size limit of 100GB. Be sure to check your home
+Your home directory has a file size limit of 75GB. Be sure to check your home
 directory regularly, and remove any files you do not need to ensure you do not run out of space.
 :::
 

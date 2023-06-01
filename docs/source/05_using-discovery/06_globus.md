@@ -8,7 +8,7 @@ your Northeastern credentials. If you have another account, either personal or
 through another institution, you can also link your accounts.
 
 To use Globus, you must first set up an account as detailed below. Then, you must install Globus Connect to create an endpoint on your local computer, as also detailed below.
-After you have completed these two initial setup procedures, you can then use the Globus web app to perform file transfers. See :ref: `using_nuendpoint` for a walkthrough of using the Northeastern endpoint on Globus.
+After you have completed these two initial setup procedures, you can then use the Globus web app to perform file transfers. See {ref}`using-nuendpoint` for a walkthrough of using the Northeastern endpoint on Globus.
 
 ## Globus Account Set Up
 
