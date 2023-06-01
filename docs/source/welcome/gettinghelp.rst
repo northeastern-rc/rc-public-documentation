@@ -54,7 +54,7 @@ To check for updates on a submitted ticket, please follow these steps:
 
 1. Log in to your `ServiceNow <https://service.northeastern.edu/tech>`_ account.
 2. Select "My Tickets" to access a list of all your active tickets.
-4. In the ticket list, you will be able to view the latest updates made to each ticket.
+3. In the ticket list, you will be able to view the latest updates made to each ticket.
 
 In addition, you will receive an email notification from ServiceNow mentioning your incident number, you can directly access the ServiceNow portal to view the updates on your ticket by following these steps:
 
