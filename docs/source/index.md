@@ -141,7 +141,6 @@ We invite you to explore the resources, tools, and services available through th
 :caption: 🗄 Understanding storage
 
 06_storage/01_discovery_storage
-06_storage/02_general_storage
 ```
 
 ```{toctree}
