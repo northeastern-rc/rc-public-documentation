@@ -2,18 +2,17 @@
 
 # Using Spack
 
-Research Computing recommends using [Spack] to conveniently install software packages locally to your path.  Please refer to the [Spack documentation] for the latest information about the [packages] that Spack contains. To use Spack, you first need to copy it to your /home directory or a /work directory, then you need to add it to your local environment.
+Research Computing recommends using [Spack] to conveniently install software packages locally to your path. Please refer to the [Spack documentation] for the latest information about the [packages] that Spack contains. To use Spack, you first need to copy it to your `/home` directory or a `/work` directory, then you need to add it to your local environment.
 
 :::{note}
 Spack software installations are part of your research and should preferably be stored in your PI's `/work` directory.
 :::
 
-::::::{tab-set}
-:::::{tab-item} Getting started with Spack
+## Getting started with Spack
 
-These instructions will demonstrate how to install Spack in your local /home directory (step 2) and then how to add Spack to your local environment while on a compute node so you have access to the Spack commands (steps 4-5).
+These instructions will demonstrate how to install Spack in your local `/home` directory (step 2) and then how to add Spack to your local environment while on a compute node so you have access to the Spack commands (steps 4-5).
 
-1. Connect to Discovery via ssh ([Connecting to Discovery with a Mac](../02_first_steps/02_connect_mac.md) or [Connecting to Discovery using Windows](../02_first_steps/03_connect_windows.md)).
+1. Connect to Discovery via ssh ({ref}`connect-mac` or {ref}`connect-windows`).
 1. From the terminal, type `git clone -c feature.manyFiles=true https://github.com/spack/spack.git` to copy Spack to your /home directory.
 1. Type `srun -p short --pty -N 1 -n 28 /bin/bash` to allocate an interactive job on a compute node. Spack will attempt to run `make` in parallel when Spack builds the software you choose to install, so this `srun` request is for 28 cores on one node (-N 1 -n 28). To use Spack, it needs to add it to your local environment on the compute node, which is why this is completed after step 3.
 1. To use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`.
@@ -31,8 +30,7 @@ When you have installed a software package, you can add it to the module system 
 Spack can be installed in a /work directory, which enables members of the /work directory to use the programs that are installed with Spack in that directory.
 :::
 
-:::::
-:::::{tab-item} Installing LAMMPS with Spack example
+## Installing LAMMPS with Spack example
 
 This section details how to install the LAMMPS application with the KOKKOS and User-reaxc packages using Spack. This example assumes that you do not have any previous versions of LAMMPS installed. If you have any previous versions of LAMMPS, you must uninstall them before using this procedure. To see if you have any previous versions of LAMMPS, type `spack find lammps`. If you do have a previous version, you will need to uninstall LAMMPS by typing `spack uninstall --dependents lammps`. Then, you can try the example procedure below. Note that the installation can take about two hours to complete. As part of the procedure, we recommend that you initiate a [screen session] so that you can have the installation running as a separate process if you need to do other work on Discovery. If you decide to use screen, make note of the compute node number (compute node numbers start with c or d with four numbers, such as c0123) to make it easier to check on the progress of the installation.
 
@@ -63,8 +61,6 @@ This section details how to install the LAMMPS application with the KOKKOS and U
 1. Type `spack find LAMMPS` to view your installed software package.
 
 1. Type `spack load lammps`.
-:::::
-::::::
 
 [screen session]: https://www.gnu.org/software/screen/
 [Spack]: https://spack.io/
