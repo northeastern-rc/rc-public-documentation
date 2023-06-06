@@ -149,6 +149,7 @@ We invite you to explore the resources, tools, and services available through th
 :caption: 🚀 Best practices
 
 07_best-practices/01_checkpointing
+07_best-practices/02_home_quota
 ```
 
 ```{toctree}
