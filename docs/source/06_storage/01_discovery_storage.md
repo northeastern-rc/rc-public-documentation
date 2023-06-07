@@ -8,9 +8,8 @@ solutions to meet your storage needs. If you anticipate needing storage as part 
 [schedule a storage consultation with a Research Computing staff member] to understand what storage options would best meet your research needs.
 
 ::::::{tab-set}
-:::::{tab-item} Data Storage
+:::::{tab-item} Active Storage
 
-%## Data Storage
 There are two main storage systems connected to Northeastern's HPC cluster: `/home` and `/scratch`; these options have specific quotas and limitations. The list below details the storage options available to you on the HPC cluster by having an account. Every individual with an account has both a `/home` and `/scratch` directory. While research groups can request additional storage on the `/work` storage system, `/work` storage is not currently provisioned to individuals.
 
 :::{important}
@@ -37,7 +36,6 @@ The `/research` storage tier is no longer provided. Please contact Research Comp
 :::
 :::::
 :::::{tab-item} Archival Storage
-%## Archival Storage
 
 **NAME:** `/nese`
 : - **DESCRIPTION:** This is archival, non-performant storage intended for researchers who need to have a long-term storage option for their data.
