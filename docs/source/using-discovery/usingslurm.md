@@ -10,7 +10,7 @@ that lets you do the following:
 - schedule your jobs on Discovery
 - view information about your account
 
-[Using srun](../05_using-discovery/03_srun.md) and [Using sbatch](../05_using-discovery/02_sbatch.md) provide you with a few examples to help get you familiar
+[Using srun](../using-discovery/srun.md) and [Using sbatch](../using-discovery/sbatch.md) provide you with a few examples to help get you familiar
 with Slurm and be able to submit basic jobs on Discovery.
 
 :::{important}
@@ -23,7 +23,7 @@ Refer to the official Slurm documentation to get in-depth information about thes
 ## Viewing Cluster Information
 
 Use the following commands to view information about the cluster. This information can help you better understand the
-hardware that is available in order to customize your job scripts. Also see [Hardware overview](../03_hardware/01_hardware_overview.md) for more information.
+hardware that is available in order to customize your job scripts. Also see [Hardware overview](../hardware/hardware_overview.md) for more information.
 
 :::{list-table}
 ---

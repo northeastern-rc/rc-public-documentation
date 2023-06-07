@@ -81,7 +81,7 @@ number of GPUs that one can request per job and the time limit on each
 job. Both partitions give access to all the public GPU types
 mentioned above. The table below shows the differences between the two
 partitions. For more information about the partitions on the cluster,
-see [Partitions](../03_hardware/02_partitions.md).
+see [Partitions](../hardware/partitions.md).
 
 :::{note}
 All user limits are subject to the availability of cluster resources at the time of submission and will be honored according to that.
