@@ -2,15 +2,9 @@
 
 # Using OOD's Interactive Apps
 
-There are a number of applications that you can access and use through the OOD web portal.
-When you select an application and click launch, the scheduler (Slurm) allocates a compute node with
-a predetermined number of cores and amount of memory. The default time for running any of the
-applications is one hour. It is recommended that you keep the default. If you ask for more than one
-hour, you will need to wait for Slurm to allocate a resource that can run for your requested time,
-which could take a long time to be allocated, depending on how busy the cluster is.
+There are a number of applications that you can access and use through the OOD web portal. When you select an application and click launch, the scheduler (Slurm) allocates a compute node with a predetermined number of cores and amount of memory. The default time for running any of the applications is one hour. It is recommended that you keep the default. If you ask for more than one hour, you will need to wait for Slurm to allocate a resource that can run for your requested time, which could take a long time to be allocated, depending on how busy the cluster is.
 
-If you are attempting to run a job on one of the interactive apps on OOD that launches a graphical user interface (GUI), such as Maestro, you might get an error if your passwordless ssh is not set up
-correctly. See {ref}`using-x11` for tips and troubleshooting information opening applications that use X11 forwarding.
+If you are attempting to run a job on one of the interactive apps on OOD that launches a graphical user interface (GUI), such as Maestro, you might get an error if your passwordless ssh is not set up correctly. See {ref}`using-x11` for tips and troubleshooting information opening applications that use X11 forwarding.
 
 ## Available Apps (November 2021)
 
@@ -25,10 +19,7 @@ align: right
 :::
 
 :::{note}
-Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to
-open an app, and you believe that you should have access to it, please email <rchelp@northeastern.edu> with your username,
-research group, the app you are trying to access, a screenshot of the error that you are getting, and we will
-look into the issue.
+Some apps are reserved for specific research groups and are not for general access. If you get an access error when attempting to open an app, and you believe that you should have access to it, please email <rchelp@northeastern.edu> with your username, research group, the app you are trying to access, a screenshot of the error that you are getting, and we will look into the issue.
 :::
 
 1. In a web browser, go to ood.discovery.neu.edu. If prompted, enter your myNortheastern username and password.
@@ -39,20 +30,12 @@ look into the issue.
    A Jupyter Notebook opens in a new tab on your browser.
 
 :::{tip}
-On the Jupyter Notebook Home tab, click **New**, then select the kernel you want to use, such as Python or R.
-Your selected kernel opens in a new tab on your browser. Click the **Running** tab to see a
-list of what Notebooks you already have running.
-If you already have a Notebook saved to your home directory, on the **Files** tab,
-click the name of the file to restart the Notebook in a new tab on your browser.
+On the Jupyter Notebook Home tab, click **New**, then select the kernel you want to use, such as Python or R. Your selected kernel opens in a new tab on your browser. Click the **Running** tab to see a list of what Notebooks you already have running. If you already have a Notebook saved to your home directory, on the **Files** tab, click the name of the file to restart the Notebook in a new tab on your browser.
 :::
 
-::::::{tab-set}
-:::::{tab-item} Jupyter Notebook \[Custom Anaconda Environment\]
+## Jupyter Notebook \[Custom Anaconda Environment\]
 
-One of the interactive apps on OOD is Jupyter Notebook Custom Anaconda Environment. You need to do some initial
-setup in order to use this app effectively. This section will provide a walkthrough of setting up and using this app.
-The general workflow is to first create a virtual python environment; ensure that Jupyter Notebook is installed in your virtual
-environment; and then reference this environment when you start the Jupyter Notebook \[Custom Anaconda Environment\] OOD interactive app.
+One of the interactive apps on OOD is Jupyter Notebook Custom Anaconda Environment. You need to do some initial setup in order to use this app effectively. This section will provide a walkthrough of setting up and using this app. The general workflow is to first create a virtual python environment; ensure that Jupyter Notebook is installed in your virtual environment; and then reference this environment when you start the Jupyter Notebook \[Custom Anaconda Environment\] OOD interactive app.
 
 **Virtual python environment**
 
@@ -77,8 +60,8 @@ environment; and then reference this environment when you start the Jupyter Note
 
 When your Juypter Notebook is running and open, type `conda list` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all
 of your available packages.
-:::::
-:::::{tab-item} Xfce Desktop (Beta)
+
+## Xfce Desktop (Beta)
 
 This Open OnDemand application is a containerized desktop running on the HPC cluster. It has access to these tools/programs:
 
@@ -92,5 +75,3 @@ This Open OnDemand application is a containerized desktop running on the HPC clu
 :::{note}
 The desktop application is itself a Singularity container and has not been setup to run a Singularity container inside of it. If a user is trying to run a module or program that itself runs a container while inside of this application it will fail.
 :::
-:::::
-::::::
