@@ -2,9 +2,11 @@
 
 # Using Conda
 
-[Conda](https://docs.conda.io/en/latest/) is an open source environment and package manager. [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free installer for Conda, Python,
+[Conda]is an open source environment and package manager. [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free installer for Conda, Python,
 and a few other useful packages. [Anaconda](https://docs.anaconda.com/) is also a package manager that has a much larger number of packages that you can install.
 A question that frequently comes up is "Should I use Anaconda or Miniconda?" The Conda documentation site has a topic that can help you to decide which package manager to use: <https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda>.
+
+
 
 (creating-python)=
 
@@ -57,3 +59,9 @@ To deactivate the environment, type `conda deactivate`. You can type this comman
 :::{note}
 It is not recommended to build your Miniconda and virtual Conda environments inside your /home directory due to its limited space qouta (see [Storage Accessible on Discovery](../storage/discovery_storage.md)). Use the /work file system instead. If your group needs access to /work, the group PI can request it using: [New Storage Space request](https://bit.ly/NURC-NewStorage) .
 :::
+
+[anaconda]: https://docs.anaconda.com
+[conda]: https://docs.conda.io/en/latest/ 
+[miniconda]: https://docs.conda.io/en/latest/miniconda.html 
+[should i use anaconda or miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
+
