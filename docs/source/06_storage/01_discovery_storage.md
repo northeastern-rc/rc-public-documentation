@@ -19,17 +19,17 @@ The `/scratch` space is only for temporary storage; this storage is not backed u
 **NAME:** `/home/<yourusername>` where `yourusername` is your username, e.g., `/home/j.smith`
 : - **DESCRIPTION:** All users are given a `/home` directory automatically when their account is created. This storage is mainly intended for storing relatively small files such as script files, source code, and software installation files. While `/home` is permanent storage that is backed up and replicated, `/home` is not performant storage. `/home` also has a small quota, so you should frequently check your space usage (use a command such as, `du -h /home/<yourusername>` where `<yourusername>` is your user name, to see the total space usage). For running jobs and directing output files, you should use your `/scratch` directory.
 
-- **QUOTA:** 75GB
+: - **QUOTA:** 75GB
 
 **NAME:** `/scratch/<yourusername>`
 : - **DESCRIPTION:** All users are given a `/scratch` directory automatically when their account is created. Scratch is a shared space for all users. The total storage available is 1.8PB; however, while this is performant storage, it is for temporary use only. **It is not backed up.** Data on `/scratch` should be moved as soon as possible to another location for permanent storage. You should run your jobs from `/scratch` and direct your output files to your `/scratch`directory for best performance, but it is best practice to move your files off of scratch to avoid any potential data loss.
 
-- **QUOTA:** N/A
+: - **QUOTA:** N/A
 
 **NAME:** `/work/<groupname>`
 : - **DESCRIPTION:** Research groups can request additional storage on `/work`. A PI can request this extra storage through the [New Storage Space request]. This is a performant, persistent, and long-term storage that is meant for storing data being actively used for research. `/work` can be accessed by all members of the research group who have access permissions to this directory.
 
-- **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
+: - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
 
 :::{note}
 The `/research` storage tier is no longer provided. Please contact Research Computing if you are a former user of `/research` and have questions or issues related to `/research` by [submitting a ticket]. Other storage options include `/work`, [Sharepoint], and [OneDrive].
@@ -40,7 +40,7 @@ The `/research` storage tier is no longer provided. Please contact Research Comp
 **NAME:** `/nese`
 : - **DESCRIPTION:** This is archival, non-performant storage intended for researchers who need to have a long-term storage option for their data.
 
-- **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
+: - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
 
 :::{important}
 If you are not connected to the campus internet, you must be connected to the university's VPN (GlobalProtect) before you can access the `/nese` system. You can find detailed information about downloading and using the GlobalProtect VPN in the [FAQ: VPN and remote access].
