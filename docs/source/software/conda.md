@@ -22,8 +22,8 @@ You can also have more than one environment with different packages for differen
 1. To load anaconda, type `module load anaconda3/2022.05`.
 1. To create your environment, type `conda create --prefix=/work/groupname/username/<yourenvironmentname> python=3.11 anaconda`, where \<yourenvironmentname> is the name you want to give your environment. Tip: to see a list of all of your conda environments, type `conda info -e`. 
 1. Follow the prompts to complete the Conda install.
-1. To activate your Conda environment, type `source activate <yourenvironmentname>/`. You can also use `conda activate `, though you may have to initilize conda first with `conda init `. Note, when using the `--prefix` to create your environment you will need to have a forward slash when activating the environment. If you are trying to activate your environment from a location other than the '--prefix' directory location you will have to run 'source activate' with the whole path i.e., `source activate /work/groupname/username/<yourenvironmentname>`.
-1. You will notice that once your conda environment is activated your command line prompt has been modified with the full path of the environment, e.g., `(/work/groupname/username/newconda2) [username@c2001 dirname]$`. To You can clear this up by running the command: ``conda config --set env_prompt '({name}) '`` which will modify your .condarc file to only show the active envrionments name and not its full path: (newconda2) [username@c2000 dirname]$
+1. To activate your Conda environment, type `source activate <yourenvironmentname>/`. You can also use `conda activate `, though you may have to initilize conda first with `conda init `, and `conda activate` is not availble for all versions of the anaconda modules availble on Discovery. Note, when using `--prefix` to create your environment you will need to have a forward slash at the end of your environment name when activating the environment. If you are trying to activate your environment from a location other than the `--prefix` directory location you will have to run `source activate` with the whole path i.e., `source activate /work/<groupname>/<username>/<yourenvironmentname>`.
+1. You will notice that once your conda environment is activated your command line prompt has been modified with the full path of the environment, e.g., `(/work/<groupname>/<username>/newconda2) [username@c2001 dirname]$`. To You can clear this up by running the command: ``conda config --set env_prompt '({name}) '`` which will modify your .condarc file to only show the active envrionments name and not its full path: `(newconda2) [username@c2000 dirname]$`
 1. With your Conda environment activated you can install a specific package with `conda install [package]`.
 1. To deactivate the current, active Conda environment, type `conda deactivate`.
 1. To delete a Conda environment and all of its related packages, type `conda remove -n <yourenvironmentname> --all`.
@@ -42,22 +42,19 @@ Miniconda3 with Python 3.7.
 1. Type `wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh` to get the latest version of Miniconda.
 1. Type `sha256sum Miniconda3-latest-Linux-x86_64.sh` to check the hash key of the package.
 1. Type `bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>` to start the installation, where `<dir>` should be replaced with the full path to your desired installation directory. For example, set it to `/work/<mygroup>/<mydirectory>/miniconda3` (recommended).
-1. Type `source <dir>/bin/activate` to activate the miniconda environment.
-1. Another recommended step is to update your Conda version (possible only when using conda you own): `conda update conda -y`
-
-After installing, activating and updating Miniconda, you can create a new virtual Conda environment. In the example below, the Conda envinronment is named "my-python38environment" and installs Python version 3.8.
-
-1. After completing steps 1 through 6 in the previous procedure, type `conda create --name my-python38environment python=3.8`.
+1. Type `source <dir>/bin/activate` to activate the base miniconda environment.
+1. You can now create a new environment with this command where we're using python version 3.8 `conda create --name my-py38env python=3.8`.
 1. Type `y` if asked to proceed with the installation.
-1. Type `conda activate my-python38environment` to activate the environment.
+1. Type `conda activate my-py38env` to activate the environment.
 
-To deactivate the environment, type `conda deactivate`. You can type this command again to deactivate the Miniconda environment.
+To deactivate the environment, type `conda deactivate`. You can type this command again to deactivate the base Miniconda environment.
 
 ## Conda best practices
 
 1. Your .conda directory may get very large if you install multiple packages and create many virtual Conda environments. Make sure to clean the Conda cache and clean unused packages with: `conda clean --all`.
 1. Clean unused Conda environments by first listing the environments with: `conda env list` , and then removing unused ones: `conda env remove --name <yourenvironmentname>`.
-1. You can build Conda environments in different locations to save space on your home directory (see [Storage Accessible on Discovery](../storage/discovery_storage.md)). You can use the `--prefix` flag when building your environment. For example: `conda create myenv --prefix=/work/<mygroup>/<mydirectory>`.
+1. You can build Conda environments in different locations to save space on your home directory (see [Storage Accessible on Discovery]). You can use the `--prefix` flag when building your environment. For example: `conda create myenv --prefix=/work/<mygroup>/<mydirectory>`.
+1. Another recommended step is to update your Conda version (possible only when using Miniconda): `conda update conda -y`
 
 
 [anaconda]: https://docs.anaconda.com
