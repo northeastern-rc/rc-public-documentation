@@ -54,12 +54,14 @@ You will notice that once your conda environment is activated your command line 
 :::{code-block} bash
 (/work/<groupname>/<username>/newconda2) [username@c2001 dirname]$
 :::
-You can clear this up by running the command: ``conda config --set env_prompt '({name}) '`` which will modify your .condarc file to only show the active envrionments name and not its full path: 
+You can clear this up by running the command: ``conda config --set env_prompt '({name}) '`` which will modify your .condarc file to only show the active envrionments name and not its full path:
+
 :::{code-block} bash
 (newconda2) [username@c2000 dirname]$
 :::
 
-With your Conda environment activated you can install a specific package with 
+With your Conda environment activated you can install a specific package with
+
 :::{code-block} bash
 conda install [packagename]
 :::
@@ -67,7 +69,7 @@ To deactivate the current, active Conda environment
 :::{code-block} bash
 conda deactivate
 :::
-To delete a Conda environment and all of its related packages, run
+To delete a Conda environment and all of its related packages, run:
 :::{code-block} bash
 conda remove -n <yourenvironmentname> --all
 :::
