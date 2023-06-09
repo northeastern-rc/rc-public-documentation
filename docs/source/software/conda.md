@@ -26,13 +26,10 @@ srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
 
 Here we're requesting 1 node with 1 cpu core, but you can request additional resources as per your requirements.
 
-To load anaconda, type 
+To load anaconda type:
+
 :::{code-block} bash
 module load anaconda3/2022.05
-
-#check which modules are loaded
-module list 
-
 :::
 
 To create a new Conda environment where /<yourenvironmentname> is the name you want to give your environment, preceeded by the full path starting with /work. You can see a list of your existing environments with `conda env list`.
@@ -50,11 +47,10 @@ source activate <yourenvironmentname>/
 
 You can also use `conda activate <yourenvironmentname>/`, though you may have to initilize conda first with `conda init`, and `conda activate` is not availble for all versions of the anaconda modules availble on Discovery. 
 
-:::{note} 
-when using `--prefix` to create your environment you will need to have a forward slash at the end of your environment name when activating the environment. If you are trying to activate your environment from a location other than the `--prefix` directory location you will have to run `source activate` with the whole path i.e., `source activate /work/<groupname>/<username>/<yourenvironmentname>`.
+:::{note} when using `--prefix` to create your environment you will need to have a forward slash at the end of your environment name when activating the environment. If you are trying to activate your environment from a location other than the `--prefix` directory location you will have to run `source activate` with the whole path i.e., `source activate /work/<groupname>/<username>/<yourenvironmentname>`.
 :::
 
-You will notice that once your conda environment is activated your command line prompt has been modified with the full path of the environment, e.g.,
+You will notice that once your conda environment is activated your command line prompt has been modified with the full path of the environment.
 :::{code-block} bash
 (/work/<groupname>/<username>/newconda2) [username@c2001 dirname]$
 :::
@@ -65,9 +61,7 @@ You can clear this up by running the command: ``conda config --set env_prompt '(
 
 With your Conda environment activated you can install a specific package with 
 :::{code-block} bash
-conda install [package]
-# for example
-conda install BSgenome
+conda install [packagename]
 :::
 To deactivate the current, active Conda environment
 :::{code-block} bash
