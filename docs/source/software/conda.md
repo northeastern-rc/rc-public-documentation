@@ -20,7 +20,7 @@ You can also have more than one environment with different packages for differen
 
 If you are on a login node, move to a compute node by typing
 
-:::{code-block}bash
+:::{code-block} bash
 srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
 :::
 
@@ -34,7 +34,7 @@ module load anaconda3/2022.05
 
 To create a new Conda environment where /<yourenvironmentname> is the name you want to give your environment, preceeded by the full path starting with /work. You can see a list of your existing environments with `conda env list`.
 
-::: {code-block} bash
+:::{code-block} bash
 conda create --prefix=/work/<groupname>/<username>/<yourenvironmentname> python=3.11 anaconda
 :::
 
@@ -51,9 +51,11 @@ You can also use `conda activate <yourenvironmentname>/`, though you may have to
 :::
 
 You will notice that once your conda environment is activated your command line prompt has been modified with the full path of the environment.
+
 :::{code-block} bash
 (/work/<groupname>/<username>/newconda2) [username@c2001 dirname]$
 :::
+
 You can clear this up by running the command: ``conda config --set env_prompt '({name}) '`` which will modify your .condarc file to only show the active envrionments name and not its full path:
 
 :::{code-block} bash
@@ -65,10 +67,12 @@ With your Conda environment activated you can install a specific package with
 :::{code-block} bash
 conda install [packagename]
 :::
-To deactivate the current, active Conda environment
+
+To deactivate the current active Conda environment
 :::{code-block} bash
 conda deactivate
 :::
+
 To delete a Conda environment and all of its related packages, run:
 :::{code-block} bash
 conda remove -n <yourenvironmentname> --all
@@ -78,9 +82,8 @@ conda remove -n <yourenvironmentname> --all
 
 ## Working with a Miniconda environment
 
-This procedure assumes that you have not installed Miniconda previously. If you need to update Miniconda, don't use the installation procedure. Use the
-`conda update` command. This procedure uses the Miniconda3 version with Python version 3.8 in step 2, although there are other versions you can install, such as
-Miniconda3 with Python 3.7.
+This procedure assumes that you have not installed Miniconda previously. If you need to update Miniconda, don't use the installation procedure. Use the `conda update` command. This procedure uses the Miniconda3 version with Python version 3.8 in step 2, although there are other versions you can install, such as
+Miniconda3 with Python 3.9, or Python 3.11. 
 
 **To install Miniconda:**
 
