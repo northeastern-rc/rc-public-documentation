@@ -104,8 +104,8 @@ To deactivate the environment, type `conda deactivate`. You can type this comman
 
 
 [anaconda]: https://docs.anaconda.com
-[conda]: https://docs.conda.io/en/latest/ 
-[miniconda]: https://docs.conda.io/en/latest/miniconda.html 
-[should I use anaconda or miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
+[conda]: https://docs.conda.io/en/latest/
+[miniconda]: https://docs.conda.io/en/latest/miniconda.html
+[Should I use Anaconda or Miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
 [Storage Accessible on Discovery]: ../storage/discovery_storage.md
 [New Storage Space request]: https://bit.ly/NURC-NewStorage
