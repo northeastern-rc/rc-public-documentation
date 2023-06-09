@@ -18,7 +18,7 @@ It is not recommended to build your Miniconda and Conda virtual environments ins
 Using a locally installed Conda virtual environment is highly recommended so that you can install the specific packages that you need.
 You can also have more than one environment with different packages for different research projects or for testing purposes. This procedure uses the Anaconda module already available on Discovery.
 
-If you are on a login node, move to a compute node by typing
+If you are on a login node, move to a compute node by typing:
 
 :::{code-block} bash
 srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
@@ -104,7 +104,7 @@ Run this to check the hash key of the package
 sha256sum Miniconda3-latest-Linux-x86_64.sh
 :::
 
-To start installing Miniconda3 type the following, where `<dir>` should be replaced with the full path to your desired installation directory. For example, set it to `/work/<mygroup>/<mydirectory>/miniconda3`
+To start installing Miniconda3 type the following, where `<dir>` should be replaced with the full path to your desired installation directory. For example, set it to `/work/mygroup/mydirectory/miniconda3`
 
 :::{code-block} bash
 bash Miniconda3-latest-Linux-x86_64.sh -b -p dir
