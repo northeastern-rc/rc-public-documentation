@@ -84,14 +84,41 @@ Miniconda3 with Python 3.7.
 
 **To install Miniconda:**
 
-1. If you are on a login node, move to a compute node by typing `srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash`.
-1. Type `wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh` to get the latest version of Miniconda.
-1. Type `sha256sum Miniconda3-latest-Linux-x86_64.sh` to check the hash key of the package.
-1. Type `bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>` to start the installation, where `<dir>` should be replaced with the full path to your desired installation directory. For example, set it to `/work/<mygroup>/<mydirectory>/miniconda3` (recommended).
-1. Type `source <dir>/bin/activate` to activate the base miniconda environment.
-1. You can now create a new environment with this command where we're using python version 3.8 `conda create --name my-py38env python=3.8`.
-1. Type `y` if asked to proceed with the installation.
-1. Type `conda activate my-py38env` to activate the environment.
+If you are on a login node, move to a compute node by typing:
+
+:::{code-block} bash
+ srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
+:::
+
+Get the latest version of Miniconda with the command below:
+
+:::{code-blocks} bash
+wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+:::
+Run this to check the hash key of the package
+
+:::{code-block} hash
+sha256sum Miniconda3-latest-Linux-x86_64.sh
+:::
+
+To start installing Miniconda3 type the following, where `<dir>` should be replaced with the full path to your desired installation directory. For example, set it to `/work/<mygroup>/<mydirectory>/miniconda3`
+:::{code-block} bash
+bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>
+:::
+Activate the base Miniconda environment
+:::{code-block} hash
+source <dir>/bin/activate
+:::
+You can now create a new environment with this command where we're using python version 3.8:
+:::{code-block} bash 
+conda create --name my-py38env python=3.8
+:::
+Type `y` if asked to proceed with the installation.
+
+Now you can activate your new environment
+:::{code-block} bash
+conda activate my-py38env
+:::
 
 To deactivate the environment, type `conda deactivate`. You can type this command again to deactivate the base Miniconda environment.
 
