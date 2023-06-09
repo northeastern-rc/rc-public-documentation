@@ -2,10 +2,10 @@
 
 # Using Conda
 
-[Conda]is an open source environment and package manager. [Miniconda] is a free installer for Conda, Python,
+[Conda] is an open source environment and package manager. [Miniconda] is a free installer for Conda, Python,
 and comes with a few other packages. [Anaconda] is also a package manager that has a much larger number of packages pre-installed.
 
-A question that frequently comes up is "[Should I use Anaconda or Miniconda?]"
+A question that frequently comes up is "[Should I use Anaconda or Miniconda]?"
 
 :::{note}
 It is not recommended to build your Miniconda and Conda virtual environments inside your /home directory due to its limited space quota (see [Storage Accessible on Discovery]). Use the /work file system instead. If your group needs access to /work, the group PI can request it using: [New Storage Space request].
@@ -18,15 +18,65 @@ It is not recommended to build your Miniconda and Conda virtual environments ins
 Using a locally installed Conda virtual environment is highly recommended so that you can install the specific packages that you need.
 You can also have more than one environment with different packages for different research projects or for testing purposes. This procedure uses the Anaconda module already available on Discovery.
 
-1. If you are on a login node, move to a compute node by typing `srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash`. In the above example, we request for 1 node with 1 cpu core, but you can request for additional resources as per your requirements.
-1. To load anaconda, type `module load anaconda3/2022.05`.
-1. To create your environment, type `conda create --prefix=/work/groupname/username/<yourenvironmentname> python=3.11 anaconda`, where \<yourenvironmentname> is the name you want to give your environment. Tip: to see a list of all of your conda environments, type `conda info -e`. 
-1. Follow the prompts to complete the Conda install.
-1. To activate your Conda environment, type `source activate <yourenvironmentname>/`. You can also use `conda activate `, though you may have to initilize conda first with `conda init `, and `conda activate` is not availble for all versions of the anaconda modules availble on Discovery. Note, when using `--prefix` to create your environment you will need to have a forward slash at the end of your environment name when activating the environment. If you are trying to activate your environment from a location other than the `--prefix` directory location you will have to run `source activate` with the whole path i.e., `source activate /work/<groupname>/<username>/<yourenvironmentname>`.
-1. You will notice that once your conda environment is activated your command line prompt has been modified with the full path of the environment, e.g., `(/work/<groupname>/<username>/newconda2) [username@c2001 dirname]$`. To You can clear this up by running the command: ``conda config --set env_prompt '({name}) '`` which will modify your .condarc file to only show the active envrionments name and not its full path: `(newconda2) [username@c2000 dirname]$`
-1. With your Conda environment activated you can install a specific package with `conda install [package]`.
-1. To deactivate the current, active Conda environment, type `conda deactivate`.
-1. To delete a Conda environment and all of its related packages, type `conda remove -n <yourenvironmentname> --all`.
+If you are on a login node, move to a compute node by typing
+
+:::{code-block}bash
+srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
+:::
+
+Here we're requesting 1 node with 1 cpu core, but you can request additional resources as per your requirements.
+
+To load anaconda, type 
+:::{code-block} bash
+module load anaconda3/2022.05
+
+#check which modules are loaded
+module list 
+
+:::
+
+To create a new Conda environment where /<yourenvironmentname> is the name you want to give your environment, preceeded by the full path starting with /work. You can see a list of your existing environments with `conda env list`.
+
+::: {code-block} bash
+conda create --prefix=/work/<groupname>/<username>/<yourenvironmentname> python=3.11 anaconda
+:::
+
+Follow the prompts to complete the Conda install.
+To activate your Conda environment, type
+
+:::{code-block} bash
+source activate <yourenvironmentname>/
+:::
+
+You can also use `conda activate <yourenvironmentname>/`, though you may have to initilize conda first with `conda init`, and `conda activate` is not availble for all versions of the anaconda modules availble on Discovery. 
+
+:::{note} 
+when using `--prefix` to create your environment you will need to have a forward slash at the end of your environment name when activating the environment. If you are trying to activate your environment from a location other than the `--prefix` directory location you will have to run `source activate` with the whole path i.e., `source activate /work/<groupname>/<username>/<yourenvironmentname>`.
+:::
+
+You will notice that once your conda environment is activated your command line prompt has been modified with the full path of the environment, e.g.,
+:::{code-block} bash
+(/work/<groupname>/<username>/newconda2) [username@c2001 dirname]$
+:::
+You can clear this up by running the command: ``conda config --set env_prompt '({name}) '`` which will modify your .condarc file to only show the active envrionments name and not its full path: 
+:::{code-block} bash
+(newconda2) [username@c2000 dirname]$
+:::
+
+With your Conda environment activated you can install a specific package with 
+:::{code-block} bash
+conda install [package]
+# for example
+conda install BSgenome
+:::
+To deactivate the current, active Conda environment
+:::{code-block} bash
+conda deactivate
+:::
+To delete a Conda environment and all of its related packages, run
+:::{code-block} bash
+conda remove -n <yourenvironmentname> --all
+:::
 
 (mini-conda)=
 
@@ -60,6 +110,6 @@ To deactivate the environment, type `conda deactivate`. You can type this comman
 [anaconda]: https://docs.anaconda.com
 [conda]: https://docs.conda.io/en/latest/ 
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html 
-[should i use anaconda or miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
-[Storage Accessible on Discovery]:../storage/discovery_storage.md
-[New Storage Space request]:https://bit.ly/NURC-NewStorage .
+[should I use anaconda or miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
+[Storage Accessible on Discovery]: ../storage/discovery_storage.md
+[New Storage Space request]: https://bit.ly/NURC-NewStorage
