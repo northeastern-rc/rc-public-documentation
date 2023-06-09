@@ -32,17 +32,17 @@ To load anaconda type:
 module load anaconda3/2022.05
 :::
 
-To create a new Conda environment where /<yourenvironmentname> is the name you want to give your environment, preceeded by the full path starting with /work. You can see a list of your existing environments with `conda env list`.
+To create a new Conda environment where /yourenvironmentname is the name you want to give your environment, preceeded by the full path starting with /work. You can see a list of your existing environments with `conda env list`.
 
 :::{code-block} bash
-conda create --prefix=/work/<groupname>/<username>/<yourenvironmentname> python=3.11 anaconda
+conda create --prefix=/work/groupname/username/yourenvironmentname python=3.11 anaconda
 :::
 
 Follow the prompts to complete the Conda install.
 To activate your Conda environment, type
 
 :::{code-block} bash
-source activate <yourenvironmentname>/
+source activate yourenvironmentname/
 :::
 
 You can also use `conda activate <yourenvironmentname>/`, though you may have to initilize conda first with `conda init`, and `conda activate` is not availble for all versions of the anaconda modules availble on Discovery. 
@@ -53,7 +53,7 @@ You can also use `conda activate <yourenvironmentname>/`, though you may have to
 You will notice that once your conda environment is activated your command line prompt has been modified with the full path of the environment.
 
 :::{code-block} bash
-(/work/<groupname>/<username>/newconda2) [username@c2001 dirname]$
+(/work/groupname/username/newconda2) [username@c2001 dirname]$
 :::
 
 You can clear this up by running the command: ``conda config --set env_prompt '({name}) '`` which will modify your .condarc file to only show the active envrionments name and not its full path:
@@ -75,7 +75,7 @@ conda deactivate
 
 To delete a Conda environment and all of its related packages, run:
 :::{code-block} bash
-conda remove -n <yourenvironmentname> --all
+conda remove -n yourenvironmentname --all
 :::
 
 (mini-conda)=
@@ -100,25 +100,31 @@ wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.
 :::
 Run this to check the hash key of the package
 
-:::{code-block} hash
+:::{code-block} bash
 sha256sum Miniconda3-latest-Linux-x86_64.sh
 :::
 
 To start installing Miniconda3 type the following, where `<dir>` should be replaced with the full path to your desired installation directory. For example, set it to `/work/<mygroup>/<mydirectory>/miniconda3`
+
 :::{code-block} bash
-bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>
+bash Miniconda3-latest-Linux-x86_64.sh -b -p dir
 :::
+
 Activate the base Miniconda environment
-:::{code-block} hash
-source <dir>/bin/activate
+:::{code-block} bash
+source dir/bin/activate
 :::
+
 You can now create a new environment with this command where we're using python version 3.8:
+
 :::{code-block} bash 
 conda create --name my-py38env python=3.8
 :::
+
 Type `y` if asked to proceed with the installation.
 
 Now you can activate your new environment
+
 :::{code-block} bash
 conda activate my-py38env
 :::
