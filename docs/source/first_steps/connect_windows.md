@@ -3,7 +3,7 @@
 # Connecting Windows
 
 You connect to Discovery using a [secure shell](https://www.ssh.com/ssh/protocol/) program to initiate an SSH session to
-sign in to Discovery. This topic is about how to connect using Windows. See [connect mac](./02_connect_mac.md) for information about connecting with a Mac.
+sign in to Discovery. This topic is about how to connect using Windows. See [connect mac](./connect_mac.md) for information about connecting with a Mac.
 
 Before you can connect to Discovery on a Windows computer, you’ll need to download a terminal program,
 such as [MobaXterm](https://mobaxterm.mobatek.net/) or PuTTY. We recommend MobaXterm, as you can also use it for file transfer,
