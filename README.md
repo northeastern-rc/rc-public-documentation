@@ -25,7 +25,7 @@ OR, do so via the command-line:
 ```bash
 cd rc-public-documentation
 
-python3.9 -m venv .venv
+python3.11 -m venv .venv
 source venv/bin/activate
 pip install --upgrade pip
 ```
