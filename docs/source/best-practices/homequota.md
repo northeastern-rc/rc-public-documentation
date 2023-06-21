@@ -62,7 +62,7 @@ module load singularity/3.5.3
 singularity cache clean all
 :::
 
-To avoid your `~/.singularity` directory filling up, you can set a temporary directory for when you pull containers to store the cache in that location; an example of this procedure, (where `<project>` is your PI's `/work` directory) is:
+To avoid your `~/.singularity` directory filling up, you can set a temporary directory for when you pull containers to store the cache in that location; an example of this procedure, (where `<project>` is your PI's `/work` directory) is the following:
 
 :::{code-block} bash
 mkdir /work/<project>/singularity_tmp
@@ -73,7 +73,7 @@ Then, pull the container using singularity as usual.
 
 ### Cache
 
-The `~/.cache` directory can become large over time with general use of the HPC and Open OnDemand. Make sure you are not running any processes or jobs at the time by running:
+The `~/.cache` directory can become large over time with general use of the HPC and Open OnDemand. Make sure you are not running any processes or jobs at the time by running the following:
 
 :::{code-block} bash
 squeue -u <username>
