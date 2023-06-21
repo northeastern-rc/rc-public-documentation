@@ -149,6 +149,7 @@ storage/general_storage
 :caption: 🚀 Best practices
 
 best-practices/checkpointing
+best-practices/homequota
 ```
 
 ```{toctree}
