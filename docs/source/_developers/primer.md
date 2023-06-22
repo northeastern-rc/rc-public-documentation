@@ -130,3 +130,14 @@ Clear and consistent language and terminology are crucial for effective communic
 - **Acronyms**: Always define acronyms the first time you use them.
 - **Jargon**: Avoid using jargon unless necessary. If you have to use it, define it first.
 - **Language**: Use either American or British English consistently throughout your documentation.
+
+[Myst-Parser Documentation]: https://myst-parser.readthedocs.io/en/v0.13.5/using/howto.html
+[MyST-Typography]: https://myst-parser.readthedocs.io/en/latest/syntax/typography.html
+[about colon_fence]: [https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#code-fences-using-colons]
+[Markdown cheatsheet]: https://www.markdownguide.org/basic-syntax/
+[admonitions]: https://jupyterbook.org/en/stable/reference/cheatsheet.html#admonitions
+[RC's Git Primer] gitprimer.md
+[Colon Fence Directives]: https://mystmd.org/guide/syntax-overview#example-fence
+[RTD]: https://readthedocs.com/
+
+[Myst Source code and APIs]: https://myst-parser.readthedocs.io/en/latest/syntax/code_and_apis.html
