@@ -29,7 +29,8 @@ Use `/work` for long-term storage. PIs can request a folder in `/work` via [New 
 Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See {ref}`discovery-storage` for information on `/work` and `/scratch`.
 :::
 
-## Cleaning directories
+## Cleaning Directories
+(cleaning-conda)=
 ### Conda
 
 :::{note}
