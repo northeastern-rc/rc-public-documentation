@@ -149,11 +149,12 @@ storage/general_storage
 :caption: 🚀 Best practices
 
 best-practices/checkpointing
+best-practices/homequota
 ```
 
 ```{toctree}
 :hidden:
-:caption: 📲 Using Open OnDemand (OOD)
+:caption: 📲 Open OnDemand (OOD)
 
 using-ood/introduction
 using-ood/fileexplore
