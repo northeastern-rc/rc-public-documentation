@@ -141,7 +141,6 @@ using-discovery/globus
 :caption: 🗄 Understanding storage
 
 storage/discovery_storage
-storage/general_storage
 ```
 
 ```{toctree}
