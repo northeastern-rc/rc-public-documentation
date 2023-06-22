@@ -19,7 +19,7 @@ The default time limit depends on the partition that you specify in your submiss
 `--partition=<partition name>` option.
 If your job does not complete within the requested time limit,
 Slurm will automatically terminate the job.
-See [Partitions](../03_hardware/02_partitions.md) for the most up-to-date partition names and parameters.
+See [Partitions](../hardware/partitions.md) for the most up-to-date partition names and parameters.
 :::
 
 ## SBATCH Examples

@@ -43,33 +43,33 @@ A dedicated platform for researchers, scholars, and students to access, learn, a
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`video;1.5em;screen-full` Open OnDemand (OOD)
-:link: 08_using-ood/01_introduction
+:link: using-ood/introduction
 :link-type: doc
 
 OOD provides a various available software interactively through your favorite browser.
 
 +++
-[Learn more »](08_using-ood/01_introduction)
+[Learn more »](using-ood/introduction)
 :::
 
 :::{grid-item-card} {octicon}`plug;1.5em;sd-mr-1` Classroom Integration
-:link: 09_classroom/01_class_use
+:link: classroom/class_use
 :link-type: doc
 
 Request a reservation devoted for the classroom, whether an entire curriculum or specific assignments and lessons.
 
 +++
-[Learn more »](09_classroom/01_class_use)
+[Learn more »](classroom/class_use)
 :::
 
 :::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Best Practices
-:link: 07_best-practices/01_checkpointing
+:link: best-practices/checkpointing
 :link-type: doc
 
 Learn to optimize your projects by following some best practices.
 
 +++
-[Learn more »](07_best-practices/01_checkpointing)
+[Learn more »](best-practices/checkpointing)
 :::
 
 ::::
@@ -88,82 +88,83 @@ We invite you to explore the resources, tools, and services available through th
 :hidden:
 :caption: 👋 Welcome
 
-01_welcome/01_welcome
-01_welcome/02_gettinghelp
+welcome/welcome
+welcome/gettinghelp
 ```
 
 ```{toctree}
 :hidden:
 :caption: 1️⃣ First Steps
 
-02_first_steps/01_get_access
-02_first_steps/02_connect_mac
-02_first_steps/03_connect_windows
-02_first_steps/04_connect_ood
-02_first_steps/05_bashrc
+first_steps/get_access
+first_steps/connect_mac
+first_steps/connect_windows
+first_steps/connect_ood
+first_steps/bashrc
 ```
 
 ```{toctree}
 :hidden:
 :caption: 🖥️ Hardware on Discovery
 
-03_hardware/01_hardware_overview
-03_hardware/02_partitions
+hardware/hardware_overview
+hardware/partitions
 ```
 
 ```{toctree}
 :hidden:
 :caption: 📚 Software Guides
 
-04_software/01_softwareoverview
-04_software/02_modules
-04_software/03_matlab
-04_software/04_conda
-04_software/05_spack
-04_software/06_r
-04_software/07_mpi
+software/softwareoverview
+software/modules
+software/matlab
+software/conda
+software/spack
+software/r
+software/mpi
 ```
 
 ```{toctree}
 :hidden:
 :caption: 🛠 Using HPC
 
-05_using-discovery/01_usingslurm
-05_using-discovery/02_sbatch
-05_using-discovery/03_srun
-05_using-discovery/04_workingwithgpu
-05_using-discovery/05_transferringdata
-05_using-discovery/06_globus
+using-discovery/usingslurm
+using-discovery/sbatch
+using-discovery/srun
+using-discovery/workingwithgpu
+using-discovery/transferringdata
+using-discovery/globus
 ```
 
 ```{toctree}
 :hidden:
 :caption: 🗄 Understanding storage
 
-06_storage/01_discovery_storage
-06_storage/02_general_storage
+storage/discovery_storage
+storage/general_storage
 ```
 
 ```{toctree}
 :hidden:
 :caption: 🚀 Best practices
 
-07_best-practices/01_checkpointing
+best-practices/checkpointing
+best-practices/homequota
 ```
 
 ```{toctree}
 :hidden:
 :caption: 📲 Using Open OnDemand (OOD)
 
-08_using-ood/01_introduction
-08_using-ood/02_fileexplore
-08_using-ood/03_interactiveapps
+using-ood/introduction
+using-ood/fileexplore
+using-ood/interactiveapps
 ```
 
 ```{toctree}
 :hidden:
 :caption: 🧑‍🏫 HPC for the classroom
 
-09_classroom/01_class_use
-09_classroom/02_cps_ood
+classroom/class_use
+classroom/cps_ood
 ```
