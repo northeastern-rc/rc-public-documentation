@@ -1,0 +1,22 @@
+# See docs at: https://myst-tools.org/docs/mystjs/frontmatter
+version: 1
+project:
+  title: Northeastern University Research Computing
+  logo: ./images/northeastern_logo_N.png
+  # description:
+  keywords: []
+  authors: []
+  github: https://github.com/northeastern-rc/rc-public-documentation
+  # bibliography: []
+site:
+  template: book-theme
+  title: "Northeastern University Research Computing"
+  logo: ./images/northeastern_logo_N.png
+  projects:
+    - slug: docs
+      path: .
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://myst-tools.org/docs/mystjs
+  domains: []
