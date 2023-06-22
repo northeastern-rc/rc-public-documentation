@@ -131,6 +131,28 @@ Clear and consistent language and terminology are crucial for effective communic
 - **Jargon**: Avoid using jargon unless necessary. If you have to use it, define it first.
 - **Language**: Use either American or British English consistently throughout your documentation.
 
+
+##  Review Process
+Finally, ensure your documentation undergoes a thorough review process before it's published. We do this through PRs on GitHub (see {ref}`git-primer`).
+
+- **Peer Review**: Encourage team members to review each other's work. This can help catch errors, ambiguities, and inconsistencies the original writer may have missed.
+- **Proofreading**: Check for spelling, grammar, and punctuation errors. Tools like Grammarly or language-tool can help with this.
+
+
+:::{tip}
+When add a substantial amount of content, whether a new page or several sections, consider using Notion to draft. Then, update the RTD pages (i.e., this project) for a technical review. This way, development can be more interactive, time is not wasted adjusting formatting and other syntax, and the history is much simpler (and more promising) than that of our own managed via Git.
+:::
+
+- **Technical Accuracy**: Ensure all code snippets, commands, and technical information are accurate and up-to-date.
+- **Feedback**: Encourage users to provide feedback on your documentation. This can help you identify areas that need improvement.
+- **Continuous Updates**: Keep your documentation up-to-date. As your product evolves, so should your documentation.
+
+:::{attention}
+All members of the RC are welcome to contribute on the documentation. In fact, it is encouraged and much appreciated. Do not hesitate to ask for tasks or make suggestions to improve our *User Facing Documentation*.
+:::
+
+Remember, good documentation is an ongoing effort. Always strive to improve and adapt to your users' needs.
+
 [Myst-Parser Documentation]: https://myst-parser.readthedocs.io/en/v0.13.5/using/howto.html
 [MyST-Typography]: https://myst-parser.readthedocs.io/en/latest/syntax/typography.html
 [about colon_fence]: [https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#code-fences-using-colons]
