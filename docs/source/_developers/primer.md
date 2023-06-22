@@ -1,7 +1,5 @@
 # Documentation Primer
 
-## Purpose
-
 :::{important}
 Remember that this style guide is a reference for team members working on documentation. It is essential to keep it up-to-date and easily accessible for all contributors.
 :::
@@ -17,6 +15,9 @@ The writing style in documentation is critical for ensuring consistency and unde
 
 :::{list-table}
 :header-rows: 1
+:widths: 50 50
+:align: left
+
 * - ❌ Do Not
   - ✅ Do
 * - The initiation of the replication process...
@@ -27,6 +28,9 @@ The writing style in documentation is critical for ensuring consistency and unde
 
 :::{list-table}
 :header-rows: 1
+:widths: 50 50
+:align: left
+
 * - ❌ Do Not
   - ✅ Do
 * - Once the process has been completed successfully, the next step is...
@@ -37,6 +41,9 @@ The writing style in documentation is critical for ensuring consistency and unde
 
 :::{list-table}
 :header-rows: 1
+:widths: 50 50
+:align: left
+
 * - ❌ Do Not
   - ✅ Do
 * - The command can be executed by the user.
@@ -47,6 +54,8 @@ The writing style in documentation is critical for ensuring consistency and unde
 
 :::{list-table}
 :header-rows: 1
+:widths: 50 50
+:align: left
 
 * - ❌ Do Not
   - ✅ Do
@@ -99,13 +108,11 @@ Set *Soft-Wrap* to be set to 100 characters by default when viewing `*.md`
 :::{note}
 Add line-breaks before and after the opening and closing of directives (i.e., outside the struct). Only add a single line-break after opening, which is the case for most directives; for those that do not require any inputs but titles (e.g., `:::{directive} Title`), omit line-breaks after the opening.
 :::
-
 ::::
 
 ::::{important}
 These nested admonitions were done, mostly, to demonstrate how it can be done. There are exceptions, but this is quite nested: be sure to consider if the flow of information is done most effectively when nests deeper, or even as as deep as this example (i.e., five colons `:::::` deep).
 ::::
-
 :::::
 
 Consistent formatting makes your documentation look professional and easy to read. Use consistent formatting for headings, lists, tables, and other elements, and adequately nest subheadings and lists. Here are some guidelines:
@@ -131,6 +138,68 @@ Clear and consistent language and terminology are crucial for effective communic
 - **Jargon**: Avoid using jargon unless necessary. If you have to use it, define it first.
 - **Language**: Use either American or British English consistently throughout your documentation.
 
+## Documentation Structure
+- Organize documentation into folders that represent sections, with each file as an item of its section.
+- Use a clear hierarchy for headings and subheadings.
+   - A single level-one heading (i.e., `# HEADING`) at the top of the page: `HEADING` will appear in the table of contents.
+   - Add file path to [index.md] as follows:
+    :::{code snippet} md
+    ```{toctree}
+    :hidden:
+    :caption: <section>
+    
+    <section-directory>/<filename>
+    ```
+    :::
+    Where _<section>_ is the top-level index listed in the table of contents and <filename> is the markdown file. Note that `.md` can be omitted. Furthermore, when naming a file or directory, use all lowercase with no spaces. For example, {ref}`home-directory-storage-quota` is simply named `homequota.md`.
+
+- Ensure each page has a clear purpose and covers a single topic.
+
+##  Links and References
+Links and references are crucial for helping users navigate your content and providing additional context. Here's how you can effectively use them in your documentation:
+- Use descriptive link text instead of generic phrases like "click here" or "learn more."
+- Regularly check for broken links (see *Precommits*).
+- Reference external sources when necessary and provide proper attribution.
+- Use cross-references to link to other sections within the documentation.
+- Descriptive Links: Avoid using phrases like "click here" for hyperlink text. Instead, use descriptive text that informs the reader about the content they'll find when they follow the link.
+
+
+:::{list-table}
+:header-rows: 1
+:widths: 50 50
+:align: left
+
+* - ❌ Do Not
+  - ✅ Do
+* - Click here for more information about the installation process.
+  - Read our comprehensive installation guide.
+:::
+
+- Check Links: Regularly verify that all external links in your documentation are valid and update any changes.
+- Cross-References: Use cross-references to link to other sections of your documentation. This can help readers find related content quickly.
+- Attribution: If you're citing external sources or using someone else's work (e.g., images, code snippets), attribute the source correctly.
+
+##  Images and Diagrams
+Visual content like images and diagrams can significantly enhance your documentation. Here are some guidelines:
+- **High-Quality Images**: Always use high-resolution images that are clear and easy to see. If you're using screenshots, ensure they accurately represent the current version of your product or interface.
+- **Descriptive Alt Text**: Always provide alt text for your images. The alt text describes the image for people who can't see it, whether due to visual impairments, technical issues, or because they're using a screen reader.
+- **Simple Diagrams**: Keep your diagrams simple. Avoid including unnecessary details that could confuse your readers.
+- **Consistent Style**: If you use multiple diagrams, ensure they have a consistent style and use the same symbols and conventions.
+
+## Markdown and MyST Syntax
+
+Markdown and MyST provide a simple way to format your content. Here are some tips for using these syntax effectively:
+- **Basic Markdown**: Familiarize yourself with basic markdown syntax, including headers, lists, links, images, and code blocks.
+- **MyST Features**: MyST extends the standard markdown syntax with additional features such as cross-references, footnotes, directives, warnings, and other particular elements. Make sure you understand how to use these features correctly.
+- **Code Blocks**: Use triple backticks to create code blocks and specify the language for syntax highlighting.
+- **Admonitions**: Use MyST's admonition syntax to highlight important information. For example, `:::{note}` creates a note, and `:::{warning}` creates a warning.
+
+:::{note}
+There are many [admonitions] to choose from. Use your best judgement, look at other examples, and be sure to use the appropriate tone.
+:::
+
+- **Consistency**: Be consistent with your use of MyST syntax. For example, always use the same header level for section titles, the same style for lists, etc.
+- Follow the MyST syntax for advanced features such as directives and roles.
 
 ##  Review Process
 Finally, ensure your documentation undergoes a thorough review process before it's published. We do this through PRs on GitHub (see {ref}`git-primer`).
@@ -155,11 +224,11 @@ Remember, good documentation is an ongoing effort. Always strive to improve and 
 
 [Myst-Parser Documentation]: https://myst-parser.readthedocs.io/en/v0.13.5/using/howto.html
 [MyST-Typography]: https://myst-parser.readthedocs.io/en/latest/syntax/typography.html
-[about colon_fence]: [https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#code-fences-using-colons]
+[about colon_fence]: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html\#code-fences-using-colons
 [Markdown cheatsheet]: https://www.markdownguide.org/basic-syntax/
-[admonitions]: https://jupyterbook.org/en/stable/reference/cheatsheet.html#admonitions
-[RC's Git Primer] gitprimer.md
+[admonitions]: https://jupyterbook.org/en/stable/reference/cheatsheet.html\#admonitions
+[RCs Git Primer]: gitprimer.md
 [Colon Fence Directives]: https://mystmd.org/guide/syntax-overview#example-fence
 [RTD]: https://readthedocs.com/
-
+[index.md]: https://github.com/northeastern-rc/rc-public-documentation/blob/master/docs/source/index.md
 [Myst Source code and APIs]: https://myst-parser.readthedocs.io/en/latest/syntax/code_and_apis.html
