@@ -55,9 +55,11 @@ This section details how to install the LAMMPS application with the KOKKOS and U
 
 1. Type:
 
-   :::{code-block} shell
-   spack install lammps +asphere +body +class2 +colloid +compress +coreshell +cuda cuda_arch=70 +cuda_mps +dipole +granular +kokkos +kspace +manybody +mc +misc +molecule +mpiio +peri +python +qeq +replica +rigid +shock +snap +spin +srd +user-reaxc +user-misc
-   :::
+:::{code-block} shell
+spack install lammps +asphere +body +class2 +colloid +compress +coreshell +cuda \
+cuda_arch=70 +cuda_mps +dipole +granular +kokkos +kspace +manybody +mc +misc +molecule \
++mpiio +peri +python +qeq +replica +rigid +shock +snap +spin +srd +user-reaxc +user-misc
+:::
 
 1. Type `spack find LAMMPS` to view your installed software package.
 
