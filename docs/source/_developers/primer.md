@@ -115,3 +115,18 @@ Consistent formatting makes your documentation look professional and easy to rea
 - **Bold and Italics**: Use bold to highlight important concepts and italics to indicate new terms. In MyST, use bold text** for bold and italic text* for italics.
 - **Code Blocks**: Use code blocks to present code snippets. In MyST, use triple backticks to create code blocks and specify the language for syntax highlighting.
 - **Admonitions**: Use MyST syntax to create admonitions highlighting notes, tips, warnings, and other important information. For example, use `:::{note}` or `:::{warning}` to create admonitions.
+
+##  Code Example
+Code examples can help readers understand how to use a feature or solve a problem. Here are some guidelines to follow:
+- **Clarity**: Ensure that your code is easy to understand. Include comments to explain complex or essential parts of the code.
+- **Syntax** Highlighting: Use syntax highlighting to make your code easier to read. In MyST, you can specify the language for syntax highlighting in code blocks (see [Myst Source code and APIs]).
+- **Error Handling**: If relevant, show how to handle errors and exceptions.
+- **Consistency**: Ensure your code examples follow the same coding style, including indentation and naming conventions.
+- **GitHub**: Reference the repo if snippets from another RC GitHub project is referred.
+
+##  Language and Terminology
+Clear and consistent language and terminology are crucial for effective communication. Here are some guidelines:
+- **Consistency**: Use terminology consistently. Don't use different terms for the same concept.
+- **Acronyms**: Always define acronyms the first time you use them.
+- **Jargon**: Avoid using jargon unless necessary. If you have to use it, define it first.
+- **Language**: Use either American or British English consistently throughout your documentation.
