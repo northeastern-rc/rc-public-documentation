@@ -1,6 +1,6 @@
 (accessing-ood)=
 
-# Using OOD's Interactive Apps
+# OOD Interactive Apps
 
 There are a number of applications that you can access and use through the OOD web portal. When you select an application and click launch, the scheduler (Slurm) allocates a compute node with a predetermined number of cores and amount of memory. The default time for running any of the applications is one hour. It is recommended that you keep the default. If you ask for more than one hour, you will need to wait for Slurm to allocate a resource that can run for your requested time, which could take a long time to be allocated, depending on how busy the cluster is.
 
@@ -33,21 +33,19 @@ Some apps are reserved for specific research groups and are not for general acce
 On the Jupyter Notebook Home tab, click **New**, then select the kernel you want to use, such as Python or R. Your selected kernel opens in a new tab on your browser. Click the **Running** tab to see a list of what Notebooks you already have running. If you already have a Notebook saved to your home directory, on the **Files** tab, click the name of the file to restart the Notebook in a new tab on your browser.
 :::
 
-## Jupyter Notebook \[Custom Anaconda Environment\]
+## Jupyter Notebook
 
-One of the interactive apps on OOD is Jupyter Notebook Custom Anaconda Environment. You need to do some initial setup in order to use this app effectively. This section will provide a walkthrough of setting up and using this app. The general workflow is to first create a virtual python environment; ensure that Jupyter Notebook is installed in your virtual environment; and then reference this environment when you start the Jupyter Notebook \[Custom Anaconda Environment\] OOD interactive app.
+One of the interactive apps on OOD is Jupyter Notebook. You need to do some initial setup in order to use this app effectively. This section will provide a walkthrough of setting up and using this app. The general workflow is to first create a virtual python environment; ensure that Jupyter Notebook is installed in your virtual environment; and then reference this environment when you start the Jupyter Notebook OOD interactive app.
 
-**Virtual python environment**
-
+### Virtual python environment
 1. First set up a virtual python environment. See {ref}`creating-python` for how to set up a virtual python environment on Discovery using the terminal.
 1. When your environment is ready, in the terminal type `source activate` to activate the base environment.
 1. Type `which conda` to get the full path of your environment. Make a note of the full path name.
 1. Type `source activate <yourenvironmentname>` where *\<yourenvironmentname>* is the name of your custom environment to activate the environment you just created.
 1. Type `conda install jupyterlab` to install jupyterlab in your environment.
 
-**Using OOD to launch Jupyter Notebook**
-
-1. Go to [https://www.ood.discovery.neu.edu/](https://www.ood.discovery.neu.edu/).
+###  Using OOD to launch Jupyter Notebook
+1. Go to [Open On Demand].
 1. Click **Interactive Apps**, then select **Jupyter Notebook \[Custom Anaconda Environment\]**.
 1. Select the compute node features for the job:
    - In the **Time** field, enter the number of hour(s) needed for the job. Minimum is one hour, maximum is 8 hours.
@@ -58,14 +56,14 @@ One of the interactive apps on OOD is Jupyter Notebook Custom Anaconda Environme
 1. Click **Launch**. This will put you in the queue for a compute node. Note that this might take a few minutes, depending on the resources you requested.
 1. When you have been allocated a compute node, click **Connect to Jupyter**.
 
-When your Juypter Notebook is running and open, type `conda list` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all
+When your Jupyter Notebook is running and open, type `conda list` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all
 of your available packages.
 
 ## Xfce Desktop (Beta)
 
 This Open OnDemand application is a containerized desktop running on the HPC cluster. It has access to these tools/programs:
 
-- Slurm (for running Slurm commands via the terminal in the desktop and interacting the compute nodes on the HPC)
+- Slurm (for running Slurm commands via the terminal in the desktop and interacting on compute nodes)
 - Module command (for loading and running HPC ready modules)
 - File explorer (able to traverse and view files that you have access to on the HPC)
 - Firefox web browser
@@ -73,5 +71,7 @@ This Open OnDemand application is a containerized desktop running on the HPC clu
 - Office Libre suite of applications (work processing, spreadsheets, presentation applications)
 
 :::{note}
-The desktop application is itself a Singularity container and has not been setup to run a Singularity container inside of it. If a user is trying to run a module or program that itself runs a container while inside of this application it will fail.
+The desktop application is itself a Singularity container and has not been set up to run a Singularity container inside of it. If a user is trying to run a module or program that itself runs a container while inside of this application it will fail.
 :::
+
+[Open On Demand]: https://www.ood.discovery.neu.edu/
