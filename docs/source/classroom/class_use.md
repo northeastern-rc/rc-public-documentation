@@ -79,5 +79,5 @@ You and/or your students can either submit a [Get Assistance with Research Compu
 [discovery cluster software request]: https://bit.ly/NURC-Software
 [get assistance with research computing]: https://bit.ly/NURC-Assistance
 [how to download a list of student email addresses from canvas]: https://service.northeastern.edu/tech?id=kb_article&sys_id=0f84a740db20901084ba5595ce961981
-[introduction to open ondemand (ood)]: ../08_using-ood/01_introduction.md
-[using module]: ../04_software/02_modules.md
+[introduction to open ondemand (ood)]: ../using-ood/introduction.md
+[using module]: ../software/modules.md

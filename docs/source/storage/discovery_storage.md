@@ -2,13 +2,9 @@
 
 # Data Storage Options
 
-The Research Computing (RC) team is responsible for the procurement and ongoing maintenance of several data storage options,
-including active and archive storage solutions. If you are affiliated with Northeastern, you can request one or more storage
-solutions to meet your storage needs. If you anticipate needing storage as part of a grant requirement, please
-[schedule a storage consultation with a Research Computing staff member] to understand what storage options would best meet your research needs.
+The Research Computing (RC) team is responsible for the procurement and ongoing maintenance of several data storage options, including active and archive storage solutions. If you are affiliated with Northeastern, you can request one or more storage solutions to meet your storage needs. If you anticipate needing storage as part of a grant requirement, please [schedule a storage consultation] with a Research Computing staff member to understand what storage options would best meet your research needs.
 
-::::::{tab-set}
-:::::{tab-item} Active Storage
+## Active Storage
 
 There are two main storage systems connected to Northeastern's HPC cluster: `/home` and `/scratch`; these options have specific quotas and limitations. The list below details the storage options available to you on the HPC cluster by having an account. Every individual with an account has both a `/home` and `/scratch` directory. While research groups can request additional storage on the `/work` storage system, `/work` storage is not currently provisioned to individuals.
 
@@ -31,27 +27,26 @@ The `/scratch` space is only for temporary storage; this storage is not backed u
 
 : - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
 
-:::{note}
+:::{attention}
 The `/research` storage tier is no longer provided. Please contact Research Computing if you are a former user of `/research` and have questions or issues related to `/research` by [submitting a ticket]. Other storage options include `/work`, [Sharepoint], and [OneDrive].
 :::
-:::::
-:::::{tab-item} Archival Storage
+
+##  Archival Storage
+
+:::{important}
+If you are not connected to the campus internet, you must be connected to the university's VPN (GlobalProtect) before you can access the `/nese` system. You can find detailed information about downloading and using the GlobalProtect VPN in the [FAQ: VPN and remote access].
+:::
 
 **NAME:** `/nese`
 : - **DESCRIPTION:** This is archival, non-performant storage intended for researchers who need to have a long-term storage option for their data.
 
 : - **QUOTA:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
 
-:::{important}
-If you are not connected to the campus internet, you must be connected to the university's VPN (GlobalProtect) before you can access the `/nese` system. You can find detailed information about downloading and using the GlobalProtect VPN in the [FAQ: VPN and remote access].
-:::
-:::::
-::::::
 
 [FAQ: VPN and remote access]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013983>
 [New Storage Space request]: https://bit.ly/NURC-NewStorage
 [OneDrive]: https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012764
 [Policy page]: https://rc.northeastern.edu/policy/
-[schedule a storage consultation with a Research Computing staff member]: https://rc.northeastern.edu/support/consulting
+[schedule a storage consultation]: https://rc.northeastern.edu/support/consulting
 [Sharepoint]: https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012695
 [submitting a ticket]: https://bit.ly/NURC-Assistance

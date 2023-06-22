@@ -1,6 +1,6 @@
 (file-explorer)=
 
-# Using OOD's File Explorer
+# OOD File Explorer
 
 When working with the resources in OOD, your files are stored in your home directory
 on the storage space on the Discovery cluster. Similar to any file navigation system,
@@ -25,5 +25,5 @@ directory regularly, and remove any files you do not need to ensure you do not r
 From the **Files > Home Directory** view, the **Edit** button will not launch your
 .ipynb file in a Jupyter Notebook. It will open the file in a text editor. You have
 to be in Jupyter Notebook in order to launch a .ipynb file from your /home directory.
-See [Using OOD's Interactive Apps](./03_interactiveapps.md) for how to access a Jupyter Notebook through OOD.
+See [Using OOD's Interactive Apps](./interactiveapps.md) for how to access a Jupyter Notebook through OOD.
 :::
