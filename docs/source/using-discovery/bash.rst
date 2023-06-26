@@ -16,7 +16,7 @@ Overview
 =========
 Bash (Bourne Again SHell) is a popular shell and command-line interface. Specifically, a shell is an interface between the user and the underlying operating system, allowing users to interact with the system and perform tasks. Bash provides a range of features for running commands, managing files, navigating systems, and performing other tasks.
 
-Bash commands perform various tasks within the shell environment. Commands span from basic functionalities (e.g., ``ls``, ``cd``, ``cp``, ``mv``, and ``rm``) to more advanced ones(e.g., ``grep`` and ``awk``). We cover these commands and more in this tutorial. Bash can also be used in scripts, allowing users to automate tasks and perform more complex operations via loops, conditional logic, and defining functions, which we cover at the end of this page.
+Bash commands perform various tasks within the shell environment. Commands span from basic functionalities (e.g., ``ls``, ``cd``, ``cp``, ``mv``, and ``rm``) to more advanced ones (e.g., ``grep`` and ``awk``). We cover these commands and more in this tutorial. Bash can also be used in scripts, allowing users to automate tasks and perform more complex operations via loops, conditional logic, and defining functions, which we cover at the end of this page.
 
 In summary, shell commands perform various tasks with the terminal.
 
@@ -31,13 +31,13 @@ In summary, shell commands perform various tasks with the terminal.
 
 Terminal
 =========
-The terminal - aka the command line interface (CLI) - is a text-based interface for interacting with an operating system. It is a way for users to interact with the system and perform tasks by typing commands and receiving text-based output.
+The terminal - also known as the command line interface (CLI) - is a text-based interface for interacting with an operating system. It is a way for users to interact with the system and perform tasks by typing commands to perform actions.
 
 In contrast to graphical user interfaces (GUIs), the terminal provides a more direct and powerful way to interact with the system. Tasks that may require several steps in a GUI can often be accomplished much more quickly and efficiently in the terminal.
 
 Whether you are a beginner or an advanced user, the terminal provides a powerful and versatile interface for interacting with your operating system. With some theory and practice, you can use the terminal to accomplish a wide range of tasks and take control of your system in new and powerful ways.
 
-There are various terminal options (i.e., flavors) offered for different operating systems. `Power Shell`_ is available for Windows, Linux, and MacOS.
+There are various terminal options (i.e., flavors) offered for different operating systems. For example, `Power Shell`_ is available for Windows, Linux, and MacOS.
 
 Let us explore options and specifics for each operating system; Mac, Linux, and Windows terminals.
 
@@ -47,7 +47,7 @@ Mac OS comes with a default terminal program, but there are more advanced termin
 
 To launch the terminal:
 
-#. Press Command(⌘) + Space on your Mac keyboard (alternatively, press F4)
+#. Press Command(⌘) + Space on your Mac keyboard (alternatively, press F4 or by going to "Macintosh HD/Applications/Utilities" and double clicking "Terminal")
 #. Type in “Terminal”
 #. When you see Terminal in the Spotlight search list, click it to open the app.
 
@@ -63,7 +63,7 @@ Linux
 ------
 Linux also comes with a default terminal program, but there are more advanced terminals available; `Terminator`_ is a popular choice.
 
-To download Terminator, open a terminal (``Ctrl+Alt+T`` is the shortcut to do so). Next, execute the following::
+To download Terminator, open a terminal (``Ctrl+Alt+T`` is the shortcut to do so). Next, execute the following (The following commands are for Debian based systems)::
 
    sudo add-apt-repository ppa:gnome-terminator
    sudo apt-get update
@@ -79,11 +79,11 @@ Bash Manuals
 ============
 The man command is used in the terminal to display manual pages for various tools and utilities. A manual page, or "man page," is a detailed documentation for a specific command or utility that provides information about its usage, options, and examples.
 
-To use the man command, simply type man followed by the name of the command or utility for which you want to view the manual page. For example, to view the manual page for the ls command, you would type the following::
+To use the man command, simply type man followed by the name of the command or utility for which you want to view the manual page. For example, to view the manual page for the "ls" command, you would type the following::
   
   man ls
 
-The manual page will be displayed in a pager program such as less, which allows you to scroll through the text and search for specific information.
+The manual page will be displayed in a pager program such as "less", which allows you to scroll through the text and search for specific information.
 
 The man command is a valuable tool for learning about new commands and utilities, and it is an essential resource for understanding how to use the terminal effectively. Whether you are a beginner or an advanced user, the man command provides the information you need to get the most out of your tools and utilities.
 
@@ -159,7 +159,7 @@ Reference: `ssh(1) manual page`_
    file2.txt directory1 directory2
 
 .. note:: 
-  To remove a directory, use ``rmdir`` if the folder is empty. Otherwise, recursively delete the directory and all of its contents via ``rm -r <FOLDER_PATH>``.
+  To remove a directory, use ``rmdir`` if the folder is empty. Otherwise, recursively delete the directory and all of its contents via ``rm -r <FOLDER_PATH>``. Remember, this permanently removes the file/directory.
 
 ``cp`` - Copy a file or directory.
 
@@ -213,6 +213,8 @@ Reference: `ssh(1) manual page`_
 
   sort file3.txt | uniq
   This is the contents of file3.txt
+
+The "|" is a way to re-direct the ouput of a process (sort) into another process (uniq)
 
 ``wc`` - Count the number of lines, words, and characters in a file or input.
 
