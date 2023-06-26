@@ -497,7 +497,7 @@ header-rows: 0
 :::
 
 
-:::{list-table}
+:::{list-table} State Table
 ---
 widths: 20 100
 header-rows: 1
