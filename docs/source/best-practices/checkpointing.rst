@@ -8,7 +8,7 @@ The complexity of HPC systems may introduce unpredictable behaviors in hardware 
 The Checkpointing technique
 ================================
 
-Checkpointing is a fault tolerance technique designed to overcome the “fail-stop” failure type (interruption of the execution of a job). It is based on the BER technique (Backward error recovery or Rollback-recovery algorithm):
+Checkpointing is a fault tolerance technique based on the Backward error recovery (BER) technique and is designed to overcome the “fail-stop” failure type (interruption of the execution of a job)
 
  * Use data redundancy - create checkpoint files saving all of the necessary calculation state data. Generally, we checkpoint files at constant time intervals during the run.
  * If a failure occurs - start from an error-free state, check for consistency, and restore the algorithm to the previous error-free state.
@@ -26,10 +26,10 @@ Checkpointing is a fault tolerance technique designed to overcome the “fail-st
 Different levels of Checkpointing in workflow:
 ==============================================
 
-  * User-level checkpointing - suitable if you develop your code or have sufficient knowledge of the application code to integrate checkpointing techniques. We recommend this approach for some Discovery users.
   * Application-level checkpointing - recommended for most Discovery users. Utilize the checkpointing tool that is already available in your software application. For example, most software designed for HPC has a checkpointing option, and information on proper usage is often available in the software user manual.
-  * System-level checkpointing - done on the system side, where we save the state of the entire process. This option is less efficient than User-level or Application-level checkpointing as it introduces a lot of redundancy.
-  * Model-level checkpointing - training models are often the intent of the user doing machine learning on Discovery.
+  * User-level checkpointing - suitable approach if you develop your code or possess sufficient knowledge of the application code to integrate checkpointing techniques effectively. We recommend this approach for some Discovery users with advanced proficiency and familiarity with checkpointing mechanisms.
+  * System-level checkpointing - done on the system side, where the user saves the state of the entire process. This option is less efficient than User-level or Application-level checkpointing as it introduces a lot of redundancy.
+  * Model-level checkpointing - suitable approach for saving model's internal state (its weights, current learning rate, etc.) so that the  framework can resume the training from this point whenever desired. This is often the intent of the user doing machine learning on Discovery.
 
 Which checkpointing method to use?
 ----------------------------------
@@ -49,15 +49,15 @@ Implementing checkpointing can be achieved by:
 
 .. note::
 Note:
-   To overcome partition time limits, replace your single long job with multiple shorter jobs. Then, using job arrays, set each job to run one after the other. Each job will write a checkpoint file if implemented. For example, the following job in line will be the latest checkpoint file to continue from the latest state of the calculation.
+   To overcome partition time limits, replace your single long job with multiple shorter jobs. Then, using job arrays, set each job to run one after the other. Each job will write a checkpoint file if checkpointing is implemented. The following job in line will be the latest checkpoint file to continue from the latest state of the calculation.
 
 Application-level checkpointing
 ===============================
 
-GROMACS checkpointing example
------------------------------
+Checkpointing using GROMACS
+---------------------------
 
-This example demonstrates how to implement a longer `GROMACS <https://www.gromacs.org/>`_ job of 120 hours by using multiple shorter jobs on the **short** partition. We use Slurm job arrays and the GROMACS built-in checkpointing option (read more `here <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_) to implement checkpointing.
+The following example demonstrates how to break a long 120-hour `GROMACS <https://www.gromacs.org/>`_  job into multiple shorter jobs on the **short** partition. We use Slurm job arrays and the GROMACS built-in checkpointing option (read more `here <https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html>`_) to implement checkpointing.
 
 The following script **submit_mdrun_array.bash** creates a Slurm job array of 10 individual array jobs::
 
@@ -76,7 +76,7 @@ The following script **submit_mdrun_array.bash** creates a Slurm job array of 10
  module load gcc/7.3.0
  module load openmpi/4.0.5-skylake-gcc7.3
  module load gromacs/2020.3-gpu-mpi
- source /shared/centos7/gromacs/2020.3-gcc7.3/bin/GMXRC.bash
+ source /shared/centos7/gromacs/2020.3-gcc7.3/bin/GMXRC.bashi
 
  srun --mpi=pmi2 -n $SLURM_NTASKS gmx_mpi mdrun -ntomp 1 -s myrun.tpr -v -dlb yes -cpi state
 
@@ -89,15 +89,15 @@ To submit this array job to the scheduler, use the following command::
 Checkpointing using DMTCP
 --------------------------
 
-`DMTCP <https://dmtcp.sourceforge.io/>`_ (Distributed MultiThreaded checkpointing) is a tool that lets you checkpoint without the need to change your code. It Works with most Linux applications such as Python, Matlab, R, GUI, MPI, etc.
+`DMTCP <https://dmtcp.sourceforge.io/>`_ (Distributed MultiThreaded checkpointing) is available on the cluster, enabling checkpointing without the need to modify your code, and it works with most Linux applications (e.g., Python, Matlab, R, GUI, and MPI).
 The program runs in the background of your program without significant performance loss and saves the process states into checkpoint files. DMTCP is available on the cluster ::
 
  module avail dmtcp
  module show dmtcp
  module load dmtcp/2.6.0
 
-As DMTCP runs in the background, it requires some changes to your Shell script. For examples of how to checkpoint with DMTCP visit `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_3>`_.
-The example demonstrates how to use DMTCP with a simple C++ program (scripts modified from `RSE-Cambridge <https://github.com/RSE-Cambridge/dmtcp-tests>`_).
+Because DMTCP runs in the background, changes to your shell script are required. For examples of how to checkpoint with DMTCP visit `here <https://github.com/northeastern-rc/training-checkpointing/tree/main/Exercise_3>`_.
+The examples demonstrates how to use DMTCP with a simple C++ program (scripts modified from `RSE-Cambridge <https://github.com/RSE-Cambridge/dmtcp-tests>`_).
 
 Tips and Tricks
 ---------------------
@@ -108,21 +108,16 @@ What data to save?
  * Delete improper checkpoints - keep only the most recent checkpoint file
 
 How frequently should we checkpoint?
- * Too often – will slow down your calculation, maybe I/O heavy and memory-limited
- * Seldom – leads to large/long rollback times
- * Consider how long it takes to run a checkpoint and restart your calculation
- * In most cases, a rate of every 10-15 minutes is ok
+Consider the duration required for checkpointing and restarting your calculation. In most cases, a checkpointing interval of every 10-15 minutes is adequate. It is important to keep in mind that if you checkpoint too frequently, it can slow down your calculation. Conversely, if you checkpoint too infrequently, you run the risk of encountering lengthy rollback times.
 
 .. _ML Model-level:
 
 ML Model-level checkpointing
 ============================
 
-Checkpointing is a technique used in training machine learning models to save the model's state during the training process periodically. Doing this allows the training process to be resumed from the saved checkpoint if the training is interrupted or terminated so that the progress made so far is not lost. The saved state typically includes the model's parameters, optimizer state, and training information, such as the epoch number and loss value (or the accuracy).
+Model-level checkpointing is a technique employed to periodically save the state of a machine learning (ML) model during its training. This checkpointing enables the training process to be resumed from the saved checkpoint in case of interruptions or premature termination. The saved state typically includes the model’s parameters, optimizer state, and essential training information such as the epoch number and loss value (or the accuracy). The following instructions are helpful for long-running training jobs, as they enable faster recovery from failures and better tracking of the training process.
 
-The following instructions are helpful for long-running training jobs, as they enable faster recovery from failures and better tracking of the training process.
-
-Why Checkpointing is Important in Deep Learning?
+Why checkpointing is important in Deep Learning?
 ------------------------------------------------------
 
 Checkpointing is crucial in deep learning, as the training process can be time-consuming and require significant computational resources. In addition, the training process may sometimes get interrupted due to hardware or software issues. Checkpointing provides a solution to this problem, as it allows saving the current state of the model, which can then be resumed from where it was stopped.
@@ -186,7 +181,7 @@ Save only the model's State_dict
 """"""""""""""""""""""""""""""""
 Save only the model's state_dict and the optimizer's state, as this allows us to save only the
 necessary information needed to resume training. In addition, this reduces the size of the checkpoint file and makes it
-easier to load the model.
+easier to load the model. Avoid saving unnecessary information in the checkpoint file, such as irrelevant metadata or tensors that can bereconstructed during training. This will reduce the size of the checkpoint file and make it easier to manage.
 
 Save regularly
 """"""""""""""""""""
@@ -202,11 +197,6 @@ Use the latest versions of libraries
 Using the latest version of PyTorch and other relevant libraries is vital; changes in these libraries may cause
 compatibility issues with older checkpoints. With these best practices, you can ensure that your PyTorch models are
 saved efficiently and effectively and that your progress is not lost in case of a crash or interruption.
-
-Avoid saving unnecessary information
-""""""""""""""""""""""""""""""""""""""""
-Avoid saving unnecessary information in the checkpoint file, such as irrelevant metadata or tensors that can be
-reconstructed during training. This will reduce the size of the checkpoint file and make it easier to manage.
 
 Naming conventions
 """"""""""""""""""""
