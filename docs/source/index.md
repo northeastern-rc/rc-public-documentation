@@ -141,7 +141,6 @@ using-discovery/globus
 :caption: 🗄 Understanding storage
 
 storage/discovery_storage
-storage/general_storage
 ```
 
 ```{toctree}
@@ -154,7 +153,7 @@ best-practices/homequota
 
 ```{toctree}
 :hidden:
-:caption: 📲 Using Open OnDemand (OOD)
+:caption: 📲 Open OnDemand (OOD)
 
 using-ood/introduction
 using-ood/fileexplore
