@@ -12,13 +12,10 @@ If you are transferring data from different directories on the HPC, you need to 
 The `/scratch` space is for temporary file storage only. It is not backed up. If you have directed your output files to `/scratch`, you should transfer your data from `/scratch` to another location as soon as possible. See {ref}`discovery-storage` for more information.
 :::
 
-## Using Open OnDemand's (OOD) File Explorer
+## Transfer via Terminal
 
-You can use OOD's File Explorer application to transfer data from different directories on the HPC and also to transfer data to and from your local machine to the HPC. For more information to complete this please see {ref}`file-explorer`.
-
-## Using the Terminal
-
-### Using SCP
+:::::{tab-set}
+::::{tab-item} SCP
 
 You can use `scp` to transfer files/directories to and from your local machine and the HPC. As an example, you can use this command to transfer a file to your `/scratch` space on the HPC from your local machine:
 
@@ -36,8 +33,8 @@ scp -r <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data .
 
 where `-r` flag is for the recurssive transfer because it is a directory. Note, this command is run on your local machine.
 
-### Using Rsync
-
+::::
+::::{tab-item} Rsync
 You can use the `rsync` command to transfer data to and from the HPC and local machine. You can also use `rsync` to transfer data from different directories on the cluster.
 
 The syntex of `rsync` is
@@ -69,7 +66,8 @@ srun --partition=short --nodes=1 --ntasks=1 --time=01:05:00 --constraint=ib --pt
 rsync -av /scratch/<username>/source_folder /home/<username>/destination_folder
 :::
 
-### Using sbatch for data transfer
+::::
+::::{tab-item} sbatch
 
 You can use an sbatch job to complete data transfers by submitting the job to the HPC queue. An example of using `rsync` through an sbatch script is as follows:
 
@@ -90,7 +88,8 @@ rsync -av /scratch/<username>/source_folder /home/<username>/destination_folder
 
 where we are transfering the data from `source_folder` to the `destination_folder`.
 
-## Using SSHFS
+::::
+::::{tab-item} SSHFS
 
 If you want to use `sshfs`, you will need to use it with the dedicated transfer node `xfer.discovery.neu.edu`. It will not work on the login or compute nodes. On a Mac, you will also have to install macFUSE and sshfs (please refer to [macFUSE]) to use the `sshfs` command.
 
@@ -107,8 +106,17 @@ sshfs <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data ~/mount_po
 :::
 
 where you can interact with the directory from your GUI or using the terminal to perform tasks on it.
+::::
+:::::
 
-## Using MobaXterm
+## Transfer via GUI Application
+
+:::::{tab-set}
+::::{tab-item} OOD's File Explorer
+
+You can use OOD's File Explorer application to transfer data from different directories on the HPC and also to transfer data to and from your local machine to the HPC. For more information to complete this please see {ref}`file-explorer`.
+::::
+::::{tab-item} MobaXterm
 
 You can use MobaXterm to transfer data to and from the HPC.
 
@@ -121,7 +129,10 @@ You can use MobaXterm to transfer data to and from the HPC.
 
 You will now be connected to the transfer node and can transfer files through MobaXterm. Please refer to [MobaXterm] for further information.
 
-## Using FileZilla
+
+::::
+::::{tab-item} FileZilla
+You can use Firefox to transfer data to and from the HPC.
 
 1. Open FileZilla.
 1. In the **Host** field, type `sftp://xfer.discovery.neu.edu`
@@ -130,6 +141,8 @@ You will now be connected to the transfer node and can transfer files through Mo
 1. In the **Port** field, type 22.
 
 You will now be connected to the transfer node and can transfer files through FileZilla. Please refer to [FileZilla] for further information.
+::::
+:::::
 
 [FileZilla]: https://filezilla-project.org/
 [MobaXterm]: https://mobaxterm.mobatek.net/
