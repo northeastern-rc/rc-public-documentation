@@ -1,2 +1,9 @@
-sphinx-markdown-tables==0.0.16
-sphinx-rtd-theme==1.0.0
+jupyterlab-myst
+myst-nb
+myst-parser
+sphinx-book-theme
+sphinx-copybutton
+sphinx-tabs
+sphinx-togglebutton
+sphinx_design
+sphinxcontrib-bibtex
