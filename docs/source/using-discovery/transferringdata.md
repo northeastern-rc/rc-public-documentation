@@ -118,7 +118,7 @@ You can use OOD's File Explorer application to transfer data from different dire
 ::::
 ::::{tab-item} MobaXterm
 
-You can use MobaXterm to transfer data to and from the HPC.
+You can use MobaXterm to transfer data to and from the HPC. Please checkout [MobaXterm] to download MobaXterm.
 
 1. Open MobaXterm.
 1. Click **Session**, then select **SFTP**.
@@ -132,7 +132,7 @@ You will now be connected to the transfer node and can transfer files through Mo
 
 ::::
 ::::{tab-item} FileZilla
-You can use Firefox to transfer data to and from the HPC.
+You can use FileZilla to transfer data to and from the HPC. Please checkout [FileZilla] to download MobaXterm.
 
 1. Open FileZilla.
 1. In the **Host** field, type `sftp://xfer.discovery.neu.edu`
