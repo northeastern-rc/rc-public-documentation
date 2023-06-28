@@ -146,6 +146,9 @@ Consistent formatting makes your documentation look professional and easy to rea
 List [admonitions] types (i.e., callouts) available.
 :::
 
+### Tabs
+[MyST Tabs] are a great way to present material (see {ref} GPUs for Deep Learning). It is essential for these to be used properly: situations where the same task or topic spans multiple setups or interfaces. For instance, installing deep learning to run on the GPUs is the task in the aforementioned example, where the tab chose is either PyTorch or Tensorflow.
+
 ##  Code Example
 Code examples can help readers understand how to use a feature or solve a problem. Here are some guidelines to follow:
 - **Clarity**: Ensure that your code is easy to understand. Include comments to explain complex or essential parts of the code.
@@ -259,3 +262,4 @@ Remember, good documentation is an ongoing effort. Always strive to improve and 
 [MyST Source code and APIs]: https://myst-parser.readthedocs.io/en/latest/syntax/code_and_apis.html
 [MyST How-To Guide]: https://myst-parser.readthedocs.io/en/v0.13.7/using/howto.html
 [MyST Example Pages]: https://myst-parser.readthedocs.io/en/v0.13.7/examples/index.html
+[MyST Tabs]: https://mystmd.org/guide/dropdowns-cards-and-tabs#tabs
