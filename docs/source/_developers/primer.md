@@ -28,7 +28,7 @@ As specified below, using colons (i.e., `:::` in place of the typical hyphens wh
 ##  Writing Style
 The writing style in documentation is critical for ensuring consistency and understanding. Here are some best practices:
 
-**Clarity**: Be as clear and straightforward as possible. Avoid ambiguity. Documentation is not a place for complex sentences and unusual words.
+**Clarity**: Be as clear and straightforward as possible. Avoid ambiguity, along with complex sentences and unusual words. **KEEP IT SIMPLE.**
 
 :::{list-table}
 ---
@@ -87,7 +87,7 @@ align: left
 - If you need to explain complex concepts, break them into smaller, more manageable sections to help your reader understand your message.
 
 ##  Formatting
-MyST allows for markdown to be used for our Spinx project (i.e., RTD).
+MyST allows for markdown to be used for our Sphinx project (i.e., [RTD]).
 
 :::{admonition} Bookmark and Review-worth Reference
 Check out this [Markdown cheatsheet].
@@ -96,10 +96,10 @@ Check out this [Markdown cheatsheet].
 
 Commonly used elements follow the [MyST-Typography].
 
-Directives allow us to insert and format various elements (e.g., images, callouts, etc.). We use `colon_fence` to replace the typical hyphens Learn more about  [Colon Fence Directives].
+Directives allow us to insert and format various elements (e.g., images, callouts, etc.). We use `colon_fence` (i.e., [Colon Fence Directives]) to replace the typical hyphens.
 
 :::::{important}
-We use the `colon_fence` extension the markdown rendered by MyST parses three colons (i.e., *:*) to open and close blocks. ([about colon_fence]).
+We use the `colon_fence` extension rendered by MyST parses three colons (i.e., *:*) to open and close blocks. ([about colon_fence]).
 
 ::::{note}
 [MyST-Parser Documentation] includes several constructs we can use to enhance our pages. **Use elements with purpose, whether to call attention, reference related content, or warn.
@@ -137,9 +137,9 @@ These nested admonitions were done, mostly, to demonstrate how it can be done. T
 Consistent formatting makes your documentation look professional and easy to read. Use consistent formatting for headings, lists, tables, and other elements, and adequately nest subheadings and lists. Here are some guidelines:
 
 - **Headings**: Use headings and subheadings to structure your content. In MyST, use # for level 1 headings, ## for level 2, and so on.
-- **Lists:** Use bulleted lists for unordered items and numbered lists for ordered items. In MyST, use or  for unordered lists and 1. for ordered lists.
+- **Lists:** Use bulleted lists for unordered items and numbered lists for ordered items. In MyST, use bullets `-` for unordered lists and numbers `1.` for ordered lists.
 - **Bold and Italics**: Use bold to highlight important concepts and italics to indicate new terms. In MyST, use bold text** for bold and italic text* for italics.
-- **Code Blocks**: Use code blocks to present code snippets. In MyST, use triple backticks to create code blocks and specify the language for syntax highlighting.
+- **Code Blocks**: Use code blocks to present code snippets. In MyST, use triple colons `:::` to create code blocks and specify the language for syntax highlighting.
 - **Admonitions**: Use MyST syntax to create admonitions highlighting notes, tips, warnings, and other important information. For example, use `:::{note}` or `:::{warning}` to create admonitions.
 
 :::{seealso}
@@ -197,7 +197,6 @@ Links and references are crucial for helping users navigate your content and pro
 - Use cross-references to link to other sections within the documentation.
 - Descriptive Links: Avoid using phrases like "click here" for hyperlink text. Instead, use descriptive text that informs the reader about the content they'll find when they follow the link.
 
-
 :::{list-table}
 ---
 header-rows: 1
@@ -210,8 +209,6 @@ align: left
   - Read our comprehensive installation guide.
 :::
 
-- Check Links: Regularly verify that all external links in your documentation are valid and update any changes.
-- Cross-References: Use cross-references to link to other sections of your documentation. This can help readers find related content quickly.
 - Attribution: If you're citing external sources or using someone else's work (e.g., images, code snippets), attribute the source correctly.
 
 ##  Images and Diagrams
@@ -237,14 +234,14 @@ There are many [admonitions] to choose from. Use your best judgement, look at ot
 - Follow the MyST syntax for advanced features such as directives and roles.
 
 ##  Review Process
-Finally, ensure your documentation undergoes a thorough review process before it's published. We do this through PRs on GitHub (see {ref}`git-primer`).
+Finally, ensure your documentation undergoes a thorough review process before it's published. We do this through PRs on GitHub.
 
 - **Peer Review**: Encourage team members to review each other's work. This can help catch errors, ambiguities, and inconsistencies the original writer may have missed.
 - **Proofreading**: Check for spelling, grammar, and punctuation errors. Tools like Grammarly or language-tool can help with this.
 
 
 :::{tip}
-When add a substantial amount of content, whether a new page or several sections, consider using Notion to draft. Then, update the RTD pages (i.e., this project) for a technical review. This way, development can be more interactive, time is not wasted adjusting formatting and other syntax, and the history is much simpler (and more promising) than that of our own managed via Git.
+When adding a substantial amount of content, whether a new page or several sections, consider using Notion to draft. Then, update the RTD pages (i.e., this project) for a technical review. This way, development can be more interactive, time is not wasted adjusting formatting and other syntax, and the history is much simpler (and more promising) than that of our own managed via Git.
 :::
 
 - **Technical Accuracy**: Ensure all code snippets, commands, and technical information are accurate and up-to-date.
@@ -263,7 +260,6 @@ Remember, good documentation is an ongoing effort. Always strive to improve and 
 [about colon_fence]: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html\#code-fences-using-colons
 [Markdown cheatsheet]: https://www.markdownguide.org/basic-syntax/
 [admonitions]: https://jupyterbook.org/en/stable/reference/cheatsheet.html\#admonitions
-[RCs Git Primer]: gitprimer.md
 [Colon Fence Directives]: https://mystmd.org/guide/syntax-overview#example-fence
 [RTD]: https://readthedocs.com/
 [index.md]: https://github.com/northeastern-rc/rc-public-documentation/blob/master/docs/source/index.md
