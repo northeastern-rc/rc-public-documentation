@@ -96,7 +96,7 @@ Check out this [Markdown cheatsheet].
 
 Commonly used elements follow the [MyST-Typography].
 
-Directives allow us to insert and format various elements (e.g., images, callouts, etc.). We use `colon_fence` to replace the typical hyphens Learn more about  [Colon Fence].
+Directives allow us to insert and format various elements (e.g., images, callouts, etc.). We use `colon_fence` to replace the typical hyphens Learn more about  [Colon Fence Directives].
 
 :::::{important}
 We use the `colon_fence` extension the markdown rendered by MyST parses three colons (i.e., *:*) to open and close blocks. ([about colon_fence]).
@@ -157,6 +157,14 @@ Code examples can help readers understand how to use a feature or solve a proble
 - **Consistency**: Ensure your code examples follow the same coding style, including indentation and naming conventions.
 - **GitHub**: Reference the repo if snippets from another RC GitHub project is referred.
 
+::::{note}
+Commented code, along with well-written self-documenting code, is a good way to avoid being too verbose. In other words, consider the purpose of the steps being presented, and if the purpose is using OpenMPI, as an example, there is no need to have a single code block for every step (e.g., put the loading of modules, creating of conda, changing directories, etc., in the same block). If you believe it is useful to add comments or provide a `{seealso}` to point to a page on Conda or modules, go ahead, but let's not repeat information and saturate our readers: **BE COMPLETE, YET CONCISE, WITH CODE.**
+
+:::{tip}
+Long snippets of code tend to be easier to read when presented on several lines, with new-lines added strategically. For instance, if command-line, use `\` to separate key-value when there are many arguments passed.
+:::
+::::
+
 ##  Language and Terminology
 Clear and consistent language and terminology are crucial for effective communication. Here are some guidelines:
 - **Consistency**: Use terminology consistently. Don't use different terms for the same concept.
@@ -167,7 +175,7 @@ Clear and consistent language and terminology are crucial for effective communic
 ## Documentation Structure
 - Organize documentation into folders that represent sections, with each file as an item of its section.
 - Use a clear hierarchy for headings and subheadings.
-   - A single level-one heading (i.e., `# HEADING`) at the top of the page: `HEADING` will appear in the table of contents.
+  - A single level-one heading (i.e., `# HEADING`) at the top of the page: `HEADING` will appear in the table of contents.
    - Add file path to [index.md] as follows:
 :::{code-block}
 ```{toctree}
