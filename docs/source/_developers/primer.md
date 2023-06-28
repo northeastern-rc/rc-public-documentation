@@ -6,7 +6,24 @@ Remember that this style guide is a reference for team members working on docume
 
 This style guide outlines the best practices and conventions for creating clear, consistent, high-quality documentation for our project. By following these guidelines, we can ensure a cohesive writing style and tone across all documentation.
 
-This style guide provides guidelines for writing clear, concise, and consistent documentation. It covers language, tone, formatting, and other aspects of documentation.
+The purpose of the guide is to provide guidelines for writing clear, concise, and consistent documentation. It covers language, tone, formatting, and other aspects of documentation.
+
+::::{seealso}
+Our RTD is sphinx-based using a superset of Markdown called MyST.
+
+The following are RTD-worthy bookmarks:
+- [MyST Syntax]
+- [MyST-Parser Documentation]
+- [MyST-Typography]
+- [Markdown cheatsheet]
+- [MyST How-To Guide]
+- [MyST Example Pages]
+
+:::{important}
+As specified below, using colons (i.e., `:::` in place of the typical hyphens when opening and closing blocks.
+:::
+
+::::
 
 ##  Writing Style
 The writing style in documentation is critical for ensuring consistency and understanding. Here are some best practices:
@@ -14,10 +31,11 @@ The writing style in documentation is critical for ensuring consistency and unde
 **Clarity**: Be as clear and straightforward as possible. Avoid ambiguity. Documentation is not a place for complex sentences and unusual words.
 
 :::{list-table}
-:header-rows: 1
-:widths: 50 50
-:align: left
-
+---
+header-rows: 1
+widths: 50 50
+align: left
+---
 * - ❌ Do Not
   - ✅ Do
 * - The initiation of the replication process...
@@ -27,10 +45,11 @@ The writing style in documentation is critical for ensuring consistency and unde
 **Conciseness**: Keep sentences and paragraphs short. This makes text easier to read and understand.
 
 :::{list-table}
-:header-rows: 1
-:widths: 50 50
-:align: left
-
+---
+header-rows: 1
+widths: 50 50
+align: left
+---
 * - ❌ Do Not
   - ✅ Do
 * - Once the process has been completed successfully, the next step is...
@@ -40,10 +59,11 @@ The writing style in documentation is critical for ensuring consistency and unde
 **Active Voice**: Use the active voice whenever possible as it is more straightforward and engaging.
 
 :::{list-table}
-:header-rows: 1
-:widths: 50 50
-:align: left
-
+---
+header-rows: 1
+widths: 50 50
+align: left
+---
 * - ❌ Do Not
   - ✅ Do
 * - The command can be executed by the user.
@@ -53,18 +73,17 @@ The writing style in documentation is critical for ensuring consistency and unde
 **Address the Reader**: Use the second person ("you") to address the reader directly.
 
 :::{list-table}
-:header-rows: 1
-:widths: 50 50
-:align: left
-
+---
+header-rows: 1
+widths: 50 50
+align: left
+---
 * - ❌ Do Not
   - ✅ Do
 * - One can see the results by... <br>
   - You can see the results by...<br>
 :::
 
-- Avoid using jargon and slang, as they can be confusing.
-- Keep your writing easy to read by using short sentences and paragraphs.
 - If you need to explain complex concepts, break them into smaller, more manageable sections to help your reader understand your message.
 
 ##  Formatting
@@ -80,10 +99,10 @@ Commonly used elements follow the [MyST-Typography].
 Directives allow us to insert and format various elements (e.g., images, callouts, etc.). We use `colon_fence` to replace the typical hyphens Learn more about  [Colon Fence].
 
 :::::{important}
-We use the `colon_fence` extension the markdown rendered by Myst parses three colons (i.e., *:*) to open and close blocks. ([about colon_fence]).
+We use the `colon_fence` extension the markdown rendered by MyST parses three colons (i.e., *:*) to open and close blocks. ([about colon_fence]).
 
 ::::{note}
-[Myst-Parser Documentation] includes several constructs we can use to enhance our pages. **Use elements with purpose, whether to call attention, reference related content, or warn.
+[MyST-Parser Documentation] includes several constructs we can use to enhance our pages. **Use elements with purpose, whether to call attention, reference related content, or warn.
 ::::
 
 Nesting blocks, along with the ability set parameters inline.
@@ -123,10 +142,14 @@ Consistent formatting makes your documentation look professional and easy to rea
 - **Code Blocks**: Use code blocks to present code snippets. In MyST, use triple backticks to create code blocks and specify the language for syntax highlighting.
 - **Admonitions**: Use MyST syntax to create admonitions highlighting notes, tips, warnings, and other important information. For example, use `:::{note}` or `:::{warning}` to create admonitions.
 
+:::{seealso}
+List [admonitions] types (i.e., callouts) available.
+:::
+
 ##  Code Example
 Code examples can help readers understand how to use a feature or solve a problem. Here are some guidelines to follow:
 - **Clarity**: Ensure that your code is easy to understand. Include comments to explain complex or essential parts of the code.
-- **Syntax** Highlighting: Use syntax highlighting to make your code easier to read. In MyST, you can specify the language for syntax highlighting in code blocks (see [Myst Source code and APIs]).
+- **Syntax** Highlighting: Use syntax highlighting to make your code easier to read. In MyST, you can specify the language for syntax highlighting in code blocks (see [MyST Source code and APIs]).
 - **Error Handling**: If relevant, show how to handle errors and exceptions.
 - **Consistency**: Ensure your code examples follow the same coding style, including indentation and naming conventions.
 - **GitHub**: Reference the repo if snippets from another RC GitHub project is referred.
@@ -143,15 +166,15 @@ Clear and consistent language and terminology are crucial for effective communic
 - Use a clear hierarchy for headings and subheadings.
    - A single level-one heading (i.e., `# HEADING`) at the top of the page: `HEADING` will appear in the table of contents.
    - Add file path to [index.md] as follows:
-    :::{code snippet} md
-    ```{toctree}
-    :hidden:
-    :caption: <section>
-    
-    <section-directory>/<filename>
-    ```
-    :::
-    Where _<section>_ is the top-level index listed in the table of contents and <filename> is the markdown file. Note that `.md` can be omitted. Furthermore, when naming a file or directory, use all lowercase with no spaces. For example, {ref}`home-directory-storage-quota` is simply named `homequota.md`.
+:::{code-block}
+```{toctree}
+:hidden:
+:caption: section
+
+directory/filename
+```
+:::
+Where *section* is the top-level index listed in the table of contents and *filename* is the markdown file. Note that `.md` can be omitted. Furthermore, when naming a file or directory, use all lowercase with no spaces. For example, {ref}`home-directory-storage-quota` is simply named `homequota.md`.
 
 - Ensure each page has a clear purpose and covers a single topic.
 
@@ -165,10 +188,11 @@ Links and references are crucial for helping users navigate your content and pro
 
 
 :::{list-table}
-:header-rows: 1
-:widths: 50 50
-:align: left
-
+---
+header-rows: 1
+widths: 50 50
+align: left
+---
 * - ❌ Do Not
   - ✅ Do
 * - Click here for more information about the installation process.
@@ -222,7 +246,8 @@ All members of the RC are welcome to contribute on the documentation. In fact, i
 
 Remember, good documentation is an ongoing effort. Always strive to improve and adapt to your users' needs.
 
-[Myst-Parser Documentation]: https://myst-parser.readthedocs.io/en/v0.13.5/using/howto.html
+[MyST Syntax]: https://myst-parser.readthedocs.io/en/v0.15.1/syntax/syntax.html#
+[MyST-Parser Documentation]: https://myst-parser.readthedocs.io/en/v0.13.5/using/howto.html
 [MyST-Typography]: https://myst-parser.readthedocs.io/en/latest/syntax/typography.html
 [about colon_fence]: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html\#code-fences-using-colons
 [Markdown cheatsheet]: https://www.markdownguide.org/basic-syntax/
@@ -231,4 +256,6 @@ Remember, good documentation is an ongoing effort. Always strive to improve and 
 [Colon Fence Directives]: https://mystmd.org/guide/syntax-overview#example-fence
 [RTD]: https://readthedocs.com/
 [index.md]: https://github.com/northeastern-rc/rc-public-documentation/blob/master/docs/source/index.md
-[Myst Source code and APIs]: https://myst-parser.readthedocs.io/en/latest/syntax/code_and_apis.html
+[MyST Source code and APIs]: https://myst-parser.readthedocs.io/en/latest/syntax/code_and_apis.html
+[MyST How-To Guide]: https://myst-parser.readthedocs.io/en/v0.13.7/using/howto.html
+[MyST Example Pages]: https://myst-parser.readthedocs.io/en/v0.13.7/examples/index.html
