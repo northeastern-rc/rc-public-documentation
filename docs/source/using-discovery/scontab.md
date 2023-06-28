@@ -86,5 +86,9 @@ This example demonstrates how to submit a transfer script that is set to start e
 
 By default, `crontab` overwrites the output file from the previous run when the same `jobid` is used. To avoid this, you can redirect the output to a file with a date-stamp.
 
+:::{code} bash
+0 20 * * 3 ./commands.sh > myjob_$(date +%Y%m%d%H%M).out
+:::
+
 [cronhub.io]: https://crontab.cronhub.io/
 [crontab-generator]: http://crontab-generator.org/
