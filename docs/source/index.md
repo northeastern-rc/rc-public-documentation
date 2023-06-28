@@ -129,6 +129,7 @@ software/mpi
 :caption: 🛠 Using HPC
 
 using-discovery/usingslurm
+using-discovery/scontab
 using-discovery/sbatch
 using-discovery/srun
 using-discovery/workingwithgpu
