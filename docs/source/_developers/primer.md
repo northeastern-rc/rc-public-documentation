@@ -191,14 +191,18 @@ Where *section* is the top-level index listed in the table of contents and *file
 
 - Ensure each page has a clear purpose and covers a single topic.
 
-(linksreferences)=
+(links-references)=
 ##  Links and References
 Links and references are crucial for helping users navigate your content and providing additional context. Here's how you can effectively use them in your documentation:
 - Use descriptive link text instead of generic phrases like "click here" or "learn more."
 - Regularly check for broken links.
 - Reference external sources when necessary and provide proper attribution.
-- Use cross-references to link to other sections within the documentation. [Text can also be modified inline.](linksreferences) (i.e., `[Text can also be modified inline.](linksreferences)`).
+- Use cross-references to link to other sections within the documentation. [Text can also be modified inline.](links-references) (i.e., `[Text can also be modified inline.](linksreferences)`).
 - Descriptive Links: Avoid using phrases like "click here" for hyperlink text. Instead, use descriptive text that informs the reader about the content they'll find when they follow the link.
+
+:::{attention}
+Section labels should be all lowercase, with `-` placed between the words (e.g., `(section-one)`.
+::
 
 :::{list-table}
 ---
