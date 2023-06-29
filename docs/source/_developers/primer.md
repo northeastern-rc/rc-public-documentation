@@ -13,6 +13,7 @@ Our RTD is sphinx-based using a superset of Markdown called MyST.
 
 The following are RTD-worthy bookmarks:
 - [MyST Syntax]
+- [MyST Spec]
 - [MyST-Parser Documentation]
 - [MyST-Typography]
 - [Markdown cheatsheet]
@@ -93,13 +94,14 @@ MyST allows for markdown to be used for our Sphinx project (i.e., [RTD]).
 Check out this [Markdown cheatsheet].
 :::
 
-
 Commonly used elements follow the [MyST-Typography].
 
 Directives allow us to insert and format various elements (e.g., images, callouts, etc.). We use `colon_fence` (i.e., [Colon Fence Directives]) to replace the typical hyphens.
 
 :::::{important}
 We use the `colon_fence` extension rendered by MyST parses three colons (i.e., *:*) to open and close blocks. ([about colon_fence]).
+
+Optional args specified for a directive are listed in [MyST Spec].
 
 ::::{note}
 [MyST-Parser Documentation] includes several constructs we can use to enhance our pages. **Use elements with purpose, whether to call attention, reference related content, or warn.
@@ -189,12 +191,13 @@ Where *section* is the top-level index listed in the table of contents and *file
 
 - Ensure each page has a clear purpose and covers a single topic.
 
+(linksreferences)=
 ##  Links and References
 Links and references are crucial for helping users navigate your content and providing additional context. Here's how you can effectively use them in your documentation:
 - Use descriptive link text instead of generic phrases like "click here" or "learn more."
 - Regularly check for broken links (see *Precommits*).
 - Reference external sources when necessary and provide proper attribution.
-- Use cross-references to link to other sections within the documentation.
+- Use cross-references to link to other sections within the documentation. [Text can also be modified inline.](linksreferences) (i.e., `[Text can also be modified inline.](linksreferences)`).
 - Descriptive Links: Avoid using phrases like "click here" for hyperlink text. Instead, use descriptive text that informs the reader about the content they'll find when they follow the link.
 
 :::{list-table}
@@ -267,3 +270,5 @@ Remember, good documentation is an ongoing effort. Always strive to improve and 
 [MyST How-To Guide]: https://myst-parser.readthedocs.io/en/v0.13.7/using/howto.html
 [MyST Example Pages]: https://myst-parser.readthedocs.io/en/v0.13.7/examples/index.html
 [MyST Tabs]: https://mystmd.org/guide/dropdowns-cards-and-tabs#tabs
+[MyST Spec]: https://mystmd.org/spec
+[MyST Cross Reference]: https://myst-parser.readthedocs.io/en/v0.15.1/syntax/syntax.html#targets-and-cross-referencing
