@@ -13,7 +13,9 @@ If you previously had access to Discovery but are now working with a different P
 :::
 
 :::{sidebar} Valid NU Credentials
-Access to the cluster is limited to Northeastern affiliates with a valid NU username and password. Research Computing cannot create or renew Northeastern accounts. You must work with your sponsor to obtain or update your credentials.
+Access to the cluster is limited to Northeastern affiliates with a valid NU username and password. Research Computing cannot create or renew Northeastern accounts. You must work with your sponsor to obtain or update your credentials. 
+
+For **non-Northeastern personnel**, request a Northeastern sponsored account using this [kb article].
 :::
 
 **To request an account, follow these steps:**
@@ -35,3 +37,4 @@ HPC users need a sponsor, usually a NU PI or professor, to approve their request
 
 [research computing website]: https://rc.northeastern.edu/support/training/
 [servicenow rc access request form]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
+[kb article]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013989&sys_kb_id=e8381ac48764a594ba9a0fad0ebb3533&spa=1
