@@ -128,6 +128,7 @@ software/mpi
 :hidden:
 :caption: 🛠 Using HPC
 
+using-discovery/bash
 using-discovery/usingslurm
 using-discovery/sbatch
 using-discovery/srun
