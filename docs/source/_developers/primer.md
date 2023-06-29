@@ -132,7 +132,7 @@ Add line-breaks before and after the opening and closing of directives (i.e., ou
 ::::
 
 ::::{important}
-These nested admonitions were done, mostly, to demonstrate how it can be done. There are exceptions, but this is quite nested: be sure to consider if the flow of information is done most effectively when nests deeper, or even as as deep as this example (i.e., five colons `:::::` deep).
+These nested admonitions were done, mostly, to demonstrate how it can be done. There are exceptions, but this is quite nested: be sure to consider if the flow of information is done most effectively when nests deeper, or even as deep as this example (i.e., five colons `:::::` deep).
 ::::
 :::::
 
@@ -195,7 +195,7 @@ Where *section* is the top-level index listed in the table of contents and *file
 ##  Links and References
 Links and references are crucial for helping users navigate your content and providing additional context. Here's how you can effectively use them in your documentation:
 - Use descriptive link text instead of generic phrases like "click here" or "learn more."
-- Regularly check for broken links (see *Precommits*).
+- Regularly check for broken links.
 - Reference external sources when necessary and provide proper attribution.
 - Use cross-references to link to other sections within the documentation. [Text can also be modified inline.](linksreferences) (i.e., `[Text can also be modified inline.](linksreferences)`).
 - Descriptive Links: Avoid using phrases like "click here" for hyperlink text. Instead, use descriptive text that informs the reader about the content they'll find when they follow the link.
@@ -224,8 +224,8 @@ Visual content like images and diagrams can significantly enhance your documenta
 ## Markdown and MyST Syntax
 
 Markdown and MyST provide a simple way to format your content. Here are some tips for using these syntax effectively:
-- **Basic Markdown**: Familiarize yourself with basic markdown syntax, including headers, lists, links, images, and code blocks.
-- **MyST Features**: MyST extends the standard markdown syntax with additional features such as cross-references, footnotes, directives, warnings, and other particular elements. Make sure you understand how to use these features correctly.
+- **Basic Markdown**: Familiarize yourself with basic Markdown syntax, including headers, lists, links, images, and code blocks.
+- **MyST Features**: MyST extends the standard Markdown syntax with additional features such as cross-references, footnotes, directives, warnings, and other particular elements. Make sure you understand how to use these features correctly.
 - **Code Blocks**: Use triple backticks to create code blocks and specify the language for syntax highlighting.
 - **Admonitions**: Use MyST's admonition syntax to highlight important information. For example, `:::{note}` creates a note, and `:::{warning}` creates a warning.
 
