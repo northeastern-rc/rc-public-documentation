@@ -3,11 +3,12 @@
 # Using Bash
 
 :::{figure} /images/bash-logo.png
-:align: center
-:alt: Bash (Bourne Again SHell) logo.
-:class: with-border
-:width: 300
-
+---
+align: center
+alt: Bash (Bourne Again SHell) logo.
+class: with-border
+width: 300
+---
 Bash (Bourne Again SHell)
 :::
 
@@ -97,7 +98,7 @@ The man command is a valuable tool for learning about new commands and utilities
 ## Basic Commands
 
 :::{note}
-See [getting-access](../first_steps/get_access.md#getting-access) for instructions on having a Discovery user account created.
+See {ref}`getting-access` for instructions on having a Discovery user account created.
 :::
 
 `ssh` - Connect to a remote machine using Secure Shell (SSH):
@@ -842,10 +843,9 @@ Once open, the following table summarizes common keyboard shortcuts (i.e., comma
 For more commands, see [Emacs Cheat Sheet].
 
 ### Vim
+Vim is a popular text editor that is widely used for programming, writing, and other text-related tasks. Consult the [vim manual] for more information on using the text editor effectively.
 
-Vim is a popular text editor that is widely used for programming, writing, and other text-related tasks. Consult the [VIM Manual] for more information on using the text editor effectively.
-
-Vim starts in in **normal mode**: a mode that allows for the navigation through the text and perform various operations (e.g., search), but in read-online mode (i.e., cannot edit text).
+Vim starts in **normal mode**: a mode that allows for the navigation through the text and perform various operations (e.g., search), but in read-online mode (i.e., cannot edit text).
 
 Open a terminal and type the following command:
 
@@ -996,4 +996,4 @@ Shell scripts can do many tasks, including backups, system maintenance, and the 
 [ssh(1) manual page]: https://manpages.ubuntu.com/manpages/kinetic/en/man1/find.1posix.html
 [tar(1) manual page]: https://manpages.ubuntu.com/manpages/kinetic/en/man1/tar.1.html
 [terminator]: https://gnome-terminator.org/
-[vim manual]: :https://www.vim.org/docs.php
+[vim manual]: https://www.vim.org/docs.php
