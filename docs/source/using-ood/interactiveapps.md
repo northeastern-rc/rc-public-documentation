@@ -4,11 +4,25 @@
 
 The OOD web portal offers a variety of applications. When you click launch, the scheduler (Slurm) assigns a compute node with a set number of cores and memory. By default, applications run for one hour. If you request more than one hour, you may need to wait for Slurm to assign resources to accommodate your requested time.
 
-If you are trying to run a job on one of the interactive apps on OOD that launches a graphical user interface (GUI), such as Maestro, you may encounter an error if your passwordless ssh is improperly set up. Check out {ref}using-x11 for tips and troubleshooting information on opening applications that use X11 forwarding.
+## Available Applications
 
-## Available Apps (June 2023)
+The Open OnDemand interface provides several applications. As of June 2023, the following applications are available:
 
-On the Interactive Apps tab, you can view the list of available interactive apps through the OOD web interface.
+1. JupyterLab
+2. RStudio (Rocker)
+3. Matlab
+4. Schrodinger (Maestro)
+5. Desktop
+6. Gaussian (Gaussview)
+7. KNIME
+8. Tensorboard
+9. SAS
+
+These applications can be accessed from the **Interactive Apps** dropdown menu on the OOD web interface.
+
+Please note, certain applications under the **Interactive Apps** section, specifically those with graphical user interfaces (GUIs), may require X11 forwarding and the setup of passwordless SSH. For tips and troubleshooting information on setting up and using X11 forwarding, please refer to the [Using X11](https://rc-docs.northeastern.edu/en/latest/first_steps/connect_mac.html#using-x11) section of our documentation.
+
+Additionally, we offer a selection of modified Standard applications designed to support specific coursework. You can find these applications under the **Courses** menu on the OOD web interface.Please note that these course-specific applications are only accessible to students enrolled in the respective courses.
 
 :::{image} ../images/ood_apps_2023_06.png
 ---
