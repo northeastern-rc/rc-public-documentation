@@ -27,6 +27,9 @@ As specified below, using colons (i.e., `:::` in place of the typical hyphens wh
 ::::
 
 ##  Writing Style
+:::{admonitions} Dates and Time
+Use EST and specify this when date or time are used (e.g., `9 September at 9-5 pm EST`).
+:::
 The writing style in documentation is critical for ensuring consistency and understanding. Here are some best practices:
 
 **Clarity**: Be as clear and straightforward as possible. Avoid ambiguity, along with complex sentences and unusual words. **KEEP IT SIMPLE.**
@@ -245,7 +248,6 @@ Finally, ensure your documentation undergoes a thorough review process before it
 
 - **Peer Review**: Encourage team members to review each other's work. This can help catch errors, ambiguities, and inconsistencies the original writer may have missed.
 - **Proofreading**: Check for spelling, grammar, and punctuation errors. Tools like Grammarly or language-tool can help with this.
-
 
 :::{tip}
 When adding a substantial amount of content, whether a new page or several sections, consider using Notion to draft. Then, update the RTD pages (i.e., this project) for a technical review. This way, development can be more interactive, time is not wasted adjusting formatting and other syntax, and the history is much simpler (and more promising) than that of our own managed via Git.
