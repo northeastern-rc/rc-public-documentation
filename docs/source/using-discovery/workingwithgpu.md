@@ -204,6 +204,7 @@ Use the command `nvidia-smi` (NVIDIA System Management Interface)
 inside a GPU node to get the CUDA driver information and monitor the
 GPU device.
 
+(gpus-for-deep-learning)=
 ## GPUs for Deep Learning
 
 ::::::{tab-set}
