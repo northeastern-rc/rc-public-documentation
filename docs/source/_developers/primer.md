@@ -27,7 +27,7 @@ As specified below, using colons (i.e., `:::` in place of the typical hyphens wh
 ::::
 
 ##  Writing Style
-:::{admonitions} Dates and Time
+:::{admonition} Dates and Time
 Use EST and specify this when date or time are used (e.g., `9 September at 9-5 pm EST`).
 :::
 The writing style in documentation is critical for ensuring consistency and understanding. Here are some best practices:
@@ -150,6 +150,73 @@ Consistent formatting makes your documentation look professional and easy to rea
 :::{seealso}
 List [admonitions] types (i.e., callouts) available.
 :::
+
+### Admonitions
+Admonitions highlight a particular block of text that exists slightly apart from the narrative of your page, like so:
+
+:::{admonition} This is the title
+This is the message.
+:::
+There are several types of admonitions:
+
+:::::{grid} 2
+::::{grid-item-card}
+:::{attention}
+Use to put emphasis on a specific point.
+:::
+::::
+::::{grid-item-card}
+:::{caution}
+Use when extra care is warranted for a specific task.
+:::
+::::
+
+::::{grid-item-card}
+:::{danger}
+Use when there is a potential problem that can occur.
+:::
+::::
+
+::::{grid-item-card}
+:::{error}
+Use to highlight a bug.
+:::
+::::
+::::{grid-item-card}
+:::{hint}
+Use to make a suggestion.
+:::
+::::
+
+::::{grid-item-card}
+:::{important}
+Use to put emphasis on a sub-topic or sub-point.
+:::
+::::
+
+::::{grid-item-card}
+:::{note}
+Use to add a side-note or footnote.
+:::
+::::
+::::{grid-item-card}
+:::{seealso}
+Use to reference another section, page, or reference that extends, provides details on subtopic or step, or serves as supplemental.
+:::
+::::
+
+::::{grid-item-card}
+:::{tip}
+Use to provide pro-tips or tips & tricks.
+:::
+::::
+
+::::{grid-item-card}
+:::{warning}
+Use to warn user of expected behaviors or outputs.
+:::
+::::
+:::::
 
 ### Tabs
 [MyST Tabs] are a great way to present material (see {ref} GPUs for Deep Learning). It is essential for these to be used properly: situations where the same task or topic spans multiple setups or interfaces. For instance, installing deep learning to run on the GPUs is the task in the aforementioned example, where the tab chose is either PyTorch or Tensorflow.
