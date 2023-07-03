@@ -95,7 +95,7 @@ PartitionName=test Nodes=compute[1-16] Default=YES MaxTime=INFINITE State=UP
 
 Please refer to the [Slurm documentation](https://slurm.schedmd.com/documentation.html) for a complete list of available parameters and their meanings.
 
-(using-sbatch)
+(using-sbatch)=
 ## Job Submission and Monitoring in Slurm
 To submit your job script to Slurm, you use the `sbatch` command:
 
@@ -197,6 +197,7 @@ If you need exclusive use of a node, such as when you have a job that has high I
 # <commands to execute>
 :::
 
+(using-srun)=
 ## Interactive Jobs: `srun` Command
 The `srun` command is used to submit an interactive job which runs a single task directly via the shell. This method is useful when you want to test a short computation or run an interactive session like a shell, Python, or an R terminal.
 
