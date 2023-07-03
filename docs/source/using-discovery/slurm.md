@@ -232,9 +232,9 @@ smap <options>
 
 This command allows to view details about the cluster in a visual format
 
-# Examples using srun
+### Examples using srun
 
-The user needs to review the {ref}`hardware-overview` and [Partitions](https://northeastern-university-rc-public-documentation--33.com.readthedocs.build/en/33/hardware/partitions.html#partition-names) sections to be familiar with the available hardware and partition limits on Discovery. This way, user can tailor the request to fit both the needs of the job and the limits of partitions. For example, if the user specifies `--partition=short` and `--time=01:00:00`, it will result in an error because the time specified exceeds the limit for that partition.
+The user needs to review the {ref}`hardware-overview` and {ref}`partitions` to be familiar with the available hardware and partition limits on Discovery. This way, user can tailor the request to fit both the needs of the job and the limits of partitions. For example, if the user specifies `--partition=short` and `--time=01:00:00`, it will result in an error because the time specified exceeds the limit for that partition.
 
 This simple `srun` example is to move to a *compute* node after you first log into the HPC:
 
@@ -306,24 +306,24 @@ sbatch --array=1-100 my_array_job.sh
 
 This command will submit 100 jobs, running `my_program` with `input_1` through `input_100`.
 
-# Job Management
+## Job Management
 Managing jobs in a Slurm-based HPC environment involves monitoring running jobs, modifying job parameters, and canceling jobs when necessary. This section will cover the commands and techniques you can use for these tasks.
 
-## Monitoring Jobs
+### Monitoring Jobs
 The `squeue` command allows you to monitor the state of jobs in the queue. It provides information such as the job ID, the partition it's running on, the job name, and more.
 
-### Syntax: `squeue`
+#### Syntax: `squeue`
 
 :::{code} bash
 squeue [options]
 :::
 
-### Options and Usage
+#### Options and Usage
 - **`j, --jobs=<job_id>`**: display information about specific job(s)
 - **`u, --user=<user_name>`**: display jobs for a specific user
 - **`l, --long`**: display more information (long format)
 
-### Code Example of Job Monitoring
+#### Code Example of Job Monitoring
 To monitor all jobs of a specific user, use the following command:
 
 :::{code} bash
@@ -336,28 +336,28 @@ To monitor a specific job, use:
 squeue -j <job_id>
 :::
 
-## Modifying Jobs
+### Modifying Jobs
 The `scontrol` command allows you to modify the parameters of a queued or running job. The changes take effect immediately but are not permanent and will be lost when the job completes.
 
 You can monitor your jobs by using the Slurm `scontrol` command. Type `scontrol show jobid -d <JOBID>`, where `JOBID` is the number of your job. In the figure at the top of the page, you can see that when you submit your `srun` command, Slurm displays the unique ID number of your job (`job 12962519`). This is the number you use with `scontrol` to monitor your job.
 
-### Syntax: `scontrol`
+#### Syntax: `scontrol`
 :::{code} bash
 scontrol [command] [options]
 :::
 
-### Example: `scontrol`
+#### Example: `scontrol`
 :::{code} bash
 scontrol show jobid -d <JOBID>
 :::
 
-### Options and Usage: `scontrol`
+#### Options and Usage: `scontrol`
 - **`update`**: used to modify job or system configuration
 - **`hold jobid=<job_id>`**: hold a specific job
 - **`release jobid=<job_id>`**: release a specific job
 - **`requeue jobid=<job_id>`**: requeue a specific job
 
-### Code Example of Modifying Running Jobs
+#### Code Example of Modifying Running Jobs
 To hold a job:
 
 :::{code} bash
@@ -376,18 +376,18 @@ To requeue a job:
 scontrol requeue jobid=<job_id>
 :::
 
-## Cancelling Jobs
+### Cancelling Jobs
 The `scancel` command is used to cancel a running or pending job. Once cancelled, a job cannot be resumed.
-### Syntax: `scancel`
+#### Syntax: `scancel`
 :::{code} bash
 scancel [options] [job_id]
 :::
 
-### Options and Usage: `scancel`
+#### Options and Usage: `scancel`
 - **`u, --user=<user_name>`**: cancel all jobs of a specific user
 - **`-name=<job_name>`**: cancel all jobs with a specific name
 
-### Code Example of Cancelling Jobs
+#### Code Example of Cancelling Jobs
 To cancel a specific job, use:
 
 :::{code} bash
@@ -411,7 +411,7 @@ The job management section aims to give you a solid understanding of how to mana
 ## Cluster and Node States
 Below are some more examples of using `sinfo` and `scontrol` to provide information about the state of the cluster and specific nodes.
 
-### Using sinfo
+### Using `sinfo`
 The `sinfo` command will show information about all partitions in the cluster, including the partition name, available nodes, and status. By default, `sinfo` reports:
 
 :::{code} bash
@@ -424,7 +424,7 @@ The `sinfo` command will show information about all partitions in the cluster, i
 | NODELIST(REASON) | The list of nodes per partition |
 :::
 
-### Examples using sinfo
+### Examples using `sinfo`
 View information about all partitions:
 
 :::{code} bash
@@ -498,7 +498,7 @@ View what nodes are in what state in a partition using `statecompact`:
 sinfo -p <partition> --Format=time,nodes,statecompact,features,memory,cpus,nodelist
 :::
 
-### Using scontrol
+### Using `scontrol`
 The `scontrol` command is a command-line utility that allows users to view and control Slurm jobs and job-related resources. It provides a way to check the status of jobs, modify job properties, and perform other job-related tasks.
 
 Some of the tasks that can done using `scontrol` include:
@@ -540,7 +540,7 @@ For more information on the commands listed above, along with a complete list of
 scontrol --help
 :::
 
-### Examples using scontrol
+### Examples using `scontrol`
 View information about a specific node:
 
 :::{code} bash
@@ -565,16 +565,16 @@ To view information about a specific reservation (e.g., found via `scontrol show
 scontrol show reservation <reservation_name>
 :::
 
-# Advanced Usage
+## Advanced Usage
 Advanced usage of Slurm involves working with multi-node jobs, GPU jobs, and understanding priority and Quality of Service (QoS) parameters. It also involves memory management and the use of environment variables in job scripts.
 
-## Multi-node Jobs
+### Multi-node Jobs
 Multi-node jobs involve executing a single job across multiple nodes. Such jobs are typically used for computationally intensive tasks that require significant parallelization.
 
-### Use-cases: Multi-node Jobs
+#### Use-cases: Multi-node Jobs
 Multi-node jobs are used in scenarios where tasks can be broken down into sub-tasks that can be executed in parallel, such as simulation and modeling, machine learning training, or big data analysis.
 
-### Code Example for Multi-node Job Submission
+#### Code Example for Multi-node Job Submission
 :::{code} bash
 #!/bin/bash
 #SBATCH -J MultiNodeJob     # Job name
@@ -585,13 +585,13 @@ Multi-node jobs are used in scenarios where tasks can be broken down into sub-ta
 srun ./my_program
 :::
 
-## GPU Jobs
+### GPU Jobs
 Slurm can also manage GPU resources, allowing you to specify GPU requirements in your job scripts.
 
-### Use-cases: GPUs
+#### Use-cases: GPUs
 GPU jobs are used in scenarios where tasks are parallelized and can benefit from the high computational capabilities of GPUs, such as machine learning and deep learning workloads, image processing, or simulations.
 
-### Code Example for GPU Job Submission
+#### Code Example for GPU Job Submission
 :::{code} bash
 #!/bin/bash
 #SBATCH -J GPUJob            # Job name
@@ -603,22 +603,22 @@ GPU jobs are used in scenarios where tasks are parallelized and can benefit from
 srun ./my_gpu_program
 :::
 
-## Priority and QoS
+### Priority and QoS
 Slurm uses priority and Quality of Service (QoS) parameters to determine the order in which jobs are scheduled.
 
-### Understanding Job Priorities and Quality of Service (QoS) Parameters
+#### Understanding Job Priorities and Quality of Service (QoS) Parameters
 The job priority is a numerical value assigned to each job, determining its position in the queue. Higher priority jobs are scheduled before lower priority ones.
 Quality of Service (QoS) parameters control various job limits, such as the maximum allowed job runtime, the maximum number of CPUs or nodes a job can use, etc.
 
-### Code Example to Manipulate Job Priority
+#### Code Example to Manipulate Job Priority
 :::{code} bash
 scontrol update jobid=<job_id> priority=<new_priority>
 :::
 
-## Memory Management
+### Memory Management
 In Slurm, memory allocation can be controlled on the job or task level using the `--mem` or `--mem-per-cpu` options, respectively.
 
-### Code example for specifying memory in job scripts
+#### Code example for specifying memory in job scripts
 :::{code} bash
 #!/bin/bash
 #SBATCH -J MyJob             # Job name
@@ -631,10 +631,10 @@ In Slurm, memory allocation can be controlled on the job or task level using the
 srun ./my_program
 :::
 
-## Using Environment Variables in Job Scripts
+### Using Environment Variables in Job Scripts
 Slurm sets several environment variables that you can use in your job scripts to control the job behavior dynamically. Some of these include `SLURM_JOB_ID`, `SLURM_JOB_NUM_NODES`, `SLURM_JOB_NODELIST`, etc.
 
-### Code Example Showcasing Use of Environment Variables
+#### Code Example Showcasing Use of Environment Variables
 
 :::{code} bash
 #!/bin/bash
@@ -649,8 +649,6 @@ echo "Node list: $SLURM_JOB_NODELIST"
 # Your program/command here
 srun ./my_program
 :::
-
-[SLURM Job Arrays](https://www.notion.so/SLURM-Job-Arrays-c31244cbcda445d498c7e1cac6da7e2e?pvs=21)
 
 ## Common Problems and Troubleshooting
 Despite its flexibility and robustness, it's not uncommon to encounter issues when using Slurm. Here we'll explore some common problems and provide strategies for debugging and optimizing job scripts.
