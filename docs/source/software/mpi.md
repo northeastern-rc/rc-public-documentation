@@ -18,6 +18,33 @@ There are many versions of OpenMPI, MVAPICH, and MPICH that are available on the
 
 Use the `module show` command to view information about the compilers you need to use with these libraries and if they support InfiniBand (IB) or not. For example, `module show openmpi/4.1.0-zen2-gcc10.1`.
 
+::::{dropdown} Output for `module show openmpi/4.1.0-zen2-gcc10.1`
+:::{code} bash
+/shared/centos7/modulefiles/openmpi/4.1.0-zen2-gcc10.1:
+
+module-whatis	 Loads the executables, libraries and headers for OpenMPI v. 4.1.1. Built using Intel 2021 compilers on AMD EPYC architecture (zen2).
+
+Please note - this MPI module supports communication through the HDR200 InfiniBand network by using the Mellanox (OFED 5.3) UCX (1.10.1) framework with cross platform unified API. To make sure InfiniBand is being used, make sure to compile and run your applications using this module only on AMD EPYC architectures (zen2).
+
+To allocate the zen2 arch compute node, add the following flag to your SLURM command: --constraint=zen2
+For more details:
+https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html
+
+To use the module, type:
+module load gcc/10.1.0
+module load openmpi/4.1.0-zen2-gcc10.1
+
+
+conflict	 openmpi
+prepend-path	 PATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/bin
+prepend-path	 MANPATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/share/man
+prepend-path	 LD_LIBRARY_PATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/lib
+prepend-path	 CPATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/include
+prepend-path	 LIBRARY_PATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/lib
+setenv		 OMPI_MCA_btl ^vader,tcp,openib,uct
+:::
+::::
+
 ## Running a MPI Program
 
 The following is a basic slurm script for running an MPI program with annotations:
@@ -35,7 +62,7 @@ mpirun -n 4 ./your_program          # Run your MPI executable
 :::
 
 :::{note}
-For MPI tasks, `--ntasks=X` is used where `X` requests the number of cpu cores for tasks.
+For MPI tasks, `--ntasks=X` is used, where `X` requests the number of cpu cores for tasks.
 :::
 
 This script specifies that it needs 4 tasks (i.e., CPU cores), a maximum of 10 minutes of runtime, and 2000MB of memory per CPU. It then loads the OpenMPI module and runs the MPI program using mpirun.
@@ -66,7 +93,7 @@ Remember, optimizing for performance often requires a thorough understanding of 
 
 Debugging MPI programs can be challenging due to their parallel nature. Fortunately, OpenMPI provides several tools and techniques to help with this.
 
-One useful feature is verbose error reporting. To enable this, set the `OMPI_MCA_mpi_abort_print_stack` variable to 1:
+One useful feature is verbose error reporting. To enable this, set the `OMPI_MCA_mpi_abort_print_stack` to `1`:
 
 :::{code-block}
 export OMPI_MCA_mpi_abort_print_stack=1
@@ -84,16 +111,16 @@ Benchmarking is a method used to measure the performance of a system or one of i
 
 There are several tools available for benchmarking MPI, including the following:
 
-- **HPC Challenge (HPCC):** This benchmark suite measures a range of metrics, including latency and bandwidth, as well as floating-point computation performance.
-- **Intel MPI Benchmarks (IMB):** A suite of benchmarks provided by Intel specifically for MPI. It includes a set of MPI-1 and MPI-2 function benchmarks and measures point-to-point communication, MPI data types, collective communication, and more.
-- **OSU Micro-Benchmarks (OSU-MB):** A lightweight set of benchmarks designed to measure latency, bandwidth, and other performance metrics for various MPI functions.
+- **[HPC Challenge (HPCC)](https://hpcchallenge.org/hpcc/software/index.html):** This benchmark suite measures a range of metrics, including latency and bandwidth, as well as floating-point computation performance.
+- **[Intel MPI Benchmarks (IMB)](https://github.com/intel/mpi-benchmarks):** A suite of benchmarks provided by Intel specifically for MPI. It includes a set of MPI-1 and MPI-2 function benchmarks and measures point-to-point communication, MPI data types, collective communication, and more.
+- **[OSU Micro-Benchmarks (OSU-MB)](https://ulhpc-tutorials.readthedocs.io/en/latest/parallel/mpi/OSU_MicroBenchmarks/):** A lightweight set of benchmarks designed to measure latency, bandwidth, and other performance metrics for various MPI functions.
 
 To use these tools, you generally need to download and compile them, and then run them using a slurm job script.
 
 ## Developing with MPI
 
 ### Hello world program
-The fundamental concept in MPI is the communicator, which defines a group of processes that can send messages to each other. By default, all processes belong to the MPI_COMM_WORLD communicator. Here's a simple C++ program that using MPI:
+The fundamental concept in MPI is the communicator, which defines a group of processes that can send messages to each other. By default, all processes belong to the `MPI_COMM_WORLD` communicator. Here's a simple C++ program that using MPI:
 
 :::{code-block} c++
 #include <mpi.h>
@@ -116,9 +143,9 @@ int main(int argc, char** argv) {
 }
 :::
 
-In this code, `MPI_Init` initializes the MPI environment, `MPI_Comm_size` gets the number of processes, `MPI_Comm_rank` gets the rank (ID) of the process, and `MPI_Finalize` ends the MPI environment. In the C/C++ language, the #include <mpi.h> header file needs to be added to compile MPI code.
+In this code, `MPI_Init` initializes the MPI environment, `MPI_Comm_size` gets the number of processes, `MPI_Comm_rank` gets the rank (ID) of the process, and `MPI_Finalize` ends the MPI environment. In the C/C++ language, the `#include <mpi.h>` header file needs to be added to compile MPI code.
 
-To understand how to run an MPI program, let's write a simple program that prints a "Hello, World!" message from each process.
+To understand how to run an MPI program, let's write a simple program that prints a `"Hello, World!"` message from each process.
 
 First, create a file called `hello_world.c` in your preferred text editor and add the following code:
 
@@ -168,7 +195,7 @@ Submit this script to slurm with the `sbatch` command:
 sbatch job_script.sh
 :::
 
-You should see output in the `result.txt` file that shows "Hello, World!" messages from each process.
+You should see output in the `result.txt` file that shows `"Hello, World!"` messages from each process.
 
 ### MPI Communication: Send and Receive Operations
 MPI allows processes to communicate by sending and receiving messages. These messages can contain any type of data. Here's a simple example of using `MPI_Send` and `MPI_Recv` to send a number from one process to another:
@@ -198,7 +225,7 @@ int main(int argc, char** argv) {
 
 ### MPI Monte Carlo
 
-A key aspect of using OpenMPI is the ability to implement parallel algorithms, which can significantly speed up computation. Here is an example of a parallel version of the Monte Carlo method for estimating the number π:
+A key aspect of using OpenMPI is the ability to implement parallel algorithms, which can significantly speed up computation. Here is an example of a parallel version of the Monte Carlo method for estimating the number $\pi$:
 
 :::{code-block} c++
 #include <mpi.h>
@@ -249,7 +276,7 @@ mpi4py is a Python package that provides bindings to the MPI standard. It allows
 
 The mpi4py package has been designed to be as close as possible to the MPI standard, providing Python developers with a familiar and straightforward interface to MPI.
 
-In this program, process 0 sends the number -1 to process 1, which receives it and prints it.
+In this program, `process 0` sends the number `-1` to `process 1`, which receives it and prints it.
 
 To install mpi4py inside of a conda environment:
 
@@ -305,7 +332,11 @@ else:
     print(f'Received data {data} at process {rank}')
 :::
 
-In this program, the master process sends a dictionary to a specific process and that process receives the dictionary. **Note**: Anything greater than rank 2 will make this program hang.
+In this program, the master process sends a dictionary to a specific process and that process receives the dictionary.
+
+:::{note}
+Anything greater than rank 2 will make this program hang.
+:::
 
 ### Writing Efficient MPI Code
 
