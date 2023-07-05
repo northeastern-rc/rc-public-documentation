@@ -256,7 +256,9 @@ To install mpi4py inside of a conda environment:
 :::{code-block} bash
 srun -n 4 --pty /bin/bash
 module load anaconda3/2022.05
-source activate <mpi4py_env>
+mkdir -p /path/to/mpi4py_env
+conda create --prefix=/path/to/mpi4py_env -y
+source activate /path/to/mpi4py_env
 conda install -c conda-forge mpi4py
 :::
 
