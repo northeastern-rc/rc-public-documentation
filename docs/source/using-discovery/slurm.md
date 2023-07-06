@@ -56,10 +56,15 @@ A **job** in Slurm is a user-defined computational task that's submitted to the 
 ### Tasks
 Tasks are the individual processes that run within a job step. They could be single-threaded or multi-threaded and can run on one or more nodes.
 
-### Understanding the Configuration File (slurm.conf)
-The slurm.conf file is the primary configuration file for Slurm. It contains the parameters that govern the behavior of the Slurm controller, nodes, and partitions.
+### Understanding the Configuration File
 
-Here's an example of a very basic `slurm.conf` file:
+:::{note}
+Most users should not be concerned with slurm configurations, beyond being aware of the configurations. Please refer to the [Slurm documentation](https://slurm.schedmd.com/documentation.html) for a complete list of available parameters as shown in the example config file belong, along with their meanings.
+:::
+
+The slurm.conf file is the primary configuration file (i.e., `slurm.conf`) for Slurm. It contains the parameters that govern the behavior of the Slurm controller, nodes, and partitions.
+
+::::{dropdown} Example of a very basic `slurm.conf` file:
 
 :::{code} bash
 # Basic slurm.conf file
