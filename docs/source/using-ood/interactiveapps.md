@@ -53,13 +53,13 @@ To find the JupyterLab Notebook on OOD, follow these steps:
 
 The OOD form for launching JupyterLab Notebook will appear.
 
-### Conda virtual environment
-
+:::{tip} Conda virtual environment
 You can import Python packages in your JupyterLab Notebook session by creating a conda virtual environment and activating that environment when starting a JupyterLab Notebook instance.
 
 1. First, set up a virtual Python environment. See {ref}`creating-python` for how to set up a virtual Python environment on the HPC using the terminal.
 1. Type `source activate <yourenvironmentname>` where `<yourenvironmentname>` is the name of your custom environment.
 1. Type `conda install jupyterlab -y` to install jupyterlab in your environment.
+:::
 
 ###  Using OOD to launch JupyterLab Notebook
 1. Go to [Open On Demand].
