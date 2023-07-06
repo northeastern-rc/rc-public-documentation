@@ -102,7 +102,7 @@ Commonly used elements follow the [MyST-Typography].
 Directives allow us to insert and format various elements (e.g., images, callouts, etc.). We use `colon_fence` (i.e., [Colon Fence Directives]) to replace the typical hyphens.
 
 :::::{important}
-We use the `colon_fence` extension rendered by MyST parses three colons (i.e., *:*) to open and close blocks. ([about colon_fence]).
+We use the [`colon_fence` extension] rendered by MyST parses three colons (i.e., *:*) to open and close blocks.
 
 Optional args specified for a directive are listed in [MyST Spec].
 
@@ -333,7 +333,7 @@ Remember, good documentation is an ongoing effort. Always strive to improve and 
 [MyST Syntax]: https://myst-parser.readthedocs.io/en/v0.15.1/syntax/syntax.html#
 [MyST-Parser Documentation]: https://myst-parser.readthedocs.io/en/v0.13.5/using/howto.html
 [MyST-Typography]: https://myst-parser.readthedocs.io/en/latest/syntax/typography.html
-[about colon_fence]: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html\#code-fences-using-colons
+[`colon_fence` extension]: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html\#code-fences-using-colons
 [Markdown cheatsheet]: https://www.markdownguide.org/basic-syntax/
 [admonitions]: https://jupyterbook.org/en/stable/reference/cheatsheet.html\#admonitions
 [Colon Fence Directives]: https://mystmd.org/guide/syntax-overview#example-fence
