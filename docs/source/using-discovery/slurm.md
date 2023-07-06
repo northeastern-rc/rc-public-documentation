@@ -48,12 +48,6 @@ sacctmgr show associations user=<yourusername>
 
 After you have determined what accounts your username is associated with, if you have more than one account association, you can use the `account=` flag with your usual `srun` or `sbatch` commands.
 
-For example, if you are associated with an account named `dataclub` and an account named `info7500`, and you’re currently doing work that should be associated with the `dataclub` account, in your `srun` command, you can add the `--account=dataclub` flag to specify that account:
-
-:::{code} bash
-srun --account=dataclub --partition=short --nodes=1 --ntasks=28 --mem=0 --pty /bin/bash
-:::
-
 ### Jobs, Job Steps, and Job Arrays
 A **job** in Slurm is a user-defined computational task that's submitted to the cluster for execution. Each job has one or more **job steps**, sub-tasks that are part of a larger job and can be executed in parallel or sequentially.
 
