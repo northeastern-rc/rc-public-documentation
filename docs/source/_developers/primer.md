@@ -21,7 +21,7 @@ The following are RTD-worthy bookmarks:
 - [MyST Example Pages]
 
 :::{important}
-As specified below, using colons (i.e., `:::` in place of the typical hyphens when opening and closing blocks.
+As specified below, using colons (i.e., `:::`) in place of the typical hyphens when opening and closing blocks.
 :::
 
 ::::
