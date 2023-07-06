@@ -6,18 +6,6 @@ The OOD web portal offers a variety of applications. When you click launch, the 
 
 ## Available Applications
 
-The Open OnDemand interface provides several applications. As of June 2023, the following applications are available:
-
-1. JupyterLab
-2. RStudio (Rocker)
-3. Matlab
-4. Schrodinger (Maestro)
-5. Desktop
-6. Gaussian (Gaussview)
-7. KNIME
-8. Tensorboard
-9. SAS
-
 These applications can be accessed from the **Interactive Apps** dropdown menu on the OOD web interface.
 
 Please note, certain applications under the **Interactive Apps** section, specifically those with graphical user interfaces (GUIs), may require X11 forwarding and the setup of passwordless SSH. For tips and troubleshooting information on setting up and using X11 forwarding, please refer to the [Using X11](https://rc-docs.northeastern.edu/en/latest/first_steps/connect_mac.html#using-x11) section of our documentation.
@@ -32,6 +20,16 @@ align: right
 ---
 :::
 
+The Open OnDemand interface offers several applications, which as of June 2023, include:
+- JupyterLab
+- RStudio (Rocker)
+- Matlab
+- Schrodinger (Maestro)
+- Desktop
+- Gaussian (Gaussview)
+- KNIME
+- Tensorboard
+- SAS
 :::{note}
 Some apps are reserved for specific research groups and are not for public access, denoted by Restricted next to the application name. If you get an access error when attempting to open an app, and you believe that you should have access to it, please email <rchelp@northeastern.edu> with your username, research group, the app you are trying to access, a screenshot of the error that you are getting, and we will look into the issue.
 :::
