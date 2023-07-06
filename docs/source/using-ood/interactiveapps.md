@@ -40,7 +40,7 @@ Some apps are reserved for specific research groups and are not for public acces
 1. Select **Interactive Apps**, then select the application you want to use.
 1. Keep the default options for most apps, then click **Launch**. You might have to wait a minute or two for a compute node to be available for your requested time and resource.
 
-## Jupyter Notebook
+## JupyterLab Notebook
 
 JupyterLab Notebook is one of the interactive apps on OOD. This section will provide a walkthrough of setting up and using this app. The general workflow is to create a virtual Python environment, ensure that JupyterLab Notebook uses your virtual environment, and reference this environment when you start the JupyterLab Notebook OOD interactive app.
 
@@ -59,7 +59,7 @@ You can import Python packages in your JupyterLab Notebook session by creating a
 1. Type `source activate <yourenvironmentname>` where `<yourenvironmentname>` is the name of your custom environment.
 1. Type `conda install jupyterlab -y` to install jupyterlab in your environment.
 
-###  Using OOD to launch Jupyter Notebook
+###  Using OOD to launch JupyterLab Notebook
 1. Go to [Open On Demand].
 1. Click **Interactive Apps**, then select **JupyterLab Notebook**.
 1. Enter your **Working Directory** (e.g., `/home/<username>` or `/work/<project>`) that you want JupyterLab Notebook to launch in.
@@ -74,7 +74,7 @@ You can import Python packages in your JupyterLab Notebook session by creating a
 1. Click **Launch** to join the queue for a compute node. This might take a few minutes, depending on your requested resources.
 1. When you have been allocated a compute node, click **Connect to Jupyter**.
 
-When your Jupyter Notebook is running and open, type `conda list` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all
+When your JupyterLab Notebook is running and open, type `conda list` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all
 of your available packages.
 
 ## Xfce Desktop (Beta)
