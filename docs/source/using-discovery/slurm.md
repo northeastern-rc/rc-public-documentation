@@ -582,7 +582,7 @@ GPU jobs are used in scenarios where tasks are parallelized and can benefit from
 #SBATCH -J GPUJob            # Job name
 #SBATCH -N 1                 # Number of nodes
 #SBATCH -n 1                 # Number of tasks
-#SBATCH --gres=gpu:2         # Number of GPUs
+# SBATCH --gres=gpu:1        # Number of GPUs
 
 # Your program/command here
 srun ./my_gpu_program
