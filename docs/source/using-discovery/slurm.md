@@ -58,9 +58,12 @@ Tasks are the individual processes that run within a job step. They could be sin
 
 ### Understanding the Configuration File
 
-:::{note}
-Most users should not be concerned with slurm configurations, beyond being aware of the configurations. Please refer to the [Slurm documentation](https://slurm.schedmd.com/documentation.html) for a complete list of available parameters as shown in the example config file belong, along with their meanings.
+::::{note}
+Most users should not be concerned with slurm configurations, beyond being aware of the configurations.
+:::{seealso}
+[Slurm documentation](https://slurm.schedmd.com/documentation.html) for a complete list of available parameters as shown in the example config file belong, along with their meanings.
 :::
+::::
 
 The slurm.conf file is the primary configuration file (i.e., `slurm.conf`) for Slurm. It contains the parameters that govern the behavior of the Slurm controller, nodes, and partitions.
 
@@ -90,8 +93,7 @@ NodeName=compute[1-16] CPUs=1 State=UNKNOWN
 # Partition definitions
 PartitionName=test Nodes=compute[1-16] Default=YES MaxTime=INFINITE State=UP
 :::
-
-Please refer to the [Slurm documentation](https://slurm.schedmd.com/documentation.html) for a complete list of available parameters and their meanings.
+::::
 
 (job-submission-and-monitoring)=
 ## Job Submission and Monitoring
