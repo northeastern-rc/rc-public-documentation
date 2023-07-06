@@ -1,3 +1,4 @@
+(home-directory-storage-quota)=
 # Home Directory Storage Quota
 
 There are strict quotas for each home directory (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. This page provides some best practices for keeping within the quota. For more information about data storage on the HPC, see {ref}`discovery-storage`.
