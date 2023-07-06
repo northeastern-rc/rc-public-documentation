@@ -2,13 +2,8 @@
 
 # OOD Interactive Apps
 
-The OOD web portal offers a variety of applications. When you click launch, the scheduler (Slurm) assigns a compute node with a set number of cores and memory. By default, applications run for one hour. If you request more than one hour, you may need to wait for Slurm to assign resources to accommodate your requested time.
-
-If you are trying to run a job on one of the interactive apps on OOD that launches a graphical user interface (GUI), such as Maestro, you may encounter an error if your passwordless ssh is improperly set up. Check out {ref}using-x11 for tips and troubleshooting information on opening applications that use X11 forwarding.
-
-## Available Apps (June 2023)
-
-On the Interactive Apps tab, you can view the list of available interactive apps through the OOD web interface.
+The OOD web portal provides a range of applications. Upon clicking *launch*, the Slurm scheduler assigns a compute node with a specified number of cores and memory. By default, applications run for one hour. If you require more than an hour, you may have to wait for Slurm to allocate resources for the duration of your request.
+## Applications on OOD
 
 :::{image} ../images/ood_apps_2023_06.png
 ---
@@ -18,8 +13,28 @@ align: right
 ---
 :::
 
+The Open OnDemand interface offers several applications, which as of June 2023, include:
+- JupyterLab
+- RStudio (Rocker)
+- Matlab
+- Schrodinger (Maestro)
+- Desktop
+- Gaussian (Gaussview)
+- KNIME
+- Tensorboard
+- SAS
+
+
+These applications can be accessed from the OOD web interface's **Interactive Apps** dropdown menu.
+
+Please note that specific applications in the **Interactive Apps** section, particularly those with graphical user interfaces (GUIs), may require X11 forwarding and the setup of passwordless SSH. For tips and troubleshooting information on X11 forwarding setup and usage, please refer to the [Using X11] section of our documentation.
+
+Additionally, we offer a selection of modified standard applications intended to support specific coursework. These applications are under the **Courses** menu on the OOD web interface. Please note that these course-specific applications are only accessible to students enrolled in the respective courses.
+
+
+
 :::{note}
-Some apps are reserved for specific research groups and are not for public access, denoted by Restricted next to the application name. If you get an access error when attempting to open an app, and you believe that you should have access to it, please email <rchelp@northeastern.edu> with your username, research group, the app you are trying to access, a screenshot of the error that you are getting, and we will look into the issue.
+Certain apps are reserved for specific research groups and are not publicly accessible, as indicated by the "Restricted" label next to the application name. If you receive an access error when attempting to open a restricted app, and you believe you should have access to it, please email <rchelp@northeastern.edu> with the following information: your username, research group, the app you are trying to access, and a screenshot of the error message. We will investigate and address the issue.
 :::
 
 1. Go to [Open On Demand] in a web browser. If prompted, enter your myNortheastern username and password.
@@ -30,20 +45,21 @@ Some apps are reserved for specific research groups and are not for public acces
 
 JupyterLab Notebook is one of the interactive apps on OOD. This section will provide a walkthrough of setting up and using this app. The general workflow is to create a virtual Python environment, ensure that JupyterLab Notebook uses your virtual environment, and reference this environment when you start the JupyterLab Notebook OOD interactive app.
 
-You can find the JupyterLab notebook on OOD by following these steps:
-1. Go to [Open On Demand]
-1. Click on Interactive Apps
-1. Select JupyterLab Notebook from the dropdown list
+To find the JupyterLab Notebook on OOD, follow these steps:
+
+1. Go to [Open On Demand].
+1. Click on Interactive Apps.
+1. Select JupyterLab Notebook from the dropdown list.
 
 The OOD form for launching JupyterLab Notebook will appear.
 
-### Conda virtual environment
-
+:::{admonition} Conda virtual environment
 You can import Python packages in your JupyterLab Notebook session by creating a conda virtual environment and activating that environment when starting a JupyterLab Notebook instance.
 
 1. First, set up a virtual Python environment. See {ref}`creating-python` for how to set up a virtual Python environment on the HPC using the terminal.
 1. Type `source activate <yourenvironmentname>` where `<yourenvironmentname>` is the name of your custom environment.
 1. Type `conda install jupyterlab -y` to install jupyterlab in your environment.
+:::
 
 ###  Using OOD to launch JupyterLab Notebook
 1. Go to [Open On Demand].
@@ -79,3 +95,4 @@ The desktop application is a Singularity container: a Singularity container cann
 :::
 
 [Open On Demand]: https://www.ood.discovery.neu.edu/
+[Using X11]: https://rc-docs.northeastern.edu/en/latest/first_steps/connect_mac.html#using-x11
