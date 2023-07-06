@@ -165,3 +165,17 @@ using-ood/interactiveapps
 classroom/class_use
 classroom/cps_ood
 ```
+
+```{toctree}
+:hidden:
+:caption: 🧑‍🏫 HPC for the classroom
+
+classroom/class_use
+classroom/cps_ood
+```
+
+```{toctree}
+:hidden:
+
+_developers/primer
+```
