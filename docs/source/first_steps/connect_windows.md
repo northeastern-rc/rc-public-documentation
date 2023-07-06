@@ -30,7 +30,7 @@ Watch this video to see how to connect to the cluster with MobaXterm. If you do 
 
 ## Using X11
 
-When you launch a software application that uses a graphical user interface (GUI) from the command line, this is completed through X11 forwarding. If you use MobaXterm on Windows, X11 forwarding is turned on by default. 
+When you launch a software application that uses a graphical user interface (GUI) from the command line, this is completed through X11 forwarding. If you use MobaXterm on Windows, X11 forwarding is turned on by default.
 
 :::{tip}
 You can test to see if x11 forwarding is working by typing `xeyes`. This will run a small program that makes
@@ -53,8 +53,9 @@ Errors that you can see on Windows when launching a GUI-based program include th
 > `Launch failed: non-zero return code`
 
 If you are getting these types of errors, it could be because of following reasons:
+
 1. You haven't set up passwordless SSH. If that's the case, you can follow the steps below to set up passwordless SSH.
-1. When requesting a compute node from the login node, you may have forgotten to include the `--x11` option. In that case please see this example [`srun`](../using-discovery/srun.md#srun-examples) command for more details.
+1. When requesting a compute node from the login node, you may have forgotten to include the `--x11` option. In that case please see this example [srun](https://rc-docs.northeastern.edu/en/latest/using-discovery/srun.html?highlight=X11#srun-examples) command for more details.
 :::
 
 **To set up passwordless ssh:**
