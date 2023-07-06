@@ -638,7 +638,7 @@ srun ./my_program
 ## Common Problems and Troubleshooting
 Despite its flexibility and robustness, it's not uncommon to encounter issues when using Slurm. Here we'll explore some common problems and provide strategies for debugging and optimizing job scripts.
 ### Commonly Encountered Issues in Using Slurm
-1. **Job Stuck in Queue:** If your job is stuck in the queue and not getting scheduled, it may be due to insufficient resources, low priority, or system limits set by the Quality of Service (QoS) parameters.
+1. **Job Stuck in Queue:** If your job is stuck in the queue and not getting scheduled, it may be due to insufficient available resources, low priority, or system limits set by the Quality of Service (QoS) parameters.
 
     *Solution:* Check the job requirements, priority, and QoS parameters using `scontrol show job <job_id>` . Ensure your job requirements do not exceed available resources and system limits.
 
