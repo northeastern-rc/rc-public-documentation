@@ -163,13 +163,13 @@ Run a job on one node for four hours on the short partition:
 #SBATCH --nodes=1
 #SBATCH --time=4:00:00
 #SBATCH --job-name=MyJobName
-# SBATCH --partition=short
+#SBATCH --partition=short
 
 # <commands to execute>
 :::
 
 **Job request: one node with additional memory**
-The default memory per allocated core is 1GB. If calculations attempt to access more memory than allocated, Slurm automatically terminates the job. Request a specific amount of memory in the job script if calculations require more than the default. The example script below requests 100GB of memory (`--mem=100G`). Use one capital letter to abbreviate the unit of memory (`K`, `M`, `G`, `T`) with the `--mem=` option, as that is what Slurm expects to see:
+The default memory per allocated core is 1.95GB. If calculations attempt to access more memory than allocated, Slurm automatically terminates the job. Request a specific amount of memory in the job script if calculations require more than the default. The example script below requests 100GB of memory (`--mem=100G`). Use one capital letter to abbreviate the unit of memory (i.e., kilo `K`, mega `M`, giga `G`, and tera `T`) with the `--mem=` option, as that is what Slurm expects to see:
 
 :::{code} bash
 #!/bin/bash
