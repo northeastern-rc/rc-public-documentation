@@ -43,7 +43,9 @@ Errors that you can see on Windows when launching a GUI-based program include th
 >
 > `Launch failed: non-zero return code`
 
-If you are getting these types of errors, follow the steps below to set up passwordless ssh.
+If you are getting these types of errors, it could be because of following reasons:
+1. You haven't set up passwordless SSH. If that's the case, you can follow the steps below to set up passwordless SSH.
+1. When requesting a compute node from the login node, you may have forgotten to include the `--x11` option. In that case please see this example [`srun`](../using-discovery/srun.md#srun-examples) command for more details.
 :::
 
 **To set up passwordless ssh:**
