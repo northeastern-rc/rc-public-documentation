@@ -28,6 +28,15 @@ Watch this video to see how to connect to the cluster with MobaXterm. If you do 
 </video>
 <!-- ![Alt text](../_static/video/windows_moba_connect.mp4) -->
 
+## Using X11
+
+When you launch a software application that uses a graphical user interface (GUI) from the command line, this is completed through X11 forwarding. If you use MobaXterm on Windows, X11 forwarding is turned on by default. 
+
+:::{tip}
+You can test to see if x11 forwarding is working by typing `xeyes`. This will run a small program that makes
+a pair of eyes appear to follow your cursor.
+:::
+
 ## Passwordless ssh on Windows
 
 You need to setup passwordless ssh to ensure that GUI-based applications will launch without any issues. You also
