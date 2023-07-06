@@ -498,7 +498,11 @@ View what features a node has:
 
 :::{code} bash
 sinfo -n <node> --Format=nodes,nodelist,statecompact,features
+:::
+
 View what nodes are in what state in a partition using `statecompact`:
+
+:::{code} bash
 sinfo -p <partition> --Format=time,nodes,statecompact,features,memory,cpus,nodelist
 :::
 
