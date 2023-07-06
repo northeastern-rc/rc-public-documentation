@@ -38,9 +38,7 @@ Our {ref}`partition-names` documentation.
 
 (account-information)=
 ### Account information
-Some Discovery users have more than one Discovery group account associated with their usernames. For example, a student might be in a class using Discovery and a student club using Discovery for a club project. In this case, the student would have two group accounts associated with their username.
-
-When running a job with either `srun` or `sbatch`, if you have more than one account associated with your username, we recommend you use the `--account=` flag and specify the account that corresponds to the respective project. In the example with a student associated with a class and a student club, if the student is on Discovery submitting a job for a project for their class, set the `account=` flag to the name of the class account. If the student is working on a project for the club, set the `account=` flag to the name of the student club account.
+When running a job with either `srun` or `sbatch`, if you have more than one account associated with your username, we recommend you use the `--account=` flag and specify the account that corresponds to the respective project.
 
 To find out what account(s) your username is associated with, use the following command:
 
