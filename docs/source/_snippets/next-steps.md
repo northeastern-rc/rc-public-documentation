@@ -2,7 +2,7 @@ After you are connected, you can run jobs either in interactive mode with `srun`
 
 To load and run software, see {ref}`software-overview`.
 
-To find out more about the hardware and partitions on Discovery, see {ref}`hardware-overview` and {ref}`partitions`.
+To find out more about the hardware and partitions on Discovery, see {ref}`hardware-overview` and {ref}`partition-names`.
 
 For our introductory training video, go to [Northeastern's LinkedIn Learning page].
 
