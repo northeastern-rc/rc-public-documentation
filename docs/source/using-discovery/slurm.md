@@ -340,9 +340,71 @@ squeue -j <job_id>
 :::
 
 ### Modifying Jobs
-The `scontrol` command allows you to modify the parameters of a queued or running job. The changes take effect immediately but are not permanent and will be lost when the job completes.
+The `scontrol` command is a command-line utility that allows users to view and control Slurm jobs and job-related resources. It provides a way to check the status of jobs, modify job properties, and perform other job-related tasks.
 
 You can monitor your jobs by using the Slurm `scontrol` command. Type `scontrol show jobid -d <JOBID>`, where `JOBID` is the number of your job. In the figure at the top of the page, you can see that when you submit your `srun` command, Slurm displays the unique ID number of your job (`job 12962519`). This is the number you use with `scontrol` to monitor your job.
+
+
+#### Using `scontrol`
+Some of the tasks that can done using `scontrol` include:
+- **Viewing job status and properties:** `scontrol` can display detailed information about a job, including its status, node allocation, and other properties.
+- **Modifying job properties:** `scontrol` allows users to modify job properties such as the job name, the number of nodes, the time limit, and other parameters.
+- **Managing job dependencies:** `scontrol` provides a way to specify job dependencies and view the dependencies between jobs.
+- **Suspending and resuming jobs:** `scontrol` can stop and resume running jobs, allowing users to temporarily halt jobs or continue them as needed.
+- **Canceling jobs:** `scontrol` can cancel jobs that are running or queued, allowing users to stop jobs that are no longer needed.
+
+Overall, `scontrol` is a powerful tool for managing Slurm jobs and job-related resources. Its command-line interface allows users to perform a wide range of tasks, from checking the status of jobs to modifying job properties and managing dependencies.
+
+### Controlling jobs
+Place a hold on a pending job, i.e., prevent specified job from starting. <job_list> is either a space separate list of job IDs or job names.
+
+:::{code} bash
+scontrol hold <jobid>
+:::
+
+Release a held job, i.e., permit specified job to start (see hold).
+
+:::{code} bash
+scontrol release <jobid>
+:::
+
+Re-queue a completed, failed, or cancelled job
+
+:::{code} bash
+scontrol requeue <jobid>
+:::
+
+For more information on the commands listed above, along with a complete list of `scontrol` commands run below:
+
+:::{code} bash
+scontrol --help
+:::
+
+### Examples using `scontrol`
+View information about a specific node:
+
+:::{code} bash
+scontrol show node -d <node_name>
+:::
+
+For information on all reservations, this command will show information about a specific node in the cluster, including the node name, state, number of CPUs, and amount of memory:
+
+:::{code} bash
+scontrol show reservations
+:::
+
+View information about a specific job. This command will show information about a specific job, including the job ID, state, username, and partition name:
+
+:::{code} bash
+scontrol show job <job_id>
+:::
+
+To view information about a specific reservation (e.g., found via `scontrol show res` listed above), and print information about a specific reservation in the cluster, including the reservation name, start time, end time, and nodes included in the reservation:
+
+:::{code} bash
+scontrol show reservation <reservation_name>
+:::
+
 
 #### Syntax: `scontrol`
 :::{code} bash
@@ -360,24 +422,6 @@ scontrol show jobid -d <JOBID>
 - **`release jobid=<job_id>`**: release a specific job
 - **`requeue jobid=<job_id>`**: requeue a specific job
 
-#### Code Example of Modifying Running Jobs
-To hold a job:
-
-:::{code} bash
-scontrol hold jobid=<job_id>
-:::
-
-To release a job:
-
-:::{code} bash
-scontrol release jobid=<job_id>
-:::
-
-To requeue a job:
-
-:::{code} bash
-scontrol requeue jobid=<job_id>
-:::
 
 ### Cancelling Jobs
 The `scancel` command is used to cancel a running or pending job. Once cancelled, a job cannot be resumed.
@@ -504,73 +548,6 @@ View what nodes are in what state in a partition using `statecompact`:
 
 :::{code} bash
 sinfo -p <partition> --Format=time,nodes,statecompact,features,memory,cpus,nodelist
-:::
-
-### Using `scontrol`
-The `scontrol` command is a command-line utility that allows users to view and control Slurm jobs and job-related resources. It provides a way to check the status of jobs, modify job properties, and perform other job-related tasks.
-
-Some of the tasks that can done using `scontrol` include:
-
-Viewing job status and properties: `scontrol` can display detailed information about a job, including its status, node allocation, and other properties.
-
-Modifying job properties: `scontrol` allows users to modify job properties such as the job name, the number of nodes, the time limit, and other parameters.
-
-Managing job dependencies: `scontrol` provides a way to specify job dependencies and view the dependencies between jobs.
-
-Suspending and resuming jobs: `scontrol` can stop and resume running jobs, allowing users to temporarily halt jobs or continue them as needed.
-
-Canceling jobs: `scontrol` can cancel jobs that are running or queued, allowing users to stop jobs that are no longer needed.
-
-Overall, `scontrol` is a powerful tool for managing Slurm jobs and job-related resources. Its command-line interface allows users to perform a wide range of tasks, from checking the status of jobs to modifying job properties and managing dependencies.
-
-### Controlling jobs
-Place a hold on a pending job, i.e., prevent specified job from starting. <job_list> is either a space separate list of job IDs or job names.
-
-:::{code} bash
-scontrol hold <jobid>
-:::
-
-Release a held job, i.e., permit specified job to start (see hold).
-
-:::{code} bash
-scontrol release <jobid>
-:::
-
-Re-queue a completed, failed, or cancelled job
-
-:::{code} bash
-scontrol requeue <jobid>
-:::
-
-For more information on the commands listed above, along with a complete list of `scontrol` commands run below:
-
-:::{code} bash
-scontrol --help
-:::
-
-### Examples using `scontrol`
-View information about a specific node:
-
-:::{code} bash
-scontrol show node -d <node_name>
-:::
-
-For information on all reservations, this command will show information about a specific node in the cluster, including the node name, state, number of CPUs, and amount of memory:
-
-:::{code} bash
-scontrol show reservations
-:::
-
-View information about a specific job. This command will show information about a specific job, including the job ID, state, username, and partition name:
-
-:::{code} bash
-scontrol show job <job_id>
-:::
-
-To view information about a specific reservation (e.g., found via `scontrol show res` listed above), and print information about a specific reservation in the cluster, including the reservation name, start time, end time, and nodes included in the reservation:
-
-:::{code} bash
-scontrol show reservation <reservation_name>
 :::
 
 ## Advanced Usage
