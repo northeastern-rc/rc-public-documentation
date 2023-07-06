@@ -5,7 +5,7 @@
 Slurm (Simple Linux Utility for Resource Management) is an open-source, highly configurable, fault-tolerant, and adaptable workload manager. It is extensively used across High-Performance Computing (HPC) environments.
 
 Slurm is designed to accommodate the complex needs of large-scale computational workloads. It can efficiently distribute and manage tasks across clusters comprising thousands of nodes, offering seamless control over resources, scheduling, and job queuing.
-It is the software on Discovery that lets users do tasks such as view information about the cluster, submit jobs on Discovery, including Job arrays, monitor jobs, view account information, check the cluster state, along with that of specific nodes.
+It is the software on the HPC that lets users do tasks such as view information about the cluster, {ref}`job-submission-and-monitoring`, including {ref}`job-arrays`, {ref}`job-management`, view {ref}`account-information`, and check the {ref}`cluster-and-node-states`.
 
 ## Importance and Uses of Slurm in HPC
 HPC systems are designed to perform complex, computationally intensive tasks. For example, users can specify complex workflows of jobs where specific jobs depend on others, and Slurm will manage the scheduling and execution of these workflows. Efficiently managing these tasks and resources in such an environment is a daunting challenge. That's where Slurm comes into play.
@@ -36,6 +36,7 @@ A 'partition' is a grouping of nodes. You can think of partitions as virtual clu
 Our {ref}`partition-names` documentation.
 :::
 
+(account-information)=
 ### Account information
 Some Discovery users have more than one Discovery group account associated with their usernames. For example, a student might be in a class using Discovery and a student club using Discovery for a club project. In this case, the student would have two group accounts associated with their username.
 
@@ -95,8 +96,8 @@ PartitionName=test Nodes=compute[1-16] Default=YES MaxTime=INFINITE State=UP
 
 Please refer to the [Slurm documentation](https://slurm.schedmd.com/documentation.html) for a complete list of available parameters and their meanings.
 
-(using-sbatch)=
-## Job Submission and Monitoring in Slurm
+(job-submission-and-monitoring)=
+## Job Submission and Monitoring
 To submit your job script to Slurm, you use the `sbatch` command:
 
 :::{code} bash
@@ -124,6 +125,7 @@ scontrol show job *<job_id>*
 
 This information is crucial for managing your jobs and ensuring they are running as expected.
 
+(using-sbatch)=
 ## Batch Jobs: `sbatch` Command
 The `sbatch` command is used to submit a job script for later execution. The script includes the `SBATCH` directives that control the job parameters like the number of nodes, CPUs per task, job name, etc.
 
@@ -266,6 +268,7 @@ To allocate a GPU node, you should specify the `gpu` partition and use the `–g
 srun --partition=gpu --nodes=1 --ntasks=1 --export=ALL --gres=gpu:1 --mem=1Gb --time=01:00:00 --pty /bin/bash
 :::
 
+(job-arrays)=
 ## Job Arrays
 Job arrays are a series of similar jobs. They are especially useful when you want to run the same job multiple times with minor changes, such as different input files.
 
@@ -306,6 +309,7 @@ sbatch --array=1-100 my_array_job.sh
 
 This command will submit 100 jobs, running `my_program` with `input_1` through `input_100`.
 
+(job-management)=
 ## Job Management
 Managing jobs in a Slurm-based HPC environment involves monitoring running jobs, modifying job parameters, and canceling jobs when necessary. This section will cover the commands and techniques you can use for these tasks.
 
@@ -408,6 +412,7 @@ scancel --name=<job_name>
 
 The job management section aims to give you a solid understanding of how to manage and control your jobs effectively. Always ensure to monitor your jobs regularly and adjust parameters as needed to achieve the best performance.
 
+(cluster-and-node-states)=
 ## Cluster and Node States
 Below are some more examples of using `sinfo` and `scontrol` to provide information about the state of the cluster and specific nodes.
 
