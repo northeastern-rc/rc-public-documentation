@@ -28,12 +28,17 @@ Watch this video to see how to connect to the cluster with MobaXterm. If you do 
 </video>
 <!-- ![Alt text](../_static/video/windows_moba_connect.mp4) -->
 
+## Using X11 on Windows
+
+When you launch a software application that uses a graphical user interface (GUI) from the command line, this is completed through X11 forwarding. If you use MobaXterm on Windows, X11 forwarding is turned on by default.
+
+:::{tip}
+You can test to see if x11 forwarding is working by typing `xeyes`. This will run a small program that makes a pair of eyes appear to follow your cursor.
+:::
+
 ## Passwordless ssh on Windows
 
-You need to setup passwordless ssh to ensure that GUI-based applications will launch without any issues. You also
-need to make sure that your keys are added to the authorized.key file. This needs to be done anytime you regenerate your keys. If you're having
-an issue with opening an application that need X11 forwarding, such as MATLAB or Schrodinger, and you recently regenerated your keys, make sure to
-add your keys to the authorized.key file.
+You need to set up passwordless ssh to ensure that GUI-based applications will launch without any issues. You also need to make sure that your keys are added to the authorized.key file. This needs to be done anytime you regenerate your keys. If you're having an issue with opening an application that need X11 forwarding, such as MATLAB or Schrodinger, and you recently regenerated your keys, make sure to add your keys to the authorized.key file.
 
 :::{note}
 
@@ -43,7 +48,10 @@ Errors that you can see on Windows when launching a GUI-based program include th
 >
 > `Launch failed: non-zero return code`
 
-If you are getting these types of errors, follow the steps below to set up passwordless ssh.
+If you are getting these types of errors, it could be because of following reasons:
+
+1. You haven't set up passwordless SSH. If that's the case, you can follow the steps below to set up passwordless SSH.
+1. When requesting a compute node from the login node, you may have forgotten to include the `--x11` option. In that case please see this example [srun](https://rc-docs.northeastern.edu/en/latest/using-discovery/srun.html?highlight=X11#srun-examples) command for more details.
 :::
 
 **To set up passwordless ssh:**
