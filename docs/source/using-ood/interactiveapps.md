@@ -3,8 +3,7 @@
 # OOD Interactive Apps
 
 The OOD web portal offers a variety of applications. When you click launch, the scheduler (Slurm) assigns a compute node with a set number of cores and memory. By default, applications run for one hour. If you request more than one hour, you may need to wait for Slurm to assign resources to accommodate your requested time.
-
-## Available Applications
+## Applications on OOD
 
 These applications can be accessed from the **Interactive Apps** dropdown menu on the OOD web interface.
 
