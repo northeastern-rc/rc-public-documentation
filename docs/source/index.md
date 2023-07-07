@@ -129,6 +129,7 @@ software/mpi
 :caption: 🛠 Using HPC
 
 using-discovery/slurm
+using-discovery/scontab
 using-discovery/workingwithgpu
 using-discovery/transferringdata
 using-discovery/globus
