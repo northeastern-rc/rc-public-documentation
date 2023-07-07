@@ -235,7 +235,7 @@ This command allows to view details about the cluster in a visual format
 
 ### Examples using srun
 
-The user needs to review the {ref}`hardware-overview` and {ref}`partitions` to be familiar with the available hardware and partition limits on Discovery. This way, user can tailor the request to fit both the needs of the job and the limits of partitions. For example, if the user specifies `--partition=short` and `--time=01:00:00`, it will result in an error because the time specified exceeds the limit for that partition.
+The user needs to review the {ref}`hardware-overview` and {ref}`partition-names` to be familiar with the available hardware and partition limits on Discovery. This way, user can tailor the request to fit both the needs of the job and the limits of partitions. For example, if the user specifies `--partition=short` and `--time=01:00:00`, it will result in an error because the time specified exceeds the limit for that partition.
 
 This simple `srun` example is to move to a *compute* node after you first log into the HPC:
 
