@@ -46,6 +46,38 @@ If you are attempting to transfer data, we have a dedicated transfer node that y
 If you have any questions or need further assistance, please email us at [rchelp@northeastern.edu] or book a consultation using the link on our [Consultation page].
 :::
 
+## Cluster Maintenance
+To ensure that your job scripts account for the scheduled shutdown period of the cluster, use the `t2sd` script in the `--time` option when submitting your jobs. This script calculates the remaining time until the cluster becomes unavailable and sets the appropriate time limit for your job. Here's an example of how to use it.
+
+- If you usually use the `srun` command:
+
+:::{code} bash
+srun --time=$(t2sd) <srun args>
+:::
+
+- If you usually use the `sbatch` command to submit batch jobs:
+
+:::{code} bash
+sbatch --time=$(t2sd) script.sbatch
+:::
+
+Note that if you usually run your jobs on a partition with short time limits (e.g., debug or express), you only need to add the `$(t2sd)` option once it's closer to the start of the maintenance window. Use `$(t2sd)` only if the time remaining before the start of the maintenance period is less than the default time limit of the partition.
+
+For instance, the default time limit for the express partition is 60 minutes. If you want to run a job on the express partition at 5 a.m. on June 1, you wouldn't need to add the `$(t2sd)` option. However, if you wanted to run a job at 7:30 a.m. on June 1 on the express partition, you would need to include the `$(t2sd)` option to account for the remaining time.
+
+:::{seealso}
+{ref}`partition-names` for more information about available partitions.
+:::
+
+Moreover, we can help you set up a default and maximum time configuration on your partition. This configuration can significantly alleviate the issues you may experience with job runtime. By defining default and maximum time limits, you can establish a predefined window for job execution without explicitly specifying the runtime for each job.
+
+However, note that even with the default and maximum time configuration in place, there will always be a time equal to the default time limit where explicitly specifying the job's runtime becomes helpful. This allows for better control and management of job scheduling within the available resources.
+
+If you want to set up the default and maximum time configuration on your partition or have any concerns or questions regarding job runtime management, please let us know. We are here to assist you further.
+
+Following these instructions ensures that your job scripts consider the maintenance period and set appropriate time limits. If you have any further questions, feel free to ask!
+
+
 [Consultation page]: https://rc.northeastern.edu/support/consulting/
 [Transferring Data]: https://rc-docs.northeastern.edu/en/latest/using-discovery/transferringdata.html
 [research computing website]: https://rc.northeastern.edu/support/training/
