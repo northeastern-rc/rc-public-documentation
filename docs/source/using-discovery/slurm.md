@@ -739,8 +739,8 @@ If you need further support, please contact your system administrator or visit t
 
 (slurm-appendix)=
 ## Appendix
-### RC-Slurm Related Repos
-**To do.**
+<!--### RC-Slurm Related Repos-->
+<!--**To do.**-->
 
 ### Glossary of Slurm Terms
 1. **Node:** A computer or server in the HPC cluster.
