@@ -179,7 +179,7 @@ The default memory per allocated core is 1.95GB. If calculations attempt to acce
 #SBATCH --time=4:00:00
 #SBATCH --job-name=MyJobName
 #SBATCH --mem=100G
-# SBATCH --partition=short
+#SBATCH --partition=short
 
 # <commands to execute>
 :::
@@ -193,7 +193,7 @@ If you need exclusive use of a node, such as when you have a job that has high I
 #SBATCH --time=4:00:00
 #SBATCH --job-name=MyJobName
 #SBATCH --exclusive
-# SBATCH --partition=short
+#SBATCH --partition=short
 
 # <commands to execute>
 :::
@@ -579,10 +579,11 @@ GPU jobs are used in scenarios where tasks are parallelized and can benefit from
 #### Code Example for GPU Job Submission
 :::{code} bash
 #!/bin/bash
-#SBATCH -J GPUJob            # Job name
-#SBATCH -N 1                 # Number of nodes
-#SBATCH -n 1                 # Number of tasks
-# SBATCH --gres=gpu:1        # Number of GPUs
+#SBATCH -J GPUJob           # Job name
+#SBATCH -N 1                # Number of nodes
+#SBATCH -n 1               # Number of tasks
+#SBATCH --gres=gpu:1        # Number of GPUs
+#SBATCH -p gpu             # gpu partition
 
 # Your program/command here
 srun ./my_gpu_program
@@ -610,10 +611,26 @@ In Slurm, memory allocation can be controlled on the job or task level using the
 #SBATCH -N 1                 # Number of nodes
 #SBATCH -n 4                 # Number of tasks
 #SBATCH --mem=8G             # Memory for the entire job
+
+# Your program/command here
+srun ./my_program
+:::
+
+We can also specify memory per CPU.
+
+:::{code} bash
+#!/bin/bash
+#SBATCH -J MyJob             # Job name
+#SBATCH -N 1                 # Number of nodes
+#SBATCH -n 4                 # Number of tasks
 #SBATCH --mem-per-cpu=2G     # Memory per task (CPU)
 
 # Your program/command here
 srun ./my_program
+:::
+
+:::{note}
+Either `--mem-per-cpu` or `--mem` can be specified as a sbatch directive, but not both.
 :::
 
 ### Using Environment Variables in Job Scripts
@@ -637,6 +654,7 @@ srun ./my_program
 
 ## Common Problems and Troubleshooting
 Despite its flexibility and robustness, it's not uncommon to encounter issues when using Slurm. Here we'll explore some common problems and provide strategies for debugging and optimizing job scripts.
+
 ### Commonly Encountered Issues in Using Slurm
 1. **Job Stuck in Queue:** If your job is stuck in the queue and not getting scheduled, it may be due to insufficient available resources, low priority, or system limits set by the Quality of Service (QoS) parameters.
 
@@ -653,11 +671,15 @@ Despite its flexibility and robustness, it's not uncommon to encounter issues wh
 ### Strategies for Debugging and Optimizing Job Scripts
 1. **Testing Job Scripts Interactively:** Use the `srun` command to run your job script interactively for debugging purposes. This approach allows you to observe the program's behavior in real-time.
 
+:::{code} bash
 srun --pty bash -i
+:::
 
 2. **Using echo Command for Debugging:** Use the `echo` command in your job script to print the values of variables, command outputs, etc., to the output file. This method can help you understand the script's flow and pinpoint any issues.
 
+:::{code} bash
 echo "Value of variable x is $x"
+:::
 
 3. **Optimizing Job Resources:** Monitor your job's resource usage using `sstat <job_id>` and adjust the resource requirements accordingly in your job script. Requesting more resources than needed can result in your job spending more time in the queue, while requesting less than needed can lead to job failures.
 Remember, troubleshooting requires patience and a systematic approach. Begin by identifying the problem, then hypothesize potential causes, test those hypotheses, and apply solutions. Make small changes one at a time and retest after each change. With experience, you will be able to troubleshoot effectively and make the most of your HPC resources.
@@ -670,7 +692,7 @@ In this section, we will discuss some best practices that can help you make effi
 1. **Use Job Arrays for Similar Jobs:** If you need to run multiple similar jobs, consider using job arrays. This approach makes job management more straightforward and reduces overhead.
 1. **Use Appropriate Partitions:** Select the appropriate partition for your job based on your requirements. Each partition may have different limits and priorities, so choose the one that suits your needs best.
 
-## Writing Optimized Job Scripts
+### Writing Optimized Job Scripts
 1. **Use Environment Variables:** Slurm provides several environment variables that can be used to customize job behavior dynamically. Use these variables to make your scripts more flexible and efficient.
 1. **Specify All Necessary Options:** Ensure to specify all necessary SBATCH options in your job script. Missing options can lead to unpredictable job behavior or performance.
 1. **Check Exit Codes:** Always check the exit codes of commands in your job script. Non-zero exit codes usually indicate an error, and failing to check these can lead to undetected job failures.
