@@ -13,7 +13,7 @@ If you previously had access to Discovery but are now working with a different P
 :::
 
 :::{sidebar} Valid NU Credentials
-Access to the cluster is limited to Northeastern affiliates with a valid NU username and password. Research Computing cannot create or renew Northeastern accounts. You must work with your sponsor to obtain or update your credentials. 
+Access to the cluster is limited to Northeastern affiliates with a valid NU username and password. Research Computing cannot create or renew Northeastern accounts. You must work with your sponsor to obtain or update your credentials.
 
 For **non-Northeastern personnel**, request a Northeastern sponsored account using this [kb article].
 :::
@@ -35,6 +35,20 @@ If you are a PI, professor, or instructor at Northeastern and need access to the
 
 HPC users need a sponsor, usually a NU PI or professor, to approve their request. PIs, professors, and instructors can sponsor themselves. Students (undergraduate or graduate), visiting researchers, or staff members must have a sponsor approve their request. When you fill out the ServiceNow form, an email is sent to the specified sponsor upon submitting the request. Sponsors will receive email reminders until they approve the request through the link in the email to ServiceNow. We recommend letting your sponsor know to look for the email with the approval link before submitting an access request.
 
+## Cluster Usage
+:::{important}
+It is best not to use the login node for CPU-intensive activities, as this will impact the performance of this node for all cluster users. It will also not provide the best performance for the tasks you are trying to accomplish. For more information, please refer to our documentation on {ref}`connect-mac` or {ref}`connect-windows`.
+
+If you are attempting to run a job, you should move to a compute node. You can do this interactively using the `srun` command or non-interactively using the `sbatch` command. Please see our documentation on {ref}`using-sbatch` and {ref}`using-srun` for more information.
+
+If you are attempting to transfer data, we have a dedicated transfer node that you should use. Please see our documentation on {ref}`transferring-data` for more information.
+
+If you have any questions or need further assistance, please email us at [rchelp@northeastern.edu] or book a consultation using the link on our [Consultation page].
+:::
+
+[Consultation page]: https://rc.northeastern.edu/support/consulting/
+[Transferring Data]: https://rc-docs.northeastern.edu/en/latest/using-discovery/transferringdata.html
 [research computing website]: https://rc.northeastern.edu/support/training/
 [servicenow rc access request form]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
 [kb article]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013989&sys_kb_id=e8381ac48764a594ba9a0fad0ebb3533&spa=1
+[rchelp@northeastern.edu]: mailto:rchelp@northeastern.edu
