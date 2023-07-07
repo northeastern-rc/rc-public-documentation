@@ -2,8 +2,7 @@
 
 # Connecting Mac
 
-You connect to Discovery using a [secure shell](https://www.ssh.com/ssh/protocol/) program to initiate an SSH session to
-sign in to Discovery. If you usually launch software from the command line that uses a graphical user interface (GUI), see {ref}`using-x11` for tips and troubleshooting information.
+You connect to Discovery using a [secure shell](https://www.ssh.com/ssh/protocol/) program to initiate an SSH session to sign in to Discovery. If you usually launch software from the command line that uses a graphical user interface (GUI), see {ref}`using-x11` for tips and troubleshooting information.
 
 ## Mac
 
@@ -15,8 +14,7 @@ If you use Mac OS X version 10.8 or higher, and you have [XQuartz](https://www.x
 
 `defaults write org.macosforge.xquartz.X11 enable_iglx -bool true`
 
-You should keep XQuartz running in the background. If you close and restart XQuartz, you will need to execute the above command again after restarting. Do not use the Terminal application from within XQuartz to sign in to Discovery. Use
-the default Terminal program that comes with your Mac (see Step 1 in the procedure below).
+You should keep XQuartz running in the background. If you close and restart XQuartz, you will need to execute the above command again after restarting. Do not use the Terminal application from within XQuartz to sign in to Discovery. Use the default Terminal program that comes with your Mac (see Step 1 in the procedure below).
 :::
 
 **To connect to Discovery on a Mac:**
@@ -37,14 +35,12 @@ Watch this video of how to connect to Discovery on a Mac. If you do not see any 
 
 (using-x11)=
 
-## Using X11
+## Using X11 on Mac
 
-When you launch a software application that uses a graphical user interface (GUI) from the command line, this is completed through X11 forwarding. If you use MobaXterm on Windows, X11 forwarding
-is turned on by default. If you use the Terminal program on Mac, you'll need to log in using the -Y option (`ssh -Y <yourusername>@login.discovery.neu.edu`).
+When you launch a software application that uses a graphical user interface (GUI) from the command line, this is completed through X11 forwarding. From a Mac Terminal log in using the -Y option (`ssh -Y <yourusername>@login.discovery.neu.edu`).
 
 :::{tip}
-If you used the -Y option to enable X11 forwarding on your Mac, you can test to see if it is working by typing `xeyes`. This will run a small program that makes
-a pair of eyes appear to follow your cursor.
+If you used the -Y option to enable X11 forwarding on your Mac, you can test to see if it is working by typing `xeyes`. This will run a small program that makes a pair of eyes appear to follow your cursor.
 :::
 
 ### Passwordless ssh
@@ -62,7 +58,10 @@ Errors that you can see on both Mac and Windows when launching a GUI-based progr
 >
 > `Launch failed: non-zero return code`
 
-If you are getting these types of errors, follow the steps below to set up passwordless ssh.
+If you are getting these types of errors, it could be because of following reasons:
+
+1. You haven't set up passwordless SSH. If that's the case, you can follow the steps below to set up passwordless SSH.
+1. When requesting a compute node from the login node, you may have forgotten to include the `--x11` option. In that case please see this example [srun](https://rc-docs.northeastern.edu/en/latest/using-discovery/srun.html?highlight=X11#srun-examples) command for more details.
 :::
 
 **Setting up passwordless ssh:**
