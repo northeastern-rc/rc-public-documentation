@@ -108,18 +108,18 @@ Slurm will then schedule your job to run when resources are available. It return
 To check the status of your job, you use the `squeue` command:
 
 :::{code} bash
-squeue -u *<username>*
+squeue -u  <username>
 :::
 
 To cancel a job, you use the `scancel` command with the job ID:
 
 :::{code} bash
-scancel *<job_id>*
+scancel  <job_id>
 :::
 
 To check detailed information about a job, use the `scontrol` command:
 :::{code} bash
-scontrol show job *<job_id>*
+scontrol show job  <job_id>
 :::
 
 This information is crucial for managing your jobs and ensuring they are running as expected.
@@ -130,11 +130,11 @@ The `sbatch` command is used to submit a job script for later execution. The scr
 
 ### Syntax: `sbatch`
 :::{code} bash
-sbatch [options] *<script_file>*
+sbatch [options]  <script_file>
 :::
 
 ### Options and Usage: `sbatch`
-- `n, --ntasks=*<number>*` : specify the number of tasks
+- `n, --ntasks= <number>` : specify the number of tasks
 - `N, --nodes=<minnodes[-maxnodes]>` : specify the number of nodes
 - `J, --job-name=<jobname>` : specify a name for the job
 
