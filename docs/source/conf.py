@@ -44,7 +44,12 @@ extensions = [
     # "sphinxext.opengraph",
     # For the kitchen sink
     "sphinx.ext.todo",
+    'sphinx.ext.autosectionlabel',
 ]
+
+# Prefix document path to section labels, to use:
+# `path/to/file:heading` instead of just `heading`
+autosectionlabel_prefix_document = True
 
 intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
 
@@ -53,9 +58,6 @@ myst_enable_extensions = [
     "deflist",
     "dollarmath",
 ]
-
-
-# extensions = ['sphinx_markdown_tables',]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
