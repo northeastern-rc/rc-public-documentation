@@ -144,7 +144,7 @@ Also, set the environment variable `SLURM_OVERLAP=1` via
 export SLURM_OVERLAP=1
 :::
 :::{note}
-Run `export SLURM_OVERLAP=1` prior to logging onto a compute node.
+Run `export SLURM_OVERLAP=1` prior to logging onto a compute node when using MPI interactively.
 :::
 ::::
 
