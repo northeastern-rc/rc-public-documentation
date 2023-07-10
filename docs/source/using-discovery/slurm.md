@@ -133,6 +133,21 @@ The other option is to allocate resources for all the jobs simultaneously, allow
 While the `sbatch` and `srun` commands request resource allocation if none exists, using `salloc` allows us to separate the allocation and submission processes.
 :::
 
+::::{important}
+Slurm assumes certain things, such as the absence of command overlap between multiple CPUs (by default, steps do not share CPUs with other parallel steps). To deactivate this, use the following Slurm flag:
+
+:::{code} bash
+--overlap
+:::
+Also, set the environment variable `SLURM_OVERLAP=1` via
+:::{code} bash
+export SLURM_OVERLAP=1
+:::
+:::{note}
+Run `export SLURM_OVERLAP=1` prior to logging onto a compute node.
+:::
+::::
+
 (using-sbatch)=
 ## Batch Jobs: `sbatch` Command
 The `sbatch` command is used to submit a job script for later execution. The script includes the `SBATCH` directives that control the job parameters like the number of nodes, CPUs per task, job name, etc.
