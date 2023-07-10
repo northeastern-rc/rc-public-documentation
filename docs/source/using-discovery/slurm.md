@@ -124,6 +124,15 @@ scontrol show job  <job_id>
 
 This information is crucial for managing your jobs and ensuring they are running as expected.
 
+## Allocating Resources
+You have two options if you plan to perform multiple tasks in parallel. One is to treat each task as a separate job and run them independently.
+
+The other option is to allocate resources for all the jobs simultaneously, allowing for overlap between them (sharing CPUs, RAM, etc.) using the `--overlap` flag. Assuming that not all tasks will require the full resources simultaneously creates a more natural working environment, and resources are not wasted on idle time.
+
+:::{note}
+While the `sbatch` and `srun` commands request resource allocation if none exists, using `salloc` allows us to separate the allocation and submission processes.
+:::
+
 (using-sbatch)=
 ## Batch Jobs: `sbatch` Command
 The `sbatch` command is used to submit a job script for later execution. The script includes the `SBATCH` directives that control the job parameters like the number of nodes, CPUs per task, job name, etc.
