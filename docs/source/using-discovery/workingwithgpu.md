@@ -77,13 +77,9 @@ align: center
   - 3 (x8 GPUs)
 :::
 
-The public GPUs are available within two partitions, named `gpu` and
-`multigpu`. The differences between the two partitions are the
-number of GPUs that one can request per job and the time limit on each
-job. Both partitions give access to all the public GPU types
-mentioned above. The table below shows the differences between the two
-partitions. For more information about the partitions on the cluster,
-see [Partitions](../hardware/partitions.md).
+The `gpu` partition is the general GPU resource for HPC users looking to use a GPU; `multigpu` is the alternative, where more than one GPU are accessible.
+
+Anyone with a Discovery account can use the `gpu` partition. However, you must submit a [ServiceNow ticket] to request temporary access to `multigpu`: the `multigpu` partition is available for times in need for predefined time window. In other words, instances that require `multigpu` must demonstrate the need; furthermore, the specifics of the working code, as the partition is only accessible for a limited of time (e.g., 48 hours), so best to make sure to use at full capacity. Your request will be evaluated by members of the RC team to ensure that the resources in this partition will be used appropriately.
 
 :::{note}
 All user limits are subject to the availability of cluster resources at the time of submission and will be honored according to that.
