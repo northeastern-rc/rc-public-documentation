@@ -244,28 +244,21 @@ If CUDA is detected by PyTorch, you should see the result, `True`.
 :::::
 :::::{tab-item} TensorFlow
 
-We recommend that you use CUDA 11.2 (the latest supported version) when
+We recommend that you use CUDA 11.8 (the latest supported version) when
 working on a GPU with the latest version of TensorFlow (TF).
-TensorFlow provides information on the [compatibility of CUDA and
-TensorFlow versions](https://www.tensorflow.org/install/source#gpu),
-and [detailed installation instructions](https://www.tensorflow.org/install/pip).
 
-For the latest installation, use the TensorFlow pip package, which
-includes GPU support for CUDA-enabled devices:
+::::{seealso}
+[Compatibility of CUDA and TensorFlow versions](https://www.tensorflow.org/install/source#gpu), and [detailed installation instructions](https://www.tensorflow.org/install/pip).
+::::
+
+For the latest installation, use the TensorFlow pip package, which includes GPU support for CUDA-enabled devices:
 
 ::::{code-block} bash
-srun --partition=gpu --gres=gpu:1 --nodes=1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
-
-module load anaconda3/2022.05 cuda/11.2
 conda create --name TF_env python=3.9 -y
 source activate TF_env
-conda install -c conda-forge cudatoolkit=11.2.2 cudnn=8.1.0 -y
-
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/
-mkdir -p $CONDA_PREFIX/etc/conda/activate.d
-echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/' > $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 pip install --upgrade pip
-pip install tensorflow==2.11.*
+pip install tensorflow==2.13.*
 ::::
 
 Verify the installation:
