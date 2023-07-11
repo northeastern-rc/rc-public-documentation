@@ -159,7 +159,7 @@ times, based on GPU availability at that time.
 
 ## Using CUDA
 
-There are several versions of CUDA Toolkits on Discovery, including:
+There are several versions of CUDA Toolkits available on the HPC, including:
 
 ```
 cuda/9.0
@@ -176,16 +176,11 @@ cuda/11.8
 cuda/12.1
 ```
 
-Use the `module avail` command to check for the latest software
-versions on Discovery. To see details on a specific CUDA toolkit
-version, use `module show`. For example, `module show cuda/11.4`.
+Use the `module avail` command to check for the latest software versions on Discovery. To see details on a specific CUDA toolkit version, use `module show`. For example, `module show cuda/11.4`.
 
-To add CUDA to your path, use `module load`. For example, type
-`module load cuda/11.4` to load version 11.4 to your path.
+To add CUDA to your path, use `module load`. For example, type `module load cuda/11.4` to load version 11.4 to your path.
 
-Use the command `nvidia-smi` (NVIDIA System Management Interface)
-inside a GPU node to get the CUDA driver information and monitor the
-GPU device.
+Use the command `nvidia-smi` (NVIDIA System Management Interface) inside a GPU node to get the CUDA driver information and monitor the GPU device.
 
 (gpus-for-deep-learning)=
 ## GPUs for Deep Learning
