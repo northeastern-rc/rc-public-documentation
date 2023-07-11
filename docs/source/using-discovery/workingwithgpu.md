@@ -261,38 +261,43 @@ pip install --upgrade pip
 pip install tensorflow==2.13.*
 ::::
 
+
 Verify the installation:
 
-::::{code-block} bash
-# Verify the CPU setup (if successful, then a tensor is returned):
-python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal((1000, 1000))))"
-
-# verify the GPU setup (if successful, then a list of GPU device is returned):
-python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-
-# test if a GPU device is detected with TF (if successful, then True is returned):
-python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())'
-::::
-
-To get the name of the GPU, type:
-
-::::{code-block} bash
-python -c 'import tensorflow as tf;  print(tf.test.gpu_device_name())'
-::::
-
-If the installation is successful, then, for example, you should see
-the following as an output:
-
-::::{code-block} bash
-2023-02-24 16:39:35.798186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613\] Created device /device:GPU:0 with 10785 MB memory:  -> device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7 /device:GPU:0
+:::{code} bash
+python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' # True
 ::::
 
 ::::{note}
 Ignore the `Warning` messages that get generated after executing the above commands.
 ::::
-
 :::::
+:::::{tab-item} PyTorch + TensorFlow
+::::{code} bash
+conda create deeplearning-cuda11_8 python=3.9 -y
+source activate deeplearning-cuda11_8
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
+conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
+pip install --upgrade pip
+pip install tensorflow
+::::
+
+Verify installation:
+
+:::{code} bash
+python -c 'import torch; print(torch.cuda.is_available())' # True
+python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' # True
+::::
+:::::
+
 ::::::
+
+::::{tip}
+Install `jupyterlab` and few other commonly used datascience packages in the `pytorch_env` environment:
+:::{code} bash
+conda install pandas scikit-learn matplotlib seaborn jupyterlab -y
+:::
+::::
 
 [Pascal]: https://www.nvidia.com/en-us/data-center/tesla-p100/
 [PyTorch documentation]: https://pytorch.org/
