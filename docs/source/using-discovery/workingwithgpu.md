@@ -258,7 +258,7 @@ conda create --name TF_env python=3.9 -y
 source activate TF_env
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 pip install --upgrade pip
-pip install tensorflow
+pip install tensorflow==2.13.*
 ::::
 
 
@@ -279,7 +279,7 @@ source activate deeplearning-cuda11_8
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 pip install --upgrade pip
-pip install tensorflow
+pip install tensorflow==2.13.*
 ::::
 
 Verify installation:
