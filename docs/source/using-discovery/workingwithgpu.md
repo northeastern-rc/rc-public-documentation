@@ -2,15 +2,17 @@
 
 # Working with GPUs
 
-The Discovery cluster has various NVIDIA Graphics Processing Units (GPUs), as detailed in the table below.
+The cluster has various NVIDIA Graphics Processing Units (GPUs) available on gpu-equipped partitions, as listed in the table below.
 
-:::{note}
-The tables on this page slide from left-to-right. Make sure to swipe to right to see the content on the right side of the table
+:::{seealso}
+[Learn more about partitions.](../hardware/partitions.md)
 :::
+
 
 :::{list-table}
 --------------
 header-rows: 1
+align: center
 --------------
 
 * - GPU Type
