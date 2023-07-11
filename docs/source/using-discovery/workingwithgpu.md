@@ -110,34 +110,19 @@ header-rows: 1
   - 12
 :::
 
-Anyone with a Discovery account can use the `gpu`
-partition. However, you must submit a [ServiceNow ticket](https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7)
-to request temporary access to multigpu for testing, or to request
-full access to the `multigpu` partition.  Your request will be
-evaluated by members of the RC team to ensure that the resources in
-this partition will be used appropriately.
-
 ## Requesting GPUs with Slurm
 
-Use `srun` for interactive and `sbatch` for batch mode. The
-`srun` example below is requesting 1 node and 1 GPU with 4GB of
-memory in the `gpu` partition. You must use the `--gres=` option
-to request a gpu:
+Use `srun` for interactive and `sbatch` for batch mode. The `srun` example below is requesting 1 node and 1 GPU with 4GB of memory in the `gpu` partition. You must use the `--gres=` option to request a gpu:
 
-:::{code-block} bash
+:::{code} bash
 srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 :::
 
 :::{note}
-On the `gpu` partition, requesting more than 1 GPU
-(`--gres=gpu:1`) will cause your request to fail. Additionally,
-one cannot request all the CPUs on that gpu node as they are
-reserved for other GPUs.
+On the `gpu` partition, requesting more than 1 GPU (`--gres=gpu:1`) will cause your request to fail. Additionally, one cannot request all the CPUs on that gpu node as they are reserved for other GPUs.
 :::
 
-The `sbatch` example below is similar to the `srun` example above,
-but it submits the job in the background, gives it a name, and directs
-the output to a file:
+The `sbatch` example below is similar to the `srun` example above, but it submits the job in the background, gives it a name, and directs the output to a file:
 
 :::{code-block} shell
 #!/bin/bash
