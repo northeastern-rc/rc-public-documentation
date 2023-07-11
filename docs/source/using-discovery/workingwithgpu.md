@@ -21,55 +21,55 @@ align: center
   - CUDA Cores
   - Nodes in Public GPUs
   - Nodes in Private GPUs
-* - p100 ([Pascal](https://www.nvidia.com/en-us/data-center/tesla-p100/))
+* - p100 ([Pascal])
   - 12GB
   - N/A
   - 3,584
   - 12 (x3-4 GPUs)
   - 3 (x4 GPUs)
-* - v100-pcie ([Volta](https://www.nvidia.com/en-us/data-center/v100/))
+* - v100-pcie ([Volta])
   - 32GB
   - 640
   - 5,120
   - 4 (x2 GPUs)
   - 1 (x2 GPUs, 16GB)
-* - v100-sxm2 ([Volta](https://www.nvidia.com/en-us/data-center/v100/))
+* - v100-sxm2 ([Volta])
   - 32GB
   - 640
   - 5,120
   - 24 (x4 GPUs)
   - 10 (x4 GPUs, 16GB); 8 (x4 GPUs, 32GB)
-* - t4 ([Turing](https://www.nvidia.com/en-us/data-center/tesla-t4/))
+* - t4 ([Turing])
   - 15GB
   - 320
   - 2,560
   - 2 (x3-4 GPUs)
   - 1 (x4 GPUs)
-* - quadro ([Quadro RTX 8000](https://www.nvidia.com/en-us/design-visualization/previous-quadro-desktop-gpus/))
+* - quadro ([Quadro RTX 8000])
   - 46GB
   - 576
   - 4,608
   - 0
   - 2 (x3 GPUs)
-* - a30 ([Ampere](https://www.nvidia.com/en-us/data-center/products/a30-gpu/))
+* - a30 ([Ampere])
   - 24GB
   - 224
   - 3,804
   - 0
   - 1 (x3 GPUs)
-* - a100 ([Ampere](https://www.nvidia.com/en-us/data-center/a100/))
+* - a100 ([Amperea100])
   - 41 & 82GB
   - 432
   - 6,912
   - 3 (x4 GPUs)
   - 15 (x2-8 GPUs)
-* - a5000 ([Ampere RTX A5000](https://www.nvidia.com/en-us/design-visualization/rtx-a5000/))
+* - a5000 ([Ampere RTX A5000])
   - 24GB
   - 256
   - 8,192
   - 0
   - 6 (x8 GPUs)
-* - a6000 ([Ampere RTX A6000](https://www.nvidia.com/en-us/design-visualization/rtx-a6000/))
+* - a6000 ([Ampere RTX A6000])
   - 49GB
   - 336
   - 10,752
@@ -328,3 +328,14 @@ Ignore the `Warning` messages that get generated after executing the above comma
 
 :::::
 ::::::
+
+[Pascal]: https://www.nvidia.com/en-us/data-center/tesla-p100/
+[PyTorch documentation]: https://pytorch.org/
+[Volta]: https://www.nvidia.com/en-us/data-center/v100/
+[Turing]: https://www.nvidia.com/en-us/data-center/tesla-t4/
+[Quadro RTX 8000]: https://www.nvidia.com/en-us/design-visualization/previous-quadro-desktop-gpus/
+[Ampere]: https://www.nvidia.com/en-us/data-center/products/a30-gpu/
+[Amperea100]: https://www.nvidia.com/en-us/data-center/a100/
+[Ampere RTX A5000]: https://www.nvidia.com/en-us/design-visualization/rtx-a5000/
+[Ampere RTX A6000]: https://www.nvidia.com/en-us/design-visualization/rtx-a6000/
+[ServiceNow ticket]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7
