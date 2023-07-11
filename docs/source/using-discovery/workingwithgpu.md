@@ -216,39 +216,30 @@ Select the tab with the desire deeplearning framework.
 :::{warning}
 Each tab assumes you are on a GPU node before with CUDA 11.8 and anaconda modules loaded as done above.
 :::
+::::::{tab-set}
+:::::{tab-item} PyTorch
+The following example demonstrates how to build PyTorch inside a conda virtual environment for CUDA version 11.8.
+
+
 ::::{code-block} bash
----
+---------------------
 caption: |
     PyTorch's installation steps (with a specific GPU-type):
 ---
-srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
-module load anaconda3/2022.05 cuda/11.7
-conda create --name pytorch_env python=3.9 -y
+conda create --name pytorch_env python=3.10 -y
 source activate pytorch_env
-conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia -y
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
+::::
+Now, let's check the installation:
+::::{code} bash
 python -c 'import torch; print(torch.cuda.is_available())'
 ::::
-
-::::{note}
-If the installation times out, please ensure that your `.condarc`
-file doesn't contain additional channels. Also, consider cleaning
-your conda instance using the `conda clean` command. See [Conda
-best practices](https://rc-docs.northeastern.edu/en/latest/software/conda.html#conda-best-practices) .
 ::::
 
 If CUDA is detected by PyTorch, you should see the result, `True`.
 
-As the latest version of PyTorch often depends on the newest CUDA
-available, please refer to the [PyTorch documentation page](https://pytorch.org/) for the most up to date instructions on
-installation.
-
-The above PyTorch installation instructions will not include
-`jupyterlab` and few other commonly used datascience packages in the
-environment. In order to include those one can execute the following
-command after activating the `pytorch_env` environment:
-
-::::{code-block} bash
-conda install pandas scikit-learn matplotlib seaborn jupyterlab -y
+::::{seealso}
+[PyTorch documentation] for the most up-to-date instructions and for different CUDA versions.
 ::::
 :::::
 :::::{tab-item} TensorFlow
