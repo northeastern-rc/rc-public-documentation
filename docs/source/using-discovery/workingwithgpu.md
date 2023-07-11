@@ -205,32 +205,32 @@ GPU device.
 (gpus-for-deep-learning)=
 ## GPUs for Deep Learning
 
-::::::{tab-set}
-:::::{tab-item} PyTorch
+:::{seealso}
+Deep learning frameworks tend to cost storage that can quickly surpass {ref}`home-directory-storage-quota`: follow best practices for {ref}`best-practices-conda-environments`.
+:::
 
-You should use PyTorch with a conda virtual environment if you need to
-run the environment on the Nvidia GPUs on Discovery. The following
-example demonstrates how to build PyTorch inside a conda virtual
-environment for CUDA version 11.7.
+First, log onto `gpu` interactively, and load anaconda and CUDA 11.8:
+
+:::{code} bash
+srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
+module load anaconda3/2022.05 cuda/11.8
+:::
 
 ::::{note}
-Make sure to be on a GPU node before loading the
-environment. Additionally, the latest version of PyTorch is not
-compatible with GPUs with CUDA version 11.7 or less. Hence, the
-installation does not work on k40m or k80 GPU's. In order to see
-what `non-Kepler` GPUs might be available execute the following
-command:
+Be aware of compatibility regarding the GPU type: some installations do not work on k40m or k80 GPUs. To see what `non-Kepler` GPUs might be available execute the following command:
 
 :::
 sinfo -p gpu --Format=nodes,cpus,memory,features,statecompact,nodelist,gres
 :::
 
-This will indicate the state (idle or not) of a certain gpu-type
-that could be helpful in requesting an `idle` gpu. However, the
-command does not give real-time information of the state and should
-be used with caution.
+This will indicate the state (idle or not) of a certain gpu-type that could be helpful in requesting an `idle` gpu. However, the command does not give real-time information of the state and should be used with caution.
 ::::
 
+Select the tab with the desire deeplearning framework.
+
+:::{warning}
+Each tab assumes you are on a GPU node before with CUDA 11.8 and anaconda modules loaded as done above.
+:::
 ::::{code-block} bash
 ---
 caption: |
