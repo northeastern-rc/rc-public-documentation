@@ -626,9 +626,11 @@ View what nodes are in what state in a partition using `statecompact`:
 sinfo -p <partition> --Format=time,nodes,statecompact,features,memory,cpus,nodelist
 :::
 
+(advanced-usage)=
 ## Advanced Usage
-Advanced usage of Slurm involves working with multi-node jobs, GPU jobs, and understanding priority and Quality of Service (QoS) parameters. It also involves memory management and the use of environment variables in job scripts.
+Advanced usage of Slurm involves working with {ref}`multi-node-jobs`, {ref}`gpu-jobs`, and understanding {ref}`priority-and-qos` parameters. It also involves {ref}`memory-management` and {ref}`environment-variables-scripts`.
 
+(multi-node-jobs)=
 ### Multi-node Jobs
 Multi-node jobs involve executing a single job across multiple nodes. Such jobs are typically used for computationally intensive tasks that require significant parallelization.
 
@@ -646,6 +648,7 @@ Multi-node jobs are used in scenarios where tasks can be broken down into sub-ta
 srun ./my_program
 :::
 
+(gpu-jobs)=
 ### GPU Jobs
 Slurm can also manage GPU resources, allowing you to specify GPU requirements in your job scripts.
 
@@ -665,6 +668,7 @@ GPU jobs are used in scenarios where tasks are parallelized and can benefit from
 srun ./my_gpu_program
 :::
 
+(priority-and-qos)=
 ### Priority and QoS
 Slurm uses priority and Quality of Service (QoS) parameters to determine the order in which jobs are scheduled.
 
@@ -677,6 +681,7 @@ Quality of Service (QoS) parameters control various job limits, such as the maxi
 scontrol update jobid=<job_id> priority=<new_priority>
 :::
 
+(memory-management)=
 ### Memory Management
 In Slurm, memory allocation can be controlled on the job or task level using the `--mem` or `--mem-per-cpu` options, respectively.
 
@@ -709,6 +714,7 @@ srun ./my_program
 Either `--mem-per-cpu` or `--mem` can be specified as a sbatch directive, but not both.
 :::
 
+(environment-variables-scripts)=
 ### Using Environment Variables in Job Scripts
 Slurm sets several environment variables that you can use in your job scripts to control the job behavior dynamically. Some of these include `SLURM_JOB_ID`, `SLURM_JOB_NUM_NODES`, `SLURM_JOB_NODELIST`, etc.
 
@@ -728,6 +734,7 @@ echo "Node list: $SLURM_JOB_NODELIST"
 srun ./my_program
 :::
 
+(common-problems-slurm)=
 ## Common Problems and Troubleshooting
 Despite its flexibility and robustness, it's not uncommon to encounter issues when using Slurm. Here we'll explore some common problems and provide strategies for debugging and optimizing job scripts.
 
@@ -760,6 +767,7 @@ echo "Value of variable x is $x"
 3. **Optimizing Job Resources:** Monitor your job's resource usage using `sstat <job_id>` and adjust the resource requirements accordingly in your job script. Requesting more resources than needed can result in your job spending more time in the queue, while requesting less than needed can lead to job failures.
 Remember, troubleshooting requires patience and a systematic approach. Begin by identifying the problem, then hypothesize potential causes, test those hypotheses, and apply solutions. Make small changes one at a time and retest after each change. With experience, you will be able to troubleshoot effectively and make the most of your HPC resources.
 
+(best-practices)=
 ## Best Practices
 In this section, we will discuss some best practices that can help you make efficient use of resources, write optimized job scripts, and ensure maximum throughput and minimal queue time in a Slurm-based HPC environment.
 
