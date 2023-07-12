@@ -264,24 +264,100 @@ srun --partition=gpu --nodes=1 --ntasks=1 --gres=gpu:1 --mem=1Gb --time=01:00:00
 :::
 
 (job-arrays)=
-## Job Arrays
-Job arrays are a series of similar jobs. They are especially useful when you want to run the same job multiple times with minor changes, such as different input files.
+## Slurm Job Arrays
+Job arrays are a convenient way to submit and manage large numbers of similar jobs quickly. They can process millions of tasks in milliseconds, provided they are within size limits. Job arrays are particularly useful when running similar jobs, such as performing the same analysis with different inputs or parameters.
 
-In HPC environments, users often need to run large numbers of jobs that are very similar, such as simulations with varying input parameters or the processing of multiple data files. Managing and tracking individual jobs can be a cumbersome and time-consuming process. **Enter: Slurm job arrays.**
-
-A job array is a collection of related jobs submitted to Slurm as a single entity. A unique index identifies each job in the array, which runs independently on a separate compute node. The index can specify different input files or parameters for each job, allowing for the efficient processing of many similar tasks.
+Using job arrays can save time and reduce the amount of manual work required. Instead of submitting each job individually, you can submit a single job array and let Slurm handle the scheduling of individual jobs. This approach is beneficial if you have limited time or resources, as it allows you to use the cluster's computing power more efficiently by running multiple jobs in parallel.
 
 There are several ways to define job arrays, such as specifying the range of indices or providing a list of indices in a file. Slurm also offers various features to manage and track job arrays, such as options to simultaneously suspend, resume, or cancel all jobs in the array.
 
 ### Syntax: Job Arrays
+The most basic configuration for a job array is as follows:
+:::{code}
+#!/bin/bash
+#SBATCH --partition=general
+#SBATCH --job-name=jarray-example
+#SBATCH --output=out/array_%A.out
+#SBATCH --error=err/array_%A.err
+#SBATCH --array=1-6
+:::
+This command runs the same script six times using Slurm job arrays. Each job array has two additional environment variable sets. `SLURM_ARRAY_JOB_ID` (`%A`) is set to the first job ID of the array, and `SLURM_ARRAY_TASK_ID` (`%a`) is set to the job array index value.
+
+::::{tip}
+Generally, we want to pass the former as an argument for our script. If you are using R, you can retrieve the former using `task_id <- Sys.getenv("SLURM_ARRAY_TASK_ID")`. If you are using job arrays with Python, you can obtain the task ID using the following:
+
+:::{code} python
+import sys
+taskId = sys.getenv('SLURM_ARRAY_TASK_ID')
+:::
+::::
+
+In the previously defined Slurm header, the error and output file are overwritten whenever a "task" (one of the executions of the script through the job array) finishes. The modification below ensures that each "task id" will have its own output and error files.
+
+:::{code} bash
+#!/bin/bash
+#SBATCH --partition=general
+#SBATCH --job-name=jarray-example
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=err/array_%A_%a.err
+#SBATCH --array=1-6
+:::
+When submitting an array with many dimensions, please use the "%" symbol to indicate how many tasks run simultaneously. For example, the following code specifies an array of 600 jobs, with 20 running at a time:
+
+:::{code} bash
+#!/bin/bash
+#SBATCH --partition=general
+#SBATCH --job-name=jarray-example
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=err/array_%A_%a.err
+#SBATCH --array=1-600%20
+:::
+
+Whenever you specify the memory, number of nodes, number of CPUs, or other specifications, they will be applied to each task. Therefore, if we set the header of our submission file as follows:
+
+:::{code}
+#!/bin/bash
+#SBATCH --partition=general
+#SBATCH --job-name=jarray-example
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=err/array_%A_%a.err
+#SBATCH --array=1-600%20
+#SBATCH --mem=128G
+#SBATCH --nodes=2
+:::
+Slurm will submit 20 jobs simultaneously. Each job, represented by a task ID, will use two nodes with 128GB of RAM each. In most cases, setting up a single task is sufficient.
+
+Lastly, we usually use job arrays for embarrassingly parallel jobs. If your case is such that the job executed at each job ID does not use any multi-threading libraries, you can use the following header to avoid wasting resources:
+
+:::{code}
+#!/bin/bash
+#SBATCH --partition=general
+#SBATCH --job-name=jarray-example
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=err/array_%A_%a.err
+#SBATCH --array=1-600%50  # 50 is the maximum number
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=2G ## debug prior to know how much RAM
+:::
+
+:::{warning}
+50 is the maximum number of jobs allowed to be run at once.
+:::
+
+The above examples apply for interactive mode, as well. For instance:
+
 :::{code} bash
 sbatch --array=<indexes> [options] script_file
 :::
 
+Indexes can be listed as `1-5` (i.e., one to five), `=1,2,3,5,8,13` (i.e., each index listed), or `1-200%5` (i.e., produce a 200 task job array with only 5 tasks active at any given time). **The symbol used is the % sign, which tasks to be submitted at once** (again, cannot be set larger than 50).
+
+
 ### Use-cases: Job Arrays
 Job arrays can be used in situations where you have to process multiple data files using the same procedure or program. Instead of creating multiple scripts or running the same script multiple times, you can create a job array, and Slurm will handle the parallel execution for you.
 
-### Code Example Showcasing Job Array Submission
+### Example using Job Array Flag
 In the following script, the `$SLURM_ARRAY_TASK_ID` variable is used to differentiate between array tasks.
 
 :::{code} bash
@@ -299,10 +375,10 @@ srun ./my_program input_$SLURM_ARRAY_TASK_ID
 To submit this job array, save it as `my_array_job.sh` and run:
 
 :::{code} bash
-sbatch --array=1-100 my_array_job.sh
+sbatch --array=1-50 my_array_job.sh
 :::
 
-This command will submit 100 jobs, running `my_program` with `input_1` through `input_100`.
+This command will submit 50 jobs, running `my_program` with `input_1` through `input_100`.
 
 (job-management)=
 ## Job Management
