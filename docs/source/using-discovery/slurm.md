@@ -149,7 +149,6 @@ sbatch [options]  <script_file>
 - `N, --nodes=<minnodes[-maxnodes]>` : specify the number of nodes
 - `J, --job-name=<jobname>` : specify a name for the job
 
-### Code Example of Job Submission Script
 :::{code} bash
 #!/bin/bash
 #SBATCH -J MyJob               # Job name
@@ -167,8 +166,8 @@ To submit this job script, save it as `my_job.sh` and run:
 sbatch my_job.sh
 :::
 
-### Examples using sbatch
-**Job request: one node**
+### Examples using `sbatch`
+#### Single node
 Run a job on one node for four hours on the short partition:
 
 :::{code} bash
@@ -181,7 +180,7 @@ Run a job on one node for four hours on the short partition:
 # <commands to execute>
 :::
 
-**Job request: one node with additional memory**
+#### Single node with additional memory
 The default memory per allocated core is 1.95GB. If calculations attempt to access more memory than allocated, Slurm automatically terminates the job. Request a specific amount of memory in the job script if calculations require more than the default. The example script below requests 100GB of memory (`--mem=100G`). Use one capital letter to abbreviate the unit of memory (i.e., kilo `K`, mega `M`, giga `G`, and tera `T`) with the `--mem=` option, as that is what Slurm expects to see:
 
 :::{code} bash
@@ -195,7 +194,7 @@ The default memory per allocated core is 1.95GB. If calculations attempt to acce
 # <commands to execute>
 :::
 
-**Job request: one node with exclusive use of a node**
+#### Single with exclusive use of a node
 If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies the exclusive use of one node in the short partition for four hours:
 
 :::{code} bash
@@ -224,27 +223,13 @@ srun [options] [command]
 - **`N, --nodes=<minnodes[-maxnodes]>`**: specify the number of nodes
 - **`J, --job-name=<jobname>`**: specify a name for the job
 
-### Code Example for Interactive Job Submission
 :::{code} bash
 srun -N 1 -n 1 --pty bash
 :::
 
 This command starts an interactive bash shell on one node with one task.
 
-### Viewing Cluster Information
-:::{code} bash
-sinfo <options>
-:::
-
-This command allows to view partition and node information. Use option -a to view all partitions.
-
-:::{code} bash
-smap <options>
-:::
-
-This command allows to view details about the cluster in a visual format
-
-### Examples using srun
+### Examples using `srun`
 
 The user needs to review the {ref}`hardware-overview` and {ref}`partition-names` to be familiar with the available hardware and partition limits on Discovery. This way, user can tailor the request to fit both the needs of the job and the limits of partitions. For example, if the user specifies `--partition=short` and `--time=01:00:00`, it will result in an error because the time specified exceeds the limit for that partition.
 
@@ -366,7 +351,7 @@ Some of the tasks that can done using `scontrol` include:
 
 Overall, `scontrol` is a powerful tool for managing Slurm jobs and job-related resources. Its command-line interface allows users to perform a wide range of tasks, from checking the status of jobs to modifying job properties and managing dependencies.
 
-### Controlling jobs
+### Controlling jobs: `scontrol`
 Place a hold on a pending job, i.e., prevent specified job from starting. <job_list> is either a space separate list of job IDs or job names.
 
 :::{code} bash
@@ -416,7 +401,7 @@ To view information about a specific reservation (e.g., found via `scontrol show
 scontrol show reservation <reservation_name>
 :::
 
-
+### Cancelling Jobs: `scancel`
 #### Syntax: `scontrol`
 :::{code} bash
 scontrol [command] [options]
@@ -445,7 +430,7 @@ scancel [options] [job_id]
 - **`u, --user=<user_name>`**: cancel all jobs of a specific user
 - **`-name=<job_name>`**: cancel all jobs with a specific name
 
-#### Code Example of Cancelling Jobs
+#### Examples using `scancel`
 To cancel a specific job, use:
 
 :::{code} bash
@@ -467,7 +452,7 @@ scancel --name=<job_name>
 The job management section aims to give you a solid understanding of how to manage and control your jobs effectively. Always ensure to monitor your jobs regularly and adjust parameters as needed to achieve the best performance.
 
 (cluster-and-node-states)=
-## Cluster and Node States
+## Cluster and Node States: `sinfo`
 Below are some more examples of using `sinfo` and `scontrol` to provide information about the state of the cluster and specific nodes.
 
 ### Using `sinfo`
@@ -769,7 +754,7 @@ If you need further support, please contact your system administrator or visit t
 ### Slurm FAQs
 - [Frequently Asked Questions].
 
-## Slurm References
+### Slurm References
 1. SchedMD. (2023). Slurm Workload Manager. [https://slurm.schedmd.com](https://slurm.schedmd.com/)
 2. SchedMD. (2023). Slurm Quick Start User Guide. [https://slurm.schedmd.com/quickstart.html](https://slurm.schedmd.com/quickstart.html)
 3. IBM. (2023). High Performance Computing For Dummies, IBM Limited Edition. [https://www.ibm.com/downloads/cas/WQDZWBYJ](https://www.ibm.com/downloads/cas/WQDZWBYJ)
