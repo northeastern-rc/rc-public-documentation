@@ -233,7 +233,7 @@ python -c 'import torch; print(torch.cuda.is_available())'
 
 If CUDA is detected by PyTorch, you should see the result, `True`.
 
-::::{seealso}
+:::{seealso}
 [PyTorch documentation] for the most up-to-date instructions and for different CUDA versions.
 ::::
 :::::
@@ -269,7 +269,7 @@ Ignore the `Warning` messages that get generated after executing the above comma
 :::::
 :::::{tab-item} PyTorch + TensorFlow
 ::::{code} bash
-conda create deeplearning-cuda11_8 python=3.9 -y
+conda create --name deeplearning-cuda11_8 python=3.9 -y
 source activate deeplearning-cuda11_8
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
