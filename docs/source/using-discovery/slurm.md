@@ -1,11 +1,11 @@
 (using-slurm)=
 # Using Slurm
 
-## Brief Overview of Slurm
+## Slurm Overview
 Slurm (Simple Linux Utility for Resource Management) is an open-source, highly configurable, fault-tolerant, and adaptable workload manager. It is extensively used across High-Performance Computing (HPC) environments.
 
 Slurm is designed to accommodate the complex needs of large-scale computational workloads. It can efficiently distribute and manage tasks across clusters comprising thousands of nodes, offering seamless control over resources, scheduling, and job queuing.
-It is the software on the HPC that lets users do tasks such as view information about the cluster, {ref}`job-submission-and-monitoring`, including {ref}`job-arrays`, {ref}`job-management`, view {ref}`account-information`, and check the {ref}`cluster-and-node-states`.
+It is the software on the HPC that provides functionalities such as {ref}`job-arrays`, {ref}`job-management`, view {ref}`account-information`, and check the {ref}`cluster-and-node-states`.
 
 ## Importance and Uses of Slurm in HPC
 HPC systems are designed to perform complex, computationally intensive tasks. For example, users can specify complex workflows of jobs where specific jobs depend on others, and Slurm will manage the scheduling and execution of these workflows. Efficiently managing these tasks and resources in such an environment is a daunting challenge. That's where Slurm comes into play.
