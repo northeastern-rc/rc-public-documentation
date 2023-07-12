@@ -452,6 +452,23 @@ For more information on the commands listed above, along with a complete list of
 scontrol --help
 :::
 
+#### Syntax: `scontrol`
+:::{code} bash
+scontrol [command] [options]
+:::
+
+#### Example: `scontrol`
+:::{code} bash
+scontrol show jobid -d <JOBID>
+:::
+
+#### Options and Usage: `scontrol`
+- **`update`**: used to modify job or system configuration
+- **`hold jobid=<job_id>`**: hold a specific job
+- **`release jobid=<job_id>`**: release a specific job
+- **`requeue jobid=<job_id>`**: requeue a specific job
+
+
 ### Examples using `scontrol`
 View information about a specific node:
 
@@ -478,25 +495,8 @@ scontrol show reservation <reservation_name>
 :::
 
 ### Cancelling Jobs: `scancel`
-#### Syntax: `scontrol`
-:::{code} bash
-scontrol [command] [options]
-:::
-
-#### Example: `scontrol`
-:::{code} bash
-scontrol show jobid -d <JOBID>
-:::
-
-#### Options and Usage: `scontrol`
-- **`update`**: used to modify job or system configuration
-- **`hold jobid=<job_id>`**: hold a specific job
-- **`release jobid=<job_id>`**: release a specific job
-- **`requeue jobid=<job_id>`**: requeue a specific job
-
-
-### Cancelling Jobs
 The `scancel` command is used to cancel a running or pending job. Once cancelled, a job cannot be resumed.
+
 #### Syntax: `scancel`
 :::{code} bash
 scancel [options] [job_id]
@@ -563,7 +563,11 @@ gpu          up    8:00:00      2   resv c2177,d1029
 gpu          up    8:00:00     50    mix c[2160,2163-2170,2172-2176,2178-2179,2185-2187,2189-2195,2204-2207],d[1001,1003-1005,1007,1009-1013,1016,1018,1020-1024,1026-1028]
 gpu          up    8:00:00      3  alloc d[1002,1015,1019]
 gpu          up    8:00:00      4   idle c[2180-2183]
+:::
+
 The current `TimeLimit` for the queues:
+
+:::{code} bash
 sinfo  -o "%12P %.10A %.11l"
 PARTITION    NODES(A/I)   TIMELIMIT
 debug           402/174       20:00
