@@ -229,7 +229,6 @@ Now, let's check the installation:
 ::::{code} bash
 python -c 'import torch; print(torch.cuda.is_available())'
 ::::
-::::
 
 If CUDA is detected by PyTorch, you should see the result, `True`.
 
