@@ -93,8 +93,8 @@ PartitionName=test Nodes=compute[1-16] Default=YES MaxTime=INFINITE State=UP
 :::
 ::::
 
-(job-submission-and-monitoring)=
-## Job Submission and Monitoring
+(basic-usage)=
+## Basic Slurm Usage
 To submit your job script to Slurm, you use the `sbatch` command:
 
 :::{code} bash
