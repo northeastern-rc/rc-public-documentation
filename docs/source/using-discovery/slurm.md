@@ -122,8 +122,21 @@ scontrol show job  <job_id>
 
 This information is crucial for managing your jobs and ensuring they are running as expected.
 
+To view cluster information, use `sinfo`: this command allows to view partition and node information. Use option -a to view all partitions.
+:::{code} bash
+sinfo <options>
+:::
+
+The `smap` command allows to view details about the cluster in a visual format.
+
+:::{code} bash
+smap <options>
+:::
+
+Details on each of the commands above, and more, is covered in the following sections.
+
 (using-sbatch)=
-## Batch Jobs: `sbatch` Command
+## Batch Jobs: `sbatch`
 The `sbatch` command is used to submit a job script for later execution. The script includes the `SBATCH` directives that control the job parameters like the number of nodes, CPUs per task, job name, etc.
 
 ### Syntax: `sbatch`
