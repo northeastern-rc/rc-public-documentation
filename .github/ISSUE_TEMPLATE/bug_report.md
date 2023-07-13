@@ -1,38 +1,110 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
-labels: ''
+description: Report wrong or missing documentation
+title: 'BUG: '
+labels: 'Docs', 'Needs Triage'
 assignees: ''
+name: Documentation Improvement
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+name: "🐛 Bug Report"
+description: Create a new ticket for a bug.
+title: "🐛 [BUG] - <title>"
+labels: [
+  "bug"
+]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Please enter an explicit description of your issue
+      placeholder: Short and explicit description of your incident...
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Pandas version checks
+      options:
+        - label: >
+            I have checked that the issue still exists on the latest versions of the docs
+            on `master` [here](https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html)
+          required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Location of the documentation
+      description: >
+        Please provide the location of the documentation, e.g. section and subsection(s)
+        "Best Practices:Checkpointing Jobs: Saving a Pytorch Model" or the URL of the
+        documentation, e.g.,
+        "https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
+      placeholder: https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Documentation problem or request
+      description: >
+        Please provide a description of what documentation you believe needs to be fixed,
+        improved, or added.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      value: |
+        ![DESCRIPTION](LINK.png)
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: bash
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "Browsers"
+      description: What browsers are you seeing the problem on ?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+    validations:
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: "OS"
+      description: What is the impacted environment ?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: false
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested fix for documentation
+      description: >
+        Please explain the suggested fix and **why** it's better than the existing
+        documentation. If there are errors related (e.g., from running sample code),
+        please include messages.
+        Feel free to include any third-party resources if related.
+    validations:
+      required: true
