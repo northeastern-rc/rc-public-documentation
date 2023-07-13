@@ -1,19 +1,12 @@
----
-name: Bug report
-about: Create a report to help us improve
-description: Report wrong or missing documentation
-title: 'BUG: '
-labels: 'Docs', 'Needs Triage'
-assignees: ''
-name: Documentation Improvement
-
----
-
 name: "🐛 Bug Report"
+about: Create a report to help us improve
 description: Create a new ticket for a bug.
 title: "🐛 [BUG] - <title>"
+assignees: ''
 labels: [
-  "bug"
+  "bug",
+  "Docs",
+  "Needs Triage"
 ]
 body:
   - type: textarea
