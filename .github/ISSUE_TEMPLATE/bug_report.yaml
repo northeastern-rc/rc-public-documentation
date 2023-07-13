@@ -1,20 +1,15 @@
-name: 🐛 Bug Report
+name: Bug Report
 about: Create a report to help us improve
 description: Create a new ticket for a bug.
-title: "🐛 [BUG] - <title>"
-assignees: ''
-labels: [
-  "bug",
-  "Docs",
-  "Needs Triage"
-]
+title: "[BUG] - <title>"
+labels: bug, Docs, Needs Triage
 body:
   - type: textarea
     id: description
     attributes:
       label: "Description"
       description: Please enter an explicit description of your issue
-      placeholder: Short and explicit description of your incident...
+      placeholder: A short and explicit description of your incident...
     validations:
       required: true
   - type: checkboxes
@@ -30,8 +25,8 @@ body:
     attributes:
       label: Location of the documentation
       description: >
-        Please provide the location of the documentation, e.g. section and subsection(s)
-        "Best Practices:Checkpointing Jobs: Saving a Pytorch Model" or the URL of the
+        Please provide the location of the documentation, e.g., section and subsection(s)
+        "Best Practices: Checkpointing Jobs: Saving a Pytorch Model" or the URL of the
         documentation, e.g.,
         "https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
       placeholder: https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model
@@ -42,7 +37,7 @@ body:
     attributes:
       label: Documentation problem or request
       description: >
-        Please provide a description of what documentation you believe needs to be fixed,
+        Please describe what documentation you believe needs to be fixed,
         improved, or added.
     validations:
       required: true
@@ -50,7 +45,7 @@ body:
     id: screenshot
     attributes:
       label: "Screenshots"
-      description: If applicable, add screenshots to help explain your problem.
+      description: If applicable, could you add screenshots to help explain your problem?
       value: |
         <IMAGE>
       render: bash
@@ -60,7 +55,7 @@ body:
     id: logs
     attributes:
       label: "Logs"
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so there is no need for backticks.
       render: bash
     validations:
       required: false
@@ -68,7 +63,7 @@ body:
     id: browsers
     attributes:
       label: "Browsers"
-      description: What browsers are you seeing the problem on ?
+      description: What browsers are you seeing the problem on?
       multiple: true
       options:
         - Firefox
@@ -82,7 +77,7 @@ body:
     id: os
     attributes:
       label: "OS"
-      description: What is the impacted environment ?
+      description: What is the impacted environment?
       multiple: true
       options:
         - Windows
@@ -96,8 +91,8 @@ body:
       label: Suggested fix for documentation
       description: >
         Please explain the suggested fix and **why** it's better than the existing
-        documentation. If there are errors related (e.g., from running sample code),
+        documentation. If there are related errors (e.g., from running sample code),\
         please include messages.
-        Feel free to include any third-party resources if related.
+        Feel free to include any third-party resources if you need them.
     validations:
       required: true
