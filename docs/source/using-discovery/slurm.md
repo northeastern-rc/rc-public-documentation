@@ -1,26 +1,24 @@
 (using-slurm)=
 # Using Slurm
 
-## Brief Overview of Slurm
+## Slurm Overview
 Slurm (Simple Linux Utility for Resource Management) is an open-source, highly configurable, fault-tolerant, and adaptable workload manager. It is extensively used across High-Performance Computing (HPC) environments.
 
 Slurm is designed to accommodate the complex needs of large-scale computational workloads. It can efficiently distribute and manage tasks across clusters comprising thousands of nodes, offering seamless control over resources, scheduling, and job queuing.
-It is the software on the HPC that lets users do tasks such as view information about the cluster, {ref}`job-submission-and-monitoring`, including {ref}`job-arrays`, {ref}`job-management`, view {ref}`account-information`, and check the {ref}`cluster-and-node-states`.
+It is the software on the HPC that provides functionalities such as {ref}`job-arrays`, {ref}`job-management`, view {ref}`account-information`, and check the {ref}`cluster-and-node-states`.
 
-## Importance and Uses of Slurm in HPC
+###  Slurm on HPC
 HPC systems are designed to perform complex, computationally intensive tasks. For example, users can specify complex workflows of jobs where specific jobs depend on others, and Slurm will manage the scheduling and execution of these workflows. Efficiently managing these tasks and resources in such an environment is a daunting challenge. That's where Slurm comes into play.
 
 Slurm allows users to submit their computational tasks as jobs to be scheduled on the cluster's compute nodes. Its role-based access control ensures proper resource allocation and job execution, preventing resource conflicts.
 
 Slurm is crucial in research environments, where it ensures fair usage of resources among a multitude of users, helps optimize the workload for the available resources, and provides precise job accounting and statistics.
 
-**Page Objective:**
+### Page Objective:
+To understand the Slurm workload manage, which will allow you to properly leverage the HPC. It starts with the basics - the resources that Slurm manager. Then, useful Slurm features (e.g., job submission, monitoring, canceling, etc.) are mentioned with code examples. We discuss jobs that are both interactive (i.e., {ref}`using-srun`) and batch (i.e., {ref}`using-sbatch`), along with the slurm array variants (i.e., {ref}`job-arrays`). {ref}`advanced-usage`, {ref}`common-problems-slurm`, and {ref}`best-practices` are also covered.
 
-This tutorial aims to equip users with an understanding of the Slurm workload manager. It starts with the basics, teaching you how to install and configure Slurm, before diving into the more nuanced aspects of job submission and management. The tutorial also covers advanced usage, troubleshooting, and best practices to get the most out of your HPC environment.
-
-**Who Should Use This Guide?**
-
-This guide is ideal for beginners new to Slurm and HPC, researchers intending to use Slurm-based clusters for their computation tasks, system administrators managing HPC environments, and even seasoned HPC users looking to brush up on their knowledge. It progresses from fundamental to advanced topics, making it a valuable resource for a broad audience.
+### Who Should Use This Guide?
+This guide is for HPC users: researchers intending to use Slurm-based clusters for their computation tasks, system administrators managing HPC environments, and even seasoned HPC users looking to brush up on their knowledge. It progresses from fundamental to advanced topics, making it a valuable resource for a broad audience.
 
 ## Slurm: Basic Concepts
 Before we delve into using Slurm, it's essential to grasp some fundamental concepts related to its operation.
@@ -95,8 +93,8 @@ PartitionName=test Nodes=compute[1-16] Default=YES MaxTime=INFINITE State=UP
 :::
 ::::
 
-(job-submission-and-monitoring)=
-## Job Submission and Monitoring
+(basic-usage)=
+## Basic Slurm Usage
 To submit your job script to Slurm, you use the `sbatch` command:
 
 :::{code} bash
@@ -124,8 +122,15 @@ scontrol show job  <job_id>
 
 This information is crucial for managing your jobs and ensuring they are running as expected.
 
+To view cluster information, use `sinfo`: this command allows to view partition and node information. Use option -a to view all partitions.
+:::{code} bash
+sinfo <options>
+:::
+
+Details on each of the commands above, and more, is covered in the following sections.
+
 (using-sbatch)=
-## Batch Jobs: `sbatch` Command
+## Batch Jobs: `sbatch`
 The `sbatch` command is used to submit a job script for later execution. The script includes the `SBATCH` directives that control the job parameters like the number of nodes, CPUs per task, job name, etc.
 
 ### Syntax: `sbatch`
@@ -138,7 +143,6 @@ sbatch [options]  <script_file>
 - `N, --nodes=<minnodes[-maxnodes]>` : specify the number of nodes
 - `J, --job-name=<jobname>` : specify a name for the job
 
-### Code Example of Job Submission Script
 :::{code} bash
 #!/bin/bash
 #SBATCH -J MyJob               # Job name
@@ -156,8 +160,8 @@ To submit this job script, save it as `my_job.sh` and run:
 sbatch my_job.sh
 :::
 
-### Examples using sbatch
-**Job request: one node**
+### Examples using `sbatch`
+#### Single node
 Run a job on one node for four hours on the short partition:
 
 :::{code} bash
@@ -170,7 +174,7 @@ Run a job on one node for four hours on the short partition:
 # <commands to execute>
 :::
 
-**Job request: one node with additional memory**
+#### Single node with additional memory
 The default memory per allocated core is 1.95GB. If calculations attempt to access more memory than allocated, Slurm automatically terminates the job. Request a specific amount of memory in the job script if calculations require more than the default. The example script below requests 100GB of memory (`--mem=100G`). Use one capital letter to abbreviate the unit of memory (i.e., kilo `K`, mega `M`, giga `G`, and tera `T`) with the `--mem=` option, as that is what Slurm expects to see:
 
 :::{code} bash
@@ -184,7 +188,7 @@ The default memory per allocated core is 1.95GB. If calculations attempt to acce
 # <commands to execute>
 :::
 
-**Job request: one node with exclusive use of a node**
+#### Single with exclusive use of a node
 If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies the exclusive use of one node in the short partition for four hours:
 
 :::{code} bash
@@ -213,27 +217,13 @@ srun [options] [command]
 - **`N, --nodes=<minnodes[-maxnodes]>`**: specify the number of nodes
 - **`J, --job-name=<jobname>`**: specify a name for the job
 
-### Code Example for Interactive Job Submission
 :::{code} bash
 srun -N 1 -n 1 --pty bash
 :::
 
 This command starts an interactive bash shell on one node with one task.
 
-### Viewing Cluster Information
-:::{code} bash
-sinfo <options>
-:::
-
-This command allows to view partition and node information. Use option -a to view all partitions.
-
-:::{code} bash
-smap <options>
-:::
-
-This command allows to view details about the cluster in a visual format
-
-### Examples using srun
+### Examples using `srun`
 
 The user needs to review the {ref}`hardware-overview` and {ref}`partition-names` to be familiar with the available hardware and partition limits on Discovery. This way, user can tailor the request to fit both the needs of the job and the limits of partitions. For example, if the user specifies `--partition=short` and `--time=01:00:00`, it will result in an error because the time specified exceeds the limit for that partition.
 
@@ -268,24 +258,95 @@ srun --partition=gpu --nodes=1 --ntasks=1 --gres=gpu:1 --mem=1Gb --time=01:00:00
 :::
 
 (job-arrays)=
-## Job Arrays
-Job arrays are a series of similar jobs. They are especially useful when you want to run the same job multiple times with minor changes, such as different input files.
+## Slurm Job Arrays
+Job arrays are a convenient way to submit and manage large numbers of similar jobs quickly. They can process millions of tasks in milliseconds, provided they are within size limits. Job arrays are particularly useful when running similar jobs, such as performing the same analysis with different inputs or parameters.
 
-In HPC environments, users often need to run large numbers of jobs that are very similar, such as simulations with varying input parameters or the processing of multiple data files. Managing and tracking individual jobs can be a cumbersome and time-consuming process. **Enter: Slurm job arrays.**
-
-A job array is a collection of related jobs submitted to Slurm as a single entity. A unique index identifies each job in the array, which runs independently on a separate compute node. The index can specify different input files or parameters for each job, allowing for the efficient processing of many similar tasks.
+Using job arrays can save time and reduce the amount of manual work required. Instead of submitting each job individually, you can submit a single job array and let Slurm handle the scheduling of individual jobs. This approach is beneficial if you have limited time or resources, as it allows you to use the cluster's computing power more efficiently by running multiple jobs in parallel.
 
 There are several ways to define job arrays, such as specifying the range of indices or providing a list of indices in a file. Slurm also offers various features to manage and track job arrays, such as options to simultaneously suspend, resume, or cancel all jobs in the array.
 
 ### Syntax: Job Arrays
+The most basic configuration for a job array is as follows:
+:::{code}
+#!/bin/bash
+#SBATCH --partition=short
+#SBATCH --job-name=jarray-example
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=err/array_%A_%a.err
+#SBATCH --array=1-6
+:::
+This command runs the same script six times using Slurm job arrays. Each job array has two additional environment variable sets. `SLURM_ARRAY_JOB_ID` (`%A`) is set to the first job ID of the array, and `SLURM_ARRAY_TASK_ID` (`%a`) is set to the job array index value.
+
+:::{note}
+Both the `SLURM_ARRAY_JOB_ID` (`%A`) and `SLURM_ARRAY_TASK_ID` (`%a`) are referenced when naming outputs so file do not overwrite when a "task" (i.e., one of the executions of the script through the job array) finishes.
+:::
+
+::::{tip}
+Generally, we want to pass the former as an argument for our script. If you are using R, you can retrieve the former using `task_id <- Sys.getenv("SLURM_ARRAY_TASK_ID")`. If you are using job arrays with Python, you can obtain the task ID using the following:
+
+:::{code} python
+import sys
+taskId = sys.getenv('SLURM_ARRAY_TASK_ID')
+:::
+::::
+
+When submitting an array and setting its size with many dimensions, please use the `%` symbol to indicate how many tasks run simultaneously. For example, the following code specifies an array of 600 jobs, with 20 running at a time:
+
+:::{code} bash
+#!/bin/bash
+#SBATCH --partition=short
+#SBATCH --job-name=jarray-example
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=err/array_%A_%a.err
+#SBATCH --array=1-600%20
+:::
+
+Whenever you specify the memory, number of nodes, number of CPUs, or other specifications, they will be applied to each task. Therefore, if we set the header of our submission file as follows:
+
+:::{code}
+#!/bin/bash
+#SBATCH --partition=short
+#SBATCH --job-name=jarray-example
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=err/array_%A_%a.err
+#SBATCH --array=1-600%20
+#SBATCH --mem=128G
+#SBATCH --nodes=2
+:::
+Slurm will submit 20 jobs simultaneously. Each job, represented by a task ID, will use two nodes with 128GB of RAM each. In most cases, setting up a single task is sufficient.
+
+Lastly, we usually use job arrays for embarrassingly parallel jobs. If your case is such that the job executed at each job ID does not use any multi-threading libraries, you can use the following header to avoid wasting resources:
+
+:::{code}
+#!/bin/bash
+#SBATCH --partition=short
+#SBATCH --job-name=jarray-example
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=err/array_%A_%a.err
+#SBATCH --array=1-600%50  # 50 is the maximum number
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=2G ## debug prior to know how much RAM
+:::
+
+:::{warning}
+50 is the maximum number of jobs allowed to be run at once per user-account.
+:::
+
+The above examples apply for interactive mode, as well. For instance:
+
 :::{code} bash
 sbatch --array=<indexes> [options] script_file
 :::
 
+Indexes can be listed as `1-5` (i.e., one to five), `=1,2,3,5,8,13` (i.e., each index listed), or `1-200%5` (i.e., produce a 200 task job array with only 5 tasks active at any given time). **The symbol used is the % sign, which tasks to be submitted at once** (again, cannot be set larger than 50).
+
+
 ### Use-cases: Job Arrays
 Job arrays can be used in situations where you have to process multiple data files using the same procedure or program. Instead of creating multiple scripts or running the same script multiple times, you can create a job array, and Slurm will handle the parallel execution for you.
 
-### Code Example Showcasing Job Array Submission
+### Example using Job Array Flag
+
 In the following script, the `$SLURM_ARRAY_TASK_ID` variable is used to differentiate between array tasks.
 
 :::{code} bash
@@ -303,10 +364,10 @@ srun ./my_program input_$SLURM_ARRAY_TASK_ID
 To submit this job array, save it as `my_array_job.sh` and run:
 
 :::{code} bash
-sbatch --array=1-100 my_array_job.sh
+sbatch --array=1-50 my_array_job.sh
 :::
 
-This command will submit 100 jobs, running `my_program` with `input_1` through `input_100`.
+This command will submit 50 jobs, running `my_program` with `input_1` through `input_100`.
 
 (job-management)=
 ## Job Management
@@ -355,7 +416,7 @@ Some of the tasks that can done using `scontrol` include:
 
 Overall, `scontrol` is a powerful tool for managing Slurm jobs and job-related resources. Its command-line interface allows users to perform a wide range of tasks, from checking the status of jobs to modifying job properties and managing dependencies.
 
-### Controlling jobs
+### Controlling jobs: `scontrol`
 Place a hold on a pending job, i.e., prevent specified job from starting. <job_list> is either a space separate list of job IDs or job names.
 
 :::{code} bash
@@ -379,6 +440,23 @@ For more information on the commands listed above, along with a complete list of
 :::{code} bash
 scontrol --help
 :::
+
+#### Syntax: `scontrol`
+:::{code} bash
+scontrol [command] [options]
+:::
+
+#### Example: `scontrol`
+:::{code} bash
+scontrol show jobid -d <JOBID>
+:::
+
+#### Options and Usage: `scontrol`
+- **`update`**: used to modify job or system configuration
+- **`hold jobid=<job_id>`**: hold a specific job
+- **`release jobid=<job_id>`**: release a specific job
+- **`requeue jobid=<job_id>`**: requeue a specific job
+
 
 ### Examples using `scontrol`
 View information about a specific node:
@@ -405,26 +483,9 @@ To view information about a specific reservation (e.g., found via `scontrol show
 scontrol show reservation <reservation_name>
 :::
 
-
-#### Syntax: `scontrol`
-:::{code} bash
-scontrol [command] [options]
-:::
-
-#### Example: `scontrol`
-:::{code} bash
-scontrol show jobid -d <JOBID>
-:::
-
-#### Options and Usage: `scontrol`
-- **`update`**: used to modify job or system configuration
-- **`hold jobid=<job_id>`**: hold a specific job
-- **`release jobid=<job_id>`**: release a specific job
-- **`requeue jobid=<job_id>`**: requeue a specific job
-
-
-### Cancelling Jobs
+### Cancelling Jobs: `scancel`
 The `scancel` command is used to cancel a running or pending job. Once cancelled, a job cannot be resumed.
+
 #### Syntax: `scancel`
 :::{code} bash
 scancel [options] [job_id]
@@ -434,7 +495,7 @@ scancel [options] [job_id]
 - **`u, --user=<user_name>`**: cancel all jobs of a specific user
 - **`-name=<job_name>`**: cancel all jobs with a specific name
 
-#### Code Example of Cancelling Jobs
+#### Examples using `scancel`
 To cancel a specific job, use:
 
 :::{code} bash
@@ -456,7 +517,7 @@ scancel --name=<job_name>
 The job management section aims to give you a solid understanding of how to manage and control your jobs effectively. Always ensure to monitor your jobs regularly and adjust parameters as needed to achieve the best performance.
 
 (cluster-and-node-states)=
-## Cluster and Node States
+## Cluster and Node States: `sinfo`
 Below are some more examples of using `sinfo` and `scontrol` to provide information about the state of the cluster and specific nodes.
 
 ### Using `sinfo`
@@ -491,7 +552,11 @@ gpu          up    8:00:00      2   resv c2177,d1029
 gpu          up    8:00:00     50    mix c[2160,2163-2170,2172-2176,2178-2179,2185-2187,2189-2195,2204-2207],d[1001,1003-1005,1007,1009-1013,1016,1018,1020-1024,1026-1028]
 gpu          up    8:00:00      3  alloc d[1002,1015,1019]
 gpu          up    8:00:00      4   idle c[2180-2183]
+:::
+
 The current `TimeLimit` for the queues:
+
+:::{code} bash
 sinfo  -o "%12P %.10A %.11l"
 PARTITION    NODES(A/I)   TIMELIMIT
 debug           402/174       20:00
@@ -550,9 +615,11 @@ View what nodes are in what state in a partition using `statecompact`:
 sinfo -p <partition> --Format=time,nodes,statecompact,features,memory,cpus,nodelist
 :::
 
+(advanced-usage)=
 ## Advanced Usage
-Advanced usage of Slurm involves working with multi-node jobs, GPU jobs, and understanding priority and Quality of Service (QoS) parameters. It also involves memory management and the use of environment variables in job scripts.
+Advanced usage of Slurm involves working with {ref}`multi-node-jobs`, {ref}`gpu-jobs`, and understanding {ref}`priority-and-qos` parameters. It also involves {ref}`memory-management` and {ref}`environment-variables-scripts`.
 
+(multi-node-jobs)=
 ### Multi-node Jobs
 Multi-node jobs involve executing a single job across multiple nodes. Such jobs are typically used for computationally intensive tasks that require significant parallelization.
 
@@ -570,6 +637,7 @@ Multi-node jobs are used in scenarios where tasks can be broken down into sub-ta
 srun ./my_program
 :::
 
+(gpu-jobs)=
 ### GPU Jobs
 Slurm can also manage GPU resources, allowing you to specify GPU requirements in your job scripts.
 
@@ -589,6 +657,7 @@ GPU jobs are used in scenarios where tasks are parallelized and can benefit from
 srun ./my_gpu_program
 :::
 
+(priority-and-qos)=
 ### Priority and QoS
 Slurm uses priority and Quality of Service (QoS) parameters to determine the order in which jobs are scheduled.
 
@@ -601,6 +670,7 @@ Quality of Service (QoS) parameters control various job limits, such as the maxi
 scontrol update jobid=<job_id> priority=<new_priority>
 :::
 
+(memory-management)=
 ### Memory Management
 In Slurm, memory allocation can be controlled on the job or task level using the `--mem` or `--mem-per-cpu` options, respectively.
 
@@ -633,6 +703,7 @@ srun ./my_program
 Either `--mem-per-cpu` or `--mem` can be specified as a sbatch directive, but not both.
 :::
 
+(environment-variables-scripts)=
 ### Using Environment Variables in Job Scripts
 Slurm sets several environment variables that you can use in your job scripts to control the job behavior dynamically. Some of these include `SLURM_JOB_ID`, `SLURM_JOB_NUM_NODES`, `SLURM_JOB_NODELIST`, etc.
 
@@ -652,6 +723,7 @@ echo "Node list: $SLURM_JOB_NODELIST"
 srun ./my_program
 :::
 
+(common-problems-slurm)=
 ## Common Problems and Troubleshooting
 Despite its flexibility and robustness, it's not uncommon to encounter issues when using Slurm. Here we'll explore some common problems and provide strategies for debugging and optimizing job scripts.
 
@@ -684,6 +756,7 @@ echo "Value of variable x is $x"
 3. **Optimizing Job Resources:** Monitor your job's resource usage using `sstat <job_id>` and adjust the resource requirements accordingly in your job script. Requesting more resources than needed can result in your job spending more time in the queue, while requesting less than needed can lead to job failures.
 Remember, troubleshooting requires patience and a systematic approach. Begin by identifying the problem, then hypothesize potential causes, test those hypotheses, and apply solutions. Make small changes one at a time and retest after each change. With experience, you will be able to troubleshoot effectively and make the most of your HPC resources.
 
+(best-practices)=
 ## Best Practices
 In this section, we will discuss some best practices that can help you make efficient use of resources, write optimized job scripts, and ensure maximum throughput and minimal queue time in a Slurm-based HPC environment.
 
@@ -758,7 +831,7 @@ If you need further support, please contact your system administrator or visit t
 ### Slurm FAQs
 - [Frequently Asked Questions].
 
-## Slurm References
+### Slurm References
 1. SchedMD. (2023). Slurm Workload Manager. [https://slurm.schedmd.com](https://slurm.schedmd.com/)
 2. SchedMD. (2023). Slurm Quick Start User Guide. [https://slurm.schedmd.com/quickstart.html](https://slurm.schedmd.com/quickstart.html)
 3. IBM. (2023). High Performance Computing For Dummies, IBM Limited Edition. [https://www.ibm.com/downloads/cas/WQDZWBYJ](https://www.ibm.com/downloads/cas/WQDZWBYJ)
