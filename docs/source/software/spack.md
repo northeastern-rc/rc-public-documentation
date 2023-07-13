@@ -116,11 +116,11 @@ If LAMMPS has a dependency on a specific `gcc` compiler, then do the following b
 
 1. (Optional) Initiate a `tmux` session:
 
-   1. Start a tmux session: `tmux`.
-   1. List tmux sessions: `tmux ls` 
-   1. Detach from tmux session: `Ctrl+b d`
-   1. Attach to tmux session: `tmux attach-session -t 0` 
-   1. Exit a tmux session: `Ctrl+d` 
+   - Start a tmux session: `tmux`.
+   - List tmux sessions: `tmux ls` 
+   - Detach from tmux session: `Ctrl+b d`
+   - Attach to tmux session: `tmux attach-session -t 0` 
+   - Exit a tmux session: `Ctrl+d` 
 
 1. Type:
 
