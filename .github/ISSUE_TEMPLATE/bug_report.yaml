@@ -1,4 +1,4 @@
-name: "🐛 Bug Report"
+name: 🐛 Bug Report
 about: Create a report to help us improve
 description: Create a new ticket for a bug.
 title: "🐛 [BUG] - <title>"
@@ -19,7 +19,7 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: Pandas version checks
+      label: PyTorch checkpoints code sample is outdated
       options:
         - label: >
             I have checked that the issue still exists on the latest versions of the docs
@@ -52,7 +52,7 @@ body:
       label: "Screenshots"
       description: If applicable, add screenshots to help explain your problem.
       value: |
-        ![DESCRIPTION](LINK.png)
+        <IMAGE>
       render: bash
     validations:
       required: false
