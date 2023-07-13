@@ -71,15 +71,22 @@ This section details how to install the LAMMPS application with the KOKKOS and U
 
 If LAMMPS has a dependency on a specific `gcc` compiler, then do the following before starting the installation procedure. This will update the `compilers.yaml` file located in `$HOME/.spack/linux`.
 
-1. `rm -r $HOME/.spack`
-1. `module load gcc/<desired-version>`
-1. `spack info lammps`
+1. `cd $HOME/.spack/linux/`
+1. Open `compilers.yaml` and copy-paste a `compiler` entry at the end of the file. 
+1. Edit 'spec' and 'path' to indicate the version of the gcc compiler that is required for installation. 
 
-Check if `compilers.yaml` has been created in `$HOME/.spack/linux` with your desired `gcc` version as the latest (or the only) entry in that file. 
+   ::::{code-block} bash
+   For example:
+        spec: gcc@=8.1.0
+    	paths:
+    	  cc: /shared/centos7/gcc/8.1.0/bin/gcc
+     	  cxx: /shared/centos7/gcc/8.1.0/bin/g++
+    	  f77: /shared/centos7/gcc/8.1.0/bin/gfortran
+      	  fc: /shared/centos7/gcc/8.1.0/bin/gfortran
+   ::::
 
-1. Install Spack by following steps 1 through 5 in the {ref}`getting-started-spack` procedure above.
-1. Type `exit` to exit from the compute node you requested in step 2 above.
-1. Type the following to request a GPU node for 8 hours:
+1. The `compilers.yaml` file should now have the desired `gcc` version as its latest `compiler` entry.
+1. Assuming that Spack has already been installed at a desired location. For installing gpu-supported LAMMPS, request a GPU node for 8 hours:
 
    :::{code-block} shell
    srun --partition=gpu --nodes=1 --ntasks=14 --pty --export=All --gres=gpu:1 --mem=0 --time=08:00:00 /bin/bash
@@ -87,7 +94,7 @@ Check if `compilers.yaml` has been created in `$HOME/.spack/linux` with your des
 
 1. Load a compatible cuda module: `module load cuda/10.2`
 
-1. (Optional) Initiate a `screen` session:
+1. (Optional) Initiate a `tmux` session:
 
    1. Type `screen -S lammps-install` to create a screen session.
    1. Type `screen -ls` to check to see if the session was created (you'll see it listed if it was successfully created).
