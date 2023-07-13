@@ -96,11 +96,11 @@ If LAMMPS has a dependency on a specific `gcc` compiler, then do the following b
 
 1. (Optional) Initiate a `tmux` session:
 
-   1. Type `screen -S lammps-install` to create a screen session.
-   1. Type `screen -ls` to check to see if the session was created (you'll see it listed if it was successfully created).
-   1. Type `screen -rd lammps-install` to enter that screen session.
-   1. Type `echo $STY` to check that you are in the screen session.
-   1. Type `CTRL+A+D` to exit the screen.
+   1. Start a tmux session: `tmux`.
+   1. List tmux sessions: `tmux ls` 
+   1. Detach from tmux session: `Ctrl+b d`
+   1. Attach to tmux session: `tmux attach-session -t 0` 
+   1. Exit a tmux session: `Ctrl+d` 
 
 1. Type:
 
