@@ -35,10 +35,9 @@ body:
   - type: textarea
     id: problem
     attributes:
-      label: Documentation problem or request
+      label: Documentation problem
       description: >
-        Please describe what documentation you believe needs to be fixed,
-        improved, or added.
+        Please describe what documentation you believe needs to be fixed/improved.
     validations:
       required: true
   - type: textarea
@@ -63,7 +62,7 @@ body:
     id: browsers
     attributes:
       label: "Browsers"
-      description: What browsers are you seeing the problem on?
+      description: What browsers do you see the problem on?
       multiple: true
       options:
         - Firefox
@@ -95,4 +94,4 @@ body:
         please include messages.
         Feel free to include any third-party resources if you need them.
     validations:
-      required: true
+      required: false
