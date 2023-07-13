@@ -1,11 +1,11 @@
-name: Feature request
+name: Feature Request
 description: Create a new ticket for new documentation or material
 title: "FEATURE: "
 labels: [Docs, Needed, Wish List]
 
 body:
   - type: textarea
-    id: problem
+    id: request
     attributes:
       label: Documentation request
       description: >
@@ -23,7 +23,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: alternatives
+    id: problem-description
     attributes:
       label: Problem Description (if any)
       description: >
