@@ -15,7 +15,7 @@ Slurm allows users to submit their computational tasks as jobs to be scheduled o
 Slurm is crucial in research environments, where it ensures fair usage of resources among a multitude of users, helps optimize the workload for the available resources, and provides precise job accounting and statistics.
 
 ### Page Objective:
-To understand the Slurm workload manage, which will allow you to properly leverage the HPC. It starts with the basics - the resources that Slurm manages. Then, useful Slurm features (e.g., job submission, monitoring, canceling, etc.) are mentioned with code examples. We discuss jobs that are both interactive (i.e., {ref}`using-srun`) and batch (i.e., {ref}`using-sbatch`), along with the slurm array variants (i.e., {ref}`job-arrays`). {ref}`advanced-usage`, {ref}`common-problems-slurm`, and {ref}`best-practices` are also covered.
+To understand the Slurm workload manage, which will allow you to properly leverage the HPC. It starts with the basics - the resources that Slurm manager. Then, useful Slurm features (e.g., job submission, monitoring, canceling, etc.) are mentioned with code examples. We discuss jobs that are both interactive (i.e., {ref}`using-srun`) and batch (i.e., {ref}`using-sbatch`), along with the slurm array variants (i.e., {ref}`job-arrays`). {ref}`advanced-usage`, {ref}`common-problems-slurm`, and {ref}`best-practices` are also covered.
 
 ### Who Should Use This Guide?
 This guide is for HPC users: researchers intending to use Slurm-based clusters for their computation tasks, system administrators managing HPC environments, and even seasoned HPC users looking to brush up on their knowledge. It progresses from fundamental to advanced topics, making it a valuable resource for a broad audience.
@@ -125,12 +125,6 @@ This information is crucial for managing your jobs and ensuring they are running
 To view cluster information, use `sinfo`: this command allows to view partition and node information. Use option -a to view all partitions.
 :::{code} bash
 sinfo <options>
-:::
-
-The `smap` command allows to view details about the cluster in a visual format.
-
-:::{code} bash
-smap <options>
 :::
 
 Details on each of the commands above, and more, is covered in the following sections.
@@ -275,13 +269,17 @@ There are several ways to define job arrays, such as specifying the range of ind
 The most basic configuration for a job array is as follows:
 :::{code}
 #!/bin/bash
-#SBATCH --partition=general
+#SBATCH --partition=short
 #SBATCH --job-name=jarray-example
-#SBATCH --output=out/array_%A.out
-#SBATCH --error=err/array_%A.err
+#SBATCH --output=out/array_%A_%a.out
+#SBATCH --error=err/array_%A_%a.err
 #SBATCH --array=1-6
 :::
 This command runs the same script six times using Slurm job arrays. Each job array has two additional environment variable sets. `SLURM_ARRAY_JOB_ID` (`%A`) is set to the first job ID of the array, and `SLURM_ARRAY_TASK_ID` (`%a`) is set to the job array index value.
+
+:::{note}
+Both the `SLURM_ARRAY_JOB_ID` (`%A`) and `SLURM_ARRAY_TASK_ID` (`%a`) are referenced when naming outputs so file do not overwrite when a "task" (i.e., one of the executions of the script through the job array) finishes.
+:::
 
 ::::{tip}
 Generally, we want to pass the former as an argument for our script. If you are using R, you can retrieve the former using `task_id <- Sys.getenv("SLURM_ARRAY_TASK_ID")`. If you are using job arrays with Python, you can obtain the task ID using the following:
@@ -292,21 +290,11 @@ taskId = sys.getenv('SLURM_ARRAY_TASK_ID')
 :::
 ::::
 
-In the previously defined Slurm header, the error and output file are overwritten whenever a "task" (one of the executions of the script through the job array) finishes. The modification below ensures that each "task id" will have its own output and error files.
+When submitting an array and setting its size with many dimensions, please use the `%` symbol to indicate how many tasks run simultaneously. For example, the following code specifies an array of 600 jobs, with 20 running at a time:
 
 :::{code} bash
 #!/bin/bash
-#SBATCH --partition=general
-#SBATCH --job-name=jarray-example
-#SBATCH --output=out/array_%A_%a.out
-#SBATCH --error=err/array_%A_%a.err
-#SBATCH --array=1-6
-:::
-When submitting an array with many dimensions, please use the "%" symbol to indicate how many tasks run simultaneously. For example, the following code specifies an array of 600 jobs, with 20 running at a time:
-
-:::{code} bash
-#!/bin/bash
-#SBATCH --partition=general
+#SBATCH --partition=short
 #SBATCH --job-name=jarray-example
 #SBATCH --output=out/array_%A_%a.out
 #SBATCH --error=err/array_%A_%a.err
@@ -317,7 +305,7 @@ Whenever you specify the memory, number of nodes, number of CPUs, or other speci
 
 :::{code}
 #!/bin/bash
-#SBATCH --partition=general
+#SBATCH --partition=short
 #SBATCH --job-name=jarray-example
 #SBATCH --output=out/array_%A_%a.out
 #SBATCH --error=err/array_%A_%a.err
@@ -331,7 +319,7 @@ Lastly, we usually use job arrays for embarrassingly parallel jobs. If your case
 
 :::{code}
 #!/bin/bash
-#SBATCH --partition=general
+#SBATCH --partition=short
 #SBATCH --job-name=jarray-example
 #SBATCH --output=out/array_%A_%a.out
 #SBATCH --error=err/array_%A_%a.err
@@ -342,7 +330,7 @@ Lastly, we usually use job arrays for embarrassingly parallel jobs. If your case
 :::
 
 :::{warning}
-50 is the maximum number of jobs allowed to be run at once.
+50 is the maximum number of jobs allowed to be run at once per user-account.
 :::
 
 The above examples apply for interactive mode, as well. For instance:
@@ -358,6 +346,7 @@ Indexes can be listed as `1-5` (i.e., one to five), `=1,2,3,5,8,13` (i.e., each 
 Job arrays can be used in situations where you have to process multiple data files using the same procedure or program. Instead of creating multiple scripts or running the same script multiple times, you can create a job array, and Slurm will handle the parallel execution for you.
 
 ### Example using Job Array Flag
+
 In the following script, the `$SLURM_ARRAY_TASK_ID` variable is used to differentiate between array tasks.
 
 :::{code} bash
