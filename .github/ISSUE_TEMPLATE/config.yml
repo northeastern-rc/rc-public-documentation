@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Research Computing Public Documentation Support
+    url: https://github.com/northeastern-rc/rc-public-documentation/discussions
+    about: Please ask and answer questions here.
+  - name: Research Computing Public Documentation
+    url: https://rc-docs.northeastern.edu/en/latest/
+    about: Check that bug/feature is not satisfied in the latest version
