@@ -1,8 +1,9 @@
-name: Bug Report
-about: Create a report to help us improve
-description: Create a new ticket for a bug.
+name: "Bug Report"
+about: "Create a report to help us improve"
+description: "Create a new ticket for a bug."
 title: "[BUG] - <title>"
-labels: bug, Docs, Needs Triage
+labels: "bug, Docs, Needs Triage"
+
 body:
   - type: textarea
     id: description
