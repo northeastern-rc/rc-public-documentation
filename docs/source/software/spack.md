@@ -9,7 +9,7 @@ Spack software installations are part of your research and should preferably be 
 :::
 
 (getting-started-spack)=
-## Getting started with Spack
+## Install Spack
 
 These instructions will demonstrate how to install Spack in your `/home` (*non-shared*) or `/work` (*shared*) directory and then how to add Spack to your local environment while on a compute node, so you have access to the Spack commands (steps 4-5).
 
@@ -30,31 +30,40 @@ Copy Spack's Git repository to '/work' and modify directory permissions to give 
 ::::{code-block} bash
 cd /work/<PI-Project-Dir>
 git clone -c feature.manyFiles=true https://github.com/spack/spack.git
+chmod -R 775 spack/
 ::::
 
-1. Connect to Discovery via ssh ({ref}`connect-mac` or {ref}`connect-windows`).
-1. From the terminal, type `git clone -c feature.manyFiles=true https://github.com/spack/spack.git` to copy Spack to your `/home`.
-1. Type `srun -p short --pty -N 1 -n 28 /bin/bash` to allocate an interactive job on a compute node. Spack will attempt to run `make` in parallel when Spack builds the software you choose to install, so this `srun` request is for 28 cores on one node (`-N 1 -n 28`). To use Spack, it needs to be added to your local environment on the compute node, which is why this is completed after step 3.
-1. To use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`. Any module that is required for software installation needs to be in your `$PATH` prior to adding Spack to your local environment.
-1. To add Spack in your local environment so you can use the Spack commands, type `export SPACK_ROOT=/home/<yourusername>/spack`.
-1. Next, type `. $SPACK_ROOT/share/spack/setup-env.sh`.
+:::::
+::::::
+
+## Install a software using Spack 
+ 
+1. Request a compute node interactively: `srun -p short --pty -N 1 -n 28 /bin/bash`. While building the software Spack will attempt to run `make` in parallel. Hence, you need to request a compute node with multiple cores. This `srun` request is for 28 cores on one node (`-N 1 -n 28`). 
+1. Any module that is required for your software installation needs to be in your `$PATH` prior to adding Spack to your local environment. For example, to use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`. 
+1. Add Spack to your local environment so you can use the Spack commands. If Spack has been installed on `$HOME`: 
+::::{code-block} bash
+For Spack on $HOME
+export SPACK_ROOT=/home/<yourusername>/spack
+. $SPACK_ROOT/share/spack/setup-env.sh
+
+For Spack on /work/<PI-Project-Dir>
+export SPACK_ROOT=/work/<PI-Project-Dir>/spack
+. $SPACK_ROOT/share/spack/setup-env.sh
+::::
+
 1. After you have the Spack commands in your environment, type `spack help` to ensure Spack is loaded in your environment and to see the commands you can use with Spack. You can also type `spack list` to see all the software that you can install with Spack, but note this command can take a few moments to populate the list.
-1. To check your spack version, type `spack --version` .
-1. To see information about a specific software package, including options and dependencies, type `spack info <software name>`. Make sure to note the options and/or dependencies that you want to add or not add before installing the software.
-1. To install a software package plus any dependencies or options, type `spack install <software name> +<any dependencies or options>`; you can specify `-<any dependencies or options>`. You can also list `+` or `-` different options and dependencies within the same line. Do not put a space between each option/dependency that you list.
-1. To view your installed software packages, type `spack find`. If you want to view information about a specific installed package, type `spack find <software package name>` or `spack info <software package name>`.
-1. Install a specific version of the software using the command: `spack install <softwarename@version>`.
+1. To check your spack version: `spack --version` .
+1. To see information about a specific software package, including options and dependencies: `spack info <software name>`. Make sure to note the options and/or dependencies that you want to add or not add before installing the software.
+1. To install a software package plus any dependencies or options:
+`spack install <software name> +<any dependencies or options>`;
+you can specify `-<any dependencies or options>`. You can also list
+`+` or `-` different options and dependencies within the same line. Do
+not put a space between each option/dependency that you list.
+1. To view information about your installed software packages: `spack find <software package name>` or `spack info <software package name>` . 
+1. To Install a specific version of the software: `spack install <softwarename@version>`.
 
 When you have installed a software package, you can add it to the module system by executing this command:
 `. $SPACK_ROOT/share/spack/setup-env.sh`
-
-:::{note}
-Spack can be installed in `/work`, which enables members of your `/work` group to use the programs that are installed with Spack in that directory. If you decide to install Spack on `/work`, do the following:
-1. cd `/work/<PI-Project-Dir>
-1. git clone -c feature.manyFiles=true https://github.com/spack/spack.git
-1. export SPACK_ROOT=/work/<PI-Project-Dir>/spack
-1. . $SPACK_ROOT/share/spack/setup-env.sh
-:::
 
 ## Installing LAMMPS with Spack example
 
@@ -69,9 +78,7 @@ If LAMMPS has a dependency on a specific `gcc` compiler, then do the following b
 Check if `compilers.yaml` has been created in `$HOME/.spack/linux` with your desired `gcc` version as the latest (or the only) entry in that file. 
 
 1. Install Spack by following steps 1 through 5 in the {ref}`getting-started-spack` procedure above.
-
 1. Type `exit` to exit from the compute node you requested in step 2 above.
-
 1. Type the following to request a GPU node for 8 hours:
 
    :::{code-block} shell
@@ -90,11 +97,11 @@ Check if `compilers.yaml` has been created in `$HOME/.spack/linux` with your des
 
 1. Type:
 
-:::{code-block} shell
-spack install lammps +asphere +body +class2 +colloid +compress +coreshell +cuda \
-cuda_arch=70 +cuda_mps +dipole +granular +kokkos +kspace +manybody +mc +misc +molecule \
-+mpiio +peri +python +qeq +replica +rigid +shock +snap +spin +srd +user-reaxc +user-misc
-:::
+   :::{code-block} shell
+   spack install lammps +asphere +body +class2 +colloid +compress +coreshell +cuda \
+   cuda_arch=70 +cuda_mps +dipole +granular +kokkos +kspace +manybody +mc +misc +molecule \
+   +mpiio +peri +python +qeq +replica +rigid +shock +snap +spin +srd +user-reaxc +user-misc
+   :::
 
 1. Type `spack find LAMMPS` to view your installed software package.
 
