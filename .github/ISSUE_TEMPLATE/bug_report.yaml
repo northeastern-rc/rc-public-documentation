@@ -15,15 +15,14 @@ body:
   - type: checkboxes
     attributes:
       options:
-        label: >
-            I have checked that the issue still exists on the latest versions of the docs on `master`
-        required: true
+        - label: I have checked that the issue still exists on the latest versions of the docs on `master`
+          required: true
+        - label: **Checked Master**
   - type: input
     id: location
     attributes:
       label: Location of the documentation (URL)
-      description: >
-        Please provide the location of the documentation, e.g., "https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
-      placeholder: https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model
+      description: "Please provide the location of the documentation, e.g., https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
+      placeholder: "https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
     validations:
       required: true
