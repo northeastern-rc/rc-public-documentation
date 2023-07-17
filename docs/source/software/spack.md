@@ -41,15 +41,16 @@ chmod -R 775 spack/
 1. Request a compute node interactively: `srun -p short --pty -N 1 -n 28 /bin/bash`. While building the software Spack will attempt to run `make` in parallel. Hence, you need to request a compute node with multiple cores. This `srun` request is for 28 cores on one node (`-N 1 -n 28`). 
 1. Any module that is required for your software installation needs to be in your `$PATH` prior to adding Spack to your local environment. For example, to use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`. 
 1. Add Spack to your local environment so you can use the Spack commands. If Spack has been installed on `$HOME`: 
-::::{code-block} bash
-For Spack on $HOME
-export SPACK_ROOT=/home/<yourusername>/spack
-. $SPACK_ROOT/share/spack/setup-env.sh
 
-For Spack on /work/<PI-Project-Dir>
-export SPACK_ROOT=/work/<PI-Project-Dir>/spack
-. $SPACK_ROOT/share/spack/setup-env.sh
-::::
+   ::::{code-block} bash
+   For Spack on $HOME
+   export SPACK_ROOT=/home/<yourusername>/spack
+   . $SPACK_ROOT/share/spack/setup-env.sh
+
+   For Spack on /work/<PI-Project-Dir>
+   export SPACK_ROOT=/work/<PI-Project-Dir>/spack
+   . $SPACK_ROOT/share/spack/setup-env.sh
+   ::::
 
 1. After you have the Spack commands in your environment, type `spack help` to ensure Spack is loaded in your environment and to see the commands you can use with Spack. You can also type `spack list` to see all the software that you can install with Spack, but note this command can take a few moments to populate the list.
 1. To check your spack version: `spack --version` .
