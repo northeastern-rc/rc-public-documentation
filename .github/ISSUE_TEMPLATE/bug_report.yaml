@@ -1,5 +1,5 @@
 name: Bug Report
-description: Create a new ticket for a bug
+description: Create a new ticket for a documentation bug or issue.
 title: "BUG: "
 labels: [Docs, Incomplete, Needs Triage]
 
@@ -8,90 +8,21 @@ body:
     id: description
     attributes:
       label: "Description"
-      description: Please enter an explicit description of your issue
+      description: Please enter an explicit description of your issue. Feel free to include any screenshots and third-party resources.
       placeholder: A short and explicit description of your incident...
     validations:
       required: true
   - type: checkboxes
     attributes:
-      label: PyTorch checkpoints code sample is outdated
+      label: I checked that the issue exists on the latest versions on `master`
       options:
-        - label: >
-            I have checked that the issue still exists on the latest versions of the docs
-            on `master` [here](https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html)
+        - label: I have checked that the issue still exists on the latest versions of the docs on `master`
           required: true
-  - type: textarea
+  - type: input
     id: location
     attributes:
-      label: Location of the documentation
-      description: >
-        Please provide the location of the documentation, e.g., section and subsection(s)
-        "Best Practices: Checkpointing Jobs: Saving a Pytorch Model" or the URL of the
-        documentation, e.g.,
-        "https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
-      placeholder: https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model
+      label: Location of the documentation (URL)
+      description: "Please provide the location of the documentation, e.g., https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
+      placeholder: "https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
     validations:
       required: true
-  - type: textarea
-    id: problem
-    attributes:
-      label: Documentation problem
-      description: >
-        Please describe what documentation you believe needs to be fixed/improved.
-    validations:
-      required: true
-  - type: textarea
-    id: screenshot
-    attributes:
-      label: "Screenshots"
-      description: If applicable, could you add screenshots to help explain your problem?
-      value: |
-        <IMAGE>
-      render: bash
-    validations:
-      required: false
-  - type: textarea
-    id: logs
-    attributes:
-      label: "Logs"
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so there is no need for backticks.
-      render: bash
-    validations:
-      required: false
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: "Browsers"
-      description: What browsers do you see the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-        - Opera
-    validations:
-      required: false
-  - type: dropdown
-    id: os
-    attributes:
-      label: "OS"
-      description: What is the impacted environment?
-      multiple: true
-      options:
-        - Windows
-        - Linux
-        - Mac
-    validations:
-      required: false
-  - type: textarea
-    id: suggested-fix
-    attributes:
-      label: Suggested fix for documentation
-      description: >
-        Please explain the suggested fix and **why** it's better than the existing
-        documentation. If there are related errors (e.g., from running sample code),\
-        please include messages.
-        Feel free to include any third-party resources if you need them.
-    validations:
-      required: false
