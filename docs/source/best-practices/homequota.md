@@ -85,6 +85,7 @@ which prints a table with `JOBID`, `PARTITION`, `NAME`, `USER ST`, `TIME`, `NODE
 
 ## Storing research environments
 
+(best-practices-conda-environments)=
 ### Conda environments
 
 Use conda environments for python on HPC. To create an environment in `/work`, use the `--prefix` flag as follows: (where `<project>` is your PI's `/work` directory and `<my conda env>` is an empty directory to store your conda environment):
