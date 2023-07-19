@@ -5,19 +5,19 @@ it is also an interactive app on Open onDemand [OOD](../using-ood/introduction.m
 
 ## Using R on Open onDemand
 
-The Open onDemand app offers several different versions of R accessed through an interactive session with Rstudio server in a [Rocker Container](https://rocker-project.org/images/versioned/rstudio). Each version of R is available as a different *flavor* whereby different packages are pre-installed. We host three flavors whose package lists build off one another in the following order: Rstudio < Tidyverse < Geospatial.
+The Open onDemand application offers several different versions of R accessed through an interactive session with Rstudio server in a [Rocker Container](https://rocker-project.org/images/versioned/rstudio). Each version of R is available as a different *flavor* whereby different packages are pre-installed. We host three flavors whose package-lists build off of one another in the following order: Rstudio < Tidyverse < Geospatial.
 
 In addition to different R packages you will find additional package requirements (e.g, compilers) also present in the three flavors in increasing order. 
 
 
 :::{important}
 
-If you have tried to install a package in the Rstudio or Tidyverse flavors and recieve an error message suggesting a necessary compiler is missing (e.g., glibc, CMAKE, zlib) or other "compilation failed" message. Please try and install the package again in the Geospatial flavor. If this still returns an error reach out to rchelp@northeastern.edu 
+If you have tried to install a package in the *Rstudio* or *Tidyverse* flavors and recieve an error message saying a necessary compiler is missing (e.g., glibc, CMAKE, zlib) or other "compilation failed" message. Please try to install the package again in the *Geospatial* flavor. If this still returns an error reach out to rchelp@northeastern.edu 
 
 :::
 
 
-## Creating a Packrat Environment (for R)
+## Creating a Packrat Environment
 
 If you work with R packages, using a [Packrat environment](https://rstudio.github.io/packrat/) can be a helpful way to access packages across different sessions in the Open onDemand app, between the Open onDemand app and the command line, or between the different R flavors. Use the procedure below to create a Packrat environment on Discovery.
 
