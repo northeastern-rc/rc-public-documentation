@@ -1,6 +1,6 @@
 (file-explorer)=
 
-# Using OOD's File Explorer
+# OOD File Explorer
 
 When working with the resources in OOD, your files are stored in your home directory
 on the storage space on the Discovery cluster. Similar to any file navigation system,

@@ -128,9 +128,8 @@ software/mpi
 :hidden:
 :caption: 🛠 Using HPC
 
-using-discovery/usingslurm
-using-discovery/sbatch
-using-discovery/srun
+using-discovery/slurm
+using-discovery/scontab
 using-discovery/workingwithgpu
 using-discovery/transferringdata
 using-discovery/globus
@@ -141,7 +140,6 @@ using-discovery/globus
 :caption: 🗄 Understanding storage
 
 storage/discovery_storage
-storage/general_storage
 ```
 
 ```{toctree}
@@ -149,11 +147,12 @@ storage/general_storage
 :caption: 🚀 Best practices
 
 best-practices/checkpointing
+best-practices/homequota
 ```
 
 ```{toctree}
 :hidden:
-:caption: 📲 Using Open OnDemand (OOD)
+:caption: 📲 Open OnDemand (OOD)
 
 using-ood/introduction
 using-ood/fileexplore
@@ -166,4 +165,10 @@ using-ood/interactiveapps
 
 classroom/class_use
 classroom/cps_ood
+```
+
+```{toctree}
+:hidden:
+
+_developers/primer
 ```

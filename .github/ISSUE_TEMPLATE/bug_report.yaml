@@ -1,0 +1,28 @@
+name: Bug Report
+description: Create a new ticket for a documentation bug or issue.
+title: "BUG: "
+labels: [Docs, Incomplete, Needs Triage]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Please enter an explicit description of your issue. Feel free to include any screenshots and third-party resources.
+      placeholder: A short and explicit description of your incident...
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: I checked that the issue exists on the latest versions on `master`
+      options:
+        - label: I have checked that the issue still exists on the latest versions of the docs on `master`
+          required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location of the documentation (URL)
+      description: "Please provide the location of the documentation, e.g., https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
+      placeholder: "https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html#saving-a-pytorch-model"
+    validations:
+      required: true
