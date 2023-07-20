@@ -1,7 +1,6 @@
 jupyterlab-myst
 myst-nb
 myst-parser
-pre-commit
 sphinx-book-theme
 sphinx-copybutton
 sphinx-tabs
