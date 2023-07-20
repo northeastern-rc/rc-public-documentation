@@ -168,7 +168,9 @@ classroom/cps_ood
 ```
 
 ```{toctree}
+:caption: 📝 Contribute
 :hidden:
 
 _developers/primer
+Create Issue <https://github.com/northeastern-rc/rc-public-documentation/issues/new/choose>
 ```
