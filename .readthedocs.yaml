@@ -8,8 +8,9 @@ version: 2
 python:
   version: "3.8"
   install:
-      - method: pip -r
-        path: docs/requirements.txt
+      - method: pip
+        requirements: docs/requirements.txt
+        path: .
 #        extra_requirements:
 #          - linkify
 #          - rtd
