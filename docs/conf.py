@@ -101,5 +101,5 @@ html_show_sphinx = False
 html_static_path = ["_static",
                     "_static/video"]
 
-master_doc = "index.md"
-source_suffix = [".rst", ".md"]
+master_doc = "index"
+source_suffix = [".md"]
