@@ -34,17 +34,17 @@ Group. Core and RAM limits are set per user, across all running jobs
 limited by the available resources on the cluster at the time of the
 job submission and may not adhere to the number stated below.**
 
+It is possible for you to see the message below in the output of
+`squeue -u $USER`, even though you submitted less jobs than the number
+of submitted jobs indicated in the table. This implies that Slurm has
+reached the hard-coded limit of 10,000 total jobs/per account at that
+time. Here the account refers to the Slurm account that you, as a
+cluster user, is associated with. So you will continue to receive this
+error message until some of your jobs start running and/or get
+completed before you can submit more jobs.
+
 *job violates accounting/QOS policy*
 
-Sometimes it could happen that, on a shared or a private partition,
-you submitted less jobs than the number of submitted jobs indicated in
-the table, but ended up getting the above message upon doing `squeue
--u $USER`. This means that Slurm has reached the hard-coded limit of
-10,000 total jobs/per account at that time. Here the account refers to
-the Slurm account that you, as a cluster user, is associated to. So
-you will continue to receive this error message until some of your
-jobs start running and/or get completed before you can start
-submitting more jobs.  
 :::
 
 :::{list-table}
@@ -148,7 +148,7 @@ sacct --partition <partition name> #displays the jobs that have been run on this
 scontrol show partition <partition name> #displays the Slurm configuration of the partition
 :::
 
-For more information about these commands, see the [Slurm documentation].
+For more information about these commands, see our [Using Slurm] and the official [Slurm documentation].
 
 ## Allocating partitions in your jobs
 
@@ -201,3 +201,4 @@ requests are also evaluated by two faculty members.
 
 [ServiceNow ticket]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7
 [Slurm documentation]: https://slurm.schedmd.com/
+[Using Slurm]: https://rc-docs.northeastern.edu/en/latest/using-discovery/slurm.html
