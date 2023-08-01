@@ -1,21 +1,37 @@
 # Using R
 
-[R](https://www.r-project.org/) is available as a module (see [Using Module](../software/modules.md) for more information) and
-it is also an interactive app on Open onDemand (see [Introduction to Open OnDemand (OOD)](../using-ood/introduction.md) for more information). You can also use R with Anaconda. See [Working with Conda/Miniconda/Anaconda](./conda.md) and the [Anaconda documentation](https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/) for more information
+[R](https://www.r-project.org/) is available as a [module](../software/modules.md) and
+it is also an interactive app on Open onDemand [OOD](../using-ood/introduction.md). You can also use R with Anaconda. See [Working with Conda/Miniconda/Anaconda](./conda.md) and the [Anaconda documentation](https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/) for more information.
 
-If you work with R packages, using a Packrat environment can be helpful. Use the procedure below to create a Packrat environment on Discovery.
+## Using R on Open onDemand
 
-## Creating a Packrat Environment (for R)
+The Open onDemand application offers several different versions of R accessed through an interactive session with Rstudio server in a [Rocker Container](https://rocker-project.org/images/versioned/rstudio). Each version of R is available as a different *flavor* whereby different packages are pre-installed. We host three flavors whose package-lists build off of one another in the following order: Rstudio < Tidyverse < Geospatial.
 
-Packrat is an application that helps you manage packages for R. After you create a new directory for your R project, you can then use Packrat to store your package dependencies inside it. For more information about Packrat, see the website: <https://rstudio.github.io/packrat/>.
+In addition to different R packages you will find additional package requirements (e.g, compilers) also present in the three flavors in increasing order. 
 
-1. Connect to Discovery.
+
+:::{important}
+
+If you have tried to install a package in the *Rstudio* or *Tidyverse* flavors and recieve an error message saying a necessary compiler is missing (e.g., glibc, CMAKE, zlib) or other "compilation failed" message. Please try to install the package again in the *Geospatial* flavor. If this still returns an error reach out to rchelp@northeastern.edu 
+
+:::
+
+
+## Creating a Packrat Environment
+
+If you work with R packages, using a [Packrat environment](https://rstudio.github.io/packrat/) can be a helpful way to access packages across different sessions in the Open onDemand app, between the Open onDemand app and the command line, or between the different R flavors. Use the procedure below to create a Packrat environment on Discovery.
+
+After you create a new directory for your R project, you can then use Packrat to store your package dependencies inside it.
+
+We recommend making your packrat directory in /work (preferred) or /home
+
+1. Connect to Discovery via ssh.
 
 1. Type `module load R/4.2.1`.
 
-1. Create a new directory for your R project by typing, `mkdir /scratch/<username>/<directoryname>` where `<username>` is your username, and `<directoryname>` is the name of the directory you want to create for your R project. For example, `/scratch/j.smith/packrat_r`.
+1. Create a new directory for your R project by typing, `mkdir /work/<groupname>/<username>/<directoryname>` where `<groupname> is your group name, `<username>` is your username, and `<directoryname>` is the name of the directory you want to create for your R project. For example, `/work/coolsciencegroup/j.smith/packrat_r`.
 
-1. Create a new directory for your R project by typing, `mkdir /scratch/<yourusername>/<directoryname>` where `yourusername` is your user name, and `directoryname` is the name of the directory you want to create for your R project. For example, `/scratch/j.smith/r_testlab`
+1. Create a new directory for your R project by typing, `mkdir <directoryname>`
 
 1. Open the R interface and install Packrat:
 
@@ -31,8 +47,8 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-:::
-   packrat::init("/scratch/<yourusername>/<directoryname>")
+:::{code-block}
+   packrat::init("/work/<groupname>/<yourusername>/<directoryname>")
 :::
 
 ______________________________________________________________________
@@ -41,7 +57,7 @@ You can then install R packages that you need. For example, to install a package
 
 ______________________________________________________________________
 
-:::
+:::{code-block}
 if (!requireNamespace("BiocManager", quietly = TRUE))
 install.packages("BiocManager")
 BiocManager::install("rtracklayer")
