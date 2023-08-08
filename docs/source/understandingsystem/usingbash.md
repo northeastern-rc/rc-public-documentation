@@ -461,7 +461,7 @@ The next few subsections provide more details on a few advanced bash tools that 
 The `rsync` command is a powerful and versatile file transfer utility commonly used to synchronize files and directories between different locations. It can transfer files over a network connection and run in various modes, including local and remote transfers and backup operations. One of the key benefits of using `rsync` is its ability to transfer only the differences between the source and destination files, which can significantly reduce the amount of data transfer time required. Additionally, `rsync` supports various advanced features, including the ability to perform incremental backups and preserve symbolic links, making it a popular tool for system administrators and other advanced users.
 
 :::{important}
-File transfers must be done using the transfer node on the Discovery, i.e., do not copy to or from the login node accessible via `xfer.discovery.neu.edu`. See {ref}`transferring data` for more information.
+File transfers must be done using the transfer node on the Discovery, i.e., do not copy to or from the login node accessible via `xfer.discovery.neu.edu`. See {ref}`transferring-data` for more information.
 :::
 
 We have listed a few examples of `rsync` synchronizing files and directories between two locations, but there are many more options available. Consult the [rsync(1) manual page] for more information on effectively using `rsync`.
