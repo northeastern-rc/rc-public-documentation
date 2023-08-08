@@ -1,5 +1,5 @@
 (using-slurm)=
-# Using Slurm
+# Introduction to Slurm
 
 ## Slurm Overview
 Slurm (Simple Linux Utility for Resource Management) is an open-source, highly configurable, fault-tolerant, and adaptable workload manager. It is extensively used across High-Performance Computing (HPC) environments.
