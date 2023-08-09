@@ -1,11 +1,15 @@
 (software-overview)=
 
 # Software Overview
-Discovery offers you many options for working with software. Two of the easiest and most convenient ways are
-using the `module` command on the command line and using the interactive apps on Open OnDemand (OOD), Discovery's web portal.
-If you need a specific software package, first check to see if it is already available through one of the preinstalled
-modules on Discovery. The Research Computing team adds new modules regularly, so use the `module avail` command
-to view the most up-to-date list. You can also try using Spack, a software package manager available on Discovery. Spack has over 5,000 packages that
+Discovery offers you many options for working with software. Two of the easiest and most convenient ways are using the `module` command on the command line and using the interactive apps on Open OnDemand (OOD), Discovery's web portal.
+
+::::{sidebar}
+:::{seealso}
+{ref}`using-module`.
+:::
+::::
+
+If you need a specific software package, first check to see if it is already available through one of the preinstalled modules on Discovery. The Research Computing team adds new modules regularly, so use the `module avail` command to view the most up-to-date list. You can also try using Spack, a software package manager available on Discovery. Spack has over 5,000 packages that
 you can install.
 
 ::::{grid} 3
