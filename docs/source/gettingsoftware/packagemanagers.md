@@ -1,21 +1,27 @@
 (package-manager)=
 # Package Managers
+This page describes {ref}`conda` and {ref}`spack` package managers.
 
-## Conda
-
-[Conda] is an open source environment and package manager. [Miniconda] is a free installer for Conda, Python, and comes with a few other packages. [Anaconda] is also a package manager that has a much larger number of packages pre-installed.
-
-A question that frequently comes up is "[Should I use Anaconda or Miniconda]?"
-
-:::{note}
-It is not recommended to build your Miniconda and Conda virtual environments inside your /home directory due to its limited space quota (see [Storage Accessible on Discovery]). Use the /work file system instead. If your group needs access to /work, the group PI can request it using: [New Storage Space request].
+::::{sidebar}
+:::{seealso}
+[Should I use Anaconda or Miniconda]?
 :::
+::::
+(conda)=
+## Conda
+[Conda] is an open-source environment and package manager. [Miniconda] is a free installer for Conda and Python and comes with a few other packages. [Anaconda] is also a package manager that has a much larger number of packages pre-installed.
+
+::::{note}
+We recommend not building your Miniconda and Conda environments inside your `/home` due to its limited space quota, but use `/work`. If your group needs space on `/work`, the PI can make a [New Storage Space request].
+:::{seealso}
+[Storage Accessible on Discovery].
+:::
+::::
 
 (creating-python)=
+### Creating a Python Environment
 
-### Creating an Environment
-
-Using a locally installed Conda virtual environment is highly recommended so that you can install the specific packages that you need. You can also have more than one environment with different packages for different research projects or for testing purposes. This procedure uses the Anaconda module already available on Discovery.
+Using a locally installed Conda virtual environment is highly recommended to install the specific packages you need. You can also have multiple environments with different packages for research projects or testing purposes. This procedure uses the Anaconda module already available on the cluster.
 
 If you are on a login node, move to a compute node by typing:
 
@@ -48,7 +54,7 @@ Your command line prompt will then include the path and name of environment.
 :::
 
 ::::{tip}
-``conda config --set env_prompt '({name}) '`` modifies your `.condarc` to only show the environments name as such:
+The `conda config --set env_prompt '({name}) '` command modifies your `.condarc` to show only the environment, which displays as follows:
 :::{code} bash
 (<environment-name>) [username@c2000 dirname]$
 :::
@@ -92,7 +98,7 @@ wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.
 sha256sum Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>
 :::
-Where `<dir>` is the full path to your desired installation directory (e.g., `/work/mygroup/mydirectory/miniconda3`).
+Where `<dir>` is the full path to your desired installation directory (e.g., `/work/mygroup/miniconda3`).
 
 
 Activate the base Miniconda environment
@@ -102,7 +108,7 @@ source <dir>/bin/activate
 
 You can now create a new environment with this command where we're using python version 3.8:
 
-:::{code-block} bash 
+:::{code-block} bash
 conda create --name my-py38env python=3.8
 :::
 
@@ -126,6 +132,7 @@ Best practices for home storage: {ref}`cleaning-conda`.
 1. You can build Conda environments in different locations to save space on your home directory (see [Storage Accessible on Discovery]). You can use the `--prefix` flag when building your environment. For example: `conda create myenv --prefix=/work/<mygroup>/<mydirectory>`.
 1. Another recommended step is to update your Conda version (possible only when using Miniconda): `conda update conda -y`
 
+(spack)=
 ## Spack
 
 Research Computing recommends using [Spack] to conveniently install software packages locally to your path. Please refer to the [Spack documentation] for the latest information about the [packages] that Spack contains. To use Spack, you first need to copy it to your `/home` directory or a `/work` directory, then you need to add it to your local environment.
@@ -162,11 +169,11 @@ chmod -R 775 spack/
 :::::
 ::::::
 
-### Install a software using Spack 
- 
-1. Request a compute node interactively: `srun -p short --pty -N 1 -n 28 /bin/bash`. While building the software Spack will attempt to run `make` in parallel. Hence, you need to request a compute node with multiple cores. This `srun` request is for 28 cores on one node (`-N 1 -n 28`). 
-1. Any module that is required for your software installation needs to be in your `$PATH` prior to adding Spack to your local environment. For example, to use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`. 
-1. Add Spack to your local environment so you can use the Spack commands. If Spack has been installed on `$HOME`: 
+### Install a software using Spack
+
+1. Request a compute node interactively: `srun -p short --pty -N 1 -n 28 /bin/bash`. While building the software Spack will attempt to run `make` in parallel. Hence, you need to request a compute node with multiple cores. This `srun` request is for 28 cores on one node (`-N 1 -n 28`).
+1. Any module that is required for your software installation needs to be in your `$PATH` prior to adding Spack to your local environment. For example, to use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`.
+1. Add Spack to your local environment so you can use the Spack commands. If Spack has been installed on `$HOME`:
 
    ::::{code-block} bash
    For Spack on $HOME
@@ -186,7 +193,7 @@ chmod -R 775 spack/
 you can specify `-<any dependencies or options>`. You can also list
 `+` or `-` different options and dependencies within the same line. Do
 not put a space between each option/dependency that you list.
-1. To view information about your installed software packages: `spack find <software package name>` or `spack info <software package name>` . 
+1. To view information about your installed software packages: `spack find <software package name>` or `spack info <software package name>` .
 1. To Install a specific version of the software: `spack install <softwarename@version>`.
 
 When you have installed a software package, you can add it to the module system by executing this command:
@@ -213,8 +220,8 @@ progress of the installation.
 If LAMMPS has a dependency on a specific `gcc` compiler, then do the following before starting the installation procedure. This will update the `compilers.yaml` file located in `$HOME/.spack/linux`.
 
 1. `cd $HOME/.spack/linux/`
-1. Open `compilers.yaml` and copy-paste a `compiler` entry at the end of the file. 
-1. Edit 'spec' and 'path' to indicate the version of the gcc compiler that is required for installation. 
+1. Open `compilers.yaml` and copy-paste a `compiler` entry at the end of the file.
+1. Edit 'spec' and 'path' to indicate the version of the gcc compiler that is required for installation.
 
    ::::{code-block} bash
    For example:
@@ -239,15 +246,15 @@ If LAMMPS has a dependency on a specific `gcc` compiler, then do the following b
     module load cuda/10.2 gcc/8.1.0 python/3.8.1
     export SPACK_ROOT=/work/<PI-Project-Dir>/spack
     . $SPACK_ROOT/share/spack/setup-env.sh
-   :::: 
+   ::::
 
 1. (Optional) Initiate a `tmux` session:
 
    - Start a tmux session: `tmux`.
-   - List tmux sessions: `tmux ls` 
+   - List tmux sessions: `tmux ls`
    - Detach from tmux session: `Ctrl+b d`
-   - Attach to tmux session: `tmux attach-session -t 0` 
-   - Exit a tmux session: `Ctrl+d` 
+   - Attach to tmux session: `tmux attach-session -t 0`
+   - Exit a tmux session: `Ctrl+d`
 
 1. Type:
 
