@@ -37,15 +37,27 @@ If you are a PI, professor, or instructor at Northeastern and need access to the
 HPC users need a sponsor, usually a NU PI or professor, to approve their request. PIs, professors, and instructors can sponsor themselves. Students (undergraduate or graduate), visiting researchers, or staff members must have a sponsor approve their request. When you fill out the ServiceNow form, an email is sent to the specified sponsor upon submitting the request. Sponsors will receive email reminders until they approve the request through the link in the email to ServiceNow. We recommend letting your sponsor know to look for the email with the approval link before submitting an access request.
 
 ## Cluster Usage
-:::{important}
-It is best not to use the login node for CPU-intensive activities, as this will impact the performance of this node for all cluster users. It will also not provide the best performance for the tasks you are trying to accomplish. For more information, please refer to our documentation on {ref}`connect-mac` or {ref}`connect-windows`.
 
-If you are attempting to run a job, you should move to a compute node. You can do this interactively using the `srun` command or non-interactively using the `sbatch` command. Please see our documentation on {ref}`using-sbatch` and {ref}`using-srun` for more information.
+**DO NOT USE** the login node for CPU-intensive activities, as this will impact the performance of this node for all cluster users. It will also not provide the best performance for the tasks you are trying to accomplish.
 
-If you are attempting to transfer data, we have a dedicated transfer node that you should use. Please see our documentation on {ref}`transferring-data` for more information.
-
-If you have any questions or need further assistance, please email us at [rchelp@northeastern.edu] or book a consultation using the link on our [Consultation page].
+:::{seealso}
+{ref}`connect-mac` or {ref}`connect-windows`.
 :::
+
+::::{important}
+If you are attempting to run a job, you should move to a compute node. You can do this interactively using the `srun` command or non-interactively using the `sbatch` command.
+:::{seealso}
+{ref}`using-sbatch` and {ref}`using-srun` for more information.
+:::
+
+If you are attempting to transfer data, we have a dedicated transfer node that you should use.
+
+:::{seealso}
+{ref}`transferring-data`.
+:::
+
+[//]: # (If you have any questions or need further assistance, please email us at [rchelp@northeastern.edu] or book a consultation using the link on our [Consultation page].)
+::::
 
 ## Routine Cluster Maintenance
 
