@@ -32,6 +32,16 @@ Then, you must set the installation path to a directory where you have write acc
 You can use `./configure` to do this, such as  `./configure --prefix=/home/<yourusername>/software`
 After you have set the installation path, you need to compile the code using `make` and then install the software using `make install`.
 
+## Getting Started Scientific Software Applications
+
+The Research Computing team has created a collection of [scripts](https://github.com/northeastern-rc/discovery-example-scripts) to assist you in getting started with different scientific software packages on discovery. Although these scripts may not have all the solutions, they aim to provide users with a starting point to grasp the syntax and procedures used in various applications.
+
+- [Matlab](https://github.com/northeastern-rc/discovery-example-scripts/tree/main/MATLAB)
+- [Multiprocessing](https://github.com/northeastern-rc/discovery-example-scripts/tree/main/Multiprocessing)
+- [Schrodinger](https://github.com/northeastern-rc/discovery-example-scripts/tree/main/Schrodinger)
+
+The collection of scripts is continuously growing and the team welcomes any contributions to the [project](https://github.com/northeastern-rc/discovery-example-scripts).
+
 ## Requesting Software Installation Assistance
 
 If the software that you need is not a module on Discovery, cannot be installed through Spack, or is not available through another way of

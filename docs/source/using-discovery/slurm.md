@@ -129,6 +129,30 @@ sinfo <options>
 
 Details on each of the commands above, and more, is covered in the following sections.
 
+## Allocating Resources
+You have two options when running tasks, run interactively via {ref}`using-srun` or by batch via {ref}`using-sbatch`.
+
+For parallel tasks, one can treat each task as a separate job and run them independently. The other option is to allocate resources for all the jobs simultaneously, allowing them to overlap (share CPUs, RAM, etc.). This is done with the `--overlap` flag: the assumption must be that not all tasks require all resources simultaneously, creating a more natural working environment, and resources are not wasted on idle time.
+
+:::{note}
+While the `sbatch` and `srun` commands request resource allocation if none exists, using `salloc` allows us to separate the allocation and submission processes.
+:::
+
+Some things Slurm assumes, like there is no overlap between different CPUs by default: tasks do not share CPUs with others running parallel. If overlap is needed, use the following Slurm flag:
+
+:::{code} bash
+--overlap
+:::
+
+Also, set the environment variable `SLURM_OVERLAP=1` via
+:::{code} bash
+export SLURM_OVERLAP=1
+:::
+
+:::{important}
+Run `export SLURM_OVERLAP=1` prior to logging onto a compute node when using MPI interactively.
+:::
+
 (using-sbatch)=
 ## Batch Jobs: `sbatch`
 The `sbatch` command is used to submit a job script for later execution. The script includes the `SBATCH` directives that control the job parameters like the number of nodes, CPUs per task, job name, etc.

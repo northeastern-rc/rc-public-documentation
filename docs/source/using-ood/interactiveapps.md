@@ -94,5 +94,5 @@ This Open OnDemand application is a containerized desktop running on the HPC clu
 The desktop application is a Singularity container: a Singularity container cannot run inside. It will fail if a user tries to run a module or program that runs a container inside this application.
 :::
 
-[Open On Demand]: https://www.ood.discovery.neu.edu/
+[Open On Demand]: https://ood.discovery.neu.edu/
 [Using X11]: https://rc-docs.northeastern.edu/en/latest/first_steps/connect_mac.html#using-x11
