@@ -25,7 +25,9 @@ For more information about Spack.
 :::
 ::::
 
-You can also use Conda, Miniconda, and Anaconda to manage software packages. See {ref}`using-conda` for more information.
+:::{seealso}
+{ref}`using-conda` to manage software packages with Anaconda or Miniconda.
+:::
 
 ## Getting Started Scientific Software Applications
 The Research Computing team has created a collection of [scripts] to assist you in getting started with different scientific software packages on discovery. Although these scripts may not have all the solutions, they aim to provide users with a starting point to grasp the syntax and procedures used in various applications.
