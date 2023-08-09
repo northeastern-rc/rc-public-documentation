@@ -30,11 +30,16 @@ For more information about Spack.
 :::
 
 ## Getting Started Scientific Software Applications
-The Research Computing team has created a collection of [scripts] to assist you in getting started with different scientific software packages on discovery. Although these scripts may not have all the solutions, they aim to provide users with a starting point to grasp the syntax and procedures used in various applications.
+Research Computing has provides [scripts] to assist you in getting started with different scientific software packages on discovery. Although these scripts may not have all the solutions, they aim to provide users with a starting point to grasp the syntax and procedures used in various applications.
 
-- [Matlab]
-- [Multiprocessing]
-- [Schrodinger]
+::::{grid} 3
+:::{grid-item-card} [MATLAB]
+:::
+:::{grid-item-card} [Multiprocessing]
+:::
+:::{grid-item-card} [Schrodinger]
+:::
+::::
 
 The collection of scripts is continuously growing and the team welcomes any contributions to the [project].
 
