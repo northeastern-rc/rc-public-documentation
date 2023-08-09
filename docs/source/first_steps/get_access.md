@@ -142,4 +142,4 @@ any further questions, feel free to ask!
 [servicenow rc access request form]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
 [kb article]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013989&sys_kb_id=e8381ac48764a594ba9a0fad0ebb3533&spa=1
 [rchelp@northeastern.edu]: mailto:rchelp@northeastern.edu
-[IT StatusPage]: (https://northeastern.statuspage.io/)
+[IT StatusPage]: https://northeastern.statuspage.io/
