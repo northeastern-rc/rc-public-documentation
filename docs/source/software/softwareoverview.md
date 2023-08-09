@@ -39,10 +39,11 @@ The Research Computing team has created a collection of [scripts] to assist you 
 The collection of scripts is continuously growing and the team welcomes any contributions to the [project].
 
 ## Requesting Software Installation Assistance
-If the software that you need is not a module on Discovery, cannot be installed through Spack, or is not available through another way of
-self-installation (such as using `make`), you can submit a [ServiceNow software request ticket].
-Be aware that there might be packages that cannot be installed on Discovery due
-to incompatibility with the hardware on Discovery.
+If the software you need is not a module on the cluster, cannot be installed via Spack, and is not available through another way of self-installation (e.g., `make`), please submit a [ServiceNow software request ticket].
+
+:::{note}
+Some packages might not be able to be installed on the cluster due to hardware incompatibility issues.
+:::
 
 [Matlab]: https://github.com/northeastern-rc/discovery-example-scripts/tree/main/MATLAB
 [Multiprocessing]: https://github.com/northeastern-rc/discovery-example-scripts/tree/main/Multiprocessing
