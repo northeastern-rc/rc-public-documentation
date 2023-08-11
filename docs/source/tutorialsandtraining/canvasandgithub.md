@@ -1,2 +1,0 @@
-(canvasandgithub)=
-# Canvas and GitHub

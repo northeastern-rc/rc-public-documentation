@@ -89,64 +89,26 @@ We invite you to explore the resources, tools, and services available through th
 :caption: 👋 Welcome
 
 welcome/welcome
-welcome/services
 welcome/gettinghelp
-welcome/introtocluster
 ```
 
 ```{toctree}
 :hidden:
-:caption: 1️⃣ Getting Started
+:caption: 1️⃣ First Steps
 
 first_steps/get_access
-first_steps/accountmanager
-first_steps/connecttocluster
-first_steps/passwordlessssh
+first_steps/connect_mac
+first_steps/connect_windows
+first_steps/connect_ood
+first_steps/bashrc
 ```
 
 ```{toctree}
 :hidden:
-:caption: 🖥️ Understanding the System
+:caption: 🖥️ Hardware on Discovery
 
 hardware/hardware_overview
 hardware/partitions
-understandingsystem/understandingqueuing
-understandingsystem/shellenvironment
-understandingsystem/usingbash
-```
-
-```{toctree}
-:hidden:
-:caption: 📲 Open OnDemand (OOD)
-
-using-ood/introduction
-using-ood/accessingood
-using-ood/fileexplore
-using-ood/interactiveapps
-using-ood/advancedfeatures
-```
-
-```{toctree}
-:hidden:
-:caption: 👩🏽‍💻Running Jobs
-
-runningjobs/jobscheduling
-runningjobs/interactiveandbatch
-runningjobs/workingwithgpus
-runningjobs/recurringjobs
-runningjobs/debuggingjobs
-```
-
-
-```{toctree}
-:hidden:
-:caption: 📚 Slurm Guide
-
-slurmguide/introductiontoslurm
-slurmguide/slurmcommands
-slurmguide/slurmscripts
-slurmguide/monitoringandmanaging
-slurmguide/slurmarray
 ```
 
 ```{toctree}
@@ -155,38 +117,46 @@ slurmguide/slurmarray
 
 software/softwareoverview
 software/modules
+software/matlab
+software/conda
+software/spack
+software/r
 software/mpi
 ```
 
+```{toctree}
+:hidden:
+:caption: 🛠 Using HPC
+
+using-discovery/slurm
+using-discovery/scontab
+using-discovery/workingwithgpu
+using-discovery/transferringdata
+using-discovery/globus
+```
 
 ```{toctree}
 :hidden:
-:caption: Getting Software
+:caption: 🗄 Understanding storage
 
-gettingsoftware/systemwide
-gettingsoftware/packagemanagers
-gettingsoftware/fromscratch
+storage/discovery_storage
 ```
 
 ```{toctree}
 :hidden:
 :caption: 🚀 Best practices
 
-best-practices/homequota
 best-practices/checkpointing
-best-practices/optimizingperformance
-best-practices/software
+best-practices/homequota
 ```
 
 ```{toctree}
 :hidden:
-:caption: 🗄 Data Management
+:caption: 📲 Open OnDemand (OOD)
 
-datamanagement/discovery_storage
-datamanagement/transferringdata
-datamanagement/globus
-datamanagement/databackup
-datamanagement/securityandcompliance
+using-ood/introduction
+using-ood/fileexplore
+using-ood/interactiveapps
 ```
 
 ```{toctree}
@@ -195,44 +165,10 @@ datamanagement/securityandcompliance
 
 classroom/class_use
 classroom/cps_ood
-classroom/classroomexamples
 ```
 
 ```{toctree}
 :hidden:
-:caption: Tutorials and Training
 
-tutorialsandtraining/canvasandgithub
-```
-
-```{toctree}
-:hidden:
-:caption: Additional Resources
-
-additionalresources/faq
-additionalresources/glossary
-additionalresources/communityandforums
-additionalresources/casestudiesandtestimonials
-additionalresources/updatesandchangelog
-```
-
-```{toctree}
-:hidden:
-:caption: Give Us Feedback
-
-feedback/reportbug
-feedback/contribute
-```
-
-```{toctree}
-:hidden:
-:caption: TO REMOVE
-
-first_steps/connect_mac
-first_steps/connect_windows
-software/r
-software/spack
-software/matlab
-software/conda
 _developers/primer
 ```
