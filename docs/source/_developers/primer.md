@@ -28,7 +28,7 @@ As specified below, using colons (i.e., `:::`) in place of the typical hyphens w
 
 ##  Writing Style
 :::{admonition} Dates and Time
-Use EST and specify this when date or time are used (e.g., `9 September at 9-5 pm EST`).
+Use EST and specify this when date or time are used (e.g., `September 9, 2023 at 9-5 a.m. ET`).
 :::
 The writing style in documentation is critical for ensuring consistency and understanding. Here are some best practices:
 
@@ -57,7 +57,7 @@ align: left
 * - ❌ Do Not
   - ✅ Do
 * - Once the process has been completed successfully, the next step is...
-  - After completing the process, next...
+  - Next, ...
 :::
 
 **Active Voice**: Use the active voice whenever possible as it is more straightforward and engaging.
@@ -71,7 +71,7 @@ align: left
 * - ❌ Do Not
   - ✅ Do
 * - The command can be executed by the user.
-  - The user can execute the command.
+  - Execute the command.
 :::
 
 **Address the Reader**: Use the second person ("you") to address the reader directly.
@@ -116,7 +116,7 @@ Nesting blocks, along with the ability set parameters inline.
 There is no need to indent source text, as nested directives are explicitly clear by the number of `:` characters are used to open and close.
 ::::
 
-::::{attention}
+::::{important}
 
 **Do not add line-breaks unless a line break in the rendered view is to need a line break.** Each paragraph remains on the same line, with line-breaks using to clearly show transitions between paragraphs, sections, and directives.
 
@@ -144,7 +144,7 @@ Consistent formatting makes your documentation look professional and easy to rea
 - **Headings**: Use headings and subheadings to structure your content. In MyST, use # for level 1 headings, ## for level 2, and so on.
 - **Lists:** Use bulleted lists for unordered items and numbered lists for ordered items. In MyST, use bullets `-` for unordered lists and numbers `1.` for ordered lists.
 - **Bold and Italics**: Use bold to highlight important concepts and italics to indicate new terms. In MyST, use bold text** for bold and italic text* for italics.
-- **Code Blocks**: Use code blocks to present code snippets. In MyST, use triple colons `:::` to create code blocks and specify the language for syntax highlighting.
+- **Code Blocks**: Use code blocks to present code snippets. In MyST, use triple colons `:::` to create code blocks and specify the language for syntax highlighting. Be sure to specify the type of code (e.g., open bash script example via `:::{code} bash`)
 - **Admonitions**: Use MyST syntax to create admonitions highlighting notes, tips, warnings, and other important information. For example, use `:::{note}` or `:::{warning}` to create admonitions.
 
 :::{seealso}
@@ -157,40 +157,16 @@ Admonitions highlight a particular block of text that exists slightly apart from
 :::{admonition} This is the title
 This is the message.
 :::
-There are several types of admonitions:
+There are several types of admonitions. We only use four types, which are listed as follows:
 
 :::::{grid} 2
-::::{grid-item-card}
-:::{attention}
-Use to put emphasis on a specific point.
-:::
-::::
-::::{grid-item-card}
-:::{caution}
-Use when extra care is warranted for a specific task.
-:::
-::::
-
-::::{grid-item-card}
-:::{danger}
-Use when there is a potential problem that can occur.
-:::
-::::
-
-::::{grid-item-card}
-:::{error}
-Use to highlight a bug.
-:::
-::::
-::::{grid-item-card}
-:::{hint}
-Use to make a suggestion.
-:::
-::::
 
 ::::{grid-item-card}
 :::{important}
-Use to put emphasis on a sub-topic or sub-point.
+- Use to put emphasis on a sub-topic or sub-point.
+- Use to put emphasis on a specific point.
+- Use when extra care is warranted for a specific task.
+- Use to warn user of expected behaviors or outputs.
 :::
 ::::
 
@@ -207,13 +183,8 @@ Use to reference another section, page, or reference that extends, provides deta
 
 ::::{grid-item-card}
 :::{tip}
-Use to provide pro-tips or tips & tricks.
-:::
-::::
-
-::::{grid-item-card}
-:::{warning}
-Use to warn user of expected behaviors or outputs.
+- Use to provide pro-tips or tips & tricks.
+- Use to make a suggestion.
 :::
 ::::
 :::::
@@ -270,7 +241,7 @@ Links and references are crucial for helping users navigate your content and pro
 - Use cross-references to link to other sections within the documentation. [Text can also be modified inline.](links-references) (i.e., `[Text can also be modified inline.](linksreferences)`).
 - Descriptive Links: Avoid using phrases like "click here" for hyperlink text. Instead, use descriptive text that informs the reader about the content they'll find when they follow the link.
 
-:::{attention}
+:::{important}
 Section labels should be all lowercase, with `-` placed between the words (e.g., `(section-one)`.
 ::
 
@@ -324,7 +295,7 @@ When adding a substantial amount of content, whether a new page or several secti
 - **Feedback**: Encourage users to provide feedback on your documentation. This can help you identify areas that need improvement.
 - **Continuous Updates**: Keep your documentation up-to-date. As your product evolves, so should your documentation.
 
-:::{attention}
+:::{important}
 All members of the RC are welcome to contribute on the documentation. In fact, it is encouraged and much appreciated. Do not hesitate to ask for tasks or make suggestions to improve our *User Facing Documentation*.
 :::
 

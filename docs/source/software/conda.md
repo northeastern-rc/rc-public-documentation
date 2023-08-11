@@ -130,5 +130,5 @@ Best practices for home storage: {ref}`cleaning-conda`.
 [conda]: https://docs.conda.io/en/latest/
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [Should I use Anaconda or Miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
-[Storage Accessible on Discovery]: ../storage/discovery_storage.md
+[Storage Accessible on Discovery]: ../datamanagement/discovery_storage.md
 [New Storage Space request]: https://bit.ly/NURC-NewStorage

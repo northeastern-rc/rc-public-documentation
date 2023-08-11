@@ -1,3 +1,4 @@
+(recurring-jobs)=
 # Recurring Jobs
 
 You can use `scrontab` to schedule recurring jobs. Its syntax is similar to that of `[crontab](https://man7.org/linux/man-pages/man5/crontab.5.html)`, which is a [standard Unix/Linux utility](https://en.wikipedia.org/wiki/Cron) for running programs at specified intervals.

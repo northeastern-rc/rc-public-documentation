@@ -65,8 +65,7 @@ templates_path = ["_templates"]
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ["first_steps/cps_ood.md",
-                    "using-discovery/bash.md",
+exclude_patterns = ["using-ood/cps_ood.md",
                     "_snippets/*"]
 
 
