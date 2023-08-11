@@ -157,40 +157,16 @@ Admonitions highlight a particular block of text that exists slightly apart from
 :::{admonition} This is the title
 This is the message.
 :::
-There are several types of admonitions:
+There are several types of admonitions. We only use four types, which are listed as follows:
 
 :::::{grid} 2
-::::{grid-item-card}
-:::{attention}
-Use to put emphasis on a specific point.
-:::
-::::
-::::{grid-item-card}
-:::{caution}
-Use when extra care is warranted for a specific task.
-:::
-::::
-
-::::{grid-item-card}
-:::{danger}
-Use when there is a potential problem that can occur.
-:::
-::::
-
-::::{grid-item-card}
-:::{error}
-Use to highlight a bug.
-:::
-::::
-::::{grid-item-card}
-:::{hint}
-Use to make a suggestion.
-:::
-::::
 
 ::::{grid-item-card}
 :::{important}
-Use to put emphasis on a sub-topic or sub-point.
+- Use to put emphasis on a sub-topic or sub-point.
+- Use to put emphasis on a specific point.
+- Use when extra care is warranted for a specific task.
+- Use to warn user of expected behaviors or outputs.
 :::
 ::::
 
