@@ -116,7 +116,7 @@ Nesting blocks, along with the ability set parameters inline.
 There is no need to indent source text, as nested directives are explicitly clear by the number of `:` characters are used to open and close.
 ::::
 
-::::{attention}
+::::{important}
 
 **Do not add line-breaks unless a line break in the rendered view is to need a line break.** Each paragraph remains on the same line, with line-breaks using to clearly show transitions between paragraphs, sections, and directives.
 
@@ -183,13 +183,8 @@ Use to reference another section, page, or reference that extends, provides deta
 
 ::::{grid-item-card}
 :::{tip}
-Use to provide pro-tips or tips & tricks.
-:::
-::::
-
-::::{grid-item-card}
-:::{warning}
-Use to warn user of expected behaviors or outputs.
+- Use to provide pro-tips or tips & tricks.
+- Use to make a suggestion.
 :::
 ::::
 :::::
@@ -246,7 +241,7 @@ Links and references are crucial for helping users navigate your content and pro
 - Use cross-references to link to other sections within the documentation. [Text can also be modified inline.](links-references) (i.e., `[Text can also be modified inline.](linksreferences)`).
 - Descriptive Links: Avoid using phrases like "click here" for hyperlink text. Instead, use descriptive text that informs the reader about the content they'll find when they follow the link.
 
-:::{attention}
+:::{important}
 Section labels should be all lowercase, with `-` placed between the words (e.g., `(section-one)`.
 ::
 
@@ -300,7 +295,7 @@ When adding a substantial amount of content, whether a new page or several secti
 - **Feedback**: Encourage users to provide feedback on your documentation. This can help you identify areas that need improvement.
 - **Continuous Updates**: Keep your documentation up-to-date. As your product evolves, so should your documentation.
 
-:::{attention}
+:::{important}
 All members of the RC are welcome to contribute on the documentation. In fact, it is encouraged and much appreciated. Do not hesitate to ask for tasks or make suggestions to improve our *User Facing Documentation*.
 :::
 
