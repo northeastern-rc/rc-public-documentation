@@ -28,7 +28,7 @@ As specified below, using colons (i.e., `:::`) in place of the typical hyphens w
 
 ##  Writing Style
 :::{admonition} Dates and Time
-Use EST and specify this when date or time are used (e.g., `9 September at 9-5 pm EST`).
+Use EST and specify this when date or time are used (e.g., `September 9, 2023 at 9-5 a.m. ET`).
 :::
 The writing style in documentation is critical for ensuring consistency and understanding. Here are some best practices:
 
