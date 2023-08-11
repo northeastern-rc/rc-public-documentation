@@ -57,7 +57,7 @@ align: left
 * - ❌ Do Not
   - ✅ Do
 * - Once the process has been completed successfully, the next step is...
-  - After completing the process, next...
+  - Next, ...
 :::
 
 **Active Voice**: Use the active voice whenever possible as it is more straightforward and engaging.
@@ -71,7 +71,7 @@ align: left
 * - ❌ Do Not
   - ✅ Do
 * - The command can be executed by the user.
-  - The user can execute the command.
+  - Execute the command.
 :::
 
 **Address the Reader**: Use the second person ("you") to address the reader directly.
