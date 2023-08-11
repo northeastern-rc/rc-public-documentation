@@ -1,2 +1,0 @@
-(glossary)=
-# Glossary of Terms

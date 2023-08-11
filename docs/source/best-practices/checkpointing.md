@@ -1,4 +1,3 @@
-(checkpoint-jobs)=
 # Checkpointing Jobs
 
 The complexity of HPC systems can introduce unpredictable behavior in hardware or software components, leading to job failures. Applying fault tolerance techniques to your HPC workflows can make your jobs more resilient to crashes, partition time limits, and hardware failures.
