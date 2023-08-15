@@ -1,2 +1,2 @@
-(understanding-queuing)=
-# Understanding the Queuing System
+(the-queuing-system)=
+# The Queuing System

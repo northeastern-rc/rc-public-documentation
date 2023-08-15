@@ -1,20 +1,25 @@
-(using-conda)=
-
-# Using Conda
-
-[Conda] is an open source environment and package manager. [Miniconda] is a free installer for Conda, Python, and comes with a few other packages. [Anaconda] is also a package manager that has a much larger number of packages pre-installed.
-
-A question that frequently comes up is "[Should I use Anaconda or Miniconda]?"
-
-:::{note}
-It is not recommended to build your Miniconda and Conda virtual environments inside your /home directory due to its limited space quota (see [Storage Accessible on Discovery]). Use the /work file system instead. If your group needs access to /work, the group PI can request it using: [New Storage Space request].
+::::{sidebar}
+:::{seealso}
+[Should I use Anaconda or Miniconda]?
 :::
+::::
+(conda)=
+## Conda
+[Conda] is an open-source environment and package manager. [Miniconda] is a free installer for Conda and Python and comes with a few other packages. [Anaconda] is also a package manager that has a much larger number of packages pre-installed.
+
+:::::{note}
+::::{sidebar}
+:::{seealso}
+[Storage Accessible on Discovery].
+:::
+::::
+We recommend not building your Miniconda and Conda environments inside your `/home` due to its limited space quota, but use `/work`. If your group needs space on `/work`, the PI can make a [New Storage Space request].
+:::::
 
 (creating-python)=
+### Creating a Python Environment
 
-## Creating an Environment
-
-Using a locally installed Conda virtual environment is highly recommended so that you can install the specific packages that you need. You can also have more than one environment with different packages for different research projects or for testing purposes. This procedure uses the Anaconda module already available on Discovery.
+Using a locally installed Conda virtual environment is highly recommended to install the specific packages you need. You can also have multiple environments with different packages for research projects or testing purposes. This procedure uses the Anaconda module already available on the cluster.
 
 If you are on a login node, move to a compute node by typing:
 
@@ -47,7 +52,7 @@ Your command line prompt will then include the path and name of environment.
 :::
 
 ::::{tip}
-``conda config --set env_prompt '({name}) '`` modifies your `.condarc` to only show the environments name as such:
+The `conda config --set env_prompt '({name}) '` command modifies your `.condarc` to show only the environment, which displays as follows:
 :::{code} bash
 (<environment-name>) [username@c2000 dirname]$
 :::
@@ -71,11 +76,11 @@ conda remove -n yourenvironmentname --all
 
 (mini-conda)=
 
-## Using Miniconda
+### Using Miniconda
 
 This procedure assumes that you have not installed Miniconda. If you need to update Miniconda, do not follow the installation procedure. Use `conda update`. This procedure uses the Miniconda3 version with Python version 3.8 in step 2, although there are other versions you can install (e.g., 3.9 or 3.11).
 
-### Installing Miniconda
+#### Installing Miniconda
 
 ::::{attention}
 Make sure to log on to a compute node.
@@ -91,7 +96,7 @@ wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.
 sha256sum Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>
 :::
-Where `<dir>` is the full path to your desired installation directory (e.g., `/work/mygroup/mydirectory/miniconda3`).
+Where `<dir>` is the full path to your desired installation directory (e.g., `/work/mygroup/miniconda3`).
 
 
 Activate the base Miniconda environment
@@ -101,7 +106,7 @@ source <dir>/bin/activate
 
 You can now create a new environment with this command where we're using python version 3.8:
 
-:::{code-block} bash 
+:::{code-block} bash
 conda create --name my-py38env python=3.8
 :::
 
@@ -115,7 +120,7 @@ conda activate my-py38env
 
 To deactivate the environment, type `conda deactivate`. You can type this command again to deactivate the base Miniconda environment.
 
-## Conda Best Practices
+### Conda Best Practices
 :::{seealso}
 Best practices for home storage: {ref}`cleaning-conda`.
 :::

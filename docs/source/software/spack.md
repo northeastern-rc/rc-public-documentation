@@ -1,6 +1,5 @@
-(using-spack)=
-
-# Using Spack
+(spack)=
+## Spack
 
 Research Computing recommends using [Spack] to conveniently install software packages locally to your path. Please refer to the [Spack documentation] for the latest information about the [packages] that Spack contains. To use Spack, you first need to copy it to your `/home` directory or a `/work` directory, then you need to add it to your local environment.
 
@@ -9,7 +8,7 @@ Spack software installations are part of your research and should preferably be 
 :::
 
 (getting-started-spack)=
-## Install Spack
+### Install Spack
 
 These instructions will demonstrate how to install Spack in your `/home` (*non-shared*) or `/work` (*shared*) directory and then how to add Spack to your local environment while on a compute node, so you have access to the Spack commands (steps 4-5).
 
@@ -36,11 +35,11 @@ chmod -R 775 spack/
 :::::
 ::::::
 
-## Install a software using Spack 
- 
-1. Request a compute node interactively: `srun -p short --pty -N 1 -n 28 /bin/bash`. While building the software Spack will attempt to run `make` in parallel. Hence, you need to request a compute node with multiple cores. This `srun` request is for 28 cores on one node (`-N 1 -n 28`). 
-1. Any module that is required for your software installation needs to be in your `$PATH` prior to adding Spack to your local environment. For example, to use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`. 
-1. Add Spack to your local environment so you can use the Spack commands. If Spack has been installed on `$HOME`: 
+### Install a software using Spack
+
+1. Request a compute node interactively: `srun -p short --pty -N 1 -n 28 /bin/bash`. While building the software Spack will attempt to run `make` in parallel. Hence, you need to request a compute node with multiple cores. This `srun` request is for 28 cores on one node (`-N 1 -n 28`).
+1. Any module that is required for your software installation needs to be in your `$PATH` prior to adding Spack to your local environment. For example, to use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`.
+1. Add Spack to your local environment so you can use the Spack commands. If Spack has been installed on `$HOME`:
 
    ::::{code-block} bash
    For Spack on $HOME
@@ -60,13 +59,13 @@ chmod -R 775 spack/
 you can specify `-<any dependencies or options>`. You can also list
 `+` or `-` different options and dependencies within the same line. Do
 not put a space between each option/dependency that you list.
-1. To view information about your installed software packages: `spack find <software package name>` or `spack info <software package name>` . 
+1. To view information about your installed software packages: `spack find <software package name>` or `spack info <software package name>` .
 1. To Install a specific version of the software: `spack install <softwarename@version>`.
 
 When you have installed a software package, you can add it to the module system by executing this command:
 `. $SPACK_ROOT/share/spack/setup-env.sh`
 
-## Installing LAMMPS with Spack example
+### Installing LAMMPS with Spack example
 
 This section details how to install the LAMMPS application with the
 KOKKOS and User-reaxc packages using Spack. This example assumes that
@@ -87,8 +86,8 @@ progress of the installation.
 If LAMMPS has a dependency on a specific `gcc` compiler, then do the following before starting the installation procedure. This will update the `compilers.yaml` file located in `$HOME/.spack/linux`.
 
 1. `cd $HOME/.spack/linux/`
-1. Open `compilers.yaml` and copy-paste a `compiler` entry at the end of the file. 
-1. Edit 'spec' and 'path' to indicate the version of the gcc compiler that is required for installation. 
+1. Open `compilers.yaml` and copy-paste a `compiler` entry at the end of the file.
+1. Edit 'spec' and 'path' to indicate the version of the gcc compiler that is required for installation.
 
    ::::{code-block} bash
    For example:
@@ -113,15 +112,15 @@ If LAMMPS has a dependency on a specific `gcc` compiler, then do the following b
     module load cuda/10.2 gcc/8.1.0 python/3.8.1
     export SPACK_ROOT=/work/<PI-Project-Dir>/spack
     . $SPACK_ROOT/share/spack/setup-env.sh
-   :::: 
+   ::::
 
 1. (Optional) Initiate a `tmux` session:
 
    - Start a tmux session: `tmux`.
-   - List tmux sessions: `tmux ls` 
+   - List tmux sessions: `tmux ls`
    - Detach from tmux session: `Ctrl+b d`
-   - Attach to tmux session: `tmux attach-session -t 0` 
-   - Exit a tmux session: `Ctrl+d` 
+   - Attach to tmux session: `tmux attach-session -t 0`
+   - Exit a tmux session: `Ctrl+d`
 
 1. Type:
 

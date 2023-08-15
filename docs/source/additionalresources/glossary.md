@@ -35,6 +35,9 @@ Job Script
 Module
 : In the context of HPC, a module is a bundle of software that can be loaded or unloaded in the user's environment.
 
+Package Manager
+: Define package manager.
+
 Partition
 : A division of the cluster resources. Each partition can have different configurations, such as different types of nodes and different access policies.
 
