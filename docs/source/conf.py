@@ -12,15 +12,16 @@
 #
 # import os
 # import sys
+from datetime import date
 # sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = "HPC Documentation"
-logo = "_static/logo-square.png"
-copyright = "2023"
-author = "Research Computing, Northeastern University"
+project = "RC-HPC"
+# logo = "_static/logo-square.png"
+copyright = f"{date.today().year}, Andrey Petrov"
+author = "Research Computing, NU"
 
 # The full version, including alpha/beta/rc tags
 release = "3.0.0"
