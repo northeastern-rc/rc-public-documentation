@@ -84,155 +84,59 @@ Whether you are a seasoned user or just beginning your journey into high-perform
 
 We invite you to explore the resources, tools, and services available through the portal. Join us as we endeavor to harness the power of high-performance computing, enabling breakthroughs in research and fostering innovation at Northeastern University.
 
-```{toctree}
-:hidden:
-:caption: 👋 Welcome
-
-welcome/welcome
-welcome/services
-welcome/gettinghelp
-welcome/introtocluster
-```
+---
+hide-toc: true
+---
 
 ```{toctree}
 :hidden:
 :caption: 1️⃣ Getting Started
 
-first_steps/get_access
-first_steps/accountmanager
-first_steps/connecttocluster
-first_steps/passwordlessssh
+welcome/index
+first_steps/index
 ```
+
 
 ```{toctree}
 :hidden:
 :caption: 🖥️ Understanding the System
 
-hardware/hardware_overview
-hardware/partitions
-understandingsystem/understandingqueuing
-understandingsystem/shellenvironment
-understandingsystem/usingbash
+hardware/index
+understandingsystem/index
+using-ood/index
+runningjobs/index
+datamanagement/index
+best-practices/index
 ```
 
-```{toctree}
-:hidden:
-:caption: 📲 Open OnDemand (OOD)
-
-using-ood/introduction
-using-ood/accessingood
-using-ood/fileexplore
-using-ood/interactiveapps
-using-ood/advancedfeatures
-```
-
-```{toctree}
-:hidden:
-:caption: 👩🏽‍💻Running Jobs
-
-runningjobs/jobscheduling
-runningjobs/interactiveandbatch
-runningjobs/workingwithgpus
-runningjobs/recurringjobs
-runningjobs/debuggingjobs
-```
-
-
-```{toctree}
-:hidden:
-:caption: 📚 Slurm Guide
-
-slurmguide/introductiontoslurm
-slurmguide/slurmcommands
-slurmguide/slurmscripts
-slurmguide/monitoringandmanaging
-slurmguide/slurmarray
-```
 
 ```{toctree}
 :hidden:
 :caption: 📚 Software Guides
 
-software/softwareoverview
-software/modules
-software/mpi
-```
-
-
-```{toctree}
-:hidden:
-:caption: Getting Software
-
-gettingsoftware/systemwide
-gettingsoftware/packagemanagers
-gettingsoftware/fromscratch
+software/index
+slurmguide/index
+gettingsoftware/index
 ```
 
 ```{toctree}
 :hidden:
-:caption: 🚀 Best practices
+:caption: Supplemental
 
-best-practices/homequota
-best-practices/checkpointing
-best-practices/optimizingperformance
-best-practices/software
+classroom/index
+tutorialsandtraining/index
+additionalresources/index
 ```
 
 ```{toctree}
 :hidden:
-:caption: 🗄 Data Management
+:maxdepth: 3
 
-datamanagement/discovery_storage
-datamanagement/transferringdata
-datamanagement/globus
-datamanagement/databackup
-datamanagement/securityandcompliance
+feedback/index
 ```
 
 ```{toctree}
 :hidden:
-:caption: 🧑‍🏫 HPC for the classroom
 
-classroom/class_use
-classroom/cps_ood
-classroom/classroomexamples
-```
-
-```{toctree}
-:hidden:
-:caption: Tutorials and Training
-
-tutorialsandtraining/canvasandgithub
-```
-
-```{toctree}
-:hidden:
-:caption: Additional Resources
-
-additionalresources/faq
-additionalresources/glossary
-additionalresources/communityandforums
-additionalresources/casestudiesandtestimonials
-additionalresources/updatesandchangelog
-```
-
-```{toctree}
-:hidden:
-:caption: Give Us Feedback
-
-feedback/reportbug
-feedback/contribute
-```
-
-```{toctree}
-:hidden:
-:caption: TO REMOVE
-
-first_steps/connect_mac
-first_steps/connect_windows
-software/r
-software/spack
-software/matlab
-software/conda
-_developers/primer
+toremove
 ```
