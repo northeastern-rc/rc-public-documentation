@@ -13,6 +13,7 @@
 # import os
 # import sys
 from datetime import date
+
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -32,33 +33,51 @@ release = "3.0.0"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "myst_nb",
+    # "myst_nb",
+    # Sphinx's own extensions
     "sphinx.ext.autodoc",
     "sphinx.ext.autosectionlabel",
+    "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.todo",
     "sphinx_copybutton",
     "sphinx_design",  # https://pypi.org/project/sphinx_design/
-    "sphinx_tabs.tabs",
-    "sphinx_togglebutton",  # https://sphinx-togglebutton.readthedocs.io/en/latest/use.html
+    # "sphinx_tabs.tabs",
+    "sphinx_togglebutton",
+    # https://sphinx-togglebutton.readthedocs.io/en/latest/use.html
     # "sphinxcontrib.bibtex",
     # "sphinxext.opengraph",
     # For the kitchen sink
-    "sphinx.ext.todo",
-    'sphinx.ext.autosectionlabel',
+    # Our custom extension, only meant for Furo's own documentation.
+    "furo.sphinxext",
+    # External stuff
+    "myst_parser",
+    "sphinx_copybutton",
+    "sphinx_inline_tabs",
 ]
 
 # Prefix document path to section labels, to use:
 # `path/to/file:heading` instead of just `heading`
 autosectionlabel_prefix_document = True
 
-intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
+intersphinx_mapping = {"python": ("https://docs.python.org/3", None),
+                       "sphinx": ("https://www.sphinx-doc.org/en/master", None)}
+
+# -- Options for TODOs -------------------------------------------------------
+#
+todo_include_todos = True
+
+# -- Options for Markdown files ----------------------------------------------
+#
 
 myst_enable_extensions = [
     "colon_fence",
     "deflist",
     "dollarmath",
 ]
+myst_heading_anchors = 3
 myst_deflist_enable = True
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
