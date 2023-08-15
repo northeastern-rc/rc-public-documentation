@@ -101,3 +101,6 @@ html_static_path = ["_static", "_static/video"]
 
 master_doc = "index"
 source_suffix = [".rst", ".md"]
+
+# Warn about all references to unknown targets
+nitpicky = True
