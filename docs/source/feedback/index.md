@@ -3,6 +3,6 @@
 :hidden:
 :maxdepth: 3
 
-reportbug
+Report Docs Bug and Request <https://github.com/northeastern-rc/rc-public-documentation/issues/new/choose>
 contribute
 ```
