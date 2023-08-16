@@ -116,7 +116,7 @@ HPC for the Classroom <classroom/index>
 best-practices/index
 tutorialsandtraining/index
 Frequently Asked Questions <faq>
-additionalresources/index
+glossary
 ```
 
 ```{toctree}
