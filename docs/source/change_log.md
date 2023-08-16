@@ -1,5 +1,5 @@
-(updates-and-changelog)=
-# Updates and Change Log
+(changelog)=
+# Change Log
 
 This page is regularly updated with information about system changes, updates, maintenance periods, and other important announcements. Keeping an eye on this page will help you stay informed about recent changes to our HPC system.
 

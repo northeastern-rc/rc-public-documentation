@@ -6,7 +6,7 @@ Open OnDemand (OOD) is a web portal to the Discovery cluster.
 
 This topic is for connecting to the Discovery cluster through the browser application, Open OnDemand.
 If you are looking to access Discovery directly on your system rather than through a browser,
-please see {ref}`connect-mac` for connecting with a Mac and {ref}`connect-windows` for connecting with Windows.
+please see {ref}`connect-to-cluster`, whether Mac or Windows.
 
 A Discovery account is necessary for you to access OOD. If you need an account,
 see {ref}`getting-access`. After you have created a Discovery account,
