@@ -41,7 +41,7 @@ HPC users need a sponsor, usually a NU PI or professor, to approve their request
 **DO NOT USE** the login node for CPU-intensive activities, as this will impact the performance of this node for all cluster users. It will also not provide the best performance for the tasks you are trying to accomplish.
 
 :::{seealso}
-{ref}`connect-mac` or {ref}`connect-windows`.
+{ref}`connect-to-cluster`
 :::
 
 ::::{important}
