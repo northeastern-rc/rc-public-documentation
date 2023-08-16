@@ -6,6 +6,5 @@
 
 get_access
 accountmanager
-connecttocluster
 connectingtocluster/index
 ```

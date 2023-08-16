@@ -8,4 +8,5 @@ welcome
 services
 gettinghelp
 introtocluster
+casestudiesandtestimonials
 ```
