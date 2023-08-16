@@ -106,17 +106,8 @@ understandingsystem/index
 using-ood/index
 runningjobs/index
 datamanagement/index
+Software <software/index>
 best-practices/index
-```
-
-
-```{toctree}
-:hidden:
-:caption: 📚 Software Guides
-
-software/index
-slurmguide/index
-gettingsoftware/index
 ```
 
 ```{toctree}
