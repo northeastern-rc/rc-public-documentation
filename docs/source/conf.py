@@ -151,7 +151,16 @@ html_show_sphinx = False
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static", "_static/video"]
 
-master_doc = "index"
+# Custom sidebar templates, must be a dictionary that maps document names
+# to template names.
+#
+# The default sidebars (for documents that don't match any pattern) are
+# defined by theme itself.  Builtin themes are using these templates by
+# default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
+# 'searchbox.html']``.
+#
+# html_sidebars = {}
+
 source_suffix = [".rst", ".md"]
 
 # -- Options for Epub output -------------------------------------------------
