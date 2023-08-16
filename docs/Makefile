@@ -13,7 +13,7 @@ PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub pdf-bw latex latexpdf text man changes linkcheck doctest livehtml
+.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub pdf-bw latex latexpdf text man changes linkcheck doctest livehtml view pdf
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -159,3 +159,4 @@ pdf:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+  

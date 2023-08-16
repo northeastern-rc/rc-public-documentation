@@ -94,9 +94,9 @@ Use conda environments for python on HPC. To create an environment in `/work`, u
 conda create --prefix=/work/<project>/<my conda env>
 :::
 
-More information about creating custom conda environments can be found here {ref}`using-conda`.
+More information about creating custom conda environments can be found here {ref}`conda`.
 
-Utilize the same conda environment to save storage space and time (i.e., avoiding duplicate conda environments). Hence, shared environments can be easily done for a project accessing the same `/work` directory. For more information about creating custom conda environments, see {ref}`using-conda`.
+Utilize the same conda environment to save storage space and time (i.e., avoiding duplicate conda environments). Hence, shared environments can be easily done for a project accessing the same `/work` directory. For more information about creating custom conda environments, see {ref}`conda`.
 
 ### Singularity containers
 

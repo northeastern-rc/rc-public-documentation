@@ -1,5 +1,5 @@
 (spack)=
-## Spack
+# Spack
 
 Research Computing recommends using [Spack] to conveniently install software packages locally to your path. Please refer to the [Spack documentation] for the latest information about the [packages] that Spack contains. To use Spack, you first need to copy it to your `/home` directory or a `/work` directory, then you need to add it to your local environment.
 
@@ -8,7 +8,7 @@ Spack software installations are part of your research and should preferably be 
 :::
 
 (getting-started-spack)=
-### Install Spack
+## Install Spack
 
 These instructions will demonstrate how to install Spack in your `/home` (*non-shared*) or `/work` (*shared*) directory and then how to add Spack to your local environment while on a compute node, so you have access to the Spack commands (steps 4-5).
 
@@ -35,7 +35,7 @@ chmod -R 775 spack/
 :::::
 ::::::
 
-### Install a software using Spack
+## Install a software using Spack
 
 1. Request a compute node interactively: `srun -p short --pty -N 1 -n 28 /bin/bash`. While building the software Spack will attempt to run `make` in parallel. Hence, you need to request a compute node with multiple cores. This `srun` request is for 28 cores on one node (`-N 1 -n 28`).
 1. Any module that is required for your software installation needs to be in your `$PATH` prior to adding Spack to your local environment. For example, to use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`.
@@ -65,7 +65,7 @@ not put a space between each option/dependency that you list.
 When you have installed a software package, you can add it to the module system by executing this command:
 `. $SPACK_ROOT/share/spack/setup-env.sh`
 
-### Installing LAMMPS with Spack example
+### Example: Installing LAMMPS
 
 This section details how to install the LAMMPS application with the
 KOKKOS and User-reaxc packages using Spack. This example assumes that

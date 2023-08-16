@@ -4,8 +4,8 @@
 :hidden:
 :maxdepth: 3
 
-get_access
-accountmanager
-connecttocluster
 passwordlessssh
+shellenvironment
+usingbash
 ```
+There are two ways to interface with the cluster, using the command-line or the browser via Open On Demand (OOD).
