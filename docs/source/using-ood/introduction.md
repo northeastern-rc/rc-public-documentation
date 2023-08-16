@@ -3,7 +3,7 @@
 # Introduction to OOD
 
 Open OnDemand (OOD) is a web portal to the Discovery cluster. A Discovery account
-is necessary for you to access OOD. If you need an account, see [Request an account](../first_steps/get_access). If you already have an account, in a web browser, go to <http://ood.discovery.neu.edu> and sign in with your Northeastern username and password.
+is necessary for you to access OOD. If you need an account, see [Request an account](../gettingstarted/get_access). If you already have an account, in a web browser, go to <http://ood.discovery.neu.edu> and sign in with your Northeastern username and password.
 
 OOD provides you with a number of resources for interacting with the Discovery cluster:
 
