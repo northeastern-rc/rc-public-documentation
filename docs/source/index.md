@@ -90,53 +90,41 @@ hide-toc: true
 
 ```{toctree}
 :hidden:
-:caption: 1️⃣ Getting Started
 
-welcome/index
-first_steps/index
+Research Computing <welcome/index>
+```
+
+```{toctree}
+:hidden:
+
+Getting Started <first_steps/index>
 ```
 
 
 ```{toctree}
 :hidden:
-:caption: 🖥️ Understanding the System
+:caption: User Guides
 
 hardware/index
 understandingsystem/index
 using-ood/index
 runningjobs/index
 datamanagement/index
-best-practices/index
-```
-
-
-```{toctree}
-:hidden:
-:caption: 📚 Software Guides
-
-software/index
+Software <software/index>
 slurmguide/index
-gettingsoftware/index
-```
-
-```{toctree}
-:hidden:
-:caption: Supplemental
-
-classroom/index
+HPC for the Classroom <classroom/index>
+best-practices/index
 tutorialsandtraining/index
+Frequently Asked Questions <faq>
 additionalresources/index
 ```
 
 ```{toctree}
 :hidden:
+:caption: Contribution
 :maxdepth: 3
 
-feedback/index
-```
-
-```{toctree}
-:hidden:
-
-toremove
+change_log
+Report Docs Bug or Request <https://github.com/northeastern-rc/rc-public-documentation/issues/new/choose>
+_developers/primer
 ```

@@ -4,7 +4,7 @@
 :::
 ::::
 (conda)=
-## Conda
+# Conda
 [Conda] is an open-source environment and package manager. [Miniconda] is a free installer for Conda and Python and comes with a few other packages. [Anaconda] is also a package manager that has a much larger number of packages pre-installed.
 
 :::::{note}
@@ -17,7 +17,7 @@ We recommend not building your Miniconda and Conda environments inside your `/ho
 :::::
 
 (creating-python)=
-### Creating a Python Environment
+## Creating a Python Environment
 
 Using a locally installed Conda virtual environment is highly recommended to install the specific packages you need. You can also have multiple environments with different packages for research projects or testing purposes. This procedure uses the Anaconda module already available on the cluster.
 
@@ -76,11 +76,11 @@ conda remove -n yourenvironmentname --all
 
 (mini-conda)=
 
-### Using Miniconda
+## Using Miniconda
 
 This procedure assumes that you have not installed Miniconda. If you need to update Miniconda, do not follow the installation procedure. Use `conda update`. This procedure uses the Miniconda3 version with Python version 3.8 in step 2, although there are other versions you can install (e.g., 3.9 or 3.11).
 
-#### Installing Miniconda
+### Installing Miniconda
 
 ::::{attention}
 Make sure to log on to a compute node.
@@ -120,7 +120,7 @@ conda activate my-py38env
 
 To deactivate the environment, type `conda deactivate`. You can type this command again to deactivate the base Miniconda environment.
 
-### Conda Best Practices
+## Conda Best Practices
 :::{seealso}
 Best practices for home storage: {ref}`cleaning-conda`.
 :::

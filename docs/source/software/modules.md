@@ -70,4 +70,4 @@ to check that the STATA was loaded and unloaded.
 
 If you are attempting to open a GUI-based software application that  uses X11 forwarding to display, such as MATLAB or Maestro, and
 you get an error such as `Error: unable to open display localhost:19.0`, this is most likely due to an issue with passwordless SSH.
-See {ref}`using-x11` for tips and troubleshooting information opening applications that use X11 forwarding.
+See {ref}`connect-to-cluster` for tips and troubleshooting information opening applications that use X11 forwarding.
