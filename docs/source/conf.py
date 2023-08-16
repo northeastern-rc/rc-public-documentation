@@ -163,6 +163,32 @@ html_static_path = ["_static", "_static/video"]
 
 source_suffix = [".rst", ".md"]
 
+# -- Options for HTMLHelp output ---------------------------------------------
+
+# Output file base name for HTML help builder.
+htmlhelp_basename = "hpcdoc"
+
+# -- Options for LaTeX output ------------------------------------------------
+
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+latex_documents = [
+    (
+        master_doc,
+        "rcdocs.tex",
+        "Documentation for NU-HPC",
+        "Research Computer and contributors to the HPC Documentation",
+        "manual",
+    )
+]
+
+
+# -- Options for manual page output ------------------------------------------
+
+    )
+]
+
 # -- Options for Epub output -------------------------------------------------
 
 # Bibliographic Dublin Core info.
