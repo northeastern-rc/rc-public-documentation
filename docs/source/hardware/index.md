@@ -4,6 +4,6 @@
 :hidden:
 :maxdepth: 3
 
-hardware_overview
+Overview <hardware_overview>
 partitions
 ```
