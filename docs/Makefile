@@ -35,6 +35,8 @@ help:
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  livehtml   to see edits in real-time"
+	@echo "  view  		to open index.html via default browser"
+	@echo "  pdf   		to generate PDF files"
 
 
 clean:
