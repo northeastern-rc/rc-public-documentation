@@ -186,8 +186,28 @@ latex_documents = [
 
 # -- Options for manual page output ------------------------------------------
 
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+man_pages = [(master_doc, "rcdocs", "Documentation for NU-HPC", [author], 1)]
+
+
+# -- Options for Texinfo output ----------------------------------------------
+
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+texinfo_documents = [
+    (
+        master_doc,
+        "RCDocs",
+        "Documentation for NU-HPC",
+        author,
+        "RCDocs",
+        "NU-HPC Documentation",
+        "Miscellaneous",
     )
 ]
+
 
 # -- Options for Epub output -------------------------------------------------
 
