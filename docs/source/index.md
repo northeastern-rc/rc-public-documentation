@@ -97,7 +97,8 @@ Research Computing <welcome/index>
 ```{toctree}
 :hidden:
 
-Getting Started <first_steps/index>
+Getting Started <gettingstarted/index>
+first_steps/index
 ```
 
 
@@ -106,7 +107,6 @@ Getting Started <first_steps/index>
 :caption: User Guides
 
 hardware/index
-understandingsystem/index
 using-ood/index
 runningjobs/index
 datamanagement/index

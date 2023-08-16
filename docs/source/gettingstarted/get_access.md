@@ -2,8 +2,6 @@
 
 # Getting Access
 
-(id1)=
-
 ## Request an account
 :::{important}
 If you previously had access to Discovery but are now working with a different PI, you should submit a [ServiceNow RC Access Request form] and enter the name of your current PI in the Sponsor field. This will link your account to your current PI and expedite updating your account with any of your current PI's resources on Discovery, such as shared storage or a private partition.
