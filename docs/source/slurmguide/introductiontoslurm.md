@@ -4,7 +4,7 @@
 Slurm (Simple Linux Utility for Resource Management) is an open-source, highly configurable, fault-tolerant, and adaptable workload manager. It is extensively used across High-Performance Computing (HPC) environments.
 
 Slurm is designed to accommodate the complex needs of large-scale computational workloads. It can efficiently distribute and manage tasks across clusters comprising thousands of nodes, offering seamless control over resources, scheduling, and job queuing.
-It is the software on the HPC that provides functionalities such as {ref}`job-arrays`, {ref}`job-management`, view {ref}`account-information`, and check the {ref}`cluster-and-node-states`.
+It is the software on the HPC that provides functionalities such as {ref}`slurm-arrays`, {ref}`job-management`, view {ref}`account-information`, and check the {ref}`cluster-and-node-states`.
 
 ##  Slurm on HPC
 HPC systems are designed to perform complex, computationally intensive tasks. For example, users can specify complex workflows of jobs where specific jobs depend on others, and Slurm will manage the scheduling and execution of these workflows. Efficiently managing these tasks and resources in such an environment is a daunting challenge. That's where Slurm comes into play.
@@ -14,7 +14,7 @@ Slurm allows users to submit their computational tasks as jobs to be scheduled o
 Slurm is crucial in research environments, where it ensures fair usage of resources among a multitude of users, helps optimize the workload for the available resources, and provides precise job accounting and statistics.
 
 ## Section Objective:
-To understand the Slurm workload manage, which will allow you to properly leverage the HPC. It starts with the basics - the resources that Slurm manager. Then, useful Slurm features (e.g., job submission, monitoring, canceling, etc.) are mentioned with code examples. We discuss jobs that are both interactive (i.e., {ref}`using-srun`) and batch (i.e., {ref}`using-sbatch`), along with the slurm array variants (i.e., {ref}`job-arrays`). {ref}`advanced-usage`, {ref}`common-problems-slurm`, and {ref}`best-practices` are also covered.
+To understand the Slurm workload manage, which will allow you to properly leverage the HPC. It starts with the basics - the resources that Slurm manager. Then, useful Slurm features (e.g., job submission, monitoring, canceling, etc.) are mentioned with code examples. We discuss jobs that are both interactive (i.e., {ref}`using-srun`) and batch (i.e., {ref}`using-sbatch`), along with the slurm array variants (i.e., {ref}`slurm-arrays`). {ref}`advanced-usage`, {ref}`common-problems-slurm`, and {ref}`slurm-best-practices` are also covered.
 
 ## Who Should Use This Guide?
 This guide is for HPC users: researchers intending to use Slurm-based clusters for their computation tasks, system administrators managing HPC environments, and even seasoned HPC users looking to brush up on their knowledge. It progresses from fundamental to advanced topics, making it a valuable resource for a broad audience.
