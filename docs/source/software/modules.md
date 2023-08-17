@@ -1,9 +1,9 @@
 (using-module)=
 
 # Using Module
+The 'modules' tool is widely used for managing application environments on High-Performance Computing (HPC) systems. This page will provide an overview of 'modules', instructions on using them, best practices, use cases, and more.
 
-The module system on the cluster includes many commonly used scientific software packages
-that you can load in your path when you need it and unload it when you no longer need it.
+The module system on the cluster includes many commonly used scientific software packages that you can load in your path when you need it and unload it when you no longer need it. In essence, 'modules' handles environment variables like `PATH` and `LD_LIBRARY_PATH` to avoid conflicts between different software applications.
 
 Use the `module avail` command to show a list of the most currently available software on the cluster.
 
@@ -28,18 +28,20 @@ header-rows: 1
 ---
 * - Module Command
   - Function
-* - ``module avail``
-  - View a list of all the available software packages on the cluster that you can load
-* - ``module list``
-  - Displays a list of the software packages currently loaded in your path
-* - ``module show <module>``
+* - `module avail`
+  - Displays a list of all available modules.
+* - `module list`
+  - Shows a list of currently loaded modules.
+* - `module show <module>`
   - View the details of a software package (see the section "Module Show" below for more information)
-* - ``module load <module>``
-  - Load a software package into your environment
-* - ``module unload <module>``
-  - Remove a single software package from your environment
-* - ``module purge``
+* - `module load <module>`
+  - Loads a specific module.
+* - `module unload <module>`
+  - Unloads a specific module.
+* - `module purge`
   - Removes all the loaded software packages from your environment.
+* - `module swap <module1> <module2>`
+  - Replaces `module1` with `module2`.
 :::
 
 :::{caution}
@@ -69,99 +71,30 @@ If you are attempting to open a GUI-based software application that  uses X11 fo
 you get an error such as `Error: unable to open display localhost:19.0`, this is most likely due to an issue with passwordless SSH.
 See {ref}`connect-to-cluster` for tips and troubleshooting information opening applications that use X11 forwarding.
 
-## Installing Your Own Module
-In addition to the pre-installed software on our HPC cluster, users may need to install their software. This section outlines the general steps for doing so.
+## Advanced Module Usage
 
-1. Check If the Software Is Already Installed
+Explain how to use modules in job scripts or interactive sessions, using module save and module restore to manage module collections and other advanced topics.
 
-Before installing new software, check if it's already installed by using the `module avail` command:
+## Creating Module Files
 
-:::{code} bash
-module avail
+:::{seealso}
+{ref}`installing-your-own-module`.
 :::
 
-This command lists all the available modules (i.e., software) on the system.
+## Best Practices Using Modules
 
-2. Choose the Appropriate Location for Installation
+- Only load the modules you need: Unnecessary modules can cause conflicts.
+- Know module hierarchies: Some modules might only become available after loading another module.
+- Always load a specific module version: This avoids problems if the default version changes.
 
-Users should install their software in their home directory or a designated project directory to avoid permission issues. For example:
+## Common Issues and Troubleshooting Modules
 
-:::{code} bash
-cd /home/<username>/software
-:::
+Cover common issues users might face while using 'modules', like conflicts, missing modules, or unexpected behavior, and provide troubleshooting tips.
 
-Replace `<username>` with your username.
+## Use-Cases for Modules
 
-3. Download the Software
+Provide several examples of how to use 'modules' for various use cases. This could include:
 
-Download the software package using `wget` or `curl`, for example:
-
-:::{code} bash
-wget http://example.com/software.tar.gz
-:::
-
-Ensure to replace `http://example.com/software.tar.gz` with the actual URL of the software package.
-
-4. Extract the Software
-
-Most software packages are distributed as compressed files that must be extracted.
-
-:::{code} bash
-tar -xvzf software.tar.gz
-:::
-
-Replace `software.tar.gz` with the actual filename of the software package.
-
-5. Install the Software
-
-Installation steps can vary widely between different programs. Many use the `configure`, `make`, `make install` steps, like this:
-
-:::{code} bash
-cd software_directory   # Replace with actual directory
-./configure --prefix=/home/<username>/software
-make
-make install
-:::
-
-Replace `<username>` with your username and `software_directory` with the actual directory of the software.
-
-:::{note}
-Always read the software's installation instructions, as steps may vary.
-:::
-
-6. Test the Software
-
-After installation, it's important to test the software to ensure it works correctly. Most software packages include a set of test cases for this purpose. Refer to the software's documentation for how to run these tests.
-
-:::{figure} ../_static/image/build-diagram.png
-
-A workflow of software installation (replace with our own).
-:::
-
-7. Make the Software Available via Modules
-
-For ease of use, consider creating a module file for the software. Here's an example of a basic module file for software installed in `/home/<username>/software`:
-
-:::{code} bash
-#%Module
-set root /home/<username>/software
-prepend-path PATH $root/bin
-prepend-path LD_LIBRARY_PATH $root/lib
-:::
-
-Replace `<username>` with your username.
-
-::{table} Common Software Installation Commands**
-
-| Command      | Description                           |
-|--------------|---------------------------------------|
-| module avail | List all available modules            |
-| cd           | Change the current directory          |
-| wget or curl | Download files                        |
-| tar          | Extract files from a tarball          |
-| ./configure  | Configure the software for the system |
-| make         | Compile the software                  |
-| make install | Install the software                  |
-:::
-
-Following these steps, users should be able to install most software packages on their own. However, always refer to the specific software's documentation, as steps can vary. If you run into issues or need help, please contact support.
+- Loading modules for a specific software stack for a project.
+- Swapping compiler modules to test code compatibility.
+- Using module collections to switch between different project environments easily.
