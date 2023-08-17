@@ -31,4 +31,4 @@ right-click on the video to see viewing options.
 
 ## OOD: next steps
 
-After you are connected, you use the interactive apps in OOD. See {ref}`accessing-ood` for more information.
+After you are connected, you use the interactive apps in OOD. See {ref}`access-ood` for more information.

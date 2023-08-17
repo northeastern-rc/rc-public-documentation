@@ -7,6 +7,6 @@
 introduction
 accessingood
 fileexplore
-interactiveapps
+interactiveapps/index
 advancedfeatures
 ```
