@@ -2,10 +2,10 @@
 
 # Using Module
 
-The module system on Discovery includes many commonly used scientific software packages
+The module system on the cluster includes many commonly used scientific software packages
 that you can load in your path when you need it and unload it when you no longer need it.
 
-Use the `module avail` command to show a list of the most currently available software on Discovery.
+Use the `module avail` command to show a list of the most currently available software on the cluster.
 
 :::{note}
 Some modules might conflict with each other, resulting in the software not behaving as expected.
@@ -20,26 +20,26 @@ For example, `which python` will display the version of python that you have in 
 
 ## Module commands
 
-The following are common module commands that are useful for interacting with software packages on Discovery.
+The following are common module commands that are useful for interacting with software packages on the cluster.
 
-:::{list-table}
+:::{list-table} List of common module commands, where `<module>` is the name of the target module.
 ---
 header-rows: 1
 ---
 * - Module Command
   - Function
 * - ``module avail``
-  - View a list of all of the available software packages on Discovery that you can load
+  - View a list of all the available software packages on the cluster that you can load
 * - ``module list``
   - Displays a list of the software packages currently loaded in your path
-* - ``module show <module name>``
+* - ``module show <module>``
   - View the details of a software package (see the section "Module Show" below for more information)
-* - ``module load <module name>``
+* - ``module load <module>``
   - Load a software package into your environment
-* - ``module unload <module name>``
+* - ``module unload <module>``
   - Remove a single software package from your environment
 * - ``module purge``
-  - Removes all of the loaded software packages from your environment.
+  - Removes all the loaded software packages from your environment.
 :::
 
 :::{caution}
@@ -52,10 +52,7 @@ log back in again. You can also load it manually if you have purged it by using 
 ## Module show example
 
 Before loading a module, type `module show <name of module>` to see if there are any dependencies or commands that you need to execute
-before loading the module. In some cases, a module might depend on having other modules loaded to work as expected. While modules are a convenient
-way of loading software to use on Discovery, scientific software can come with many packages and dependencies. In addition to module, you should review
-other ways of loading software on Discovery. See {ref}`software-overview` for more information on different ways you can install software on Discovery.
-The figure below shows an example of `module show` with the software package called amber.
+before loading the module. In some cases, a module might depend on having other modules loaded to work as expected. While modules are a convenient way of loading software to use on the cluster, scientific software can come with many packages and dependencies. In addition to module, you should review other ways of loading software on the cluster. See {ref}`software-overview` for more information on different ways you can install software on the cluster. The figure below shows an example of `module show` with the software package called amber.
 
 ![Alt text](../images/moduleshow.jpg)
 
