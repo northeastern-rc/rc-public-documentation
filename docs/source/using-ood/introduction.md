@@ -8,7 +8,7 @@ is necessary for you to access OOD. If you need an account, see [Request an acco
 OOD provides you with a number of resources for interacting with the Discovery cluster:
 
 - Launch a terminal that runs within your web browser without needing a separate terminal program. This is an advantage if you use Windows, as otherwise you need to download and use a separately installed program, such as MobaXterm.
-- Use software applications, such as SAS Studio, that run in your browser without needing any further configuration. See [Using OOD’s Interactive Apps](./interactiveapps.md) for more information.
+- Use software applications, such as SAS Studio, that run in your browser without needing any further configuration. See {ref}`interactive-ood` for more information.
 - View, download, copy, and delete files using the File Explorer feature. See [Using OOD's FIle Explorer](./fileexplore.md) for more information.
 
 % Watch this video for an overview of OOD. If you do not see any controls on the video, right-click on the video to see viewing options.
