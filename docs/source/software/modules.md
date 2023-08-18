@@ -1,14 +1,16 @@
 (using-module)=
 
 # Using Module
+
 ::::{sidebar}
 :::{note}
-Some modules conflict, resulting in the software behaving differently than expected. Also, if there are multiple software versions, and you load more than one version of the software, only the latest version will be used. Use `module list` to view the modules loaded in your path.
+Some modules conflict, resulting in the software behaving differently than expected. Also, if there are multiple software versions and you load more than one version of the software, only the latest version will be used. Use `module list` to view the modules loaded into your path.
 :::
 ::::
+
 The 'modules' tool is widely used for managing application environments on High-Performance Computing (HPC) systems. This page will provide an overview of 'modules', instructions on using them, best practices, use cases, and more.
 
-The module system on the cluster includes many commonly used scientific software packages that you can load in your path when you need it and unload it when you no longer need it. In essence, 'modules' handles environment variables like `PATH` and `LD_LIBRARY_PATH` to avoid conflicts between different software applications.
+The module system on the cluster includes many commonly used scientific software packages that you can load into your path when you need them and unload when you no longer need them. In essence, 'modules' handle environment variables like `PATH` and `LD_LIBRARY_PATH` to avoid conflicts between software applications.
 
 Use the `module avail` command to show a list of the most currently available software on the cluster.
 
@@ -18,7 +20,7 @@ The `which <target>` prints the path of executable `<target>` in your path (e.g.
 
 ## Module commands
 
-The following are common module commands that are useful for interacting with software packages on the cluster.
+The following are common module commands helpful in interacting with software packages on the cluster.
 
 :::{list-table} List of common module commands, where `<module>` is the name of the target module.
 ---
@@ -51,7 +53,13 @@ widths: 23 40
 ## Module show example
 
 Before loading a module, type `module show <name of module>` to see if there are any dependencies or commands that you need to execute
-before loading the module. In some cases, a module might depend on having other modules loaded to work as expected. While modules are a convenient way of loading software to use on the cluster, scientific software can come with many packages and dependencies. In addition to module, you should review other ways of loading software on the cluster. See {ref}`software-overview` for more information on different ways you can install software on the cluster. The figure below shows an example of `module show` with the software package called amber.
+before loading the module. Sometimes, a module might depend on loading other modules to work as expected. While modules are convenient for loading software on the cluster, scientific software can come with many packages and dependencies. In addition to the module, you'll need to review other ways to load the cluster's software. 
+
+:::{seealso}
+{ref}`software-overview` for installing software on the cluster.
+:::
+
+Here is an example of using `module show` to show details for the Amber software package.
 
 :::{code} bash
 $ module show amber
@@ -80,7 +88,7 @@ prepend-path      CPLUS_INCLUDE_PATH /shared/centos7/amber/amber18-cpu/include
 
 ## Module load and unload example
 
-In the figure below, the software module stata/15 was loaded and then unloaded. After loading and unloading, module list was used to check that the STATA was loaded and unloaded.
+The software module `stata/15` was loaded and unloaded in the following code snippet. After each, `module list` displays loaded modules showing whether or not STATA was loaded.
 
 :::::{grid}
 ::::{grid-item}
@@ -108,10 +116,6 @@ Currently Loaded Modulefiles:
 :::
 ::::
 :::::
-
-
-
-
 
 ## Launching applications via X11 Forwarding
 
