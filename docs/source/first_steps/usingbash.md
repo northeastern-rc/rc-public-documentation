@@ -7,7 +7,7 @@
 
 Bash (Bourne Again SHell) is a popular shell and command-line interface. Specifically, a shell is an interface between the user and the underlying operating system, allowing users to interact with the system and perform tasks. Bash provides a range of features for running commands, managing files, navigating systems, and performing other tasks.
 
-:::{figure} /images/bash-logo.png
+:::{figure} ../images/bash-logo.png
 ---
 alt: Bash (Bourne Again SHell) logo.
 width: 350px
@@ -29,7 +29,7 @@ The terminal - aka the command line interface (CLI) - is a text-based interface 
 
 In contrast to graphical user interfaces (GUIs), the terminal provides a more direct and powerful way to interact with the system. Tasks that may require several steps in a GUI can often be accomplished much more quickly and efficiently in the terminal.
 
-:::{figure} /images/terminal-view.png
+:::{figure} ../images/terminal-view.png
 ---
 alt: Terminal View.
 class: with-border
@@ -46,7 +46,7 @@ Let us explore options and specifics for each operating system; Mac, Linux, and 
 
 ### MacOS
 
-Mac OS comes with a default terminal program, but there are more advanced terminals available; [iTerm2] is one of the more popular choices.
+macOS comes with a default terminal program, but there are more advanced terminals available; [iTerm2] is one of the more popular choices.
 
 To launch the terminal:
 
@@ -570,9 +570,9 @@ This will find all files in `/path/to/dir` that have a `.txt` file extension and
 
 Below are a few examples of `awk` processing and manipulating text data, but there are many more options and features available. Consult the [awk(1) manual page] for more information on effectively using the tool.
 
-We will use a sample file `_resources/awk-example.txt` to work through this section.
+We will use a sample file `_resources/awk-example.sh` to work through this section.
 
-{download}`Download <../_resources/awk-example.txt>`, or create and name a file as shown in the following block. Also, be sure to store in the working directory.
+{download}`Download <../_resources/awk-example.sh>`, or create and name a file as shown in the following block. Also, be sure to store in the working directory.
 
 :::{code-block} shell
 :emphasize-lines: 2-6
