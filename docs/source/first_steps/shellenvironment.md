@@ -22,7 +22,7 @@ who can help suggest edits and troubleshoot any issues you might be having.
 
 You have a default `.bashrc` file in your home directory when your account is created. See the figure below for an example of a default `.bashrc` file.
 
-```{image} /images/catbashrc.jpg
+```{image} ../images/catbashrc.jpg
 ```
 
 :::{important}
