@@ -26,6 +26,7 @@ To access GUIS from the command-line.
 ## Using Open OnDemand
 To learn more about connecting to the cluster using Open OnDemand, please see our dedicated pages on utilizing Open OnDemand starting with {ref}`using-ood`.
 
+(using-x11)=
 ## Using X11
 When you launch a software application that uses a graphical user interface (GUI) from the command line, this is completed through X11 forwarding.
 
