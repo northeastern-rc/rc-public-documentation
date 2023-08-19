@@ -62,7 +62,7 @@ Once you have access, you'll want to connect to the cluster to begin your work.
 - Windows Users: You may use tools like PuTTY for SSH connections for {ref}`connecting-on-windows`.
 - File Transfers: Use SCP or SFTP for secure file transfers: be sure use the transfer node when {ref}`transferring-data`. Other options for transferring files using a graphical interface include {ref}`file-explorer` or via {ref}`Globus <using-globus>`.
 :::{code} bash
-scp -r <source-path> j.robinson@xfer.discovery.neu.edu:<target-path>
+scp -r <source-path> <user-name>@xfer.discovery.neu.edu:<target-path>
 :::
 - Accessing GUI Applications: Details on using remote desktop or {ref}`X-forwarding <using-x11>`.
 
