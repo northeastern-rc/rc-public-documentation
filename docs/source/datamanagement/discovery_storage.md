@@ -1,4 +1,4 @@
-(discovery-storage)=
+(data-storage)=
 
 # Data Storage Options
 
