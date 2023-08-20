@@ -1,6 +1,6 @@
 (transferring-data)=
 
-# Transferring Data
+# Transfer Data
 
 The HPC has a dedicated transfer node that you must use to transfer data to and from the cluster. You are not allowed to transfer data from any other node to or from the HPC to your local machine. The node name is `<username>@xfer.discovery.neu.edu:` where `<username>` is your Northeastern username to login into the transfer node.
 
