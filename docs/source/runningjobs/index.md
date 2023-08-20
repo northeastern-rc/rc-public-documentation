@@ -15,8 +15,6 @@ debuggingjobs
 ```
 Running jobs efficiently is at the heart of a successful experience with our High-Performance Computing (HPC) cluster. This section outlines the essential aspects of executing various types of jobs, understanding the queuing system, and troubleshooting.
 
-## Table of Contents
-
 ::::{grid} 3
 
 :::{grid-item-card} {ref}`understanding-queuing`
@@ -32,13 +30,6 @@ Running jobs efficiently is at the heart of a successful experience with our Hig
 :::{grid-item-card} {ref}`debugging-jobs`
 :::
 ::::
-
-- [Understanding the Queuing System](#understanding-the-queuing-system)
-- [Job Scheduling Policies and Priorities](#job-scheduling-policies-and-priorities)
-- [Interactive and Batch Mode](#interactive-and-batch-mode)
-- [Working with GPUs](#working-with-gpus)
-- [Recurring Jobs](#recurring-jobs)
-- [Debugging and Troubleshooting Jobs](#debugging-and-troubleshooting-jobs)
 
 ## Understanding the Queuing System
 
