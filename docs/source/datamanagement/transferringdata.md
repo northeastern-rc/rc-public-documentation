@@ -9,7 +9,7 @@ You can also transfer files using Globus. This is highly recommended if you need
 If you are transferring data from different directories on the HPC, you need to use a compute node (see {ref}`using-srun` or {ref}`using-sbatch`) with scp, rsync, or with the copy command to complete this tasks. You should use the `--constraint=ib` flag (see {ref}`hardware-overview`) to ensure the fastest data transfer rate.
 
 :::{caution}
-The `/scratch` space is for temporary file storage only. It is not backed up. If you have directed your output files to `/scratch`, you should transfer your data from `/scratch` to another location as soon as possible. See {ref}`discovery-storage` for more information.
+The `/scratch` space is for temporary file storage only. It is not backed up. If you have directed your output files to `/scratch`, you should transfer your data from `/scratch` to another location as soon as possible. See {ref}`data-storage` for more information.
 :::
 
 ## Transfer via Terminal

@@ -1,7 +1,7 @@
 (home-directory-storage-quota)=
 # Home Directory Storage Quota
 
-There are strict quotas for each home directory (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. This page provides some best practices for keeping within the quota. For more information about data storage on the HPC, see {ref}`discovery-storage`.
+There are strict quotas for each home directory (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. This page provides some best practices for keeping within the quota. For more information about data storage on the HPC, see {ref}`data-storage`.
 
 :::{important}
 All commands on this page should be run from a compute node because they are cpu intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
@@ -27,7 +27,7 @@ This command will output the size of each file, directory, and hidden directory 
 Use `/work` for long-term storage. PIs can request a folder in `/work` via [New Storage Space Request], and they can request additional storage via [Storage Space Extension Request]. Utilize `/scratch/<username>` for temporary or intermediate files. Then, move files from `/scratch` to `/work` for persistent storage (i.e., the recommended work flow).
 
 :::{note}
-Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See {ref}`discovery-storage` for information on `/work` and `/scratch`.
+Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See {ref}`data-storage` for information on `/work` and `/scratch`.
 :::
 
 ## Cleaning Directories
