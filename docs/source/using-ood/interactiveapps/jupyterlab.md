@@ -16,7 +16,7 @@ You can import Python packages in your JupyterLab Notebook session by creating a
 
 1. First, set up a virtual Python environment. See {ref}`creating-python` for how to set up a virtual Python environment on the HPC using the terminal.
 1. Type `source activate <yourenvironmentname>` where `<yourenvironmentname>` is the name of your custom environment.
-1. Type `conda install jupyterlab -y` to install jupyterlab in your environment.
+1. Type `conda install jupyterlab -y` to install JupyterLab in your environment.
 :::
 
 ##  Using OOD to launch JupyterLab Notebook
@@ -31,8 +31,7 @@ You can import Python packages in your JupyterLab Notebook session by creating a
 
 1. Select the Anaconda version you used to create your virtual Python environment in the **System-wide Conda Module** field.
 1. Check the **Custom Anaconda Environment** box, and enter the name of your custom virtual Python environment in the **Name of Custom Conda Environment** field.
-1. Click **Launch** to join the queue for a compute node. This might take a few minutes, depending on your requested resources.
-1. When you have been allocated a compute node, click **Connect to Jupyter**.
+1. Click **Launch** to join the queue for a compute node. This might take a few minutes, depending on what you asked for.
+1. When allocated a compute node, click **Connect to Jupyter**.
 
-When your JupyterLab Notebook is running and open, type `conda list` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all
-of your available packages.
+When your JupyterLab Notebook is running and open, type `conda list` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all of your available packages.
