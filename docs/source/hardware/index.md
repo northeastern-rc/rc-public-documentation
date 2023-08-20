@@ -1,3 +1,4 @@
+(hardware)=
 # Hardware
 
 ```{toctree}
