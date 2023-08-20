@@ -19,7 +19,7 @@ cmake
 :::{grid-item-card} {ref}`using-module`
 For more information about working with module.
 :::
-:::{grid-item-card} {ref}`interactive-ood`
+:::{grid-item-card} {ref}`interactive-ood-apps`
 For more information about OOD.
 :::
 ::::
