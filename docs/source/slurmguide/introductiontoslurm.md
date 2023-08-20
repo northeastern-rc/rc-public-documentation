@@ -14,7 +14,11 @@ Slurm allows users to submit their computational tasks as jobs to be scheduled o
 Slurm is crucial in research environments, where it ensures fair usage of resources among a multitude of users, helps optimize the workload for the available resources, and provides precise job accounting and statistics.
 
 ## Section Objective:
-To understand the Slurm workload manage, which will allow you to properly leverage the HPC. It starts with the basics - the resources that Slurm manager. Then, useful Slurm features (e.g., job submission, monitoring, canceling, etc.) are mentioned with code examples. We discuss jobs that are both interactive (i.e., {ref}`using-srun`) and batch (i.e., {ref}`using-sbatch`), along with the slurm array variants (i.e., {ref}`slurm-arrays`). {ref}`advanced-usage`, {ref}`common-problems-slurm`, and {ref}`slurm-best-practices` are also covered.
+To understand the Slurm workload manage, which will allow you to properly leverage the HPC. It starts with the basics - the resources that Slurm manager. Then, useful Slurm features (e.g., job submission, monitoring, canceling, etc.) are mentioned with code examples. We discuss jobs that are both interactive (i.e., {ref}`using-srun`) and batch (i.e., {ref}`using-sbatch`), along with the slurm array variants (i.e., {ref}`slurm-arrays`).
+
+:::{seealso}
+{ref}`slurm-best-practices`.
+:::
 
 ## Who Should Use This Guide?
 This guide is for HPC users: researchers intending to use Slurm-based clusters for their computation tasks, system administrators managing HPC environments, and even seasoned HPC users looking to brush up on their knowledge. It progresses from fundamental to advanced topics, making it a valuable resource for a broad audience.
