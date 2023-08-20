@@ -1,7 +1,5 @@
 # Running Jobs
 
-
-
 ```{toctree}
 :hidden:
 :maxdepth: 3
