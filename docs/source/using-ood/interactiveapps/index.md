@@ -2,15 +2,30 @@
 # Interactive Open OnDemand Applications
 ```{toctree}
 :hidden:
-desktop
+desktopood
 fileexplore
 jupyterlab
 ```
 
+::::{grid} 3
+
+:::{grid-item-card} {ref}`desktop-app`
+For more information about working with module.
+:::
+:::{grid-item-card} {ref}`file-explorer`
+For more information about OOD.
+:::
+:::{grid-item-card} {ref}`jupyterlab`
+For more information about OOD.
+:::
+::::
+
+
+
 The OOD web portal provides a range of applications. Upon clicking *launch*, the Slurm scheduler assigns a compute node with a specified number of cores and memory. By default, applications run for one hour. If you require more than an hour, you may have to wait for Slurm to allocate resources for the duration of your request.
 ## Applications on OOD
 
-:::{image} ../images/ood_apps_2023_06.png
+:::{image} ../../images/ood_apps_2023_06.png
 ---
 alt: an image the OOD apps (06-2023).
 scale: 40%

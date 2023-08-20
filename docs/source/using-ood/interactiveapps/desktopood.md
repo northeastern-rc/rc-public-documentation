@@ -1,7 +1,9 @@
-(desktop)=
-# Desktop
+(desktop-app)=
+# Desktop App
 
-This Open OnDemand application is a containerized desktop running on the HPC cluster. It has access to these tools/programs:
+Open OnDemand provides a containerized desktop to run on the HPC cluster.
+
+The following tools and programs are accessible on our Desktop App:
 
 - Slurm (for running Slurm commands via the terminal in the desktop and interacting on compute nodes)
 - Module command (for loading and running HPC-ready modules)
@@ -11,5 +13,5 @@ This Open OnDemand application is a containerized desktop running on the HPC clu
 - Office Libre suite of applications (word processing, spreadsheets, presentation applications)
 
 :::{note}
-The desktop application is a Singularity container: a Singularity container cannot run inside. It will fail if a user tries to run a module or program that runs a container inside this application.
+The desktop application is a Singularity container; a Singularity container cannot run inside the desktop application. It fails if users run a container-based module or program via the desktop application.
 :::
