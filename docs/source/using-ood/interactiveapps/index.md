@@ -10,13 +10,10 @@ jupyterlab
 ::::{grid} 3
 
 :::{grid-item-card} {ref}`desktop-app`
-For more information about working with module.
 :::
 :::{grid-item-card} {ref}`file-explorer`
-For more information about OOD.
 :::
 :::{grid-item-card} {ref}`jupyterlab`
-For more information about OOD.
 :::
 ::::
 
@@ -27,7 +24,7 @@ The OOD web portal provides a range of applications. Upon clicking *launch*, the
 
 :::{image} ../../images/ood_apps_2023_06.png
 ---
-alt: an image the OOD apps (06-2023).
+alt: an image of the OOD apps (06-2023).
 scale: 40%
 align: right
 ---
@@ -46,7 +43,9 @@ The Open OnDemand interface offers several applications, which as of June 2023, 
 
 These applications can be accessed from the OOD web interface's **Interactive Apps** dropdown menu.
 
-Please note that specific applications in the **Interactive Apps** section, particularly those with graphical user interfaces (GUIs), may require X11 forwarding and the setup of passwordless SSH. For tips and troubleshooting information on X11 forwarding setup and usage, please refer to the [Using X11] section of our documentation.
+:::{note}
+Specific applications in the **Interactive Apps** section, particularly those with graphical user interfaces (GUIs), may require X11 forwarding and the setup of passwordless SSH. For tips and troubleshooting information on X11 forwarding setup and usage, please look at the [Using X11] section of our documentation.
+:::
 
 Additionally, we offer a selection of modified standard applications intended to support specific coursework. These applications are under the **Courses** menu on the OOD web interface. Please note that these course-specific applications are only accessible to students enrolled in the respective courses.
 
