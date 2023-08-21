@@ -12,7 +12,7 @@ casestudiesandtestimonials
 ```
 Research Computing at our institution is committed to supporting cutting-edge research and innovation. This section provides an overview of the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment and Slurm workload manager.
 
-::::{grid} 5
+::::{grid} 3
 
 :::{grid-item-card} {ref}`welcome`
 :::
@@ -20,6 +20,8 @@ Research Computing at our institution is committed to supporting cutting-edge re
 :::
 :::{grid-item-card} {ref}`getting-help`
 :::
+::::
+::::{grid} 2
 :::{grid-item-card} {ref}`intro-to-cluster`
 :::
 :::{grid-item-card} {ref}`case-studies-and-testimonials`
