@@ -14,7 +14,7 @@ Taking the first steps with our High-Performance Computing (HPC) cluster is a cr
 
 ::::{grid} 3
 
-:::{grid-item-card} {ref}`<passwordless-ssh>`
+:::{grid-item-card} {ref}`passwordless-ssh`
 :::
 :::{grid-item-card} {ref}`Shell Environment <bashrc>`
 :::
