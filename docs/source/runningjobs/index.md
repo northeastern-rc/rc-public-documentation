@@ -85,6 +85,6 @@ Find solutions and get help with common job-related issues.
 
 ---
 
-Running jobs smoothly is key to productive research and development. Explore these topics to understand and make the most of our robust computing infrastructure. If you need assistance, our support team is available at support@example.com or consult our {ref}`faq`.
+Running jobs smoothly is key to productive research and development. Explore these topics to understand and make the most of our robust computing infrastructure. If you need assistance, our support team is available at <rchelp@northeastern.edu> or consult our {ref}`faq`.
 
 Happy computing!

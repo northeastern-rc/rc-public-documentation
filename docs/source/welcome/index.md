@@ -71,6 +71,6 @@ Discover how researchers are utilizing our services and the impact on their work
 
 ---
 
-Research Computing strives to provide an environment where innovation thrives. Explore these topics to understand and leverage our resources to their fullest. If you need assistance, our support team is available at support@example.com or consult our {ref}faq.
+Research Computing strives to provide an environment where innovation thrives. Explore these topics to understand and leverage our resources to their fullest. If you need assistance, our support team is available at <rchelp@northeastern.edu> or consult our {ref}faq.
 
 Happy researching!
