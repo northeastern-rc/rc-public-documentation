@@ -81,6 +81,6 @@ Protecting data and maintaining compliance with relevant regulations is vital.
 
 ---
 
-Efficient data management is key to a productive experience in the HPC environment. Explore the topics above to gain insights, follow best practices, and utilize our state-of-the-art tools. For further assistance, please contact our support team at <rchelp@northeastern.edu> or refer to our comprehensive {ref}`FAQ` section.
+Efficient data management is key to a productive experience in the HPC environment. Explore the topics above to gain insights, follow best practices, and utilize our state-of-the-art tools. For further assistance, please contact our support team at <rchelp@northeastern.edu> or refer to our comprehensive {ref}`faq` section.
 
 Happy data handling!
