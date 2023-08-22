@@ -1,19 +1,19 @@
 (best-practices-sw)=
 # Best SW Practices
-Good software practices are vital for successful scientific computing. This page outlines some of the best methods to follow when developing and running software on HPC systems.
+Good software practices are vital for successful scientific computing. This page outlines the best methods to follow when developing and running software on HPC systems.
 
 
 ## Coding Standards
 
 Adhering to coding standards ensures your code is readable, maintainable, and less prone to errors.
 
-- **Follow a Style Guide**: Adhere to a style guide relevant to your programming language.
+- **Follow a Style Guide**: Include a style guide relevant to your programming language.
 - **Use Meaningful Names**: Name variables and functions descriptively.
 - **Comment Wisely**: Write comments that explain the 'why,' not the 'what.'
 
 ## Version Control
 
-Utilizing a version control system, like Git, helps track changes, collaborate with others, and is essential for reproducibility.
+Utilizing a version control system like Git helps track changes, allows collaboration with others, and is essential for reproducibility.
 
 - **Commit Regularly**: Make frequent, small commits.
 - **Use Meaningful Commit Messages**: Describe what and why changes were made.
@@ -21,37 +21,37 @@ Utilizing a version control system, like Git, helps track changes, collaborate w
 
 ## Documentation
 
-Proper documentation aids others (and future you) in understanding your code.
+Proper documentation helps others (and you in the future) understand your code.
 
-- **Write Inline Comments**: Explain complex or non-intuitive parts of the code.
+- **Write inline comments**: Explain complex or non-intuitive parts of the code.
 - **Maintain a README**: Include setup, usage, and other essential information.
-- **Use Automated Documentation Tools**: Tools like Doxygen or Sphinx can help.
+- **Use automated documentation tools**: Tools like Doxygen or Sphinx can help.
 
 ## Testing
 
 Implementing automated tests ensures that your code behaves as expected.
 
-- **Write Unit Tests**: Test individual code units for correctness.
-- **Perform Integration Tests**: Test interactions between different code parts.
-- **Automate Testing**: Use Continuous Integration tools to run tests automatically.
+- **Write Unit Tests** on individual code units for correctness.
+- **Perform Integration Tests** between different code parts.
+- **Automate testing** using Continuous Integration tools to run tests automatically.
 
 ## Dependency Management
 
 Managing dependencies effectively avoids conflicts and ensures reproducibility.
 
-- **Use Dependency Management Tools**: Tools like Conda or virtualenv.
-- **Specify Exact Versions**: Note the specific versions of dependencies.
+- **Use Dependency Management tools** like Conda or virtualenv.
+- **Specify exact versions**: Note the specific versions of dependencies.
 
 ## Performance Considerations
 
 Consider performance throughout the development process.
 
-- **Profile Often**: Identify bottlenecks and areas for optimization.
-- **Consider Parallelization**: Utilize parallel computing resources.
+- **Profile often: Identify bottlenecks and areas for optimization.
+- **Consider parallelization: Utilize parallel computing resources.
 
 ## Security
 
-Follow best practices to keep your code and data secure.
+Please follow the best practices to keep your code and data secure.
 
 - **Keep Sensitive Information Private**: Use environment variables for secrets.
 - **Stay Updated**: Keep dependencies updated to avoid known vulnerabilities.
@@ -65,4 +65,4 @@ Effective collaboration fosters quality and productivity.
 
 ---
 
-These best practices will help develop high-quality, maintainable, and performant software suitable for HPC and other computational environments. Always seek feedback from peers, and don't hesitate to consult with the HPC support team for specific guidance.
+These best practices will help develop high-quality, maintainable, and performant software suitable for HPC and other computational environments. Please always seek feedback from peers, and don't hesitate to consult the HPC support team for specific guidance.
