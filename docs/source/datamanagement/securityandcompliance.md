@@ -37,7 +37,7 @@ Track those who access data and when it is crucial for security.
 Adhere to legal and organizational compliance standards.
 
 - **Understand Applicable Regulations**: GDPR, HIPAA, or other relevant laws.
-- **Follow Organizational Policies**: Adhere to your institution's specific policies.
+- **Follow Organizational Policies**: Adhere to your institution's policies.
 
 ## Incident Response
 
@@ -59,4 +59,4 @@ Prepare for and respond to any security incidents.
 
 ---
 
-Data security and compliance are shared responsibilities. Always consult with your organization's security and legal teams to ensure you meet all applicable requirements and follow best practices. Contact the HPC support team if you have specific questions or need assistance.
+Data security and compliance are shared responsibilities. Always consult your organization's security and legal teams to ensure you meet all applicable requirements and follow best practices. Please feel free to contact the HPC support team if you have specific questions or need assistance.
