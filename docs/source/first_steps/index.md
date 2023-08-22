@@ -32,7 +32,7 @@ Learn how to set up secure, passwordless SSH to streamline your access to the cl
 {ref}`More about Passwordless SSH <passwordless-ssh>`.
 
 (shell-environment-index)=
-Shell Environment on the Cluster
+## Shell Environment on the Cluster
 Get acquainted with the cluster's shell environment to navigate and perform tasks efficiently.
 
 
