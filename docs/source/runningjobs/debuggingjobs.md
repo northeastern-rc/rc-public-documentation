@@ -1,6 +1,6 @@
 (debugging-jobs)=
 # Debugging and Troubleshooting Jobs
-This page focuses on common issues encountered when running jobs, how to interpret error messages and some practical strategies to debug these problems.
+This page focuses on common issues encountered when running jobs, how to interpret error messages, and some practical strategies to debug these problems.
 
 ## Understanding Slurm Errors
 
@@ -32,7 +32,7 @@ This section will explain the importance of testing jobs on a small scale before
 
 ## Interactive Job Session
 
-Explain how to start an interactive job session with the `salloc` command, which allows users to interact with their job and troubleshoot issues in real-time directly.
+Explain how to start an interactive job session with the `salloc` command, allowing users to interact directly with their job and troubleshoot issues in real time.
 
 :::{code} bash
 salloc --nodes=1 --time=01:00:00 --account=myaccount
@@ -44,4 +44,4 @@ Discuss using debuggers such as GDB for C/C++ and PDB for Python to step through
 
 ## Common Job Issues and Their Resolutions
 
-List some common issues users might encounter, like jobs getting stuck in the queue, jobs not producing expected output, or jobs using more memory than expected. Offer solutions or workarounds for each of these issues.
+List some common issues users might encounter, like jobs getting stuck in the queue, jobs not producing the expected output, or jobs using more memory than expected. Offer solutions or workarounds for each of these issues.
