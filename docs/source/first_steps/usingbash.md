@@ -18,16 +18,16 @@ class: with-border
 ---
 :::
 
-Bash commands perform various tasks within the shell environment. Commands span from basic functionalities (e.g., `ls`, `cd`, `cp`, `mv`, and `rm`) to more advanced ones(e.g., `grep` and `awk`). We cover these commands and more in this tutorial. Bash can also be used in scripts, allowing users to automate tasks and perform more complex operations via loops, conditional logic, and defining functions, which we cover at the end of this page.
+Bash commands perform various tasks within the shell environment. Commands span basic functionalities (e.g., `ls`, `cd`, `cp`, `mv`, and `rm`) to more advanced ones(e.g., `grep` and `awk`). We cover these commands and more in this tutorial. Bash can also be used in scripts, allowing users to automate tasks and perform more complex operations via loops, conditional logic, and defining functions, which we cover at the end of this page.
 
 In summary, shell commands perform various tasks with the terminal.
 
 
 ## Terminal
 
-The terminal - aka the command line interface (CLI) - is a text-based interface for interacting with an operating system. It is a way for users to interact with the system and perform tasks by typing commands and receiving text-based output.
+The terminal - the command line interface (CLI) - is a text-based interface for interacting with an operating system. It is a way for users to interact with the system and perform tasks by typing commands and receiving text-based output.
 
-In contrast to graphical user interfaces (GUIs), the terminal provides a more direct and powerful way to interact with the system. Tasks that may require several steps in a GUI can often be accomplished much more quickly and efficiently in the terminal.
+In contrast to graphical user interfaces (GUIs), the terminal provides a more direct and powerful way to interact with the system. Tasks requiring several steps in a GUI can often be accomplished much more quickly and efficiently in the terminal.
 
 :::{figure} ../images/terminal-view.png
 ---
@@ -40,18 +40,18 @@ width: 350px
 
 Whether you are a beginner or an advanced user, the terminal provides a powerful and versatile interface for interacting with your operating system. With some theory and practice, you can use the terminal to accomplish a wide range of tasks and take control of your system in new and powerful ways.
 
-There are various terminal options (i.e., flavors) offered for different operating systems. [Power Shell] is available for Windows, Linux, and MacOS.
+Various terminal options (i.e., flavors) are offered for different operating systems. [Power Shell] is available for Windows, Linux, and MacOS.
 
 Let us explore options and specifics for each operating system; Mac, Linux, and Windows terminals.
 
 ### MacOS
 
-macOS comes with a default terminal program, but there are more advanced terminals available; [iTerm2] is one of the more popular choices.
+macOS comes with a default terminal program, but more advanced terminals are available; [iTerm2] is one of the more popular choices.
 
 To launch the terminal:
 
 1. Press Command(⌘) + Space on your Mac keyboard (alternatively, press F4)
-2. Type in “Terminal”
+2. Type “Terminal”
 3. When you see Terminal in the Spotlight search list, click it to open the app.
 
 iTerm2 can be installed via the terminal using [Homebrew]:
@@ -68,7 +68,7 @@ If Homebrew is not already installed, run the following command in the terminal 
 
 ### Linux
 
-Linux also comes with a default terminal program, but there are more advanced terminals available; [Terminator] is a popular choice.
+Linux also comes with a default terminal program, but more advanced terminals are available; [Terminator] is a popular choice.
 
 To download Terminator, open a terminal (`Ctrl+Alt+T` is the shortcut to do so). Next, execute the following:
 
@@ -82,13 +82,13 @@ sudo apt-get install terminator
 
 Windows users must install a terminal; you can visit Windows Apps and download the Windows Terminal directly from Microsoft ([Download Windows Terminal]).
 
-Additionally, [Mobaxterm], an enhanced terminal for Windows with X11 server, tabbed SSH client, and network tools dubbed *the ultimate toolbox for remote computing*, is a great tool for connecting to the login node, exploring the Discovery file system, and transferring files. Check out their [demo](https://mobaxterm.mobatek.net/demo.html), [software features](https://mobaxterm.mobatek.net/features.html), and [download](https://mobaxterm.mobatek.net/download.html).
+Additionally, [Mobaxterm], an enhanced terminal for Windows with an X11 server, tabbed SSH client, and network tools dubbed *the ultimate toolbox for remote computing*, is a great tool for connecting to the login node, exploring the Discovery file system, and transferring files. Check out their [demo](https://mobaxterm.mobatek.net/demo.html), [software features](https://mobaxterm.mobatek.net/features.html), and [download](https://mobaxterm.mobatek.net/download.html).
 
 ## Bash Manuals
 
-The man command is used in the terminal to display manual pages for various tools and utilities. A manual page, or "man page," is a detailed documentation for a specific command or utility that provides information about its usage, options, and examples.
+The man command is used in the terminal to display manual pages for various tools and utilities. A manual or "man page" is detailed documentation for a specific command or utility that provides information about its usage, options, and examples.
 
-To use the man command, simply type man followed by the name of the command or utility for which you want to view the manual page. For example, to view the manual page for the ls command, you would type the following:
+To use the man command, simply type man followed by the command name or utility for which you want to view the manual page. For example, to view the manual page for the ls command, you would type the following:
 
 :::{code-block} bash
 man ls
@@ -108,7 +108,7 @@ The man command is a valuable tool for learning about new commands and utilities
 ## Basic Commands
 
 :::{note}
-See `_getting_access` for instructions on having a Discovery user account created.
+See `_getting_access` for instructions on creating a Discovery user account.
 :::
 
 `ssh` - Connect to a remote machine using Secure Shell (SSH):
@@ -120,7 +120,7 @@ ssh <user-name>@login.discovery.neu.edu
 Reference: [ssh(1) manual page]
 
 :::{note}
-The `~` character is shorthand for specifying the home directory of the current user, i.e., `~` is the same as `$HOME`.
+The `~` character is shorthand for specifying the current user's home directory, i.e., `~` is the same as `$HOME`.
 :::
 
 `echo` - Display a message or the value of a variable.
@@ -133,7 +133,7 @@ echo "Hello, world!"
 :::
 
 :::{note}
-Variable names are accessible by appending its name to `$` (e.g., \$\{VARIABLE_NAME}, where `{}` are optional, but safer.)
+Variable names are accessible by appending their name to `$` (e.g., \$\{VARIABLE_NAME}, where `{}` are optional but safer.)
 :::
 
 `pwd` - Print the current working directory.
@@ -190,7 +190,7 @@ pwd
 :::
 
 :::{note}
-To remove a directory, use `rmdir` if the folder is empty. Otherwise, recursively delete the directory and all of its contents via `rm -r <FOLDER_PATH>`.
+To remove a directory, use `rmdir` if the folder is empty. Otherwise, recursively delete the directory and its contents via `rm -r <FOLDER_PATH>`.
 :::
 
 `cp` - Copy a file or directory.
@@ -204,7 +204,7 @@ To remove a directory, use `rmdir` if the folder is empty. Otherwise, recursivel
 :::
 
 :::{note}
-Similar to remove, `cp` works for files; to copy a folder, along with its contents, it must be done recursively via `cp -r <FOLDER_PATH> <DESTINATION>`.
+Similar to removing, `cp` works for files; copying a folder and its contents must be done recursively via `cp -r <FOLDER_PATH> <DESTINATION>`.
 :::
 
 `mv` - Move or rename a file or directory.
@@ -314,7 +314,7 @@ kill <pid>
 
 ## Advanced Commands
 
-In this section we will provide examples of some helpful advanced commands, and then take a closer look at three essential advanced commands.
+In this section, we will provide examples of some helpful advanced commands, and then take a closer look at three essential advanced commands.
 
 `sed` - Stream editor for filtering and transforming text.
 
@@ -464,7 +464,7 @@ The `rsync` command is a powerful and versatile file transfer utility commonly u
 File transfers must be done using the transfer node on the Discovery, i.e., do not copy to or from the login node accessible via `xfer.discovery.neu.edu`. See {ref}`transferring-data` for more information.
 :::
 
-We have listed a few examples of `rsync` synchronizing files and directories between two locations, but there are many more options available. Consult the [rsync(1) manual page] for more information on effectively using `rsync`.
+We have listed a few examples of `rsync` synchronizing files and directories between two locations, but many more options are available. Consult the [rsync(1) manual page] for more information on effectively using `rsync`.
 
 Syncing a local directory to a remote server:
 
@@ -510,7 +510,7 @@ rsync -avz --links user@xfer.discovery.neu.edu:/remote/path /local/path
 
 ### find
 
-`find` is a command line tool used to search for files and directories within a specified location. It operates by starting at a specified directory and recursively searching through its subdirectories. The user can select a range of criteria to match (e.g., file name, size, modification time), and `find` will return a list of all files and directories that match the specified criteria. `find` provides a range of options for further processing the results, such as executing a command on each matching file, printing the results, or performing other operations. As a result, it is a versatile tool to search for specific files and to clean up old files.
+`find` is a command line tool used to search for files and directories within a specified location. It starts at a specified directory and recursively searches through its subdirectories. The user can select a range of criteria to match (e.g., file name, size, modification time), and `find` will return a list of all files and directories that match the specified criteria. `find` provides a range of options for further processing the results, such as executing a command on each matching file, printing the results, or performing other operations. As a result, it is a versatile tool to search for specific files and to clean up old files.
 
 Here are several advanced examples of using the `find` command to search for files and directories; see [find(1) manual page] for more information on how to use the command effectively.
 
@@ -524,7 +524,7 @@ find /path/to/search -name "*.txt"
 /path/to/search/file2.txt
 :::
 
-Finding files based on size:
+Finding files based on size
 
 :::
 find /path/to/dir -size +10M
@@ -548,13 +548,13 @@ find /path/to/dir -type f
 
 This will find all files in `/path/to/dir` that are regular files (not directories).
 
-Finding files based on name:
+Finding files based on the name
 
 :::
 find /path/to/dir -name "*.txt"
 :::
 
-This will find all files in `/path/to/dir` that have a `.txt` file extension.
+This will find all files in `/path/to/dir` with a `.txt` file extension.
 
 Executing commands on matching files:
 
@@ -562,7 +562,7 @@ Executing commands on matching files:
 find /path/to/dir -name "*.txt" -exec chmod 644 {} \;
 :::
 
-This will find all files in `/path/to/dir` that have a `.txt` file extension and execute the `chmod` command on each file, changing its permissions to `644`.
+This will find all files in `/path/to/dir` with a `.txt` file extension and execute the `chmod` command on each file, changing its permissions to `644`.
 
 ### awk
 
@@ -570,9 +570,9 @@ This will find all files in `/path/to/dir` that have a `.txt` file extension and
 
 Below are a few examples of `awk` processing and manipulating text data, but there are many more options and features available. Consult the [awk(1) manual page] for more information on effectively using the tool.
 
-We will use a sample file `_resources/awk-example.sh` to work through this section.
+We will use the sample file `_resources/awk-example.sh` to work through this section.
 
-{download}`Download <../_resources/awk-example.sh>`, or create and name a file as shown in the following block. Also, be sure to store in the working directory.
+{download}`Download <../_resources/awk-example.sh>`, or create and name a file as shown in the following block. Also, be sure to store it in the working directory.
 
 :::{code-block} shell
 :emphasize-lines: 2-6
@@ -732,7 +732,7 @@ awk '{print NR, $0, length($0)}' awk-example.txt
 
 ### Git configurations tips and tricks
 
-Git is a distributed version control system for software development and other collaborative projects that allows multiple users to work on a project simultaneously, while keeping track of changes and enabling easy collaboration. With Git, users can commit their changes to a local repository and push them to a remote repository so that others can access and merge their changes into the main project. Git also provides a robust set of tools for managing branches, resolving conflicts, and performing other tasks related to version control.
+Git is a distributed version control system for software development and other collaborative projects that allows multiple users to work on a project simultaneously while keeping track of changes and enabling easy collaboration. With Git, users can commit their changes to a local repository and push them to a remote repository so that others can access and merge their changes into the main project. Git also provides a robust set of tools for managing branches, resolving conflicts, and performing other tasks related to version control.
 
 Git provides a range of configuration options that allow users to customize their behavior to suit their needs, including setting the username and email, specifying a preferred text editor, and setting up aliases for frequently used commands. In addition, users can either configure Git globally, which will apply the configuration to all of their Git repositories, or configure locally, which will apply the configuration only to a specific repository. This flexibility allows users to work with Git in a way that suits their workflow.
 
@@ -740,27 +740,27 @@ Git provides a range of configuration options that allow users to customize thei
 
 Below you will find a few examples of Git configuration options. See [Git User Manual] for more information on how to customize Git to your needs.
 
-Setting your username and email:
+Setting your username and email
 
 :::
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 :::
 
-Setting your preferred text editor:
+Setting your preferred text editor
 
 :::
 git config --global core.editor nano
 :::
 
-Setting your preferred diff tool:
+Setting your preferred diff tool
 
 :::
 git config --global diff.tool emacs
 git config --global difftool.prompt false
 :::
 
-Setting up aliases for frequently used Git commands:
+Setting up aliases for frequently used Git commands
 
 :::
 git config --global alias.st status
@@ -780,13 +780,13 @@ Enabling colored output for Git commands:
 git config --global color.ui true
 :::
 
-Ignoring files globally across all your Git repositories:
+Ignoring files globally across all your Git repositories as follows:
 
 :::
 git config --global core.excludesfile ~/.gitignore_global
 :::
 
-Enabling automatic line wrapping in Git log output:
+Enabling automatic line wrapping in Git log output as follows:
 
 :::
 git config --global log.autoWrap true
@@ -817,7 +817,7 @@ Once open, the following table summarizes common keyboard shortcuts (i.e., comma
      - Command
    * - Open file
      - ``C-x C-f``
-   * - Save file
+   * - Save the file
      - ``C-x C-s``
    * - Close file
      - ``C-x C-w``
@@ -851,7 +851,7 @@ For more commands, see [Emacs Cheat Sheet].
 
 Vim is a popular text editor that is widely used for programming, writing, and other text-related tasks. Consult the [VIM Manual] for more information on using the text editor effectively.
 
-Vim starts in in **normal mode**: a mode that allows for the navigation through the text and perform various operations (e.g., search), but in read-online mode (i.e., cannot edit text).
+Vim starts in **normal mode**: a mode that allows for the navigation through the text and performs various operations (e.g., search), but in read-online mode (i.e., cannot edit text).
 
 Open a terminal and type the following command:
 
@@ -876,13 +876,13 @@ vim filename
      - ``i``
    * - Enter normal mode
      - ``esc``
-   * - Save file
+   * - Save the file
      - ``:w``
    * - Close file
      - ``:q``
-   * - Cut text (from front)
+   * - Cut text (from the front)
      - ``v``
-   * - Cut text (from end)
+   * - Cut text (from the end)
      - ``d``
    * - Paste text
      - ``p``
@@ -931,13 +931,13 @@ If the file does not exist, it will open an empty file that will persist upon sa
 
    * - Functionality
      - Command
-   * - Save file
+   * - Save the file
      - ``Ctrl + O``
    * - Close file
      - ``Ctrl + X``
-   * - Cut text (from front)
+   * - Cut text (from the front)
      - ``Alt + A``
-   * - Cut text (from end)
+   * - Cut text (from the end)
      - ``Ctrl + K``
    * - Paste text
      - ``Ctrl + U``
@@ -953,9 +953,9 @@ If the file does not exist, it will open an empty file that will persist upon sa
 
 ## Shell Scripting
 
-Shell scripts are a feature of bash that allows you to automate tasks and perform complex operations. A shell script is a text file containing a series of bash commands that the shell can execute to perform a specific task.
+Shell scripts are a feature of Bash that allows you to automate tasks and perform complex operations. A shell script is a text file containing a series of bash commands that the shell can execute to perform a specific task.
 
-Here is a simple example of a shell script that prints the message, `Hello, World!` to the screen:
+Here is a simple example of a shell script that prints the message `Hello, World!` to the screen:
 
 :::{code-block} bash
 #!/bin/bash
@@ -981,7 +981,7 @@ Then, run the script as follows:
 ./hello_world.sh
 :::
 
-This will print the message `Hello, World!` to the screen.
+This will print the message `Hello, World!` on the screen.
 
 Shell scripts can do many tasks, including backups, system maintenance, and the commands covered in this tutorial. For example, you could create a script to automate the backup of your home directory by copying all of its files to a remote server. The script could include commands for compressing the files, copying them to the server, and logging the results.
 
