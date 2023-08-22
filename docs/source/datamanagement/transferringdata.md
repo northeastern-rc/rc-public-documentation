@@ -2,11 +2,11 @@
 
 # Transfer Data
 
-The HPC has a dedicated transfer node that you must use to transfer data to and from the cluster. You are not allowed to transfer data from any other node to or from the HPC to your local machine. The node name is `<username>@xfer.discovery.neu.edu:` where `<username>` is your Northeastern username to login into the transfer node.
+The HPC has a dedicated transfer node that you must use to transfer data to and from the cluster. You cannot transfer data from any other node or the HPC to your local machine. The node name is `<username>@xfer.discovery.neu.edu:` where `<username>` is your Northeastern username to login into the transfer node.
 
 You can also transfer files using Globus. This is highly recommended if you need to transfer large amounts of data. See {ref}`using-globus` for more information.
 
-If you are transferring data from different directories on the HPC, you need to use a compute node (see {ref}`using-srun` or {ref}`using-sbatch`) with scp, rsync, or with the copy command to complete this tasks. You should use the `--constraint=ib` flag (see {ref}`hardware-overview`) to ensure the fastest data transfer rate.
+If you are transferring data from different directories on the HPC, you need to use a compute node (see {ref}`using-srun` or {ref}`using-sbatch`) with SCP, rsync, or the copy command to complete these tasks. You should use the `--constraint=ib` flag (see {ref}`hardware-overview`) to ensure the fastest data transfer rate.
 
 :::{caution}
 The `/scratch` space is for temporary file storage only. It is not backed up. If you have directed your output files to `/scratch`, you should transfer your data from `/scratch` to another location as soon as possible. See {ref}`data-storage` for more information.
@@ -23,15 +23,15 @@ You can use `scp` to transfer files/directories to and from your local machine a
 scp <filename> <username>@xfer.discovery.neu.edu:/scratch/<username>
 :::
 
-where `<filename>` is the name of the file in your current directory you want to transfer and `<username>` is your Northeastern username. Note, this command is run on your local machine.
+where `<filename>` is the name of the file in your current directory you want to transfer, and `<username>` is your Northeastern username. So that you know, this command is run on your local machine.
 
-If you want to transfer a directory in your `/scratch` called `test-data` from the HPC to your local machine's currenting working directory, an example of that command would be:
+If you want to transfer a directory in your `/scratch` called `test-data` from the HPC to your local machine's current working directory, an example of that command would be:
 
 :::{code-block} bash
 scp -r <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data .
 :::
 
-where `-r` flag is for the recurssive transfer because it is a directory. Note, this command is run on your local machine.
+where `-r` flag is for the recursive transfer because it is a directory. So that you know, this command is run on your local machine.
 
 ::::
 ::::{tab-item} Rsync
@@ -51,7 +51,7 @@ rsync -av test-data/ <username>@xfer.discovery.neu.edu:/scratch/<username>
 
 where this command is run on your local machine in the directory that contains `test-data`.
 
-Similarily, `rsync` can be used to copy from the current working directory on the HPC to your current working directory on your local machine:
+Similarly, `rsync` can be used to copy from the current working directory on the HPC to your current working directory on your local machine:
 
 :::{code} bash
 rsync -av <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data .
@@ -69,7 +69,7 @@ rsync -av /scratch/<username>/source_folder /home/<username>/destination_folder
 ::::
 ::::{tab-item} sbatch
 
-You can use an sbatch job to complete data transfers by submitting the job to the HPC queue. An example of using `rsync` through an sbatch script is as follows:
+You can use a sbatch job to complete data transfers by submitting the job to the HPC queue. An example of using `rsync` through a sbatch script is as follows:
 
 :::{code-block} bash
 #!/bin/bash
@@ -86,12 +86,12 @@ You can use an sbatch job to complete data transfers by submitting the job to th
 rsync -av /scratch/<username>/source_folder /home/<username>/destination_folder
 :::
 
-where we are transfering the data from `source_folder` to the `destination_folder`.
+where we are transferring the data from `source_folder` to the `destination_folder`.
 
 ::::
 ::::{tab-item} SSHFS
 
-If you want to use `sshfs`, you will need to use it with the dedicated transfer node `xfer.discovery.neu.edu`. It will not work on the login or compute nodes. On a Mac, you will also have to install macFUSE and sshfs (please refer to [macFUSE]) to use the `sshfs` command.
+If you want to use `sshfs`, use it with the dedicated transfer node `xfer.discovery.neu.edu`. It will not work on the login or compute nodes. On a Mac, you will also have to install macFUSE and sshfs (please refer to [macFUSE]) to use the `sshfs` command.
 
 Use this syntax to perform file transfers with `sshfs`:
 
@@ -105,7 +105,7 @@ For example, this will mount a directory in your `/scratch` named `test-data` to
 sshfs <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data ~/mount_point
 :::
 
-where you can interact with the directory from your GUI or using the terminal to perform tasks on it.
+You can interact with the directory from your GUI or use the terminal to perform tasks on it.
 ::::
 :::::
 
@@ -118,7 +118,7 @@ You can use OOD's File Explorer application to transfer data from different dire
 ::::
 ::::{tab-item} MobaXterm
 
-You can use MobaXterm to transfer data to and from the HPC. Please checkout [MobaXterm] to download MobaXterm.
+You can use MobaXterm to transfer data to and from the HPC. Please check out [MobaXterm] to download MobaXterm.
 
 1. Open MobaXterm.
 1. Click **Session**, then select **SFTP**.
@@ -132,7 +132,7 @@ You will now be connected to the transfer node and can transfer files through Mo
 
 ::::
 ::::{tab-item} FileZilla
-You can use FileZilla to transfer data to and from the HPC. Please checkout [FileZilla] to download MobaXterm.
+You can use FileZilla to transfer data to and from the HPC. Please check out [FileZilla] to download.
 
 1. Open FileZilla.
 1. In the **Host** field, type `sftp://xfer.discovery.neu.edu`
