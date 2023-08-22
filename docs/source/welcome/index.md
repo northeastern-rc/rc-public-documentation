@@ -10,7 +10,7 @@ gettinghelp
 introtocluster
 casestudiesandtestimonials
 ```
-Research Computing at our institution is committed to supporting cutting-edge research and innovation. This section provides an overview of the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment and Slurm workload manager.
+Research Computing at our institution is committed to supporting cutting-edge research and innovation. This section overviews the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment and Slurm workload manager.
 
 ::::{grid} 3
 
@@ -33,13 +33,13 @@ Research Computing at our institution is committed to supporting cutting-edge re
 Learn about our mission, team, and how Research Computing contributes to the scientific community.
 
 - **Mission Statement**: Our purpose and goals.
-- **Meet the Team**: Who we are and what we do.
+- **Meet the Team**: Who and what we do.
 
 {ref}`More about Welcome to Research Computing <welcome>`.
 
 (services-index)=
 ## Services We Provide
-Explore the wide array of services and resources available to support your research needs.
+We would like you to please explore the wide array of services and resources available to support your research needs.
 
 - **Computational Resources**: Access to HPC and other technologies.
 - **Consulting and Collaboration**: Expert guidance and partnership.
@@ -73,6 +73,6 @@ Discover how researchers are utilizing our services and the impact on their work
 
 ---
 
-Research Computing strives to provide an environment where innovation thrives. Explore these topics to understand and leverage our resources to their fullest. If you need assistance, our support team is available at <rchelp@northeastern.edu> or consult our {ref}faq.
+Research Computing strives to provide an environment where innovation thrives. Explore these topics to understand and leverage our resources to their fullest. Our support team is available at <rchelp@northeastern.edu> or consult our {ref}`faq` if you need assistance.
 
 Happy researching!
