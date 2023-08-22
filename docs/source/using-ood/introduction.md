@@ -11,7 +11,7 @@ OOD provides you with several resources for interacting with the Discovery clust
 - View, download, copy, and delete files using the File Explorer feature.
 
 :::{seealso}
-`{ref} Using OOD's FIle Explorer <file-explorer>`.
+{ref}`Using OOD's FIle Explorer <file-explorer>`.
 :::
 
 % Watch this video for an overview of OOD. If you do not see any controls on the video, right-click on the video to see viewing options.
