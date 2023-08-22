@@ -28,9 +28,9 @@ Learn how to set up secure, passwordless SSH to streamline your access to the cl
 
 - **Generating SSH Keys**: Create your key pair.
 - **Storing SSH Keys**: Safely store and manage keys.
-
+:::{seealso}
 {ref}`More about Passwordless SSH <passwordless-ssh>`.
-
+:::
 (shell-environment-index)=
 ## Shell Environment on the Cluster
 Get acquainted with the cluster's shell environment to navigate and perform tasks efficiently.
@@ -38,9 +38,9 @@ Get acquainted with the cluster's shell environment to navigate and perform task
 
 - **Understanding the Shell**: Basics of shell operations.
 - **Shell Customization**: Tailor the shell to your needs.
-
+:::{seealso}
 {ref}`More about Shell Environment on the Cluster <bashrc>`.
-
+:::
 (using-bash-index)=
 ## Using Bash
 Explore the fundamental concepts and commands for using Bash, the popular command-line interface.
@@ -48,8 +48,10 @@ Explore the fundamental concepts and commands for using Bash, the popular comman
 - **Bash Basics**: Common commands and scripting.
 - **Advanced Bash**: More complex operations and scripting.
 
+:::{seealso}
 {ref}`More about Using Bash <bash>`.
-
+:::
+---
 The First Steps section is your starting point for becoming proficient in using our HPC environment. Explore these topics to gain the foundational skills necessary for effective research computing. If you need assistance, our support team is available at <rchelp@northeastern.edu> or consult our {ref}`faq`.
 
 Welcome to the exciting world of HPC!
