@@ -29,5 +29,5 @@ OOD provides you with several resources for interacting with the Discovery clust
 % </video>
 
 :::{note}
-OOD is a web-based application. You access it by using a web browser. Like many web-based applications, it has compatibility issues with specific web browsers. For optimal results, use OOD with newer Chrome, Firefox, or Internet Explorer versions. OOD does not currently support Safari or mobile devices (phones and tablets).
+OOD is a web-based application. You access it by using a web browser. Like many web-based applications, it has compatibility issues with specific web browsers. Use OOD with newer Chrome, Firefox, or Internet Explorer versions for optimal results. OOD does not currently support Safari or mobile devices (phones and tablets).
 :::
