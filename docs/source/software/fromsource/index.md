@@ -81,7 +81,7 @@ Always read the software's installation instructions, as steps may vary.
 
 After installation, it's important to test the software to ensure it works correctly. Most software packages include a set of test cases for this purpose. Refer to the software's documentation for how to run these tests.
 
-:::{figure} ../../_static/image/build-diagram.png
+:::{figure} ../../_static/image/build-diagram.jpg
 
 A workflow of software installation (replace with our own).
 :::
