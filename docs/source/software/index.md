@@ -162,7 +162,7 @@ prepend-path LD_LIBRARY_PATH $root/lib
 
 Replace `<username>` with your username.
 
-::{table} Common Software Installation Commands**
+:::{table} Common Software Installation Commands
 
 | Command      | Description                           |
 |--------------|---------------------------------------|

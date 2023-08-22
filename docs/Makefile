@@ -143,8 +143,6 @@ doctest:
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
 livehtml:
-
-
 	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 view:
