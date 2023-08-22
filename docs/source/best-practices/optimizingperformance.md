@@ -1,7 +1,7 @@
 (optimizing-job-performance)=
 # Optimizing Job Performance
 
-Optimizing job performance is essential in maximizing efficiency and minimizing computational time on HPC systems. This page provides an overview and best practices on how to achieve this.
+Optimizing job performance is essential to maximizing efficiency and minimizing computational time on HPC systems. This page provides an overview and best practices on how to achieve this.
 
 ## Understanding the System Architecture
 
@@ -40,7 +40,7 @@ Leveraging profiling tools to identify bottlenecks and areas for improvement in 
 
 | Tool            | Purpose                                  |
 |-----------------|------------------------------------------|
-| [gprof]         | GNU Performance profiler                 |
+| [gprof]         | GNU Performance Profiling Tool           |
 | [Intel VTune]   | Performance and Thread profiler          |
 | [NVIDIA Nsight] | GPU performance analysis and debugging   |
 :::
