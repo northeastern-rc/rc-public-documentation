@@ -1,7 +1,7 @@
 (passwordless-ssh)=
 # Passwordless SSH
 
-You must set up passwordless ssh to ensure that GUI-based applications launch without issues. Please make sure that your keys are added to the authorized.key file in your `~/.ssh` directory. This needs to be done anytime you regenerate your SSH keys. If you're having an issue with opening an application that needs X11 forwarding, such as MATLAB or Schrodinger, and you recently regenerated your keys, make sure to add your keys to the authorized.key file.
+You must set up passwordless ssh to ensure that GUI-based applications launch without issues. Please make sure that your keys are added to the authorized.key file in your `~/.ssh` directory. This needs to be done anytime you regenerate your SSH keys. If you're having an issue opening an application that needs X11 forwarding, such as MATLAB or Schrodinger, and you recently regenerated your keys, make sure to add your keys to the authorized.key file.
 
 ::::::{tab-set}
 :::::{tab-item} Mac OS
@@ -40,8 +40,8 @@ Errors that you can see on Windows when launching a GUI-based program include th
 
 If you are getting these types of errors, it could be because of the following reasons:
 
-1. You still need to set up passwordless SSH. If so, follow the steps below to set up passwordless SSH.
-1. When requesting a compute node from the login node, you may have forgotten to include the `--x11` option. For more details, please see this example [srun](https://rc-docs.northeastern.edu/en/latest/using-discovery/srun.html?highlight=X11#srun-examples) command.
+1. You still need to set up passwordless SSH. If so, you can follow the steps below to set up passwordless SSH.
+1. When requesting a compute node from the login node, you may have forgotten to include the `--x11` option. Please see this example [srun](https://rc-docs.northeastern.edu/en/latest/using-discovery/srun.html?highlight=X11#srun-examples) command.
 :::
 :::::
 ::::::
