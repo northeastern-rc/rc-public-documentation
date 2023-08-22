@@ -1,6 +1,6 @@
-(bash)=
+(command-line)=
 
-# Using Bash
+# Cluster via Command-Line
 
 
 ## Overview

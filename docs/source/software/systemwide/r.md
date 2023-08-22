@@ -1,18 +1,21 @@
+(using-r)=
 # Using R
 
-[R](https://www.r-project.org/) is available as a [module](../software/modules.md) and
-it is also an interactive app on Open onDemand [OOD](../using-ood/introduction.md). You can also use R with Anaconda. See [Working with Conda/Miniconda/Anaconda](./conda.md) and the [Anaconda documentation](https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/) for more information.
+[R](https://www.r-project.org/) is available as a {ref}`modules <using-module>` and it is also an interactive app on {ref}`Open OnDemand <using-ood>` (OOD). You can also use R with Anaconda.
 
+:::{seealso}
+Our {ref}`conda` page and [official Anaconda documentation](https://docs.anaconda.com/anaconda/packages/r-language-pkg-docs/).
+:::
 ## Using R on Open onDemand
 
-The Open onDemand application offers several different versions of R accessed through an interactive session with Rstudio server in a [Rocker Container](https://rocker-project.org/images/versioned/rstudio). Each version of R is available as a different *flavor* whereby different packages are pre-installed. We host three flavors whose package-lists build off of one another in the following order: Rstudio < Tidyverse < Geospatial.
+The Open onDemand application offers several different versions of R accessed through an interactive session with Rstudio server in a [Rocker Container](https://rocker-project.org/images/versioned/rstudio). Each version of R is available as a different *flavor* whereby different packages are pre-installed. We host three flavors whose package-lists build on one another in the following order: Rstudio < Tidyverse < Geospatial.
 
-In addition to different R packages you will find additional package requirements (e.g, compilers) also present in the three flavors in increasing order. 
+In addition to different R packages you will find additional package requirements (e.g, compilers) also present in the three flavors in increasing order.
 
 
 :::{important}
 
-If you have tried to install a package in the *Rstudio* or *Tidyverse* flavors and recieve an error message saying a necessary compiler is missing (e.g., glibc, CMAKE, zlib) or other "compilation failed" message. Please try to install the package again in the *Geospatial* flavor. If this still returns an error reach out to rchelp@northeastern.edu 
+If you have tried to install a package in the *Rstudio* or *Tidyverse* flavors and recieve an error message saying a necessary compiler is missing (e.g., glibc, CMAKE, zlib) or other "compilation failed" message. Please try to install the package again in the *Geospatial* flavor. If this still returns an error reach out to rchelp@northeastern.edu
 
 :::
 
@@ -73,7 +76,7 @@ The instructions below can be applied on any RStudio “flavor” available (i.e
 1. In the RStudio console type: `install.packages("packrat)`.
 
 :::{note}
-This will install by default in `$HOME/R/x86_64-pc-linux-gnu-library/<version>/` as long as you don’t have previous environments or those have been turned off (see below). For packrat installation, it is best to specify a “project folder” in your `$HOME`, `/scratch` or `/work` directory (if you do not have `/work` please see [here](https://rc-docs.northeastern.edu/en/latest/storage/discovery_storage.html) for access). The location `/tmp/Rtmp8CbQCA/downloaded_packages` would not work because `/tmp` corresponds to the compute node that you were on while running the R session. Optimally, you would like to have the packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on.
+This will install by default in `$HOME/R/x86_64-pc-linux-gnu-library/<version>/` as long as you don’t have previous environments or those have been turned off (see below). For packrat installation, it is best to specify a “project folder” in your `$HOME`, `/scratch` or `/work` directory (if you do not have `/work` please see {ref}`data-storage`). The location `/tmp/Rtmp8CbQCA/downloaded_packages` would not work because `/tmp` corresponds to the compute node that you were on while running the R session. Optimally, you would like to have the packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on.
 :::
 
 3. Create a packrat project directory at the desired location by selecting “New Folder” in the “Files” tab in the lower right hand side of the RStudio screen. Alternatively, use `mkdir` in the terminal tab on the lower left-hand side of the RStudio screen. For example: `mkdir projectfolder`.

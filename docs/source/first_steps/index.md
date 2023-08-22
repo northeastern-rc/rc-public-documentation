@@ -18,7 +18,7 @@ Taking the first steps with our High-Performance Computing (HPC) cluster is a cr
 :::
 :::{grid-item-card} {ref}`Shell Environment <bashrc>`
 :::
-:::{grid-item-card} {ref}`Using Bash <bash>`
+:::{grid-item-card} {ref}`Command Line <command-line>`
 :::
 ::::
 
@@ -49,7 +49,7 @@ Explore the fundamental concepts and commands for using Bash, the popular comman
 - **Advanced Bash**: More complex operations and scripting.
 
 :::{seealso}
-{ref}`More about Using Bash <bash>`.
+{ref}`More about Using Bash <command-line>`.
 :::
 ---
 The First Steps section is your starting point for becoming proficient in using our HPC environment. Explore these topics to gain the foundational skills necessary for effective research computing. If you need assistance, our support team is available at <rchelp@northeastern.edu> or consult our {ref}`faq`.
