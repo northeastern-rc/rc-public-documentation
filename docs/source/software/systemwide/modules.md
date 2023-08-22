@@ -53,7 +53,7 @@ widths: 23 40
 ## Module show example
 
 Before loading a module, type `module show <name of module>` to see if there are any dependencies or commands that you need to execute
-before loading the module. Sometimes, a module might depend on loading other modules to work as expected. While modules are convenient for loading software on the cluster, scientific software can come with many packages and dependencies. In addition to the module, you'll need to look over other ways to load the cluster's software. 
+before loading the module. Sometimes, a module might depend on loading other modules to work as expected. While modules are convenient for loading software on the cluster, scientific software can come with many packages and dependencies. In addition to the module, you'll need to look over other ways to load the cluster's software.
 
 :::{seealso}
 {ref}`software-overview` for installing software on the cluster.

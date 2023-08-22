@@ -1,3 +1,4 @@
+(using-mpi)=
 # Using MPI
 
 [Messaging Passing Interface (MPI)] is a standardized and portable message-passing system designed to function on a wide variety of parallel computing architectures. It provides a library of functions that enable a program to distribute a computational task across multiple nodes in a cluster.

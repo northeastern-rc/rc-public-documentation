@@ -1,3 +1,4 @@
+(using-matlab)=
 # Using MATLAB
 
 MATLAB is available as a module on Discovery (see {ref}`using-module` for more information), and
