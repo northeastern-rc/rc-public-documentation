@@ -5,6 +5,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
+SOURCEDIR	  = source
 
 LATEX-BW      = $(BUILDDIR)/latex-bw
 
@@ -17,27 +18,26 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html       to make standalone HTML files"
-	@echo "  dirhtml    to make HTML files named index.html in directories"
-	@echo "  singlehtml to make a single large HTML file"
-	@echo "  pickle     to make pickle files"
-	@echo "  json       to make JSON files"
-	@echo "  htmlhelp   to make HTML files and a HTML help project"
-	@echo "  qthelp     to make HTML files and a qthelp project"
+	@echo "  changes    to make an overview of all changed/added/deprecated items"
 	@echo "  devhelp    to make HTML files and a Devhelp project"
+	@echo "  dirhtml    to make HTML files named index.html in directories"
+	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  epub       to make an epub"
-	@echo "  pdf-bw     to make black and white PDF files"
+	@echo "  html       to make standalone HTML files"
+	@echo "  htmlhelp   to make HTML files and a HTML help project"
+	@echo "  json       to make JSON files"
 	@echo "  latex      to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
 	@echo "  latexpdf   to make LaTeX files and run them through pdflatex"
-	@echo "  text       to make text files"
-	@echo "  man        to make manual pages"
-	@echo "  changes    to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck  to check all external links for integrity"
-	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  livehtml   to see edits in real-time"
-	@echo "  view  		to open index.html via default browser"
+	@echo "  man        to make manual pages"
 	@echo "  pdf   		to generate PDF files"
-
+	@echo "  pdf-bw     to make black and white PDF files"
+	@echo "  pickle     to make pickle files"
+	@echo "  qthelp     to make HTML files and a qthelp project"
+	@echo "  singlehtml to make a single large HTML file"
+	@echo "  text       to make text files"
+	@echo "  view  		to open index.html via default browser"
 
 clean:
 	-rm -rf $(BUILDDIR)/*
