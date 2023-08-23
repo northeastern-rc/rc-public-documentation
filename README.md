@@ -93,6 +93,11 @@ You can also create a separate Window pane to preview your Markdown.  To do this
 - Markdown Preview
 ![](.README_images/e3a69125.png)
 
+## Spell Check
+```Bash
+brew update
+brew install enchant
+```
 
 ## Additional
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
