@@ -1,0 +1,5 @@
+UMass
+Slurm
+RStudio
+Jupyter
+Bioinformatics
