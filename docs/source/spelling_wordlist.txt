@@ -1,0 +1,12 @@
+UMass
+Slurm
+RStudio
+Jupyter
+Bioinformatics
+Conda
+MyNortheastern
+HPC
+Packrat
+Holyoke
+TensorBoard
+Miniconda

@@ -9,3 +9,4 @@ sphinx-togglebutton
 sphinx_design
 sphinx_inline_tabs
 sphinxcontrib-bibtex
+sphinxcontrib-spelling

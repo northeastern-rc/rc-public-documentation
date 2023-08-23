@@ -62,7 +62,7 @@ This is a general guide and may not cover all specific cases. Always consult wit
 Please contact our support team if you need personalized assistance optimizing your job's performance.
 
 [gprof]: https://ftp.gnu.org/old-gnu/Manuals/gprof-2.9.1/html_mono/gprof.html
-[Intel's Optimization Guide]: https://chat.openai.com/c/1042888d-000e-4c8f-98cc-d28d881b0d86#:~:text=Intel%27s%20Optimization%20Guide
+[Intel's Optimization Guide]: https://www.intel.com/content/www/us/en/gaming/resources/cpu-optimizer.html
 [NVIDIA's GPU Optimization Guide]: https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html
 [NVIDIA Nsight]: https://developer.nvidia.com/nsight-systems
 [Intel VTune]: https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2023-1/overview.html

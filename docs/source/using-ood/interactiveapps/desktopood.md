@@ -10,7 +10,7 @@ The following tools and programs are accessible on our Desktop App:
 - File explorer (able to traverse and view files that you have access to on the HPC)
 - Firefox web browser
 - VLC media player
-- Office Libre suite of applications (word processing, spreadsheets, presentation applications)
+- LibreOffice suite of applications (word, spreadsheet, and presentation processing)
 
 :::{note}
 The desktop application is a Singularity container; a Singularity container cannot run inside the desktop application. It fails if users run a container-based module or program via the desktop application.
