@@ -87,7 +87,7 @@ If LAMMPS has a dependency on a specific `gcc` compiler, then do the following b
 
 1. `cd $HOME/.spack/linux/`
 1. Open `compilers.yaml` and copy-paste a `compiler` entry at the end of the file.
-1. Edit 'spec' and 'path' to indicate the version of the gcc compiler that is required for installation.
+1. Edit 'spec' and 'path' to indicate the version of the GCC compiler that is required for installation.
 
    ::::{code-block} bash
    For example:
@@ -106,7 +106,7 @@ If LAMMPS has a dependency on a specific `gcc` compiler, then do the following b
    srun --partition=gpu --nodes=1 --ntasks=14 --pty --gres=gpu:1 --mem=16GB --time=08:00:00 /bin/bash
    :::
 
-1. Load compatible cuda, gcc, and python modules and activate Spack from the installed location.
+1. Load compatible CUDA, GCC, and Python modules and activate Spack from the installed location.
 
    ::::{code-block} bash
     module load cuda/10.2 gcc/8.1.0 python/3.8.1

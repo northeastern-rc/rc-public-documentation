@@ -20,7 +20,7 @@ Under the **Courses** menu, select your Class Name (For example: **ALY3070 Jupyt
 
 :::{image} ../images/cps-ood-menu.png
 ---
-alt: A menu dropdown list of classes, with a CPS ALY3070 class highlighted.
+alt: A menu drop-down list of classes, with a CPS ALY3070 class highlighted.
 width: 400
 ---
 :::

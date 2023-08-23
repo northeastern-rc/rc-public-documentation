@@ -9,7 +9,7 @@ There are multiple implementations of MPI including [OpenMPI] (Open Source Messa
 
 To get started with MPI on a Slurm-based HPC cluster, you should have:
 - Basic knowledge of Linux/Unix commands
-- Familiarity with a programming language supported by MPI (e.g., C, C++, Fortran) if you are developing a program
+- Familiarity with a programming language supported by MPI (e.g., C, C++, FORTRAN) if you are developing a program
 - Understand how to load MPI module on the HPC
 - Understand how to compile your source code and run the binaries (compiled languages) or to run the interpreted language with MPI
 

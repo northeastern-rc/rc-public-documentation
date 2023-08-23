@@ -130,7 +130,7 @@ Release a held job, i.e., permit specified job to start (see hold).
 scontrol release <jobid>
 :::
 
-Re-queue a completed, failed, or cancelled job
+Re-queue a completed, failed, or canceled job
 
 :::{code} bash
 scontrol requeue <jobid>
@@ -214,8 +214,8 @@ To monitor a specific job, use:
 squeue -j <job_id>
 :::
 
-### Cancelling Jobs: `scancel`
-The `scancel` command is used to cancel a running or pending job. Once cancelled, a job cannot be resumed.
+### Canceling Jobs: `scancel`
+The `scancel` command is used to cancel a running or pending job. Once canceled, a job cannot be resumed.
 
 #### Syntax: `scancel`
 :::{code} bash

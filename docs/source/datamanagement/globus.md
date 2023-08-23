@@ -35,7 +35,7 @@ If you created an account through Northeastern University's existing organizatio
 1. Enter your Globus ID information.
 1. Enter the verification code that Globus sends to your email.
 1. Click **Link to an existing account** to link this new account with your primary account.
-1. Select Northeastern University from the dropdown box and click **Continue** to be taken to the Northeastern University single sign-on page.
+1. Select Northeastern University from the drop-down box and click **Continue** to be taken to the Northeastern University single sign-on page.
 1. Enter your Northeastern username and password.
 
 You should now see your two accounts linked in the Account section on the [Globus web app](https://app.globus.org/account/identities).
