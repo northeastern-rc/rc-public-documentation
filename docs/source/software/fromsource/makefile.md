@@ -67,3 +67,32 @@ source ~/.bashrc
 :::
 ::::
 :::::
+
+(make-lammps-example)=
+## Makefile Example: Installing LAMMPS
+:::{seealso}
+{ref}`cmake-lammps-example`
+:::
+:::{note}
+There are no configure options used and the information is stored within the makefiles `mylammps/MAKE` in the `make.serial` and `make.mpi` files.
+:::
+:::
+The following instructions to build LAMMPS using make.
+1. To allocate an interactive job on compute node type:
+   ::::{code-block} bash
+   srun -N 1 -n 28 --constraint=ib --pty /bin/bash
+   ::::
+1. Load the following modules required for building LAMMPS:
+   ::::{code-block} bash
+   module load openmpi/4.0.5
+   module load python/3.6.6
+   module load gcc/9.2.0
+   ::::
+1. Change the directory to the `src` directory using the command `cd /path/to/mylammps/src`
+1. Use the following command to build serial version or the MPI version of LAMMPS depending on the requirement. This will generate `lmp_serial` binary for a serial build and `lmp_mpi` for an MPI build.
+   ::::{code-block} bash
+   make serial
+   make mpi
+   ::::
+
+Now you can start running the program, using `./lmp_serial` or `mpirun -n 1 ./lmp_mpi -h`.

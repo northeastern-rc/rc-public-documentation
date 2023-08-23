@@ -26,7 +26,12 @@ This is a minimal example using the command line version of CMake to build LAMMP
    ::::
 1. The `cmake --build` command will launch the compilation, which, if successful, will ultimately generate an executable `lmp`inside the`build`folder. Now you can start running LAMMPS using `./lmp`.
 
+(cmake-lammps-example)=
 ## CMake Example: Parallel LAMMPS Build
+:::{seealso}
+{ref}`make-lammps-example`
+:::
+The following instructions to build LAMMPS using cmake.
 1. Running LAMMPS in parallel is possible using a domain decomposition parallelization. In order to build the MPI version, first allocate an interactive job on compute node by typing:
    ::::{code-block} bash
    srun -N 1 -n 28 --constraint=ib --pty /bin/bash
