@@ -54,7 +54,7 @@ Use Globus Connect Personal (GCP) as an endpoint for your laptop. You first need
 Accept the defaults on the install wizard. After the installation, you can use your laptop as an endpoint within Globus.
 
 :::{note}
-You can't modify an endpoint after you have created it. If you need an endpoint with different options, you must delete and recreate it. Follow the instructions on the Globus website for [deleting and recreating an endpoint](https://docs.globus.org/faq/globus-connect-endpoints/#how_do_i_get_a_new_setup_key_for_a_reinstallation_of_globus_connect_personal).
+You can't modify an endpoint after you have created it. If you need an endpoint with different options, you must delete and recreate it. Follow the instructions on the Globus website for [deleting and recreating an endpoint](https://docs.globus.org/faq/globus-connect-endpoints/#what_are_globus_connect_personal_and_globus_connect_server).
 :::
 
 ## Working with Globus

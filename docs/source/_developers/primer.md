@@ -301,13 +301,13 @@ All members of the RC are welcome to contribute to the documentation. We encoura
 
 Just to remind you, good documentation is an ongoing effort. Always strive to improve and adapt to your users' needs.
 
-[MyST Syntax]: https://myst-parser.readthedocs.io/en/v0.15.1/syntax/syntax.html#
+[MyST Syntax]: https://myst-parser.readthedocs.io/en/v0.15.1/syntax/syntax.html
 [MyST-Parser Documentation]: https://myst-parser.readthedocs.io/en/v0.13.5/using/howto.html
 [MyST-Typography]: https://myst-parser.readthedocs.io/en/latest/syntax/typography.html
 [`colon_fence` extension]: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html\#code-fences-using-colons
 [Markdown cheatsheet]: https://www.markdownguide.org/basic-syntax/
 [admonitions]: https://jupyterbook.org/en/stable/reference/cheatsheet.html\#admonitions
-[Colon Fence Directives]: https://mystmd.org/guide/syntax-overview#example-fence
+[Colon Fence Directives]: https://mystmd.org/guide/syntax-overview
 [RTD]: https://readthedocs.com/
 [index.md]: https://github.com/northeastern-rc/rc-public-documentation/blob/master/docs/source/index.md
 [MyST Source code and APIs]: https://myst-parser.readthedocs.io/en/latest/syntax/code_and_apis.html

@@ -352,7 +352,7 @@ Efficiency and scalability are crucial when writing MPI code. Here are some tips
 
 For assistance with getting started with using MPI or troubleshooting using MPI libraries on Discovery, reach out to us at <rchelp@northeastern.edu> or [schedule a consultation] with one of our team members.
 
-[Intel MPI]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/mpi-library.html#gs.1xh3aa
+[Intel MPI]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/mpi-library.html
 [Messaging Passing Interface (MPI)]: https://www.mpi-forum.org
 [MPICH]: https://www.mpich.org/
 [OpenMPI]: https://www.open-mpi.org/
