@@ -248,18 +248,21 @@ working on a GPU with the latest version of TensorFlow (TF).
 For the latest installation, use the TensorFlow pip package, which includes GPU support for CUDA-enabled devices:
 
 ::::{code-block} bash
-conda create --name TF_env python=3.9 -y
-source activate TF_env
-conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
-pip install --upgrade pip
-pip install tensorflow==2.13.*
+conda create -n tf python=3.11 -y
+source activate tf
+conda install -c conda-forge cudatoolkit=11.8.0
+python3 -m pip install nvidia-cudnn-cu11==8.6.0.163 tensorflow==2.13.*
+mkdir -p $CONDA_PREFIX/etc/conda/activate.d
+echo 'CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+echo 'export LD_LIBRARY_PATH=$CUDNN_PATH/lib:$CONDA_PREFIX/lib/:$LD_LIBRARY_PATH' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+source $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
 ::::
 
 
 Verify the installation:
 
 :::{code} bash
-python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' # True
+python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda()); print(tf.config.list_physical_devices('GPU'))' # True
 ::::
 
 ::::{note}
