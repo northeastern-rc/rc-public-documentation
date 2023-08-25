@@ -26,7 +26,7 @@ If you are on a login node, move to a compute node by typing:
 :::{code-block} bash
 ---
 caption: |
-    Requesting 1 node with 1 cpu core and load anaconda.
+    Requesting 1 node with 1 CPU core and load anaconda.
 ---
 
 srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash

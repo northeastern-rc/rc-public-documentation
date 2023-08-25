@@ -1,7 +1,7 @@
 (classroom-faq)=
 # Classroom HPC: FAQ
 
-There are several use cases for teaching and learning with the cluster in a classroom. The cluster offers a command line and web interface, allowing access and instruction-level flexibility. Using the cluster gives you, and your students access to many popular scientific applications and allow you and your students to install other packages as needed. The easy-to-use Open onDemand web portal also offers a built-in visual file explorer for viewing and transferring.
+There are several use cases for teaching and learning with the cluster in a classroom. The cluster offers a command line and web interface, allowing access and instruction-level flexibility. Using the cluster gives you, and your students access to many popular scientific applications and allow you and your students to install other packages as needed. The easy-to-use Open OnDemand web portal also offers a built-in visual file explorer for viewing and transferring.
 
 The following Frequently Asked Questions section should help answer most of your questions about using the cluster for classroom use. You can also contact us at <rchelp@northeastern.edu> or submit a ServiceNow ticket for further information.
 
@@ -18,13 +18,13 @@ Yes, we currently provide online training for your class on using the cluster. I
 
 ## Do my students have to learn Linux to work with the cluster?
 
-Depending on your class assignments, many students can work with the Open onDemand web portal, which does not require any knowledge of Linux to use. In cases where you want them to work on the command line, they should have a basic understanding of Linux commands. Please see the question “Is there any training on the cluster for my class” above if you would like us to provide your class with an introductory training course before using the cluster.
+Depending on your class assignments, many students can work with the Open OnDemand web portal, which does not require any knowledge of Linux to use. In cases where you want them to work on the command line, they should have a basic understanding of Linux commands. Please see the question “Is there any training on the cluster for my class” above if you would like us to provide your class with an introductory training course before using the cluster.
 
 ## What software is available to use with my class on the cluster?
 
 Many software packages are available, including popular software apps such as Jupyter Notebook, RStudio, and MATLAB. If you have an account on the cluster, you can see the list of available software by using the `module avail` command. See {ref}`using-module` for more information. Students have access to all the modules on the cluster. They can also use the interactive apps available on Open OnDemand. See {ref}`using-ood` for more information. We can also install additional modules and libraries for your class as needed.
 
-## My class needs access to a specific software application that I do not see installed on the cluster or Open onDemand (OOD). What should I do?
+## My class needs access to a specific software application that I do not see installed on the cluster or Open OnDemand (OOD). What should I do?
 
 If your class requires software not currently installed on the cluster or OOD, follow the procedure below to request that software be installed on the cluster. You must be a professor or instructor to initiate this request. Students in your class should refrain from making this request. If your students need a specific software application, you must complete the form for them. This is to ensure that we only get one request for the software. Students in one class often make multiple requests for the same software, so having all requests go through the professor or instructor reduces this overlap.
 
@@ -43,9 +43,9 @@ Software requests can take up to 24 hours to verify; additional time is needed t
 You and your students can install software locally to your PATH on the cluster, which may be a better option in some cases, such as installing multiple conda environments. See {ref}`software-overview` for more information.
 :::
 
-## I just need my class to access Open onDemand. How do I request that?
+## I just need my class to access Open OnDemand. How do I request that?
 
-Open OnDemand is a web portal that lets you access the resources on the cluster through an easy-to-navigate web browser interface. As outlined above, you request course access like you would access the cluster. Please specify that you’d like your course to be on Open onDemand for your students, in addition to the information we request above.
+Open OnDemand is a web portal that lets you access the resources on the cluster through an easy-to-navigate web browser interface. As outlined above, you request course access like you would access the cluster. Please specify that you’d like your course to be on Open OnDemand for your students, in addition to the information we request above.
 
 ## I'd like my class to use specific resources on the cluster. Can you create a reservation on the cluster for my class?
 

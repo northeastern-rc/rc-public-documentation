@@ -35,8 +35,8 @@ Research Computing has provides [scripts] to assist you in getting started with 
 The collection of scripts is continuously growing and the team welcomes any contributions to the [project].
 
 
-[Matlab]: https://github.com/northeastern-rc/discovery-example-scripts/tree/main/MATLAB
-[Multiprocessing]: https://github.com/northeastern-rc/discovery-example-scripts/tree/main/Multiprocessing
-[project]: https://github.com/northeastern-rc/discovery-example-scripts
-[Schrodinger]: https://github.com/northeastern-rc/discovery-example-scripts/tree/main/Schrodinger
-[scripts]: https://github.com/northeastern-rc/discovery-example-scripts
+[Matlab]: https://www.github.com/northeastern-rc/discovery-example-scripts/tree/main/MATLAB
+[Multiprocessing]: https://www.github.com/northeastern-rc/discovery-example-scripts/tree/main/Multiprocessing
+[project]: https://www.github.com/northeastern-rc/discovery-example-scripts
+[Schrodinger]: https://www.github.com/northeastern-rc/discovery-example-scripts/tree/main/Schrodinger
+[scripts]: https://www.github.com/northeastern-rc/discovery-example-scripts

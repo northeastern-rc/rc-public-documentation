@@ -2,7 +2,7 @@
 # Using MATLAB
 
 MATLAB is available as a module on Discovery (see {ref}`using-module` for more information), and
-it is also an interactive app on Open onDemand (see {ref}`using-ood` for more information).
+it is also an interactive app on Open OnDemand (see {ref}`using-ood` for more information).
 You can also download MATLAB for use with your personal computer through the [Northeastern portal on the MATLAB website](https://www.mathworks.com/academia/tah-portal/northeastern-university-30294223.html).
 Note that the procedures detailed below are specific to using MATLAB on Discovery and not with using MATLAB on your personal computer.
 
@@ -62,16 +62,16 @@ Use the following procedure if you need to install a MATLAB toolbox:
 
 The Discovery cluster has MATLAB Parallel Server installed. This section details an example of how you
 can setup and use the MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB 2020a launched as an interactive
-app on the Open onDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting.
+app on the Open OnDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting.
 The parameters presented represent only one scenario.
 
-This walkthrough will use Open onDemand, the web portal on Discovery, to launch MATLAB. You'll then create a
+This walkthrough will use Open OnDemand, the web portal on Discovery, to launch MATLAB. You'll then create a
 cluster profile. This allows you to define cluster properties that will be applied to your jobs. Supported
 functions are *batch, parpool, and parcluster*. The Parallel Computing Toolbox comes with a cluster profile
 called *local*, which you will change in the walkthrough below.
 
 :::{note}
-This walkthrough details submitting jobs through Discovery's Open onDemand web portal. Some parameters will vary if you are using MATLAB from the command line. This walkthrough does not apply
+This walkthrough details submitting jobs through Discovery's Open OnDemand web portal. Some parameters will vary if you are using MATLAB from the command line. This walkthrough does not apply
 to other versions of MATLAB.
 :::
 

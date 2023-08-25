@@ -35,7 +35,7 @@ If you created an account through Northeastern University's existing organizatio
 1. Enter your Globus ID information.
 1. Enter the verification code that Globus sends to your email.
 1. Click **Link to an existing account** to link this new account with your primary account.
-1. Select Northeastern University from the dropdown box and click **Continue** to be taken to the Northeastern University single sign-on page.
+1. Select Northeastern University from the drop-down box and click **Continue** to be taken to the Northeastern University single sign-on page.
 1. Enter your Northeastern username and password.
 
 You should now see your two accounts linked in the Account section on the [Globus web app](https://app.globus.org/account/identities).
@@ -54,7 +54,7 @@ Use Globus Connect Personal (GCP) as an endpoint for your laptop. You first need
 Accept the defaults on the install wizard. After the installation, you can use your laptop as an endpoint within Globus.
 
 :::{note}
-You can't modify an endpoint after you have created it. If you need an endpoint with different options, you must delete and recreate it. Follow the instructions on the Globus website for [deleting and recreating an endpoint](https://docs.globus.org/faq/globus-connect-endpoints/#how_do_i_get_a_new_setup_key_for_a_reinstallation_of_globus_connect_personal).
+You can't modify an endpoint after you have created it. If you need an endpoint with different options, you must delete and recreate it. Follow the instructions on the Globus website for [deleting and recreating an endpoint](https://docs.globus.org/faq/globus-connect-endpoints/#what_are_globus_connect_personal_and_globus_connect_server).
 :::
 
 ## Working with Globus
