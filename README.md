@@ -94,20 +94,15 @@ You can also create a separate Window pane to preview your Markdown.  To do this
 ![](.README_images/e3a69125.png)
 
 ## Spell Check
-Here are two ways to set up your computer to run `make spelling`. Note: the second method is more robust, as the package does not always install properly when done via pip.
-1. Install using `pip` and `brew` on Mac.
-```Bash
-brew update
-brew install enchant
-pip install pyenchant
-```
-2. Install via source.
-
-If this does not work, build from the source. Be sure to source your Python environment, so it works for building Sphinx docs.
+Be sure to source your Python environment, so it works for building Sphinx docs.
 ```Bash
 git clone git@github.com:pyenchant/pyenchant.git
 cd pyenchant
 python setup.py install
+```
+Or, simply run from the `rc-public-documentation` folder:
+```Bash
+bash bin/install_spellchecker.sh
 ```
 
 
