@@ -36,7 +36,9 @@ Learn how our job scheduler manages the distribution of computational tasks.
 - **Job Queues**: Overview of different job queues.
 - **Job Status**: Monitoring and understanding job states.
 
+:::{seealso}
 {ref}`More about the Queuing System <understanding-queuing>`
+:::
 
 ## Job Scheduling Policies and Priorities
 
@@ -45,7 +47,9 @@ Gain insights into how jobs are prioritized and scheduled within the system.
 - **Policies**: The rules governing job scheduling.
 - **Priorities**: How job priority is determined.
 
+:::{seealso}
 {ref}`More about Scheduling Policies <job-scheduling>`
+:::
 
 ## Interactive and Batch Mode
 
@@ -54,7 +58,9 @@ Run jobs interactively or submit batch scripts for later execution.
 - **Interactive Jobs**: Immediate execution and feedback.
 - **Batch Jobs**: Using scripts to manage longer-running jobs.
 
+:::{seealso}
 {ref}`More about Interactive and Batch Mode <interactive-and-batch-mode>`
+:::
 
 ## Working with GPUs
 
@@ -63,7 +69,9 @@ Harness the power of GPUs for computation-intensive tasks.
 - **GPU Job Submission**: Submitting jobs to GPU-enabled nodes.
 - **Monitoring GPU Usage**: Tools and commands to monitor GPU resources.
 
+:::{seealso}
 {ref}`More about Working with GPUs <working-gpus>`
+:::
 
 ## Recurring Jobs
 
@@ -72,7 +80,9 @@ Set up and manage recurring jobs that run on a schedule.
 - **Creating Recurring Jobs**: How to define and manage repeating tasks.
 - **Modifying Recurring Jobs**: Adjusting existing recurring jobs.
 
+:::{seealso}
 {ref}`More about Recurring Jobs <recurring-jobs>`
+:::
 
 ## Debugging and Troubleshooting Jobs
 
@@ -81,7 +91,9 @@ Find solutions and get help with common job-related issues.
 - **Common Errors**: Solutions to typical problems.
 - **Advanced Debugging Tools**: Utilizing professional debugging techniques.
 
+:::{seealso}
 {ref}`More about Debugging and Troubleshooting <debugging-jobs>`
+:::
 
 ---
 

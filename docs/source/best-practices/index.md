@@ -31,7 +31,9 @@ Learn about storage quotas and how to manage your home directory effectively.
 - **Quota Limits**: Understanding your storage allocation.
 - **Managing Storage**: Tips for maintaining an efficient workspace.
 
+:::{seealso}
 {ref}`More about Home Directory Storage Quota <home-directory-storage-quota>`.
+:::
 
 (checkpoint-jobs-index)=
 ## Checkpointing Jobs
@@ -40,7 +42,9 @@ Discover how to save progress within long-running jobs, preventing loss of data.
 - **What is Checkpointing?**: An introduction to the concept.
 - **Implementing Checkpointing**: Step-by-step guidance.
 
+:::{seealso}
 {ref}`More about Checkpointing Jobs <checkpoint-jobs>`.
+:::
 
 (optimizing-job-performance-index)=
 ## Optimizing Job Performance
@@ -49,7 +53,9 @@ Guidelines and tips to get the most out of your computational tasks.
 - **Performance Monitoring**: Tools to assess job performance.
 - **Performance Tuning**: Adjusting settings for optimal results.
 
+:::{seealso}
 {ref}`More about Optimizing Job Performance <optimizing-job-performance>`.
+:::
 
 ## Best Software Practices
 Effective strategies and best practices for managing and using software on HPC.
@@ -57,7 +63,9 @@ Effective strategies and best practices for managing and using software on HPC.
 - **Software Selection**: Choosing the right tools.
 - **Software Maintenance**: Keeping your software environment up-to-date.
 
+:::{seealso}
 {ref}`More about Best Software Practices <best-practices-sw>`.
+:::
 
 ---
 

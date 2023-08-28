@@ -49,8 +49,6 @@ Specific applications in the **Interactive Apps** section, particularly those wi
 
 Additionally, we offer a selection of modified standard applications intended to support specific coursework. These applications are under the **Courses** menu on the OOD web interface. Please note that these course-specific applications are only accessible to students enrolled in the respective courses.
 
-
-
 :::{note}
 Certain apps are reserved for specific research groups and are not publicly accessible, as indicated by the "Restricted" label next to the application name. If you receive an access error when attempting to open a restricted app, and you believe you should have access to it, please email <rchelp@northeastern.edu> with the following information: your username, research group, the app you are trying to access, and a screenshot of the error message. We will investigate and address the issue.
 :::
