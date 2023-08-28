@@ -31,7 +31,9 @@ Get started with OOD by understanding its purpose, features, and benefits.
 - **What is OOD?**: Overview of Open OnDemand.
 - **Why Use OOD?**: Advantages of using OOD for HPC tasks.
 
+:::{seealso}
 {ref}`More about Introduction to OOD <using-ood>`.
+:::
 
 ## Accessing Open OnDemand
 Learn about the various methods to access and navigate OOD.
@@ -39,7 +41,9 @@ Learn about the various methods to access and navigate OOD.
 - **Access Methods**: How to log in and get started.
 - **Navigating OOD**: Tips for efficient navigation.
 
+:::{seealso}
 {ref}`More about Accessing Open OnDemand <access-ood>`.
+:::
 
 ## Interactive Open OnDemand Applications
 Explore interactive applications in OOD, including job submissions and real-time monitoring.
@@ -47,7 +51,9 @@ Explore interactive applications in OOD, including job submissions and real-time
 - **Launching Applications**: How to initiate interactive sessions.
 - **Monitoring Jobs**: Tools and commands to monitor job status.
 
+:::{seealso}
 {ref}`More about Interactive Open OnDemand Applications <interactive-ood-apps>`.
+:::
 
 ## Advanced Features in OOD
 Delve into advanced OOD features that enhance productivity and efficiency.
@@ -55,7 +61,9 @@ Delve into advanced OOD features that enhance productivity and efficiency.
 - **Customization**: Personalize your OOD experience.
 - **Advanced Tools**: Utilizing expert-level features.
 
+:::{seealso}
 {ref}`More about Advanced Features in OOD <advanced-features-ood>`.
+:::
 
 ---
 

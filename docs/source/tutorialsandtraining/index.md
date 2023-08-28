@@ -13,3 +13,6 @@ Research Computing staff have developed and led several training sessions on the
 :::{grid-item-card} {ref}`canvasandgithub`
 :::
 ::::
+
+:::{include} ../_snippets/helpfooter.md
+:::

@@ -26,7 +26,7 @@ The cluster offers you many options for working with software. Two of the easies
 
 ::::{sidebar}
 :::{seealso}
-{ref}`using-module`.
+{ref}`More about using module. <using-module>`
 :::
 ::::
 
