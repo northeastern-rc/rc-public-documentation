@@ -12,15 +12,13 @@ advancedfeatures
 
 Open OnDemand (OOD) is a user-friendly interface for interacting with our High-Performance Computing (HPC) cluster. This section will guide you through the essential aspects of OOD, including an introduction, access methods, interactive applications, and advanced features.
 
-::::{grid} 4
+::::{grid} 3
 
 :::{grid-item-card} {ref}`using-ood`
 :::
 :::{grid-item-card} {ref}`access-ood`
 :::
 :::{grid-item-card} {ref}`Interactive OOD Apps <interactive-ood-apps>`
-:::
-:::{grid-item-card} {ref}`advanced-features-ood`
 :::
 ::::
 
@@ -37,25 +35,16 @@ Get started with OOD by understanding its purpose, features, and benefits.
 Learn about the various methods to access and navigate OOD.
 
 - **Access Methods**: How to log in and get started.
-- **Navigating OOD**: Tips for efficient navigation.
 
 {ref}`More about Accessing Open OnDemand <access-ood>`.
 
 ## Interactive Open OnDemand Applications
 Explore interactive applications in OOD, including job submissions and real-time monitoring.
 
+- **OOD Applications**: List of OOD applications.
 - **Launching Applications**: How to initiate interactive sessions.
-- **Monitoring Jobs**: Tools and commands to monitor job status.
 
 {ref}`More about Interactive Open OnDemand Applications <interactive-ood-apps>`.
-
-## Advanced Features in OOD
-Delve into advanced OOD features that enhance productivity and efficiency.
-
-- **Customization**: Personalize your OOD experience.
-- **Advanced Tools**: Utilizing expert-level features.
-
-{ref}`More about Advanced Features in OOD <advanced-features-ood>`.
 
 ---
 
