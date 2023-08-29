@@ -109,6 +109,17 @@ widths: auto
   - 12
   - 12
 :::
+::::{important}
+Consider the compatibility of the GPU, as some programs do not work on the older k40m or k80 GPUs.
+
+Execute the following command to display the `non-Kepler` GPUs that are available:
+
+:::
+sinfo -p gpu --Format=nodes,cpus,memory,features,statecompact,nodelist,gres
+:::
+
+This indicates the state (idle or not) of gpu-types and could be helpful to find one that is `idle`. However, the command does not give real-time information of the state and should be used carefully.
+::::
 
 ## Requesting GPUs with Slurm
 
@@ -195,16 +206,6 @@ First, log onto `gpu` interactively, and load anaconda and CUDA 11.8:
 srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
 module load anaconda3/2022.05 cuda/11.8
 :::
-
-::::{note}
-Be aware of compatibility regarding the GPU type: some installations do not work on k40m or k80 GPUs. To see what `non-Kepler` GPUs might be available execute the following command:
-
-:::
-sinfo -p gpu --Format=nodes,cpus,memory,features,statecompact,nodelist,gres
-:::
-
-This will indicate the state (idle or not) of a certain gpu-type that could be helpful in requesting an `idle` gpu. However, the command does not give real-time information of the state and should be used with caution.
-::::
 
 Select the tab with the desire deeplearning framework.
 
