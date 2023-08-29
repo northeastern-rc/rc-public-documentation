@@ -37,7 +37,7 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Home Directory
       A user's directory in the cluster where personal files, application settings, and other user-specific data are stored.
 
-   HPC (High-Performance Computing)
+   High-Performance Computing (HPC)
       The use of parallel processing for running advanced application programs efficiently, reliably, and quickly. It's often used for scientific research, big data analysis, and modeling complex systems.
 
    Job
@@ -60,6 +60,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
 
    Node Allocation
       The process of reserving a set of nodes for a specific job, ensuring that the required resources are available for successful execution.
+
+   Open OnDemand (OOD)
+      DEFINE
 
    Overcommitment
       Allowing more resources to be allocated to jobs than physically available, relying on intelligent scheduling and efficient resource management.
