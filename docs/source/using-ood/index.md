@@ -7,7 +7,6 @@
 introduction
 accessingood
 interactiveapps/index
-advancedfeatures
 ```
 
 Open OnDemand (OOD) is a user-friendly interface for interacting with our High-Performance Computing (HPC) cluster. This section will guide you through the essential aspects of OOD, including an introduction, access methods, interactive applications, and advanced features.
