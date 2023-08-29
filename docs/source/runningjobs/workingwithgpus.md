@@ -156,6 +156,9 @@ The `sbatch` example below is similar to the `srun` example above, but it submit
 You can add a specific type of GPU to the `--gres=` option (with either `srun` or `sbatch`). For a list of available GPU types, refer to the GPU Types column in the table, at the top of this page, that are listed as *Public*.
 
 :::{code-block} bash
+---
+caption: Command to request one p100 GPU.
+---
 --gres=gpu:p100:1
 :::
 
