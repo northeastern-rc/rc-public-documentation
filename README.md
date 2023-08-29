@@ -13,7 +13,7 @@ HPC users can submit issues and bugs in the documentation [here](https://github.
 Clone repo:
 
 ```bash
-git clone https://github.com/northeastern-rc/rc-public-documentation
+git clone git@github.com:northeastern-rc/rc-public-documentation.git
 ```
 Then, either open PyCharm and create python environment (some find easier to create environment using PyCharm):
 
@@ -47,13 +47,6 @@ pre-commit installed at .git/hooks/pre-commit
 pip install -r docs/requirements.txt
 ```
 
----
-```bash
-pip install -r requirements
-
-brew install sphinx-doc
-pip install jupyterlab-myst
-```
 ---
 
 [Install Dependencies][install-vscode]:

@@ -37,7 +37,9 @@ Selecting the appropriate storage option can significantly impact your work's ef
 - **Scratch Space**: Temporary storage for active jobs.
 - **Project Directories**: Collaborative storage for project-related data.
 
+:::{seealso}
 {ref}`More about Data Storage Options <data-storage>`.
+:::
 
 (transfer-data-index)=
 ## Transfer Data
@@ -47,7 +49,9 @@ Transferring data securely and efficiently is fundamental.
 - **SCP or SFTP**: Securely copy files using standard SSH tools.
 - **FTP Clients**: Graphical clients for convenient file transfers.
 
+:::{seealso}
 {ref}`More about Transfer Data <transferring-data>`.
+:::
 
 (using-globus-index)=
 ## Using Globus
@@ -57,7 +61,9 @@ Globus offers a user-friendly interface for transferring large datasets.
 - **Getting Started**: How to set up your Globus account.
 - **Transferring Data**: Step-by-step guides for data transfers.
 
+:::{seealso}
 {ref}`More about Using Globus <using-globus>`
+:::
 
 (data-backup-index)=
 ## Data Backup and Restore
@@ -67,7 +73,9 @@ Understanding how to back up and restore your data ensures its safety.
 - **Scheduled Backups**: How backups are scheduled and maintained.
 - **Restoring Data**: Procedures to recover your data when needed.
 
+:::{seealso}
 {ref}`More about Data Backup and Restore <data-backup-and-restore>`
+:::
 
 (security-and-compliance-index)=
 ## Security and Compliance
@@ -77,7 +85,9 @@ Protecting data and maintaining compliance with relevant regulations is vital.
 - **Data Encryption**: Techniques to secure your data.
 - **Compliance Standards**: Guidance on adhering to legal requirements.
 
+:::{seealso}
 {ref}`More about Security and Compliance <security-and-compliance>`
+:::
 
 ---
 

@@ -29,14 +29,18 @@ Get started with OOD by understanding its purpose, features, and benefits.
 - **What is OOD?**: Overview of Open OnDemand.
 - **Why Use OOD?**: Advantages of using OOD for HPC tasks.
 
+:::{seealso}
 {ref}`More about Introduction to OOD <using-ood>`.
+:::
 
 ## Accessing Open OnDemand
 Learn about the various methods to access and navigate OOD.
 
 - **Access Methods**: How to log in and get started.
 
+:::{seealso}
 {ref}`More about Accessing Open OnDemand <access-ood>`.
+:::
 
 ## Interactive Open OnDemand Applications
 Explore interactive applications in OOD, including job submissions and real-time monitoring.
@@ -44,9 +48,10 @@ Explore interactive applications in OOD, including job submissions and real-time
 - **OOD Applications**: List of OOD applications.
 - **Launching Applications**: How to initiate interactive sessions.
 
+:::{seealso}
 {ref}`More about Interactive Open OnDemand Applications <interactive-ood-apps>`.
+:::
 
----
 
 OOD provides an intuitive interface for accessing and utilizing our HPC cluster. Explore these topics to understand and make the most of OOD's robust capabilities. If you need assistance, our support team is available at <rchelp@northeastern.edu> or consult our {ref}`faq`.
 

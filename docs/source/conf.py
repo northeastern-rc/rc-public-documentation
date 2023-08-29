@@ -57,6 +57,7 @@ extensions = [
     "myst_parser",
     "sphinx_copybutton",
     "sphinx_inline_tabs",
+    "sphinx.ext.duration",
 ]
 
 # Prefix document path to section labels, to use:
