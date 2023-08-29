@@ -14,65 +14,75 @@ widths: auto
 --------------
 
 * - GPU Type
+  - GPU Architecture
   - Memory (GB)
   - Tensor Cores
   - CUDA Cores
-  - Public Nodes (No. GPUs)
-  - Private Nodes (No. GPUs)
-* - p100 ([Pascal])
+  - Public Nodes *x* # GPUs
+  - Private Nodes *x* # GPUs
+* - [P100]
+  - [Pascal]
   - 12
   - N/A
   - 3,584
-  - 12 (x3-4)
-  - 3 (x4)
-* - v100-pcie ([Volta])
+  - 12*x*3-4
+  - 3*x*4
+* - [V100 PCle](https://images.nvidia.com/content/technologies/volta/pdf/tesla-volta-v100-datasheet-letter-fnl-web.pdf)
+  - [Volta]
   - 32
   - 640
   - 5,120
-  - 4 (x2)
-  - 1 (x2, 16GB)
-* - v100-sxm2 ([Volta])
+  - 4*x*2
+  - 1*x*2, 16GB
+* - [V100 SXM2](https://images.nvidia.com/content/technologies/volta/pdf/tesla-volta-v100-datasheet-letter-fnl-web.pdf)
+  - [Volta]
   - 32
   - 640
   - 5,120
-  - 24 (x4)
-  - 10 (x4, 16GB);<br>8 (x4, 32GB)
-* - t4 ([Turing])
+  - 24*x*4
+  - 10*x*4, 16GB<br>8*x*4, 32GB
+* - [T4]
+  - [Turing]
   - 15
   - 320
   - 2,560
-  - 2 (x3-4)
-  - 1 (x4)
-* - quadro ([Quadro RTX 8000])
+  - 2*x*3-4
+  - 1*x*4
+* - [Quadro RTX 8000](https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-rtx-8000-us-nvidia-946977-r1-web.pdf)
+  - [Turing]
   - 46
   - 576
   - 4,608
   - 0
-  - 2 (x3)
-* - a30 ([Ampere])
+  - 2*x*3
+* -  [A30]
+  - [Ampere]
   - 24
   - 224
   - 3,804
   - 0
-  - 1 (x3)
-* - a100 ([Amperea100])
+  - 1*x*3
+* - [A100]
+  - [Ampere]
   - 41 & 82
   - 432
   - 6,912
-  - 3 (x4)
-  - 15 (x2-8)
-* - a5000 ([Ampere RTX A5000])
+  - 3*x*4
+  - 15*x*2-8
+* - [RTX A5000]
+  - [Ampere]
   - 24
   - 256
   - 8,192
   - 0
-  - 6 (x8)
-* - a6000 ([Ampere RTX A6000])
+  - 6*x*8
+* - [RTX A6000]
+  - [Ampere]
   - 49
   - 336
   - 10,752
   - 0
-  - 3 (x8)
+  - 3*x*8
 :::
 
 The `gpu` partition is the general GPU resource for HPC users looking to use a GPU; `multigpu` is the alternative, where more than one GPU are accessible.
@@ -295,13 +305,16 @@ conda install pandas scikit-learn matplotlib seaborn jupyterlab -y
 :::
 ::::
 
-[Pascal]: https://www.nvidia.com/en-us/data-center/tesla-p100/
+[P100]: https://www.nvidia.com/en-us/data-center/tesla-p100/
 [PyTorch documentation]: https://pytorch.org/
-[Volta]: https://www.nvidia.com/en-us/data-center/v100/
-[Turing]: https://www.nvidia.com/en-us/data-center/tesla-t4/
-[Quadro RTX 8000]: https://www.nvidia.com/en-us/design-visualization/previous-quadro-desktop-gpus/
-[Ampere]: https://www.nvidia.com/en-us/data-center/products/a30-gpu/
-[Amperea100]: https://www.nvidia.com/en-us/data-center/a100/
-[Ampere RTX A5000]: https://www.nvidia.com/en-us/design-visualization/rtx-a5000/
-[Ampere RTX A6000]: https://www.nvidia.com/en-us/design-visualization/rtx-a6000/
+[Volta]: https://www.nvidia.com/en-us/data-center/volta-gpu-architecture/
+[Turing]: https://developer.nvidia.com/blog/nvidia-turing-architecture-in-depth/
+[T4]: https://www.nvidia.com/en-us/data-center/tesla-t4/
+[Quadro RTX 8000]: https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-rtx-8000-us-nvidia-946977-r1-web.pdf
+[Ampere]: https://www.nvidia.com/en-us/data-center/ampere-architecture/
+[A30]: https://www.nvidia.com/en-us/data-center/products/a30-gpu/
+[A100]: https://www.nvidia.com/en-us/data-center/a100/
+[Pascal]: https://www.nvidia.com/en-us/data-center/pascal-gpu-architecture/
+[RTX A5000]: https://www.nvidia.com/en-us/design-visualization/rtx-a5000/
+[RTX A6000]: https://www.nvidia.com/en-us/design-visualization/rtx-a6000/
 [ServiceNow ticket]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7
