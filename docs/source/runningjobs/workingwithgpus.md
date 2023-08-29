@@ -86,23 +86,25 @@ The `multigpu` partition is available for a limited time window to fulfill urgen
 :::{list-table}
 --------------
 header-rows: 1
+align: center
+widths: auto
 --------------
 
 * - Name
   - Requires Approval?
-  - Time limit (Default/Max)
+  - Time in Hours (Default/Max)
   - Submitted Jobs
-  - GPU per job Limit
-  - Max GPUs per user Limit
+  - GPU per Job Limit
+  - User Limit (No. GPUs)
 * - gpu
   - No
-  - 4 hours/8 Hours
+  - 4/8
   - 50/100
   - 1
   - 8
 * - multigpu
   - **Yes**
-  - 4 hours/24 Hours
+  - 4/24
   - 50/100
   - 12
   - 12
