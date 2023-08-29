@@ -18,33 +18,31 @@ Due to problems with launching OOD on **Safari**, we recommend using **Google Ch
 The class instructor needs to fill in the: [Discovery Classroom Use Request] You will only be able to find your class resources if a request was already made.
 :::
 
-In a web browser, go to <http://ood.discovery.neu.edu>. Login with your NU credentials.
+1. In a web browser, go to <http://ood.discovery.neu.edu>. Login with your NU credentials.
 
-Under the **Courses** menu, select your Class Name (For example: **ALY3070 JupyterLab**):
+2. Under the **Courses** menu, select your Class Name (For example: **ALY3070 JupyterLab**):
 
-![Alt text](../images/cps-ood-menu.png)
+<!-- ![Alt text](../images/cps-ood-menu.png) -->
 
-Select the default options and click **Launch**. Wait until the session is successfully created and ready to be launched (turns green).
+3. Select the default options and click **Launch**. Wait until the session is successfully created and ready to be launched (turns green).
 
-![Alt text](../images/cps-ood-jupyterform.png)
+<!-- ![Alt text](../images/cps-ood-jupyterform.png) -->
 
+:::{important}
 For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab will launch.
+:::
 
 :::{note}
 If **Working Directory** is left blank, the session will launch in the main class folder (in this example `/work/cps/ALY3070`). Alternatively, start the session directly from your personal working directory by entering: `/work/cps/ALY3070/students/[username]`, where `[username]` is your username on Discovery. The instructions below assume the field is left blank.
 :::
 
-Click **Connect to Jupyter** to open JupyterLab:
+4. Click **Connect to Jupyter** to open JupyterLab. This will open a JupyterLab interface in another tab.
 
-![Alt text](../images/cps-ood-jupyterlab-start-session.png)
+<!-- ![Alt text](../images/cps-ood-jupyterlab-start-session.png) -->
 
-This will open a JupyterLab interface in another tab.
+5. Select **Cancel** when prompted with the **Build Recommended** option. The package jupyterlab-dash does not require a build, and will not work when build is enabled.
 
-Select **Cancel** when prompted with the **Build Recommended** option:
-
-![Alt text](../images/cps-ood-build-window.png)
-
-The package jupyterlab-dash does not require a build, and will not work when build is enabled.
+<!-- ![Alt text](../images/cps-ood-build-window.png) -->
 
 ## Access CPS class directories
 
