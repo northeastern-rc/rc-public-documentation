@@ -215,7 +215,7 @@ The following example demonstrates how to build PyTorch inside a conda virtual e
 ::::{code-block} bash
 ---------------------
 caption: |
-    PyTorch's installation steps (with a specific GPU-type):
+    PyTorch's installation steps for Python 3.9 and Cuda 11.8:
 ---
 conda create --name pytorch_env python=3.10 -y
 source activate pytorch_env
