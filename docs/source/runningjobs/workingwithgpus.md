@@ -1,80 +1,78 @@
 (working-gpus)=
 
 # Working with GPUs
-
-The cluster has various NVIDIA Graphics Processing Units (GPUs) available on gpu-equipped partitions, as listed in the table below.
-
 :::{seealso}
 [Learn more about partitions.](../hardware/partitions.md)
 :::
 
 
-:::{list-table}
+:::{list-table} The NVIDIA Graphics Processing Units (GPUs) available on gpu-equipped partitions.
 --------------
 header-rows: 1
 align: center
+widths: auto
 --------------
 
 * - GPU Type
-  - GPU Memory
+  - Memory (GB)
   - Tensor Cores
   - CUDA Cores
-  - Nodes in Public GPUs
-  - Nodes in Private GPUs
+  - Public Nodes (No. GPUs)
+  - Private Nodes (No. GPUs)
 * - p100 ([Pascal])
-  - 12GB
+  - 12
   - N/A
   - 3,584
-  - 12 (x3-4 GPUs)
-  - 3 (x4 GPUs)
+  - 12 (x3-4)
+  - 3 (x4)
 * - v100-pcie ([Volta])
-  - 32GB
+  - 32
   - 640
   - 5,120
-  - 4 (x2 GPUs)
-  - 1 (x2 GPUs, 16GB)
+  - 4 (x2)
+  - 1 (x2, 16GB)
 * - v100-sxm2 ([Volta])
-  - 32GB
+  - 32
   - 640
   - 5,120
-  - 24 (x4 GPUs)
-  - 10 (x4 GPUs, 16GB); 8 (x4 GPUs, 32GB)
+  - 24 (x4)
+  - 10 (x4, 16GB);<br>8 (x4, 32GB)
 * - t4 ([Turing])
-  - 15GB
+  - 15
   - 320
   - 2,560
-  - 2 (x3-4 GPUs)
-  - 1 (x4 GPUs)
+  - 2 (x3-4)
+  - 1 (x4)
 * - quadro ([Quadro RTX 8000])
-  - 46GB
+  - 46
   - 576
   - 4,608
   - 0
-  - 2 (x3 GPUs)
+  - 2 (x3)
 * - a30 ([Ampere])
-  - 24GB
+  - 24
   - 224
   - 3,804
   - 0
-  - 1 (x3 GPUs)
+  - 1 (x3)
 * - a100 ([Amperea100])
-  - 41 & 82GB
+  - 41 & 82
   - 432
   - 6,912
-  - 3 (x4 GPUs)
-  - 15 (x2-8 GPUs)
+  - 3 (x4)
+  - 15 (x2-8)
 * - a5000 ([Ampere RTX A5000])
-  - 24GB
+  - 24
   - 256
   - 8,192
   - 0
-  - 6 (x8 GPUs)
+  - 6 (x8)
 * - a6000 ([Ampere RTX A6000])
-  - 49GB
+  - 49
   - 336
   - 10,752
   - 0
-  - 3 (x8 GPUs)
+  - 3 (x8)
 :::
 
 The `gpu` partition is the general GPU resource for HPC users looking to use a GPU; `multigpu` is the alternative, where more than one GPU are accessible.
