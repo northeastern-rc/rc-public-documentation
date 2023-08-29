@@ -22,11 +22,7 @@ The class instructor needs to fill in the: [Discovery Classroom Use Request] You
 
 2. Under the **Courses** menu, select your Class Name (For example: **ALY3070 JupyterLab**).
 
-<!-- ![Alt text](../images/cps-ood-menu.png) -->
-
 3. Select the default options and click **Launch**. Wait until the session is successfully created and ready to be launched (turns green).
-
-<!-- ![Alt text](../images/cps-ood-jupyterform.png) -->
 
 4. For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab will launch.
 
@@ -36,40 +32,21 @@ If **Working Directory** is left blank, the session will launch in the main clas
 
 5. Click **Connect to Jupyter** to open JupyterLab. This will open a JupyterLab interface in another tab.
 
-<!-- ![Alt text](../images/cps-ood-jupyterlab-start-session.png) -->
 :::{caution}
 Select **Cancel** when prompted with the **Build Recommended** option. The package jupyterlab-dash does not require a build, and will not work when build is enabled.
 :::
-<!-- ![Alt text](../images/cps-ood-build-window.png) -->
 
 ## Access CPS class directories
 
 1. After you are connected to a CPS JupyterLab session on OOD, you can access any shared class directories and your private class directory.
 
-<!-- 2. You can navigate between the class folders using the left menu. Your instructor may share files in this directory.  -->
 2. You can navigate between the class folders using the left menu. The files in the shared class directory are read ony and the students do not have persmissions to edit or remove the files. Your instructory may use the shared class directory to share files related to the classwork
-
-<!-- :::{note}
-The files in the shared class directory are read only and the students do not have permissions to edit or remove the files.
-::: -->
-
-<!-- ![Alt text](../images/cps-ood-jupyterlab-folders-view.png) -->
-
-<!-- For instance, file **Example.ipynb** can be viewed using Python Jupyter notebook (but not edited or removed). -->
 
 3. Naviate to your personal class directory under: `/students/<your username>`. Now you can create and edit Jupyter notebook files here.
 
-<!-- ![Alt text](../images/cps-ood-jupyterlab-students-folder.png) -->
-
-<!-- ![Alt text](../images/cps-ood-jupyterlab-username-folder.png) -->
-
 4. Open a new Python notebook session from the Launcher menu by clicking the **Python 3 (ipykernel)**.
 
-<!-- ![Alt text](../images/cps-ood-jupyterlab-ipykernel-launcher.png) -->
-
 5. A new file will be created inside your directory called **Untitled.ipynb**. You can rename it by right-clicking on it and using the rename option.
-
-<!-- ![Alt text](../images/cps-ood-jupyterlab-ipykernel.png) -->
 
 6. This Python notebook has ready-to-use Python packages needed for your class.
 
@@ -86,11 +63,7 @@ Due to the write-only access permissions on the **assignments** directory, it is
 
 1. To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab new launcher by clicking the **File** top menu option, and then selecting **New Launcher**.
 
-<!-- ![Alt text](../images/cps-ood-jupyterlab-new-launcher.png) -->
-
 2. Click on the **Terminal** option under **Other** to open a Linux terminal.
-
-<!-- ![Alt text](../images/cps-ood-jupyterlab-open-terminal.png) -->
 
 3. Navigate to your personal directory by typing the following command (change the class name from `ALY3070` to your class name accordingly).
 
