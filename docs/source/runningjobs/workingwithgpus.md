@@ -202,7 +202,7 @@ module load anaconda3/2022.05 cuda/11.8
 
 Select the tab with the desire deeplearning framework.
 
-:::{warning}
+:::{important}
 Each tab assumes you are on a GPU node before with CUDA 11.8 and anaconda modules loaded as done above.
 :::
 ::::::{tab-set}
