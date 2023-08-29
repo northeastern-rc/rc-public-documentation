@@ -163,30 +163,24 @@ caption: Command to request one p100 GPU.
 :::
 
 :::{note}
-Requesting a specific type of GPU could result in longer wait
-times, based on GPU availability at that time.
+Requesting a specific type of GPU could result in longer wait times, based on GPU availability at that time.
 :::
 
 ## Using CUDA
+There are several versions of CUDA Toolkits available on the HPC, including. Use the `module avail` command to check for the latest software versions on the cluster.
 
-There are several versions of CUDA Toolkits available on the HPC, including:
+:::{code-block} bash
+---
+emphasize-lines: 3-5
+---
+$ module avail cuda
 
-```
-cuda/9.0
-cuda/9.2
-cuda/10.0
-cuda/10.2
-cuda/11.0
-cuda/11.1
-cuda/11.2
-cuda/11.3
-cuda/11.4
-cuda/11.7
-cuda/11.8
-cuda/12.1
-```
+------------------------------- /shared/centos7/modulefiles -------------------------------
+cuda/10.0    cuda/10.2          cuda/11.1    cuda/11.3    cuda/11.7    cuda/12.1    cuda/9.1
+cuda/10.1    cuda/11.0(default) cuda/11.2    cuda/11.4    cuda/11.8    cuda/9.0     cuda/9.2
+:::
 
-Use the `module avail` command to check for the latest software versions on Discovery. To see details on a specific CUDA toolkit version, use `module show`. For example, `module show cuda/11.4`.
+To see details on a specific CUDA toolkit version, use `module show` (e.g., `module show cuda/11.4`).
 
 To add CUDA to your path, use `module load`. For example, type `module load cuda/11.4` to load version 11.4 to your path.
 
