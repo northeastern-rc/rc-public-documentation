@@ -182,9 +182,11 @@ cuda/10.1    cuda/11.0(default) cuda/11.2    cuda/11.4    cuda/11.8    cuda/9.0 
 
 To see details on a specific CUDA toolkit version, use `module show` (e.g., `module show cuda/11.4`).
 
-To add CUDA to your path, use `module load`. For example, type `module load cuda/11.4` to load version 11.4 to your path.
+To add CUDA to your path, use `module load` (e.g., `module load cuda/11.4` adds CUDA 11.4).
 
-Use the command `nvidia-smi` (NVIDIA System Management Interface) inside a GPU node to get the CUDA driver information and monitor the GPU device.
+:::{note}
+Executing `nvidia-smi` (i.e., NVIDIA System Management Interface) on a GPU node displays the CUDA driver information and monitor the GPU device.
+:::
 
 (gpus-for-deep-learning)=
 ## GPUs for Deep Learning
