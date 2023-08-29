@@ -40,9 +40,9 @@ Select **Cancel** when prompted with the **Build Recommended** option. The packa
 
 1. After you are connected to a CPS JupyterLab session on OOD, you can access any shared class directories and your private class directory.
 
-1. You can navigate between the class folders using the left menu. The files in the shared class directory are read ony and the students do not have permissions to edit or remove the files. Your instructory may use the shared class directory to share files related to the classwork
+1. You can navigate between the class folders using the left menu. The files in the shared class directory are read ony and the students do not have permissions to edit or remove the files. Your instructor may use the shared class directory to share files related to the classwork
 
-1. Naviate to your personal class directory under: `/students/<your username>`. Now you can create and edit Jupyter notebook files here.
+1. Navigate to your personal class directory under: `/students/<your username>`. Now you can create and edit Jupyter notebook files here.
 
 1. Open a new Python notebook session from the Launcher menu by clicking the **Python 3 (ipykernel)**.
 
