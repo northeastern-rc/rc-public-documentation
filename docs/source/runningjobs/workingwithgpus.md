@@ -234,8 +234,7 @@ If CUDA is detected by PyTorch, you should see the result, `True`.
 :::::
 :::::{tab-item} TensorFlow
 
-We recommend that you use CUDA 11.8 (the latest supported version) when
-working on a GPU with the latest version of TensorFlow (TF).
+Here are steps for installing CUDA 11.8 with the latest version of TensorFlow (TF).
 
 ::::{seealso}
 [Compatibility of CUDA and TensorFlow versions](https://www.tensorflow.org/install/source#gpu), and [detailed installation instructions](https://www.tensorflow.org/install/pip).
@@ -244,13 +243,16 @@ working on a GPU with the latest version of TensorFlow (TF).
 For the latest installation, use the TensorFlow pip package, which includes GPU support for CUDA-enabled devices:
 
 ::::{code-block} bash
+---------------------
+caption: |
+    Tensorflow's installation steps for Python 3.9 and Cuda 11.8:
+---
 conda create --name TF_env python=3.9 -y
 source activate TF_env
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 pip install --upgrade pip
 pip install tensorflow==2.13.*
 ::::
-
 
 Verify the installation:
 
@@ -263,7 +265,11 @@ Ignore the `Warning` messages that get generated after executing the above comma
 ::::
 :::::
 :::::{tab-item} PyTorch + TensorFlow
-::::{code} bash
+::::{code-block} bash
+---------------------
+caption: |
+    PyTorch and Tensorflow's installation steps for Python 3.9 and Cuda 11.8:
+---
 conda create --name deeplearning-cuda11_8 python=3.9 -y
 source activate deeplearning-cuda11_8
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
