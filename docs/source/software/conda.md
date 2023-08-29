@@ -115,6 +115,53 @@ conda activate my-py38env
 
 To deactivate the environment, type `conda deactivate`. You can type this command again to deactivate the base Miniconda environment.
 
+## Managing Conda Environments
+
+### List Conda Environments
+You can view the environments you've created in your home directory by using the following command
+:::{code} bash
+conda env list
+:::
+
+:::{code} bash
+# conda environments:
+#
+MlGenomics               /home/k.chheda/.conda/envs/MlGenomics
+base                     /home/k.chheda/miniconda3
+:::
+
+To list the software packages within a specific environment, use
+:::{code} bash
+conda list --name env_name
+:::
+
+If you've created an environment in a different location, you can still list its packages using:
+:::{code} bash
+conda list --prefix /path/to/env
+:::
+
+### Export Conda Environment
+For ensuring reproducibility, it's recommended to export a list of all packages and versions in an environment to an environment file. This file can then be used to recreate the exact environment on another system or by another user. It also serves as a record of the software environment used for your analysis.
+
+### Remove Environments
+When you need to remove an environment located in your home directory, execute:
+:::{code} bash
+conda env remove --name env_name
+:::
+
+For environments located elsewhere, you can remove them using:
+:::{code} bash
+rm -rf /path/to/env
+:::
+
+### Cleanup Conda Environment
+To remove packages that are no longer used by any environment and any downloaded tarballs stored in the conda package cache, run:
+:::{code} bash
+conda clean --all
+:::
+
+By following these guidelines, you can efficiently manage your Conda environments and packages, ensuring reproducibility and a clean system.
+
 ## Conda Best Practices
 :::{seealso}
 Best practices for home storage: {ref}`cleaning-conda`.
