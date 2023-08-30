@@ -7,28 +7,29 @@
 # Conda
 [Conda] is an open-source environment and package manager. [Miniconda] is a free installer for Conda and Python and comes with a few other packages. [Anaconda] is also a package manager that has a much larger number of packages pre-installed.
 
-:::::{note}
-::::{sidebar}
-:::{seealso}
-{ref}`data-storage`.
-:::
-::::
-We recommend not building your Miniconda and Conda environments inside your `/home` due to its limited space quota, but use `/work`. If your group needs space on `/work`, the PI can make a [New Storage Space request].
-:::::
-
 ## Managing Conda Environments
 
 (creating-python)=
 ### Creating Environments
 
-Using a locally installed Conda virtual environment is highly recommended to install the specific packages you need. You can also have multiple environments with different packages for research projects or testing purposes. This procedure uses the Anaconda module already available on the cluster.
+:::::{note}
+We recommend avoiding building Conda environments in your `/home`, for its space quota. Instead, Use `/work`, which can be requested by PIs for groups in need of space `/work`.
+:::{seealso}
+{ref}`Learn about storage options <data-storage>` and [Submit New Storage Space request].
+:::
 
-If you are on a login node, move to a compute node by typing:
+:::::
+
+
+Installing local virtual environment using Conda is recommended on the cluster. You can have multiple environments with different packages for each, which allows project's environments to be independent of others. You only have to load the `anaconda3` module.
+
+From the login node, log-in to a compute node.
 
 :::{code-block} bash
 ---
 caption: |
-    Requesting 1 node with 1 CPU core and load anaconda.
+    Request one node on the `short` partition with 1 CPU core. Then, load the `anaconda3/2022.05` module.
+linenos: true
 ---
 
 srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
@@ -50,13 +51,13 @@ source activate /<path>/<environment-name>
 Your command line prompt will then include the path and name of environment.
 
 :::{code} bash
-(/<path>/<environment-name>) [username@c2001 dirname]$
+(/<path>/<environment-name>) [<username>@c2001 dirname]$
 :::
 
 ::::{tip}
 The `conda config --set env_prompt '({name}) '` command modifies your `.condarc` to show only the environment, which displays as follows:
 :::{code} bash
-(<environment-name>) [username@c2000 dirname]$
+(<environment-name>) [<username>@c2000 dirname]$
 :::
 ::::
 
@@ -85,8 +86,8 @@ conda env list
 :::{code} bash
 # conda environments:
 #
-MlGenomics               /home/k.chheda/.conda/envs/MlGenomics
-base                     /home/k.chheda/miniconda3
+MlGenomics               $HOME/.conda/envs/MlGenomics
+base                     $HOME/miniconda3
 :::
 
 To list the software packages within a specific environment, use
@@ -182,5 +183,4 @@ Best practices for home storage: {ref}`cleaning-conda`.
 [conda]: https://docs.conda.io/en/latest/
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [Should I use Anaconda or Miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
-[Storage Accessible on Discovery]: ../datamanagement/discovery_storage.md
-[New Storage Space request]: https://bit.ly/NURC-NewStorage
+[Submit New Storage Space request]: https://bit.ly/NURC-NewStorage
