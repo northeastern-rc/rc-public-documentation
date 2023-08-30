@@ -6,7 +6,7 @@
 {ref}`using-module` and {ref}`using-ood`.
 :::
 ::::
-MATLAB is available on the cluster as a module and as an interactive app on Open OnDemand. You can also download MATLAB for your computer through the [Northeastern portal on the MATLAB website](https://www.mathworks.com/academia/tah-portal/northeastern-university-30294223.html). Note that the procedures detailed below pertain specifically to using MATLAB on Discovery, and not to using MATLAB on your computer.
+MATLAB is available on the cluster as a module and as an interactive app on Open OnDemand. You can also download MATLAB for your computer through the [Northeastern portal on the MATLAB website](https://www.mathworks.com/academia/tah-portal/northeastern-university-30294223.html). Note that the procedures detailed below pertain specifically to using MATLAB on the cluster, and not to using MATLAB on your computer.
 
 ## Installing MATLAB toolboxes
 
@@ -14,7 +14,7 @@ Use the following procedure if you need to install a MATLAB toolbox:
 
 1. Download the toolbox from its source website.
 
-1. Connect to Discovery.
+1. Connect to the cluster.
 
 1. Create a directory in your /home directory. We recommend creating a directory called `matlab` by typing:
 
@@ -64,13 +64,13 @@ Use the following procedure if you need to install a MATLAB toolbox:
 
 The cluster has MATLAB Parallel Server installed. This section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB 2020a launched as an interactive app on the Open OnDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting. The parameters presented represent only one scenario.
 
-This walkthrough will use Open OnDemand, the web portal on Discovery, to launch MATLAB. You will then create a
+This walkthrough will use Open OnDemand, the web portal on the cluster, to launch MATLAB. You will then create a
 cluster profile. This allows you to define cluster properties that will be applied to your jobs. Supported
 functions are `batch`, `parpool`, and `parcluster`. The Parallel Computing Toolbox comes with a cluster profile
 called *local*, which you will change in the walkthrough below.
 
 :::{note}
-This walkthrough details submitting jobs through Discovery's Open OnDemand web portal. Some parameters will vary if you are using MATLAB from the command line. This walkthrough does not apply
+This walkthrough details submitting jobs through cluster's Open OnDemand web portal. Some parameters will vary if you are using MATLAB from the command line. This walkthrough does not apply
 to other versions of MATLAB.
 :::
 
@@ -82,7 +82,7 @@ Before starting, create a folder in your `/scratch/<username>` directory. This f
 
 To start MATLAB and add a Cluster Profile, do the following:
 
-1. Go to <http://ood.discovery.neu.edu>. If prompted, sign in with your Discovery username and password.
+1. Go to <http://ood.discovery.neu.edu>. If prompted, sign in with your cluster username and password.
 
 1. Click **Interactive Apps**, and select **MATLAB**.1. Select **MATLAB version 2020a**, and keep the default time of one hour and default memory of 2GB. Click **Launch**.
 
