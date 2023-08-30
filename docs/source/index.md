@@ -1,6 +1,13 @@
 <!--#  NEU's HPC Docs-->
+```{image} images/NU_logo_white.png
+:align: left
+:class: only-dark
+```
 
-# Research Computing (RC)
+```{image} images/NU_logo_black.png
+:align: left
+:class: only-light
+```
 
 ::::{grid}
 :reverse:
