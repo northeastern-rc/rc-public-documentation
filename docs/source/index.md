@@ -9,6 +9,7 @@
 :class: only-light
 ```
 
+# HPC Documentation
 ::::{grid}
 :reverse:
 :gutter: 3 4 4 4
