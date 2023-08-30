@@ -16,28 +16,9 @@
 :margin: 1 2 1 2
 
 :::{grid-item}
-:columns: 12 4 4 4
-
----
-```{image}
-:width: 200px
-:class: sd-m-auto
-:name: landing-page-logo
-```
----
-
-:::
-
-:::{grid-item}
-:columns: 12 8 8 8
 :child-align: justify
 :class: sd-fs-5
 
----
-```{rubric}
-
-```
----
 A dedicated platform for researchers, scholars, and students to access, learn, and leverage our state-of-the-art HPC resources.
 
 ---
