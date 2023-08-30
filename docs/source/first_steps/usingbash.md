@@ -304,7 +304,7 @@ ps
 `<pid>` (`PID`) in the command should be replaced with the actual process ID of the process you want to terminate; the output of the `kill` command will typically be empty unless there is an error in executing the command.
 :::
 
-It's essential to be cautious when using the `kill` command, as terminating a process can cause data loss or corruption. Therefore, before using `kill`, you should always try to gracefully stop the process by sending a termination signal, such as `SIGTERM`, first. If that does not work, you can try a stronger signal, such as `SIGKILL`.
+It is essential to be cautious when using the `kill` command, as terminating a process can cause data loss or corruption. Therefore, before using `kill`, you should always try to gracefully stop the process by sending a termination signal, such as `SIGTERM`, first. If that does not work, you can try a stronger signal, such as `SIGKILL`.
 
 `kill` - Terminate a process by its process ID:
 

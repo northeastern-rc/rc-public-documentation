@@ -14,7 +14,7 @@ After setting the installation path, compile the code via `make` and then instal
 
 ## Makefile Example: Installing FFTW Library
 
-Even without root access, you can install software system-wide by installing it in your home directory. Let's continue with the FFTW library as an example.
+Even without root access, you can install software system-wide by installing it in your home directory. Let us continue with the FFTW library as an example.
 
 1. Download the FFTW tarball. Here, we download version 3.3.9:
     :::{code} bash

@@ -1,6 +1,6 @@
 
 # Research Computing Public Documentation
-[![Github-CI][github-ci]][github-link]
+[![GitHub-CI][github-ci]][github-link]
 [![Documentation Status][rtd-badge]][rtd-link]
 
 

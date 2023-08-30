@@ -19,6 +19,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Concurrency
       The ability of the system to handle multiple tasks or jobs simultaneously, without waiting for each task to complete before starting another.
 
+   Container
+      TBD.
+
    Core
       A processor within a CPU. Each core can execute its tasks.
 
@@ -73,6 +76,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Partition
       A division of the cluster resources. Each partition can have different configurations, such as different types of nodes and different access policies.
 
+   Quota
+      TBD.
+
    Queue
       A waiting line for jobs ready to be executed but waiting for resources to become available.
 
@@ -91,11 +97,17 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Scheduler
       A program that manages the cluster's resources and allocates them to jobs based on priority, requested resources, and fair use policies.
 
+   Singularity
+      TBD.
+
    Slurm
       An open-source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small HPC clusters.
 
    Task
       A unit of work within a job that can be executed independently. A job can consist of multiple tasks.
+
+   VPN
+      TBD.
 
 -------
 

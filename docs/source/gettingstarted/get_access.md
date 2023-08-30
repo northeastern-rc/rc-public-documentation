@@ -75,7 +75,7 @@ All routine cluster maintenance, emergency maintenance, and annual shutdown main
 
 ## Prepare for cluster maintenance
 
-To ensure that your job scripts account for the scheduled shutdown period of the cluster, use the `t2sd` script in the `--time` option when submitting your jobs. This script calculates the remaining time until the cluster becomes unavailable and sets the appropriate time limit for your job. Here's an example of how to use it.
+To ensure that your job scripts account for the scheduled shutdown period of the cluster, use the `t2sd` script in the `--time` option when submitting your jobs. This script calculates the remaining time until the cluster becomes unavailable and sets the appropriate time limit for your job. Here is an example of how to use it.
 
 - If you usually use the `srun` command:
 
@@ -89,9 +89,9 @@ srun --time=$(t2sd) <srun args>
 sbatch --time=$(t2sd) script.sbatch
 :::
 
-Note that if you usually run your jobs on a partition with short time limits (e.g., debug or express), you only need to add the `$(t2sd)` option once it's closer to the start of the maintenance window. Use `$(t2sd)` only if the time remaining before the start of the maintenance period is less than the default time limit of the partition.
+Note that if you usually run your jobs on a partition with short time limits (e.g., debug or express), you only need to add the `$(t2sd)` option once it is closer to the start of the maintenance window. Use `$(t2sd)` only if the time remaining before the start of the maintenance period is less than the default time limit of the partition.
 
-For instance, the default time limit for the express partition is 60 minutes. If you want to run a job on the express partition a day before the maintenance is scheduled to start, you wouldn't need to add the `$(t2sd)` option. However, if you wanted to run your job on the express partition 2 hours before the maintenance start time, you would need to include the `$(t2sd)` option to account for the remaining time.
+For instance, the default time limit for the express partition is 60 minutes. If you want to run a job on the express partition a day before the maintenance is scheduled to start, you would not need to add the `$(t2sd)` option. However, if you wanted to run your job on the express partition 2 hours before the maintenance start time, you would need to include the `$(t2sd)` option to account for the remaining time.
 
 :::{seealso}
 {ref}`partition-names` for more information about available partitions.

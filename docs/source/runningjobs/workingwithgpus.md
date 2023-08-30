@@ -96,13 +96,13 @@ header-rows: 1
   - Submitted Jobs
   - GPU per job Limit
   - Max GPUs per user Limit
-* - gpu
+* - `gpu`
   - No
   - 4 hours/8 Hours
   - 50/100
   - 1
   - 8
-* - multigpu
+* - `multigpu`
   - **Yes**
   - 4 hours/24 Hours
   - 50/100
@@ -225,7 +225,7 @@ conda create --name pytorch_env python=3.10 -y
 source activate pytorch_env
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
 ::::
-Now, let's check the installation:
+Now, let us check the installation:
 ::::{code} bash
 python -c 'import torch; print(torch.cuda.is_available())'
 ::::

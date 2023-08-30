@@ -31,7 +31,7 @@ ADD LINK for More Examples and Guides for Interactive Mode
 Batch mode enables users to write scripts that manage job execution, making it suitable for more complex or longer-running jobs.
 
 ### Creating Batch Scripts
-A typical batch script includes directives for resource allocation, job names, and commands. Here's an example:
+A typical batch script includes directives for resource allocation, job names, and commands. Here is an example:
 
 :::{code} bash
 #!/bin/bash

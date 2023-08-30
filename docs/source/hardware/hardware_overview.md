@@ -6,7 +6,7 @@ The Discovery computing cluster provides you with access to over 1024 CPU nodes,
 
 ## CPU nodes
 
-Table 1 below shows the feature names, number of nodes by partition type (public and private), and the RAM memory range per node. The feature name follows archspec microachitechture [specification](https://archspec.readthedocs.io/en/latest/index.html).
+Table 1 below shows the feature names, number of nodes by partition type (public and private), and the RAM memory range per node. The feature name follows archspec microarchitecture [specification](https://archspec.readthedocs.io/en/latest/index.html).
 
 :::{list-table}
 ---
@@ -47,7 +47,7 @@ If you are interested in more information about the different partitions on Disc
 
 ## Using the `--constraint` flag
 
-When using `srun` or `sbatch`, you can specify hardware features as part of your job by using the `--constraint=` flag. This may be particularly useful when benchmarking, optimizing, or if you're using code that was compiled on a certain micro-architecture. Currently, you can use the `--constraint=` flag to restrict your job to a specific feature name (e.g., `haswell`, `ivybridge`) or you can use the flag: `ib` to only include nodes that are connected by InfiniBand (IB) with a job that needs to use multiple nodes.
+When using `srun` or `sbatch`, you can specify hardware features as part of your job by using the `--constraint=` flag. This may be particularly useful when benchmarking, optimizing, or if you are using code that was compiled on a certain micro-architecture. Currently, you can use the `--constraint=` flag to restrict your job to a specific feature name (e.g., `haswell`, `ivybridge`) or you can use the flag: `ib` to only include nodes that are connected by InfiniBand (IB) with a job that needs to use multiple nodes.
 
 A few examples using `srun`:
 

@@ -1,7 +1,7 @@
 (home-directory-storage-quota)=
 # Home Directory Storage Quota
 
-There are strict quotas for each home directory (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. This page provides some best practices for keeping within the quota. For more information about data storage on the HPC, see {ref}`data-storage`.
+There are strict quotas for each {term}`home directory` (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. This page provides some best practices for keeping within the {term}`quota`. For more information about data storage on the HPC, see {ref}`data-storage`.
 
 :::{important}
 All commands on this page should be run from a compute node because they are CPU-intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
@@ -57,21 +57,21 @@ conda env remove --name <your environment>
 
 ### Singularity
 
-If you have pulled any containers to the HPC using Singularity, you can clean your container cache in your `/home/<username>` directory by running the following command from a compute node:
+If you have pulled any containers to the HPC using {term}`Singularity`, you can clean your container cache in your `/home/<username>` directory by running the following command from a compute node:
 
 :::{code-block} bash
 module load singularity/3.5.3
 singularity cache clean all
 :::
 
-To avoid your `~/.singularity` directory filling up, you can set a temporary directory for when you pull containers to store the cache in that location; an example of this procedure (where `<project>` is your PI's `/work` directory) is the following:
+To avoid your `~/.singularity` directory filling up, you can set a temporary directory for when you pull a {term}`container` to store the cache in that location; an example of this procedure (where `<project>` is your PI's `/work` directory) is the following:
 
 :::{code-block} bash
 mkdir /work/<project>/singularity_tmp
 export SINGULARITY_TMPDIR=/work/<project>/singularity_tmp
 :::
 
-Then, pull the container using singularity as usual.
+Then, pull the container using Singularity as usual.
 
 ### Cache
 
@@ -88,7 +88,7 @@ which prints a table with `JOBID`, `PARTITION`, `NAME`, `USER ST`, `TIME`, `NODE
 (best-practices-conda-environments)=
 ### Conda environments
 
-Use conda environments for Python on HPC. To create an environment in `/work`, use the `--prefix` flag as follows: (where `<project>` is your PI's `/work` directory and `<my conda env>` is an empty directory to store your conda environment):
+Use conda environments for Python on HPC. To create an environment in `/work`, use the `--prefix` flag as follows: (where `<project>` is your PI's `/work` directory and `<my conda env>` is an empty directory to store your Conda environment):
 
 :::{code-block} bash
 conda create --prefix=/work/<project>/<my conda env>

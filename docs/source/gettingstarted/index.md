@@ -9,7 +9,7 @@ accountmanager
 connectingtocluster/index
 ```
 
-Welcome to the Getting Started guide for our HPC! Here, you'll find essential information to kickstart your journey with our HPC cluster. This section is designed to assist both newcomers and experienced users in accessing and utilizing our computing resources.
+Welcome to the Getting Started guide for our HPC! Here, you will find essential information to kickstart your journey with our HPC cluster. This section is designed to assist both newcomers and experienced users in accessing and utilizing our computing resources.
 
 ::::{grid} 3
 :::{grid-item-card} {ref}`getting-access`
@@ -49,9 +49,9 @@ Managing your account effectively ensures a smooth experience with our system.
 :::
 (connecting-to-the-index)=
 ## Connecting to Cluster
-Once you have access, you'll want to connect to the cluster to begin your work.
+Once you have access, you will want to connect to the cluster to begin your work.
 
-- **Using SSH**: Connect using SSH from a command-line interface. Here's an example for Linux/Mac users:
+- **Using SSH**: Connect using SSH from a command-line interface. Here is an example for Linux/Mac users:
    ```bash
    ssh username@login.discovery.neu.edu
   ```

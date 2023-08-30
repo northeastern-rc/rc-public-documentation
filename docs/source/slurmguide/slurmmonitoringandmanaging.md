@@ -188,7 +188,7 @@ scontrol show reservation <reservation_name>
 Managing jobs in a Slurm-based HPC environment involves monitoring running jobs, modifying job parameters, and canceling jobs when necessary. This section will cover the commands and techniques you can use for these tasks.
 
 ### Monitoring Jobs
-The `squeue` command allows you to monitor the state of jobs in the queue. It provides information such as the job ID, the partition it's running on, the job name, and more.
+The `squeue` command allows you to monitor the state of jobs in the queue. It provides information such as the job ID, the partition it is running on, the job name, and more.
 
 #### Syntax: `squeue`
 
