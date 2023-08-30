@@ -141,3 +141,6 @@ dmypy.json
 
 # OSX
 .DS_Store
+*.sh~
+
+*.txt~
