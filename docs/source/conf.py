@@ -21,7 +21,7 @@ from datetime import date
 
 project = "RC-HPC"
 # logo = "_static/logo-square.png"
-copyright = f"{date.today().year}, Andrey Petrov"
+copyright = f"{date.today().year}, RC"
 author = "Research Computing, NU"
 
 # The full version, including alpha/beta/rc tags
