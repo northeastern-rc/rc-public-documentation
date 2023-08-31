@@ -6,7 +6,7 @@
 The following instructions will only work for CPS classes.
 :::
 
-These instructions describe the process of opening a CPS JupyterLab environment on the {term}`Open OnDemand (OOD)` on the cluster web portal and accessing class `/work` folders.
+These instructions describe the process of opening a CPS JupyterLab environment on the {term}`Open OnDemand (OOD)` on the cluster web portal and accessing class `/courses` folders.
 
 :::{note}
 Due to problems with launching OOD on **Safari**, we recommend using **Google Chrome**, **Mozilla Firefox** or **Microsoft Edge** browsers instead for best experience.
@@ -26,9 +26,20 @@ The class instructor needs to fill in the: [Discovery Classroom Use Request] You
 
 1. For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab will launch.
 
-    :::{note}
-    If **Working Directory** is left blank, the session will launch in the main class folder (in this example `/work/cps/ALY3070`). Alternatively, start the session directly from your personal working directory by entering: `/work/cps/ALY3070/students/[username]`, where `[username]` is your username on Discovery. The instructions below assume the field is left blank.
+    ::::{note}
+    If **Working Directory** is left blank, the session will launch in the main class folder (in this example `/courses/ALY6080.202335/ALY6080.81373.202335/DATA`). Alternatively, start the session directly from your personal working directory by entering: `/courses/ALY6080.202335/ALY6080.81373.202335/[username]`, where `[username]` is your username on Discovery. The instructions below assume the field is left blank.
+    :::{code}
+    courses/
+    └── ALY6080.202335
+        ├── ALY6080.81373.202335
+        │   ├── DATA
+        |   ├── alice
+        │   ├── bob
+        │   └── charlie
+        └── DATA
     :::
+    The above file tree represents the folder structure for the `ALY6080.202335` course.
+    ::::
 
 1. Click **Connect to Jupyter** to open JupyterLab. This will open a JupyterLab interface in another tab.
 
