@@ -7,16 +7,14 @@ Below are some common questions and answers regarding our HPC cluster and its op
 Drop-down the item to see solution.
 ```
 ## Cluster Details
-:::{dropdown} What hardware is in HiPerGator?
-HiPerGator compute and storage capabilities are changing on a regular basis.
+:::{dropdown} What hardware is in the cluster?
+The cluster compute and storage capabilities are changing on a regular basis.
 
-For detailed information on HiPerGator hardware components, view the Hardware Specification page.
+For detailed information on the HPCs hardware components, view the Hardware Specification page.
 ::::
 
-::::{dropdown} What is HiPerGator-RV?
-HiPerGator-RV is a system for working with restricted data, having its own set of use cases.
-
-HiPerGator-RV is a secure environment for research projects that use electronic Protected Health Information (ePHI), which are required to comply with the Health Insurance Portability and Accountability Act (HIPAA). ResVault can also be used for projects that require a “low” FISMA compliance rating, and for projects that require International Trade in Arms Regulation (ITAR) compliance.
+::::{dropdown} What is the cluster?
+The cluster is a secure environment for research projects that use electronic Protected Health Information (ePHI), which are required to comply with the Health Insurance Portability and Accountability Act (HIPAA). ResVault can also be used for projects that require a “low” FISMA compliance rating, and for projects that require International Trade in Arms Regulation (ITAR) compliance.
 ::::
 
 ::::{dropdown} What is the policy on fair use of resources?
@@ -36,12 +34,11 @@ You can request an account through our website's 'Getting Access' page. Complete
 ::::
 
 ::::{dropdown} How can I reset my password?
-
 Please use our website's 'Account Management' tool for password reset. Follow the instructions to reset your password.
 ::::
 
-::::{dropdown} What happens to my account when I leave UVA?
-ITS controls access to the University’s computing resources, so when you or your students leave, you/they may lose access to many of these resources. Sponsored accounts allow people who work or volunteer at UVA, but who are not paid by UVA, to access the University’s computing resources. Researchers with sponsored accounts cannot request RC services but they are allowed to use the systems we manage as members of a MyGroups (requires VPN connection) group controlled by a UVA Principal Investigator (PI). Details on sponsored accounts are posted on the ITS sponsored accounts page.
+::::{dropdown} What happens to my account when I leave NU?
+ITS controls access to the University’s computing resources, so when you or your students leave, you/they may lose access to many of these resources. Sponsored accounts allow people who work or volunteer at NU, but who are not paid by NU, to access the University’s computing resources. Researchers with sponsored accounts cannot request RC services but they are allowed to use the systems we manage as members of a MyGroups (requires VPN connection) group controlled by a NU Principal Investigator (PI). Details on sponsored accounts are posted on the ITS sponsored accounts page.
 :::
 
 ::::{dropdown} How do I get access?
@@ -71,8 +68,8 @@ Access denied, or You don't have access to this resource: If receiving this when
 Bad request or Server not available when trying to log in to OnDemand: These are often caused by corrupted cache files in our browser. Clear your browser cache and cookies data and restart your browser or try a different browser. Incognito windows often do not solve this problem.
 ::::
 
-::::{dropdown} Why can I login to the help portal but not my CCR account?
-The Freshdesk help desk portal accounts are separate from our CCR system accounts. This allows people who do not yet have a CCR account to request help from CCR staff. For more info on CCR accounts, see our Getting Access page. For more info on the help desk portal, see here.
+::::{dropdown} Why can I login to the help portal but not my NU account?
+The Freshdesk help desk portal accounts are separate from our NU system accounts. This allows people who do not yet have a NU account to request help from NU staff. For more info on CCR accounts, see our Getting Access page. For more info on the help desk portal, see here.
 ::::
 
 :::{button-link} faq.html
@@ -104,23 +101,6 @@ Open OnDemand users do not need a VPN to access the cluster.
 
 ::::{dropdown} How do I reset my current password / obtain a new password?
 Access to the HPC cluster requires a valid Eservices password. Your Netbadge password is not necessarily the same thing, so if you are unable to log in, you should first try resetting your ITS password here. Resetting the Netbadge password should sync it with your Eservices password, which is no longer directly accessible to you. If the problem persists, contact ITS through their online Helpdesk. Keep in mind that ITS requires annual resetting of your password. If you see a “password expired” message, you will need to change it through ITS.
-::::
-
-::::{dropdown} Why am I seeing WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED when I log in?
-Some users logging in through ssh may encounter this error message. If you receive this message, please see our instructions on how to clear this error.
-
-When I try to log in with ssh, nothing happens when I type my password!
-When you type your passaword, the ssh program does not echo your typing or move your cursor. This is normal behavior.
-::::
-
-::::{dropdown} When running Firefox on the cluster, I get : “Firefox is already running, but is not responding. To open a new window, you must first close the existing Firefox process, or restart your system.” What can I do?
-From your home directory on the cluster, run the commands:
-
-:::{code} bash
-rm -rf ~/.mozilla/firefox/*.default/.parentlock
-rm -rf ~/.mozilla/firefox/*.default/lock
-:::
-
 ::::
 
 ::::{dropdown} How can I view .pdf or .csv files on the cluster?
@@ -372,7 +352,7 @@ A **batch job** is submitted to the batch system via a job script passed to the 
 An **interactive job** is any process that is run at the command line prompt, generally used for developing code or testing job scripts. Interactive jobs should only be run in an interactive development session, which are requested through the srundev command. As soon as the necessary compute resources are available, the job scheduler will start the interactive session.
 
 - View the Interactive Development & Testing documentation page
-A **GUI job** uses HiPerGator compute resources to run an application, but displays the application’s graphical user interface (GUI) to the local client computer. GUI sessions are also managed by the job scheduler, but require additional software to be installed on the client side computer.
+A **GUI job** uses the cluster compute resources to run an application, but displays the application’s graphical user interface (GUI) to the local client computer. GUI sessions are also managed by the job scheduler, but require additional software to be installed on the client side computer.
 
 - View the GUI Programs documentation page
 ::::
@@ -476,7 +456,7 @@ This will remove any characters not recognized by Linux command interpreters fro
 
 ::::{dropdown} What are the wall time limits for each partition and QoS?
 ::::
-::::{dropdown} How can I check how busy HiPerGator is?
+::::{dropdown} How can I check how busy the cluster is?
 
 Use the following command to view how busy the cluster is:
 :::{code} bash
@@ -604,16 +584,16 @@ To share data from your `/scratch` directly with any other user, use Globus shar
 If you wish to share data in leased space with a member of your group, be sure that permissions are set so that the group member can access your subdirectory. The college can then simply use the data directly, or copy it elsewhere. If you wish to share data from your leased storage to a colleague who is not a member of the group, use Globus sharing in the same manner as sharing `/scratch`.
 ::::
 
-:::{dropdown} What do I need to do to work on HiPerGator with patient health information (PHI) restricted by HIPAA?
-HiPerGator meets the security and compliance requirements of the HITRUST standard. To set up a project that works with PHI, you must adhere by the policies and follow the procedures listed here.
+:::{dropdown} What do I need to do to work on the cluster with patient health information (PHI) restricted by HIPAA?
+the cluster meets the security and compliance requirements of the HITRUST standard. To set up a project that works with PHI, you must adhere by the policies and follow the procedures listed here.
 ::::
 
-::::{dropdown} What do I need to do to work on HiPerGator with student data restricted by FERPA?
-HiPerGator meets the security and compliance requirements of the HITRUST standard. To set up a project that works with FERPA, you must adhere by the policies and follow the procedures listed here.
+::::{dropdown} What do I need to do to work on the cluster with student data restricted by FERPA?
+the cluster meets the security and compliance requirements of the HITRUST standard. To set up a project that works with FERPA, you must adhere by the policies and follow the procedures listed here.
 ::::
 
-::::{dropdown} What do I need to do to work on HiPerGator with export controlled data restricted by ITAR/EAR?
-HiPerGator has a secure enclave called ResVault, that has been certified to be compliant with NIST 800-171 and 800-53-moderate as required for handling controlled unclassified information (CUI) as specified in the DFARS. Follow the policies and procedures
+::::{dropdown} What do I need to do to work on the cluster with export controlled data restricted by ITAR/EAR?
+the cluster has a secure enclave called ResVault, that has been certified to be compliant with NIST 800-171 and 800-53-moderate as required for handling controlled unclassified information (CUI) as specified in the DFARS. Follow the policies and procedures
 ::::
 
 ::::{dropdown} How can I check how full my directories are?
@@ -645,7 +625,7 @@ The full list of applications installed on the cluster is available at the Insta
 ::::{dropdown} What software applications can run on the GPU partition?
 GPU-accelerated computing is intended for use by highly parallel applications, where computation on a large amount of data can be broken into many small tasks performing the same operation, to be executed simultaneously.  More simply put, large problems are divided into smaller ones, which can then be solved at the same time.
 
-Since GPU is a special purpose architecture, it supports restrictive programming models; one such model is nVIDIA’s CUDA. On HiPerGator, only applications that were written in CUDA can run on the GPU partition. Currently, these applications are:
+Since GPU is a special purpose architecture, it supports restrictive programming models; one such model is NVIDIA’s CUDA. On the cluster, only applications that were written in CUDA can run on the GPU partition. Currently, these applications are:
 
 - Amber
 - LAMMPS
@@ -681,20 +661,17 @@ Yes, you can. Please follow the guidelines in the 'Installing Your Own Software'
 ::::
 
 :::{dropdown} How do I use research software that’s already installed?
-We use the `lmod` system for managing software environments. Learn more about how to use lmod.
-
+We use the `lmod` system for managing software environments. Learn more about how to use `lmod`.
 ::::
 
 ::::{dropdown} Does RC install research software?
 Our staff will install software onto the cluster if it is of wide applicability to the user community. Software used by one group should be installed by the group members, ideally onto leased storage for the group. We can provide assistance for individual installations.
 
 For help installing research software on your PC, please contact Research Software Support at res-consult@virginia.edu.
-
 ::::
 
 ::::{dropdown} Is there any other way to install research software that I need?
 Some groups and departments have installed a bundle of software they need into shared space. Please see your departmental IT support personnel if your department has its own bundle.
-
 ::::
 
 ::::{dropdown} Can I run this Docker container on the cluster?
@@ -796,7 +773,9 @@ You must first generate an ssh key and then copy it to your git repository. Here
 
 To generate an ssh key, see the following link: ssh key generation
 
-Click on the drop-down menu next to my Git profile picture in the upper right corner; Select Settings; Click on SSH and GPG keys in the left column; Click on the New SSH Key button and followed the directions to upload your ssh key. Make sure that the ssh key is in your authorized_keys file in your .ssh directory on the cluster.
+- Click on the drop-down menu next to my Git profile picture in the upper right corner; Select Settings; Click on SSH and GPG keys in the left column;
+- - Click on the New SSH Key button and followed the directions to upload your ssh key.
+- Make sure that the ssh key is in your authorized_keys file in your .ssh directory on the cluster.
 
 The next step is to clone the repository using the ssh link. If you have already cloned the repository using the http link and made a number of changes to your files, you won’t want to redo them. Rename the directory that was created when you first cloned the repository. Then, re-clone the repository using the ssh link and copy all the files you had changed to the new directory. Finally, push those changes back to the repository.
 ::::
@@ -926,29 +905,57 @@ If this message is not due to an upcoming maintenance downtime, then it means th
 ::::{dropdown} How do I fix "sbatch: error: Batch script contains DOS line breaks"?
 If you receive an error message like this when trying to submit a job, it is because your batch script was edited in a Windows editor, not a unix editor. Windows editors can add line breaks that the unix interpreter doesn't recognize. You may receive an error such as:
 
+:::{code} bash
 sbatch: error: Batch script contains DOS line breaks (\r\n)
 sbatch: error: instead of expected UNIX line breaks (\n).
-Run the dos2unix command on your file to remove the Windows line breaks. For example: dos2unix myBatchFile
-Use the 'man' command to see all the options for the dos2unix command: man dos2unix
+:::
+
+Run the `dos2unix` command on your file to remove the Windows line breaks. For example: `dos2unix myBatchFile`.
+Use the `man` command to see all the options for the `dos2unix` command: `man dos2unix`.
 ::::
 ::::{dropdown} Why do I get an ‘Invalid Account, Partition, or QOS Specification’ error when I try to run a job?
 If you're getting errors like these, you're not specifying the right combination of cluster, account, partition, and qos based on what your account has access to:
 
+:::{code} bash
 salloc: error: Job submit/allocate failed: Invalid qos specification
 salloc: error: Job submit/allocate failed: Invalid account or account/partition combination specified
 sbatch: error: Batch job submission failed: Invalid partition or qos specification
+:::
+
 CCR uses Quality of Service (QOS) to restrict access to partitions and to provide research groups that support CCR financially with a boost in their job priorities. Slurm will use your default account, unless you specify differently in your job script or when starting an OnDemand app. Use the slimits command to see what accounts and QOS settings you have access to. This is managed in ColdFront under allocations. More details on QOS and partition limits can be found here. Information on becoming a CCR supporter can be found on our website.
 ::::
 
-::::{dropdown} Why am I getting a QOSMaxSubmitJobPerUserLimit error when I try to submit a job?
+::::{dropdown} Why am I getting a `QOSMaxSubmitJobPerUserLimit` error when I try to submit a job?
 You may see this error when submitting batch scripts or when attempting to launch apps in OnDemand:
+
+:::{code} bash
 sbatch: error: QOSMaxSubmitJobPerUserLimit
 sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
+:::
+
 You will get this error if you have reached the partition or per user limits as described here. For example, if you have 1000 jobs in the general-compute partition and try to submit another one, you will get this error. If you've already launched one viz desktop, you've reached your limit. Wait for some of your jobs to finish and submit more at that time.
 ::::
 
 ::::{dropdown} Why does my SSH session automatically disconnect?
 SSH connections will time out either due to inactivity or network disruptions. If your sessions are disconnecting due to inactivity, one thing you can do to keep the SSH connection open is to have ssh send a periodic keep alive packet to the server so it will not timeout. Add the -o ServerAliveInterval=600 option to your ssh login command. SSH can be sensitive to any disruptions in the network which can be common with Wi-Fi networks. Sometimes the 'keep alive' setting prevents this. Other times, it may be that you have a setting on your Wi-Fi or ethernet adapter that tells the operating system it can put the device to sleep after a period of inactivity. This is especially common on Windows. Check your network adapters for 'Power Settings' and uncheck any options that tell the system it can disable the device to save power. This will vary by operating system so we recommend you conduct an internet search for the appropriate instructions.
+::::
+
+
+::::{dropdown} Why am I seeing WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED when I log in?
+Some users logging in through ssh may encounter this error message. If you receive this message, please see our instructions on how to clear this error.
+
+When I try to log in with ssh, nothing happens when I type my password!
+When you type your passaword, the ssh program does not echo your typing or move your cursor. This is normal behavior.
+::::
+
+::::{dropdown} When running Firefox on the cluster, I get : “Firefox is already running, but is not responding. To open a new window, you must first close the existing Firefox process, or restart your system.” What can I do?
+From your home directory on the cluster, run the commands:
+
+:::{code} bash
+rm -rf ~/.mozilla/firefox/*.default/.parentlock
+rm -rf ~/.mozilla/firefox/*.default/lock
+:::
+
 ::::
 
 :::{button-link} faq.html
@@ -967,15 +974,15 @@ Support provided by Research Computer at Northeastern University [1]. And cite a
 [1] Research Computing, Northeastern University, https://rc.northeastern.edu/.
 ::::
 
-::::{dropdown} I think I have a Galaxy issue, but I'm not sure about it. What should I do?
-You can always open a support request when you have questions even if you are not sure whether there is an issue. If you’d like you can check the list of known Galaxy issues that are already being worked on before searching for help.
+::::{dropdown} I think I have a cluster issue, but I'm not sure about it. What should I do?
+You can always open a support request when you have questions even if you are not sure whether there is an issue. If you’d like you can check the list of known cluster issues that are already being worked on before searching for help.
 ::::
 
 ::::{dropdown} I'd like to use a particular tool, but I can't find it in the Galaxy. What should I do?
 Please submit a support request. The tool in question could already be wrapped by someone and available in the Galaxy Tool Shed. If it’s in the Tool Shed we can usually make it available in the UF Galaxy instance almost immediately. If the tool is not available in the Galaxy Tool Shed, we can look at the tool to determine if we can “wrap” it into the Galaxy interface and what the timeline for the project may be.
 :::
 
-::::{dropdown} How do I report a Galaxy problem?
+::::{dropdown} How do I report a cluster problem?
 See the relevant wiki article.
 ::::
 
