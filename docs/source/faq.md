@@ -371,7 +371,7 @@ The primary job submission mechanism is via the sbatch command via the Linux com
 :::{code} bash
 $ sbatch <your_job_script>
 :::
-where <your_job_script> is a file containing the commands that the batch system will execute on your behalf. Jobs may also be submitted to the batch system through the Galaxy web interface as well as the Open Science Grid’s Globus interface.
+where <your_job_script> is a file containing the commands that the batch system will execute on your behalf. Jobs may also be submitted to the batch system through the cluster web interface as well as the Open Science Grid’s Globus interface.
 
 - View a walk-through of an example job script
 - View sample scripts for several different job types (single-threaded, multi-threaded, MPI, hybrid, array)
@@ -552,8 +552,8 @@ If you have used up too much space, created too many files, or have “old” fi
 
 ::::
 
-:::{dropdown} How can I add large datasets to the Galaxy?
-For upload and manipulation of datasets within the Galaxy framework, please see this section of the Galaxy wiki.
+:::{dropdown} How can I add large datasets to the cluster?
+For upload and manipulation of datasets within the cluster framework, please see this section of the cluster wiki.
 ::::
 
 ::::{dropdown} If I’m over my disk quota in either in my /home directory or my `/scratch` directory, how can I determine my disk usage?
@@ -978,8 +978,8 @@ Support provided by Research Computer at Northeastern University [1]. And cite a
 You can always open a support request when you have questions even if you are not sure whether there is an issue. If you’d like you can check the list of known cluster issues that are already being worked on before searching for help.
 ::::
 
-::::{dropdown} I'd like to use a particular tool, but I can't find it in the Galaxy. What should I do?
-Please submit a support request. The tool in question could already be wrapped by someone and available in the Galaxy Tool Shed. If it’s in the Tool Shed we can usually make it available in the UF Galaxy instance almost immediately. If the tool is not available in the Galaxy Tool Shed, we can look at the tool to determine if we can “wrap” it into the Galaxy interface and what the timeline for the project may be.
+::::{dropdown} I'd like to use a particular tool, but I can't find it in the cluster. What should I do?
+Please submit a support request. The tool in question could already be wrapped by someone and available in the cluster Tool Shed. If it’s in the Tool Shed we can usually make it available in the cluster instance almost immediately. If the tool is not available in the cluster Tool Shed, we can look at the tool to determine if we can “wrap” it into the cluster interface and what the timeline for the project may be.
 :::
 
 ::::{dropdown} How do I report a cluster problem?
