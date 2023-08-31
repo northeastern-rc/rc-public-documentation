@@ -20,7 +20,7 @@ The class instructor needs to fill in the: [Discovery Classroom Use Request] You
 
 1. In a web browser, go to <http://ood.discovery.neu.edu>. Login with your NU credentials.
 
-1. Under the **Courses** menu, select your Class Name (For example: **ALY3070 JupyterLab**).
+1. Under the **Courses** menu, select your Class Name (For example: **ALY6080 JupyterLab**).
 
 1. Select the default options and click **Launch**. Wait until the session is successfully created and ready to be launched (turns green).
 
@@ -38,7 +38,7 @@ The class instructor needs to fill in the: [Discovery Classroom Use Request] You
         │   └── charlie
         └── DATA
     :::
-    The above file tree represents the folder structure for the `ALY6080.202335` course.
+    The above file tree represents the folder structure for the `ALY6080.81373.202335` course.
     ::::
 
 1. Click **Connect to Jupyter** to open JupyterLab. This will open a JupyterLab interface in another tab.
@@ -53,7 +53,7 @@ Select **Cancel** when prompted with the **Build Recommended** option. The packa
 
 1. You can navigate between the class folders using the left menu. The files in the shared class directory are read ony and the students do not have permissions to edit or remove the files. Your instructor may use the shared class directory to share files related to the classwork
 
-1. Navigate to your personal class directory under: `/students/<your username>`. Now you can create and edit Jupyter notebook files here.
+1. Navigate to your personal class directory under: `/courses/[coursename.termcode]/[coursename.CRN.termcode]/<your username>`. Now you can create and edit Jupyter notebook files here.
 
 1. Open a new Python notebook session from the Launcher menu by clicking the **Python 3 (ipykernel)**.
 
@@ -77,10 +77,10 @@ Due to the write-only access permissions on the **assignments** directory, it is
 
 1. Click on the **Terminal** option under **Other** to open a Linux terminal.
 
-1. Navigate to your personal directory by typing the following command (change the class name from `ALY3070` to your class name accordingly).
+1. Navigate to your personal directory by typing the following command (change the class name from `ALY6080` to your class name accordingly).
 
     :::
-    cd /work/cps/ALY3070/students/$USER
+    cd /courses/ALY6080.202335/ALY6080.81373.202335/$USER
     :::
 
 1. Where `$USER` is a saved shell variable for your username. You can optionally also replace it with your username.
