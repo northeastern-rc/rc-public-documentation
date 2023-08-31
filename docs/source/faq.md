@@ -928,7 +928,7 @@ CCR uses Quality of Service (QOS) to restrict access to partitions and to provid
 ::::{dropdown} Why am I getting a `QOSMaxSubmitJobPerUserLimit` error when I try to submit a job?
 You may see this error when submitting batch scripts or when attempting to launch apps in OnDemand:
 
-:::{code} bash
+:::{code} text
 sbatch: error: QOSMaxSubmitJobPerUserLimit
 sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
 :::
