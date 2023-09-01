@@ -231,10 +231,6 @@ You can check the status of your job using the `squeue -u $USER` command, which 
 Check the output and error files for any error messages if your job fails. These files are usually located in your job's working directory. If you cannot resolve the issue yourself, contact Research Computing with the details of the error message.
 ::::
 
-::::{dropdown} How can I tell what my job's priority is?
-For more information on job priority see here.
-::::
-
 ::::{dropdown} When will my job start?
 You can list information on your job’s start time using the `squeue`git  command:
 
@@ -243,54 +239,27 @@ squeue -u $USER --start
 :::
 Note that Slurm’s estimated start time can be a bit inaccurate. This is because Slurm calculates this estimation off the jobs that are currently running or queued in the system. Any job that is submitted after yours with a higher priority may delay your job. Alternatively, if jobs complete in less time than they've requested, more jobs can start sooner than anticipated.
 
-For more information on the `squeue` command, take a look at our Useful Slurm Commands information or visit the Slurm page on squeue
+For more information on the `squeue` command, take a look at our {ref}`job-management`
 ::::
-
-::::{dropdown} Why can’t I submit jobs anymore?
-In order to be allowed to submit jobs, you must not be overallocated with your `/scratch` usage and you must have some remaining service units. There is a limit of 350,000 files or 10 TB of space used per user in each `/scratch` directory and if you exceed either of those limits, you will not be able to run jobs until you clean up. To check whether this is the case, run
-
-:::{code} bash
-sfsq
-:::
-
-If you have not exceeded the limits on `/scratch`, check whether your account has allocation units remaining by running
-
-allocations
-Why do I get sbatch error: Batch script contains DOS line breaks
-If you use a Windows editor to create Slurm batch scripts, when you try to run them you may encounter an error
-
-sbatch: error: Batch script contains DOS line breaks (\r\n)
-sbatch: error: instead of expected UNIX line breaks (\n).
-Windows and Linux use different conventions to mark the end of each line. Many applications on the cluster, such as compilers, Matlab, etc., understand Windows end-of-line markers, but the shell does not. This is easy to fix by running the `dos2unix` commmand
-
-:::{code} bash
-dos2unix myscript.slurm
-:::
-It will not hurt to run `dos2unix` on a file that does not need it. Sometimes you get {^M} character at the end of every line when the file was imported from Windows environment. `dos2unix` usually takes care of the problem, but not 100% all the time.
-
-:::
 
 ::::{dropdown} How do I check the efficiency of my completed jobs?
 Run the command seff on the Slurm job ID:
 
 :::{code} bash
-udc-ba34-36-deepLearning$seff 40330441
-Job ID: 40330441
-Cluster: shen
-User/Group: teh1m/users
+[user@login-00 ~] seff 38391902
+Job ID: 38391902
+Cluster: discovery
+User/Group: user/users
 State: COMPLETED (exit code 0)
-Nodes: 1
-Cores per node: 2
-CPU Utilized: 00:15:14
-CPU Efficiency: 89.08% of 00:17:06 core-walltime
-Job Wall-clock time: 00:08:33
-Memory Utilized: 6.89 GB
-Memory Efficiency: 58.76% of 11.72 GB
-udc-ba34-36-deepLearning$
+Cores: 1
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:03:25 core-walltime
+Job Wall-clock time: 00:03:25
+Memory Utilized: 652.00 KB
+Memory Efficiency: 0.03% of 1.95 GB
 :::
-
-The output of this command is also contained in the email sent by Slurm once your job completes.
 ::::
+
 ::::{dropdown} What is a batch system? / What is a job scheduler?
 The purpose of a **batch system** is to execute a series of tasks in a computer program without user intervention (non-interactive jobs). The operation of each program is defined by a set or **batch** of inputs, submitted by users to the system as “job scripts.”
 
@@ -298,66 +267,34 @@ When job scripts are submitted to the system, the **job scheduler** determines h
 ::::
 
 ::::{dropdown} What are the differences between batch jobs, interactive jobs, and GUI jobs?
-A **batch job** is submitted to the batch system via a job script passed to the sbatch command. Once queued, a batch job will run on resources chosen by the scheduler. When a batch job runs, a user cannot interact with it.
+A **batch job** is submitted to the batch system via a job script passed to the `sbatch` command. Once queued, a batch job will run on resources chosen by the scheduler. When a batch job runs, a user cannot interact with it.
 
 - View a walk-through of an example batch job script
-An **interactive job** is any process that is run at the command line prompt, generally used for developing code or testing job scripts. Interactive jobs should only be run in an interactive development session, which are requested through the srundev command. As soon as the necessary compute resources are available, the job scheduler will start the interactive session.
+An **interactive job** is any process that is run at the command line prompt, generally used for developing code or testing job scripts. Interactive jobs should only be run in an interactive session, which are requested through the `srun` command. As soon as the necessary compute resources are available, the job scheduler will start the interactive session.
 
 - View the Interactive Development & Testing documentation page
-A **GUI job** uses the cluster compute resources to run an application, but displays the application’s graphical user interface (GUI) to the local client computer. GUI sessions are also managed by the job scheduler, but require additional software to be installed on the client side computer.
-
-- View the GUI Programs documentation page
-::::
-
-::::{dropdown} How can I check what compute resources are available for me to use?
-Use the following command to view your group’s total resource allocation, as well as how much of the allocation is in use at the given instant.
-
-$ module load ufrc
-$ slurmInfo <group_name>
-
-Allocation information is returned for the both the investment QOS and burst QOS of the given group.
+A **GUI job** uses the cluster compute resources to run an application, but displays the application’s graphical user interface (GUI) to the local client computer. GUI sessions are also managed by the job scheduler, but require additional software to be installed on the client side computer or ran through Open OnDemand.
 ::::
 
 ::::{dropdown} How do I submit a job to the batch system?
-The primary job submission mechanism is via the sbatch command via the Linux command line interface
+The primary job submission mechanism is via the `sbatch` command via the Linux command line interface
 :::{code} bash
 $ sbatch <your_job_script>
 :::
-where <your_job_script> is a file containing the commands that the batch system will execute on your behalf. Jobs may also be submitted to the batch system through the cluster web interface as well as the Open Science Grid’s Globus interface.
-
-- View a walk-through of an example job script
-- View sample scripts for several different job types (single-threaded, multi-threaded, MPI, hybrid, array)
-- View exhaustive documentation on the sbatch command on SchedMD
+where <your_job_script> is a file containing the commands that the batch system will execute on your behalf. 
+:::{seealso}
+{ref}`using-sbatch`
+:::
 ::::
 
 ::::{dropdown} How do I run applications that use multiple processors (i.e. parallel computing)?
 Parallel computing refers to the use of multiple processors to run multiple computational tasks simultaneously. Communications between tasks use one of the following interfaces, depending on the task:
 
-- OpenMp – used for communication between tasks running concurrently on the same node with access to shared memory
-- MPI (OpenMPI) – used for communication between tasks which use distributed memory
-- Hybrid – a combination of both OpenMp and MPI interfaces
+- OpenMP – used for communication between tasks running concurrently on the same node with access to shared memory
+- MPI (eg OpenMPI) – used for communication between tasks which use distributed memory
+- Hybrid – a combination of both OpenMP and MPI interfaces
 
 You must properly configure your job script in order to run an application that uses multiple processors. View sample SLURM scripts for each case below:
-
-- OpenMp job (sample SLURM script)
-- MPI job (sample SLURM script)
-- Hybrid job (sample SLURM script)
-::::
-
-::::{dropdown} Why do I get the error 'Invalid qos specification' when I submit a job?
-If you get this error, it is most likely either because
-
-You submitted a job with a specified qos for which you are not a group member
-Your group does not have a computational allocation
-To check what groups you are a member of, log in to the cluster and use the following command:
-:::{code} bash
-$ groups <user_name>
-:::
-To check the allocation of a particular group, log in to the cluster and use the following command:
-:::{code} bash
-$ module load ufrc
-$ slurmInfo <group_name>
-:::
 ::::
 
 ::::{dropdown} Why do I get the error 'slurmstepd: Exceeded job memory limit at some point'?
