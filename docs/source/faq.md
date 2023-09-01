@@ -151,7 +151,7 @@ Back to the top
 :::
 
 ## Job Management
-:::{dropdown} How do I submit jobs?
+::::{dropdown} How do I submit jobs?
 You submit jobs by writing a Slurm script and submitting it with the sbatch command. Please see our Slurm documentation page.
 :::{seealso}
 {ref}`using-sbatch`
