@@ -2,7 +2,8 @@
 
 # Getting Access
 
-## Request an account
+(request-an-account)=
+## Request Account
 :::{important}
 If you previously had access to Discovery but are now working with a different PI, you should submit a [ServiceNow RC Access Request form] and enter the name of your current PI in the Sponsor field. This will link your account to your current PI and expedite updating your account with any of your current PI's resources on Discovery, such as shared storage or a private partition.
 :::
@@ -14,8 +15,6 @@ For **non-Northeastern personnel**, request a Northeastern sponsored via [How do
 :::
 
 To access Discovery, you must first have an account. You can request an account through ServiceNow but need a Northeastern username and password. If you are new to the university or a visiting researcher, you should work with your sponsor to obtain a Northeastern username and password.
-
-
 
 **To request an account, follow these steps:**
 
@@ -53,8 +52,6 @@ If you are attempting to transfer data, we have a dedicated transfer node that y
 :::{seealso}
 {ref}`transferring-data`.
 :::
-
-[//]: # (If you have any questions or need further assistance, please email us at [rchelp@northeastern.edu] or book a consultation using the link on our [Consultation page].)
 ::::
 
 ## Routine Cluster Maintenance
@@ -65,7 +62,7 @@ Routine cluster maintenance is performed on the first Tuesday of each month. RC 
 Users can also check the maintenance status via [IT Maintenance and Status page].
 :::
 
-## MGHPCC annual shutdown
+## MGHPCC Annual Shutdown
 
 The Massachusetts Green High Performance Computing Center (MGHPCC) conducts an annual shutdown for maintenance work. During this shutdown, all RC-managed services are powered down and unavailable for approximately four days. RC will send frequent reminders leading up to the shutdown to ensure that users are able to plan accordingly.
 
@@ -73,7 +70,7 @@ The Massachusetts Green High Performance Computing Center (MGHPCC) conducts an a
 
 All routine cluster maintenance, emergency maintenance, and annual shutdown maintenance information will be posted to the [IT Statuspage]. Please subscribe to ensure you receive updates on the status of all ITS systems.
 
-## Prepare for cluster maintenance
+## Preparing Cluster Maintenance
 
 To ensure that your job scripts account for the scheduled shutdown period of the cluster, use the `t2sd` script in the `--time` option when submitting your jobs. This script calculates the remaining time until the cluster becomes unavailable and sets the appropriate time limit for your job. Here is an example of how to use it.
 
