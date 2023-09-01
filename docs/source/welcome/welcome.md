@@ -7,17 +7,6 @@ This help system is frequently updated to reflect the latest discovery informati
 
 We value your feedback! If you have any comments or suggestions for topics you want covered in this documentation, please submit a [Research Computing Documentation Request].
 
-## What is the Cluster?
-
-Discovery is a high-performance computing (HPC) resource for the Northeastern University research community. Our cluster is in the [Massachusetts Green HPC Center] (MGHPC) in Holyoke, MA. The MGHPC is a 90,000-square-foot, 15-megawatt research computing and data center facility that houses computing resources for five institutions: Northeastern, BU, Harvard, MIT, and UMass.
-
-:::{image} ../images/discovery.png
----
-alt: an image of the data center at the Massachusetts Green High-Performance Computing
-width: 500px
-align: center
----
-:::
 
 [massachusetts green HPC center]: https://www.mghpcc.org/
 [research computing documentation request]: https://bit.ly/NURC-Documentation
