@@ -332,17 +332,14 @@ $ scancel <job_id>
 to delete jobs from the queue. You can only delete jobs that you submitted.
 ::::
 
-::::{dropdown} Why did my job die with the message '/bin/bash: bad interpreter: No such file or directory'?
-This is typically caused by hidden characters in your job script that the command interpreter does not understand. If you created your script on a Windows machine and copied it to the cluster, you should run
-
+::::{dropdown} What are the wall time limits for a partition?
+You can check the wall time limits for a partition with the following command
 :::{code} bash
-$ dos2unix <your_job_script>
+$ sinfo 
 :::
-This will remove any characters not recognized by Linux command interpreters from the text file.
+
 ::::
 
-::::{dropdown} What are the wall time limits for each partition and QoS?
-::::
 ::::{dropdown} How can I check how busy the cluster is?
 
 Use the following command to view how busy the cluster is:
@@ -622,7 +619,7 @@ Back to the top
 :::
 
 ## Development
-:::{dropdown} How do I develop and test software?
+::::{dropdown} How do I develop and test software?
 Use compute nodes for software development and testing. Connect to the cluster and use the following command to start a developmental session:
 
 :::{code} bash
