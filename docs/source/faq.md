@@ -214,21 +214,21 @@ If it’s still not clear why your job was killed, please contact us and send us
 ::::
 
 ::::{dropdown} How can I submit a job to the HPC cluster?
-
-Jobs can be submitted using the Slurm commands. Please refer to the 'Slurm Guide' section for detailed instructions on job submission.
-
+Jobs can be submitted with `sbatch` and `srun` to the HPC.
+:::{seealso}
+{ref}`using-sbatch` and {ref}`using-srun`
+:::
 ::::
 
 ::::{dropdown} How can I check the status of my job?
-
-You can check the status of your job using the `squeue` command, which will display the current jobs in the queue. For more details on using this command, check the 'Slurm Guide' section.
-
+You can check the status of your job using the `squeue -u $USER` command, which will display your current jobs in the queue.
+:::{seealso}
+{ref}`job-management`
+:::
 ::::
 
 ::::{dropdown} What should I do if my job fails?
-
-Check the output and error files for any error messages if your job fails. These files are usually located in your job's working directory. If you cannot resolve the issue yourself, contact support with the details of the error message.
-
+Check the output and error files for any error messages if your job fails. These files are usually located in your job's working directory. If you cannot resolve the issue yourself, contact Research Computing with the details of the error message.
 ::::
 
 ::::{dropdown} How can I tell what my job's priority is?
@@ -236,15 +236,14 @@ For more information on job priority see here.
 ::::
 
 ::::{dropdown} When will my job start?
-You can list information on your job’s start time using the squeue command:
+You can list information on your job’s start time using the `squeue`git  command:
 
 :::{code} bash
-squeue --user=your-username --start
+squeue -u $USER --start
 :::
-
 Note that Slurm’s estimated start time can be a bit inaccurate. This is because Slurm calculates this estimation off the jobs that are currently running or queued in the system. Any job that is submitted after yours with a higher priority may delay your job. Alternatively, if jobs complete in less time than they've requested, more jobs can start sooner than anticipated.
 
-For more information on the squeue command, take a look at our Useful Slurm Commands information or visit the Slurm page on squeue
+For more information on the `squeue` command, take a look at our Useful Slurm Commands information or visit the Slurm page on squeue
 ::::
 
 ::::{dropdown} Why can’t I submit jobs anymore?
