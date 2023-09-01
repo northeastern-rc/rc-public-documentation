@@ -1,13 +1,15 @@
 (welcome)=
 # Welcome
 
-Welcome to the official online help system for Northeastern University's Research Computing team! This documentation will assist you in using Northeastern's HPC cluster system. It contains the most up-to-date information and instructions on obtaining an account, connecting to the system, loading modules, running jobs, and storing data. If you are unfamiliar with high-performance computing, we recommend you take our training courses before using the system. For information on training and services, visit our [Research Computing Team website].
+Welcome to the official online documentation for Northeastern University’s Research Computing! This documentation will assist you in using our high-performance computing (HPC) cluster with up-to-date information and instructions on cluster topics like account management, system navigation, module loading, job execution, and data storage.
 
-This help system is frequently updated to reflect the latest discovery information and add new topics to assist your research. You can check back often for updates.
+:::{note}
+If you are new to high-performance computing, please check out our catalog of on-demand training courses on various topics to help you get started. For information on training and services, please visit our [Research Computing Team website].
+:::
 
-We value your feedback! If you have any comments or suggestions for topics you want covered in this documentation, please submit a [Research Computing Documentation Request].
+
+We highly appreciate your feedback! If you have any comments or suggestions regarding the topics covered in this documentation, please submit a [Research Computing Documentation Request].
 
 
-[massachusetts green HPC center]: https://www.mghpcc.org/
 [research computing documentation request]: https://bit.ly/NURC-Documentation
 [research computing team website]: https://rc.northeastern.edu
