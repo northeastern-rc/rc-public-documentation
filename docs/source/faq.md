@@ -26,7 +26,7 @@ Fair use policies typically utilize a {term}`scheduler` that allocates resources
 
 This policy promotes fairness and efficient resource utilization and contributes to an inclusive and productive computing environment for all users.
 :::{seealso}
-{ref}`Our page on the Qeuing System<introduction-to-queuing-systems>` and {ref}`job-scheduling`.
+{ref}`Our page on the Queuing System<introduction-to-queuing-systems>` and {ref}`job-scheduling`.
 :::
 ::::
 
@@ -51,15 +51,17 @@ Please use our website's 'Account Management' tool for password reset. Follow th
 
 ::::{dropdown} What happens to my account when I leave NU?
 ITS controls access to the University’s computing resources, so when you or your students leave, you/they may lose access to many of these resources. Sponsored accounts allow people who work or volunteer at NU, but who are not paid by NU, to access the University’s computing resources. Researchers with sponsored accounts cannot request RC services, but they are allowed to use the systems we manage as members of a MyGroups (requires VPN connection) group controlled by a NU Principal Investigator (PI). Details on sponsored accounts are posted on the ITS sponsored accounts page.
-:::
+::::
 
 ::::{dropdown} How do I get access?
-The HPC resources are available to UB research faculty, and classes that require high-performance computing for their coursework, and students. For detailed information about reporting requirements and any access restrictions, please refer to our {ref}`getting-access` page. If you have questions about our access policy or procedures, please contact RC.
+The HPC resources are available to Northeastern University research faculty, and classes that require high-performance computing for their coursework, and students. For detailed information about reporting requirements and any access restrictions, please refer to our {ref}`getting-access` page. If you have questions about our access policy or procedures, please contact RC.
 
 ::::
 
 ::::{dropdown} What is my cluster username?
 Your cluster username is the same as your NU username. If you do not have a cluster account, your NU username is usually your last name, period, and then the first letter of your first name plus your last name (for staff, first letter of first name, period, then followed by lastname). If you're unsure, please contact RC.
+
+Your cluster username is the same as your NU username. Your NU username is the same as your email address without @northeastern.edu. If you're unsure, please contact RC.
 
 :::{seealso}
 {ref}`request-an-account`
@@ -73,72 +75,36 @@ Back to the top
 :::
 
 ## General Usage
-:::{dropdown} How do I gain access to the cluster?
-A faculty or research staff member must first request an allocation on the cluster. Full details can be found here.
+::::{dropdown} How do I gain access to the cluster?
+A faculty or research staff member must sponsor your HPC account request. Faculty and staff can self sponsor. Full details can be found here.
 :::{seealso}
 {ref}`getting-access`
 :::
 ::::
 
 ::::{dropdown} How do I log on to the cluster?
-Use an SSH client from a campus-connected machine and connect to `login.discovery.neu.edu`. Instructions for using ssh and other login tools, as well as recommended clients for different operating systems, as described in {ref}`shell-environment-on-cluster`. You can also access the cluster through our Web-based interface {term}`Open OnDemand (OOD)`. {ref}`Learn more about acessing OOD <access-ood>`.
-
+Use an SSH client and connect to `login.discovery.neu.edu`. Instructions for using ssh and other login tools, as well as recommended clients for different operating systems, as described in {ref}`shell-environment-on-cluster`. You can also access the cluster through our Web-based interface {term}`Open OnDemand (OOD)`. {ref}`Learn more about acessing OOD <access-ood>`.
 :::{seealso}
 {ref}`connect-to-cluster`.
 :::
 ::::
 
-::::{dropdown} Where can I find a list of linux commands?
-There are lots of resources on the internet to learn basic linux commands. We provide a cheat sheet of useful linux and Slurm commands here.
+::::{dropdown} Where can I find a list of Linux commands?
+We provide a cheat sheet of useful Linux ({ref}`command-line`) and Slurm commands ({ref}`using-slurm`) and there are more resources you can find online.
 ::::
 
-::::{dropdown} Off Campus?
-Connecting to the cluster from off Grounds via Secure Shell Access (SSH) or FastX requires a VPN connection. We recommend using the UVA More Secure Network if available. The UVA Anywhere VPN can be used if the UVA More Secure Network is not available. Only Windows and Mac OSX operating systems are supported by the Cisco client provided by ITS. Linux users should refer to these unsupported instructions to install and configure a VPN. The More Secure Network requires authentication through Duo; users should follow the instructions on the dialog box to enter "push" as the password.
-
-Open OnDemand users do not need a VPN to access the cluster.
-
-::::
-
-::::{dropdown} How do I reset my current password / obtain a new password?
-Access to the HPC cluster requires a valid Eservices password. Your Netbadge password is not necessarily the same thing, so if you are unable to log in, you should first try resetting your ITS password here. Resetting the Netbadge password should sync it with your Eservices password, which is no longer directly accessible to you. If the problem persists, contact ITS through their online Helpdesk. Keep in mind that ITS requires annual resetting of your password. If you see a “password expired” message, you will need to change it through ITS.
+::::{dropdown} How do I reset my password?
+Access to the HPC cluster requires a valid Northeastern University email account. Your HPC password is the same as your Northeastern University account password so in order to reset it, reset your Northeastern University account password.
+:::{seealso}
+Find KB article
+:::
 ::::
 
 ::::{dropdown} How can I view .pdf or .csv files on the cluster?
-For .pdf files, run the command:
-
-:::{code} bash
-atril filename.pdf
+You can view .pdf and .csv files utilizing the File Explorer application on Open OnDemand and the Open OnDemand Desktop Application.
+:::{seealso}
+{ref}`file-explorer` and {ref}`desktop-app`
 :::
-
-The `atril` command can also be used to display image files, e.g. `.png` and `.jpg` files.
-
-For `.csv` files, run the command:
-
-:::{code} bash
-oocalc filename.csv
-:::
-
-where `filename` is a placeholder for the specific filename.
-
-::::
-
-::::{dropdown} When should I use FastX Web, when should I use an Open OnDemand Desktop session?
-Both allow you to run applications with graphical user interfaces in a Linux Desktop environment.
-
-FastX Web:
-
-Runs all users' sessions on a single frontend node.
-Good for light-weight file management, script editing.
-Requires a VPN connection from off-Grounds locations.
-Open OnDemand Desktop:
-
-Runs your session on allocated resources on a compute node.
-Ideal for running compute-intensive single-node applications with graphical user interface.
-Does not require a VPN connection from off-Grounds locations.
-::::
-
-::::{dropdown} Can I use something other than a smartphone for two factor authentication?
-Yes! Though smartphones are the recommended second factor for your CCR account, if you don't have one or don't want to use yours, you can utilize a desktop application (i.e. Authy) or a programmable hardware security key. There are many on the market including Yubico Yubikeys, Google Titan security keys, and others recommended by UBIT. Please contact CCR Help for details on how to configure your hardware key. CCR is not able to integrate with the hardware security keys provided by UBIT because they are not programmable, and we're unable to get the "secret" needed to join them to our authentication system.
 ::::
 
 ::::{dropdown} How do I request all CPUs on a node with more than one GPU?
@@ -147,8 +113,11 @@ You may wish to request a single GPU on a node and all of the node's CPUs. Howev
 Refer to the Slurm documentation for further information.
 ::::
 
-::::{dropdown} How can I get information on the clusters such as how busy they are and wait times?
-From a login node, use the command `sqstat` to see a comprehensive overview of cluster usage. This information is also displayed on our cluster status pages. To find more detailed information on node availability, use the snodes command.
+::::{dropdown} How can I get information on the HPC such as how busy it is?
+From a login node, you can run `sinfo -p short` to get the state of the HPC.
+:::{seealso}
+{ref}`slurm-monitoring-and-managing`
+:::
 ::::
 
 
