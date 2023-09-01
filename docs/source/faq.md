@@ -7,19 +7,27 @@ Below are some common questions and answers regarding our HPC cluster and its op
 Drop-down the item to see solution.
 ```
 ## Cluster Details
-:::{dropdown} What hardware is in the cluster?
+::::{dropdown} What hardware is in the cluster?
 The cluster compute and storage capabilities are changing on a regular basis.
 
-For detailed information on the HPCs hardware components, view the Hardware Specification page.
+:::{seealso}
+{ref}`hardware-overview` for detailed information on the HPCs hardware components, along with the {ref}`partitions <partition-names>` comprising subsets of these components.
+:::
 ::::
 
-::::{dropdown} What is the cluster?
-The cluster is a secure environment for research projects that use electronic Protected Health Information (ePHI), which are required to comply with the Health Insurance Portability and Accountability Act (HIPAA). ResVault can also be used for projects that require a “low” FISMA compliance rating, and for projects that require International Trade in Arms Regulation (ITAR) compliance.
+::::{dropdown} What is a cluster?
+A {term}`cluster` is a network of interconnected computers designed to work together as a unified and robust system. These computers, also known as {term}`nodes <node>`, collaborate to collectively handle complex computational tasks more efficiently than a single machine could achieve. By distributing workloads across multiple nodes, a cluster harnesses {term}`parallel computing` capabilities, enabling researchers and professionals to solve intricate problems, analyze large datasets, and perform simulations with incredible speed and precision. Clusters are widely used in {term}`high-performance computing (HPC)` environments, scientific research, data analysis, and other fields that demand significant computing resources.
 ::::
 
 ::::{dropdown} What is the policy on fair use of resources?
+The {term}`fair use policy <fair share allocation>` for computing resources aims to provide equitable access and distribution within the {term}`cluster`. This policy ensures that all users have an equal opportunity to utilize the cluster resources based on their needs and priorities.
 
-We operate a fair-use policy. If users use disproportionately high resources, their job priority may be temporarily reduced. Details can be found in the 'Understanding the Queuing System' section.
+Fair use policies typically utilize a {term}`scheduler` that allocates resources to jobs based on {term}`job priority`, resource requirements, and historical resource usage. This approach prevents any single user or job type from monopolizing the resources and ensures a balanced and efficient allocation of resources across different users and projects.
+
+This policy promotes fairness and efficient resource utilization and contributes to an inclusive and productive computing environment for all users.
+:::{seealso}
+{ref}`Our page on the Qeuing System<introduction-to-queuing-systems>` and {ref}`job-scheduling`.
+:::
 ::::
 
 :::{button-link} faq.html
@@ -30,46 +38,32 @@ Back to the top
 
 ## Accounts
 ::::{dropdown} How do I get an account for the HPC cluster?
-You can request an account through our website's 'Getting Access' page. Complete the form with your details and submit it. Your request will be processed within a few business days.
+{ref}`See Request An Account <request-an-account>`, and complete the [ServiceNow RC Access Request form] with your details and submit it. Your request will be processed within a few business days.
 ::::
 
 ::::{dropdown} How can I reset my password?
 Please use our website's 'Account Management' tool for password reset. Follow the instructions to reset your password.
+
+:::{seealso}
+{ref}`changing-password`.
+:::
 ::::
 
 ::::{dropdown} What happens to my account when I leave NU?
-ITS controls access to the University’s computing resources, so when you or your students leave, you/they may lose access to many of these resources. Sponsored accounts allow people who work or volunteer at NU, but who are not paid by NU, to access the University’s computing resources. Researchers with sponsored accounts cannot request RC services but they are allowed to use the systems we manage as members of a MyGroups (requires VPN connection) group controlled by a NU Principal Investigator (PI). Details on sponsored accounts are posted on the ITS sponsored accounts page.
+ITS controls access to the University’s computing resources, so when you or your students leave, you/they may lose access to many of these resources. Sponsored accounts allow people who work or volunteer at NU, but who are not paid by NU, to access the University’s computing resources. Researchers with sponsored accounts cannot request RC services, but they are allowed to use the systems we manage as members of a MyGroups (requires VPN connection) group controlled by a NU Principal Investigator (PI). Details on sponsored accounts are posted on the ITS sponsored accounts page.
 :::
 
 ::::{dropdown} How do I get access?
-The HPC resources are available to UB research faculty, and classes that require high-performance computing for their coursework, and students. For detailed information about reporting requirements and any access restrictions, please refer to our {ref}`getting-access` page. If you have questions about our access policy or procedures, please contact RC Help.
+The HPC resources are available to UB research faculty, and classes that require high-performance computing for their coursework, and students. For detailed information about reporting requirements and any access restrictions, please refer to our {ref}`getting-access` page. If you have questions about our access policy or procedures, please contact RC.
 
 ::::
 
 ::::{dropdown} What is my cluster username?
-Your cluster username is the same as your NU username. If you do not have a cluster account, your NU username is usually your last name, period, and then the first letter of your first name plus your last name (for staff, first letter of first name, period, then followed by lastname). If you're unsure, please contact RC Help.
+Your cluster username is the same as your NU username. If you do not have a cluster account, your NU username is usually your last name, period, and then the first letter of your first name plus your last name (for staff, first letter of first name, period, then followed by lastname). If you're unsure, please contact RC.
 
-::::
-
-::::{dropdown} Why can't I log in?
-This is a very generic question that is difficult for us to answer. CCR supports many services. If you were to ask this question in a help ticket we would respond with: What are you trying to login to? Are you getting any error messages? So we'll provide links here to the primary services CCR users login to and the corresponding documentation:
-
-OnDemand
-HPC clusters command line SSH or SFTP logins
-Lake Effect Research Cloud Horizon Dashboard
-Common errors:
-
-SSH error "no supported authentication methods available": SSH keys are required for command line SSH and SFTP access to CCR's login nodes. Password logins are not accepted. Please see more info here
-SSH error "Permission denied (publickey)": You either do not have your SSH public key uploaded to your CCR account (see error above) or you are not specifying the private key on your personal device when trying to login to CCR. See this page for more info
-Missing home directory: Your account hasn't been provisioned yet. See here for more info
-Password expired: Reset your password using the identity management portal. instructions can be found here
-Invalid credentials: This means either your password, one time token, or both were entered incorrectly.
-Access denied, or You don't have access to this resource: If receiving this when attempting to login to ColdFront or OnDemand, this means you do not have two-factor authentication enabled. 2FA is required. Follow these instructions to enable it.
-Bad request or Server not available when trying to log in to OnDemand: These are often caused by corrupted cache files in our browser. Clear your browser cache and cookies data and restart your browser or try a different browser. Incognito windows often do not solve this problem.
-::::
-
-::::{dropdown} Why can I login to the help portal but not my NU account?
-The Freshdesk help desk portal accounts are separate from our NU system accounts. This allows people who do not yet have a NU account to request help from NU staff. For more info on CCR accounts, see our Getting Access page. For more info on the help desk portal, see here.
+:::{seealso}
+{ref}`request-an-account`
+:::
 ::::
 
 :::{button-link} faq.html
@@ -81,11 +75,17 @@ Back to the top
 ## General Usage
 :::{dropdown} How do I gain access to the cluster?
 A faculty or research staff member must first request an allocation on the cluster. Full details can be found here.
-
+:::{seealso}
+{ref}`getting-access`
+:::
 ::::
 
 ::::{dropdown} How do I log on to the cluster?
-Use an SSH client from a campus-connected machine and connect to rivanna.hpc.virginia.edu. Instructions for using ssh and other login tools, as well as recommended clients for different operating systems, are here. You can also access the cluster through our Web-based interface Open OnDemand or FastX.
+Use an SSH client from a campus-connected machine and connect to `login.discovery.neu.edu`. Instructions for using ssh and other login tools, as well as recommended clients for different operating systems, as described in {ref}`shell-environment-on-cluster`. You can also access the cluster through our Web-based interface {term}`Open OnDemand (OOD)`. {ref}`Learn more about acessing OOD <access-ood>`.
+
+:::{seealso}
+{ref}`connect-to-cluster`.
+:::
 ::::
 
 ::::{dropdown} Where can I find a list of linux commands?
@@ -846,8 +846,29 @@ Back to the top
 :::
 
 ## Common Errors and Issues
+::::{dropdown} Why can't I log in?
+This is a very generic question that is difficult for us to answer. CCR supports many services. If you were to ask this question in a help ticket we would respond with: What are you trying to login to? Are you getting any error messages? So we'll provide links here to the primary services CCR users login to and the corresponding documentation:
+
+OnDemand
+HPC clusters command line SSH or SFTP logins
+Lake Effect Research Cloud Horizon Dashboard
+Common errors:
+
+SSH error "no supported authentication methods available": SSH keys are required for command line SSH and SFTP access to CCR's login nodes. Password logins are not accepted. Please see more info here
+SSH error "Permission denied (publickey)": You either do not have your SSH public key uploaded to your CCR account (see error above) or you are not specifying the private key on your personal device when trying to login to CCR. See this page for more info
+Missing home directory: Your account hasn't been provisioned yet. See here for more info
+Password expired: Reset your password using the identity management portal. instructions can be found here
+Invalid credentials: This means either your password, one time token, or both were entered incorrectly.
+Access denied, or You don't have access to this resource: If receiving this when attempting to login to ColdFront or OnDemand, this means you do not have two-factor authentication enabled. 2FA is required. Follow these instructions to enable it.
+Bad request or Server not available when trying to log in to OnDemand: These are often caused by corrupted cache files in our browser. Clear your browser cache and cookies data and restart your browser or try a different browser. Incognito windows often do not solve this problem.
+::::
+
+::::{dropdown} Why can I log in to the help portal but not my NU account?
+The Freshdesk help desk portal accounts are separate from our NU system accounts. This allows people who do not yet have a NU account to request help from NU staff. For more info on CCR accounts, see our Getting Access page. For more info on the help desk portal, see here.
+::::
+
 ::::{dropdown} Why does my application keep getting killed on the login nodes?
-Login nodes have a 15 minute time limit on running processes and are not intended for running applications. Please submit a job to the cluster for running or debugging applications or use a compile node for installing software.
+Login nodes have a 15-minute time limit on running processes and are not intended for running applications. Please submit a job to the cluster for running or debugging applications or use a compile node for installing software.
 ::::
 
 ::::{dropdown} Why do I get "Fatal system error" or "Account already exists" error when creating a new account?
@@ -890,19 +911,19 @@ TMPDIR=/projects/academic/<group_name>/condatemp ./Anaconda3-2020.02-Linux-x86_6
 :::
 ::::
 
-::::{dropdown} Why is my job pending with reason ‘ReqNodeNotAvail’?
-The ReqNodeNotAvail message usually means that your node has been reserved for maintenance during the period you have requested within your job script. This message often occurs in the days leading up to our regularly scheduled maintenance, which is performed the last Tuesday of every month (unless otherwise noted on our downtime schedule). For example, if you run a job with a 72-hour wall clock request on the last Tuesday of the month, you will see the ReqNodeNotAvail status because the node is reserved for maintenance within that 72-hour window. You can confirm whether the requested node has a reservation by typing `scontrol` show reservation to list all active reservations.
+::::{dropdown} Why is my job pending with reason `ReqNodeNotAvail`?
+The `ReqNodeNotAvail` message usually means that your node has been reserved for maintenance during the period you have requested within your job script. This message often occurs in the days leading up to our regularly scheduled maintenance, which is performed the last Tuesday of every month (unless otherwise noted on our downtime schedule). For example, if you run a job with a 72-hour wall clock request on the last Tuesday of the month, you will see the ReqNodeNotAvail status because the node is reserved for maintenance within that 72-hour window. You can confirm whether the requested node has a reservation by typing `scontrol` show reservation to list all active reservations.
 
 If you receive this message, the following solutions are available:
 
-Submit a job requesting less time so that it does not intersect with the maintenance window
+1. Submit a job requesting less time so that it does not intersect with the maintenance window.
+-OR-
+2. Wait until after the maintenance window has finished and your job will resume automatically when there are resources available.
 
-Wait until after the maintenance window has finished and your job will resume automatically when there are resources available.
-
-If this message is not due to an upcoming maintenance downtime, then it means that whatever type of node or feature you requested is not available in the partition you submitted your job to run on. Users will see this more frequently as CCR moves nodes from the UB-HPC cluster over to the new environment. These nodes are being reinstalled and are only available in the ubhpc-future reservation. This reservation is available to all UB-HPC cluster users, however, it must be specified in your job script, salloc request, or by using OnDemand 3. For more info, see HERE
+If this message is not due to an upcoming maintenance downtime, then it means that whatever type of node or feature you requested is not available in the partition you submitted your job to run on. Users will see this more frequently as CCR moves nodes from the UB-HPC cluster over to the new environment. These nodes are being reinstalled and are only available in the ubhpc-future reservation. This reservation is available to all UB-HPC cluster users, however, it must be specified in your job script, `salloc` request, or by using OnDemand 3. For more info, see HERE
 ::::
 
-::::{dropdown} How do I fix "sbatch: error: Batch script contains DOS line breaks"?
+::::{dropdown} How do I fix `sbatch: error: Batch script contains DOS line breaks`?
 If you receive an error message like this when trying to submit a job, it is because your batch script was edited in a Windows editor, not a unix editor. Windows editors can add line breaks that the unix interpreter doesn't recognize. You may receive an error such as:
 
 :::{code} bash
@@ -998,3 +1019,6 @@ Back to the top
 
 ---
 This FAQ is not exhaustive. If you have further questions, check the relevant section of the documentation, ask in our User Community and Forums, or contact support.
+
+
+[servicenow rc access request form]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
