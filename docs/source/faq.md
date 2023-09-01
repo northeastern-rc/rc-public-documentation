@@ -159,29 +159,26 @@ You submit jobs by writing a Slurm script and submitting it with the sbatch comm
 ::::
 
 ::::{dropdown} How do I submit an interactive job?
-If you wish to run a program that requires a graphical user interface or generates other graphics for display, such as a plot or chemical model, use one of the Open OnDemand interactive apps. Several are available, but if you one you wish to use isn’t in the list, submit an interactive Desktop request.
+For an interactive job on the command line, submit an `srun` job from the login node. Examples can be seen at {ref}`using-srun`
 
-If you will be using the command line for your interactive job you may use the locally-written `ijob` command. The minimum required options are `-A` and `-c` for allocation and number of cores. Run `ijob -h` for a list of all options.
-
-For more information see the documentation.
-
+If you wish to run a program that requires a graphical user interface or generates other graphics for display, such as a plot or chemical model, use one of the Open OnDemand interactive apps. Several are available, but if you one you wish to use isn’t in the list, submit an OOD Desktop job. You can also use X11 forwarding with `srun`.
+:::{seealso}
+{ref}`using-ood`
+:::
 ::::
 
-::::{dropdown} What queues can I use?
-After logging in, run the command qlist to see a list of queues and their availability. Run `qlimits` for the restrictions on submitting to each queue.
-
+::::{dropdown} What partitions can I use?
+All account holders have access to the `short`, `debug`, `express`, and `gpu` partitions. For more information please see {ref}`partition-names`.
 ::::
 
-::::{dropdown} How do I choose which queue to use?
-Queues (partitions to Slurm) are set up to emphasize one-core (serial or threaded), multi-node parallel, and specialty hardware including large-memory nodes and GPUs. More information about queue policy is at the the cluster homepage.
-
+::::{dropdown} How do I choose which partition to use?
+Partitions are set up to emphasize run time limits and different resource limits and specialty hardware including GPUs. More information about partitions can be found at {ref}`partition-names`.
 ::::
 
 ::::{dropdown} How do I check the status of my jobs?
-Run the command jobq
+Run the command `squeue -u $USER` from the login node.
 
-If reporting a problem to us about a particular job, please let us know the JobID for the job that you are having a problem with. You can also run `jobq -l` to relate particular jobs to specific submission scripts.
-
+If reporting a problem to us about a particular job, please let us know the JobID for the job that you are having a problem with. You can also run `squeue -u $USER` to obtain the JobID.
 ::::
 
 ::::{dropdown} Why is my job not starting?
