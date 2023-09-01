@@ -308,9 +308,7 @@ slurmstepd: *** JOB 5019 ON dev1 CANCELLED AT 2016-05-16T15:33:27 ***
 ::::
 
 ::::{dropdown} How do I check the my job status?
-You can easily check the status of your jobs using the Job Status utility. To navigate to the utility from the Research Computing website, use the Access menu header along the top of each page.
-
-Alternatively, you can use the following command to check the status of the jobs you’ve submitted:
+You can use the following command to check the status of the jobs you’ve submitted:
 
 :::{code} bash
 $ squeue -u <user_name>
