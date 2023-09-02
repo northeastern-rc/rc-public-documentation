@@ -16,6 +16,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Cluster Manager
       A software system responsible for monitoring and managing the health, status, and communication among nodes in a cluster.
 
+   Compute Node
+      TBD.
+
    Concurrency
       The ability of the system to handle multiple tasks or jobs simultaneously, without waiting for each task to complete before starting another.
 
@@ -25,7 +28,7 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Core
       A processor within a CPU. Each core can execute its tasks.
 
-   CPU (Central Processing Unit)
+   Central Processing Unit (CPU)
       The primary component of a computer that performs most processing inside the computer. CPUs can have multiple cores.
 
    Fair Share Allocation
@@ -40,8 +43,11 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Home Directory
       A user's directory in the cluster where personal files, application settings, and other user-specific data are stored.
 
-   HPC (High-Performance Computing)
+   High-Performance Computing (HPC)
       The use of parallel processing for running advanced application programs efficiently, reliably, and quickly. It's often used for scientific research, big data analysis, and modeling complex systems.
+
+   InfiniBand (IB)
+      TBD.
 
    Job
       A set of computations a user submits to the HPC cluster for execution.
@@ -49,8 +55,14 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Job Dependency
       The condition where one job relies on the successful completion of another job before it can start, ensuring proper sequencing of tasks.
 
+   Job Priority
+      TBD.
+
    Job Script
       A file that contains a series of commands that the HPC cluster will execute.
+
+   Login Node
+      TBD.
 
    Module
       In the context of HPC, a module is a bundle of software that can be loaded or unloaded in the user's environment.

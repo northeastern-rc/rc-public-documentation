@@ -2,7 +2,7 @@
 
 # Hardware Overview
 
-The Discovery computing cluster provides you with access to over 1024 CPU nodes, 50,000 CPU cores, and over 200 GPUs and is connected to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer. Compute nodes are connected to each other with either 10 GbE or a high-performance HDR200 InfiniBand (IB) interconnect running at 200 Gbps (with some nodes running HDR100 IB, if HDR200 IB is not supported on those nodes).
+The computing cluster provides access to over 1,024 {term}`CPU <Central Processing Unit (CPU)>` nodes, 50,000 CPU cores, and over 200 GPUs and is connected to the university network over 10 Gbps Ethernet (GbE) for high-speed data transfer. Compute nodes are wired with 10 GbE or a high-performance HDR200 {term}`InfiniBand (IB)` interconnect running at 200 Gbps (with some nodes running HDR100 IB if the HDR200 IB is not supported).
 
 ## CPU nodes
 

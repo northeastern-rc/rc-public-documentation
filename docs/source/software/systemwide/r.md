@@ -105,12 +105,8 @@ packrat::status()
 packrat::on()
 :::
 
-8. You can now install packages as normal. You should see the installation location for your Packrat project folder. For example:
+8. You can now install packages as normal. You should see the installation location for your Packrat project folder. For example: "Installing package into `/work/groupname/username/packrat_R/`"
 
-
-:::{quote}
-Installing package into `/work/groupname/username/packrat_R/`
-:::
 
 :::{code}
 install.packages("viridis")
