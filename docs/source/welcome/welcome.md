@@ -1,5 +1,5 @@
 (welcome)=
-# Welcome
+# Welcome To The RC Docs
 
 Welcome to the official online documentation for Northeastern University’s Research Computing! This documentation will assist you in using our high-performance computing (HPC) cluster with up-to-date information and instructions on cluster topics like account management, system navigation, module loading, job execution, and data storage.
 
