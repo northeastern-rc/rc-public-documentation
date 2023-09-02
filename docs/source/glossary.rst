@@ -67,7 +67,7 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Module
       In the context of HPC, a module is a bundle of software that can be loaded or unloaded in the user's environment.
 
-    Message Passing Interface (MPI)
+   Message Passing Interface (MPI)
       A standardized and portable message-passing system used to enable communication between nodes in a parallel computing environment.
 
    Node
@@ -75,6 +75,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
 
    Node Allocation
       The process of reserving a set of nodes for a specific job, ensuring that the required resources are available for successful execution.
+
+   Open OnDemand (OOD)
+      TBD.
 
    Overcommitment
       Allowing more resources to be allocated to jobs than physically available, relying on intelligent scheduling and efficient resource management.
