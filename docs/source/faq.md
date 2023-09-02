@@ -874,12 +874,12 @@ You can always open a support request when you have questions even if you are no
 Please submit a support request. The tool in question could already be wrapped by someone and available in the cluster Tool Shed. If it’s in the Tool Shed we can usually make it available in the cluster instance almost immediately. If the tool is not available in the cluster Tool Shed, we can look at the tool to determine if we can “wrap” it into the cluster interface and what the timeline for the project may be.
 ::::
 
-::::{dropdown} How do I report a cluster problem?
-See the relevant wiki article.
+::::{dropdown} How do I report a HPC problem?
+Please see {ref}`getting-help`
 ::::
 
 ::::{dropdown} What if my question does not appear here?
-Take a look at our User Guide. If your answer isn’t there, contact us.
+Take a look at our documentation. If your answer isn’t there, contact Research Computing using {ref}`getting-help`.
 ::::
 
 :::{button-link} faq.html
@@ -889,6 +889,6 @@ Back to the top
 :::
 
 ---
-This FAQ is not exhaustive. If you have further questions, check the relevant section of the documentation, ask in our User Community and Forums, or contact support.
+This FAQ is not exhaustive. If you have further questions, check the relevant section of the documentation or contact Research Computing support.
 
 [servicenow rc access request form]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
