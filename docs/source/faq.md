@@ -858,8 +858,8 @@ Back to the top
 :::
 
 ## Other Questions
-::::{dropdown} How do I acknowledge the use of RC resources?
-Please acknowledge resources provided by CCR in publications as follows:
+::::{dropdown} How do I acknowledge the use of Research Computing resources?
+Please acknowledge resources provided by Northeastern University's Research Computing in publications as follows:
 
 Support provided by Research Computer at Northeastern University [1]. And cite as (using the appropriate citation format):
 
@@ -867,11 +867,10 @@ Support provided by Research Computer at Northeastern University [1]. And cite a
 ::::
 
 ::::{dropdown} I think I have a cluster issue, but I'm not sure about it. What should I do?
-You can always open a support request when you have questions even if you are not sure whether there is an issue. If you’d like you can check the list of known cluster issues that are already being worked on before searching for help.
-::::
-
-::::{dropdown} I'd like to use a particular tool, but I can't find it in the cluster. What should I do?
-Please submit a support request. The tool in question could already be wrapped by someone and available in the cluster Tool Shed. If it’s in the Tool Shed we can usually make it available in the cluster instance almost immediately. If the tool is not available in the cluster Tool Shed, we can look at the tool to determine if we can “wrap” it into the cluster interface and what the timeline for the project may be.
+You can always open a support request when you have questions even if you are not sure whether there is an issue.
+:::{seealso}
+{ref}`getting-help`
+:::
 ::::
 
 ::::{dropdown} How do I report a HPC problem?
