@@ -26,7 +26,7 @@ Fair use policies typically utilize a {term}`scheduler` that allocates resources
 
 This policy promotes fairness and efficient resource utilization and contributes to an inclusive and productive computing environment for all users.
 :::{seealso}
-{ref}`Our page on the Qeuing System<introduction-to-queuing-systems>` and {ref}`job-scheduling`.
+{ref}`Our page on the Queuing System<introduction-to-queuing-systems>` and {ref}`job-scheduling`.
 :::
 ::::
 
@@ -51,15 +51,17 @@ Please use our website's 'Account Management' tool for password reset. Follow th
 
 ::::{dropdown} What happens to my account when I leave NU?
 ITS controls access to the University’s computing resources, so when you or your students leave, you/they may lose access to many of these resources. Sponsored accounts allow people who work or volunteer at NU, but who are not paid by NU, to access the University’s computing resources. Researchers with sponsored accounts cannot request RC services, but they are allowed to use the systems we manage as members of a MyGroups (requires VPN connection) group controlled by a NU Principal Investigator (PI). Details on sponsored accounts are posted on the ITS sponsored accounts page.
-:::
+::::
 
 ::::{dropdown} How do I get access?
-The HPC resources are available to UB research faculty, and classes that require high-performance computing for their coursework, and students. For detailed information about reporting requirements and any access restrictions, please refer to our {ref}`getting-access` page. If you have questions about our access policy or procedures, please contact RC.
+The HPC resources are available to Northeastern University research faculty, and classes that require high-performance computing for their coursework, and students. For detailed information about reporting requirements and any access restrictions, please refer to our {ref}`getting-access` page. If you have questions about our access policy or procedures, please contact RC.
 
 ::::
 
 ::::{dropdown} What is my cluster username?
 Your cluster username is the same as your NU username. If you do not have a cluster account, your NU username is usually your last name, period, and then the first letter of your first name plus your last name (for staff, first letter of first name, period, then followed by lastname). If you're unsure, please contact RC.
+
+Your cluster username is the same as your NU username. Your NU username is the same as your email address without @northeastern.edu. If you're unsure, please contact RC.
 
 :::{seealso}
 {ref}`request-an-account`
@@ -73,72 +75,36 @@ Back to the top
 :::
 
 ## General Usage
-:::{dropdown} How do I gain access to the cluster?
-A faculty or research staff member must first request an allocation on the cluster. Full details can be found here.
+::::{dropdown} How do I gain access to the cluster?
+A faculty or research staff member must sponsor your HPC account request. Faculty and staff can self sponsor. Full details can be found here.
 :::{seealso}
 {ref}`getting-access`
 :::
 ::::
 
 ::::{dropdown} How do I log on to the cluster?
-Use an SSH client from a campus-connected machine and connect to `login.discovery.neu.edu`. Instructions for using ssh and other login tools, as well as recommended clients for different operating systems, as described in {ref}`shell-environment-on-cluster`. You can also access the cluster through our Web-based interface {term}`Open OnDemand (OOD)`. {ref}`Learn more about acessing OOD <access-ood>`.
-
+Use an SSH client and connect to `login.discovery.neu.edu`. Instructions for using ssh and other login tools, as well as recommended clients for different operating systems, as described in {ref}`shell-environment-on-cluster`. You can also access the cluster through our Web-based interface {term}`Open OnDemand (OOD)`. {ref}`Learn more about acessing OOD <access-ood>`.
 :::{seealso}
 {ref}`connect-to-cluster`.
 :::
 ::::
 
-::::{dropdown} Where can I find a list of linux commands?
-There are lots of resources on the internet to learn basic linux commands. We provide a cheat sheet of useful linux and Slurm commands here.
+::::{dropdown} Where can I find a list of Linux commands?
+We provide a cheat sheet of useful Linux ({ref}`command-line`) and Slurm commands ({ref}`using-slurm`) and there are more resources you can find online.
 ::::
 
-::::{dropdown} Off Campus?
-Connecting to the cluster from off Grounds via Secure Shell Access (SSH) or FastX requires a VPN connection. We recommend using the UVA More Secure Network if available. The UVA Anywhere VPN can be used if the UVA More Secure Network is not available. Only Windows and Mac OSX operating systems are supported by the Cisco client provided by ITS. Linux users should refer to these unsupported instructions to install and configure a VPN. The More Secure Network requires authentication through Duo; users should follow the instructions on the dialog box to enter "push" as the password.
-
-Open OnDemand users do not need a VPN to access the cluster.
-
-::::
-
-::::{dropdown} How do I reset my current password / obtain a new password?
-Access to the HPC cluster requires a valid Eservices password. Your Netbadge password is not necessarily the same thing, so if you are unable to log in, you should first try resetting your ITS password here. Resetting the Netbadge password should sync it with your Eservices password, which is no longer directly accessible to you. If the problem persists, contact ITS through their online Helpdesk. Keep in mind that ITS requires annual resetting of your password. If you see a “password expired” message, you will need to change it through ITS.
+::::{dropdown} How do I reset my password?
+Access to the HPC cluster requires a valid Northeastern University email account. Your HPC password is the same as your Northeastern University account password so in order to reset it, reset your Northeastern University account password.
+:::{seealso}
+Find KB article
+:::
 ::::
 
 ::::{dropdown} How can I view .pdf or .csv files on the cluster?
-For .pdf files, run the command:
-
-:::{code} bash
-atril filename.pdf
+You can view .pdf and .csv files utilizing the File Explorer application on Open OnDemand and the Open OnDemand Desktop Application.
+:::{seealso}
+{ref}`file-explorer` and {ref}`desktop-app`
 :::
-
-The `atril` command can also be used to display image files, e.g. `.png` and `.jpg` files.
-
-For `.csv` files, run the command:
-
-:::{code} bash
-oocalc filename.csv
-:::
-
-where `filename` is a placeholder for the specific filename.
-
-::::
-
-::::{dropdown} When should I use FastX Web, when should I use an Open OnDemand Desktop session?
-Both allow you to run applications with graphical user interfaces in a Linux Desktop environment.
-
-FastX Web:
-
-Runs all users' sessions on a single frontend node.
-Good for light-weight file management, script editing.
-Requires a VPN connection from off-Grounds locations.
-Open OnDemand Desktop:
-
-Runs your session on allocated resources on a compute node.
-Ideal for running compute-intensive single-node applications with graphical user interface.
-Does not require a VPN connection from off-Grounds locations.
-::::
-
-::::{dropdown} Can I use something other than a smartphone for two factor authentication?
-Yes! Though smartphones are the recommended second factor for your CCR account, if you don't have one or don't want to use yours, you can utilize a desktop application (i.e. Authy) or a programmable hardware security key. There are many on the market including Yubico Yubikeys, Google Titan security keys, and others recommended by UBIT. Please contact CCR Help for details on how to configure your hardware key. CCR is not able to integrate with the hardware security keys provided by UBIT because they are not programmable, and we're unable to get the "secret" needed to join them to our authentication system.
 ::::
 
 ::::{dropdown} How do I request all CPUs on a node with more than one GPU?
@@ -147,10 +113,12 @@ You may wish to request a single GPU on a node and all of the node's CPUs. Howev
 Refer to the Slurm documentation for further information.
 ::::
 
-::::{dropdown} How can I get information on the clusters such as how busy they are and wait times?
-From a login node, use the command `sqstat` to see a comprehensive overview of cluster usage. This information is also displayed on our cluster status pages. To find more detailed information on node availability, use the snodes command.
+::::{dropdown} How can I get information on the HPC such as how busy it is?
+From a login node, you can run `sinfo -p short` to get the state of the HPC.
+:::{seealso}
+{ref}`slurm-monitoring-and-managing`
+:::
 ::::
-
 
 :::{button-link} faq.html
 :color: primary
@@ -161,30 +129,19 @@ Back to the top
 ## Data Transfer
 
 ::::{dropdown} How can I transfer data to/from the HPC cluster?
-
 Data transfer can be done using various methods like `scp`, `rsync`, or `Globus`. Refer to the 'Transferring Data' section in 'Data Management' for detailed instructions.
-
-::::
-
-:::{dropdown} How do I transfer data from UVA Box to my `/scratch` directory on the cluster?
-Log into the cluster using the web-based FastX and launch the MATE Desktop interface. Then from the top menu bar, open firefox through the FastX desktop, in the upper right hand corner of the browser window you should see 3 horizontal bars. Click on that and then select Preferences from the drop-down window. In the new window scroll down until you see Downloads and select ‘Always ask you where to save files’. Then, when you go to Box to download, a new window will pop up and if you click on ‘Other locations’, you can navigate to your scratch directory.
-::::
-
-::::{dropdown} How do I transfer data from my `/scratch` directory on the cluster to my UVA Box account?
-Log into the cluster using the web-based FastX and launch the MATE Desktop interface. Then from the top menu bar, open firefox through the FastX desktop and log into your UVA Box account. Once logged in to box, click on the New + button (upper right) to upload a file/folder. In the left sidebar of the new window, select Other Locations/Computer/scratch/ to navigate to your scratch directory and select the files/folders you want to upload to your box account.
-
+:::{seealso}
+{ref}`data-storage-index`
+:::
 ::::
 
 ::::{dropdown} What Linux commands can I use to transfer files to/from the cluster?
-Smaller files can be transferred to/from the cluster using `scp`, `sftp`, and `rsync` as well as standard FTP tools.
+Smaller files can be transferred to/from the cluster using `scp`, `sftp`, and `rsync` as well as standard FTP tools utilizing `xfer.discovery.neu.edu`.
 
 Larger files should be moved using Globus.
-
-Read more about data transfer.
-::::
-
-::::{dropdown} How can I transfer my files to/from UB Box?
-Please see these instructions and utilize Globus to transfer files to UB Box.
+:::{seealso}
+{ref}`data-storage-index`
+:::
 ::::
 
 :::{button-link} faq.html
@@ -194,40 +151,38 @@ Back to the top
 :::
 
 ## Job Management
-:::{dropdown} How do I submit jobs?
+::::{dropdown} How do I submit jobs?
 You submit jobs by writing a Slurm script and submitting it with the sbatch command. Please see our Slurm documentation page.
-
+:::{seealso}
+{ref}`using-sbatch`
+:::
 ::::
 
 ::::{dropdown} How do I submit an interactive job?
-If you wish to run a program that requires a graphical user interface or generates other graphics for display, such as a plot or chemical model, use one of the Open OnDemand interactive apps. Several are available, but if you one you wish to use isn’t in the list, submit an interactive Desktop request.
+For an interactive job on the command line, submit an `srun` job from the login node. Examples can be seen at {ref}`using-srun`
 
-If you will be using the command line for your interactive job you may use the locally-written `ijob` command. The minimum required options are `-A` and `-c` for allocation and number of cores. Run `ijob -h` for a list of all options.
-
-For more information see the documentation.
-
+If you wish to run a program that requires a graphical user interface or generates other graphics for display, such as a plot or chemical model, use one of the Open OnDemand interactive apps. Several are available, but if you one you wish to use isn’t in the list, submit an OOD Desktop job. You can also use X11 forwarding with `srun`.
+:::{seealso}
+{ref}`using-ood`
+:::
 ::::
 
-::::{dropdown} What queues can I use?
-After logging in, run the command qlist to see a list of queues and their availability. Run `qlimits` for the restrictions on submitting to each queue.
-
+::::{dropdown} What partitions can I use?
+All account holders have access to the `short`, `debug`, `express`, and `gpu` partitions. For more information please see {ref}`partition-names`.
 ::::
 
-::::{dropdown} How do I choose which queue to use?
-Queues (partitions to Slurm) are set up to emphasize one-core (serial or threaded), multi-node parallel, and specialty hardware including large-memory nodes and GPUs. More information about queue policy is at the the cluster homepage.
-
+::::{dropdown} How do I choose which partition to use?
+Partitions are set up to emphasize run time limits and different resource limits and specialty hardware including GPUs. More information about partitions can be found at {ref}`partition-names`.
 ::::
 
 ::::{dropdown} How do I check the status of my jobs?
-Run the command jobq
+Run the command `squeue -u $USER` from the login node.
 
-If reporting a problem to us about a particular job, please let us know the JobID for the job that you are having a problem with. You can also run `jobq -l` to relate particular jobs to specific submission scripts.
-
+If reporting a problem to us about a particular job, please let us know the JobID for the job that you are having a problem with. You can also run `squeue -u $USER` to obtain the JobID.
 ::::
 
 ::::{dropdown} Why is my job not starting?
-Several things can cause jobs to wait in the queue. If you request a resource combination we do not have, such as 28 cores on a parallel node, the queueing system will not recognize that this condition will not be met and will leave the job pending (PD). You may also have run a large number of jobs in the recent past and the “fair share” algorithm is allowing other users higher priority. Finally, the queue you requested may simply be very busy. If your job is pending there will be another field with the reason; if it is Resources that means that the resource you requested isn’t available, either because it is busy or because you requested a nonexistent resource. If the reason is “Priority” it means that a job with higher priority than yours is running. Your job will rise in priority as it waits, so it will start eventually. To request an estimate from the queueing system of your start time, run `squeue -u <mst3k> --start` (substitute your own login for `mst3k`).
-
+Several things can cause jobs to wait in the queue. If you request a resource combination we do not have available at the moment the job will be marked pending (PD). You may also have run a large number of jobs in the recent past and the “fair share” algorithm is allowing other users higher priority. Finally, the queue you requested may simply be very busy. If your job is pending there will be another field with the reason; if it is Resources that means that the resource you requested isn’t available, either because it is busy or because you requested a nonexistent resource. If the reason is “Priority” it means that a job with higher priority than yours is running. Your job will rise in priority as it waits, so it will start eventually. To request an estimate from the queueing system of your start time, run `squeue -u $USER --start`.
 ::::
 
 ::::{dropdown} How can I check when my job will start?
@@ -236,7 +191,6 @@ Run
 squeue -j <jobid> --start
 :::
 Slurm will provide an estimate of the day and time your job will start.
-
 ::::
 
 ::::{dropdown} Why was my job killed?
@@ -245,7 +199,7 @@ Usually this is because you inadvertently submitted the job to run in a location
 You can run `sacct`:
 
 :::{code} bash
-[aam2y@udc-ba36-27:/root] sacct
+[user@login-00 ~] sacct
        JobID    JobName  Partition    Account  AllocCPUS      State ExitCode
 ------------ ---------- ---------- ---------- ---------- ---------- --------
 159637       ompi_char+   parallel  hpc_admin         80  COMPLETED      0:0
@@ -257,88 +211,55 @@ You can run `sacct`:
 :::
 
 If it’s still not clear why your job was killed, please contact us and send us the output from `sacct`.
-
 ::::
 
 ::::{dropdown} How can I submit a job to the HPC cluster?
-
-Jobs can be submitted using the Slurm commands. Please refer to the 'Slurm Guide' section for detailed instructions on job submission.
-
+Jobs can be submitted with `sbatch` and `srun` to the HPC.
+:::{seealso}
+{ref}`using-sbatch` and {ref}`using-srun`
+:::
 ::::
 
 ::::{dropdown} How can I check the status of my job?
-
-You can check the status of your job using the `squeue` command, which will display the current jobs in the queue. For more details on using this command, check the 'Slurm Guide' section.
-
+You can check the status of your job using the `squeue -u $USER` command, which will display your current jobs in the queue.
+:::{seealso}
+{ref}`job-management`
+:::
 ::::
 
 ::::{dropdown} What should I do if my job fails?
-
-Check the output and error files for any error messages if your job fails. These files are usually located in your job's working directory. If you cannot resolve the issue yourself, contact support with the details of the error message.
-
-::::
-
-::::{dropdown} How can I tell what my job's priority is?
-For more information on job priority see here.
+Check the output and error files for any error messages if your job fails. These files are usually located in your job's working directory. If you cannot resolve the issue yourself, contact Research Computing with the details of the error message.
 ::::
 
 ::::{dropdown} When will my job start?
-You can list information on your job’s start time using the squeue command:
+You can list information on your job’s start time using the `squeue`git  command:
 
 :::{code} bash
-squeue --user=your-username --start
+squeue -u $USER --start
 :::
-
 Note that Slurm’s estimated start time can be a bit inaccurate. This is because Slurm calculates this estimation off the jobs that are currently running or queued in the system. Any job that is submitted after yours with a higher priority may delay your job. Alternatively, if jobs complete in less time than they've requested, more jobs can start sooner than anticipated.
 
-For more information on the squeue command, take a look at our Useful Slurm Commands information or visit the Slurm page on squeue
+For more information on the `squeue` command, take a look at our {ref}`job-management`
 ::::
-
-::::{dropdown} Why can’t I submit jobs anymore?
-In order to be allowed to submit jobs, you must not be overallocated with your `/scratch` usage and you must have some remaining service units. There is a limit of 350,000 files or 10 TB of space used per user in each `/scratch` directory and if you exceed either of those limits, you will not be able to run jobs until you clean up. To check whether this is the case, run
-
-:::{code} bash
-sfsq
-:::
-
-If you have not exceeded the limits on `/scratch`, check whether your account has allocation units remaining by running
-
-allocations
-Why do I get sbatch error: Batch script contains DOS line breaks
-If you use a Windows editor to create Slurm batch scripts, when you try to run them you may encounter an error
-
-sbatch: error: Batch script contains DOS line breaks (\r\n)
-sbatch: error: instead of expected UNIX line breaks (\n).
-Windows and Linux use different conventions to mark the end of each line. Many applications on the cluster, such as compilers, Matlab, etc., understand Windows end-of-line markers, but the shell does not. This is easy to fix by running the `dos2unix` commmand
-
-:::{code} bash
-dos2unix myscript.slurm
-:::
-It will not hurt to run `dos2unix` on a file that does not need it. Sometimes you get {^M} character at the end of every line when the file was imported from Windows environment. `dos2unix` usually takes care of the problem, but not 100% all the time.
-
-:::
 
 ::::{dropdown} How do I check the efficiency of my completed jobs?
 Run the command seff on the Slurm job ID:
 
 :::{code} bash
-udc-ba34-36-deepLearning$seff 40330441
-Job ID: 40330441
-Cluster: shen
-User/Group: teh1m/users
+[user@login-00 ~] seff 38391902
+Job ID: 38391902
+Cluster: discovery
+User/Group: user/users
 State: COMPLETED (exit code 0)
-Nodes: 1
-Cores per node: 2
-CPU Utilized: 00:15:14
-CPU Efficiency: 89.08% of 00:17:06 core-walltime
-Job Wall-clock time: 00:08:33
-Memory Utilized: 6.89 GB
-Memory Efficiency: 58.76% of 11.72 GB
-udc-ba34-36-deepLearning$
+Cores: 1
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:03:25 core-walltime
+Job Wall-clock time: 00:03:25
+Memory Utilized: 652.00 KB
+Memory Efficiency: 0.03% of 1.95 GB
 :::
-
-The output of this command is also contained in the email sent by Slurm once your job completes.
 ::::
+
 ::::{dropdown} What is a batch system? / What is a job scheduler?
 The purpose of a **batch system** is to execute a series of tasks in a computer program without user intervention (non-interactive jobs). The operation of each program is defined by a set or **batch** of inputs, submitted by users to the system as “job scripts.”
 
@@ -346,66 +267,34 @@ When job scripts are submitted to the system, the **job scheduler** determines h
 ::::
 
 ::::{dropdown} What are the differences between batch jobs, interactive jobs, and GUI jobs?
-A **batch job** is submitted to the batch system via a job script passed to the sbatch command. Once queued, a batch job will run on resources chosen by the scheduler. When a batch job runs, a user cannot interact with it.
+A **batch job** is submitted to the batch system via a job script passed to the `sbatch` command. Once queued, a batch job will run on resources chosen by the scheduler. When a batch job runs, a user cannot interact with it.
 
 - View a walk-through of an example batch job script
-An **interactive job** is any process that is run at the command line prompt, generally used for developing code or testing job scripts. Interactive jobs should only be run in an interactive development session, which are requested through the srundev command. As soon as the necessary compute resources are available, the job scheduler will start the interactive session.
+An **interactive job** is any process that is run at the command line prompt, generally used for developing code or testing job scripts. Interactive jobs should only be run in an interactive session, which are requested through the `srun` command. As soon as the necessary compute resources are available, the job scheduler will start the interactive session.
 
 - View the Interactive Development & Testing documentation page
-A **GUI job** uses the cluster compute resources to run an application, but displays the application’s graphical user interface (GUI) to the local client computer. GUI sessions are also managed by the job scheduler, but require additional software to be installed on the client side computer.
-
-- View the GUI Programs documentation page
-::::
-
-::::{dropdown} How can I check what compute resources are available for me to use?
-Use the following command to view your group’s total resource allocation, as well as how much of the allocation is in use at the given instant.
-
-$ module load ufrc
-$ slurmInfo <group_name>
-
-Allocation information is returned for the both the investment QOS and burst QOS of the given group.
+A **GUI job** uses the cluster compute resources to run an application, but displays the application’s graphical user interface (GUI) to the local client computer. GUI sessions are also managed by the job scheduler, but require additional software to be installed on the client side computer or ran through Open OnDemand.
 ::::
 
 ::::{dropdown} How do I submit a job to the batch system?
-The primary job submission mechanism is via the sbatch command via the Linux command line interface
+The primary job submission mechanism is via the `sbatch` command via the Linux command line interface
 :::{code} bash
 $ sbatch <your_job_script>
 :::
-where <your_job_script> is a file containing the commands that the batch system will execute on your behalf. Jobs may also be submitted to the batch system through the cluster web interface as well as the Open Science Grid’s Globus interface.
-
-- View a walk-through of an example job script
-- View sample scripts for several different job types (single-threaded, multi-threaded, MPI, hybrid, array)
-- View exhaustive documentation on the sbatch command on SchedMD
+where <your_job_script> is a file containing the commands that the batch system will execute on your behalf. 
+:::{seealso}
+{ref}`using-sbatch`
+:::
 ::::
 
 ::::{dropdown} How do I run applications that use multiple processors (i.e. parallel computing)?
 Parallel computing refers to the use of multiple processors to run multiple computational tasks simultaneously. Communications between tasks use one of the following interfaces, depending on the task:
 
-- OpenMp – used for communication between tasks running concurrently on the same node with access to shared memory
-- MPI (OpenMPI) – used for communication between tasks which use distributed memory
-- Hybrid – a combination of both OpenMp and MPI interfaces
+- OpenMP – used for communication between tasks running concurrently on the same node with access to shared memory
+- MPI (eg OpenMPI) – used for communication between tasks which use distributed memory
+- Hybrid – a combination of both OpenMP and MPI interfaces
 
 You must properly configure your job script in order to run an application that uses multiple processors. View sample SLURM scripts for each case below:
-
-- OpenMp job (sample SLURM script)
-- MPI job (sample SLURM script)
-- Hybrid job (sample SLURM script)
-::::
-
-::::{dropdown} Why do I get the error 'Invalid qos specification' when I submit a job?
-If you get this error, it is most likely either because
-
-You submitted a job with a specified qos for which you are not a group member
-Your group does not have a computational allocation
-To check what groups you are a member of, log in to the cluster and use the following command:
-:::{code} bash
-$ groups <user_name>
-:::
-To check the allocation of a particular group, log in to the cluster and use the following command:
-:::{code} bash
-$ module load ufrc
-$ slurmInfo <group_name>
-:::
 ::::
 
 ::::{dropdown} Why do I get the error 'slurmstepd: Exceeded job memory limit at some point'?
@@ -419,9 +308,7 @@ slurmstepd: *** JOB 5019 ON dev1 CANCELLED AT 2016-05-16T15:33:27 ***
 ::::
 
 ::::{dropdown} How do I check the my job status?
-You can easily check the status of your jobs using the Job Status utility. To navigate to the utility from the Research Computing website, use the Access menu header along the top of each page.
-
-Alternatively, you can use the following command to check the status of the jobs you’ve submitted:
+You can use the following command to check the status of the jobs you’ve submitted:
 
 :::{code} bash
 $ squeue -u <user_name>
@@ -445,17 +332,14 @@ $ scancel <job_id>
 to delete jobs from the queue. You can only delete jobs that you submitted.
 ::::
 
-::::{dropdown} Why did my job die with the message '/bin/bash: bad interpreter: No such file or directory'?
-This is typically caused by hidden characters in your job script that the command interpreter does not understand. If you created your script on a Windows machine and copied it to the cluster, you should run
-
+::::{dropdown} What are the wall time limits for a partition?
+You can check the wall time limits for a partition with the following command
 :::{code} bash
-$ dos2unix <your_job_script>
+$ sinfo 
 :::
-This will remove any characters not recognized by Linux command interpreters from the text file.
+
 ::::
 
-::::{dropdown} What are the wall time limits for each partition and QoS?
-::::
 ::::{dropdown} How can I check how busy the cluster is?
 
 Use the following command to view how busy the cluster is:
@@ -735,7 +619,7 @@ Back to the top
 :::
 
 ## Development
-:::{dropdown} How do I develop and test software?
+::::{dropdown} How do I develop and test software?
 Use compute nodes for software development and testing. Connect to the cluster and use the following command to start a developmental session:
 
 :::{code} bash
