@@ -8,7 +8,7 @@ If you are new to high-performance computing, please check out our catalog of on
 :::
 
 
-We highly appreciate your feedback! If you have any comments or suggestions regarding the topics covered in this documentation, please submit a [Research Computing Documentation Request].
+We highly appreciate your feedback! If you have any comments or suggestions regarding the topics covered in this documentation, please submit a [Research Computing Documentation Request] or contact us at <rchelp@northeastern.edu>.
 
 
 [research computing documentation request]: https://bit.ly/NURC-Documentation
