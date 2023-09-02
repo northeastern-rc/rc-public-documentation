@@ -333,43 +333,42 @@ to delete jobs from the queue. You can only delete jobs that you submitted.
 ::::
 
 ::::{dropdown} What are the wall time limits for a partition?
-You can check the wall time limits for a partition with the following command
+You can check the wall time limits, denoted as TIMELIMIT, for a partition with the following command replacing $PARTITION with the partition of interest
 :::{code} bash
-$ sinfo 
+$ sinfo -p $PARTITION
 :::
-
 ::::
 
-::::{dropdown} How can I check how busy the cluster is?
-
-Use the following command to view how busy the cluster is:
+::::{dropdown} How can I check how busy a partition is?
+Use the following command to view how busy the partition is
 :::{code} bash
-$ slurmInfo
+$ sinfo -p $PARTITION
 :::
+and view the STATE column to see how many nodes are 'idle' (no jobs running on them).
 ::::
 
 ::::{dropdown} How can I use GPUs for my job?
 To use GPUs for your job, you need to request them in your job script. You can find more information in the 'Working with GPUs' section.
-::::
-
-::::{dropdown} Why isn't my job running immediately using a priority boost QOS?
-The priority boost is not a ticket to the front of the line (queue). It is one of multiple factors that go into calculating a job's priority. Your group's jobs get an additional boost on the QOS portion of the job's fairshare calculation. For more information on job priority and fairshare calculations see here.
+:::{seealso}
+{ref}`working-gpus`
+:::
 ::::
 
 ::::{dropdown} How do I login to the compute node my job is running on?
-You will only be able to login to compute nodes that your jobs are running on. However, rsh/ssh to compute nodes is not permitted. You can use the Slurm srun command to get on the node. If the job is running on one node use:
+You will only be able to login to compute nodes that your jobs are running on. If the job is running on one node use:
 :::{code} bash
 srun --jobid=jobid --pty /bin/bash
+:::
+where you can find your jobid by running
+:::{code} bash
+squeue -u $USER
 :::
 If the job is running on more than one node, specify the node you want to login to:
 :::{code} bash
 srun --jobid=jobid --nodelist=node_name -N1 --pty /bin/bash
 :::
 If your job is allocated all of the resources on the node, you will need to include the --overlap option.
-If your job is running on the faculty cluster, you will need to specify the --clusters=faculty option.
-
 ::::
-
 
 :::{button-link} faq.html
 :color: primary
@@ -380,9 +379,10 @@ Back to the top
 ## Storage
 
 ::::{dropdown} What are the data storage options?
+Several data storage options are available depending on your needs, such as `/home`, project directories (`/work/$PROJECT`), and temporary storage (`/scratch`). Details can be found in the 'Data Management' section.
+:::{seealso}
 
-Several data storage options are available depending on your needs, such as home directories, project directories, and temporary storage. Details can be found in the 'Data Management' section.
-
+:::
 ::::
 
 :::{dropdown} What types of storage are available and how should each type be used?
@@ -408,22 +408,18 @@ Home directories are intended for relatively small amounts of human-readable dat
 All users are provided a 50-GB home directory for longer-term storage. This directory provides “snapshots” though it is not backed up. Each user also is provided 10TB of temporary “scratch” storage accessible as `/scratch/$USER` where $USER will stand for your ID. Scratch storage is fast but is not backed up in any way.
 
 If the free storage is not sufficient, you need snapshots of your files, or you wish to share space among a research group, the group should lease storage.
-
 ::::
 
 ::::{dropdown} Why should I use `/scratch` storage?
 Scratch storage is fast and provides a large quantity of free space. However, there are limits on the number of files and the amount of space you may use. This is to maintain the stability and performance of the system. Please review our scratch filesystem policy for details. If you use or expect to use a large number of files please contact us.
-
 ::::
 
 ::::{dropdown} How do I obtain leased storage?
 Research Computing offers two tiers of leased storage, Research Standard and Research Project. Please see our storage page for details.
-
 ::::
 
 ::::{dropdown} How do I check my disk usage?
 Run `hdquota` on the cluster frontend.
-
 ::::
 
 ::::{dropdown} How do I check my `/scratch` usage on the cluster?
@@ -433,7 +429,6 @@ Run the command `sfsq`:
 sfsq
 :::
 If you have used up too much space, created too many files, or have “old” files you may be regarded as “overallocated”. Please note that if you are overallocated, you won’t be able to submit any new jobs until you clean up your `/scratch` folder.
-
 ::::
 
 :::{dropdown} How can I add large datasets to the cluster?
@@ -446,7 +441,6 @@ You can run the following command from your /home or `/scratch` directory to see
 :::{code} bash
 du . -h  --max-depth=1|sort -h -r
 :::
-
 ::::
 
 ::::{dropdown} If I’m over my file limit in /scratch, how can I determine where all the files are located?
@@ -459,7 +453,6 @@ find . -type f | cut -d/ -f2 | sort | uniq -c
 
 ::::{dropdown} How long can I store files in /scratch?
 `/scratch` is designed to serve as fast, temporary storage for running jobs, and is not long-term storage. For this reason, files are periodically marked for deletion from all `/scratch` directories. Please review the `/scratch` filesystem policy for more details. Store longer-term files in your home directory or purchased storage.
-
 ::::
 
 ::::{dropdown} How do I share data in my `/scratch` or leased storage with a colleague?
@@ -502,9 +495,9 @@ Back to the top
 :::
 
 ## Software
-:::{dropdown} What software applications are available?
+::::{dropdown} What software applications are available?
 The full list of applications installed on the cluster is available at the Installed Software wiki page.
-:::
+::::
 
 ::::{dropdown} What software applications can run on the GPU partition?
 GPU-accelerated computing is intended for use by highly parallel applications, where computation on a large amount of data can be broken into many small tasks performing the same operation, to be executed simultaneously.  More simply put, large problems are divided into smaller ones, which can then be solved at the same time.
@@ -539,9 +532,7 @@ The easiest way to avoid “command not found” messages is to ensure that you 
 ::::
 
 ::::{dropdown} Can I install my software on the HPC cluster?
-
 Yes, you can. Please follow the guidelines in the 'Installing Your Own Software' section. If you encounter any issues, contact support.
-
 ::::
 
 :::{dropdown} How do I use research software that’s already installed?
@@ -579,7 +570,6 @@ Please visit this page for more details.
 Please check the user manual for your application/container before running on a GPU. For instance, scikit-learn does not have GPU support; hence using GPUs for scikit-learn will not help with your job performance but will only cost you more service units (see SU charge rate here) and prevent other users from using the GPUs.
 
 https://scikit-learn.org/stable/faq.html#will-you-add-gpu-support
-
 ::::
 
 ::::{dropdown} How can I make my Jupyter notebook from JupyterLab to run as a batch job on the cluster?
@@ -757,7 +747,6 @@ Login nodes have a 15-minute time limit on running processes and are not intende
 
 ::::{dropdown} Why do I get "Fatal system error" or "Account already exists" error when creating a new account?
 When trying to create a new CCR account, you get an error that says "fatal system error" or "account with this username already exists" please contact CCR help. Staff will need to take manual action to rectify the problem.
-
 ::::
 
 ::::{dropdown} Why am I getting 'no space left on device' errors?
@@ -818,6 +807,7 @@ sbatch: error: instead of expected UNIX line breaks (\n).
 Run the `dos2unix` command on your file to remove the Windows line breaks. For example: `dos2unix myBatchFile`.
 Use the `man` command to see all the options for the `dos2unix` command: `man dos2unix`.
 ::::
+
 ::::{dropdown} Why do I get an ‘Invalid Account, Partition, or QOS Specification’ error when I try to run a job?
 If you're getting errors like these, you're not specifying the right combination of cluster, account, partition, and qos based on what your account has access to:
 
@@ -845,7 +835,6 @@ You will get this error if you have reached the partition or per user limits as 
 SSH connections will time out either due to inactivity or network disruptions. If your sessions are disconnecting due to inactivity, one thing you can do to keep the SSH connection open is to have ssh send a periodic keep alive packet to the server so it will not timeout. Add the -o ServerAliveInterval=600 option to your ssh login command. SSH can be sensitive to any disruptions in the network which can be common with Wi-Fi networks. Sometimes the 'keep alive' setting prevents this. Other times, it may be that you have a setting on your Wi-Fi or ethernet adapter that tells the operating system it can put the device to sleep after a period of inactivity. This is especially common on Windows. Check your network adapters for 'Power Settings' and uncheck any options that tell the system it can disable the device to save power. This will vary by operating system so we recommend you conduct an internet search for the appropriate instructions.
 ::::
 
-
 ::::{dropdown} Why am I seeing WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED when I log in?
 Some users logging in through ssh may encounter this error message. If you receive this message, please see our instructions on how to clear this error.
 
@@ -860,7 +849,6 @@ From your home directory on the cluster, run the commands:
 rm -rf ~/.mozilla/firefox/*.default/.parentlock
 rm -rf ~/.mozilla/firefox/*.default/lock
 :::
-
 ::::
 
 :::{button-link} faq.html
@@ -870,7 +858,6 @@ Back to the top
 :::
 
 ## Other Questions
-
 ::::{dropdown} How do I acknowledge the use of RC resources?
 Please acknowledge resources provided by CCR in publications as follows:
 
@@ -885,15 +872,15 @@ You can always open a support request when you have questions even if you are no
 
 ::::{dropdown} I'd like to use a particular tool, but I can't find it in the cluster. What should I do?
 Please submit a support request. The tool in question could already be wrapped by someone and available in the cluster Tool Shed. If it’s in the Tool Shed we can usually make it available in the cluster instance almost immediately. If the tool is not available in the cluster Tool Shed, we can look at the tool to determine if we can “wrap” it into the cluster interface and what the timeline for the project may be.
-:::
+::::
 
 ::::{dropdown} How do I report a cluster problem?
 See the relevant wiki article.
 ::::
 
-:::{dropdown} What if my question does not appear here?
+::::{dropdown} What if my question does not appear here?
 Take a look at our User Guide. If your answer isn’t there, contact us.
-:::
+::::
 
 :::{button-link} faq.html
 :color: primary
@@ -903,6 +890,5 @@ Back to the top
 
 ---
 This FAQ is not exhaustive. If you have further questions, check the relevant section of the documentation, ask in our User Community and Forums, or contact support.
-
 
 [servicenow rc access request form]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
