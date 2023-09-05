@@ -10,3 +10,11 @@ Packrat
 Holyoke
 TensorBoard
 Miniconda
+walkthrough
+Globus
+Spack
+iTerm
+Homebrew
+Gbps
+parallelization
+Podman

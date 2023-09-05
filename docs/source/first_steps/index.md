@@ -1,3 +1,4 @@
+(first-steps)=
 # First Steps
 
 ```{toctree}
@@ -16,7 +17,7 @@ Taking the first steps with our High-Performance Computing (HPC) cluster is a cr
 
 :::{grid-item-card} {ref}`passwordless-ssh`
 :::
-:::{grid-item-card} {ref}`Shell Environment <bashrc>`
+:::{grid-item-card} {ref}`Shell Environment <shell-environment-on-cluster>`
 :::
 :::{grid-item-card} {ref}`Command Line <command-line>`
 :::
@@ -39,7 +40,7 @@ Get acquainted with the cluster's shell environment to navigate and perform task
 - **Understanding the Shell**: Basics of shell operations.
 - **Shell Customization**: Tailor the shell to your needs.
 :::{seealso}
-{ref}`More about Shell Environment on the Cluster <bashrc>`.
+{ref}`More about Shell Environment on the Cluster <shell-environment-on-cluster>`.
 :::
 (using-bash-index)=
 ## Using Bash

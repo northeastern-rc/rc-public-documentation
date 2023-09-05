@@ -22,7 +22,7 @@ In addition to the pre-installed software on our HPC cluster, users may need to 
 
 1. Check If the Software Is Already Installed
 
-Before installing new software, check if it's already installed by using the `module avail` command:
+Before installing new software, check if it is already installed by using the `module avail` command:
 
 :::{code} bash
 module avail
@@ -79,7 +79,7 @@ Always read the software's installation instructions, as steps may vary.
 
 6. Test the Software
 
-After installation, it's important to test the software to ensure it works correctly. Most software packages include a set of test cases for this purpose. Refer to the software's documentation for how to run these tests.
+After installation, it is important to test the software to ensure it works correctly. Most software packages include a set of test cases for this purpose. Refer to the software's documentation for how to run these tests.
 
 :::{figure} ../../_static/image/build-diagram.jpg
 
@@ -88,7 +88,7 @@ A workflow of software installation (replace with our own).
 
 7. Make the Software Available via Modules
 
-For ease of use, consider creating a module file for the software. Here's an example of a basic module file for software installed in `/home/<username>/software`:
+For ease of use, consider creating a module file for the software. Here is an example of a basic module file for software installed in `/home/<username>/software`:
 
 :::{code} bash
 #%Module

@@ -8,7 +8,7 @@ Our {ref}`conda` page and [official Anaconda documentation](https://docs.anacond
 :::
 ## Using R on Open OnDemand
 
-The Open OnDemand application offers several different versions of R accessed through an interactive session with RStudio server in a [Rocker Container](https://rocker-project.org/images/versioned/rstudio). Each version of R is available as a different *flavor* whereby different packages are pre-installed. We host three flavors whose package-lists build on one another in the following order: Rstudio < Tidyverse < Geospatial.
+The Open OnDemand application offers several different versions of R accessed through an interactive session with RStudio server in a [Rocker Container](https://rocker-project.org/images/versioned/rstudio). Each version of R is available as a different *flavor* whereby different packages are pre-installed. We host three flavors whose package-lists build on one another in the following order: RStudio < Tidyverse < Geospatial.
 
 In addition to different R packages you will find additional package requirements (e.g, compilers) also present in the three flavors in increasing order.
 
@@ -32,7 +32,7 @@ We recommend making your Packrat directory in /work (preferred) or /home
 
 1. Type `module load R/4.2.1`.
 
-1. Create a new directory for your R project by typing, `mkdir /work/<groupname>/<username>/<directoryname>` where `<groupname> is your group name, `<username>` is your username, and `<directoryname>` is the name of the directory you want to create for your R project. For example, `/work/coolsciencegroup/j.smith/packrat_r`.
+1. Create a new directory for your R project by typing, `mkdir /work/<groupname>/<username>/<directoryname>` where `<groupname>` is your group name, `<username>` is your username, and `<directoryname>` is the name of the directory you want to create for your R project. For example, `/work/coolsciencegroup/j.smith/packrat_r`.
 
 1. Create a new directory for your R project by typing, `mkdir <directoryname>`
 
@@ -73,15 +73,15 @@ ______________________________________________________________________
 The instructions below can be applied on any RStudio “flavor” available (i.e., RStudio, Geospatial, and Tidyverse). Once a Packrat snapshot is created it can easily be transferred between flavors and even machines (e.g., personal laptop, Discovery).
 
 1. Launch an RStudio instance on the OOD. Specify the flavor and other parameters as usual.
-1. In the RStudio console type: `install.packages("packrat)`.
+1. In the RStudio console type: `install.packages("packrat")`.
 
 :::{note}
-This will install by default in `$HOME/R/x86_64-pc-linux-gnu-library/<version>/` as long as you don’t have previous environments or those have been turned off (see below). For Packrat installation, it is best to specify a “project folder” in your `$HOME`, `/scratch` or `/work` directory (if you do not have `/work` please see {ref}`data-storage`). The location `/tmp/Rtmp8CbQCA/downloaded_packages` would not work because `/tmp` corresponds to the compute node that you were on while running the R session. Optimally, you would like to have the packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on.
+This will install by default in `$HOME/R/x86_64-pc-linux-gnu-library/<version>/` as long as you don’t have previous environments or those have been turned off (see below). For Packrat installation, it is best to specify a “project folder” in your `$HOME`, `/scratch` or `/work` directory (if you do not have `/work` please see {ref}`data-storage`). The location `/tmp/Rtmp8CbQCA/downloaded_packages` would not work because `/tmp` corresponds to the compute node that you were on while running the R session. Optimally, you would like to have the Packrat location in a persistent place so that all packages and libraries are available to you at all times regardless of the compute node you are on.
 :::
 
 3. Create a Packrat project directory at the desired location by selecting “New Folder” in the “Files” tab in the lower right hand side of the RStudio screen. Alternatively, use `mkdir` in the terminal tab on the lower left-hand side of the RStudio screen. For example: `mkdir projectfolder`.
 
-1. In the RStudio console, initialize the Packrat. If your current directory is the project folder (i.e., `getwd()` == “packrat project folder”) you can omit the path here.
+1. In the RStudio console, initialize the Packrat. If your current directory is the project folder (i.e., `getwd()` == Packrat project folder) you can omit the path here.
 
 :::{code}
 packrat::init("<path-to-project-folder>")
@@ -105,7 +105,8 @@ packrat::status()
 packrat::on()
 :::
 
-8. You can now install packages as normal. You should see the installation location for your Packrat project folder. E.g., “Installing package into ‘/work/groupname/username/packrat_R/’”
+8. You can now install packages as normal. You should see the installation location for your Packrat project folder. For example: "Installing package into `/work/groupname/username/packrat_R/`"
+
 
 :::{code}
 install.packages("viridis")
@@ -115,13 +116,13 @@ install.packages("viridis")
 
 - At any time you can check the status of your Packrat with `packrat::status()`.
 - Packrat can be toggled on and off with `packrat::on()` and `packrat::off()`, respectively.
-- To disconnect Packrat and allow for package installation outside your packrat project folder: `packrat::disable(project = NULL, restart = TRUE)`, where `project` refers to the current packrat project folder, and `restart = TRUE` will restart the R session.
+- To disconnect Packrat and allow for package installation outside your packrat project folder: `packrat::disable(project = NULL, restart = TRUE)`, where `project` refers to the current Packrat project folder, and `restart = TRUE` will restart the R session.
 - To re-initialize Packrat run: `packrat::init("<path-to-packrat-project-folder>")`. This will automatically restart your R session.
-- A package can be removed from Packrat via: `remove.packages("viridis)`, but will remain in your packrat snapshot and can be restored with: `packrat::restore()`.
+- A package can be removed from Packrat via: `remove.packages("viridis)`, but will remain in your Packrat snapshot and can be restored with: `Packrat::restore()`.
 - The function `packrat::clean(dry.run=T)` will list any unused packages that were installed in your snapshot. You can remove them with: `packrat::clean()`.
 
 :::{note}
-For most cases, having a single Packrat directory is sufficient, unless you notice specific package conflicts or need different versions of the same package. A single packrat directory also saves from having to install the same dependencies multiple times in different locations.
+For most cases, having a single Packrat directory is sufficient, unless you notice specific package conflicts or need different versions of the same package. A single Packrat directory also saves from having to install the same dependencies multiple times in different locations.
 :::
 
 If the installation location is not setting to your project folder you may need to turn off these environments. In some cases, these folders could also be present in your `/work/groupname/<project-name>` directory.

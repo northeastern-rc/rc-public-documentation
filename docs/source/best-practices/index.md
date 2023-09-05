@@ -10,7 +10,7 @@ optimizingperformance
 software
 ```
 
-Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you'll find essential guidance for managing your home directory storage, checkpointing jobs, optimizing performance, and software best practices.
+Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your home directory storage, checkpointing jobs, optimizing performance, and software best practices.
 
 ::::{grid} 4
 

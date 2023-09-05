@@ -9,7 +9,7 @@ This page is regularly updated with information about system changes, updates, m
 
 **July 22, 2023:**
 
-- Update: We've updated our version of Python from 3.7 to 3.9 in the base module. Users who need to use Python 3.7 can still access it via the **`module load python/3.7`** command.
+- Update: We have updated our version of Python from 3.7 to 3.9 in the base module. Users who need to use Python 3.7 can still access it via the **`module load python/3.7`** command.
 
 **July 15, 2023:**
 
@@ -29,6 +29,6 @@ This page is regularly updated with information about system changes, updates, m
 
 **May 20, 2023:**
 
-- Update: We've added more GPUs to our system. Users can now request up to 8 GPUs per job.
+- Update: We have added more GPUs to our system. Users can now request up to 8 GPUs per job.
 
 Remember, if you have questions or encounter issues, you can always contact support, ask in our User Community and Forums, or check the relevant section of the documentation for guidance.

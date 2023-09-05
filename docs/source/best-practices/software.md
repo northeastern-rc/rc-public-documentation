@@ -13,7 +13,7 @@ Adhering to coding standards ensures your code is readable, maintainable, and le
 
 ## Version Control
 
-Utilizing a version control system like Git helps track changes, allows collaboration with others, and is essential for reproducibility.
+Utilizing a version control system like Git helps track changes, allows collaboration with others, and is essential for reputability.
 
 - **Commit Regularly**: Make frequent, small commits.
 - **Use Meaningful Commit Messages**: Describe what and why changes were made.
@@ -37,7 +37,7 @@ Implementing automated tests ensures that your code behaves as expected.
 
 ## Dependency Management
 
-Managing dependencies effectively avoids conflicts and ensures reproducibility.
+Managing dependencies effectively avoids conflicts and ensures reputability.
 
 - **Use Dependency Management tools** like Conda or virtualenv.
 - **Specify exact versions**: Note the specific versions of dependencies.
@@ -65,4 +65,4 @@ Effective collaboration fosters quality and productivity.
 
 ---
 
-These best practices will help develop high-quality, maintainable, and performant software suitable for HPC and other computational environments. Please always seek feedback from peers, and don't hesitate to consult the HPC support team for specific guidance.
+These best practices will help develop high-quality, maintainable, and performing software suitable for HPC and other computational environments. Please always seek feedback from peers, and don't hesitate to consult the HPC support team for specific guidance.

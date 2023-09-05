@@ -13,15 +13,15 @@ The `/scratch` space is only for temporary storage; this storage is not backed u
 :::
 
 **$HOME:** `/home/<username>` where `username` is your NU login, e.g., `/home/j.smith`
-- **Description:** All users are automatically given a `/home` when their account is created. This storage is mainly intended for storing relatively small files such as script files, source code, and software installation files. While `/home` is permanent storage backed up and replicated, `/home` is not performant storage. `/home` also has a small quota, so you should frequently check your space usage (use a command such as `du -h /home/<yourusername>` where `<yourusername>` is your username to see the total space usage). You should use your `/scratch` for running jobs and directing output files.
+- **Description:** All users are automatically given a `/home` when their account is created. This storage is mainly intended for storing relatively small files such as script files, source code, and software installation files. While `/home` is permanent storage backed up and replicated, `/home` is not permanent storage. `/home` also has a small quota, so you should frequently check your space usage (use a command such as `du -h /home/<yourusername>` where `<yourusername>` is your username to see the total space usage). You should use your `/scratch` for running jobs and directing output files.
 - **Quota:** 75GB
 
 **Scratch:** `/scratch/<username>`
-- **Description:** All users are automatically given a `/scratch` when their account is created. Scratch is a shared space for all users. The total storage available is 1.8 PB; however, while this is performant, it is for temporary use only. **It is not backed up.** Data on `/scratch` should be moved to another location for permanent storage as soon as possible. You should run your jobs from and direct output to your `/scratch` for best performance. However, moving your files from scratch is the best practice to avoid potential data loss.
+- **Description:** All users are automatically given a `/scratch` when their account is created. {term}`Scratch space` is a shared space for all users. The total storage available is 1.8 PB; however, while this is permanent, it is for temporary use only. **It is not backed up.** Data on `/scratch` should be moved to another location for permanent storage as soon as possible. You should run your jobs from and direct output to your `/scratch` for best performance. However, moving your files from scratch is the best practice to avoid potential data loss.
 - **Quota:** N/A
 
 **Work:** `/work/<groupname>`
-- **Description:** Research groups can request additional storage on `/work`. A PI can request this extra storage through the [New Storage Space Request]. This is performant, persistent, and long-term storage for storing data actively used for research. It can be accessed by all members of the research group who have the necessary access permissions, facilitating collaboration and seamless sharing of data within the group.
+- **Description:** Research groups can request additional storage on `/work`. A PI can request this extra storage through the [New Storage Space Request]. This is permanent, persistent, and long-term storage for storing data actively used for research. It can be accessed by all members of the research group who have the necessary access permissions, facilitating collaboration and seamless sharing of data within the group.
 - **Quota:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
 - **Access Request:** Students with research groups can request access to the PI’s storage on `/work`. To expedite the request process, we recommend that you inform the group owner that they will be receiving an email requesting their permission to grant you access to `/work` before you submit the request.
 
@@ -37,11 +37,11 @@ The `/research` storage tier is no longer provided. Please contact Research Comp
 ##  Archival Storage
 
 :::{important}
-If you are not connected to the campus internet, you must be connected to the university's VPN (GlobalProtect) before accessing the `/nese` system. You can find detailed information about downloading and using the GlobalProtect VPN in the [FAQ: VPN and remote access].
+If you are not connected to the campus internet, you must be connected to the university's {term}`VPN` (i.e., GlobalProtect) before accessing the `/nese` system. You can find detailed information about downloading and using the GlobalProtect VPN in the [FAQ: VPN and remote access].
 :::
 
 **NAME:** `/nese`
-- **Description:** This is archival, non-performant storage intended for researchers needing a long-term storage option for their data.
+- **Description:** This is archival, non-permanent storage intended for researchers needing a long-term storage option for their data.
 - **Quota:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
 
 

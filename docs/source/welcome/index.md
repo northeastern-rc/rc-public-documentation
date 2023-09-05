@@ -4,7 +4,7 @@
 :hidden:
 :maxdepth: 3
 
-welcome
+Welcome <welcome>
 services
 gettinghelp
 introtocluster

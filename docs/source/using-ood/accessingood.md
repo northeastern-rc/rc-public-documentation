@@ -2,9 +2,9 @@
 
 # Accessing Open OnDemand
 
-Open OnDemand (OOD) is a web portal to the Discovery cluster.
+Open OnDemand (OOD) is a web portal to the HPC cluster.
 
-This topic is for connecting to the Discovery cluster through the browser application Open OnDemand. If you want to access Discovery directly on your system rather than through a browser, please see {ref}`connect-to-cluster`, whether Mac or Windows.
+This topic is for connecting to the HPC cluster through the browser application Open OnDemand. If you want to access the HPC directly on your system rather than through a browser, please see {ref}`connect-to-cluster`, whether Mac or Windows.
 
 A cluster account is necessary for you to access OOD. If you need an account, see {ref}`getting-access`. After you have created a cluster account, **access the cluster through Open OnDemand (OOD) via the following steps:**
 
@@ -20,9 +20,3 @@ right-click on the video to see viewing options.
   Your browser does not support the video tag.
 </video>
 <!-- ![Alt text](../_static/video/OOD_access.mp4) -->
-
-(ood-next-steps)=
-
-## OOD: next steps
-
-After you are connected, you use the interactive apps in OOD. See {ref}`access-ood` for more information.

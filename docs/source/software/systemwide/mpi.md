@@ -102,7 +102,7 @@ export OMPI_MCA_mpi_abort_print_stack=1
 
 If you have a parallel debugger such as TotalView or DDT, you can use it with OpenMPI using the `mpiexec` command with the `-tv` or `-debug` options, respectively.
 
-Finally, remember to check your slurm job output files for any error messages or abnormal output. Sometimes, the issue may be with how you're running your job rather than with your MPI program itself.
+Finally, remember to check your slurm job output files for any error messages or abnormal output. Sometimes, the issue may be with how you are running your job rather than with your MPI program itself.
 
 ## Benchmarking OpenMPI Performance
 
@@ -121,7 +121,7 @@ To use these tools, you generally need to download and compile them, and then ru
 ## Developing with MPI
 
 ### Hello world program
-The fundamental concept in MPI is the communicator, which defines a group of processes that can send messages to each other. By default, all processes belong to the `MPI_COMM_WORLD` communicator. Here's a simple C++ program that using MPI:
+The fundamental concept in MPI is the communicator, which defines a group of processes that can send messages to each other. By default, all processes belong to the `MPI_COMM_WORLD` communicator. Here is a simple C++ program that using MPI:
 
 :::{code-block} c++
 #include <mpi.h>
@@ -146,7 +146,7 @@ int main(int argc, char** argv) {
 
 In this code, `MPI_Init` initializes the MPI environment, `MPI_Comm_size` gets the number of processes, `MPI_Comm_rank` gets the rank (ID) of the process, and `MPI_Finalize` ends the MPI environment. In the C/C++ language, the `#include <mpi.h>` header file needs to be added to compile MPI code.
 
-To understand how to run an MPI program, let's write a simple program that prints a `"Hello, World!"` message from each process.
+To understand how to run an MPI program, let us write a simple program that prints a `"Hello, World!"` message from each process.
 
 First, create a file called `hello_world.c` in your preferred text editor and add the following code:
 
@@ -199,7 +199,7 @@ sbatch job_script.sh
 You should see output in the `result.txt` file that shows `"Hello, World!"` messages from each process.
 
 ### MPI Communication: Send and Receive Operations
-MPI allows processes to communicate by sending and receiving messages. These messages can contain any type of data. Here's a simple example of using `MPI_Send` and `MPI_Recv` to send a number from one process to another:
+MPI allows processes to communicate by sending and receiving messages. These messages can contain any type of data. Here is a simple example of using `MPI_Send` and `MPI_Recv` to send a number from one process to another:
 
 :::{code-block} c++
 #include <mpi.h>
@@ -317,7 +317,7 @@ This will run the program on 4 processes.
 
 Just like in MPI, mpi4py allows you to perform point-to-point communication using the `send` and `recv` methods, and collective communication using methods like `bcast` (broadcast), `gather`, and `reduce`.
 
-Here's an example of point-to-point communication:
+Here is an example of point-to-point communication:
 
 :::{code-block} python
 from mpi4py import MPI
