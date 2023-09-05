@@ -69,37 +69,3 @@ Select **Cancel** when prompted with the **Build Recommended** option. The packa
 
 Do not attempt to create, edit or write files that are outside your personal student directory. Most "Permission Denied" errors are due to directories or files having read-only access permissions.
 :::
-
-## Submit Class Assignments
-
-:::{important}
-Due to the write-only access permissions on the **assignments** directory, it is required to use the command line interface (Linux Terminal) to submit assignments. **Using other methods, such as the JupyterLab interface or OOD file explorer, currently does not work**.
-:::
-
-1. To submit your assignment (for example, named: **Assignment1.ipynb**) to the **assignments** directory, open the JuypterLab new launcher by clicking the **File** top menu option, and then selecting **New Launcher**.
-
-1. Click on the **Terminal** option under **Other** to open a Linux terminal.
-
-1. Navigate to your personal directory by typing the following command (change the class name from `ALY6080` to your class name accordingly).
-
-    :::
-    cd /courses/ALY6080.202335/ALY6080.81373.202335/$USER
-    :::
-
-1. Where `$USER` is a saved shell variable for your username. You can optionally also replace it with your username.
-
-1. Check that your assignment file is visible in the command line by typing `ls`. Then, copy the assignment file to the **assignments** directory with this command (replace **Assignment1.ipynb** with your file name).
-
-    :::
-    cp Assignment1.ipynb ../../assignments
-    :::
-
-1. To remove an existing assignment, type (replace **Assignment1.ipynb** with your file name).
-
-    :::
-    rm ../../assignments/Assignment1.ipynb
-    :::
-
-1. Close the terminal tab when done.
-
-[discovery classroom use request]: https://bit.ly/NURC-Classroom
