@@ -22,8 +22,8 @@ Our cluster is a high-performance computing (HPC) resource available to the Nort
 
 ## Slurm
 
-We use the job scheduling manager `slurm` to perform vital actions in the cluster, including allocating access to a compute node for a duration of time so users can do their work. Slurm also allows the work that is performed on the cluster to be monitored (e.g., start time, end time, and memory resources used), and it manages the use of computing resources through a queue of pending jobs. 
+We use the job scheduling manager `slurm` to perform vital actions in the cluster, including allocating access to a compute node for a duration of time so users can do their work. Slurm also allows the work that is performed on the cluster to be monitored (e.g., start-time, end-time, and memory resources used), and it manages the use of computing resources through a queue of pending jobs. 
 
-To learn more about how to use slurm on the Northeastern cluster please see our {ref}` slurm documentation <_slurmguide>` or reach out to rchelp@northeastern.edu for any additional questions.
+To learn more about how to use slurm on the Northeastern cluster please see our {ref}` slurm documentation <slurm-guide-sw>` or reach out to [rchelp@northeastern.edu](mailto:rchelp%40northeastern.edu) for any additional questions.
 
 
