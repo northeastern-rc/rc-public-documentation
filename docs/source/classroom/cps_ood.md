@@ -27,18 +27,21 @@ The class instructor needs to fill in the: [Discovery Classroom Use Request] You
 1. For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab will launch.
 
     ::::{note}
-    If **Working Directory** is left blank, the session will launch in the main class folder (in this example `/courses/ALY6080.202335/ALY6080.81373.202335/DATA`). Alternatively, start the session directly from your personal working directory by entering: `/courses/ALY6080.202335/ALY6080.81373.202335/[username]`, where `[username]` is your username on Discovery. The instructions below assume the field is left blank.
+    If **Working Directory** is left blank, the session will launch in the main class folder (in this example `/courses/ALY6080.202335/data`). Alternatively, start the session directly from your personal working directory by entering: `/courses/ALY6080.202335/students/[username]`, where `[username]` is your username on Discovery. The instructions below assume the field is left blank.
     :::{code}
     courses/
     └── ALY6080.202335
-        ├── ALY6080.81373.202335
-        │   ├── DATA
-        |   ├── alice
-        │   ├── bob
-        │   └── charlie
-        └── DATA
+        ├── data
+        ├── staff
+        │   ├── doug
+        │   ├── evelyn
+        │   └── frank
+        └── students
+            │── alice
+            │── bab
+            └── cindy
     :::
-    The above file tree represents the folder structure for the `ALY6080.81373.202335` course.
+    The above file tree represents the folder structure for the `ALY6080.202335` course.
     ::::
 
 1. Click **Connect to Jupyter** to open JupyterLab. This will open a JupyterLab interface in another tab.
@@ -53,7 +56,7 @@ Select **Cancel** when prompted with the **Build Recommended** option. The packa
 
 1. You can navigate between the class folders using the left menu. The files in the shared class directory are read ony and the students do not have permissions to edit or remove the files. Your instructor may use the shared class directory to share files related to the classwork
 
-1. Navigate to your personal class directory under: `/courses/[coursename.termcode]/[coursename.CRN.termcode]/<your username>`. Now you can create and edit Jupyter notebook files here.
+1. Navigate to your personal class directory under: `/courses/[coursename.termcode]/students/<your username>`. Now you can create and edit Jupyter notebook files here.
 
 1. Open a new Python notebook session from the Launcher menu by clicking the **Python 3 (ipykernel)**.
 
