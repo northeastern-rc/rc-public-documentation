@@ -281,7 +281,7 @@ The primary job submission mechanism is via the `sbatch` command via the Linux c
 :::{code} bash
 $ sbatch <your_job_script>
 :::
-where <your_job_script> is a file containing the commands that the batch system will execute on your behalf. 
+where <your_job_script> is a file containing the commands that the batch system will execute on your behalf.
 :::{seealso}
 {ref}`using-sbatch`
 :::
@@ -335,7 +335,7 @@ to delete jobs from the queue. You can only delete jobs that you submitted.
 ::::{dropdown} What are the wall time limits for a partition?
 You can check the wall time limits for a partition with the following command
 :::{code} bash
-$ sinfo 
+$ sinfo
 :::
 
 ::::
@@ -842,7 +842,7 @@ You will get this error if you have reached the partition or per user limits as 
 ::::
 
 ::::{dropdown} Why does my SSH session automatically disconnect?
-SSH connections will time out either due to inactivity or network disruptions. If your sessions are disconnecting due to inactivity, one thing you can do to keep the SSH connection open is to have ssh send a periodic keep alive packet to the server so it will not timeout. Add the -o ServerAliveInterval=600 option to your ssh login command. SSH can be sensitive to any disruptions in the network which can be common with Wi-Fi networks. Sometimes the 'keep alive' setting prevents this. Other times, it may be that you have a setting on your Wi-Fi or ethernet adapter that tells the operating system it can put the device to sleep after a period of inactivity. This is especially common on Windows. Check your network adapters for 'Power Settings' and uncheck any options that tell the system it can disable the device to save power. This will vary by operating system so we recommend you conduct an internet search for the appropriate instructions.
+SSH connections will time out either due to inactivity or network disruptions. If your sessions are disconnecting due to inactivity, one thing you can do to keep the SSH connection open is to have ssh send a periodic keep alive packet to the server, so it will not timeout. Add the -o ServerAliveInterval=600 option to your ssh login command. SSH can be sensitive to any disruptions in the network which can be common with Wi-Fi networks. Sometimes the 'keep alive' setting prevents this. Other times, it may be that you have a setting on your Wi-Fi or ethernet adapter that tells the operating system it can put the device to sleep after a period of inactivity. This is especially common on Windows. Check your network adapters for 'Power Settings' and uncheck any options that tell the system it can disable the device to save power. This will vary by operating system so we recommend you conduct an internet search for the appropriate instructions.
 ::::
 
 
@@ -850,7 +850,7 @@ SSH connections will time out either due to inactivity or network disruptions. I
 Some users logging in through ssh may encounter this error message. If you receive this message, please see our instructions on how to clear this error.
 
 When I try to log in with ssh, nothing happens when I type my password!
-When you type your passaword, the ssh program does not echo your typing or move your cursor. This is normal behavior.
+When you type your password, the ssh program does not echo your typing or move your cursor. This is normal behavior.
 ::::
 
 ::::{dropdown} When running Firefox on the cluster, I get : “Firefox is already running, but is not responding. To open a new window, you must first close the existing Firefox process, or restart your system.” What can I do?
@@ -892,7 +892,7 @@ See the relevant wiki article.
 ::::
 
 :::{dropdown} What if my question does not appear here?
-Take a look at our User Guide. If your answer isn’t there, contact us.
+Take a look at our documentation (this). If your answer is not there, submit a [documentation request](https://github.com/northeastern-rc/rc-public-documentation/issues/new/choose) on GitHub or contact us via <rchelp@northeastern.edu>.
 :::
 
 :::{button-link} faq.html
