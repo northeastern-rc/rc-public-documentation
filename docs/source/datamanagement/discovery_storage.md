@@ -17,7 +17,7 @@ The `/scratch` space is only for temporary storage; this storage is not backed u
 - **Quota:** 75GB
 
 **Scratch:** `/scratch/<username>`
-- **Description:** All users are automatically given a `/scratch` when their account is created. {term}`Scratch space` is a shared space for all users. The total storage available is 1.8 PB; however, while this is permanent, it is for temporary use only. **It is not backed up.** Data on `/scratch` should be moved to another location for permanent storage as soon as possible. You should run your jobs from and direct output to your `/scratch` for best performance. However, moving your files from scratch is the best practice to avoid potential data loss.
+- **Description:** All users are automatically given a `/scratch` when their account is created. {term}`Scratch space` is a shared space for all users. The total storage available is 2.5PB; however, while this is permanent, it is for temporary use only. **It is not backed up.** Data on `/scratch` should be moved to another location for permanent storage as soon as possible. You should run your jobs from and direct output to your `/scratch` for best performance. However, moving your files from scratch is the best practice to avoid potential data loss.
 - **Quota:** N/A
 
 **Work:** `/work/<groupname>`
