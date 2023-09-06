@@ -1,11 +1,6 @@
 (faq)=
 # Frequently Asked Questions (FAQs)
 Below are some common questions and answers regarding our HPC cluster and its operation.
-```{dropdown}
-:open:
-
-Drop-down the item to see solution.
-```
 ## Cluster Details
 ::::{dropdown} What hardware is in the cluster?
 The cluster compute and storage capabilities are changing on a regular basis.
@@ -582,15 +577,7 @@ Back to the top
 ## Applications
 ### MATLAB
 :::{dropdown} How do I run MATLAB programs?
-You may use the interactive MATLAB interpreter on the test nodes. However, in order to run MATLAB programs through the batch system, you must compile your MATLAB source code into a standalone executable. This is required because there are not enough MATLAB licenses available to run the programs directly. To learn how to compile your MATLAB program please see our MATLAB wiki page.
-::::
-
-::::{dropdown} How do I compile a MATLAB program?
-Generally speaking, you will load the MATLAB module and then use the MATLAB compiler, mcc, to compile your MATLAB program(s). See our MATLAB wiki page for more detailed instructions.
-::::
-
-::::{dropdown} Why can't I check out a MATLAB compiler license?
-If you tried to use the MATLAB compiler, mcc, and received the message “Could not check out a compiler license” it is because Research Computing does not have its own MATLAB licenses but relies on the UF campus license. There are a limited number of MATLAB compiler licenses shared by the whole campus. When the license is checked out during an interactive MATLAB session, it does not get checked back in until the MATLAB session is terminated, which could take a long time depending on what the user is doing. Unfortunately, you will not be able to run mcc until a license becomes available.
+You may use the interactive MATLAB interpreter on the compute nodes after requesting a `srun` session and `module load matlab/<version>`.
 ::::
 
 :::{button-link} faq.html
