@@ -461,7 +461,7 @@ singularity pull docker://<container repository URL path>
 :::
 ::::
 
-::::{dropdown} Can I run application/container X on a GPU?
+::::{dropdown} Can I run my application/container on a GPU?
 Please check the documentation for your application/container before running on a GPU. The developer of the program/container will outline GPU support and commands for the program.
 ::::
 
@@ -488,48 +488,19 @@ Back to the top
 
 ## Development
 ::::{dropdown} How do I develop and test software?
-Use compute nodes for software development and testing. Connect to the cluster and use the following command to start a developmental session:
+Use compute nodes for software development and testing. Connect to the cluster and use the following command:
 
 :::{code} bash
-$ module load ufrc
-$ srundev
+$ srun --pty /bin/bash
 :::
 
-The srundev command can be modified to request additional time, processors, or memory, which have defaults of 10 minutes, 1 core, and 2GB memory, respectively. For example, to request a 60-minute session with 4 cores and 4GB memory, use:
+The `srun` command can be modified to request additional time, processors, and memory. Please refer to {ref}`using-srun` to see more configuration and options for this command.
 
-:::{code} bash
-$ module load ufrc
-$ srundev --time=60 --cpus-per-task=4 --mem-per-cpu=4gb
-:::
-
-Generally speaking, we use modules to manage our software environment including our PATH and LD_LIBRARY_PATH environment variables. To use any available software package that is not part of the default environment, including compilers, you must load the associated modules. For example, to use the Intel compilers and link against the fftw3 libraries you would first run:
-
-:::{code} bash
-$ module load intel
-$ module load fftw
-:::
-
-Which may be collapsed to the single command:
-
-:::{code} bash
-$ module load intel fftw
-:::
+We use `modules` to update our $PATH and $LD_LIBRARY_PATH environment variables. To use any available software package that is not part of the default environment, including compilers, you must load the associated modules. To see what is available on the HPC, please use `module avail`
 ::::
 
 ::::{dropdown} What compilers are available?
-We have two compiler suites, the GNU Compiler Collection (GCC) and the Intel Compiler Suite (Composer XE). The default environment provides access to the GNU Compiler collection while the Composer XE may be accessed by loading the intel module (preferably, the latest version).
-::::
-
-::::{dropdown} I need to push and commit code changes from the cluster account to my GitHub account. How do I set that up?
-You must first generate an ssh key and then copy it to your git repository. Here are the instructions for generating the ssh key and what to do on your git page:
-
-To generate an ssh key, see the following link: ssh key generation
-
-- Click on the drop-down menu next to my Git profile picture in the upper right corner; Select Settings; Click on SSH and GPG keys in the left column;
-- - Click on the New SSH Key button and followed the directions to upload your ssh key.
-- Make sure that the ssh key is in your authorized_keys file in your .ssh directory on the cluster.
-
-The next step is to clone the repository using the ssh link. If you have already cloned the repository using the http link and made a number of changes to your files, you won’t want to redo them. Rename the directory that was created when you first cloned the repository. Then, re-clone the repository using the ssh link and copy all the files you had changed to the new directory. Finally, push those changes back to the repository.
+We have the GNU and Intel compilers available on the HPC. Please use `module avail gcc` or `module avail intel` to see the versions we have on the HPC.
 ::::
 
 :::{button-link} faq.html
@@ -539,33 +510,11 @@ Back to the top
 :::
 
 ## Open OnDemand
-::::{dropdown} Why do I see a blank window when starting an OnDemand desktop?
-Occasionally, when users try to start an interactive session in OnDemand, the desktop displays as a blank blue or grey window with no applications menu or way to open a terminal window. Files get cached when sessions are opened and then either get corrupted or can't be used. To fix this problem, delete the following hidden subdirectories in your home directory and start a new OnDemand desktop session:
+::::{dropdown} Why does my Open OnDemand desktop or app show it's starting but then it immediately ends?
+There are two common reasons why you might not be able to launch an Open OnDemand session including interactive desktops and apps like JupyterLab Notebook and RStudio.
 
-:::{code} bash
-rm -rf ~/.vnc
-rm -rf ~/.cache
-rm -rf ~/.config/xfce4
-:::
-::::
-
-::::{dropdown} How can I access my project directory from a JupyterLab?
-Create a symbolic link in your home or work directory that points to your project directory. Then you'll be able to navigate through the symbolic link in the Jupyter Notebook. To create a symbolic link in your home directory called 'projects' run the `ln -s` command, replacing the full path of your project directory and your username in the example below:
-:::{code}
-ln -s /work/<group_name> $HOME/projects
-:::
-You'll then have the link `$HOME/projects` that takes you to your project directory.
-::::
-
-::::{dropdown} How can I fix the XFCE PolicyKit Agent error in OnDemand desktop sessions?
-If you see an error box that says XFCE PolicyKit Agent you can click the Close button and proceed with using the OnDemand desktop.
-::::
-
-::::{dropdown} Why does my OnDemand desktop or app show it's starting but then it immediately ends?
-There are two common reasons why you might not be able to launch OnDemand sessions including interactive desktops and apps like Jupyter Notebook and Matlab.
-
-You are over quota in your home directory. See more on managing OnDemand job data
-You have an Anaconda environment loading in your .bashrc environment file or are loading a Python module in your .bashrc file that is interfering with the OnDemand desktop setup. See also
+1. You are over quota in your `/home/$USER` directory. See {ref}`home-directory-storage-quota`
+2. You have a conda environment loading in your .bashrc environment file or are loading a Python module in your .bashrc file that is interfering with the Open OnDemand desktop. See {ref}`shell-environment-on-cluster`
 ::::
 
 :::{button-link} faq.html
