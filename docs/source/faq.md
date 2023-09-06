@@ -390,7 +390,7 @@ Several data storage options are available depending on your needs, such as `/ho
 :::
 
 :::{dropdown} Can my `/work` storage quota be increased?
-You can request a quota increase by submitting a [Storage Space Extension Request]:https://bit.ly/NURC-StorageExtension
+You can request a quota increase by submitting a [Storage Space Extension Request](https://bit.ly/NURC-StorageExtension)
 :::
 
 ::::{dropdown} Why can't I run jobs in my home directory?
@@ -420,40 +420,10 @@ Run `du -shc .[^.]* * /home/$USER` which will output:
 ::::
 
 ::::{dropdown} How long can I store files in /scratch?
-`/scratch` is designed to serve as fast, temporary storage for running jobs, and is not long-term storage. For this reason, files are periodically marked for deletion from all `/scratch` directories. Please review the `/scratch` filesystem policy for more details. Store longer-term files in your home directory or purchased storage.
-::::
-
-::::{dropdown} How do I share data in my `/scratch` or leased storage with a colleague?
-To share data from your `/scratch` directly with any other user, use Globus sharing. If your colleague also has an account on the cluster, he or she does not need to set up a personal endpoint but can simply log into the uva#main-DTN endpoint and navigate to his or her `/scratch` directory to transfer the files.
-
-If you wish to share data in leased space with a member of your group, be sure that permissions are set so that the group member can access your subdirectory. The college can then simply use the data directly, or copy it elsewhere. If you wish to share data from your leased storage to a colleague who is not a member of the group, use Globus sharing in the same manner as sharing `/scratch`.
-::::
-
-:::{dropdown} What do I need to do to work on the cluster with patient health information (PHI) restricted by HIPAA?
-the cluster meets the security and compliance requirements of the HITRUST standard. To set up a project that works with PHI, you must adhere by the policies and follow the procedures listed here.
-::::
-
-::::{dropdown} What do I need to do to work on the cluster with student data restricted by FERPA?
-the cluster meets the security and compliance requirements of the HITRUST standard. To set up a project that works with FERPA, you must adhere by the policies and follow the procedures listed here.
-::::
-
-::::{dropdown} What do I need to do to work on the cluster with export controlled data restricted by ITAR/EAR?
-the cluster has a secure enclave called ResVault, that has been certified to be compliant with NIST 800-171 and 800-53-moderate as required for handling controlled unclassified information (CUI) as specified in the DFARS. Follow the policies and procedures
-::::
-
-::::{dropdown} How can I check how full my directories are?
-CCR's iquota tool will provide you quota and usage for your home directory and any shared project or global scratch directories you may also have access to. You'll first need to authenticate with the ccrkinit command. Enter your password and 6 digit one time token (OTP) when prompted, as shown here:
-
-:::{code} bash
-[ccruser@vortex:~]$ ccrkinit
-Enter OTP Token Value:
-NOTE: You will not see the characters typed when entering your password and OTP.
-iquota --path /user/username
-iquota --path /projects/academic/groupname
-iquota --path /panasas/scratch/grp-groupname
+`/scratch` is designed to serve as fast, temporary storage for running jobs, and is not long-term storage. For this reason, files are periodically marked for deletion from all `/scratch` directories. Please review the `/scratch` filesystem policy for more details. Store longer-term files in your `/work/$PROJECT` directory. 
+:::{seealso}
+{ref}`data-storage`
 :::
-
-Alternatively, you can view this information on the ColdFront dashboard. More details about storage and quotas can be found here.
 ::::
 
 :::{button-link} faq.html
@@ -464,98 +434,40 @@ Back to the top
 
 ## Software
 ::::{dropdown} What software applications are available?
-The full list of applications installed on the cluster is available at the Installed Software wiki page.
-::::
-
-::::{dropdown} What software applications can run on the GPU partition?
-GPU-accelerated computing is intended for use by highly parallel applications, where computation on a large amount of data can be broken into many small tasks performing the same operation, to be executed simultaneously.  More simply put, large problems are divided into smaller ones, which can then be solved at the same time.
-
-Since GPU is a special purpose architecture, it supports restrictive programming models; one such model is NVIDIA’s CUDA. On the cluster, only applications that were written in CUDA can run on the GPU partition. Currently, these applications are:
-
-- Amber
-- LAMMPS
-- NAMD
-- Gromacs
-- KERAS
+The full list of applications installed on the cluster is available by using the `module avail` command from the terminal on the HPC.
+:::{seealso}
+{ref}`using-module`
+:::
 ::::
 
 ::::{dropdown} May I submit an installation request for an application?
-Yes, if the software you need is not listed on our Installed Software page, you may submit a support request to have it installed by Research Computing staff. Please observe the following guidelines:
+You can submit a [Software Installation Request](https://bit.ly/NURC-Software) ticket to the Research Computing team. 
 
-Provide a link to the website from which to download the software If there are multiple versions, be specific about the version you want Let us know if you require any options that are not a standard part of the application If the effort required to install the software is 4 hours or less, the request is placed in the work queue to be installed once an RC staff member is available to perform the work, usually within a few business days.
-
-If initial evaluation of the request reveals that the effort is significantly greater than 4 hours, we will contact you to discuss how the work can be performed. It may be necessary to hire Research Computing staff as a consulting service to complete large and complex projects.
-
-You may also install applications yourself in your home directory.
-
-Please only ask us to install applications that you know will meet your needs and that you intend to use extensively. We do not have the resources to build applications for testing and evaluation purposes.
-::::
-
-::::{dropdown} Why do I get the 'command not found' error message?
-The Linux command interpreter (shell) maintains a list of directories in which to look for commands that are entered on the command line. This list is maintained in the PATH environment variable. If the full path to the command is not specified, the shell will search the list of directories in the PATH environment variable and if a match is not found, you will get the “command not found” message. A similar mechanism exists for dynamically linked libraries using the LD_LIBRARY_PATH environment variable.
-
-To ease the burden of setting and resetting environment variables for different applications, we have installed a “modules” system. Each application has an associated module which, when loaded, will set or reset whatever environment variables are required to run that application – including the PATH and LD_LIBRARY_PATH variables.
-
-The easiest way to avoid “command not found” messages is to ensure that you have loaded the module for your application. See Modules for more information.
+You can also try and install your program locally with package mangers or compiling from source by following our documentation pages.
+:::{seealso}
+{ref}`package-managers` and {ref}`from-source`
+:::
 ::::
 
 ::::{dropdown} Can I install my software on the HPC cluster?
-Yes, you can. Please follow the guidelines in the 'Installing Your Own Software' section. If you encounter any issues, contact support.
+Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {ref}`from-source` sections. If you encounter any issues, contact Research Computing.
 ::::
 
 :::{dropdown} How do I use research software that’s already installed?
-We use the `lmod` system for managing software environments. Learn more about how to use `lmod`.
-::::
-
-::::{dropdown} Does RC install research software?
-Our staff will install software onto the cluster if it is of wide applicability to the user community. Software used by one group should be installed by the group members, ideally onto leased storage for the group. We can provide assistance for individual installations.
-
-For help installing research software on your PC, please contact Research Software Support at res-consult@virginia.edu.
-::::
-
-::::{dropdown} Is there any other way to install research software that I need?
-Some groups and departments have installed a bundle of software they need into shared space. Please see your departmental IT support personnel if your department has its own bundle.
+We use the `modules` system for managing software environments. Learn more about how to use `modules` from {ref}`using-modules`.
 ::::
 
 ::::{dropdown} Can I run this Docker container on the cluster?
-We do not run Docker on the cluster. Instead, we use Singularity. Singularity can run Docker images directly, or you can convert a Docker image to a Singularity image. To import existing Docker images, use the singularity pull command.
+We do not run Docker on the cluster due to security issues. Instead, we use Singularity. Singularity can run Docker images directly, or you can convert a Docker image to a Singularity image (.sif). To import existing Docker images, use the singularity pull command.
 
 :::{code} bash
 module load singularity
-singularity pull docker://account/image
+singularity pull docker://<container repository URL path>
 :::
-
-Software images built by Research Computing are hosted on Docker Hub. For example, to pull our PyTorch 1.5.1 image, run:
-
-:::{code} bash
-singularity pull docker://uvarc/pytorch:1.5.1
-:::
-
-Please visit this page for more details.
 ::::
 
 ::::{dropdown} Can I run application/container X on a GPU?
-Please check the user manual for your application/container before running on a GPU. For instance, scikit-learn does not have GPU support; hence using GPUs for scikit-learn will not help with your job performance but will only cost you more service units (see SU charge rate here) and prevent other users from using the GPUs.
-
-https://scikit-learn.org/stable/faq.html#will-you-add-gpu-support
-::::
-
-::::{dropdown} How can I make my Jupyter notebook from JupyterLab to run as a batch job on the cluster?
-Capture the information that you use to start up a JupyterLab session. It helps to take a screenshot of the web form where you enter the partition, number of cores, amount of memory, etc. You will need that information for requesting resources on a compute node.
-
-Note which kernel is used to run your notebook. This information will be needed later.
-
-Convert the notebook to a regular script. To do this, go into the notebook that you want to convert. In the upper left corner, click on `File > Export Notebook As > Export Notebook to Executable Script`. This will download the script onto your laptop. On my computer, this leaves a blank window on my screen. But, if I close that tab on my browser, the tab with the notebook returns. I’m now down with the notebook and can terminate the session.
-
-Upload the “executable script” to the cluster. In Open onDemand dashboard view, on the black ribbon across the top, click on `Files > Home Directory`. This will open a page that shows the files that you have in your home directory on the cluster. At the top of the page, toward the right, is a button labelled “Upload”. Click on that button. In the dialog box that appears, click on “Choose File”. This will allow you to go to the downloaded file and select it.
-
-Create a Slurm script to run your code. The Slurm script list the resources and instructions that are needed to run your “executable script”. See the following link:
-
-https://www.rc.virginia.edu/userinfo/rivanna/slurm/
-
-Open a terminal window on the cluster, and move to the location where your scripts are. We recommend using the web-based FastX application (see below). Once in a terminal window, type sbatch followed my the name of your Slurm script.
-
-https://www.rc.virginia.edu/userinfo/rivanna/login/#remote-desktop-access
+Please check the documentation for your application/container before running on a GPU. The developer of the program/container will outline GPU support and commands for the program.
 ::::
 
 :::{button-link} faq.html
@@ -566,8 +478,11 @@ Back to the top
 
 ## Classroom (course specific)
 
-::::{dropdown} How can I get my class access to CCR?
-CCR may be able to accommodate small classes that require small amounts of cycles on the primary UB-HPC cluster. Please contact us to discuss your course's needs. If you've already discussed with us, you should create a project and request allocations in ColdFront as detailed here. Students need to have created themselves a CCR system account before you can add them to your ColdFront project.
+::::{dropdown} How can I get my class access to the HPC?
+Please submit a [Classroom Access Request]() ticket in order for a classroom to get a access.
+:::{seealso}
+{ref}`classroom-faq-index`
+:::
 ::::
 
 :::{button-link} faq.html
