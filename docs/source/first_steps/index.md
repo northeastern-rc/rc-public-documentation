@@ -1,3 +1,4 @@
+(first-steps)=
 # First Steps
 
 ```{toctree}

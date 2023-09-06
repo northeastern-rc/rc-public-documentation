@@ -276,7 +276,7 @@ The primary job submission mechanism is via the `sbatch` command via the Linux c
 :::{code} bash
 $ sbatch <your_job_script>
 :::
-where <your_job_script> is a file containing the commands that the batch system will execute on your behalf. 
+where <your_job_script> is a file containing the commands that the batch system will execute on your behalf.
 :::{seealso}
 {ref}`using-sbatch`
 :::
@@ -562,7 +562,35 @@ other::r--
 ::::
 
 ::::{dropdown} Why am I getting a `QOSMaxSubmitJobPerUserLimit` error when I try to submit a job?
-You may see this error message when you are submitting more jobs than permitted to run on the partition at a given time. These limits are discussed in {ref}`partition-names`
+You may see this error message when you are submitting more jobs than permitted to run on the partition at a given time. These limits are discussed in {ref}`partition-names`.
+
+:::{code} text
+sbatch: error: QOSMaxSubmitJobPerUserLimit
+sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
+:::
+
+You will get this error if you have reached the partition or per user limits as described here. For example, if you have 1000 jobs in the general-compute partition and try to submit another one, you will get this error. If you've already launched one viz desktop, you've reached your limit. Wait for some of your jobs to finish and submit more at that time.
+::::
+
+::::{dropdown} Why does my SSH session automatically disconnect?
+SSH connections will time out either due to inactivity or network disruptions. If your sessions are disconnecting due to inactivity, one thing you can do to keep the SSH connection open is to have ssh send a periodic keep alive packet to the server, so it will not timeout. Add the -o ServerAliveInterval=600 option to your ssh login command. SSH can be sensitive to any disruptions in the network which can be common with Wi-Fi networks. Sometimes the 'keep alive' setting prevents this. Other times, it may be that you have a setting on your Wi-Fi or ethernet adapter that tells the operating system it can put the device to sleep after a period of inactivity. This is especially common on Windows. Check your network adapters for 'Power Settings' and uncheck any options that tell the system it can disable the device to save power. This will vary by operating system so we recommend you conduct an internet search for the appropriate instructions.
+::::
+
+
+::::{dropdown} Why am I seeing WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED when I log in?
+Some users logging in through ssh may encounter this error message. If you receive this message, please see our instructions on how to clear this error.
+
+When I try to log in with ssh, nothing happens when I type my password!
+When you type your password, the ssh program does not echo your typing or move your cursor. This is normal behavior.
+::::
+
+::::{dropdown} When running Firefox on the cluster, I get : “Firefox is already running, but is not responding. To open a new window, you must first close the existing Firefox process, or restart your system.” What can I do?
+From your home directory on the cluster, run the commands:
+
+:::{code} bash
+rm -rf ~/.mozilla/firefox/*.default/.parentlock
+rm -rf ~/.mozilla/firefox/*.default/lock
+:::
 ::::
 
 :::{button-link} faq.html
@@ -591,9 +619,10 @@ You can always open a support request when you have questions even if you are no
 Please see {ref}`getting-help`
 ::::
 
-::::{dropdown} What if my question does not appear here?
-Take a look at our documentation. If your answer isn’t there, contact Research Computing using {ref}`getting-help`.
-::::
+
+:::{dropdown} What if my question does not appear here?
+Take a look at our documentation (this). If your answer is not there, submit a [documentation request](https://github.com/northeastern-rc/rc-public-documentation/issues/new/choose) on GitHub or contact us via <rchelp@northeastern.edu>.
+:::
 
 :::{button-link} faq.html
 :color: primary
