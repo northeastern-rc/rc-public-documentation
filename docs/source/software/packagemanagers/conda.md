@@ -7,26 +7,29 @@
 # Conda
 [Conda] is an open-source environment and package manager. [Miniconda] is a free installer for Conda and Python and comes with a few other packages. [Anaconda] is also a package manager that has a much larger number of packages pre-installed.
 
-:::::{note}
-::::{sidebar}
-:::{seealso}
-{ref}`data-storage`.
-:::
-::::
-We recommend not building your Miniconda and Conda environments inside your `/home` due to its limited space quota, but use `/work`. If your group needs space on `/work`, the PI can make a [New Storage Space request].
-:::::
+## Managing Conda Environments
 
 (creating-python)=
-## Creating a Python Environment
+### Creating Environments
 
-Using a locally installed Conda virtual environment is highly recommended to install the specific packages you need. You can also have multiple environments with different packages for research projects or testing purposes. This procedure uses the Anaconda module already available on the cluster.
+:::::{note}
+We recommend avoiding building Conda environments in your `/home`, for its space quota. Instead, Use `/work`, which can be requested by PIs for groups in need of space `/work`.
+:::{seealso}
+{ref}`Learn about storage options <data-storage>` and [Submit New Storage Space request].
+:::
 
-If you are on a login node, move to a compute node by typing:
+:::::
+
+
+Installing local virtual environment using Conda is recommended on the cluster. You can have multiple environments with different packages for each, which allows project's environments to be independent of others. You only have to load the `anaconda3` module.
+
+From the login node, log-in to a compute node.
 
 :::{code-block} bash
 ---
 caption: |
-    Requesting 1 node with 1 CPU core and load anaconda.
+    Request one node on the `short` partition with 1 CPU core. Then, load the `anaconda3/2022.05` module.
+linenos: true
 ---
 
 srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
@@ -48,13 +51,13 @@ source activate /<path>/<environment-name>
 Your command line prompt will then include the path and name of environment.
 
 :::{code} bash
-(/<path>/<environment-name>) [username@c2001 dirname]$
+(/<path>/<environment-name>) [<username>@c2001 dirname]$
 :::
 
 ::::{tip}
 The `conda config --set env_prompt '({name}) '` command modifies your `.condarc` to show only the environment, which displays as follows:
 :::{code} bash
-(<environment-name>) [username@c2000 dirname]$
+(<environment-name>) [<username>@c2000 dirname]$
 :::
 ::::
 
@@ -73,6 +76,51 @@ To delete a Conda environment and all of its related packages, run:
 :::{code} bash
 conda remove -n yourenvironmentname --all
 :::
+
+### Listing Environments
+You can view the environments you've created in your home directory by using the following command
+:::{code} bash
+conda env list
+:::
+
+:::{code} bash
+# conda environments:
+#
+MlGenomics               $HOME/.conda/envs/MlGenomics
+base                     $HOME/miniconda3
+:::
+
+To list the software packages within a specific environment, use
+:::{code} bash
+conda list --name env_name
+:::
+
+If you've created an environment in a different location, you can still list its packages using:
+:::{code} bash
+conda list --prefix /path/to/env
+:::
+
+### Exporting Environment
+For ensuring reproducibility, it's recommended to export a list of all packages and versions in an environment to an environment file. This file can then be used to recreate the exact environment on another system or by another user. It also serves as a record of the software environment used for your analysis.
+
+### Removing Environments
+When you need to remove an environment located in your home directory, execute:
+:::{code} bash
+conda env remove --name env_name
+:::
+
+For environments located elsewhere, you can remove them using:
+:::{code} bash
+rm -rf /path/to/env
+:::
+
+### Clean Conda Environment
+To remove packages that are no longer used by any environment and any downloaded tarballs stored in the conda package cache, run:
+:::{code} bash
+conda clean --all
+:::
+
+By following these guidelines, you can efficiently manage your Conda environments and packages, ensuring reproducibility and a clean system.
 
 (mini-conda)=
 
@@ -135,5 +183,4 @@ Best practices for home storage: {ref}`cleaning-conda`.
 [conda]: https://docs.conda.io/en/latest/
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [Should I use Anaconda or Miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
-[Storage Accessible on Discovery]: ../datamanagement/discovery_storage.md
-[New Storage Space request]: https://bit.ly/NURC-NewStorage
+[Submit New Storage Space request]: https://bit.ly/NURC-NewStorage
