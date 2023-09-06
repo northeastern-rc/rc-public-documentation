@@ -152,7 +152,7 @@ Activate the base Miniconda environment
 source <dir>/bin/activate
 :::
 
-You can now create a new environment with this command where we're using python version 3.8:
+You can now create a new environment with this command where we are using python version 3.8:
 
 :::{code-block} bash
 conda create --name my-py38env python=3.8

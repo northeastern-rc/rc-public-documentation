@@ -201,7 +201,7 @@ Code examples can help readers understand how to use a feature or solve a proble
 - **GitHub**: Reference the repo if snippets from another RC GitHub project are referred to.
 
 ::::{note}
-Commented code, along with well-written self-documenting code, is a good way to avoid being too verbose. In other words, consider the purpose of the steps being presented, and if the purpose is using OpenMPI, as an example, there is no need to have a single code block for every step (e.g., put the loading of modules, creating of conda, changing directories, etc., in the same block). If you believe it is useful to add comments or provide a `{seealso}` to point to a page on Conda or modules, go ahead, but let's not repeat information and saturate our readers: **BE COMPLETE, YET CONCISE, WITH CODE.**
+Commented code, along with well-written self-documenting code, is a good way to avoid being too verbose. In other words, consider the purpose of the steps being presented, and if the purpose is using OpenMPI, as an example, there is no need to have a single code block for every step (e.g., put the loading of modules, creating of conda, changing directories, etc., in the same block). If you believe it is useful to add comments or provide a `{seealso}` to point to a page on Conda or modules, go ahead, but let us not repeat information and saturate our readers: **BE COMPLETE, YET CONCISE, WITH CODE.**
 
 :::{tip}
 Long code snippets are easier to read when presented on several lines, with new lines added strategically. For instance, if command-line, use `\` to separate key-value when many arguments are passed.
@@ -234,7 +234,7 @@ Where *section* is the top-level index listed in the table of contents and *file
 
 (links-references)=
 ##  Links and References
-Links and references are crucial for helping users navigate your content and providing additional context. Here's how you can effectively use them in your documentation:
+Links and references are crucial for helping users navigate your content and providing additional context. Here is how you can effectively use them in your documentation:
 - Use descriptive link text instead of generic phrases like "click here" or "learn more."
 - Regularly check for broken links.
 - Please refer to external sources when necessary and provide proper attribution.
@@ -257,12 +257,12 @@ align: left
   - Read our comprehensive installation guide.
 :::
 
-- Attribution: If you're citing external sources or using someone else's work (e.g., images, code snippets), attribute the source correctly.
+- Attribution: If you are citing external sources or using someone else's work (e.g., images, code snippets), attribute the source correctly.
 
 ##  Images and Diagrams
 Visual content like images and diagrams can significantly enhance your documentation. Here are some guidelines:
-- **High-Quality Images**: Always use high-resolution images that are clear and easy to see. If you're using screenshots, please make sure they accurately represent the current version of your product or interface.
-- **Descriptive Alt Text**: Always provide alt text for your images. The alt text describes the image for people who can't see it, whether due to visual impairments, technical issues, or because they're using a screen reader.
+- **High-Quality Images**: Always use high-resolution images that are clear and easy to see. If you are using screenshots, please make sure they accurately represent the current version of your product or interface.
+- **Descriptive Alt Text**: Always provide alt text for your images. The alt text describes the image for people who cannot see it, whether due to visual impairments, technical issues, or because they are using a screen reader.
 - **Simple Diagrams**: Keep your diagrams simple. Avoid including unnecessary details that could confuse your readers.
 - **Consistent Style**: If you use multiple diagrams, ensure they have a consistent style and use the same symbols and conventions.
 

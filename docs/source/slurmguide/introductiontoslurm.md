@@ -7,7 +7,7 @@ Slurm is designed to accommodate the complex needs of large-scale computational 
 It is the software on the HPC that provides functionalities such as {ref}`slurm-arrays`, {ref}`job-management`, view {ref}`account-information`, and check the {ref}`cluster-and-node-states`.
 
 ##  Slurm on HPC
-HPC systems are designed to perform complex, computationally intensive tasks. For example, users can specify complex workflows of jobs where specific jobs depend on others, and Slurm will manage the scheduling and execution of these workflows. Efficiently managing these tasks and resources in such an environment is a daunting challenge. That's where Slurm comes into play.
+HPC systems are designed to perform complex, computationally intensive tasks. For example, users can specify complex workflows of jobs where specific jobs depend on others, and Slurm will manage the scheduling and execution of these workflows. Efficiently managing these tasks and resources in such an environment is a daunting challenge. That is where Slurm comes into play.
 
 Slurm allows users to submit their computational tasks as jobs to be scheduled on the cluster's compute nodes. Its role-based access control ensures proper resource allocation and job execution, preventing resource conflicts.
 
@@ -24,7 +24,7 @@ To understand the Slurm workload manage, which will allow you to properly levera
 This guide is for HPC users: researchers intending to use Slurm-based clusters for their computation tasks, system administrators managing HPC environments, and even seasoned HPC users looking to brush up on their knowledge. It progresses from fundamental to advanced topics, making it a valuable resource for a broad audience.
 
 ## Slurm: Basic Concepts
-Before we delve into using Slurm, it's essential to grasp some fundamental concepts related to its operation.
+Before we delve into using Slurm, it is essential to grasp some fundamental concepts related to its operation.
 
 ### Nodes
 In the context of Slurm, a 'node' refers to a server within the HPC cluster. Each node possesses its resources, such as CPUs, memory, storage, and potentially GPUs. Slurm manages these nodes and allocates resources to the tasks.
@@ -50,9 +50,9 @@ sacctmgr show associations user=<yourusername>
 After you have determined what accounts your username is associated with, if you have more than one account association, you can use the `account=` flag with your usual `srun` or `sbatch` commands.
 
 ### Jobs, Job Steps, and Job Arrays
-A **job** in Slurm is a user-defined computational task that's submitted to the cluster for execution. Each job has one or more **job steps**, sub-tasks that are part of a larger job and can be executed in parallel or sequentially.
+A **job** in Slurm is a user-defined computational task that is submitted to the cluster for execution. Each job has one or more **job steps**, sub-tasks that are part of a larger job and can be executed in parallel or sequentially.
 
-**Job arrays** are a series of similar jobs that differ only by the array index. They're especially useful when you want to execute the same application with different inputs.
+**Job arrays** are a series of similar jobs that differ only by the array index. They are especially useful when you want to execute the same application with different inputs.
 
 ### Tasks
 Tasks are the individual processes that run within a job step. They could be single-threaded or multi-threaded and can run on one or more nodes.

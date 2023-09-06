@@ -246,7 +246,7 @@ The `state_dict` can be saved to a file using PyTorch’s `torch.save` function 
 
 PyTorch also provides the ability to save and load the entire model, including the model's architecture and optimizer state, using the `torch.save` and `torch.load` functions. This allows for complete checkpointing of a model's state.
 
-It's important to note that the `state_dict` only contains information about the model's parameters, not the optimizer or other training-related information. So, to save the optimizer state, you also need to save it separately and load it back when loading the model.
+It is important to note that the `state_dict` only contains information about the model's parameters, not the optimizer or other training-related information. So, to save the optimizer state, you also need to save it separately and load it back when loading the model.
 
 In conclusion, the model state in PyTorch represents the values of all the parameters, weights, and biases that define the model's behavior. The state is stored in the `state_dict` and can be saved and loaded for checkpointing purposes. By saving the model state periodically during training, you can ensure that your progress is recovered during a crash or interruption.
 #### Saving a PyTorch Model

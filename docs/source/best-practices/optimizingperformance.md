@@ -49,7 +49,7 @@ Leveraging profiling tools to identify bottlenecks and areas for improvement in 
 - **Always Profile First**: Use profiling tools to find bottlenecks before optimizing any code.
 - **Regular Monitoring**: Monitor the job's performance and make necessary adjustments.
 - **Use Existing Libraries**: Often, existing libraries are optimized and can save you time.
-- **Documentation and Version Control**: Keep your code well-documented and use version control for reproducibility.
+- **Documentation and Version Control**: Keep your code well-documented and use version control for reputability.
 
 ## Further Reading
 - [Intel's Optimization Guide]

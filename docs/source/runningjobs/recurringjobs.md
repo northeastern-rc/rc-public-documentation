@@ -28,11 +28,11 @@ All of your `scrontab` jobs will start with your home directory as the working d
 
 ## Cron syntax
 
-Crontab's syntax is specified in five columns, which specify minutes, hours, days of the month, months, and days of the week. If you're new to crontab, using a helper application to generate your cron date fields may be easiest. Two popular options are [crontab-generator] and [cronhub.io]. Alternatively, use shorthand syntax such as `@hourly`, `@daily`, `@weekly`, `@monthly`, and `@yearly` instead of the five columns.
+Crontab's syntax is specified in five columns, which specify minutes, hours, days of the month, months, and days of the week. If you are new to crontab, using a helper application to generate your cron date fields may be easiest. Two popular options are [crontab-generator] and [cronhub.io]. Alternatively, use shorthand syntax such as `@hourly`, `@daily`, `@weekly`, `@monthly`, and `@yearly` instead of the five columns.
 
 ## What to Run
 
-If you're running a script, it must be marked as executable. Jobs handled by `scrontab` do not run in a full login shell. Therefore, if you have customized your `.bashrc` file, you need to add the following line to your script to ensure that your environment is set up correctly:
+If you are running a script, it must be marked as executable. Jobs handled by `scrontab` do not run in a full login shell. Therefore, if you have customized your `.bashrc` file, you need to add the following line to your script to ensure that your environment is set up correctly:
 
 :::{code} bash
 source ~/.bashrc

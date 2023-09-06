@@ -2,7 +2,8 @@
 
 # Getting Access
 
-## Request an account
+(request-an-account)=
+## Request Account
 :::{important}
 If you previously had access to Discovery but are now working with a different PI, you should submit a [ServiceNow RC Access Request form] and enter the name of your current PI in the Sponsor field. This will link your account to your current PI and expedite updating your account with any of your current PI's resources on Discovery, such as shared storage or a private partition.
 :::
@@ -14,8 +15,6 @@ For **non-Northeastern personnel**, request a Northeastern sponsored via [How do
 :::
 
 To access Discovery, you must first have an account. You can request an account through ServiceNow but need a Northeastern username and password. If you are new to the university or a visiting researcher, you should work with your sponsor to obtain a Northeastern username and password.
-
-
 
 **To request an account, follow these steps:**
 
@@ -53,8 +52,6 @@ If you are attempting to transfer data, we have a dedicated transfer node that y
 :::{seealso}
 {ref}`transferring-data`.
 :::
-
-[//]: # (If you have any questions or need further assistance, please email us at [rchelp@northeastern.edu] or book a consultation using the link on our [Consultation page].)
 ::::
 
 ## Routine Cluster Maintenance
@@ -65,7 +62,7 @@ Routine cluster maintenance is performed on the first Tuesday of each month. RC 
 Users can also check the maintenance status via [IT Maintenance and Status page].
 :::
 
-## MGHPCC annual shutdown
+## MGHPCC Annual Shutdown
 
 The Massachusetts Green High Performance Computing Center (MGHPCC) conducts an annual shutdown for maintenance work. During this shutdown, all RC-managed services are powered down and unavailable for approximately four days. RC will send frequent reminders leading up to the shutdown to ensure that users are able to plan accordingly.
 
@@ -73,9 +70,9 @@ The Massachusetts Green High Performance Computing Center (MGHPCC) conducts an a
 
 All routine cluster maintenance, emergency maintenance, and annual shutdown maintenance information will be posted to the [IT Statuspage]. Please subscribe to ensure you receive updates on the status of all ITS systems.
 
-## Prepare for cluster maintenance
+## Preparing Cluster Maintenance
 
-To ensure that your job scripts account for the scheduled shutdown period of the cluster, use the `t2sd` script in the `--time` option when submitting your jobs. This script calculates the remaining time until the cluster becomes unavailable and sets the appropriate time limit for your job. Here's an example of how to use it.
+To ensure that your job scripts account for the scheduled shutdown period of the cluster, use the `t2sd` script in the `--time` option when submitting your jobs. This script calculates the remaining time until the cluster becomes unavailable and sets the appropriate time limit for your job. Here is an example of how to use it.
 
 - If you usually use the `srun` command:
 
@@ -89,9 +86,9 @@ srun --time=$(t2sd) <srun args>
 sbatch --time=$(t2sd) script.sbatch
 :::
 
-Note that if you usually run your jobs on a partition with short time limits (e.g., debug or express), you only need to add the `$(t2sd)` option once it's closer to the start of the maintenance window. Use `$(t2sd)` only if the time remaining before the start of the maintenance period is less than the default time limit of the partition.
+Note that if you usually run your jobs on a partition with short time limits (e.g., debug or express), you only need to add the `$(t2sd)` option once it is closer to the start of the maintenance window. Use `$(t2sd)` only if the time remaining before the start of the maintenance period is less than the default time limit of the partition.
 
-For instance, the default time limit for the express partition is 60 minutes. If you want to run a job on the express partition a day before the maintenance is scheduled to start, you wouldn't need to add the `$(t2sd)` option. However, if you wanted to run your job on the express partition 2 hours before the maintenance start time, you would need to include the `$(t2sd)` option to account for the remaining time.
+For instance, the default time limit for the express partition is 60 minutes. If you want to run a job on the express partition a day before the maintenance is scheduled to start, you would not need to add the `$(t2sd)` option. However, if you wanted to run your job on the express partition 2 hours before the maintenance start time, you would need to include the `$(t2sd)` option to account for the remaining time.
 
 :::{seealso}
 {ref}`partition-names` for more information about available partitions.

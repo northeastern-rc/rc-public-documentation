@@ -3,6 +3,7 @@
 
 The queuing system in a high-performance computing (HPC) environment manages and schedules computing tasks. Our HPC cluster uses the Slurm Workload Manager as our queuing system. This section aims to help you understand how the queuing system works and how to interact effectively.
 
+(introduction-to-queuing-systems)=
 ## Introduction to Queuing Systems
 
 The Slurm scheduler manages jobs in the queue. When you submit a job, it gets placed in the queue. The scheduler then assigns resources to the job when they become available, according to the job's priority and the available resources.

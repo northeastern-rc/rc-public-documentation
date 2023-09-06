@@ -16,13 +16,19 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Cluster Manager
       A software system responsible for monitoring and managing the health, status, and communication among nodes in a cluster.
 
+   Compute Node
+      TBD.
+
    Concurrency
       The ability of the system to handle multiple tasks or jobs simultaneously, without waiting for each task to complete before starting another.
+
+   Container
+      TBD.
 
    Core
       A processor within a CPU. Each core can execute its tasks.
 
-   CPU (Central Processing Unit)
+   Central Processing Unit (CPU)
       The primary component of a computer that performs most processing inside the computer. CPUs can have multiple cores.
 
    Fair Share Allocation
@@ -37,8 +43,11 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Home Directory
       A user's directory in the cluster where personal files, application settings, and other user-specific data are stored.
 
-   HPC (High-Performance Computing)
+   High-Performance Computing (HPC)
       The use of parallel processing for running advanced application programs efficiently, reliably, and quickly. It's often used for scientific research, big data analysis, and modeling complex systems.
+
+   InfiniBand (IB)
+      TBD.
 
    Job
       A set of computations a user submits to the HPC cluster for execution.
@@ -46,13 +55,19 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Job Dependency
       The condition where one job relies on the successful completion of another job before it can start, ensuring proper sequencing of tasks.
 
+   Job Priority
+      TBD.
+
    Job Script
       A file that contains a series of commands that the HPC cluster will execute.
+
+   Login Node
+      TBD.
 
    Module
       In the context of HPC, a module is a bundle of software that can be loaded or unloaded in the user's environment.
 
-    Message Passing Interface (MPI)
+   Message Passing Interface (MPI)
       A standardized and portable message-passing system used to enable communication between nodes in a parallel computing environment.
 
    Node
@@ -60,6 +75,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
 
    Node Allocation
       The process of reserving a set of nodes for a specific job, ensuring that the required resources are available for successful execution.
+
+   Open OnDemand (OOD)
+      TBD.
 
    Overcommitment
       Allowing more resources to be allocated to jobs than physically available, relying on intelligent scheduling and efficient resource management.
@@ -72,6 +90,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
 
    Partition
       A division of the cluster resources. Each partition can have different configurations, such as different types of nodes and different access policies.
+
+   Quota
+      TBD.
 
    Queue
       A waiting line for jobs ready to be executed but waiting for resources to become available.
@@ -91,11 +112,17 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Scheduler
       A program that manages the cluster's resources and allocates them to jobs based on priority, requested resources, and fair use policies.
 
+   Singularity
+      TBD.
+
    Slurm
       An open-source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small HPC clusters.
 
    Task
       A unit of work within a job that can be executed independently. A job can consist of multiple tasks.
+
+   VPN
+      TBD.
 
 -------
 
