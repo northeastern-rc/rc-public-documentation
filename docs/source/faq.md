@@ -83,9 +83,9 @@ A faculty or research staff member must sponsor your HPC account request. Facult
 ::::
 
 ::::{dropdown} How do I log on to the cluster?
-Use an SSH client and connect to `login.discovery.neu.edu`. Instructions for using ssh and other login tools, as well as recommended clients for different operating systems, as described in {ref}`shell-environment-on-cluster`. You can also access the cluster through our Web-based interface {term}`Open OnDemand (OOD)`. {ref}`Learn more about acessing OOD <access-ood>`.
+Use an SSH client and connect to `login.discovery.neu.edu`. Instructions for using ssh and other login tools, as well as recommended clients for different operating systems, as described in {ref}`shell-environment-on-cluster`. You can also access the cluster through our Web-based interface Open OnDemand (OOD).
 :::{seealso}
-{ref}`connect-to-cluster`.
+{ref}`connect-to-cluster` and {ref}`intro-to-ood-index`
 :::
 ::::
 
@@ -454,7 +454,7 @@ Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {r
 ::::
 
 :::{dropdown} How do I use research software that’s already installed?
-We use the `modules` system for managing software environments. Learn more about how to use `modules` from {ref}`using-modules`.
+We use the `modules` system for managing software environments. Learn more about how to use `modules` from {ref}`using-module`.
 ::::
 
 ::::{dropdown} Can I run this Docker container on the cluster?
@@ -479,7 +479,7 @@ Back to the top
 ## Classroom (course specific)
 
 ::::{dropdown} How can I get my class access to the HPC?
-Please submit a [Classroom Access Request]() ticket in order for a classroom to get a access.
+Please submit a [Classroom Access Request](https://bit.ly/NURC-Classroom) ticket in order for a classroom to get a access.
 :::{seealso}
 {ref}`classroom-faq-index`
 :::
@@ -593,9 +593,6 @@ Generally speaking, you will load the MATLAB module and then use the MATLAB comp
 If you tried to use the MATLAB compiler, mcc, and received the message “Could not check out a compiler license” it is because Research Computing does not have its own MATLAB licenses but relies on the UF campus license. There are a limited number of MATLAB compiler licenses shared by the whole campus. When the license is checked out during an interactive MATLAB session, it does not get checked back in until the MATLAB session is terminated, which could take a long time depending on what the user is doing. Unfortunately, you will not be able to run mcc until a license becomes available.
 ::::
 
-### VSCode
-### Stata
-
 :::{button-link} faq.html
 :color: primary
 :align: center
@@ -604,134 +601,32 @@ Back to the top
 
 ## Common Errors and Issues
 ::::{dropdown} Why can't I log in?
-This is a very generic question that is difficult for us to answer. CCR supports many services. If you were to ask this question in a help ticket we would respond with: What are you trying to login to? Are you getting any error messages? So we'll provide links here to the primary services CCR users login to and the corresponding documentation:
-
-OnDemand
-HPC clusters command line SSH or SFTP logins
-Lake Effect Research Cloud Horizon Dashboard
-Common errors:
-
-SSH error "no supported authentication methods available": SSH keys are required for command line SSH and SFTP access to CCR's login nodes. Password logins are not accepted. Please see more info here
-SSH error "Permission denied (publickey)": You either do not have your SSH public key uploaded to your CCR account (see error above) or you are not specifying the private key on your personal device when trying to login to CCR. See this page for more info
-Missing home directory: Your account hasn't been provisioned yet. See here for more info
-Password expired: Reset your password using the identity management portal. instructions can be found here
-Invalid credentials: This means either your password, one time token, or both were entered incorrectly.
-Access denied, or You don't have access to this resource: If receiving this when attempting to login to ColdFront or OnDemand, this means you do not have two-factor authentication enabled. 2FA is required. Follow these instructions to enable it.
-Bad request or Server not available when trying to log in to OnDemand: These are often caused by corrupted cache files in our browser. Clear your browser cache and cookies data and restart your browser or try a different browser. Incognito windows often do not solve this problem.
-::::
-
-::::{dropdown} Why can I log in to the help portal but not my NU account?
-The Freshdesk help desk portal accounts are separate from our NU system accounts. This allows people who do not yet have a NU account to request help from NU staff. For more info on CCR accounts, see our Getting Access page. For more info on the help desk portal, see here.
+This is a very generic question that is difficult for us to answer. Research Computing supports many services. If you were to ask this question in a help ticket we would respond with: What are you trying to login to? Are you getting any error messages?
 ::::
 
 ::::{dropdown} Why does my application keep getting killed on the login nodes?
-Login nodes have a 15-minute time limit on running processes and are not intended for running applications. Please submit a job to the cluster for running or debugging applications or use a compile node for installing software.
-::::
-
-::::{dropdown} Why do I get "Fatal system error" or "Account already exists" error when creating a new account?
-When trying to create a new CCR account, you get an error that says "fatal system error" or "account with this username already exists" please contact CCR help. Staff will need to take manual action to rectify the problem.
-::::
-
-::::{dropdown} Why am I getting 'no space left on device' errors?
-If you're sure you're not over quota in either file size or number of files, it may be an issue with file permissions. In the shared project and Panasas scratch directories, users must ensure the group ownership of a file or directory is set to the faculty or project group of that directory. This is set automatically for new files and when copying files. However, sometimes users override these defaults. If you get this error, this is definitely the problem:
-
-:::{code} bash
-mv: failed to preserve ownership for 'filename': no space left on device
+Login nodes are not meant for long running processes and for CPU intensive tasks. If you are running applications on the HPC interactively, please use `srun` to get time on a compute node.
+:::{seealso}
+{ref}`using-srun`
 :::
-
-Other possible reasons for this error:
-:::{code} bash
-Moving Files: If you are trying to move a file from another location, change the group ownership of the file before moving it or use the copy command instead.
-:::
-- **Editing or Creating New Files**: If you get this error when trying to edit an existing file or trying to create a new one, it is because the 'sticky bit' is not set correctly on the subdirectory you are trying to write in. You must add the sticky bit to the group permissions on the subdirectory to fix this: chmod g+s directory_name NOTE: You will NOT have to do this if you do not alter the default permissions within the project or scratch directory. This is only if you copy over subdirectories that do not have this set or accidentally change the permissions and want to set them back.
-- **Compiling Code**: It could be that your permissions are correct but the code you're compiling is using your primary unix group when creating new files. When running make install you may see an error like file INSTALL cannot copy file or when trying to install a conda package you may see An error occurred while installing package 'None'. OSError(28, 'No space left on device' As a workaround, switch to your research group unix group using the command newgrp group-name and then proceed with the installation.
 ::::
 
 ::::{dropdown} How can I see what the file permissions are?
 The `getfacl` command is an easy way to see the permissions of a file or directory. It will display the file/directory name, owner of the file/directory, group name that owns the file/directory, and the detailed permissions of the file/directory. See also: `man getfacl` or `getfacl --help`
-::::
-
-::::{dropdown} Why am I see the error "kinit: Unknown credential cache type while getting default ccache" when using ccrkinit?
-This error is caused by Anaconda conflicting with the Kerberos used by CCR's authentication system. Some users load Anaconda environments or personal/group Python or Anaconda modules in their .bashrc file (found in your home directory). These environments break Kerberos (and also OnDemand desktops and apps!) so we do not recommend loading them in the .bashrc file.
-::::
-
-
-::::{dropdown} Why am I getting "error while loading shared libraries" when trying to install Anaconda?
-During installation, you may see an error such as "conda.exe: error while loading shared libraries: libz.so.1: failed to map segment from shared object: Operation not permitted"
-
-This relates to an issue storing temporary files created during installation. Please create a temporary directory within your project or Panasas scratch directory and specify that location in the installation command. For example:
 
 :::{code} bash
-mkdir /projects/academic/<group_name>/condatemp
-TMPDIR=/projects/academic/<group_name>/condatemp ./Anaconda3-2020.02-Linux-x86_64.sh --prefix=/projects/academic/<group_name>/<install_dir>
+[user@login-00 ~]$ getfacl output.txt 
+# file: output.txt
+# owner: user
+# group: users
+user::rw-
+group::r--
+other::r--
 :::
-::::
-
-::::{dropdown} Why is my job pending with reason `ReqNodeNotAvail`?
-The `ReqNodeNotAvail` message usually means that your node has been reserved for maintenance during the period you have requested within your job script. This message often occurs in the days leading up to our regularly scheduled maintenance, which is performed the last Tuesday of every month (unless otherwise noted on our downtime schedule). For example, if you run a job with a 72-hour wall clock request on the last Tuesday of the month, you will see the ReqNodeNotAvail status because the node is reserved for maintenance within that 72-hour window. You can confirm whether the requested node has a reservation by typing `scontrol` show reservation to list all active reservations.
-
-If you receive this message, the following solutions are available:
-
-1. Submit a job requesting less time so that it does not intersect with the maintenance window.
--OR-
-2. Wait until after the maintenance window has finished and your job will resume automatically when there are resources available.
-
-If this message is not due to an upcoming maintenance downtime, then it means that whatever type of node or feature you requested is not available in the partition you submitted your job to run on. Users will see this more frequently as CCR moves nodes from the UB-HPC cluster over to the new environment. These nodes are being reinstalled and are only available in the ubhpc-future reservation. This reservation is available to all UB-HPC cluster users, however, it must be specified in your job script, `salloc` request, or by using OnDemand 3. For more info, see HERE
-::::
-
-::::{dropdown} How do I fix `sbatch: error: Batch script contains DOS line breaks`?
-If you receive an error message like this when trying to submit a job, it is because your batch script was edited in a Windows editor, not a unix editor. Windows editors can add line breaks that the unix interpreter doesn't recognize. You may receive an error such as:
-
-:::{code} bash
-sbatch: error: Batch script contains DOS line breaks (\r\n)
-sbatch: error: instead of expected UNIX line breaks (\n).
-:::
-
-Run the `dos2unix` command on your file to remove the Windows line breaks. For example: `dos2unix myBatchFile`.
-Use the `man` command to see all the options for the `dos2unix` command: `man dos2unix`.
-::::
-
-::::{dropdown} Why do I get an ‘Invalid Account, Partition, or QOS Specification’ error when I try to run a job?
-If you're getting errors like these, you're not specifying the right combination of cluster, account, partition, and qos based on what your account has access to:
-
-:::{code} bash
-salloc: error: Job submit/allocate failed: Invalid qos specification
-salloc: error: Job submit/allocate failed: Invalid account or account/partition combination specified
-sbatch: error: Batch job submission failed: Invalid partition or qos specification
-:::
-
-CCR uses Quality of Service (QOS) to restrict access to partitions and to provide research groups that support CCR financially with a boost in their job priorities. Slurm will use your default account, unless you specify differently in your job script or when starting an OnDemand app. Use the slimits command to see what accounts and QOS settings you have access to. This is managed in ColdFront under allocations. More details on QOS and partition limits can be found here. Information on becoming a CCR supporter can be found on our website.
 ::::
 
 ::::{dropdown} Why am I getting a `QOSMaxSubmitJobPerUserLimit` error when I try to submit a job?
-You may see this error when submitting batch scripts or when attempting to launch apps in OnDemand:
-
-:::{code} text
-sbatch: error: QOSMaxSubmitJobPerUserLimit
-sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
-:::
-
-You will get this error if you have reached the partition or per user limits as described here. For example, if you have 1000 jobs in the general-compute partition and try to submit another one, you will get this error. If you've already launched one viz desktop, you've reached your limit. Wait for some of your jobs to finish and submit more at that time.
-::::
-
-::::{dropdown} Why does my SSH session automatically disconnect?
-SSH connections will time out either due to inactivity or network disruptions. If your sessions are disconnecting due to inactivity, one thing you can do to keep the SSH connection open is to have ssh send a periodic keep alive packet to the server so it will not timeout. Add the -o ServerAliveInterval=600 option to your ssh login command. SSH can be sensitive to any disruptions in the network which can be common with Wi-Fi networks. Sometimes the 'keep alive' setting prevents this. Other times, it may be that you have a setting on your Wi-Fi or ethernet adapter that tells the operating system it can put the device to sleep after a period of inactivity. This is especially common on Windows. Check your network adapters for 'Power Settings' and uncheck any options that tell the system it can disable the device to save power. This will vary by operating system so we recommend you conduct an internet search for the appropriate instructions.
-::::
-
-::::{dropdown} Why am I seeing WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED when I log in?
-Some users logging in through ssh may encounter this error message. If you receive this message, please see our instructions on how to clear this error.
-
-When I try to log in with ssh, nothing happens when I type my password!
-When you type your passaword, the ssh program does not echo your typing or move your cursor. This is normal behavior.
-::::
-
-::::{dropdown} When running Firefox on the cluster, I get : “Firefox is already running, but is not responding. To open a new window, you must first close the existing Firefox process, or restart your system.” What can I do?
-From your home directory on the cluster, run the commands:
-
-:::{code} bash
-rm -rf ~/.mozilla/firefox/*.default/.parentlock
-rm -rf ~/.mozilla/firefox/*.default/lock
-:::
+You may see this error message when you are submitting more jobs than permitted to run on the partition at a given time. These limits are discussed in {ref}`partition-names`
 ::::
 
 :::{button-link} faq.html
