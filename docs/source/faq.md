@@ -381,73 +381,41 @@ Back to the top
 ::::{dropdown} What are the data storage options?
 Several data storage options are available depending on your needs, such as `/home`, project directories (`/work/$PROJECT`), and temporary storage (`/scratch`). Details can be found in the 'Data Management' section.
 :::{seealso}
-
+{ref}`data-storage`
 :::
 ::::
 
 :::{dropdown} What types of storage are available and how should each type be used?
-:::
-:::{dropdown} Can my storage quota be increased?
-You can request a temporary quota increase. Submit a support request and indicate:
 
-1. How much additional space you need
-1. The file system on which you need it
-1. How long you will need it
-Additional space is granted at the discretion of Research Computing on an “as available” basis for short periods of time. If you need more space on a long-term basis, please review our storage options and contact us to discuss an appropriate solution for your needs.
 :::
 
-::::{dropdown} How can I check my storage quota and current usage?
-Please see our File System Quotas page on our public wiki for details about this.
-::::
+:::{dropdown} Can my `/work` storage quota be increased?
+You can request a quota increase by submitting a [Storage Space Extension Request]:https://bit.ly/NURC-StorageExtension
+:::
 
 ::::{dropdown} Why can't I run jobs in my home directory?
-Home directories are intended for relatively small amounts of human-readable data such as text files, shell scripts, and source code.  Neither the servers nor the file systems on which the home directories reside can sustain the load associated with a large cluster. Overall system response will be severely impacted if they are subjected to such a load. This is by design, and is the reason all job I/O must be directed to the network file systems such as blue or orange.
-::::
-
-:::{dropdown} What storage options are available to me to use on the cluster?
-All users are provided a 50-GB home directory for longer-term storage. This directory provides “snapshots” though it is not backed up. Each user also is provided 10TB of temporary “scratch” storage accessible as `/scratch/$USER` where $USER will stand for your ID. Scratch storage is fast but is not backed up in any way.
-
-If the free storage is not sufficient, you need snapshots of your files, or you wish to share space among a research group, the group should lease storage.
+`/home/$USER` directories are intended for relatively small amounts of human-readable data such as text files, shell scripts, and source code. All research work should be stored at `/work/$PROJECT` for long term storage and `/scratch/$USER` should be used for temporary job storage during run time. Be mindful of `/scratch/$USER` purge policy.
+:::{seealso}
+{ref}`data-storage`
+:::
 ::::
 
 ::::{dropdown} Why should I use `/scratch` storage?
-Scratch storage is fast and provides a large quantity of free space. However, there are limits on the number of files and the amount of space you may use. This is to maintain the stability and performance of the system. Please review our scratch filesystem policy for details. If you use or expect to use a large number of files please contact us.
-::::
-
-::::{dropdown} How do I obtain leased storage?
-Research Computing offers two tiers of leased storage, Research Standard and Research Project. Please see our storage page for details.
-::::
-
-::::{dropdown} How do I check my disk usage?
-Run `hdquota` on the cluster frontend.
-::::
-
-::::{dropdown} How do I check my `/scratch` usage on the cluster?
-Run the command `sfsq`:
-
-:::{code} bash
-sfsq
-:::
-If you have used up too much space, created too many files, or have “old” files you may be regarded as “overallocated”. Please note that if you are overallocated, you won’t be able to submit any new jobs until you clean up your `/scratch` folder.
-::::
-
-:::{dropdown} How can I add large datasets to the cluster?
-For upload and manipulation of datasets within the cluster framework, please see this section of the cluster wiki.
-::::
-
-::::{dropdown} If I’m over my disk quota in either in my /home directory or my `/scratch` directory, how can I determine my disk usage?
-You can run the following command from your /home or `/scratch` directory to see how your disk usage is distributed across subdirectories, and where you need to remove files. You can increase max-depth to go further down in the directory structure.
-
-:::{code} bash
-du . -h  --max-depth=1|sort -h -r
+Scratch storage is fast and provides a large quantity of free space for temporary jobs files. However, there are limits on the number of files and the amount of space you may use and there is a time based purge policy that is implimented. Please review our scratch filesystem policy for details.
+:::{seealso}
+{ref}`data-storage`
 :::
 ::::
 
-::::{dropdown} If I’m over my file limit in /scratch, how can I determine where all the files are located?
-From your `/scratch` directory, run the following command to determine where you need to remove files.
-
-:::{code} bash
-find . -type f | cut -d/ -f2 | sort | uniq -c
+::::{dropdown} How do I check my `/home/$USER` disk usage?
+Run `du -shc .[^.]* * /home/$USER` which will output:
+:::{code-block} shell
+[<username>@<host> ~]$  du -shc .[^.]* * /home/$USER/
+39M     .git
+106M    discovery-examples
+41K     README.md
+3.3M    software-installation
+147M    total
 :::
 ::::
 
