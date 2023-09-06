@@ -4,7 +4,7 @@
 
 Globus is a data management system that you can use to transfer and share files. Northeastern has a subscription to Globus, and you can set up a Globus account with your Northeastern credentials. You can link your accounts if you have another account, either personal or through another institution.
 
-To use Globus, you will need to set up an account, as detailed below. Then, as detailed below, you'll need to install Globus Connect to create an endpoint on your local computer. After completing these two initial setup procedures, you can use the Globus web app to perform file transfers. See {ref}`using-nuendpoint` for a walkthrough of using the Northeastern endpoint on Globus.
+To use Globus, you will need to set up an account, as detailed below. Then, as detailed below, you will need to install Globus Connect to create an endpoint on your local computer. After completing these two initial setup procedures, you can use the Globus web app to perform file transfers. See {ref}`using-nuendpoint` for a walkthrough of using the Northeastern endpoint on Globus.
 
 ## Globus Account Set Up
 
@@ -54,7 +54,7 @@ Use Globus Connect Personal (GCP) as an endpoint for your laptop. You first need
 Accept the defaults on the install wizard. After the installation, you can use your laptop as an endpoint within Globus.
 
 :::{note}
-You can't modify an endpoint after you have created it. If you need an endpoint with different options, you must delete and recreate it. Follow the instructions on the Globus website for [deleting and recreating an endpoint](https://docs.globus.org/faq/globus-connect-endpoints/#what_are_globus_connect_personal_and_globus_connect_server).
+You cannot modify an endpoint after you have created it. If you need an endpoint with different options, you must delete and recreate it. Follow the instructions on the Globus website for [deleting and recreating an endpoint](https://docs.globus.org/faq/globus-connect-endpoints/#what_are_globus_connect_personal_and_globus_connect_server).
 :::
 
 ## Working with Globus
@@ -81,8 +81,8 @@ To access the Northeastern endpoint on Globus, on the Globus web app, click **Fi
 ### Connecting to Google Drive
 
 The version of Globus currently on Discovery allows you to connect to Google Drive by first setting up the connection in GCP. This will add your Google Drive to your current personal endpoint.
-Just so you know, you'll first need a personal endpoint, as outlined in the procedure above. This procedure is slightly different from using the Google Drive Connector with
-Globus version 5.5. You'll need your Google Drive [downloaded to your local computer](https://www.google.com/drive/download/).
+Just so you know, you will first need a personal endpoint, as outlined in the procedure above. This procedure is slightly different from using the Google Drive Connector with
+Globus version 5.5. You will need your Google Drive [downloaded to your local computer](https://www.google.com/drive/download/).
 
 **To add Google Drive to your endpoint, do the following**
 
@@ -100,4 +100,4 @@ and installation. Please refer to the [Globus CLI documentation](https://docs.gl
 
 ### Globus documentation and test files
 
-Globus provides detailed instructions on using Globus and has test files for you to practice with. These are free for you to access and use. We'd like to encourage you to use the test files to become familiar with the Globus interface. You can access the Globus documentation and training files on the [Globus How To website](https://docs.globus.org/how-to/).
+Globus provides detailed instructions on using Globus and has test files for you to practice with. These are free for you to access and use. We would like to encourage you to use the test files to become familiar with the Globus interface. You can access the Globus documentation and training files on the [Globus How To website](https://docs.globus.org/how-to/).
