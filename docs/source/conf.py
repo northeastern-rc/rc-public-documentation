@@ -67,13 +67,6 @@ autosectionlabel_prefix_document = True
 intersphinx_mapping = {"python": ("https://docs.python.org/3", None),
                        "sphinx": ("https://www.sphinx-doc.org/en/master", None)}
 
-spelling_word_list_filename = [
-    'spelling_wordlist.txt',
-]
-
-spelling_show_suggestions = True
-spelling_ignore_pypi_package_names = True
-spelling_ignore_contributor_names = True
 # -- Options for TODOs -------------------------------------------------------
 #
 todo_include_todos = True
