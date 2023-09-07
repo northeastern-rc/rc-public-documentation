@@ -5,6 +5,7 @@
 desktopood
 fileexplore
 jupyterlab
+stataood
 ```
 
 ::::{grid} 3
