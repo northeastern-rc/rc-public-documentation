@@ -18,15 +18,15 @@ Our cluster uses a fair-share scheduling policy. This means that usage is tracke
 
 The following policies ensure fair use of the cluster resources:
 
-- **Single job size**: The maximum number of nodes a single job can request is **XX**.
-- **Run time limit**: The maximum run time for a job is **XX** hours.
+- **Single job size**: The maximum number of nodes a single job depends on the partition (see {ref}`partition-names`).
+- **Run time limit**: The maximum run time for a job depends on the partition (see {ref}`partition-names`).
 - **Priority decay**: If a job remains in the queue without running for an extended period, its priority may slowly decrease.
 
 ## Job Priority**
 
 Several factors determine job priority:
 
-- **Fairshare**: This is based on the historical resource usage of your group. The more resources your group has used, the lower your job's priority becomes, and vice versa.
+- **Fair-share**: This is based on the historical resource usage of your group. The more resources your group has used, the lower your job's priority becomes, and vice versa.
 - **Job size**: Smaller jobs (regarding requested nodes) typically have higher priority.
 - **Queue wait time**: The longer a job has been in the queue, the higher its priority becomes.
 
