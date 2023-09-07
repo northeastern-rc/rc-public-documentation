@@ -3,8 +3,11 @@
 
 This page is regularly updated with information about system changes, updates, maintenance periods, and other important announcements. Keeping an eye on this page will help you stay informed about recent changes to our HPC system.
 
+(v-three)=
 ## v3.0.0
-## What's Changed
+
+**What's Changed**
+
 * Corrected typos Jupyter -> JupyterLab by @joseph-cooke in [74](https://github.com/northeastern-rc/rc-public-documentation/pull/74)
 * Joe/pytorch checkpoint example by @visionjo in [72](https://github.com/northeastern-rc/rc-public-documentation/pull/72)
 * PR to add kb article link by @manasvita in [77](https://github.com/northeastern-rc/rc-public-documentation/pull/77)
@@ -34,15 +37,20 @@ This page is regularly updated with information about system changes, updates, m
 * Slurm-Overlap by @visionjo in [100](https://github.com/northeastern-rc/rc-public-documentation/pull/100)
 * Joe/deeplearning by @visionjo in [89](https://github.com/northeastern-rc/rc-public-documentation/pull/89)
 
-## New Contributors
+**New Contributors**
+
 * @Prasanth-Dwadasi made their first contribution in [79](https://github.com/northeastern-rc/rc-public-documentation/pull/76)
 
 [**Full Changelog**](https://github.com/northeastern-rc/rc-public-documentation/compare/2.1.0...3.0.0)
 
 ---
 
+(v-two-one)=
 ## v2.1.0
-### What's Changed
+
+
+**What's Changed**
+
 * joe/rtd2.0 by @visionjo in [51](https://github.com/northeastern-rc/rc-public-documentation/pull/51)
 * name change back by @visionjo in [60](https://github.com/northeastern-rc/rc-public-documentation/pull/60)
 * updated TOC by @visionjo in [61](https://github.com/northeastern-rc/rc-public-documentation/pull/61)
@@ -61,7 +69,10 @@ This page is regularly updated with information about system changes, updates, m
 [**Full Changelog**](https://github.com/northeastern-rc/rc-public-documentation/compare/2.0.0...2.1.0)
 
 ---
+
+(v-two)=
 ## v2.0.0
+
 - Updated the theme for the RTD to use Myst.
 ---
 Remember, if you have questions or encounter issues, you can always contact support, ask in our User Community and Forums, or check the relevant section of the documentation for guidance.
