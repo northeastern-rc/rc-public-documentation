@@ -86,18 +86,6 @@ You can also create a separate Window pane to preview your Markdown.  To do this
 - Markdown Preview
 ![](.README_images/e3a69125.png)
 
-## Spell Check
-Be sure to source your Python environment, so it works for building Sphinx docs.
-```Bash
-git clone git@github.com:pyenchant/pyenchant.git
-cd pyenchant
-python setup.py install
-```
-Or, simply run from the `rc-public-documentation` folder:
-```Bash
-bash bin/install_spellchecker.sh
-```
-
 
 ## Additional
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
