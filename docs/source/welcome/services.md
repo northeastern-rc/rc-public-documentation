@@ -38,7 +38,7 @@ If you are a faculty member using Discovery with your class and would like us to
 
 ## Collaboration
 
-The team at RC @ NU is composed of full-time PhD scientists whose expertise spans diverse fields (e.g., Machine Learning, Data Analytics, Molecular Dynamics, Bioinformatics, and Big Data). We are eagerly open to collaboration with researchers in multiple phases of their research including: 
+The team at RC @ NU is composed of full-time PhD scientists whose expertise spans diverse fields (e.g., Machine Learning, Data Analytics, Molecular Dynamics, Bioinformatics, and Big Data). We are eagerly open to collaboration with researchers in multiple phases of their research including:
 
 - Grant/proposal development and idea generation
 - Data cleaning and transforming
@@ -57,6 +57,6 @@ Please reach out via a consultation or by emailing rchelp@northeastern.edu if yo
 
 If you feel your research has benefited from support from RC @ NU or want to acknowledge the cluster please use one of the statements below:
 
-*This work was completed in part using the Discovery cluster, supported by Northeastern University’s Research Computing team.* 
+*This work was completed in part using the Discovery cluster, supported by Northeastern University’s Research Computing team.*
 
-*This work was completed using the Discovery cluster at MGHPC for Northeastern University.* 
+*This work was completed using the Discovery cluster at MGHPC for Northeastern University.*
