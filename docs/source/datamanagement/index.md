@@ -35,7 +35,7 @@ This sections includes the following pages:
 Selecting the appropriate storage option can significantly impact your work's efficiency.
 
 - **Home Directories**: For essential files and documents.
-- **Scratch Space**: Temporary storage for active jobs.
+- **{term}`Scratch Space`**: Temporary storage for active jobs.
 - **Project Directories**: Collaborative storage for project-related data.
 
 :::{seealso}

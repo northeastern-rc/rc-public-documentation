@@ -4,7 +4,7 @@
 There are strict quotas for each {term}`home directory` (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. This page provides some best practices for keeping within the {term}`quota`. For more information about data storage on the HPC, see {ref}`data-storage`.
 
 :::{important}
-All commands on this page should be run from a compute node because they are CPU-intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
+All commands on this page should be run from a {term}`compute node` because they are CPU-intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
 :::
 
 ## Analyze Disk Usage
@@ -57,7 +57,7 @@ conda env remove --name <your environment>
 
 ### Singularity
 
-If you have pulled any containers to the HPC using {term}`Singularity`, you can clean your container cache in your `/home/<username>` directory by running the following command from a compute node:
+If you have pulled any {term}`containers <container>` to the HPC using {term}`Singularity`, you can clean your container cache in your `/home/<username>` directory by running the following command from a {term}`compute node`:
 
 :::{code-block} bash
 module load singularity/3.5.3
@@ -75,7 +75,7 @@ Then, pull the container using Singularity as usual.
 
 ### Cache
 
-The `~/.cache` directory can become large with the general use of HPC and Open OnDemand. Make sure you are not running any processes or jobs at the time by running the following:
+The `~/.cache` directory can become large with the general use of HPC and {term}`Open OnDemand <Open OnDemand (ood)>`. Make sure you are not running any processes or jobs at the time by running the following:
 
 :::{code-block} bash
 squeue -u <username>

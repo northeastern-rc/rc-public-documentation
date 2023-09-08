@@ -110,10 +110,7 @@ header-rows: 1
 
 ## Viewing partition information
 
-Slurm commands allow you to view information about the
-partitions. Three commands that can show you partition information are
-`sinfo`, `sacct`, and `scontrol`. The following are common options to
-use with these commands:
+Slurm commands allow you to view information about the partitions. Three commands that can show you partition information are `sinfo`, `sacct`, and `scontrol`. The following are common options to use with these commands:
 
 :::{code} shell
 sinfo -p <partition name> #displays the state of the nodes on a specific partition
