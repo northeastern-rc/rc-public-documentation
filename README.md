@@ -1,27 +1,36 @@
 
 # Research Computing Public Documentation
-[![Github-CI][github-ci]][github-link]
+[![GitHub-CI][github-ci]][github-link]
 [![Documentation Status][rtd-badge]][rtd-link]
-
-**THIS IS A DRAFT (i.e., WORK IN PROGRESS)**
 
 
 This repository contains the source files for the Research Computing documentation.
 
-HPC users can submit issues and bugs in the documentation {here}.
+HPC users can submit issues and bugs in the documentation [here](https://github.com/northeastern-rc/rc-public-documentation/issues/new/choose).
 
 
 ## Development
-Clone repo and create python environment:
+Clone repo:
 
 ```bash
-git clone https://github.com/northeastern-rc/rc-public-documentation
+git clone git@github.com:northeastern-rc/rc-public-documentation.git
+```
+Then, either open PyCharm and create python environment (some find easier to create environment using PyCharm):
+
+<img src=".README_images/environment1.png" alt="env1" width="300"/>
+<br>
+<img src=".README_images/environment2.png" alt="env1" width="300"/>
+
+OR, do so via the command-line:
+```bash
 cd rc-public-documentation
 
 python3.11 -m venv .venv
-source .venv/bin/activate
+source venv/bin/activate
 pip install --upgrade pip
 ```
+-----
+
 Next, for those using Mac, install pre-commit via `brew`:
 ```bash
 brew install pre-commit
@@ -38,15 +47,6 @@ pre-commit installed at .git/hooks/pre-commit
 pip install -r docs/requirements.txt
 ```
 
-
-
----
-```bash
-pip install -r requirements
-
-brew install sphinx-doc
-pip install jupyterlab-myst
-```
 ---
 
 [Install Dependencies][install-vscode]:
@@ -58,7 +58,7 @@ Install [myst-plugin-install][myst-plugin-install]; also, install directly from 
 ![](.README_images/myst-plugin-screenshot.png)
 
 
-We're using the [amazing markdown lint VS Code extension](https://thisdavej.com/build-an-amazing-markdown-editor-using-visual-studio-code-and-pandoc/#:~:text=markdownlint%20VS%20Code%20extension) developed by David Anson.  Here are the steps:
+You can use the [amazing markdown lint VS Code extension](https://thisdavej.com/build-an-amazing-markdown-editor-using-visual-studio-code-and-pandoc/#:~:text=markdownlint%20VS%20Code%20extension) developed by David Anson.  Here are the steps:
 
 - Press `F1` to open the VS Code Command Palette.
 - Type `ext install markdownlint` to find the extension
