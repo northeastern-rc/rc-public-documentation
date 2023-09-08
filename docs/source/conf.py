@@ -41,7 +41,6 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx.ext.mathjax",
-    "sphinxcontrib.spelling",
     "sphinx.ext.todo",
     "sphinx_copybutton",
     "sphinx_design",  # https://pypi.org/project/sphinx_design/
