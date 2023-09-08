@@ -5,7 +5,7 @@ Optimizing job performance is essential to maximizing efficiency and minimizing 
 
 ## Understanding the System Architecture
 
-Understanding the underlying hardware, including CPUs, GPUs, memory hierarchy, and network topology, will help you make informed decisions about structuring your computational tasks.
+Understanding the underlying hardware, including CPUs, GPUs, memory hierarchy, and network topology, will help you make informed decisions about structuring your computational {term}`tasks <task>`.
 
 :::{seealso}
 {ref}`hardware`
