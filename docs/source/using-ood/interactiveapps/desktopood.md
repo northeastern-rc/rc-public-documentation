@@ -13,5 +13,5 @@ The following tools and programs are accessible on our Desktop App:
 - LibreOffice suite of applications (word, spreadsheet, and presentation processing)
 
 :::{note}
-The desktop application is a Singularity container; a Singularity container cannot run inside the desktop application. It fails if users run a container-based module or program via the desktop application.
+The desktop application is a {term}`Singularity` container; a Singularity container cannot run inside the desktop application. It fails if users run a container-based module or program via the desktop application.
 :::

@@ -48,7 +48,7 @@ Prepare for and respond to any security incidents.
 
 ## Tips for Secure Data Management
 
-- **Use Secure Connections**: SSH or VPN for remote access.
+- **Use Secure Connections**: SSH or {term}`VPN` for remote access.
 - **Avoid Storing Sensitive Data on Shared File Systems**: Unless adequately secured.
 - **Educate Yourself and Your Team**: Stay informed about best practices and threats.
 

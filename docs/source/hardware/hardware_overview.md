@@ -6,7 +6,7 @@ The computing cluster provides access to over 1,024 {term}`CPU <Central Processi
 
 ## CPU nodes
 
-Table 1 below shows the feature names, number of nodes by partition type (public and private), and the RAM memory range per node. The feature name follows archspec microarchitecture [specification](https://archspec.readthedocs.io/en/latest/index.html).
+Table 1 below shows the feature names, number of {term}`nodes <node>` by partition type (public and private), and the RAM memory range per node. The feature name follows archspec microarchitecture [specification](https://archspec.readthedocs.io/en/latest/index.html).
 
 :::{list-table}
 ---
@@ -64,5 +64,5 @@ linenos: true
 You can add these same flags as an additional line in your `sbatch` script via (`#SBATCH --constraint=haswell`)
 
 :::{note}
-Using the --constraint flag can mean that you will wait longer for your job to start, as the scheduler (Slurm) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see {ref}`using-slurm`. Finally, at this time only the OR operator `|` is supported when using `--constraint`.
+Using the --constraint flag can mean that you will wait longer for your job to start, as the {term}`scheduler` ({term}`Slurm`) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see {ref}`using-slurm`. Finally, at this time only the OR operator `|` is supported when using `--constraint`.
 :::

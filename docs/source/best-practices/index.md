@@ -26,7 +26,7 @@ Utilizing High-Performance Computing (HPC) resources effectively requires adhere
 
 (home-directory-storage-quota-index)=
 ## Home Directory Storage Quota
-Learn about storage quotas and how to manage your home directory effectively.
+Learn about storage quotas and how to manage your {term}`home directory` effectively.
 
 - **Quota Limits**: Understanding your storage allocation.
 - **Managing Storage**: Tips for maintaining an efficient workspace.

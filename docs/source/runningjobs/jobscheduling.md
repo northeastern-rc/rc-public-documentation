@@ -44,7 +44,7 @@ Higher-priority jobs can preempt lower-priority ones, temporarily pausing the lo
 
 - **Set Realistic Priorities**: Assign accurate priorities to your jobs to reflect their importance and resource requirements.
 - **Use Resource Quotas**: Be mindful of the resources you request to prevent over- or underutilization.
-- **Leverage Backfilling**: Submit smaller, shorter jobs that can backfill into available resources while waiting for larger jobs to start.
+- **Leverage {term}`Backfilling`**: Submit smaller, shorter jobs that can backfill into available resources while waiting for larger jobs to start.
 
 Understanding these scheduling policies and priorities empowers you to make informed decisions when submitting jobs, ensuring that your computational tasks are executed efficiently and promptly. If you need further guidance on selecting the right scheduling policy for your job or optimizing your resource usage, our support team is available at <rchelp@northeastern.edu> or consult our {ref}`faq`.
 
