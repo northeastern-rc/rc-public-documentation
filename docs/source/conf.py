@@ -41,7 +41,6 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx.ext.mathjax",
-    "sphinxcontrib.spelling",
     "sphinx.ext.todo",
     "sphinx_copybutton",
     "sphinx_design",  # https://pypi.org/project/sphinx_design/
@@ -105,7 +104,8 @@ exclude_patterns = ["using-ood/cps_ood.md",
                     "_snippets/*",
                     "build",
                     "Thumbs.db",
-                    ".DS_Store"]
+                    ".DS_Store",
+                    "_developers/primer.md"]
 
 # -- Options for HTML output -------------------------------------------------
 
