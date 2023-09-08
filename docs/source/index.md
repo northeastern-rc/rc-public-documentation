@@ -112,5 +112,4 @@ glossary
 
 change_log
 Report Docs Bug or Request <https://github.com/northeastern-rc/rc-public-documentation/issues/new/choose>
-_developers/primer
 ```

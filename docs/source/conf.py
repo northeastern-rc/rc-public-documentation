@@ -104,7 +104,8 @@ exclude_patterns = ["using-ood/cps_ood.md",
                     "_snippets/*",
                     "build",
                     "Thumbs.db",
-                    ".DS_Store"]
+                    ".DS_Store",
+                    "_developers/primer.md"]
 
 # -- Options for HTML output -------------------------------------------------
 
