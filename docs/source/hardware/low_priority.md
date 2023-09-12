@@ -1,4 +1,4 @@
-(low_priority)=
+(low-priority)=
 
 # Low Priority Partition
 

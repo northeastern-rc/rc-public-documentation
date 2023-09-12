@@ -1,4 +1,4 @@
-(low_priority_faqs)=
+(low-priority-faqs)=
 
 # Low Priority Partition FAQs
 
@@ -8,7 +8,7 @@
 `lowpriority` is a new partition on Discovery that allows the research community to use **private resources** on the cluster when they are idle. This new partition has hardware not otherwise available to the general research community and, in time, could double the resources available to NURC users. This is a common practice in HPC clusters to optimize the use of idle private resources that consume power and cooling. 
 
 More information about the low priority partition and examples on how to use it can be 
-found {ref}`low_priority`.
+found {ref}`low-priority`.
 ::::
 
 ::::{dropdown} 2. What is a "low priority" job?
@@ -44,7 +44,7 @@ If a job is submitted to the `lowpriority` partition and a high priority job com
 ::::
 
 ::::{dropdown} 9. When should I NOT use the `lowpriority` partition to run my jobs?
-Jobs running on the `lowpriority` partition always carry the risk of being suspended before their wall time ends if a high priority job requests those resources while the low priority job is running. If you have`checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_ implemented in your workflow, such abrupt suspension of jobs would not be an issue, since your intermediate calculations/data are saved, and you can re-start your jobs from the point of their suspension. However, if you do not have checkpointing techniques implemented, and/or you expect your jobs to run for a while (and re-running them in the event of preemption means it is going to start all over again and take even longer to complete), it is not ideal to use the `lowpriority` partition. 
+Jobs running on the `lowpriority` partition always carry the risk of being suspended before their wall time ends if a high priority job requests those resources while the low priority job is running. If you have checkpointing (see {ref}`checkpoint-jobs`) implemented in your workflow, such abrupt suspension of jobs would not be an issue, since your intermediate calculations/data are saved, and you can re-start your jobs from the point of their suspension. However, if you do not have checkpointing techniques implemented, and/or you expect your jobs to run for a while (and re-running them in the event of preemption means it is going to start all over again and take even longer to complete), it is not ideal to use the `lowpriority` partition. 
 ::::
 
 :::{button-link} faq.html
@@ -59,12 +59,12 @@ Partition limits for the `lowpriority` partition are the same as the default par
 ::::
 
 ::::{dropdown} 2. What are the resource and job limits on the `lowpriority` partition?
-Currently, the resource limits and the number for CPU-supported low priority jobs on the `lowpriority` partition are the same as the `default partition <https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html>`_. The resource limits and the number for GPU-supported low priority jobs on the ``lowpriority`` partition are the same as the `gpu partition <https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html>`_.
+Currently, the resource limits and the number for CPU-supported low priority jobs on the `lowpriority` partition are the same as the default partition (see {ref}`partition-names`). The resource limits and the number for GPU-supported low priority jobs on the `lowpriority` partition are the same as the gpu partition (see {ref}`partition-names`).
 ::::
 
 ::::{dropdown} 3. Is there a limit on the number of CPUs or GPUs that can be requested when trying to use the `lowpriority` partition?
 
-The maximum limit for number of CPUs, GPUs, job time etc. will be the same as that on the `short` and `gpu` partitions. Please check our `partitions <https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html>`_ page for the core and RAM limits on these partition. 
+The maximum limit for number of CPUs, GPUs, job time etc. will be the same as that on the `short` and `gpu` partitions. Please check our partitions (see {ref}`partition-names`)) page for the core and RAM limits on these partition. 
 ::::
 
 ::::{dropdown} 4. I am an owner of a private partition, will this affect my group’s job wait time?
@@ -87,9 +87,7 @@ All PI-owned hardware purchased on or after 2019 will be part of the `lowpriorit
 
 ::::{dropdown} 8. Do you have a clear inventory of the various resources available through the `lowpriority` partition?
 
-Throughout the testing phase, RC will be updating its `technical documentation <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_to reflect the resources that are part of public and private partitions. Please check the `documentation <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_ regularly for latest information. See our `CPUs <https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html>`_ and `GPUs <https://rc-docs.northeastern.edu/en/latest/using-discovery/workingwithgpu.html#working-gpus>`_ pages.
-
-
+Throughout the testing phase, RC will be updating its `low priority` documentation (see {ref}`low-priority`)to reflect the resources that are part of public and private partitions. Please check the documentation (see {ref}`low-priority`) regularly for latest information. See our CPUs ({ref}`hardware-overview`) and GPUs ({ref}`working-gpus`) pages.
 ::::
 
 :::{button-link} faq.html
@@ -109,7 +107,7 @@ In SLURM terminology, preemption is a scheduling mechanism that involves stoppin
 When low priority jobs are running on your hardware, you may experience a slight delay (~30s) when submitting your first job to your private partition. This is the time it will take the scheduler to kill/preempt low priority jobs running on your partition. This new service is designed to minimize that delay.
 
 **For users of the** `lowpriority` **partition:** 
-Submitting jobs to this partition will make your jobs preemptable. That means they may be stopped/suspended and re-queued at any time. We recommend that you use strategies such as `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_ to take full advantage of the `lowpriority` partition. RC is working on `detailed documentation <https://northeastern-university-rc-public-documentation--19.com.readthedocs.build/en/19/hardware/lowpriority.html>`_ and training sessions that will be available later in the Fall 2022 semester, once the service is ready to be released.
+Submitting jobs to this partition will make your jobs preemptable. That means they may be stopped/suspended and re-queued at any time. We recommend that you use strategies such as checkpointing (see {ref}`checkpoint-jobs`) to take full advantage of the `lowpriority` partition. RC is working on detailed documentation (see {ref}`low-priority`) and training sessions that will be available later in the Fall 2022 semester, once the service is ready to be released.
 ::::
 
 ::::{dropdown} 3. How does re-queuing of preempted (stopped/suspended) low priority jobs work?
@@ -175,7 +173,7 @@ The `lowpriority` partition will be available for testing after the October main
 ::::
 
 ::::{dropdown} 3. How can I participate in the testing phase?
-Let us know by sending an email to rchelp@northeastern.edu with the subject “lowpriority partition”. Members of your group will get first access to all newly opened resources for the duration of the testing phase. Only hardware owned by PIs who opt-in will be part of the testing phase.
+Let us know by sending an email to [rchelp@northeastern.edu](mailto:rchelp%40northeastern.edu) with the subject “lowpriority partition”. Members of your group will get first access to all newly opened resources for the duration of the testing phase. Only hardware owned by PIs who opt-in will be part of the testing phase.
 ::::
 
 ::::{dropdown} 4. When will the `lowpriority` partition be officially released?
@@ -196,11 +194,11 @@ RC is working on a {ref}`low-priority`, service level objectives, and training s
 
 ::::{dropdown} 2. Are there tools or resources available to help me better use and understand the `lowpriority` partition?
 
-Use `checkpointing <https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html>`_ to take full advantage of the `lowpriority` partition. RC is working on a detailed set of documentation and training sessions that will be available later in the Fall 2022 semester to coincide with the release of this new service.
+Use checkpointing (see {ref}`checkpoint-jobs`) to take full advantage of the `lowpriority` partition. RC is working on a detailed set of documentation and training sessions that will be available later in the Fall 2022 semester to coincide with the release of this new service.
 ::::
 
 ::::{dropdown} 3. I have additional questions that are not addressed in the FAQs, what do I do?
-Kindly send your questions to `rchelp@northeastern.edu <mailto:rchelp@northeastern.edu>`_ or schedule a [consultation with us](https://rc.northeastern.edu/support/consulting/).
+Kindly send your questions to [rchelp@northeastern.edu](mailto:rchelp%40northeastern.edu) or schedule a [consultation with us](https://rc.northeastern.edu/support/consulting/).
 ::::
 
 :::{button-link} faq.html
