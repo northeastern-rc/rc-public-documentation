@@ -131,7 +131,7 @@ Data transfer can be done using various methods like `scp`, `rsync`, or `Globus`
 ::::
 
 ::::{dropdown} What Linux commands can I use to transfer files to/from the cluster?
-Smaller files can be transferred to/from the cluster using `scp`, `sftp`, and `rsync` as well as standard FTP tools utilizing `xfer.discovery.neu.edu`.
+Smaller files can be transferred to/from the cluster using `scp`, `sftp`, and `rsync` as well as standard FTP tools utilizing `xfer-00.discovery.neu.edu`.
 
 Larger files should be moved using Globus.
 :::{seealso}
