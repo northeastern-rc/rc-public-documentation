@@ -2,7 +2,7 @@
 
 # Transfer Data
 
-The HPC has a dedicated transfer node that you must use to transfer data to and from the cluster. You cannot transfer data from any other node or the HPC to your local machine. The node name is `<username>@xfer.discovery.neu.edu:` where `<username>` is your Northeastern username to login into the transfer node.
+The HPC has a dedicated transfer node that you must use to transfer data to and from the cluster. You cannot transfer data from any other node or the HPC to your local machine. The node name is `<username>@xfer-00.discovery.neu.edu:` where `<username>` is your Northeastern username to login into the transfer node.
 
 You can also transfer files using Globus. This is highly recommended if you need to transfer large amounts of data. See {ref}`using-globus` for more information.
 
@@ -20,7 +20,7 @@ The `/scratch` space is for temporary file storage only. It is not backed up. If
 You can use `scp` to transfer files/directories to and from your local machine and the HPC. As an example, you can use this command to transfer a file to your `/scratch` space on the HPC from your local machine:
 
 :::{code-block} bash
-scp <filename> <username>@xfer.discovery.neu.edu:/scratch/<username>
+scp <filename> <username>@xfer-00.discovery.neu.edu:/scratch/<username>
 :::
 
 where `<filename>` is the name of the file in your current directory you want to transfer, and `<username>` is your Northeastern username. So that you know, this command is run on your local machine.
@@ -28,7 +28,7 @@ where `<filename>` is the name of the file in your current directory you want to
 If you want to transfer a directory in your `/scratch` called `test-data` from the HPC to your local machine's current working directory, an example of that command would be:
 
 :::{code-block} bash
-scp -r <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data .
+scp -r <username>@xfer-00.discovery.neu.edu:/scratch/<username>/test-data .
 :::
 
 where `-r` flag is for the recursive transfer because it is a directory. So that you know, this command is run on your local machine.
@@ -46,7 +46,7 @@ rsync [options] <source> <destination>
 An example of using rsync to transfer a directory called `test-data` in your current working directory on your local machine to your `/scratch` on the HPC is
 
 :::{code} bash
-rsync -av test-data/ <username>@xfer.discovery.neu.edu:/scratch/<username>
+rsync -av test-data/ <username>@xfer-00.discovery.neu.edu:/scratch/<username>
 :::
 
 where this command is run on your local machine in the directory that contains `test-data`.
@@ -54,7 +54,7 @@ where this command is run on your local machine in the directory that contains `
 Similarly, `rsync` can be used to copy from the current working directory on the HPC to your current working directory on your local machine:
 
 :::{code} bash
-rsync -av <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data .
+rsync -av <username>@xfer-00.discovery.neu.edu:/scratch/<username>/test-data .
 :::
 
 where this command is run on your local machine in the current directory that you want to save the directory `test-data`.
@@ -91,18 +91,18 @@ where we are transferring the data from `source_folder` to the `destination_fold
 ::::
 ::::{tab-item} SSHFS
 
-If you want to use `sshfs`, use it with the dedicated transfer node `xfer.discovery.neu.edu`. It will not work on the login or compute nodes. On a Mac, you will also have to install macFUSE and sshfs (please refer to [macFUSE]) to use the `sshfs` command.
+If you want to use `sshfs`, use it with the dedicated transfer node `xfer-00.discovery.neu.edu`. It will not work on the login or compute nodes. On a Mac, you will also have to install macFUSE and sshfs (please refer to [macFUSE]) to use the `sshfs` command.
 
 Use this syntax to perform file transfers with `sshfs`:
 
 :::{code-block} bash
-sshfs <username>@xfer.discovery.neu.edu:</your/remote/path> <your/local/path> -<options>
+sshfs <username>@xfer-00.discovery.neu.edu:</your/remote/path> <your/local/path> -<options>
 :::
 
 For example, this will mount a directory in your `/scratch` named `test-data` to a local directory on your machine `~/mount_point`:
 
 :::{code-block} bash
-sshfs <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data ~/mount_point
+sshfs <username>@xfer-00.discovery.neu.edu:/scratch/<username>/test-data ~/mount_point
 :::
 
 You can interact with the directory from your GUI or use the terminal to perform tasks on it.
@@ -122,7 +122,7 @@ You can use MobaXterm to transfer data to and from the HPC. Please check out [Mo
 
 1. Open MobaXterm.
 1. Click **Session**, then select **SFTP**.
-1. In the **Remote host** field, type `xfer.discovery.neu.edu`
+1. In the **Remote host** field, type `xfer-00.discovery.neu.edu`
 1. In the **Username** field, type your Northeastern username.
 1. In the **Port** field, type 22.
 1. In the **Password** box, type your Northeastern password and click **OK**. Click **No** if prompted to save your password.
@@ -135,7 +135,7 @@ You will now be connected to the transfer node and can transfer files through Mo
 You can use FileZilla to transfer data to and from the HPC. Please check out [FileZilla] to download.
 
 1. Open FileZilla.
-1. In the **Host** field, type `sftp://xfer.discovery.neu.edu`
+1. In the **Host** field, type `sftp://xfer-00.discovery.neu.edu`
 1. In the **Username** field, type your Northeastern username.
 1. In the **Password** field, type your Northeastern password.
 1. In the **Port** field, type 22.
