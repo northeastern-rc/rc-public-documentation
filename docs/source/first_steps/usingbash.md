@@ -461,7 +461,7 @@ The next few subsections provide more details on a few advanced bash tools that 
 The `rsync` command is a powerful and versatile file transfer utility commonly used to synchronize files and directories between different locations. It can transfer files over a network connection and run in various modes, including local and remote transfers and backup operations. One of the key benefits of using `rsync` is its ability to transfer only the differences between the source and destination files, which can significantly reduce the amount of data transfer time required. Additionally, `rsync` supports various advanced features, including the ability to perform incremental backups and preserve symbolic links, making it a popular tool for system administrators and other advanced users.
 
 :::{important}
-File transfers must be done using the transfer node on the Discovery, i.e., do not copy to or from the login node accessible via `xfer.discovery.neu.edu`. See {ref}`transferring-data` for more information.
+File transfers must be done using the transfer node on the Discovery, i.e., do not copy to or from the login node accessible via `xfer-00.discovery.neu.edu`. See {ref}`transferring-data` for more information.
 :::
 
 We have listed a few examples of `rsync` synchronizing files and directories between two locations, but many more options are available. Consult the [rsync(1) manual page] for more information on effectively using `rsync`.
@@ -469,43 +469,43 @@ We have listed a few examples of `rsync` synchronizing files and directories bet
 Syncing a local directory to a remote server:
 
 :::
-rsync -avz /local/path user@xfer.discovery.neu.edu:/remote/path
+rsync -avz /local/path user@xfer-00.discovery.neu.edu:/remote/path
 :::
 
 Syncing a remote server to a local directory:
 
 :::
-rsync -avz user@xfer.discovery.neu.edu:/remote/path /local/path
+rsync -avz user@xfer-00.discovery.neu.edu:/remote/path /local/path
 :::
 
 Syncing a local directory to a remote server with compression:
 
 :::
-rsync -avz --compress /local/path user@xfer.discovery.neu.edu:/remote/path
+rsync -avz --compress /local/path user@xfer-00.discovery.neu.edu:/remote/path
 :::
 
 Syncing a remote server to a local directory while preserving permissions:
 
 :::
-rsync -avz --perms user@xfer.discovery.neu.edu:/remote/path /local/path
+rsync -avz --perms user@xfer-00.discovery.neu.edu:/remote/path /local/path
 :::
 
 Syncing only files that have been modified in the last hour:
 
 :::
-rsync -avz --update --min-age=3600 /local/path user@xfer.discovery.neu.edu:/remote/path
+rsync -avz --update --min-age=3600 /local/path user@xfer-00.discovery.neu.edu:/remote/path
 :::
 
 Syncing a local directory to a remote server while excluding certain files:
 
 :::
-rsync -avz --exclude='*.log' /local/path user@xfer.discovery.neu.edu:/remote/path
+rsync -avz --exclude='*.log' /local/path user@xfer-00.discovery.neu.edu:/remote/path
 :::
 
 Syncing a remote server to a local directory while preserving symbolic links:
 
 :::
-rsync -avz --links user@xfer.discovery.neu.edu:/remote/path /local/path
+rsync -avz --links user@xfer-00.discovery.neu.edu:/remote/path /local/path
 :::
 
 ### find
