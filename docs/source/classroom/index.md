@@ -5,18 +5,15 @@
 
 class_use
 cps_ood
-classroomexamples
 ```
 
 High-Performance Computing (HPC) is not only for researchers; it is an integral part of modern education. In this section, we offer guidance for instructors and students who want to use our HPC resources in the classroom.
 
-::::{grid} 3
+::::{grid} 
 
 :::{grid-item-card} {ref}`classroom-faq`
 :::
 :::{grid-item-card} {ref}`cps-ood`
-:::
-:::{grid-item-card} {ref}`classroom-examples`
 :::
 ::::
 
@@ -50,7 +47,7 @@ Find examples and tutorials to inspire and guide the use of HPC in the classroom
 - **Tutorials**: Step-by-step guides to teach HPC concepts.
 
 :::{seealso}
-{ref}`More about Classroom Examples and Tutorials <classroom-examples>`.
+COMING SOON
 :::
 
 ---
