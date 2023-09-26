@@ -8,7 +8,6 @@
 understandingqueuing
 jobscheduling
 interactiveandbatch
-workingwithgpus
 recurringjobs
 debuggingjobs
 ```
@@ -61,17 +60,6 @@ Run jobs interactively or submit batch scripts for later execution.
 
 :::{seealso}
 {ref}`More about Interactive and Batch Mode <interactive-and-batch-mode>`
-:::
-
-## Working with GPUs
-
-Harness the power of GPUs for computation-intensive tasks.
-
-- **GPU Job Submission**: Submitting jobs to GPU-enabled nodes.
-- **Monitoring GPU Usage**: Tools and commands to monitor GPU resources.
-
-:::{seealso}
-{ref}`More about Working with GPUs <working-gpus>`
 :::
 
 ## Recurring Jobs
