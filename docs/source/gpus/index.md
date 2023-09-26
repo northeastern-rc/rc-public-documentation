@@ -7,7 +7,7 @@
 
 gpuoverview
 accessinggpus
-jobsubmission
+gpujobsubmission
 bestpractices
 ```
 
@@ -15,7 +15,7 @@ Harnessing the power of Graphics Processing Units (GPUs) can significantly accel
 
 ::::{grid} 4
 
-:::{grid-item-card} {ref}`gpu-overview`
+:::{grid-item-card} {ref}`working-gpus`
 :::
 :::{grid-item-card} {ref}`accessing-gpus`
 :::
@@ -33,7 +33,7 @@ Get acquainted with the capabilities and benefits of using GPUs in our HPC clust
 - **Benefits**: Understand how GPUs can accelerate your computations.
 
 :::{seealso}
-{ref}`More about GPU Overview <gpu-overview>.`
+{ref}`More about GPU Overview <working-gpus>`.
 :::
 
 (accessing-gpus-index)=
@@ -45,7 +45,7 @@ Learn how to access and request GPU resources for your tasks.
 - **Reservation**: How to reserve GPU resources for your jobs.
 
 :::{seealso}
-{ref}`More about Accessing GPUs <accessing-gpus>.`
+{ref}`More about Accessing GPUs <accessing-gpus>`.
 :::
 
 (gpu-job-submission-index)=
@@ -57,7 +57,7 @@ Discover how to submit jobs that utilize GPU resources effectively.
 - **Monitoring GPU Usage**: Tools and commands to monitor GPU resources.
 
 :::{seealso}
-{ref}`More about Job Submission <job-submission>.`
+{ref}`More about Job Submission <gpu-job-submission>`.
 :::
 
 (best-practices-gpu-index)=
@@ -69,7 +69,7 @@ Optimize your GPU-based computations with best practices and tips.
 - **Parallelization**: Strategies for parallelizing tasks for GPUs.
 
 :::{seealso}
-{ref}`More about Best Practices for GPUs <best-practices-gpus>.`
+{ref}`More about Best Practices for GPUs <best-practices-gpus>`.
 :::
 
 :::{include} ../_snippets/helpfooter.md
