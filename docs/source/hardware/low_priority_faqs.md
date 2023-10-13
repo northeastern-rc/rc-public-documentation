@@ -22,7 +22,7 @@ A job submitted to a private partition by a user **who is** a member of that pri
 ::::{dropdown} 4. How does SLURM handle low priority jobs?
 In SLURM, jobs are submitted to partitions. SLURM is configured such that jobs submitted to the `lowpriority`partition are considered for execution on private partitions only when the requested job resources are idle. 
 
-In other words, a low priority job will be executed only if the private partition has resources to execute a job submitted to it. However, if a member of the private partition submits a job during this time, then the low priority job will be automatically stopped/suspended and re-queued (preempted). 
+In other words, a low priority job will be executed only if the private partition has resources to execute a job submitted to it. However, if a member of the private partition submits a job during this time, then the low priority job will be automatically terminated and re-queued (preempted). 
 
 Jobs submitted to the `lowpriority` partition have the lowest priority of any class of jobs and are only considered after all other high priority jobs have been placed. Jobs submitted by private partition members to their own partition always have higher priority.
 ::::
