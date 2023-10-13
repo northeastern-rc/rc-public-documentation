@@ -13,6 +13,8 @@ found {ref}`low-priority`.
 
 ::::{dropdown} 2. What is a "low priority" job?
 A job submitted to the `lowpriority` partition that comes from a user **who is NOT** a member of the private partition on which the job is scheduled to run.
+
+A "low priority" job will be terminated from the `lowpriority` partition and re-queued if a member of the private partition submits a job to the private partition.
 ::::
 
 ::::{dropdown} 3. What is a “high priority” job?
