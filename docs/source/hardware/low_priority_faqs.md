@@ -20,14 +20,14 @@ A job submitted to a private partition by a user **who is** a member of that pri
 ::::
 
 ::::{dropdown} 4. How does SLURM handle low priority jobs?
-In SLURM, jobs are submitted to partitions. SLURM is configured such that jobs submitted to the `lowpriority`partition are considered for execution on private partitions only when the requested job resources are idle. 
+In SLURM, jobs are submitted to partitions. SLURM is configured such that jobs submitted to the `lowpriority`partition are considered for execution on private partitions only when the requested job resources are idle.
 
-In other words, a low priority job will be executed only if the private partition has resources to execute a job submitted to it. However, if a member of the private partition submits a job during this time, then the low priority job will be automatically terminated and re-queued (preempted). 
+In other words, a low priority job will be executed only if the private partition has resources to execute a job submitted to it. However, if a member of the private partition submits a job during this time, then the low priority job will be automatically terminated and re-queued (preempted). See {reF}`low-priority-preemption`.
 
 Jobs submitted to the `lowpriority` partition have the lowest priority of any class of jobs and are only considered after all other high priority jobs have been placed. Jobs submitted by private partition members to their own partition always have higher priority.
 ::::
 
-::::{dropdown} 5. Will the `lowpriority` partition become the default partition?
+::::{dropdown} 5. Is the `lowpriority` partition default?
 No, the default partition will still be the `short` partition. This ensures that by default, jobs are not subject to preemption.
 ::::
 
@@ -95,6 +95,7 @@ Throughout the testing phase, RC will be updating its `low priority` documentati
 :align: center
 Back to the top
 :::
+(low-priority-preemption)=
 ## Preemption
 
 ::::{dropdown} 1. What does 'preemption' or 'preemptable job' mean?
