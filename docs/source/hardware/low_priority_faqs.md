@@ -171,7 +171,7 @@ We are currently looking for PIs who own private hardware and would like to be p
 ::::
 
 ::::{dropdown} 2. What is the timeline of the testing phase?
-The `lowpriority` partition will be available for testing after the October maintenance window (October 4, 2022). Only groups who opt in will have access to the `lowpriority` partition during the testing phase and only hardware owned by those groups will be part of the test partition.
+The `lowpriority` partition will be available for testing in Fall 2023. Only groups who opt in will have access to the `lowpriority` partition during the testing phase and only hardware owned by those groups will be part of the test partition.
 ::::
 
 ::::{dropdown} 3. How can I participate in the testing phase?
@@ -191,12 +191,12 @@ Back to the top
 ## Miscellaneous
 
 ::::{dropdown} 1.Where can I learn more about the `lowpriority` partition?
-RC is working on a {ref}`low-priority`, service level objectives, and training sessions that will be available later in the Fall 2022 semester, once the service is ready to be released.
+RC is working on a {ref}`low-priority`, service level objectives, and training sessions that will be available later in the Fall 2023 semester, once the service is ready to be released.
 ::::
 
 ::::{dropdown} 2. Are there tools or resources available to help me better use and understand the `lowpriority` partition?
 
-Use checkpointing (see {ref}`checkpoint-jobs`) to take full advantage of the `lowpriority` partition. RC is working on a detailed set of documentation and training sessions that will be available later in the Fall 2022 semester to coincide with the release of this new service.
+Use checkpointing (see {ref}`checkpoint-jobs`) to take full advantage of the `lowpriority` partition. RC is working on a detailed set of documentation and training sessions that will be available later in the Fall 2023 semester to coincide with the release of this new service.
 ::::
 
 ::::{dropdown} 3. I have additional questions that are not addressed in the FAQs, what do I do?
