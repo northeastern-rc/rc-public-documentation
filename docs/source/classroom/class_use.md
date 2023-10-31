@@ -1,20 +1,18 @@
 (classroom-faq)=
 # Classroom HPC: FAQ
 
-There are several use cases for teaching and learning with the cluster in a classroom. The cluster offers a command line and web interface, allowing access and instruction-level flexibility. Using the cluster gives you, and your students access to many popular scientific applications and allow you and your students to install other packages as needed. The easy-to-use Open OnDemand web portal also offers a built-in visual file explorer for viewing and transferring.
-
 The following Frequently Asked Questions section should help answer most of your questions about using the cluster for classroom use. You can also contact us at <rchelp@northeastern.edu> or submit a ServiceNow ticket for further information.
 
 ## How can I use Discovery with my class?
 
-There are several ways you can use the cluster in your classroom. Your class can use the cluster to access specific software packages and working environments and learn how to utilize high-performance computing (HPC) resources for large and complex data processing, such as machine learning; AI and molecular simulations; and more.
+There are several ways you can use the cluster in your classroom. Your class can use the cluster to access specific software packages and working environments and learn how to utilize high-performance computing (HPC) resources for large and complex data processing, such as machine learning; AI and molecular simulations; bioinformatics; and more.
 
 ## How do I get my class access to the cluster?
-You fill out an [HPC Classroom Use Request] ticket. The form asks you to submit a list of your student’s names and emails. We will create accounts on the cluster for them. Follow the steps in the article [How to Download a List of Student Email Addresses from Canvas] to get a list of your students’ emails. If your class roster is incomplete, you can attach a preliminary list to the ticket and follow up with us on the same ticket with an updated roster when the add/drop period is over.
+You fill out an [HPC Classroom Use Request] ticket. While filling out this form, please provide the course number and section, and we will pull the students names directly from canvas. We will create accounts on the cluster for them as well as any TA's or co-instructors. We will also make a directory tree under /courses for the class. If there are any changes in enrollment please let us know so we can update your course. There is no need to send us a list of students names as we pull them directly from canvas.
 
 ## Is there any training on the cluster for my class?
 
-Yes, we currently provide online training for your class on using the cluster. In the past, we have also given in-person presentations during a class period on the Boston campus. We provide training each semester. We can customize the training to focus on the resources you will be using with them for the class. Email us at <rchelp@northeastern.edu> and provide details about your class and what training you would like us to provide.
+Yes, we currently provide virtual classroom facilitation for your class on using the cluster. In the past, we have also given in-person presentations during a class period on the Boston campus. We provide training each semester. We can customize the training to focus on the resources you will be using with them for the class. Email us at <rchelp@northeastern.edu> and provide details about your class and what training you would like us to provide.
 
 ## Do my students have to learn Linux to work with the cluster?
 
@@ -36,11 +34,11 @@ To request additional software (**instructors only**):
 1. Select the acknowledgment checkbox, and click **Submit**.
 
 :::{note}
-Software requests can take up to 24 hours to verify; additional time is needed to complete the installation. We might not be able to install every software application requested. If so, we will notify you and provide alternative software to meet your needs.
+Software requests can take up to 1 week to verify; additional time is needed to complete the installation. We might not be able to install every software application requested. If so, we will notify you and provide alternative software to meet your needs.
 :::
 
 :::{tip}
-You and your students can install software locally to your PATH on the cluster, which may be a better option in some cases, such as installing multiple conda environments. See {ref}`software-overview` for more information.
+You and your students can install software locally to your respective PATH under the /courses directory on the cluster, which may be a better option in some cases, such as installing multiple conda environments. See {ref}`software-overview` for more information.
 :::
 
 ## I just need my class to access Open OnDemand. How do I request that?
@@ -49,7 +47,7 @@ Open OnDemand is a web portal that lets you access the resources on the cluster 
 
 ## I'd like my class to use specific resources on the cluster. Can you create a reservation on the cluster for my class?
 
-We often create a reservation on the cluster for your class for specific hardware resources. For example, if your course assignments require GPUs or nodes with a large amount of memory, we can create a reservation on specific nodes that only your class can access for the course duration. However, the cluster is a shared resource, so we ask that you test out your assignments on the cluster so that you are requesting an appropriate amount of resources for your class. We can always increase your reservation if a class needs more resources due to higher-than-expected use. But, if a reservation is not being used to capacity, we will ask you to review the need for the requested resources and adjust the reservation accordingly. We understand that sometimes it takes time to determine precisely your resource needs. Still, we do need to keep a reservation to a reasonable limit to keep the shared resources available to all users.
+We have dedicated partitions to courses, which provide CPU (--partition="courses") and GPU (--partition="courses-gpu") resources. We no longer create reservations for each course. However, please let us know if you think your course may require additional resources other than those provided via the courses partitions. 
 
 
 ## How long do my students have access to the cluster?
