@@ -31,6 +31,18 @@ Please be mindful of the `/scratch` purge policy, which can be found on the [Res
 :::
 
 ## Cleaning Directories
+### Local
+
+We advise against using 'pip install' to install packages outside of a conda environment or python virtual environment (for example, while in a JupyterLab Notebook or interactive python session). These installations are placed in your `.local` directory, adding to your `/home` quota. Additionaly, the presence of different packages in `.local` can have a negative impact on the function of applications on the OOD. Please ensure all the packages you need are installed in a conda or virtual python environment.
+
+If there are no activly running processes the entire `.local` directory can be deleted or individual packages can be removed usually from within: `/home/username/.local/lib/pythonXX/site-packages`
+
+You can check for running processes via:
+
+:::{code-block} bash
+squeue -u <username>
+:::
+
 (cleaning-conda)=
 ### Conda
 
