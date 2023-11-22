@@ -35,3 +35,7 @@ You can import Python packages in your JupyterLab Notebook session by creating a
 1. When allocated a compute node, click **Connect to Jupyter**.
 
 When your JupyterLab Notebook is running and open, type `conda list` in a cell and run the cell to confirm that the environment is your custom conda environment (you should see this on the first line). This command will also list all of your available packages.
+
+:::{important}
+We advise against using 'pip install' to install packages while in the JupyterLab Notebook. These installations are placed in your /home/username/.local directory, which will add to your /home quota. Additionaly, the presence of different packages in your .local can have a negative impact on the function of applications on the OOD. Please ensure all the packages you need are installed in a conda or virtual python environment.
+:::
