@@ -62,68 +62,37 @@ Use the following procedure if you need to install a MATLAB toolbox:
 
 ## Using MATLAB Parallel Server
 
-The cluster has MATLAB Parallel Server installed. This section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB 2020a launched as an interactive app on the Open OnDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting. The parameters presented represent only one scenario.
+The cluster has MATLAB Parallel Server installed. This section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB 2023a launched as an interactive app on the Open OnDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting. The parameters presented represent only one scenario.
 
-This walkthrough will use Open OnDemand, the web portal on the cluster, to launch MATLAB. You will then create a
-cluster profile. This allows you to define cluster properties that will be applied to your jobs. Supported
-functions are `batch`, `parpool`, and `parcluster`. The Parallel Computing Toolbox comes with a cluster profile
-called *local*, which you will change in the walkthrough below.
+This walkthrough will use Open OnDemand, the web portal on the cluster, to launch MATLAB. You will then use the default cluster profile.This allows you to utilize the resources that are allocated to your Open On Demand MATLAB job.
 
-:::{note}
-This walkthrough details submitting jobs through cluster's Open OnDemand web portal. Some parameters will vary if you are using MATLAB from the command line. This walkthrough does not apply
-to other versions of MATLAB.
-:::
-
-Before starting, create a folder in your `/scratch/<username>` directory. This folder is where you will save your job data.
-
-1. Go to your `/scratch` directory: `cd /scratch/<username>` where `<username>` is your NU username
-
-1. Make a new folder. We suggest calling it *matlab-metadata*: `mkdir matlab-metadata`
-
-To start MATLAB and add a Cluster Profile, do the following:
+To start MATLAB and work with the Parallel Server, do the following:
 
 1. Go to <http://ood.discovery.neu.edu>. If prompted, sign in with your cluster username and password.
 
-1. Click **Interactive Apps**, and select **MATLAB**.1. Select **MATLAB version 2020a**, and keep the default time of one hour and default memory of 2GB. Click **Launch**.
+1. Click **Interactive Apps**, and select **MATLAB**.
+
+1. Select **MATLAB version 2023a**, and set the time for the length of your jobs, the number of cpus to be 1 plus the number you plan to use for the parallel toolbox work, and default memory to at least 2 times the number of cpus you request. Click **Launch**.
 
 1. If necessary, adjust the **Compression** and **Image Quality**, and then click **Launch MATLAB**.
 
-1. On the MATLAB Home tab, in the **Environment** section, select **Parallel**, then click **Create and Manage Clusters**. This opens the Cluster Profile Manager window.
-
-1. On the Cluster Profile Manager window, select **Add Cluster Profile**, then click **Slurm**. If prompted, click **OK** on the notice about needing a Parallel Server.
-
-1. Double-click the new profile name in the Cluster Profile column, and type a name such as **TestProfile**. Press **Enter** to save the change.
-
-1. Select **Edit** in the **Manage Profile** section. This lets you edit the options on the **Properties** tab. For this walkthrough, make the following edits:
-
-   1. In the **Folder where job data is stored on the client** option, type `/scratch/<yourusername>/matlab-metadata` (this is the directory that you created in the first procedure above).
-   1. In the **Number of workers available to cluster** option, type a number between between 1 and 10. This field is the number of MPI processes you intend to run. This corresponds to the `--ntasks` Slurm option. The maximum is 128 per job; however, for this task, we recommend keeping it lower and use threading inside the nodes. The number you set here will be the default maximum for the job. You can set it for less than or equal to this number in the MATLAB Command Window when submitting your job.
-   1. In the **Number of computational threads to use on each worker** option, type a number between 1 and 10. This field represents the number of threads that each worker will possess. This corresponds to `cpus-per-task` in Slurm. Do not exceed the number of available cores on the node.
-
-9. When you have finished editing your properties, click **Done**.
-1. (Optional) If you want to validate your setup, click the **Validation** tab (next to the Properties tab). Ensure all the stages are checked, then click the **Validate** button at the bottom of the page.
-
-This will check the properties of your profile. You might need to wait a minute or two for this to complete.
-
-:::{caution}
-Do not click the green **Validate** button. This will attempt validation using the maximum number of workers, which can cause the validation to hang or fail. If you accidentally click the green Validate button, click **Stop** to end the validation process.
-:::
-
-(OPTIONAL) In the **Cluster Profile** column, right-click on the TestProfile name and select **Set as Default**. This sets your profile to be the default.
-
-Now that you have set up your profile, you can use the default cluster profile you just created (*TestProfile*) with the following commands:
+The following commands `parpool(feature('numcores'))` will start the Parallel Server with the number of cores that are allocated in the MATLAB Open OnDemand job (`feature('numcores')`). You can inspect the Parallel Server and the state of it with the command `parcluster`.
 
 :::{code-block} matlab
 #with parpool
-parallel.defaultClusterProfile(‘TestProfile’)
-parpool
+parpool(feature('numcores'))
 
 #with parcluster
-c = parcluster(‘TestProfile’)
+parcluster
 :::
 
 ### Using parcluster example
-This section provides instructions for submitting batch jobs to the cluster for scaling calculations on an integer factorization sample problem. The complexity of this problem increases with the magnitude of the number, making it computationally intensive. To perform these calculations, we will use the `myParallelAlgorithmFcn.m` MATLAB function. Please note that this section assumes you have already configured a MATLAB Cluster Profile per the procedure above.
+
+:::{note}
+For this example, please select 6 hours, 65 cpus, and 130 GB of memory.
+:::
+
+This section provides instructions for submitting a job to the cluster for scaling calculations on an integer factorization sample problem. The complexity of this problem increases with the magnitude of the number, making it computationally intensive. To perform these calculations, we will use the `myParallelAlgorithmFcn.m` MATLAB function. Please note that this section assumes you have already started a MATLAB Parallel Server.
 
 There are benchmarking scripts and examples available in **`**/shared/centos7/matlab/R2020a/examples/parallel/main/**`** on the cluster.
 
@@ -162,30 +131,15 @@ for c = 1:numel(complexities)
 end
 ```
 
-### Submit Batch Job
-To submit myParallelAlgorithmFcn as a batch job, in the MATLAB Command Window, type:
+### Running the Job
+To run the myParallelAlgorithmFcn in MATLAB, in the MATLAB Command Window, type:
 
 :::{code-block} matlab
-totalNumberOfWorkers = 65;
-cluster = parcluster('TestProfile');
-job = batch(cluster,'myParallelAlgorithmFcn',2,'Pool',totalNumberOfWorkers-1,'CurrentFolder','.');
+parpool(feature('numcores'))
+[numWorkers,time] = myParallelAlgorithmFcn
 :::
 
-This specifies the **`totalNumberOfWorkers`** as 65, where 64 workers will be used to run **`parfor`** in parallel (so the pool is set to 64), and the additional worker will run the main process.
-
-To monitor the job after submitting it, click on **`Parallel`**, then **`Monitor Jobs`** to open the Job Monitor. Here, you can view job information, such as the job state (i.e., running, failed, finished, etc.), and fetch outputs by right-clicking on the job line.
-
-You can close MATLAB after submitting the job to the scheduler. The job monitor tool will continue to track the jobs.
-
-If you want to block MATLAB until the jobs are finished, type **`Wait(job)`**.
-
-Once the jobs are complete, you can transfer the function outputs using the **`fetchOutputs`** command.
-
-:::{code} matlab
-outputs = fetchOutputs(job);
-numWorkers = outputs{1};
-time = outputs{2};
-:::
+This specifies the number of cpus allocated in the MATLAB Open OnDemand to be utilized in the Parallel Toolbox and runs the function `myParallelAlgorithmFcn` and stores the outputs as `[numWorkers,time]`.
 
 You can plot the performance (speedup) by typing:
 
