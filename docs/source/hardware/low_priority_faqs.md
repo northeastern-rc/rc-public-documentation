@@ -110,7 +110,7 @@ In SLURM terminology, preemption is a scheduling mechanism that involves stoppin
 When low priority jobs are running on your hardware, you may experience a slight delay (~30s) when submitting your first job to your private partition. This is the time it will take the scheduler to kill/preempt low priority jobs running on your partition. This new service is designed to minimize that delay.
 
 **For users of the** `lowpriority` **partition:** 
-Submitting jobs to this partition will make your jobs preemptable. That means they may be stopped/suspended and re-queued at any time. We recommend that you use strategies such as checkpointing (see {ref}`checkpoint-jobs`) to take full advantage of the `lowpriority` partition. RC is working on detailed documentation (see {ref}`low-priority`) and training sessions that will be available later in the Fall 2023 semester, once the service is ready to be released.
+Submitting jobs to this partition will make your jobs preemptable. That means they may be stopped/suspended and re-queued at any time. We recommend that you use strategies such as checkpointing (see {ref}`checkpoint-jobs`) to take full advantage of the `lowpriority` partition. RC is working on detailed documentation (see {ref}`low-priority`) and training sessions that will be available later in the Fall 2022 semester, once the service is ready to be released.
 ::::
 
 ::::{dropdown} 3. How does re-queuing of preempted (terminated) low priority jobs work?
@@ -145,7 +145,7 @@ RC racks, installs and maintains privately owned servers; RC purchases the equip
 ::::
 
 ::::{dropdown} 3. Are there policies or other formal documents available?
-RC is currently drafting a memorandum of understanding (MoU) that will be distributed to all private partitions owners later in the Fall semester 2023. This document will formalize the understanding that was stated to all private partitions owners at the time of purchase, since 2019. Moreover, RC is working on a detailed set of documentation, service level objectives and training sessions that will be available later in the Fall 2023 semester, once the service is ready to be released.
+RC is currently drafting a memorandum of understanding (MoU) that will be distributed to all private partitions owners later in the Fall semester 2022. This document will formalize the understanding that was stated to all private partitions owners at the time of purchase, since 2019. Moreover, RC is working on a detailed set of documentation, service level objectives and training sessions that will be available later in the Fall 2022 semester, once the service is ready to be released.
 ::::
 
 ::::{dropdown} 4. I have resources I would like to make available to the rest of the research community, what can I do?
