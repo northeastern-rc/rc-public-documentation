@@ -1,9 +1,9 @@
 (cps-ood)=
 
-# CPS Class Instructions
+# CPS Course Instructions
 
 :::{important}
-The following instructions will only work for CPS classes.
+The following instructions will only work for CPS courses.
 :::
 
 These instructions describe the process of opening a CPS JupyterLab environment on the {term}`Open OnDemand (OOD)` on the cluster web portal and accessing class `/courses` folders.

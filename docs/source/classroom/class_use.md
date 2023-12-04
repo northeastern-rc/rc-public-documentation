@@ -1,10 +1,9 @@
-(classroom-faq)=
-# Classroom HPC: FAQ
+(courses-faq)=
+# Courses: FAQ
 
 The following Frequently Asked Questions section should help answer most of your questions about using the cluster for classroom use. You can also contact us at <rchelp@northeastern.edu> or submit a ServiceNow ticket for further information.
 
 ## How can I use Discovery with my class?
-
 There are several ways you can use the cluster in your classroom. Your class can use the cluster to access specific software packages and working environments and learn how to utilize high-performance computing (HPC) resources for large and complex data processing, such as machine learning; AI and molecular simulations; bioinformatics; and more.
 
 ## How do I get my class access to the cluster?
