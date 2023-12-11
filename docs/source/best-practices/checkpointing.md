@@ -20,7 +20,7 @@ To implement checkpointing:
 Checkpointing allows you to:
 
 - Create resilient workflows in the event of faults.
-- Overcome most scheduler resource time limitations.
+- Overcome most scheduler resource time limitations, and efficiently use the `lowpriority` partition.
 - Implement an early error detection approach by inspecting intermediate results.
 
 ## Checkpointing types
@@ -49,14 +49,14 @@ Implementing checkpointing can be achieved by the following:
 - The use of [Slurm Job Arrays].
 
 :::{note}
-To overcome partition time limits, replace your single long job with multiple shorter jobs. Then, use job arrays to set each job to run one after the other. If checkpointing is used, each job will write a checkpoint file. The following job will use the latest checkpoint file to continue from the latest state of the calculation.
+To overcome partition time limits, or to use the `lowpriority` partition effectively, replace your single long job with multiple shorter jobs. Using job arrays, set each job to run one after the other. Each job will write a checkpoint file if checkpointing is implemented. The next job in line will be the latest checkpoint file to continue from the latest state of the calculation.
 :::
 
 ## Application-level checkpointing
 
 ### GROMACS checkpointing example
 
-The following example shows how to implement a 120-hour [GROMACS](https://www.gromacs.org/) job using multiple shorter jobs on the *short* partition. We use Slurm job arrays and the GROMACS built-in checkpointing option to implement checkpointing.
+The following example shows how to implement a 120-hour [GROMACS](https://www.gromacs.org/) job using multiple shorter jobs on the *short* or the  or the *lowpriority* partition. We use Slurm job arrays and the GROMACS built-in checkpointing option to implement checkpointing.
 
 :::{seealso}
 [https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html](https://manual.gromacs.org/documentation/current/user-guide/managing-simulations.html)
@@ -65,7 +65,7 @@ The following script `submit_mdrun_array.sh` creates a Slurm job array of 10 ind
 
 :::{code} shell
 #!/bin/bash
-#SBATCH --partition=short
+#SBATCH --partition=short,lowpriority
 #SBATCH --constraint=cascadelake
 #SBATCH --nodes=1
 #SBATCH --time=12:00:00
@@ -140,7 +140,7 @@ The following example of the `submit_tf_array.bash` script:
 #!/bin/bash
 #SBATCH --job-name=myrun
 #SBATCH --time=00:10:00
-#SBATCH --partition=gpu
+#SBATCH --partition=gpu,lowpriority
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --mem=10Gb

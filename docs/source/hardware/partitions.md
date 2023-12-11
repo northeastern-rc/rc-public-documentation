@@ -6,9 +6,25 @@ A {term}`partition` is a logical collections of nodes that comprise different ha
 
 On Discovery, there are several partitions:
 
-- General access (`debug`, `express`, `short`, `gpu`)
+- General access (`debug`, `express`, `short`, `gpu`, `lowpriority`)
 - Application only (`long`, `large`, `multigpu`)
-- PI owned (accessed only by members of the PIs’ group)
+- PI owned (accessed only by members of the PIs’ group unless the PI partition is a member of the `lowpriority` partition group)
+
+The general access and application only partitions span a variety of
+hardware on Discovery. The `gpu` and `multigpu` partitions are
+meant for accesssing the GPU hardware on Discovery while the rest make
+CPUs available to the community.  For example, if you use the
+`debug` partition you're using the same hardware as `short`, just
+with different time, job, and core limits. Refer to the tables below
+for detailed information on the current partitions. 
+
+:::{note}
+PI-owned partitions only include the hardware that those PIs own and
+are 'only' accessible to the members of the PI's group unless the
+PI-owned partition is also a member of the `lowpriority` partition
+group, in which case it could be available to general users as
+well. See {ref}`low-priority`.
+:::
 
 The general access and application only partitions span the hardware on the cluster, with `gpu` and `multigpu` spanning the GPUs on the cluster and the other partitions spanning the CPUs. For example, if you use the `debug` partition you are using the same hardware as `short`, just with different time, job, and core limits. Refer to the tables below for detailed information on the current partitions. Note that PI-owned partitions only include the hardware that those PIs own and are only accessible to the members of the PI's group.
 
@@ -57,6 +73,14 @@ header-rows: 1
   - 1024
   - 25TB
   - Best for serial or small parallel jobs (``--nodes=2`` max) that need to run for up to 24 hours.
+* - lowpriority
+  - No
+  - 4 hours/24 hours
+  - 50/500
+  - 5000
+  - 1024
+  - 25TB
+  - Best for jobs that do not lose much information if they were to end abruptly. See {ref}`checkpoint-jobs`
 * - long
   - **Yes**
   - 1 day/5 Days
@@ -123,15 +147,7 @@ For more information about these commands, see our [Using Slurm] and the officia
 
 ## Allocating partitions in your jobs
 
-To specify a partition when running jobs, use the option
-`--partition=<partition name>` with either `srun` or `sbatch`. When
-using a partition with your job and specifying the options of
-`--nodes=` and `--ntasks=`, make sure that you are requesting options
-that best fit your job. It can actually have the opposite effect on
-jobs that are better suited to running with smaller requirements, as
-you have to wait for the extra resources that your job will not
-use. See {ref}`using-slurm` for more information on using Slurm to run
-jobs.
+To specify a partition (without the option of `lowpriority`) when running jobs, use `--partition=<partition name>` otherwise use `--partition=<partition name>,lowpriority` with either `srun` or `sbatch`. More information on how to utilize the Low Priority partition can be found in {ref}`low-priority`.  When using a partition with your job and specifying the options of`--nodes=` and `--ntasks=`, make sure that you are requesting options that best fit your job. It can actually have the opposite effect on jobs that are better suited to running with smaller requirements, as you have to wait for the extra resources that your job will not use. See {ref}`using-slurm` for more information on using Slurm to run jobs.
 
 :::{note}
 Requesting the maximum number of nodes or tasks will not make your job run faster or give you higher priority in the job queue.
