@@ -865,7 +865,7 @@ To open an existing file, type the following command:
 vim filename
 :::
 
-:::{eval-rst}
+:::{code}
 .. list-table:: Common Vim Commands
    :widths: 50 20
    :header-rows: 1
