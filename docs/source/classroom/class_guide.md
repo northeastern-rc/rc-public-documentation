@@ -78,14 +78,14 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 
 #!/bin/bash
 
-#SBATCH --nodes=1
-#SBATCH --time=4:00:00
-#SBATCH --job-name=MyJobName
-#SBATCH --partition=courses
-#SBATCH --mail-type=ALL
-#SBATCH --mail-users=$USER@northeastern.edu
+#SBATCH --nodes=1  
+#SBATCH --time=4:00:00  
+#SBATCH --job-name=MyJobName  
+#SBATCH --partition=courses  
+#SBATCH --mail-type=ALL  
+#SBATCH --mail-users=$USER@northeastern.edu  
 
-# <commands to execute>
+# <commands to execute>  
 
 :::
 ::::
