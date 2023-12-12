@@ -10,15 +10,13 @@ cps_ood
 
 High-Performance Computing (HPC) is not only for researchers; it is an integral part of modern education. In this section, we offer guidance for instructors and students who want to use our HPC resources in the classroom.
 
-::::{grid} 4
+::::{grid} 3
 
 :::{grid-item-card} {ref}`class-guide`
 :::
 :::{grid-item-card} {ref}`cps-ood`
 :::
 :::{grid-item-card} {ref}`courses-faq`
-:::
-:::{grid-item-card} {ref}`classroom-examples`
 :::
 ::::
 
