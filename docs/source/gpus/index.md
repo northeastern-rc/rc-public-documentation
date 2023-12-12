@@ -25,52 +25,5 @@ Harnessing the power of Graphics Processing Units (GPUs) can significantly accel
 :::
 ::::
 
-(gpu-overview-index)=
-## GPU Overview
-Get acquainted with the capabilities and benefits of using GPUs in our HPC cluster.
-
-- **GPU Types**: An overview of the GPU hardware available.
-- **Benefits**: Understand how GPUs can accelerate your computations.
-
-:::{seealso}
-{ref}`More about GPU Overview <working-gpus>`.
-:::
-
-(accessing-gpus-index)=
-## Accessing GPUs
-
-Learn how to access and request GPU resources for your tasks.
-
-- **Available GPUs**: Details on the GPUs available for use.
-- **Reservation**: How to reserve GPU resources for your jobs.
-
-:::{seealso}
-{ref}`More about Accessing GPUs <accessing-gpus>`.
-:::
-
-(gpu-job-submission-index)=
-## GPU Job Submission
-
-Discover how to submit jobs that utilize GPU resources effectively.
-
-- **GPU Job Scripts**: Creating job scripts for GPU-accelerated tasks (e.g., CUDA and Deep Learning).
-- **Monitoring GPU Usage**: Tools and commands to monitor GPU resources.
-
-:::{seealso}
-{ref}`More about Job Submission <gpu-job-submission>`.
-:::
-
-(best-practices-gpu-index)=
-## Best Practices for GPUs
-
-Optimize your GPU-based computations with best practices and tips.
-
-- **GPU Memory Management**: Efficiently manage GPU memory usage.
-- **Parallelization**: Strategies for parallelizing tasks for GPUs.
-
-:::{seealso}
-{ref}`More about Best Practices for GPUs <best-practices-gpus>`.
-:::
-
 :::{include} ../_snippets/helpfooter.md
 :::

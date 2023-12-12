@@ -87,11 +87,7 @@ widths: auto
 
 The `gpu` {term}`partition` is the general GPU resource for HPC users looking to use a GPU; `multigpu` is the alternative, where more than one GPU are accessible.
 
-Anyone with a cluster account has access to the `gpu` partition. However, you must submit a [ServiceNow ticket] requesting temporary access to `multigpu` provided sufficient need and preparation.
-
-:::{note}
-The `multigpu` partition is available for a limited time window to fulfill urgent needs. In addition, only instances that require `multigpu` will be granted access to this partition. As the partition is only accessible for a limited time (e.g., 48 hours), it is advisable to use it at full capacity. A member of the RC team will review your request to ensure that there is a genuine need for the partition. **Please note that all user limits are subject to the availability of the `multigpu` resources at the time and will be allocated based on user needs.**
-:::
+Anyone with a cluster account has access to the `gpu` partition. However, you must submit a [ServiceNow ticket] requesting temporary testing access to `multigpu` to obtain performance results to provide details and test results that demonstrate your need for access for the `multigpu` partition in the post testing [ServiceNow ticket]. All requests are evaluated by members of the RC team for sufficient utilization of the partition.
 
 :::{list-table}
 --------------
