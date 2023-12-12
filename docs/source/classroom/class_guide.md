@@ -85,7 +85,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 #SBATCH --mail-type=ALL  
 #SBATCH --mail-users=$USER@northeastern.edu  
 
-#<commands to execute>  
+#commands to execute  
 
 :::
 ::::
@@ -104,7 +104,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 #SBATCH --mail-type=ALL  
 #SBATCH --mail-users=$USER@northeastern.edu  
 
-#<commands to execute>  
+#commands to execute  
 
 :::
 ::::
