@@ -45,15 +45,15 @@ We have two partitions dedicated to the use of students and instructors for the 
 header-rows: 1
 ---
 * - Name
-  - Time Limit (min/max)
+  - Time Limit (default/max)
   - Running Jobs (max)
   - RAM Limit
 * - courses
-  - 1 hr / 24 hrs
+  - 4 hr / 24 hrs
   - 50
   - 256 GB
 * - courses-gpu
-  - 1 hr / 8 hrs
+  - 4 hr / 8 hrs
   - 8
   - 12 GB
 ::::
@@ -85,7 +85,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 #SBATCH --mail-type=ALL  
 #SBATCH --mail-users=$USER@northeastern.edu  
 
-# <commands to execute>  
+#<commands to execute>  
 
 :::
 ::::
@@ -96,15 +96,15 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 
 #!/bin/bash
 
-#SBATCH --nodes=1
-#SBATCH --time=4:00:00
-#SBATCH --job-name=MyJobName
-#SBATCH --partition=courses-gpu
-#SBATCH --gres=gpu:1
-#SBATCH --mail-type=ALL
-#SBATCH --mail-users=$USER@northeastern.edu
+#SBATCH --nodes=1  
+#SBATCH --time=4:00:00  
+#SBATCH --job-name=MyJobName  
+#SBATCH --partition=courses-gpu  
+#SBATCH --gres=gpu:1  
+#SBATCH --mail-type=ALL  
+#SBATCH --mail-users=$USER@northeastern.edu  
 
-# <commands to execute>
+#<commands to execute>  
 
 :::
 ::::
