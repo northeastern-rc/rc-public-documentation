@@ -106,13 +106,11 @@ If you want to set up the default and maximum time configuration on your partiti
 
 Following these instructions ensures that your job scripts consider the maintenance period and set appropriate time limits. If you have any further questions, feel free to ask!
 
-[testing].
 
 [Consultation page]: https://rc.northeastern.edu/support/consulting/
 [Transferring Data]: https://rc-docs.northeastern.edu/en/latest/using-discovery/transferringdata.html
 [research computing website]: https://rc.northeastern.edu/support/training/
-[ServiceNow Access Request]:https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
-[testing]:https://service.northeastern.edu/tech?id=sc_cat_item&table=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
+[ServiceNow Access Request]:https://service.northeastern.edu/tech?id=sc_cat_item&table=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
 [sponsored account request]:https://service.northeastern.edu/tech?id=kb_article_view&table=kb_knowledge&sys_kb_id=f617b57c97ed7590350cb9cfe153afb5
 [rchelp@northeastern.edu]: mailto:rchelp@northeastern.edu
 [IT Maintenance and Status]: https://northeastern.statuspage.io/
