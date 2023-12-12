@@ -139,4 +139,4 @@ This indicates the state (idle or not) of gpu-types and could be helpful to find
 [Pascal]: https://www.nvidia.com/en-us/data-center/pascal-gpu-architecture/
 [RTX A5000]: https://www.nvidia.com/en-us/design-visualization/rtx-a5000/
 [RTX A6000]: https://www.nvidia.com/en-us/design-visualization/rtx-a6000/
-[ServiceNow ticket]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7
+[ServiceNow ticket]: https://bit.ly/NURC-PartitionAccess
