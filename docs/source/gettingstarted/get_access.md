@@ -111,6 +111,6 @@ Following these instructions ensures that your job scripts consider the maintena
 [Transferring Data]: https://rc-docs.northeastern.edu/en/latest/using-discovery/transferringdata.html
 [research computing website]: https://rc.northeastern.edu/support/training/
 [ServiceNow Access Request]: https://bit.ly/NURC-AccessRequest
-[sponsored account request]: https://service.northeastern.edu/tech?id=kb_article_view&table=kb_knowledge&sys_kb_id=f617b57c97ed7590350cb9cfe153afb5
+[sponsored account request]: https://service.northeastern.edu/tech?id=kb_article_view%26table=kb_knowledge%26sys_kb_id=f617b57c97ed7590350cb9cfe153afb5
 [rchelp@northeastern.edu]: mailto:rchelp@northeastern.edu
 [IT Maintenance and Status]: https://northeastern.statuspage.io/
