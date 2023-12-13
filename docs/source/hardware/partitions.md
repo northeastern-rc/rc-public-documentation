@@ -142,7 +142,7 @@ If your code is optimized to run on more than two nodes and needs less than one 
 
 ## Partition Access Request
 
-If you need access to the `large`, `long`, or `multigpu` partition, you need to submit a [ServiceNow ticket]. Access is not automatically granted. You will need to provide details and test results that demonstrate your need for access for these partitions. If you need temporary access to `multigpu` to perform testing before applying for permanent access, you should also submit a [ServiceNow ticket]. All requests are evaluated by members of the RC team.
+If you need access to the `large`, `long`, or `multigpu` partition, you need to submit a [ServiceNow ticket]. Access is not automatically granted. You will need to provide details and test results that demonstrate your need for access for these partitions. If you need temporary access to `multigpu` to perform testing before applying for permanent access, you should also submit a [ServiceNow ticket]. All requests are evaluated by members of the RC team. Once reviewed and approved, you will be added to have access to that partition.
 
 [ServiceNow ticket]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7
 [Slurm documentation]: https://slurm.schedmd.com/
