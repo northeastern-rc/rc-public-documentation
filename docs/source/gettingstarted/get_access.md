@@ -5,20 +5,20 @@
 (request-an-account)=
 ## Request Account
 :::{important}
-If you previously had access to Discovery but are now working with a different PI, you should submit a [ServiceNow RC Access Request form] and enter the name of your current PI in the Sponsor field. This will link your account to your current PI and expedite updating your account with any of your current PI's resources on Discovery, such as shared storage or a private partition.
+If you previously had access to Discovery but are now working with a different PI, you should submit a [ServiceNow Access Request] form and enter the name of your current PI in the Sponsor field. This will link your account to your current PI and expedite updating your account with any of your current PI's resources on Discovery, such as shared storage or a private partition.
 :::
 
 :::{sidebar} Valid NU Credentials
 Access to the cluster is limited to Northeastern affiliates with a valid NU username and password. Research Computing cannot create or renew Northeastern accounts. You must work with your sponsor to obtain or update your credentials.
 
-For **non-Northeastern personnel**, request a Northeastern sponsored via [How do I submit a sponsored account request?]
+For **non-Northeastern personnel**, request a Northeastern sponsored account via a [sponsored account request].
 :::
 
 To access Discovery, you must first have an account. You can request an account through ServiceNow but need a Northeastern username and password. If you are new to the university or a visiting researcher, you should work with your sponsor to obtain a Northeastern username and password.
 
 **To request an account, follow these steps:**
 
-1. Visit the [ServiceNow RC Access Request form].
+1. Visit the [ServiceNow Access Request] form.
 1. Complete the form, check the acknowledgment box, and submit it.
 
 Your request may take up to 24 hours after your sponsor approves it (see Sponsor Approval Process below). You will receive an email confirmation when your access has been granted. Once you have access, if you are unfamiliar with Discovery, high-performance computing, or Linux, you may want to take one of our training courses. Visit the [Research Computing website] for more information about our training and services.
@@ -110,7 +110,7 @@ Following these instructions ensures that your job scripts consider the maintena
 [Consultation page]: https://rc.northeastern.edu/support/consulting/
 [Transferring Data]: https://rc-docs.northeastern.edu/en/latest/using-discovery/transferringdata.html
 [research computing website]: https://rc.northeastern.edu/support/training/
-[servicenow rc access request form]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c
-[How do I submit a sponsored account request?]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013989&sys_kb_id=e8381ac48764a594ba9a0fad0ebb3533&spa=1
+[ServiceNow Access Request]: https://bit.ly/NURC-AccessRequest
+[sponsored account request]: https://service.northeastern.edu/tech?id=kb_article_view;amp;table=kb_knowledge;amp;sys_kb_id=f617b57c97ed7590350cb9cfe153afb5
 [rchelp@northeastern.edu]: mailto:rchelp@northeastern.edu
 [IT Maintenance and Status]: https://northeastern.statuspage.io/
