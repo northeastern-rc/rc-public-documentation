@@ -58,8 +58,9 @@ The following example demonstrates how to build PyTorch inside a conda virtual e
 caption: |
     PyTorch's installation steps for Python 3.9 and Cuda 11.8:
 ---
-conda create --name pytorch_env python=3.10 -y
+conda create --name pytorch_env python=3.9 -y
 source activate pytorch_env
+conda install jupyterlab -y
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
 ::::
 Now, let us check the installation:
@@ -88,11 +89,12 @@ For the latest installation, use the TensorFlow pip package, which includes GPU 
 caption: |
     Tensorflow's installation steps for Python 3.9 and Cuda 11.8:
 ---
-conda create --name TF_env python=3.9 -y
-source activate TF_env
+conda create --name tensorflow_env python=3.9 -y
+source activate tensorflow_env
+conda install jupyterlab -y
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 pip install --upgrade pip
-pip install tensorflow==2.13.*
+pip install tensorflow[and-cuda]==2.13.*
 ::::
 
 Verify the installation:
@@ -111,12 +113,13 @@ Ignore the `Warning` messages that get generated after executing the above comma
 caption: |
     PyTorch and Tensorflow's installation steps for Python 3.9 and Cuda 11.8:
 ---
-conda create --name deeplearning-cuda11_8 python=3.9 -y
-source activate deeplearning-cuda11_8
+conda create --name deeplearning_env python=3.9 -y
+source activate deeplearning_env
+conda install jupyterlab -y
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 pip install --upgrade pip
-pip install tensorflow==2.13.*
+pip install tensorflow[and-cuda]==2.13.*
 ::::
 
 Verify installation:
@@ -130,10 +133,11 @@ python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' # True
 ::::::
 
 ::::{tip}
-Install `jupyterlab` and few other commonly used datascience packages in the `pytorch_env` environment:
+Install other commonly used datascience packages in the `pytorch_env`, `tensorflow_env`, or the `deeplearning_env` environment:
 :::{code} bash
-conda install pandas scikit-learn matplotlib seaborn jupyterlab -y
+conda install pandas scikit-learn matplotlib seaborn -y
 :::
+For the `tensorflow_env` or the `deeplearning_env`, install with `conda install` prior to your first `pip install` and use `pip install` after your first `pip install` in the environment. 
 ::::
 
 [PyTorch documentation]: https://pytorch.org/
