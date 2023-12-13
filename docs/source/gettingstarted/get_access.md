@@ -5,7 +5,7 @@
 (request-an-account)=
 ## Request Account
 :::{important}
-If you previously had access to Discovery but are now working with a different PI, you should submit a [ServiceNow Access Request] form and enter the name of your current PI in the Sponsor field. This will link your account to your current PI and expedite updating your account with any of your current PI's resources on Discovery, such as shared storage or a private partition.
+If you previously had access to Discovery but are now working with a different PI, you should submit a [ServiceNow Access Request test] form and enter the name of your current PI in the Sponsor field. This will link your account to your current PI and expedite updating your account with any of your current PI's resources on Discovery, such as shared storage or a private partition.
 :::
 
 :::{sidebar} Valid NU Credentials
@@ -110,7 +110,8 @@ Following these instructions ensures that your job scripts consider the maintena
 [Consultation page]: https://rc.northeastern.edu/support/consulting/
 [Transferring Data]: https://rc-docs.northeastern.edu/en/latest/using-discovery/transferringdata.html
 [research computing website]: https://rc.northeastern.edu/support/training/
-[ServiceNow Access Request]:`https://service.northeastern.edu/tech?id=sc_cat_item&table=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c`
-[sponsored account request]:https://service.northeastern.edu/tech?id=kb_article_view&table=kb_knowledge&sys_kb_id=f617b57c97ed7590350cb9cfe153afb5
+[ServiceNow Access Request]: https://service.northeastern.edu/tech?id=sc_cat_item&amp;sys_id=0ae24596db535fc075892f17d496199c
+[ServiceNow Access Request test]: https://bit.ly/NURC-AccessRequest
+[sponsored account request]: https://service.northeastern.edu/tech?id=kb_article_view&table=kb_knowledge&sys_kb_id=f617b57c97ed7590350cb9cfe153afb5
 [rchelp@northeastern.edu]: mailto:rchelp@northeastern.edu
 [IT Maintenance and Status]: https://northeastern.statuspage.io/
