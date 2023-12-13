@@ -18,7 +18,7 @@ To access Discovery, you must first have an account. You can request an account 
 
 **To request an account, follow these steps:**
 
-1. Visit the [ServiceNow Access Request].
+1. Visit the [ServiceNow Access Request] form.
 1. Complete the form, check the acknowledgment box, and submit it.
 
 Your request may take up to 24 hours after your sponsor approves it (see Sponsor Approval Process below). You will receive an email confirmation when your access has been granted. Once you have access, if you are unfamiliar with Discovery, high-performance computing, or Linux, you may want to take one of our training courses. Visit the [Research Computing website] for more information about our training and services.
