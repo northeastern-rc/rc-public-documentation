@@ -1,12 +1,15 @@
 # Research Computing
 
-Research Computing at Northeastern Univeristy is committed to supporting cutting-edge research and innovation. This section overviews the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment and Slurm workload manager.
+Research Computing at Northeastern Univeristy is committed to supporting cutting-edge research and innovation. This section overviews the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment.
 
-::::{grid} 3
+::::{grid} 2
 
-:::{grid-item-card} {ref}`welcome`
-:::
-:::{grid-item-card} {ref}`services`
+:::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` 
+:link: services
+:link-type: doc
+Services we offer
++++
+[Learn more »](services)
 :::
 :::{grid-item-card} {ref}`getting-help`
 :::
@@ -20,4 +23,12 @@ Research Computing at Northeastern Univeristy is committed to supporting cutting
 
 Explore these topics to understand and leverage our resources to their fullest. Our support team is available at <rchelp@northeastern.edu> or consult our {ref}`faq` if you need assistance.
 
-Happy researching!
+:::{note}
+If you are new to high-performance computing, please check out our catalog of on-demand training courses on various topics to help you get started. For information on training and services, please visit our [Research Computing Team website].
+:::
+
+We highly appreciate your feedback! If you have any comments or suggestions regarding the topics covered in this documentation, please submit a [Research Computing Documentation Request] or contact us at <rchelp@northeastern.edu>.
+
+
+[research computing documentation request]: https://bit.ly/NURC-Documentation
+[research computing team website]: https://rc.northeastern.edu
