@@ -5,7 +5,7 @@ We support classroom education at Northeastern University by providing access to
 
 We’ve supported courses from many disciplines, including biology, chemistry, civil engineering, machine learning, computer science, mathematics, and physics.
 
-To gain access to HPC resources instructors need to submit a [classroom access form.](https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0ae24596db535fc075892f17d496199c)
+To gain access to HPC resources instructors need to submit a [classroom access form.](https://bit.ly/NURC-Classroom)
 
 Please submit these requests prior to the beginning of each semester (preferred), or at least **one week** prior to the start of when you plan on using the HPC cluster for your class.
 
