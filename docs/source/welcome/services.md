@@ -1,8 +1,6 @@
 (services)=
 # Services We Provide
 
-## Facilitation of HPC resources
-
 ::::{grid} 3
 ::::
 
