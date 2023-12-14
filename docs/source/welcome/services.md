@@ -14,21 +14,21 @@ An overview of our computational resources.
 :::
 
 :::{grid-item-card} {octicon}`database;1.5em;sd-mr-1` Storage
-:link: datamanagment/discovery_storage
+:link: ../datamanagment/discovery_storage
 :link-type: doc
 
 We offer several storage solutions for active and archival use.
 +++
-[Learn more »](datamanagment/discovery_storage)
+[Learn more »](../datamanagment/discovery_storage)
 :::
 
 :::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` Classroom
-:link: classroom/class_use
+:link: ../classroom/class_use
 :link-type: doc
 
 We support classroom use of HPC resources.
 +++
-[Learn more »](classroom/class_use)
+[Learn more »](../classroom/class_use)
 :::
 ::::
 
