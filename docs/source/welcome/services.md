@@ -11,7 +11,7 @@
 
 An overview of our computational resources.
 +++
-[Learn more »](hardware/hardware-overview)
+[Learn more »](hardware/hardware_overview)
 :::
 :::{grid-item-card} {octicon}`database;1.5em;sd-mr-1` Storage
 :link: datamanagment/discovery_storage
@@ -19,15 +19,15 @@ An overview of our computational resources.
 
 We offer several storage solutions for active and archival use.
 +++
-[Learn more »](datamanagment/data-storage)
+[Learn more »](datamanagment/discovery_storage)
 :::
 :::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1`Classroom
-:link: classroom/class_guide
+:link: classroom/class_use
 :link-type: doc
 
 We support classroom use of HPC resources.
 +++
-[Learn more »](classroom/class-guide)
+[Learn more »](classroom/class_use)
 :::
 ::::
 

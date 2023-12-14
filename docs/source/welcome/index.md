@@ -6,7 +6,7 @@ Research Computing at Northeastern Univeristy is committed to supporting cutting
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` Services
-:link: services
+:link: welcome/services
 :link-type: doc
 
 Services we offer to all users of the HPC at NU.
@@ -14,20 +14,20 @@ Services we offer to all users of the HPC at NU.
 [Learn more »](welcome/services)
 :::
 :::{grid-item-card} {octicon}`info;1.5em;sd-mr-1` Getting Help
-:link: gettinghelp
+:link: welcome/gettinghelp
 :link-type: doc
 
 We offer training resources and direct assitance as you access the computing cluster at NU.
 +++
-[Learn more »](welcome/getting-help)
+[Learn more »](welcome/gettinghelp)
 :::
 :::{grid-item-card} {octicon}`server;1.5em;sd-mr-1` Introduction to the cluster
-:link: introtocluster
+:link: welcome/introtocluster
 :link-type: doc
 
 What is a computing cluster and schedule manager?
 +++
-[Learn more »](welcome/intro-to-cluster)
+[Learn more »](welcome/introtocluster)
 :::
 ::::
 
