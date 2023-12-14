@@ -1,20 +1,16 @@
 (services)=
-# Services We Provide
-
-:::
-::::
+# Services we Provide
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
-
-:::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Compute
-:link: hardware/hardware_overview
+:::{grid-item-card} {octicon}`device-desktop;1.5em;screen-full` Compute
+:link: ../hardware/hardware_overview
 :link-type: doc
 
 An overview of our computational resources.
 +++
-[Learn more »](hardware/hardware_overview)
+[Learn more »](../hardware/hardware_overview)
 :::
 
 :::{grid-item-card} {octicon}`database;1.5em;sd-mr-1` Storage
@@ -26,7 +22,7 @@ We offer several storage solutions for active and archival use.
 [Learn more »](datamanagment/discovery_storage)
 :::
 
-:::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1`Classroom
+:::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` Classroom
 :link: classroom/class_use
 :link-type: doc
 
