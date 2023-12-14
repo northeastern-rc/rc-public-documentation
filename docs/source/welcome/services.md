@@ -1,8 +1,9 @@
 (services)=
 # Services We Provide
 
-::::{grid} 3
-::::
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
+
 
 :::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Compute
 :link: hardware-overview

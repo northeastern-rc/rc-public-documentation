@@ -17,7 +17,7 @@ Services we offer to all users of the HPC at NU
 :link: getting-help
 :link-type: doc
 
-We offer training resources, documentation guides, and direct assitance as you access the computing cluster at NU
+We offer training resources and direct assitance as you access the computing cluster at NU
 +++
 [Learn more »](getting-help)
 :::
