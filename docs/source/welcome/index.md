@@ -13,7 +13,7 @@ Services we offer to all users of the HPC at NU
 +++
 [Learn more »](services)
 :::
-:::{grid-item-card} {ref}`info;i.5em;sd-mr-1` Getting Help
+:::{grid-item-card} {octicon}`info;1.5em;sd-mr-1` Getting Help
 :link: getting-help
 :link-type: doc
 
@@ -21,7 +21,13 @@ We offer training resources, documentation guides, and direct assitance as you a
 +++
 [Learn more »](getting-help)
 :::
-:::{grid-item-card} {ref}`intro-to-cluster`
+:::{grid-item-card} {octicon}`server;1.5em;sd-mr-1` Introduction to the cluster
+:link: intro-to-cluster
+:link-type: doc
+
+What is a computing cluster and schedule manager?
++++
+[Learn more >>](intro-to-cluster)
 :::
 ::::
 
