@@ -22,7 +22,7 @@ We offer training resources and direct assitance as you access the computing clu
 [Learn more »](welcome/getting-help)
 :::
 :::{grid-item-card} {octicon}`server;1.5em;sd-mr-1` Introduction to the cluster
-:link: intro-to-cluster
+:link: introtocluster
 :link-type: doc
 
 What is a computing cluster and schedule manager?

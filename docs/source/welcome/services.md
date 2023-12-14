@@ -6,7 +6,7 @@
 
 
 :::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Compute
-:link: hardware/hardware-overview
+:link: hardware_overview
 :link-type: doc
 
 An overview of our computational resources.
@@ -14,7 +14,7 @@ An overview of our computational resources.
 [Learn more »](hardware/hardware-overview)
 :::
 :::{grid-item-card} {octicon}`database;1.5em;sd-mr-1` Storage
-:link: datamanagment/data-storage
+:link: discovery_storage
 :link-type: doc
 
 We offer several storage solutions for active and archival use.
@@ -22,7 +22,7 @@ We offer several storage solutions for active and archival use.
 [Learn more »](datamanagment/data-storage)
 :::
 :::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1`Classroom
-:link: classroom/class-guide
+:link: class_guide
 :link-type: doc
 
 We support classroom use of HPC resources.
