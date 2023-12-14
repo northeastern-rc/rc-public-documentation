@@ -87,7 +87,7 @@ widths: auto
 
 The `gpu` {term}`partition` is the general GPU resource for HPC users looking to use a GPU; `multigpu` is the alternative, where more than one GPU are accessible.
 
-Anyone with a cluster account has access to the `gpu` partition. However, you must submit a [ServiceNow ticket] requesting temporary testing access to `multigpu` to obtain performance results to provide details and test results that demonstrate your need for access for the `multigpu` partition in the post testing [ServiceNow ticket]. All requests are evaluated by members of the RC team for sufficient utilization of the partition.
+Anyone with a cluster account has access to the `gpu` partition. However, to access the multigpu partition you must submit a [ServiceNow ticket] requesting temporary testing access. With testing access to multigpu you will obtain performance results that demonstrate your need for access for the multigpu partition in the post testing [ServiceNow ticket] phase. All requests are evaluated by members of the RC team for sufficient utilization of the partition.
 
 :::{list-table}
 --------------
@@ -139,4 +139,4 @@ This indicates the state (idle or not) of gpu-types and could be helpful to find
 [Pascal]: https://www.nvidia.com/en-us/data-center/pascal-gpu-architecture/
 [RTX A5000]: https://www.nvidia.com/en-us/design-visualization/rtx-a5000/
 [RTX A6000]: https://www.nvidia.com/en-us/design-visualization/rtx-a6000/
-[ServiceNow ticket]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0c34d402db0b0010a37cd206ca9619b7
+[ServiceNow ticket]: https://bit.ly/NURC-PartitionAccess
