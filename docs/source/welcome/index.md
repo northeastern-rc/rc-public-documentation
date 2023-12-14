@@ -2,7 +2,8 @@
 
 Research Computing at Northeastern Univeristy is committed to supporting cutting-edge research and innovation. This section overviews the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment.
 
-::::{grid} 2
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` Services
 :link: services
@@ -12,13 +13,15 @@ Services we offer to all users of the HPC at NU
 +++
 [Learn more »](services)
 :::
-:::{grid-item-card} {ref}`getting-help`
+:::{grid-item-card} {ref}`info;i.5em;sd-mr-1` Getting Help
+:link: getting-help
+:link-type: doc
+
+We offer training resources, documentation guides, and direct assitance as you access the computing cluster at NU
++++
+[Learn more »](getting-help)
 :::
-::::
-::::{grid} 2
 :::{grid-item-card} {ref}`intro-to-cluster`
-:::
-:::{grid-item-card} {ref}`case-studies-and-testimonials`
 :::
 ::::
 
