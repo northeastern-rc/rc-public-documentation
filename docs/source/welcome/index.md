@@ -4,10 +4,11 @@ Research Computing at Northeastern Univeristy is committed to supporting cutting
 
 ::::{grid} 2
 
-:::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` 
+:::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` Services
 :link: services
 :link-type: doc
-Services we offer
+
+Services we offer to all users of the HPC at NU
 +++
 [Learn more »](services)
 :::
