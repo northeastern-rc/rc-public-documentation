@@ -9,7 +9,7 @@
 :link: hardware-overview
 :link-type: doc
 
-An overview of our computational resources
+An overview of our computational resources.
 +++
 [Learn more »](hardware-overview)
 :::
@@ -17,7 +17,7 @@ An overview of our computational resources
 :link: data-storage
 :link-type: doc
 
-We offer several storage solutions for active and archival use
+We offer several storage solutions for active and archival use.
 +++
 [Learn more »](data-storage)
 :::
@@ -25,7 +25,7 @@ We offer several storage solutions for active and archival use
 :link: class-guide
 :link-type: doc
 
-We support classroom use of HPC resources
+We support classroom use of HPC resources.
 +++
 [Learn more »](class-guide)
 :::
