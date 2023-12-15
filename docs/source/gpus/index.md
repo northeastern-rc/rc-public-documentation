@@ -1,5 +1,5 @@
 (using-gpus-index)=
-# Using GPUs on our HPC Cluster
+# Working with GPUs
 
 ```{toctree}
 :hidden:
@@ -29,7 +29,7 @@ Overview of the GPUs on the HPC.
 :link: accessinggpus
 :link-type: doc
 
-GPUs Magic.
+How to utilize GPUs interactively (srun) and passively (sbatch).
 +++
 [Learn more »](accessing-gpus)
 :::
@@ -37,7 +37,7 @@ GPUs Magic.
 :link: gpujobsubmission
 :link-type: doc
 
-GPUs Magic.
+Using CUDA and building deep learning environments.
 +++
 [Learn more »](gpujobsubmission)
 :::
@@ -45,11 +45,11 @@ GPUs Magic.
 :link: bestpractices
 :link-type: doc
 
-GPUs Magic.
+Best practices of utilizing GPUs on Discovery. 
 +++
 [Learn more »](bestpractices)
 :::
 ::::
 
 :::{include} ../_snippets/helpfooter.md
-%:::
+:::
