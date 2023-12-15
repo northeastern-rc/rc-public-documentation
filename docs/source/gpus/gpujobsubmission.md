@@ -8,7 +8,7 @@
 ::::
 
 ## Using CUDA
-There are several versions of CUDA Toolkits available on the HPC, including. Use the `module avail` command to check for the latest software versions on the cluster.
+There are several versions of CUDA Toolkits available on the HPC. Use the `module avail` command to check for the latest software versions on the cluster.
 
 :::{code-block} bash
 ---
@@ -43,10 +43,10 @@ srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10
 module load anaconda3/2022.05 cuda/11.8
 :::
 
-Select the tab with the desire deeplearning framework.
+Select the tab with the desired deep learning framework.
 
 :::{important}
-Each tab assumes you are on a GPU node before with CUDA 11.8 and anaconda modules loaded as done above.
+Each tab assumes you are on a GPU node with CUDA 11.8 and anaconda modules loaded as done above.
 :::
 ::::::{tab-set}
 :::::{tab-item} PyTorch
