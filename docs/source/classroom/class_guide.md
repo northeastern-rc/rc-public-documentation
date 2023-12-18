@@ -7,7 +7,7 @@ We’ve supported courses from many disciplines, including biology, chemistry, c
 
 To gain access to HPC resources instructors need to submit a [classroom access form.](https://bit.ly/NURC-Classroom)
 
-Please submit these requests prior to the beginning of each semester (preferred), or at least **one week** prior to the start of when you plan on using the HPC cluster for your class.
+Please submit these requests prior to the beginning of each semester (preferred), or at least **one week** prior to the start of when you plan on using the HPC cluster for your class. If you're requesting a customized application we require **two-weeks** to **one-month** time to complete prior to when you'd like to use it.
 
 ## Classroom setup
 ---
@@ -24,7 +24,7 @@ Once access is provided, each course will have a course-specific directory under
 
 :::
 
-The sub-directory `staff/` will be populated with a folder for each of the following: instructors, co-instructors, and TAs. The `students/` sub-directory contains a folder for each student. And the `data/` sub-directory can be populated by those in staff but is read-only for students.
+The sub-directory `staff/` will be populated with a folder for each of the following: instructors, co-instructors, and TAs. The `students/` sub-directory contains a folder for each student. And the `data/` sub-directory can be populated by those in staff but is read-only for students. Students only have permission to read into their own directories under `students/` and cannot view into another students space. 
 
 All those in staff have read-write-execute permissions within the entirety of their courses directory, allowing them to store data, homework assignments, build conda environments, create new directories, etc, as they see fit.
 
@@ -80,10 +80,10 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 
 #SBATCH --nodes=1  
 #SBATCH --time=4:00:00  
-#SBATCH --job-name=MyJobName  
+#SBATCH --job-name=MyCPUJob  
 #SBATCH --partition=courses  
 #SBATCH --mail-type=ALL  
-#SBATCH --mail-users=$USER@northeastern.edu  
+#SBATCH --mail-users=username@northeastern.edu  
 
 #commands to execute  
 
@@ -98,11 +98,11 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 
 #SBATCH --nodes=1  
 #SBATCH --time=4:00:00  
-#SBATCH --job-name=MyJobName  
+#SBATCH --job-name=MyGPUJob  
 #SBATCH --partition=courses-gpu  
 #SBATCH --gres=gpu:1  
 #SBATCH --mail-type=ALL  
-#SBATCH --mail-users=$USER@northeastern.edu  
+#SBATCH --mail-users=username@northeastern.edu  
 
 #commands to execute  
 
@@ -149,6 +149,14 @@ squeue -p courses
 squeue -p courses-gpu
 :::
 
+Jobs can be canceled with the command `scancel` and the slurm job id that is assigned when your job is submitted to the scheduler.
+
+:::{code-block} bash
+scancel jobid
+:::
+
+:::{note} A cluster is a collection of shared resources. We highly reccommend canceling any jobs that are still running in an interactive session (on the OOD or via srun) when you have completed your work. This frees up the resources for other classmates and instructors. 
+:::
 ## Software Applications
 ---
 All courses have access to the [command line](https://rc-docs.northeastern.edu/en/latest/first_steps/usingbash.html#command-line).
