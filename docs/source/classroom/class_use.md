@@ -10,7 +10,7 @@ The following Frequently Asked Questions section should help answer most of your
 There are several ways you can use the cluster in your classroom. Your class can use the cluster to access specific software packages and working environments and learn how to utilize high-performance computing (HPC) resources for large and complex data processing, such as machine learning; AI and molecular simulations; and more.
 
 ## How do I get my class access to the cluster?
-You fill out an [HPC Classroom Use Request] ticket. While filling out this form, please provide the course number and section, and we will pull the students names directly from canvas. We will create accounts on the cluster for them as well as any TA's or co-instructors. We will also make a directory tree under /courses for the class. If there are any changes in enrollment please let us know so we can update your course. There is no need to send us a list of students names as we pull them directly from canvas.
+You fill out an [HPC Classroom Use Request] ticket. While filling out this form, please provide the course number and section from the dropdown menu supplied, and we will pull the students names directly from canvas. We will create accounts on the cluster for them as well as any TA's or co-instructors. We will also make a directory tree under /courses for the class. If there are any changes in enrollment please let us know so we can update your course. There is no need to send us a list of students names as we pull them directly from canvas.
 
 ## Is there any training on the cluster for my class?
 
@@ -22,7 +22,7 @@ Depending on your class assignments, many students can work with the Open OnDema
 
 ## What software is available to use with my class on the cluster?
 
-Many software packages are available, including popular software apps such as Jupyter Notebook, RStudio, and MATLAB. If you have an account on the cluster, you can see the list of available software by using the `module avail` command (run in the command line). See {ref}`using-module` for more information. Students have access to all the modules on the cluster. They can also use the interactive apps available on Open OnDemand. See {ref}`using-ood` for more information. Instructors can install many other software packages using {ref}`conda`.
+Many software packages are available, including popular software apps such as Jupyter Notebook, RStudio, and MATLAB. If you have an account on the cluster, you can see the list of available software by using the `module avail` command (run in the command line). See {ref}`using-module` for more information. Students have access to most of the modules on the cluster. They can also use the interactive apps available on Open OnDemand. See {ref}`using-ood` for more information. Instructors can install many other software packages using {ref}`conda`.
 
 ## My class needs access to a specific software application that I do not see installed on the cluster or Open OnDemand (OOD). What should I do?
 
