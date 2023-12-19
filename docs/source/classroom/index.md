@@ -18,6 +18,7 @@ High-Performance Computing (HPC) is not only for researchers; it is an integral 
 :::
 :::{grid-item-card} {ref}`cps-ood`
 :::
+:::{grid-item-card} {ref}`courses-cheatsheet`
 ::::
 
 ---
