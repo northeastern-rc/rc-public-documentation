@@ -113,7 +113,7 @@ See `_getting_access` for instructions on creating a Discovery user account.
 
 `ssh` - Connect to a remote machine using Secure Shell (SSH):
 
-:::
+:::{code-block} bash
 ssh <user-name>@login.discovery.neu.edu
 :::
 
@@ -128,7 +128,7 @@ The `~` character is shorthand for specifying the current user's home directory,
 :::{code-block} shell
 echo "Hello, world!"
 :::
-:::
+:::{code-block} bash
     Hello, world!
 :::
 
@@ -282,13 +282,13 @@ This is the contents of file3.txt
 
 `less` - View the contents of a file one page at a time.
 
-:::shell
+:::{code-block} bash
 less file3.txt
 :::
 
 `top` - Show the currently running processes and system information.
 
-:::shell
+:::{code-block} bash
 top
 :::
 
@@ -296,7 +296,7 @@ To exit, press `q`.
 
 `ps` - Show information about the currently running processes.
 
-:::shell
+:::{code-block} bash
 ps
 :::
 
@@ -308,7 +308,7 @@ It is essential to be cautious when using the `kill` command, as terminating a p
 
 `kill` - Terminate a process by its process ID:
 
-:::
+:::{code-block} bash
 kill <pid>
 :::
 
@@ -450,7 +450,7 @@ String tests:
 
 Command substitution with process substitution:
 
-:::
+:::{code-block} bash
 diff <(ls /path/to/dir1) <(ls /path/to/dir2)
 :::
 
@@ -468,43 +468,43 @@ We have listed a few examples of `rsync` synchronizing files and directories bet
 
 Syncing a local directory to a remote server:
 
-:::
+:::{code-block} bash
 rsync -avz /local/path user@xfer.discovery.neu.edu:/remote/path
 :::
 
 Syncing a remote server to a local directory:
 
-:::
+:::{code-block} bash
 rsync -avz user@xfer.discovery.neu.edu:/remote/path /local/path
 :::
 
 Syncing a local directory to a remote server with compression:
 
-:::
+:::{code-block} bash
 rsync -avz --compress /local/path user@xfer.discovery.neu.edu:/remote/path
 :::
 
 Syncing a remote server to a local directory while preserving permissions:
 
-:::
+:::{code-block} bash
 rsync -avz --perms user@xfer.discovery.neu.edu:/remote/path /local/path
 :::
 
 Syncing only files that have been modified in the last hour:
 
-:::
+:::{code-block} bash
 rsync -avz --update --min-age=3600 /local/path user@xfer.discovery.neu.edu:/remote/path
 :::
 
 Syncing a local directory to a remote server while excluding certain files:
 
-:::
+:::{code-block} bash
 rsync -avz --exclude='*.log' /local/path user@xfer.discovery.neu.edu:/remote/path
 :::
 
 Syncing a remote server to a local directory while preserving symbolic links:
 
-:::
+:::{code-block} bash
 rsync -avz --links user@xfer.discovery.neu.edu:/remote/path /local/path
 :::
 
@@ -526,7 +526,7 @@ find /path/to/search -name "*.txt"
 
 Finding files based on size
 
-:::
+:::{code-block} bash
 find /path/to/dir -size +10M
 :::
 
@@ -534,7 +534,7 @@ This will find all files in `/path/to/dir` that are larger than 10 MB.
 
 Finding files based on modification time:
 
-:::
+:::{code-block} bash
 find /path/to/dir -mtime +7
 :::
 
@@ -542,7 +542,7 @@ This will find all files in `/path/to/dir` that have been modified more than 7 d
 
 Finding files based on type:
 
-:::
+:::{code-block} bash
 find /path/to/dir -type f
 :::
 
@@ -550,7 +550,7 @@ This will find all files in `/path/to/dir` that are regular files (not directori
 
 Finding files based on the name
 
-:::
+:::{code-block} bash
 find /path/to/dir -name "*.txt"
 :::
 
@@ -558,7 +558,7 @@ This will find all files in `/path/to/dir` with a `.txt` file extension.
 
 Executing commands on matching files:
 
-:::
+:::{code-block} bash
 find /path/to/dir -name "*.txt" -exec chmod 644 {} \;
 :::
 
@@ -742,27 +742,27 @@ Below you will find a few examples of Git configuration options. See [Git User M
 
 Setting your username and email
 
-:::
+:::{code-block} bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 :::
 
 Setting your preferred text editor
 
-:::
+:::{code-block} bash
 git config --global core.editor nano
 :::
 
 Setting your preferred diff tool
 
-:::
+:::{code-block} bash
 git config --global diff.tool emacs
 git config --global difftool.prompt false
 :::
 
 Setting up aliases for frequently used Git commands
 
-:::
+:::{code-block} bash
 git config --global alias.st status
 git config --global alias.co checkout
 git config --global alias.ci commit
@@ -770,25 +770,25 @@ git config --global alias.ci commit
 
 Setting up a default push behavior:
 
-:::
+:::{code-block} bash
 git config --global push.default simple
 :::
 
 Enabling colored output for Git commands:
 
-:::
+:::{code-block} bash
 git config --global color.ui true
 :::
 
 Ignoring files globally across all your Git repositories as follows:
 
-:::
+:::{code-block} bash
 git config --global core.excludesfile ~/.gitignore_global
 :::
 
 Enabling automatic line wrapping in Git log output as follows:
 
-:::
+:::{code-block} bash
 git config --global log.autoWrap true
 :::
 
@@ -802,47 +802,48 @@ Emacs is a popular text editor that is widely used to program, write, and read t
 
 To start Emacs, open a terminal and type the following command:
 
-:::
+:::{code-block} bash
 emacs
 :::
 
 Once open, the following table summarizes common keyboard shortcuts (i.e., commands) for working in the text editor.
 
-:::{eval-rst}
-.. list-table:: Common Emacs Commands (``C-`` -> hold ``Ctrl``)
-   :widths: 40 30
-   :header-rows: 1
-
-   * - Functionality
-     - Command
-   * - Open file
-     - ``C-x C-f``
-   * - Save the file
-     - ``C-x C-s``
-   * - Close file
-     - ``C-x C-w``
-   * - Cut text
-     - ``C-k``
-   * - Paste text
-     - ``C-y``
-   * - Undo
-     - ``C-/``
-   * - Redo
-     - ``C-x C-/``
-   * - Search text
-     - ``C-s``
-   * - Quit Emacs
-     - ``C-s``
-   * - *Moving cursor*
-     - ``C-x C-c``
-   * - previous line
-     - ``C-p``
-   * - next line
-     - ``C-n``
-   * - forward character
-     - ``C-f``
-   * - backward character
-     - ``C-b``
+:::{list-table} Common Emacs Commands
+--------------
+header-rows: 1
+align: center
+widths: auto
+--------------
+* - Functionality
+  - Command
+* - Open file
+  - ``Ctrl + x Ctrl + f``
+* - Save the file
+  - ``Ctrl + x Ctrl + s``
+* - Close file
+  - ``Ctrl + x Ctrl + w``
+* - Cut text
+  - ``Ctrl + k``
+* - Paste text
+  - ``Ctrl + y``
+* - Undo
+  - ``Ctrl + /``
+* - Redo
+  - ``C-x C-/``
+* - Search text
+  - ``C-s``
+* - Quit Emacs
+  - ``C-s``
+* - *Moving cursor*
+  - ``C-x C-c``
+* - previous line
+  - ``C-p``
+* - next line
+  - ``C-n``
+* - forward character
+  - ``C-f``
+* - backward character
+  - ``C-b``
 :::
 
 For more commands, see [Emacs Cheat Sheet].
@@ -855,55 +856,56 @@ Vim starts in **normal mode**: a mode that allows for the navigation through the
 
 Open a terminal and type the following command:
 
-:::
+:::{code-block} bash
 vim
 :::
 
 To open an existing file, type the following command:
 
-:::
+:::{code-block} bash
 vim filename
 :::
 
-:::{code}
-.. list-table:: Common Vim Commands
-   :widths: 50 20
-   :header-rows: 1
-
-   * - Functionality
-     - Command
-   * - Enter insert mode
-     - ``i``
-   * - Enter normal mode
-     - ``esc``
-   * - Save the file
-     - ``:w``
-   * - Close file
-     - ``:q``
-   * - Cut text (from the front)
-     - ``v``
-   * - Cut text (from the end)
-     - ``d``
-   * - Paste text
-     - ``p``
-   * - Undo
-     - ``u``
-   * - Redo
-     - ``Ctrl+r``
-   * - Search text
-     - ``/text``
-   * - Quit VIM
-     - ``:q``
-   * - *Moving cursor*
-     - ``C-x C-c``
-   * - Left
-     - ``h``
-   * - Down
-     - ``j``
-   * - Up
-     - ``k``
-   * - Right
-     - ``l``
+:::{list-table} Common Vim Commands
+--------------
+header-rows: 1
+align: center
+widths: auto
+--------------
+* - Functionality
+  - Command
+* - Enter insert mode
+  - ``i``
+* - Enter normal mode
+  - ``esc``
+* - Save the file
+  - ``:w``
+* - Close file
+  - ``:q``
+* - Cut text (from the front)
+  - ``v``
+* - Cut text (from the end)
+  - ``d``
+* - Paste text
+  - ``p``
+* - Undo
+  - ``u``
+* - Redo
+  - ``Ctrl+r``
+* - Search text
+  - ``/text``
+* - Quit VIM
+  - ``:q``
+* - *Moving cursor*
+  - ``C-x C-c``
+* - Left
+  - ``h``
+* - Down
+  - ``j``
+* - Up
+  - ``k``
+* - Right
+  - ``l``
 :::
 
 ### GNU Nano
@@ -912,43 +914,44 @@ Nano is a simple, easy-to-use text editor commonly used in Unix-like operating s
 
 Nano can launch one of two ways from a terminal: (1) to open to an empty, unnamed file, run:
 
-:::
+:::{code-block} bash
 nano
 :::
 
 To open a file by name, whether it already exists or needs to be created, run:
 
-:::
+:::{code-block} bash
 nano filename.txt
 :::
 
 If the file does not exist, it will open an empty file that will persist upon saving.
 
-:::{eval-rst}
-.. list-table:: Common Nano Commands
-   :widths: 40 20
-   :header-rows: 1
-
-   * - Functionality
-     - Command
-   * - Save the file
-     - ``Ctrl + O``
-   * - Close file
-     - ``Ctrl + X``
-   * - Cut text (from the front)
-     - ``Alt + A``
-   * - Cut text (from the end)
-     - ``Ctrl + K``
-   * - Paste text
-     - ``Ctrl + U``
-   * - Undo
-     - ``Ctrl + T``
-   * - Redo
-     - ``Ctrl + Y``
-   * - Search text
-     - ``Ctrl + W``
-   * - Quit Nano
-     - ``Ctrl + X``
+:::{list-table} Common Nano Commands
+--------------
+header-rows: 1
+align: center
+widths: auto
+--------------
+* - Functionality
+  - Command
+* - Save the file
+  - ``Ctrl + O``
+* - Close file
+  - ``Ctrl + X``
+* - Cut text (from the front)
+  - ``Alt + A``
+* - Cut text (from the end)
+  - ``Ctrl + K``
+* - Paste text
+  - ``Ctrl + U``
+* - Undo
+  - ``Ctrl + T``
+* - Redo
+  - ``Ctrl + Y``
+* - Search text
+  - ``Ctrl + W``
+* - Quit Nano
+  - ``Ctrl + X``
 :::
 
 ## Shell Scripting
