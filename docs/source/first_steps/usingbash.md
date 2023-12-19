@@ -125,7 +125,7 @@ The `~` character is shorthand for specifying the current user's home directory,
 
 `echo` - Display a message or the value of a variable.
 
-:::{code-block} shell
+:::{code-block} bash
 echo "Hello, world!"
 :::
 :::{code-block} bash
@@ -138,7 +138,7 @@ Variable names are accessible by appending their name to `$` (e.g., \$\{VARIABLE
 
 `pwd` - Print the current working directory.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 pwd
@@ -151,7 +151,7 @@ pwd
 
 `ls` - List the contents of a directory.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 ls
@@ -160,7 +160,7 @@ file1.txt file2.txt directory1
 
 `cd` - Change the current working directory.
 
-:::{code-block} shell
+:::{code-block} bash
 ---
 emphasize-lines: 3
 ---
@@ -171,7 +171,7 @@ pwd
 
 `mkdir` - Create a new directory.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 3
 
  mkdir directory2
@@ -181,7 +181,7 @@ pwd
 
 `rm` - Remove a file or directory.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 3
 
  rm file1.txt
@@ -195,7 +195,7 @@ To remove a directory, use `rmdir` if the folder is empty. Otherwise, recursivel
 
 `cp` - Copy a file or directory.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 3
 
  cp file2.txt file3.txt
@@ -209,7 +209,7 @@ Similar to removing, `cp` works for files; copying a folder and its contents mus
 
 `mv` - Move or rename a file or directory.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 3
 
 mv file2.txt file4.txt
@@ -219,7 +219,7 @@ file3.txt file4.txt directory1 directory2
 
 `cat` - Concatenate and display the contents of one or more files.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 cat file3.txt
@@ -228,7 +228,7 @@ This is the contents of file3.txt
 
 `grep` - Search for a pattern in a file or input.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 grep "the" file3.txt
@@ -237,7 +237,7 @@ This is the contents of file3.txt
 
 `sort` - Sort the lines of a file or input.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 sort file3.txt
@@ -246,7 +246,7 @@ This is the contents of file3.txt
 
 `uniq` - Remove duplicates from a sorted file or input.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 sort file3.txt | uniq
@@ -255,7 +255,7 @@ This is the contents of file3.txt
 
 `wc` - Count the number of lines, words, and characters in a file or input.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
  wc file3.txt
@@ -264,7 +264,7 @@ This is the contents of file3.txt
 
 `head` - Display the first lines of a file or input.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
  head file3.txt
@@ -273,7 +273,7 @@ This is the contents of file3.txt
 
 `tail` - Display the last lines of a file or input.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 tail file3.txt
@@ -318,7 +318,7 @@ In this section, we will provide examples of some helpful advanced commands, and
 
 `sed` - Stream editor for filtering and transforming text.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-4, 7-9
 
 cat file1.txt
@@ -336,7 +336,7 @@ Reference: [sed(1) manual page]
 
 `gzip` - Compress or decompress files.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 3
 
 gzip file1.txt
@@ -344,7 +344,7 @@ ls
 file1.txt.gz
 :::
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 3
 
 gunzip file1.txt.gz
@@ -356,7 +356,7 @@ Reference: [gzip(1) manual page]
 
 `tar` - Create or extract compressed archive files.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 3
 
 tar cvf archive.tar file1.txt file2.txt
@@ -364,7 +364,7 @@ ls
 archive.tar file1.txt file2.txt
 :::
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 3
 
 tar xvf archive.tar
@@ -376,7 +376,7 @@ Reference: [tar(1) manual page]
 
 Regular expressions:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-3
 
 grep -E '^[A-Z][a-z]+$' file1.txt
@@ -386,7 +386,7 @@ Jane
 
 Parameter expansion:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 3
 
 name="John Doe"
@@ -396,7 +396,7 @@ John_Doe
 
 Command line options:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-5
 
 ls -lh
@@ -408,7 +408,7 @@ drwxrwxr-x 2 user user 4.0K Feb 14 13:29 directory1
 
 Parameter substitution:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 echo ${name:4:3}
@@ -417,7 +417,7 @@ Doe
 
 Arithmetic operations:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 echo $((2 + 2))
@@ -426,7 +426,7 @@ echo $((2 + 2))
 
 File tests:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 5
 
 file=file1.txt
@@ -438,7 +438,7 @@ file1.txt is a regular file
 
 String tests:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 5
 
  string="hello"
@@ -516,7 +516,7 @@ Here are several advanced examples of using the `find` command to search for fil
 
 To search for files and directories:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-3
 
 find /path/to/search -name "*.txt"
@@ -574,7 +574,7 @@ We will use the sample file `_resources/awk-example.sh` to work through this sec
 
 {download}`Download <../_resources/awk-example.sh>`, or create and name a file as shown in the following block. Also, be sure to store it in the working directory.
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-6
 
 cat awk-example.txt
@@ -591,7 +591,7 @@ This sample file can be used in the examples provided in the previous response t
 
 Print the entire contents of a file:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-6
 
 awk '{print}' awk-example.txt
@@ -604,7 +604,7 @@ Michael Brown 29
 
 Print specific columns from a tab-delimited file:
 
-:::{code-block} shell
+:::{code-block} bash
 :caption: Assuming the file is not tab-delimited.
 :emphasize-lines: 2-6
 
@@ -618,7 +618,7 @@ awk -F "\t" '{print $2}' awk-example.txt
 
 Sum a column of numbers:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 awk '{sum+=$2} END {print sum}' awk-example.txt
@@ -627,7 +627,7 @@ awk '{sum+=$2} END {print sum}' awk-example.txt
 
 Print only lines that match a pattern:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2, 3
 
 awk '/Doe/ {print}' awk-example.txt
@@ -637,7 +637,7 @@ Jane Doe 30
 
 Format the output:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-6
 
 awk '{printf "Name: %s, Age: %d\n", $1, $2}' awk-example.txt
@@ -648,7 +648,7 @@ Name: Sara Johnson, Age: 35
 Name: Michael Brown, Age: 29
 :::
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 awk '/Sara/ {print "Sara found"}' awk-example.txt
@@ -657,7 +657,7 @@ Sara found
 
 Printing the first field of each line in a file:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-6
 
 awk '{print $1}' awk-example.txt
@@ -670,7 +670,7 @@ Michael
 
 Printing the second field of each line in a file, only if the first field is equal to a specific value:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-3
 
 awk '$2 == "Doe" {print $1}' awk-example.txt
@@ -680,7 +680,7 @@ Jane
 
 Printing the sum of all numbers in the third field (Age) of a file:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 awk '{sum+=$3} END {print sum}' awk-example.txt
@@ -689,7 +689,7 @@ awk '{sum+=$3} END {print sum}' awk-example.txt
 
 Printing the average of all numbers in the fourth field of a file:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2
 
 awk '{sum+=$3; count++} END {print sum/count}' awk-example.txt
@@ -698,7 +698,7 @@ awk '{sum+=$3; count++} END {print sum/count}' awk-example.txt
 
 Printing the line number and the line text for each line in a file that contains a specific word:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-3
 
 awk '/Doe/ {print NR, $0}' awk-example.txt
@@ -708,7 +708,7 @@ awk '/Doe/ {print NR, $0}' awk-example.txt
 
 Printing the line number and the line text for each line in a file that starts with a specific string:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-4
 
 awk '$1 ~ /^J/ {print NR, $0}' awk-example.txt
@@ -719,7 +719,7 @@ awk '$1 ~ /^J/ {print NR, $0}' awk-example.txt
 
 Printing the line number, the line text, and the length of each line in a file:
 
-:::{code-block} shell
+:::{code-block} bash
 :emphasize-lines: 2-6
 
 awk '{print NR, $0, length($0)}' awk-example.txt
