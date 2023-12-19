@@ -32,7 +32,7 @@ Frequently asked questions about courses on the NU HPC.
 +++
 [Learn more »](class_use)
 :::
-:::{grid-item-card} {octicon}`project-roadmap-24;1.5em;sd-mr-1` Courses Cheetsheet
+:::{grid-item-card} {octicon}`note;1.5em;sd-mr-1` Courses Cheetsheet
 :link: cheatsheet
 :link-type: doc
 

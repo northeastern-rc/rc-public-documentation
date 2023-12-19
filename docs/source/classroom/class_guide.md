@@ -1,5 +1,5 @@
 (class-guide)=
-# Courses on HPC at NU
+# Course Guide
 
 We support classroom education at Northeastern University by providing access to computing resources (CPU and GPU) and storage resources for instructors and their students.
 
