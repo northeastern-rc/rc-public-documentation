@@ -104,12 +104,3 @@ tutorialsandtraining/index
 Frequently Asked Questions <faq>
 glossary
 ```
-
-```{toctree}
-:hidden:
-:caption: Contribution
-:maxdepth: 3
-
-change_log
-Report Docs Bug or Request <https://github.com/northeastern-rc/rc-public-documentation/issues/new/choose>
-```
