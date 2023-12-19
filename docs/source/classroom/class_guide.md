@@ -155,7 +155,7 @@ Jobs can be canceled with the command `scancel` and the slurm job id that is ass
 scancel jobid
 :::
 
-:::{note} A cluster is a collection of shared resources. We highly reccommend canceling any jobs that are still running in an interactive session (on the OOD or via srun) when you have completed your work. This frees up the resources for other classmates and instructors. 
+:::{note} A cluster is a collection of shared resources. We highly recommend canceling any jobs that are still running in an interactive session (on the OOD or via srun) when you have completed your work. This frees up the resources for other classmates and instructors.
 :::
 ## Software Applications
 ---
