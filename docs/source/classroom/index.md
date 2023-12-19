@@ -5,6 +5,7 @@
 
 class_guide
 class_use
+cheatsheet
 cps_ood
 ```
 
