@@ -10,7 +10,7 @@ cps_ood
 
 High-Performance Computing (HPC) is not only for researchers; it is an integral part of modern education. In this section, we offer guidance for instructors and students who want to use our HPC resources in the classroom.
 
-::::{grid} 1 2 2 3
+::::{grid} 1 2 3 4
 :gutter: 1 1 1 2
 
 
@@ -23,7 +23,7 @@ Read our guide on teaching or taking a course on the NU HPC.
 +++
 [Learn more »](class_guide)
 :::
-:::{grid-item-card} {octicon}`plug;1.5em;sd-mr-1` Courses FAQ
+:::{grid-item-card} {octicon}`question;1.5em;sd-mr-1` Courses FAQ
 :link: class_use
 :link-type: doc
 
