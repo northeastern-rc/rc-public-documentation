@@ -10,11 +10,35 @@ partitions
 ```
 Understanding the hardware architecture of the {term}`cluster` is key to maximizing the performance of your computations on our {term}`High-Performance Computing (HPC)`. This section introduces you to the hardware components, including an overall overview and detailed information about the various {term}`partitions <partition>`.
 
-::::{grid} 2
+<!-- ::::{grid} 2
 
 :::{grid-item-card} {ref}`hardware-overview`
 :::
 :::{grid-item-card} {ref}`partition-names`
+:::
+:::: -->
+
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
+
+:::{grid-item-card} {octicon}`video;1.5em;screen-full` Hardware Overview
+:link: using-ood/introduction
+:link-type: doc
+
+Get acquainted with the overall hardware architecture of our HPC cluster.
+
++++
+[Learn more »](using-ood/introduction)
+:::
+
+:::{grid-item-card} {octicon}`plug;1.5em;sd-mr-1` Partitions
+:link: classroom/class_use
+:link-type: doc
+
+Learn about the various partitions within the HPC cluster, their roles, and how to utilize them.
+
++++
+[Learn more »](classroom/class_use)
 :::
 ::::
 
