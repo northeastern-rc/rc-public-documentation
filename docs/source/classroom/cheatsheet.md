@@ -1,5 +1,5 @@
 (courses-cheatsheet)=
-# Cheatsheet for courses
+# Courses Cheatsheet
 :::{rubric} {download}`Download Courses Cheatsheet <../_resources/Discovery_CheatSheet_Courses_final.pdf>`
 :::
 

@@ -1,5 +1,5 @@
 (courses-faq)=
-# Classroom HPC: FAQ
+# Courses FAQ
 
 There are several use cases for teaching and learning with the cluster in a classroom. The cluster offers a command line and web interface, allowing access and instruction-level flexibility. Using the cluster gives you, and your students access to many popular scientific applications and allow you and your students to install other packages as needed. The easy-to-use Open OnDemand web portal also offers a built-in visual file explorer for viewing and transferring.
 
