@@ -18,7 +18,7 @@ Understanding the hardware architecture of the {term}`cluster` is key to maximiz
 :::
 :::: -->
 
-::::{grid} 1 2 2 3
+::::{grid} 2
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`video;1.5em;screen-full` Hardware Overview
