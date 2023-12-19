@@ -35,7 +35,7 @@ Frequently asked questions about courses on the NU HPC.
 :link: cheatsheet
 :link-type: doc
 
-A short-hand guide to common unix commands, OOD troubleshooting tips, and more.
+A one-page guide to common unix commands, OOD troubleshooting tips, and more.
 +++
 [Learn more »](cheatsheet)
 :::
