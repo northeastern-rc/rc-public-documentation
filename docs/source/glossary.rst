@@ -40,6 +40,12 @@ This glossary provides definitions for terms and abbreviations you may encounter
    GPU Acceleration
       The use of GPUs to offload computation-intensive tasks from the CPU, leading to faster processing of tasks like simulations and data analysis.
 
+   GPU-Aware Software
+      Software designed or optimized to utilize GPU acceleration for specific tasks.
+
+   GPU Memory Management
+      Techniques for efficiently managing GPU memory to prevent over-utilization and memory leaks.
+
    Home Directory
       A user's directory in the cluster where personal files, application settings, and other user-specific data are stored.
 
@@ -54,6 +60,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
 
    Job Dependency
       The condition where one job relies on the successful completion of another job before it can start, ensuring proper sequencing of tasks.
+
+   Job Preemption
+      The process of temporarily suspending and later resuming a job to accommodate higher-priority tasks.
 
    Job Priority
       Refers to the relative importance or urgency assigned to a specific computational task or job within a High-Performance Computing (HPC) cluster's scheduling system. Job priority determines the order in which jobs are executed and the allocation of computing resources.
@@ -97,6 +106,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Parallel Computing
       A type of computation in which multiple calculations or processes are carried out simultaneously to solve a problem faster.
 
+   Parallelization
+      Dividing tasks into parallel threads or processes to leverage GPU parallel processing capabilities (see {term}`   parallel computing`).
+
    Partition
       A division of the cluster resources. Each partition can have different configurations, such as different types of nodes and different access policies.
 
@@ -105,6 +117,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
 
    Queue
       A waiting line for jobs ready to be executed but waiting for resources to become available.
+
+   Resource Allocation
+      The process of reserving and allocating GPUs and other resources for specific jobs.
 
    Resource Reservation
       The process of specifying resources required for a job in advance to ensure availability and prevent resource conflicts.
