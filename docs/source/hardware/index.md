@@ -21,24 +21,24 @@ Understanding the hardware architecture of the {term}`cluster` is key to maximiz
 ::::{grid} 2
 :gutter: 1 1 1 2
 
-:::{grid-item-card} {octicon}`video;1.5em;screen-full` Hardware Overview
+:::{grid-item-card} {octicon}`repo-forked;1.5em;screen-full` Hardware Overview
 :link: using-ood/introduction
 :link-type: doc
 
 Get acquainted with the overall hardware architecture of our HPC cluster.
 
 +++
-[Learn more »](using-ood/introduction)
+[Learn more »](hardware/hardware_overview)
 :::
 
-:::{grid-item-card} {octicon}`plug;1.5em;sd-mr-1` Partitions
+:::{grid-item-card} {octicon}`versions;1.5em;sd-mr-1` Partitions
 :link: classroom/class_use
 :link-type: doc
 
 Learn about the various partitions within the HPC cluster, their roles, and how to utilize them.
 
 +++
-[Learn more »](classroom/class_use)
+[Learn more »](hardware/partitions)
 :::
 ::::
 
