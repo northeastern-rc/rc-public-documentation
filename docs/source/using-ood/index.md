@@ -34,7 +34,7 @@ Get started with OOD by understanding its purpose, features, and benefits.
 [Learn more »](using-ood/introduction)
 :::
 
-:::{grid-item-card} {octicon}`command-palette;1.5em;screen-full` Accessing Open OnDemand
+:::{grid-item-card} {octicon}`desktop-download;1.5em;screen-full` Accessing Open OnDemand
 :link: using-ood/accessingood
 :link-type: doc
 
