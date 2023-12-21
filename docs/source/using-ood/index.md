@@ -44,7 +44,7 @@ Learn about the various methods to access and navigate OOD.
 [Learn more »](using-ood/accessingood)
 :::
 
-:::{grid-item-card} {octicon}`apps;1.5em;screen-full` Interactive Open OnDemand Applications
+:::{grid-item-card} {octicon}`duplicate;1.5em;screen-full` Interactive Open OnDemand Applications
 :link: using-ood/interactiveapps/index
 :link-type: doc
 
