@@ -34,8 +34,8 @@ Get started with OOD by understanding its purpose, features, and benefits.
 [Learn more »](using-ood/introduction)
 :::
 
-:::{grid-item-card} {octicon}`command-palette;1.5em;sd-mr-1` Accessing Open OnDemand
-:link: classroom/class_use
+:::{grid-item-card} {octicon}`video;1.5em;sd-mr-1` Accessing Open OnDemand
+:link: using-ood/accessingood
 :link-type: doc
 
 Learn about the various methods to access and navigate OOD.
@@ -45,7 +45,7 @@ Learn about the various methods to access and navigate OOD.
 :::
 
 :::{grid-item-card} {octicon}`apps;1.5em;sd-mr-1` Interactive Open OnDemand Applications
-:link: best-practices/checkpointing
+:link: using-ood/interactiveapps/index
 :link-type: doc
 
 Explore interactive applications in OOD, including job submissions and real-time monitoring.
