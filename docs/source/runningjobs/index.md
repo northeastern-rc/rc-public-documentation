@@ -14,7 +14,7 @@ debuggingjobs
 ```
 Running jobs efficiently is at the heart of a successful experience with our High-Performance Computing (HPC) cluster. This section outlines the essential aspects of executing various types of jobs, understanding the queuing system, and troubleshooting.
 
-::::{grid} 3
+<!-- ::::{grid} 3
 
 :::{grid-item-card} {ref}`understanding-queuing`
 :::
@@ -28,73 +28,42 @@ Running jobs efficiently is at the heart of a successful experience with our Hig
 :::
 :::{grid-item-card} {ref}`debugging-jobs`
 :::
-::::
+:::: -->
 
-## Understanding the Queuing System
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
+
+:::{grid-item-card} {octicon}`arrow-switch;1.5em;screen-full` Understanding the Queuing System
+:link: runningjobs/understandingqueuing
+:link-type: doc
 
 Learn how our job scheduler manages the distribution of computational tasks.
 
-- **Job Queues**: Overview of different job queues.
-- **Job Status**: Monitoring and understanding job states.
-
-:::{seealso}
-{ref}`More about the Queuing System <understanding-queuing>`
++++
+[Learn more »](runningjobs/understandingqueuing)
 :::
 
-## Job Scheduling Policies and Priorities
+:::{grid-item-card} {octicon}`checklist;1.5em;sd-mr-1` Job Scheduling Policies and Priorities
+:link: runningjobs/jobscheduling
+:link-type: doc
 
 Gain insights into how jobs are prioritized and scheduled within the system.
 
-- **Policies**: The rules governing job scheduling.
-- **Priorities**: How job priority is determined.
-
-:::{seealso}
-{ref}`More about Scheduling Policies <job-scheduling>`
++++
+[Learn more »](runningjobs/jobscheduling)
 :::
 
-## Interactive and Batch Mode
+:::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Interactive and Batch Mode
+:link: runningjobs/interactiveandbatch
+:link-type: doc
 
 Run jobs interactively or submit batch scripts for later execution.
 
-- **Interactive Jobs**: Immediate execution and feedback.
-- **Batch Jobs**: Using scripts to manage longer-running jobs.
-
-:::{seealso}
-{ref}`More about Interactive and Batch Mode <interactive-and-batch-mode>`
++++
+[Learn more »](runningjobs/interactiveandbatch)
 :::
 
-## Working with GPUs
-
-Harness the power of GPUs for computation-intensive tasks.
-
-- **GPU Job Submission**: Submitting jobs to GPU-enabled nodes.
-- **Monitoring GPU Usage**: Tools and commands to monitor GPU resources.
-
-:::{seealso}
-{ref}`More about Working with GPUs <working-gpus>`
-:::
-
-## Recurring Jobs
-
-Set up and manage recurring jobs that run on a schedule.
-
-- **Creating Recurring Jobs**: How to define and manage repeating tasks.
-- **Modifying Recurring Jobs**: Adjusting existing recurring jobs.
-
-:::{seealso}
-{ref}`More about Recurring Jobs <recurring-jobs>`
-:::
-
-## Debugging and Troubleshooting Jobs
-
-Find solutions and get help with common job-related issues.
-
-- **Common Errors**: Solutions to typical problems.
-- **Advanced Debugging Tools**: Utilizing professional debugging techniques.
-
-:::{seealso}
-{ref}`More about Debugging and Troubleshooting <debugging-jobs>`
-:::
+::::
 
 ---
 
