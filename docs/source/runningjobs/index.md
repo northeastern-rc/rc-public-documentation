@@ -63,7 +63,7 @@ Run jobs interactively or submit batch scripts for later execution.
 [Learn more »](runningjobs/interactiveandbatch)
 :::
 
-:::{grid-item-card} {octicon}`arrow-switch;1.5em;screen-full` Working with GPUs
+:::{grid-item-card} {octicon}`cpu;1.5em;screen-full` Working with GPUs
 :link: runningjobs/workingwithgpus
 :link-type: doc
 
@@ -73,7 +73,7 @@ Harness the power of GPUs for computation-intensive tasks.
 [Learn more »](runningjobs/workingwithgpus)
 :::
 
-:::{grid-item-card} {octicon}`checklist;1.5em;sd-mr-1` Recurring Jobs
+:::{grid-item-card} {octicon}`issue-reopened;1.5em;sd-mr-1` Recurring Jobs
 :link: runningjobs/recurringjobs
 :link-type: doc
 
@@ -83,7 +83,7 @@ Set up and manage recurring jobs that run on a schedule.
 [Learn more »](runningjobs/recurringjobs)
 :::
 
-:::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Debugging and Troubleshooting Jobs
+:::{grid-item-card} {octicon}`bug;1.5em;sd-mr-1` Debugging and Troubleshooting Jobs
 :link: runningjobs/debuggingjobs
 :link-type: doc
 
