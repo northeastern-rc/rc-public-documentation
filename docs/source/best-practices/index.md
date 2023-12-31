@@ -14,7 +14,7 @@ Utilizing High-Performance Computing (HPC) resources effectively requires adhere
 
 ::::{grid} 4
 
-:::{grid-item-card} {ref}`home-directory-storage-quota`
+<!-- :::{grid-item-card} {ref}`home-directory-storage-quota`
 :::
 :::{grid-item-card} {ref}`checkpoint-jobs`
 :::
@@ -22,50 +22,52 @@ Utilizing High-Performance Computing (HPC) resources effectively requires adhere
 :::
 :::{grid-item-card} {ref}`best-practices-sw`
 :::
-::::
+:::: -->
 
-(home-directory-storage-quota-index)=
-## Home Directory Storage Quota
-Learn about storage quotas and how to manage your {term}`home directory` effectively.
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
 
-- **Quota Limits**: Understanding your storage allocation.
-- **Managing Storage**: Tips for maintaining an efficient workspace.
+:::{grid-item-card} {octicon}`database;1.5em;screen-full` Home Directory Storage Quota
+:link: best-practices/homequota
+:link-type: doc
 
-:::{seealso}
-{ref}`More about Home Directory Storage Quota <home-directory-storage-quota>`.
+Learn about storage quotas and how to manage your home directory effectively.
+
++++
+[Learn more »](best-practices/homequota)
 :::
 
-(checkpoint-jobs-index)=
-## Checkpointing Jobs
+:::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Checkpointing Jobs
+:link: best-practices/checkpointing
+:link-type: doc
+
 Discover how to save progress within long-running jobs, preventing loss of data.
 
-- **What is Checkpointing?**: An introduction to the concept.
-- **Implementing Checkpointing**: Step-by-step guidance.
-
-:::{seealso}
-{ref}`More about Checkpointing Jobs <checkpoint-jobs>`.
++++
+[Learn more »](best-practices/checkpointing)
 :::
 
-(optimizing-job-performance-index)=
-## Optimizing Job Performance
+:::{grid-item-card} {octicon}`meter;1.5em;sd-mr-1` Optimizing Job Performance
+:link: best-practices/optimizingperformance
+:link-type: doc
+
 Guidelines and tips to get the most out of your computational tasks.
 
-- **Performance Monitoring**: Tools to assess job performance.
-- **Performance Tuning**: Adjusting settings for optimal results.
-
-:::{seealso}
-{ref}`More about Optimizing Job Performance <optimizing-job-performance>`.
++++
+[Learn more »](best-practices/optimizingperformance)
 :::
 
-## Best Software Practices
+:::{grid-item-card} {octicon}`check-circle-fill;1.5em;sd-mr-1` Best Software Practices
+:link: best-practices/software
+:link-type: doc
+
 Effective strategies and best practices for managing and using software on HPC.
 
-- **Software Selection**: Choosing the right tools.
-- **Software Maintenance**: Keeping your software environment up-to-date.
-
-:::{seealso}
-{ref}`More about Best Software Practices <best-practices-sw>`.
++++
+[Learn more »](best-practices/software)
 :::
+
+::::
 
 ---
 
