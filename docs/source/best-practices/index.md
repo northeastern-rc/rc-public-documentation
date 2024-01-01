@@ -24,7 +24,7 @@ Utilizing High-Performance Computing (HPC) resources effectively requires adhere
 :::
 :::: -->
 
-::::{grid} 1 2 3 4
+::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`database;1.5em;screen-full` Home Directory Storage Quota
@@ -57,7 +57,7 @@ Guidelines and tips to get the most out of your computational tasks.
 [Learn more »](best-practices/optimizingperformance)
 :::
 
-:::{grid-item-card} {octicon}`check-circle-fill;1.5em;sd-mr-1` Best Software Practices
+<!-- :::{grid-item-card} {octicon}`check-circle-fill;1.5em;sd-mr-1` Best Software Practices
 :link: best-practices/software
 :link-type: doc
 
@@ -65,7 +65,7 @@ Effective strategies and best practices for managing and using software on HPC.
 
 +++
 [Learn more »](best-practices/software)
-:::
+::: -->
 
 ::::
 
