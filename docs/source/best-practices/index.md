@@ -24,7 +24,7 @@ Utilizing High-Performance Computing (HPC) resources effectively requires adhere
 :::
 :::: -->
 
-::::{grid} 1 2 2 3
+::::{grid} 1 2 3 4
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`database;1.5em;screen-full` Home Directory Storage Quota
