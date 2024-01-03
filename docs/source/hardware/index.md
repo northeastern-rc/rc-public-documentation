@@ -8,7 +8,7 @@
 Overview <hardware_overview>
 partitions
 ```
-Understanding the hardware architecture of the {term}`cluster` is key to maximizing the performance of your computations on our {term}`High-Performance Computing (HPC)`. This section introduces you to the hardware components, including an overall overview and detailed information about the various {term}`partitions <partition>`.
+Understanding the hardware architecture of the {term}`cluster` is key to maximizing the performance of your computations on our {term}`High-Performance Computing (HPC)`. This section introduces you to the hardware components, including an overview and detailed information about the various {term}`partitions <partition>`.
 
 <!-- ::::{grid} 2
 
