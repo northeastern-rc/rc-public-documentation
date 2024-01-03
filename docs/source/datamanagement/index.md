@@ -33,7 +33,7 @@ Data management is a critical aspect of utilizing our High-Performance Computing
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`database;1.5em;screen-full` Data Storage Options
-:link: datamanagement/discovery_storage
+:link: discovery_storage
 :link-type: doc
 
 Selecting the appropriate storage option can significantly impact your work’s efficiency.
@@ -43,7 +43,7 @@ Selecting the appropriate storage option can significantly impact your work’s 
 :::
 
 :::{grid-item-card} {octicon}`upload;1.5em;sd-mr-1` Transfer Data
-:link: datamanagement/transferringdata
+:link: transferringdata
 :link-type: doc
 
 Transferring data securely and efficiently is fundamental.
@@ -53,7 +53,7 @@ Transferring data securely and efficiently is fundamental.
 :::
 
 :::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Using Globus
-:link: datamanagement/globus
+:link: globus
 :link-type: doc
 
 Globus offers a user-friendly interface for transferring large datasets.
@@ -63,7 +63,7 @@ Globus offers a user-friendly interface for transferring large datasets.
 :::
 
 :::{grid-item-card} {octicon}`history;1.5em;sd-mr-1` Data Backup and Restore
-:link: datamanagement/databackup
+:link: databackup
 :link-type: doc
 
 Understanding how to back up and restore your data ensures its safety.
@@ -73,7 +73,7 @@ Understanding how to back up and restore your data ensures its safety.
 :::
 
 :::{grid-item-card} {octicon}`shield-check;1.5em;sd-mr-1` Security and Compliance
-:link: datamanagement/securityandcompliance
+:link: securityandcompliance
 :link-type: doc
 
 Protecting data and maintaining compliance with relevant regulations is vital.

@@ -9,50 +9,39 @@ Package Managers <packagemanagers/index>
 From Source <fromsource/index>
 ```
 ## Cluster Software
-<!-- ::::{grid} 2
 
-:::{grid-item-card} {ref}`system-wide-overview`
-Cluster's nuts and bolts.
-:::
-:::{grid-item-card} {ref}`package-managers`
-Allow you to build specific environments.
-:::
-:::{grid-item-card} {ref}`from-source`
-Using `make` or `cmake`.
-:::
-:::: -->
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`globe;1.5em;screen-full` System-wide Software
-:link: software/systemwide
+:link: systemwide/index
 :link-type: doc
 
 Cluster’s nuts and bolts.
 
 +++
-[Learn more »](software/systemwide)
+[Learn more »](software/systemwide/index)
 :::
 
 :::{grid-item-card} {octicon}`package;1.5em;sd-mr-1` Package Managers
-:link: software/packagemanagers
+:link: packagemanagers/index
 :link-type: doc
 
 Allow you to build specific environments.
 
 +++
-[Learn more »](software/packagemanagers)
+[Learn more »](software/packagemanagers/index)
 :::
 
 :::{grid-item-card} {octicon}`desktop-download;1.5em;sd-mr-1` From Source
-:link: software/fromsource
+:link: fromsource/index
 :link-type: doc
 
 Using make or cmake.
 
 +++
-[Learn more »](software/fromsource)
+[Learn more »](software/fromsource/index)
 :::
 
 ::::

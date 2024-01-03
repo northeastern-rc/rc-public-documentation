@@ -34,7 +34,7 @@ Running jobs efficiently is at the heart of a successful experience with our Hig
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`arrow-switch;1.5em;screen-full` Understanding the Queuing System
-:link: runningjobs/understandingqueuing
+:link: understandingqueuing
 :link-type: doc
 
 Learn how our job scheduler manages the distribution of computational tasks.
@@ -44,7 +44,7 @@ Learn how our job scheduler manages the distribution of computational tasks.
 :::
 
 :::{grid-item-card} {octicon}`checklist;1.5em;sd-mr-1` Job Scheduling Policies and Priorities
-:link: runningjobs/jobscheduling
+:link: jobscheduling
 :link-type: doc
 
 Gain insights into how jobs are prioritized and scheduled within the system.
@@ -54,7 +54,7 @@ Gain insights into how jobs are prioritized and scheduled within the system.
 :::
 
 :::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Interactive and Batch Mode
-:link: runningjobs/interactiveandbatch
+:link: interactiveandbatch
 :link-type: doc
 
 Run jobs interactively or submit batch scripts for later execution.
@@ -64,7 +64,7 @@ Run jobs interactively or submit batch scripts for later execution.
 :::
 
 :::{grid-item-card} {octicon}`cpu;1.5em;screen-full` Working with GPUs
-:link: runningjobs/workingwithgpus
+:link: workingwithgpus
 :link-type: doc
 
 Harness the power of GPUs for computation-intensive tasks.
@@ -74,7 +74,7 @@ Harness the power of GPUs for computation-intensive tasks.
 :::
 
 :::{grid-item-card} {octicon}`issue-reopened;1.5em;sd-mr-1` Recurring Jobs
-:link: runningjobs/recurringjobs
+:link: recurringjobs
 :link-type: doc
 
 Set up and manage recurring jobs that run on a schedule.
@@ -84,7 +84,7 @@ Set up and manage recurring jobs that run on a schedule.
 :::
 
 :::{grid-item-card} {octicon}`bug;1.5em;sd-mr-1` Debugging and Troubleshooting Jobs
-:link: runningjobs/debuggingjobs
+:link: debuggingjobs
 :link-type: doc
 
 Find solutions and get help with common job-related issues.
