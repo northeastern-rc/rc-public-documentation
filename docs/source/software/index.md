@@ -9,7 +9,7 @@ Package Managers <packagemanagers/index>
 From Source <fromsource/index>
 ```
 ## Cluster Software
-::::{grid} 2
+<!-- ::::{grid} 2
 
 :::{grid-item-card} {ref}`system-wide-overview`
 Cluster's nuts and bolts.
@@ -20,8 +20,44 @@ Allow you to build specific environments.
 :::{grid-item-card} {ref}`from-source`
 Using `make` or `cmake`.
 :::
+:::: -->
+
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
+
+:::{grid-item-card} {octicon}`globe;1.5em;screen-full` System-wide Software
+:link: software/systemwide
+:link-type: doc
+
+Cluster’s nuts and bolts.
+
++++
+[Learn more »](software/systemwide)
+:::
+
+:::{grid-item-card} {octicon}`package;1.5em;sd-mr-1` Package Managers
+:link: software/packagemanagers
+:link-type: doc
+
+Allow you to build specific environments.
+
++++
+[Learn more »](software/packagemanagers)
+:::
+
+:::{grid-item-card} {octicon}`desktop-download;1.5em;sd-mr-1` From Source
+:link: software/fromsource
+:link-type: doc
+
+Using make or cmake.
+
++++
+[Learn more »](software/fromsource)
+:::
+
 ::::
 
+---
 The cluster offers you many options for working with software. Two of the easiest and most convenient ways are using the `module` command on the {ref}`command line <command-line>` and the {ref}`interactive-ood-apps` web portal.
 
 ::::{sidebar}
