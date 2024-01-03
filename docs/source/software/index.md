@@ -26,7 +26,7 @@ Using `make` or `cmake`.
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`globe;1.5em;screen-full` System-wide Software
-:link: systemwide
+:link: /systemwide
 :link-type: doc
 
 Cluster’s nuts and bolts.
@@ -36,7 +36,7 @@ Cluster’s nuts and bolts.
 :::
 
 :::{grid-item-card} {octicon}`package;1.5em;sd-mr-1` Package Managers
-:link: packagemanagers
+:link: /packagemanagers
 :link-type: doc
 
 Allow you to build specific environments.
@@ -46,7 +46,7 @@ Allow you to build specific environments.
 :::
 
 :::{grid-item-card} {octicon}`desktop-download;1.5em;sd-mr-1` From Source
-:link: fromsource
+:link: /fromsource
 :link-type: doc
 
 Using make or cmake.
