@@ -14,7 +14,7 @@ securityandcompliance
 
 Data management is a critical aspect of utilizing our High-Performance Computing (HPC) environment. This section provides comprehensive guidance on handling data within the cluster, from storage options to secure data transfers and compliance.
 
-This sections includes the following pages:
+<!-- This sections includes the following pages:
 
 ::::{grid} 5
 :::{grid-item} {ref}`Storage Options <data-storage>`
@@ -27,68 +27,62 @@ This sections includes the following pages:
 :::
 :::{grid-item} {ref}`Security & Compliance <security-and-compliance>`
 :::
-::::
+:::: -->
 
-(data-storage-index)=
-## Data Storage Options
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
 
-Selecting the appropriate storage option can significantly impact your work's efficiency.
+:::{grid-item-card} {octicon}`database;1.5em;screen-full` Data Storage Options
+:link: discovery_storage
+:link-type: doc
 
-- **Home Directories**: For essential files and documents.
-- **{term}`Scratch Space`**: Temporary storage for active jobs.
-- **Project Directories**: Collaborative storage for project-related data.
+Selecting the appropriate storage option can significantly impact your work’s efficiency.
 
-:::{seealso}
-{ref}`More about Data Storage Options <data-storage>`.
++++
+[Learn more »](datamanagement/discovery_storage)
 :::
 
-(transfer-data-index)=
-## Transfer Data
+:::{grid-item-card} {octicon}`upload;1.5em;sd-mr-1` Transfer Data
+:link: transferringdata
+:link-type: doc
 
 Transferring data securely and efficiently is fundamental.
 
-- **SCP or SFTP**: Securely copy files using standard SSH tools.
-- **FTP Clients**: Graphical clients for convenient file transfers.
-
-:::{seealso}
-{ref}`More about Transfer Data <transferring-data>`.
++++
+[Learn more »](datamanagement/transferringdata)
 :::
 
-(using-globus-index)=
-## Using Globus
+:::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Using Globus
+:link: globus
+:link-type: doc
 
 Globus offers a user-friendly interface for transferring large datasets.
 
-- **Getting Started**: How to set up your Globus account.
-- **Transferring Data**: Step-by-step guides for data transfers.
-
-:::{seealso}
-{ref}`More about Using Globus <using-globus>`
++++
+[Learn more »](datamanagement/globus)
 :::
 
-(data-backup-index)=
-## Data Backup and Restore
+:::{grid-item-card} {octicon}`history;1.5em;sd-mr-1` Data Backup and Restore
+:link: databackup
+:link-type: doc
 
 Understanding how to back up and restore your data ensures its safety.
 
-- **Scheduled Backups**: How backups are scheduled and maintained.
-- **Restoring Data**: Procedures to recover your data when needed.
-
-:::{seealso}
-{ref}`More about Data Backup and Restore <data-backup-and-restore>`
++++
+[Learn more »](datamanagement/databackup)
 :::
 
-(security-and-compliance-index)=
-## Security and Compliance
+:::{grid-item-card} {octicon}`shield-check;1.5em;sd-mr-1` Security and Compliance
+:link: securityandcompliance
+:link-type: doc
 
 Protecting data and maintaining compliance with relevant regulations is vital.
 
-- **Data Encryption**: Techniques to secure your data.
-- **Compliance Standards**: Guidance on adhering to legal requirements.
-
-:::{seealso}
-{ref}`More about Security and Compliance <security-and-compliance>`
++++
+[Learn more »](datamanagement/securityandcompliance)
 :::
+
+::::
 
 ---
 
