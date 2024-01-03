@@ -22,7 +22,7 @@ Understanding the hardware architecture of the {term}`cluster` is key to maximiz
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`repo-forked;1.5em;screen-full` Hardware Overview
-:link: using-ood/introduction
+:link: hardware_overview
 :link-type: doc
 
 Get acquainted with the overall hardware architecture of our HPC cluster.
@@ -32,7 +32,7 @@ Get acquainted with the overall hardware architecture of our HPC cluster.
 :::
 
 :::{grid-item-card} {octicon}`versions;1.5em;sd-mr-1` Partitions
-:link: classroom/class_use
+:link: partitions
 :link-type: doc
 
 Learn about the various partitions within the HPC cluster, their roles, and how to utilize them.
