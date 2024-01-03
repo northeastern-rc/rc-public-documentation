@@ -12,18 +12,6 @@ software
 
 Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your home directory storage, checkpointing jobs, optimizing performance, and software best practices.
 
-::::{grid} 4
-
-<!-- :::{grid-item-card} {ref}`home-directory-storage-quota`
-:::
-:::{grid-item-card} {ref}`checkpoint-jobs`
-:::
-:::{grid-item-card} {ref}`optimizing-job-performance`
-:::
-:::{grid-item-card} {ref}`best-practices-sw`
-:::
-:::: -->
-
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
