@@ -21,7 +21,7 @@ We offer training resources and direct assitance as you access the computing clu
 +++
 [Learn more »](welcome/gettinghelp)
 :::
-:::{grid-item-card} {octicon}`server;1.5em;sd-mr-1` Introduction to the cluster
+:::{grid-item-card} {octicon}`server;1.5em;sd-mr-1` Introduction to the Cluster
 :link: introtocluster
 :link-type: doc
 
