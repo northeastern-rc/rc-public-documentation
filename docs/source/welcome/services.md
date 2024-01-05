@@ -1,25 +1,42 @@
 (services)=
-# Services We Provide
+# Services we Provide
 
-## Facilitation of HPC resources
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
 
-### Compute
+:::{grid-item-card} {octicon}`device-desktop;1.5em;screen-full` Compute
+:link: ../hardware/hardware_overview
+:link-type: doc
 
-The Research Computing team at NU offer technical support to all researchers using NU's high-performance computing (HPC) resources. Our technical experts assist users in harnessing the full potential of the cluster's computational resources. Our services are designed to empower you to take full advantage of the HPC resources available for your research.
+An overview of our computational resources.
++++
+[Learn more »](../hardware/hardware_overview)
+:::
 
-### Storage
+:::{grid-item-card} {octicon}`database;1.5em;sd-mr-1` Storage
+:link: ../datamanagement/discovery_storage
+:link-type: doc
 
-We have many file storage solutions available to members of the Northeastern Community and provide tailored solutions to cater to both long-term high-capacity storage needs and dynamic storage requirements for active research. Our technical team works closely with researchers to design data management strategies, facilitating seamless data movement, backup, and restoration.
+We offer several storage solutions for active and archival use.
++++
+[Learn more »](../datamanagement/discovery_storage)
+:::
 
-### Classroom
+:::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` Classroom
+:link: ../classroom/class_use
+:link-type: doc
 
-At Research Computing we extend our expertise beyond research contexts to provide comprehensive support for classroom use of NU's computational resources. Our skilled team collaborates with educators to integrate high-performance computing into curricula, enhancing students' learning experiences. We offer tailored workshops and training sessions that empower instructors to incorporate computational techniques into their courses. From introductory coding exercises to advanced simulations, we assist in designing educational content that leverages the power of our computing cluster. Our technical staff ensures that students have access to the necessary tools and resources, enabling them to explore real-world applications of computational methods.
+We support classroom use of HPC resources.
++++
+[Learn more »](../classroom/class_use)
+:::
+::::
 
 ## Consultations
 
-We encourage you to schedule a consultation with one of our staff members to receive personal, one-on-one assistance for your research computing and data storage needs. Consultations are available to any Northeastern student, faculty, or staff member. We can help you get started on the cluster, optimize your code, benchmark, install and use software packages, detail data storage options, and more.
+We encourage you to schedule a consultation with one of our staff members to receive personal, one-on-one assistance for your research computing, data storage, or classroom needs. Consultations are available to any Northeastern student, faculty, or staff member. We can help you get started on the cluster, optimize your code, benchmark, install and use software packages, detail data storage options, and more.
 
-We offer consultations by appointment most weekdays during regular business hours (9 a.m. to 5 p.m.). Just so you know, we follow the Northeastern University holiday schedule, so no consultations are available on holidays or during breaks. All consultations are conducted online through the Teams app.
+We offer consultations by appointment most weekdays during regular business hours (9 a.m. to 5 p.m.). We follow the Northeastern University holiday schedule, so no consultations are available on holidays or during breaks. All consultations are conducted online through the Teams application.
 
 Use our [Bookings page](https://rc.northeastern.edu/support/consulting/) to view our availability and schedule an appointment. You must sign in using your **@northeastern.edu** email address (for example, **[a.student@northeastern.edu](mailto:a.student@northeastern.edu)**).
 
@@ -38,7 +55,7 @@ If you are a faculty member using Discovery with your class and would like us to
 
 ## Collaboration
 
-The team at RC @ NU is composed of full-time PhD scientists whose expertise spans diverse fields (e.g., Machine Learning, Data Analytics, Molecular Dynamics, Bioinformatics, and Big Data). We are eagerly open to collaboration with researchers in multiple phases of their research including:
+The team at RC @ NU is composed of full-time PhD scientists and domain experts whose expertise spans diverse fields (e.g., Machine Learning, Data Analytics, Molecular Dynamics, Bioinformatics, and Big Data). We are eagerly open to collaboration with researchers in multiple phases of their research including:
 
 - Grant/proposal development and idea generation
 - Data cleaning and transforming
