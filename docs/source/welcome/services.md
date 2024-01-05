@@ -14,12 +14,12 @@ An overview of our computational resources.
 :::
 
 :::{grid-item-card} {octicon}`database;1.5em;sd-mr-1` Storage
-:link: ../datamanagment/discovery_storage
+:link: ../datamanagement/discovery_storage
 :link-type: doc
 
 We offer several storage solutions for active and archival use.
 +++
-[Learn more »](../datamanagment/discovery_storage)
+[Learn more »](../datamanagement/discovery_storage)
 :::
 
 :::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` Classroom
