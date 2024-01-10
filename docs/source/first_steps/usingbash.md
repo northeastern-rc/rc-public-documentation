@@ -456,58 +456,6 @@ diff <(ls /path/to/dir1) <(ls /path/to/dir2)
 
 The next few subsections provide more details on a few advanced bash tools that often come in handy.
 
-### rsync
-
-The `rsync` command is a powerful and versatile file transfer utility commonly used to synchronize files and directories between different locations. It can transfer files over a network connection and run in various modes, including local and remote transfers and backup operations. One of the key benefits of using `rsync` is its ability to transfer only the differences between the source and destination files, which can significantly reduce the amount of data transfer time required. Additionally, `rsync` supports various advanced features, including the ability to perform incremental backups and preserve symbolic links, making it a popular tool for system administrators and other advanced users.
-
-:::{important}
-File transfers must be done using the transfer node on the Discovery, i.e., do not copy to or from the login node accessible via `xfer.discovery.neu.edu`. See {ref}`transferring-data` for more information.
-:::
-
-We have listed a few examples of `rsync` synchronizing files and directories between two locations, but many more options are available. Consult the [rsync(1) manual page] for more information on effectively using `rsync`.
-
-Syncing a local directory to a remote server:
-
-:::{code-block} bash
-rsync -avz /local/path user@xfer.discovery.neu.edu:/remote/path
-:::
-
-Syncing a remote server to a local directory:
-
-:::{code-block} bash
-rsync -avz user@xfer.discovery.neu.edu:/remote/path /local/path
-:::
-
-Syncing a local directory to a remote server with compression:
-
-:::{code-block} bash
-rsync -avz --compress /local/path user@xfer.discovery.neu.edu:/remote/path
-:::
-
-Syncing a remote server to a local directory while preserving permissions:
-
-:::{code-block} bash
-rsync -avz --perms user@xfer.discovery.neu.edu:/remote/path /local/path
-:::
-
-Syncing only files that have been modified in the last hour:
-
-:::{code-block} bash
-rsync -avz --update --min-age=3600 /local/path user@xfer.discovery.neu.edu:/remote/path
-:::
-
-Syncing a local directory to a remote server while excluding certain files:
-
-:::{code-block} bash
-rsync -avz --exclude='*.log' /local/path user@xfer.discovery.neu.edu:/remote/path
-:::
-
-Syncing a remote server to a local directory while preserving symbolic links:
-
-:::{code-block} bash
-rsync -avz --links user@xfer.discovery.neu.edu:/remote/path /local/path
-:::
-
 ### find
 
 `find` is a command line tool used to search for files and directories within a specified location. It starts at a specified directory and recursively searches through its subdirectories. The user can select a range of criteria to match (e.g., file name, size, modification time), and `find` will return a list of all files and directories that match the specified criteria. `find` provides a range of options for further processing the results, such as executing a command on each matching file, printing the results, or performing other operations. As a result, it is a versatile tool to search for specific files and to clean up old files.
@@ -728,68 +676,6 @@ awk '{print NR, $0, length($0)}' awk-example.txt
 3 Jim Smith 40 12
 4 Sara Johnson 35 15
 5 Michael Brown 29 16
-:::
-
-### Git configurations tips and tricks
-
-Git is a distributed version control system for software development and other collaborative projects that allows multiple users to work on a project simultaneously while keeping track of changes and enabling easy collaboration. With Git, users can commit their changes to a local repository and push them to a remote repository so that others can access and merge their changes into the main project. Git also provides a robust set of tools for managing branches, resolving conflicts, and performing other tasks related to version control.
-
-Git provides a range of configuration options that allow users to customize their behavior to suit their needs, including setting the username and email, specifying a preferred text editor, and setting up aliases for frequently used commands. In addition, users can either configure Git globally, which will apply the configuration to all of their Git repositories, or configure locally, which will apply the configuration only to a specific repository. This flexibility allows users to work with Git in a way that suits their workflow.
-
-#### Custom Configurations
-
-Below you will find a few examples of Git configuration options. See [Git User Manual] for more information on how to customize Git to your needs.
-
-Setting your username and email
-
-:::{code-block} bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-:::
-
-Setting your preferred text editor
-
-:::{code-block} bash
-git config --global core.editor nano
-:::
-
-Setting your preferred diff tool
-
-:::{code-block} bash
-git config --global diff.tool emacs
-git config --global difftool.prompt false
-:::
-
-Setting up aliases for frequently used Git commands
-
-:::{code-block} bash
-git config --global alias.st status
-git config --global alias.co checkout
-git config --global alias.ci commit
-:::
-
-Setting up a default push behavior:
-
-:::{code-block} bash
-git config --global push.default simple
-:::
-
-Enabling colored output for Git commands:
-
-:::{code-block} bash
-git config --global color.ui true
-:::
-
-Ignoring files globally across all your Git repositories as follows:
-
-:::{code-block} bash
-git config --global core.excludesfile ~/.gitignore_global
-:::
-
-Enabling automatic line wrapping in Git log output as follows:
-
-:::{code-block} bash
-git config --global log.autoWrap true
 :::
 
 ## Text Editors
