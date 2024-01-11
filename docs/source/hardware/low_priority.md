@@ -4,7 +4,7 @@
 
 ## Introduction
 
-`lowpriority` is a new partition on our high performance computing (HPC) cluster, which allows the research community to use private resources on the HPC cluster when they are idle. This is a common practice in HPC clusters to optimize the use of idle private resources that consume power and cooling. This new partition has hardware that is not otherwise available to the general research community and, in time, could double the resources available to NURC users.
+The new `lowpriority` partition allows the research community to use private resources on the high performance computing (HPC) cluster when those resources are idle. This is a common practice in HPC clusters to optimize the use of idle private resources that consume power and cooling. This new partition has hardware that is not otherwise available to the general research community and, in time, could double the resources available to NURC users.
 
 ## When to use the Low Priority Partition
 
