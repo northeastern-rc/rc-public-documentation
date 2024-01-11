@@ -36,14 +36,6 @@ Back to the top
 {ref}`See Request An Account <request-an-account>`, and complete the [ServiceNow RC Access Request form] with your details and submit it. Your request will be processed within a few business days.
 ::::
 
-::::{dropdown} How can I reset my password?
-Please use our website's 'Account Management' tool for password reset. Follow the instructions to reset your password.
-
-:::{seealso}
-{ref}`changing-password`.
-:::
-::::
-
 ::::{dropdown} What happens to my account when I leave NU?
 ITS controls access to the University’s computing resources, so when you or your students leave, you/they may lose access to many of these resources. Sponsored accounts allow people who work or volunteer at NU, but who are not paid by NU, to access the University’s computing resources. Researchers with sponsored accounts cannot request RC services, but they are allowed to use the systems we manage as members of a MyGroups (requires VPN connection) group controlled by a NU Principal Investigator (PI). Details on sponsored accounts are posted on the ITS sponsored accounts page.
 ::::
@@ -80,7 +72,7 @@ A faculty or research staff member must sponsor your HPC account request. Facult
 ::::{dropdown} How do I log on to the cluster?
 Use an SSH client and connect to `login.discovery.neu.edu`. Instructions for using ssh and other login tools, as well as recommended clients for different operating systems, as described in {ref}`shell-environment-on-cluster`. You can also access the cluster through our Web-based interface Open OnDemand (OOD).
 :::{seealso}
-{ref}`connect-to-cluster` and {ref}`intro-to-ood-index`
+{ref}`connect-to-cluster` and {ref}`using-ood`
 :::
 ::::
 
@@ -126,7 +118,7 @@ Back to the top
 ::::{dropdown} How can I transfer data to/from the HPC cluster?
 Data transfer can be done using various methods like `scp`, `rsync`, or `Globus`. Refer to the 'Transferring Data' section in 'Data Management' for detailed instructions.
 :::{seealso}
-{ref}`data-storage-index`
+{ref}`data-management`
 :::
 ::::
 
@@ -135,7 +127,7 @@ Smaller files can be transferred to/from the cluster using `scp`, `sftp`, and `r
 
 Larger files should be moved using Globus.
 :::{seealso}
-{ref}`data-storage-index`
+{ref}`data-management`
 :::
 ::::
 
@@ -476,7 +468,7 @@ Back to the top
 ::::{dropdown} How can I get my class access to the HPC?
 Please submit a [Classroom Access Request](https://bit.ly/NURC-Classroom) ticket in order for a classroom to get a access.
 :::{seealso}
-{ref}`classroom-faq-index`
+{ref}`courses-faq`
 :::
 ::::
 
