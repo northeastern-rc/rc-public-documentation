@@ -21,7 +21,7 @@ From Source <fromsource/index>
 Cluster’s nuts and bolts.
 
 +++
-[Learn more »](software/systemwide/index)
+[Learn more »](systemwide/index)
 :::
 
 :::{grid-item-card} {octicon}`package;1.5em;sd-mr-1` Package Managers
@@ -31,7 +31,7 @@ Cluster’s nuts and bolts.
 Allow you to build specific environments.
 
 +++
-[Learn more »](software/packagemanagers/index)
+[Learn more »](packagemanagers/index)
 :::
 
 :::{grid-item-card} {octicon}`desktop-download;1.5em;sd-mr-1` From Source
@@ -41,7 +41,7 @@ Allow you to build specific environments.
 Using make or cmake.
 
 +++
-[Learn more »](software/fromsource/index)
+[Learn more »](fromsource/index)
 :::
 
 ::::

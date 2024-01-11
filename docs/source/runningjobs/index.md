@@ -40,7 +40,7 @@ Running jobs efficiently is at the heart of a successful experience with our Hig
 Learn how our job scheduler manages the distribution of computational tasks.
 
 +++
-[Learn more »](runningjobs/understandingqueuing)
+[Learn more »](understandingqueuing)
 :::
 
 :::{grid-item-card} {octicon}`checklist;1.5em;sd-mr-1` Job Scheduling Policies and Priorities
@@ -50,7 +50,7 @@ Learn how our job scheduler manages the distribution of computational tasks.
 Gain insights into how jobs are prioritized and scheduled within the system.
 
 +++
-[Learn more »](runningjobs/jobscheduling)
+[Learn more »](jobscheduling)
 :::
 
 :::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Interactive and Batch Mode
@@ -60,7 +60,7 @@ Gain insights into how jobs are prioritized and scheduled within the system.
 Run jobs interactively or submit batch scripts for later execution.
 
 +++
-[Learn more »](runningjobs/interactiveandbatch)
+[Learn more »](interactiveandbatch)
 :::
 
 :::{grid-item-card} {octicon}`cpu;1.5em;screen-full` Working with GPUs
@@ -70,7 +70,7 @@ Run jobs interactively or submit batch scripts for later execution.
 Harness the power of GPUs for computation-intensive tasks.
 
 +++
-[Learn more »](runningjobs/workingwithgpus)
+[Learn more »](workingwithgpus)
 :::
 
 :::{grid-item-card} {octicon}`issue-reopened;1.5em;sd-mr-1` Recurring Jobs
@@ -80,7 +80,7 @@ Harness the power of GPUs for computation-intensive tasks.
 Set up and manage recurring jobs that run on a schedule.
 
 +++
-[Learn more »](runningjobs/recurringjobs)
+[Learn more »](recurringjobs)
 :::
 
 :::{grid-item-card} {octicon}`bug;1.5em;sd-mr-1` Debugging and Troubleshooting Jobs
@@ -90,7 +90,7 @@ Set up and manage recurring jobs that run on a schedule.
 Find solutions and get help with common job-related issues.
 
 +++
-[Learn more »](runningjobs/debuggingjobs)
+[Learn more »](debuggingjobs)
 :::
 
 ::::

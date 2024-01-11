@@ -28,7 +28,7 @@ Understanding the hardware architecture of the {term}`cluster` is key to maximiz
 Get acquainted with the overall hardware architecture of our HPC cluster.
 
 +++
-[Learn more »](hardware/hardware_overview)
+[Learn more »](hardware_overview)
 :::
 
 :::{grid-item-card} {octicon}`versions;1.5em;sd-mr-1` Partitions
@@ -38,7 +38,7 @@ Get acquainted with the overall hardware architecture of our HPC cluster.
 Learn about the various partitions within the HPC cluster, their roles, and how to utilize them.
 
 +++
-[Learn more »](hardware/partitions)
+[Learn more »](partitions)
 :::
 ::::
 

@@ -10,7 +10,6 @@ To gain access to HPC resources instructors need to submit a [classroom access f
 Please submit these requests prior to the beginning of each semester (preferred), or at least **one week** prior to the start of when you plan on using the HPC cluster for your class. If you're requesting a customized application we require **two-weeks** to **one-month** time to complete prior to when you'd like to use it.
 
 ## Classroom setup
----
 
 Once access is provided, each course will have a course-specific directory under `/courses/` following this sample file tree. As shown for the course BINF6430.202410 below:
 
@@ -35,7 +34,7 @@ Once the course has ended, and final grades have been submitted, the courses spa
 Please see our page on {ref}`getting-access` if you would like an account that persists through taking courses.
 
 ## Courses Partitions
----
+
 We have two partitions dedicated to the use of students and instructors for the duration of their course.
 
 
@@ -158,7 +157,7 @@ scancel jobid
 :::{note} A cluster is a collection of shared resources. We highly recommend canceling any jobs that are still running in an interactive session (on the OOD or via srun) when you have completed your work. This frees up the resources for other classmates and instructors.
 :::
 ## Software Applications
----
+
 All courses have access to the [command line](https://rc-docs.northeastern.edu/en/latest/first_steps/usingbash.html#command-line).
 
 We have many software applications installed system wide as modules that are available through the command line via the [“module” command](https://rc-docs.northeastern.edu/en/latest/software/systemwide/modules.html).
@@ -170,7 +169,7 @@ Jupyterlab notebook, Rstudio, Matlab, VSCode, Maestro (Schrodinger), and a unix 
 Professors should create custom conda environments for their course which can be used in JupyterLab notebook or used in interactive mode (srun) or sbatch scripts on the command line.
 
 ## Custom Course Applications
----
+
 At Northeastern University instructors have a great deal of flexibility in how they use the HPC for their classroom, and this is most apparent in the use of software applications.
 
 We encourage professors to perform local software installations via conda environments within the `/courses` directory for their class. These can be used by the students to complete tutorials and homework assignments. Students can also create their own conda environments in their `/courses/course.code/students/username` directory to complete their own projects. [Conda environments](https://rc-docs.northeastern.edu/en/latest/software/packagemanagers/conda.html#conda) can be used to install a variety of research software and are not only useful for coding in python.
