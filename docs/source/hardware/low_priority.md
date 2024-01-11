@@ -10,7 +10,7 @@ The new `lowpriority` partition allows the research community to use private res
 
 From most to least-recommended scenarios:
 
-1. Code that can be checkpointed (Please see {ref}`checkpoint-jobs`)
+1. Code that can be checkpointed ( {ref}`checkpoint-jobs`)
 1. Jobs that fit on a single node 
 1. Jobs that require multiple nodes (e.g., MPI - please see {ref}`using-mpi`)
 1. When facing longer than average waits times in the other partitions
