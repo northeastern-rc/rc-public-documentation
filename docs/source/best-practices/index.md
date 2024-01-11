@@ -22,7 +22,7 @@ Utilizing High-Performance Computing (HPC) resources effectively requires adhere
 Learn about storage quotas and how to manage your home directory effectively.
 
 +++
-[Learn more »](best-practices/homequota)
+[Learn more »](homequota)
 :::
 
 :::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Checkpointing Jobs
@@ -32,7 +32,7 @@ Learn about storage quotas and how to manage your home directory effectively.
 Discover how to save progress within long-running jobs, preventing loss of data.
 
 +++
-[Learn more »](best-practices/checkpointing)
+[Learn more »](checkpointing)
 :::
 
 :::{grid-item-card} {octicon}`meter;1.5em;sd-mr-1` Optimizing Job Performance
@@ -42,19 +42,18 @@ Discover how to save progress within long-running jobs, preventing loss of data.
 Guidelines and tips to get the most out of your computational tasks.
 
 +++
-[Learn more »](best-practices/optimizingperformance)
+[Learn more »](optimizingperformance)
 :::
 
-<!-- :::{grid-item-card} {octicon}`check-circle-fill;1.5em;sd-mr-1` Best Software Practices
+:::{grid-item-card} {octicon}`check-circle-fill;1.5em;sd-mr-1` Best Software Practices
 :link: software
 :link-type: doc
 
 Effective strategies and best practices for managing and using software on HPC.
 
 +++
-[Learn more »](best-practices/software)
-::: -->
-
+[Learn more »](software)
+:::
 ::::
 
 ---
