@@ -1,5 +1,14 @@
 # Research Computing
 
+```{toctree}
+:hidden:
+:maxdepth: 3
+
+services
+gettinghelp
+introtocluster
+```
+
 Research Computing at Northeastern Univeristy is committed to supporting cutting-edge research and innovation. This section overviews the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment.
 
 ::::{grid} 1 2 2 3
@@ -11,23 +20,25 @@ Research Computing at Northeastern Univeristy is committed to supporting cutting
 
 Services we offer to all users of the HPC at NU.
 +++
-[Learn more »](welcome/services)
+[Learn more »](services)
 :::
+
 :::{grid-item-card} {octicon}`info;1.5em;sd-mr-1` Getting Help
 :link: gettinghelp
 :link-type: doc
 
 We offer training resources and direct assitance as you access the computing cluster at NU.
 +++
-[Learn more »](welcome/gettinghelp)
+[Learn more »](gettinghelp)
 :::
+
 :::{grid-item-card} {octicon}`server;1.5em;sd-mr-1` Introduction to the Cluster
 :link: introtocluster
 :link-type: doc
 
 What is a computing cluster and schedule manager?
 +++
-[Learn more »](welcome/introtocluster)
+[Learn more »](introtocluster)
 :::
 ::::
 
