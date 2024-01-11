@@ -31,7 +31,7 @@ Open OnDemand (OOD) is a user-friendly interface for interacting with our High-P
 Get started with OOD by understanding its purpose, features, and benefits.
 
 +++
-[Learn more »](using-ood/introduction)
+[Learn more »](introduction)
 :::
 
 :::{grid-item-card} {octicon}`desktop-download;1.5em;screen-full` Accessing Open OnDemand
@@ -41,7 +41,7 @@ Get started with OOD by understanding its purpose, features, and benefits.
 Learn about the various methods to access and navigate OOD.
 
 +++
-[Learn more »](using-ood/accessingood)
+[Learn more »](accessingood)
 :::
 
 :::{grid-item-card} {octicon}`duplicate;1.5em;screen-full` Interactive Open OnDemand Applications
@@ -51,7 +51,7 @@ Learn about the various methods to access and navigate OOD.
 Explore interactive applications in OOD, including job submissions and real-time monitoring.
 
 +++
-[Learn more »](using-ood/interactiveapps/index)
+[Learn more »](interactiveapps/index)
 :::
 
 ::::
