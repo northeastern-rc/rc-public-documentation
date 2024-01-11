@@ -12,7 +12,7 @@ From most to least-recommended scenarios:
 
 1. Code that can be checkpointed ( {ref}`checkpoint-jobs`)
 1. Jobs that fit on a single node 
-1. Jobs that require multiple nodes (e.g., MPI - please see {ref}`using-mpi`)
+1. Jobs that require multiple nodes (e.g., MPI {ref}`using-mpi`)
 1. When facing longer than average waits times in the other partitions
 
 ## How to use the Low Priority Partition
