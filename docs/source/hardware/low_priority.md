@@ -31,7 +31,7 @@ JOBID      PARTITION     NAME     USER   ST   TIME  NODES  NODELIST(REASON)
 
 ### Checkpointing Example (GROMACS)
 
-For the example provided on our {ref}`checkpoint-jobs` page, you can specify the low priority partition along with a shared partition as
+For the example provided on our {ref}`checkpoint-jobs` page, you can specify the low priority partition along with a shared partition as:
 
 :::{code} bash
 #!/bin/bash
