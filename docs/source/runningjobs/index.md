@@ -9,26 +9,8 @@ understandingqueuing
 jobscheduling
 interactiveandbatch
 workingwithgpus
-recurringjobs
-debuggingjobs
 ```
 Running jobs efficiently is at the heart of a successful experience with our High-Performance Computing (HPC) cluster. This section outlines the essential aspects of executing various types of jobs, understanding the queuing system, and troubleshooting.
-
-<!-- ::::{grid} 3
-
-:::{grid-item-card} {ref}`understanding-queuing`
-:::
-:::{grid-item-card} {ref}`job-scheduling`
-:::
-:::{grid-item-card} {ref}`interactive-and-batch-mode`
-:::
-:::{grid-item-card} {ref}`working-gpus`
-:::
-:::{grid-item-card} {ref}`recurring-jobs`
-:::
-:::{grid-item-card} {ref}`debugging-jobs`
-:::
-:::: -->
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
@@ -71,26 +53,6 @@ Harness the power of GPUs for computation-intensive tasks.
 
 +++
 [Learn more »](workingwithgpus)
-:::
-
-:::{grid-item-card} {octicon}`issue-reopened;1.5em;sd-mr-1` Recurring Jobs
-:link: recurringjobs
-:link-type: doc
-
-Set up and manage recurring jobs that run on a schedule.
-
-+++
-[Learn more »](recurringjobs)
-:::
-
-:::{grid-item-card} {octicon}`bug;1.5em;sd-mr-1` Debugging and Troubleshooting Jobs
-:link: debuggingjobs
-:link-type: doc
-
-Find solutions and get help with common job-related issues.
-
-+++
-[Learn more »](debuggingjobs)
 :::
 
 ::::
