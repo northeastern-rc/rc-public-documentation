@@ -22,7 +22,7 @@ It is the software on the HPC that provides functionalities such as {ref}`slurm-
 (basic-slurm-usage-index)=
 ## Basic Slurm Usage
 
-::::{grid} 3
+<!-- ::::{grid} 3
 :::{grid-item-card} {ref}`slurm-commands`
 This page provides the basic slurm commands used for running, monitoring, and canceling jobs.
 :::
@@ -32,15 +32,76 @@ This page provides advanced usage and explanation of `srun` and `sbatch` for run
 :::{grid-item-card} {ref}`slurm-monitoring-and-managing`
 This page provides advanced usage and explanation of `squeue`, `scontrol`, and `sinfo` for monitoring jobs.
 :::
+:::: -->
+
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
+
+:::{grid-item-card} {octicon}`command-palette;1.5em;screen-full` Slurm Commands
+:link: slurmguide/slurmcommands
+:link-type: doc
+
+This page provides the basic slurm commands used for running, monitoring, and canceling jobs.
+
++++
+[Learn more »](slurmguide/slurmcommands)
+:::
+
+:::{grid-item-card} {octicon}`video;1.5em;sd-mr-1` Slurm Running Jobs
+:link: slurmguide/slurmrunningjobs
+:link-type: doc
+
+This page provides advanced usage and explanation of `srun` and `sbatch` for running jobs.
+
++++
+[Learn more »](slurmguide/slurmrunningjobs)
+:::
+
+:::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Monitoring and Managing Jobs
+:link: slurmguide/slurmmonitoringandmanaging
+:link-type: doc
+
+This page provides advanced usage and explanation of `squeue`, `scontrol`, and `sinfo` for monitoring jobs.
+
++++
+[Learn more »](slurmguide/slurmmonitoringandmanaging)
+:::
+
 ::::
+
 
 ## Advanced Slurm Usage
 
-::::{grid} 2
+<!-- ::::{grid} 2
 :::{grid-item-card} {ref}`slurm-arrays`
 This page provides an introduction and use cases for slurm job arrays for launching a large series of jobs.
 :::
 :::{grid-item-card} {ref}`slurm-best-practices`
 This page provides the best practices for slurm HPC usage when submitting jobs.
 :::
+:::: -->
+
+::::{grid} 1 2 2 3
+:gutter: 1 1 1 2
+
+:::{grid-item-card} {octicon}`git-compare;1.5em;screen-full` Slurm Array Jobs and Dependencies
+:link: slurmguide/slurmarray
+:link-type: doc
+
+This page provides an introduction and use cases for slurm job arrays for launching a large series of jobs.
+
++++
+[Learn more »](slurmguide/slurmarray)
+:::
+
+:::{grid-item-card} {octicon}`checklist;1.5em;sd-mr-1` Slurm Best Practices
+:link: slurmguide/slurmbestpractices
+:link-type: doc
+
+This page provides the best practices for slurm HPC usage when submitting jobs.
+
++++
+[Learn more »](slurmguide/slurmbestpractices)
+:::
+
 ::::
