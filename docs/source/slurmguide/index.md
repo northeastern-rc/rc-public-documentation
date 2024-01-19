@@ -37,7 +37,7 @@ This page provides advanced usage and explanation of `squeue`, `scontrol`, and `
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
-:::{grid-item-card} {octicon}`command-palette;1.5em;screen-full` Slurm Commands
+:::{grid-item-card} {octicon}`browser;1.5em;screen-full` Slurm Commands
 :link: slurmguide/slurmcommands
 :link-type: doc
 
