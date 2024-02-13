@@ -66,4 +66,4 @@ Some packages might not be able to be installed on the cluster due to hardware i
 
 Following these steps, users should be able to install most software packages on their own. However, always refer to the specific software's documentation, as steps can vary. If you run into issues or need help, please contact support.
 
-[servicenow software request ticket]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=777c510bdbebd340a37cd206ca9619b0
+[servicenow software request ticket]: https://bit.ly/NURC-Software
