@@ -13,7 +13,7 @@ Our high-performance computing (HPC) resources are available to the Northeastern
 :::{image} ../images/discovery.png
 :alt: cluster
 :class: bg-primary
-:width: 3000px
+:width: 300px
 :align: center
 :::
 Research Computing at Northeastern Univeristy is committed to supporting cutting-edge research and innovation. This section overviews the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment.
