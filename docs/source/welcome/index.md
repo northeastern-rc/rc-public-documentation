@@ -43,7 +43,7 @@ We offer training resources and direct assitance.
 [Learn more »](gettinghelp)
 :::
 
-:::{grid-item-card} {octicon}`server;1.5em;sd-mr-1` Maintenance
+:::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Maintenance
 :link: maintenance
 :link-type: doc
 
