@@ -6,7 +6,7 @@
 
 services
 gettinghelp
-introtocluster
+maintenance
 ```
 Our high-performance computing (HPC) resources are available to the Northeastern University research community. The cluster is in the Massachusetts Green HPC Center (MGHPC) in Holyoke, MA. MGHPC is a 90,000 square food, 15-megawatt research computing and data center facility that houses computing resources for five institutions: Northeastern University, Boston University, Harvard University, the Massachusetts Institute of Technology (MIT), and the University of Massachesetts (UMass).
 
@@ -37,12 +37,12 @@ We offer training resources and direct assitance as you access the computing clu
 :::
 
 :::{grid-item-card} {octicon}`server;1.5em;sd-mr-1` Maintenance
-:link: introtocluster
+:link: maintenance
 :link-type: doc
 
-What is a computing cluster and schedule manager?
+How to I stay informed about maintenance?
 +++
-[Learn more »](introtocluster)
+[Learn more »](maintenace)
 :::
 ::::
 
