@@ -10,7 +10,7 @@ maintenance
 ```
 Our high-performance computing (HPC) resources are available to the Northeastern University research community. The cluster is in the Massachusetts Green HPC Center (MGHPC) in Holyoke, MA. MGHPC is a 90,000 square food, 15-megawatt research computing and data center facility that houses computing resources for five institutions: Northeastern University, Boston University, Harvard University, the Massachusetts Institute of Technology (MIT), and the University of Massachesetts (UMass).
 
-:::{image} ../images/discovery.png
+:::{image} ../images/discovery.png{w=200px}
 :::
 Research Computing at Northeastern Univeristy is committed to supporting cutting-edge research and innovation. This section overviews the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment.
 
