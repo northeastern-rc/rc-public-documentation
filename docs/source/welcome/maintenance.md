@@ -5,16 +5,16 @@
 Routine cluster maintenance is performed on the first Tuesday of each month. RC sends maintenance emails to inform users of upcoming maintenance window, a description of the maintenance, and how users will be affected.
 
 :::{seealso}
-Users can also check the maintenance status via [IT Maintenance and Status page].
+Users can also check the maintenance status via [ITS Maintenance and Status] page.
 :::
 (annual_shutdown)=
 ## MGHPCC Annual Shutdown
 
 The Massachusetts Green High Performance Computing Center (MGHPCC) conducts an annual shutdown for maintenance work. During this shutdown, all RC-managed services are powered down and unavailable for approximately four days. RC will send frequent reminders leading up to the shutdown to ensure that users are able to plan accordingly.
 
-## IT Statuspage
+## ITS Statuspage
 
-All routine cluster maintenance, emergency maintenance, and annual shutdown maintenance information will be posted to the [IT Statuspage]. Please subscribe to ensure you receive updates on the status of all ITS systems.
+All routine cluster maintenance, emergency maintenance, and annual shutdown maintenance information will be posted to the [ITS Maintenance and Status]. Please subscribe to ensure you receive updates on the status of all ITS systems.
 
 ## Preparing Cluster Maintenance
 
@@ -52,4 +52,4 @@ If you want to set up the default and maximum time configuration on your partiti
 
 Following these instructions ensures that your job scripts consider the maintenance period and set appropriate time limits. If you have any further questions, feel free to ask!
 
-[IT Maintenance and Status]: https://northeastern.statuspage.io/
+[ITS Maintenance and Status]: https://northeastern.statuspage.io/
