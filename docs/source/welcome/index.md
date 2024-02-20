@@ -16,6 +16,8 @@ Our high-performance computing (HPC) resources are available to the Northeastern
 :width: 300px
 :align: center
 :::
+
+
 Research Computing at Northeastern Univeristy is committed to supporting cutting-edge research and innovation. This section overviews the services, resources, and guidance available to help you take full advantage of our High-Performance Computing (HPC) environment.
 
 
@@ -50,7 +52,9 @@ Stay informed about maintenance.
 :::
 ::::
 
-Explore these topics to understand and leverage our resources to their fullest. Our support team is available at <rchelp@northeastern.edu> or consult our {ref}`faq` if you need assistance.
+Explore these topics to understand and leverage our resources to their fullest. Our support team is available at <rchelp@northeastern.edu> 
+
+
 
 We highly appreciate your feedback! If you have any comments or suggestions regarding the topics covered in this documentation, please submit a [Research Computing Documentation Request] or contact us at <rchelp@northeastern.edu>.
 
