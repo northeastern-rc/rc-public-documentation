@@ -5,32 +5,20 @@
 :hidden:
 :maxdepth: 3
 
-passwordlessssh
 shellenvironment
 ```
 There are two ways to interface with the cluster, using the command-line or the browser via Open On Demand (OOD).
 
-Taking the first steps with our High-Performance Computing (HPC) cluster is a crucial part of beginning your computational research journey. This section guides you through the essentials, including setting up passwordless SSH, understanding the shell environment, and using Bash.
+Taking the first steps with our High-Performance Computing (HPC) cluster is a crucial part of beginning your computational research journey. This section guides you through the essentials, including understanding the shell environment and using Bash.
 
-::::{grid} 3
+::::{grid} 2
 
-:::{grid-item-card} {ref}`passwordless-ssh`
-:::
 :::{grid-item-card} {ref}`Shell Environment <shell-environment-on-cluster>`
 :::
 :::{grid-item-card} {ref}`Command Line <command-line>`
 :::
 ::::
 
-(passwordless-ssh-index)=
-## Passwordless SSH
-Learn how to set up secure, passwordless SSH to streamline your access to the cluster.
-
-- **Generating SSH Keys**: Create your key pair.
-- **Storing SSH Keys**: Safely store and manage keys.
-:::{seealso}
-{ref}`More about Passwordless SSH <passwordless-ssh>`.
-:::
 (shell-environment-index)=
 ## Shell Environment on the Cluster
 Get acquainted with the cluster's shell environment to navigate and perform tasks efficiently.
