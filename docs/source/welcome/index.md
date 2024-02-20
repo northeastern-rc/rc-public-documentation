@@ -13,7 +13,7 @@ Our high-performance computing (HPC) resources are available to the Northeastern
 :::{image} ../images/discovery.png
 :alt: cluster
 :class: bg-primary
-:width: 300px
+:width: 400px
 :align: center
 :::
 
