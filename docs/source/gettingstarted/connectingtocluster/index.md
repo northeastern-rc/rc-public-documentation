@@ -42,7 +42,7 @@ Using MobaXTerm to connect to Discvoery.
 :link: linux
 :link-type: doc
 
-Using MobaXTerm to connect to Discvoery.
+Using the Terminal to connect to Discovery.
 
 +++
 [Learn more »](linux)
