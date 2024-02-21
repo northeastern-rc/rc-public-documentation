@@ -168,6 +168,48 @@ conda activate my-py38env
 
 To deactivate the environment, type `conda deactivate`. You can type this command again to deactivate the base Miniconda environment.
 
+## Conda and `.bashrc`
+
+In addition to editing your `.bashrc` file as outlined in the example above, programs you install can also modify your `.bashrc` file. For example, if you follow the procedure outlined in {ref}`mini-conda`, there may be a section added to your `.bashrc` file (if you didn't use the `-b` batch option) that automatically loads your conda environment every time you sign in to Discovery. See the figure below for an example of this:
+
+:::{code} bash
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/$USER/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/$USER/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/$USER/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/$USER/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+:::
+
+You should not modify this section in the `.bashrc` file directly. If it was changed, remove this section manually using a file editor.
+
+:::{caution}
+We recommend removing the conda initialization section from your `.bashrc` as it may interfere with the correct startup environment when using Open OnDemand apps. You should always load your Conda environment after your job already started.
+:::
+
+If you need help with your `.bashrc` file or would like it restored to its default, reach out to the RC team at <mailto:rchelp@northeastern.edu>, and we can provide you with
+a new default `.bashrc` file and help troubleshoot issues with the file.
+
 ## Conda Best Practices
 :::{seealso}
 Best practices for home storage: {ref}`cleaning-conda`.

@@ -6,6 +6,7 @@
 
 homequota
 checkpointing
+shell_environment
 ```
 
 Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your home directory storage, checkpointing jobs, optimizing performance, and software best practices.
@@ -33,24 +34,14 @@ Discover how to save progress within long-running jobs, preventing loss of data.
 [Learn more »](checkpointing)
 :::
 
-:::{grid-item-card} {octicon}`meter;1.5em;sd-mr-1` Optimizing Job Performance
-:link: optimizingperformance
+:::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Shell Environment on the Cluster
+:link: shell_environment
 :link-type: doc
 
-Guidelines and tips to get the most out of your computational tasks.
+Best practices for using the shell environment on Discovery. 
 
 +++
-[Learn more »](optimizingperformance)
-:::
-
-:::{grid-item-card} {octicon}`check-circle-fill;1.5em;sd-mr-1` Best Software Practices
-:link: software
-:link-type: doc
-
-Effective strategies and best practices for managing and using software on HPC.
-
-+++
-[Learn more »](software)
+[Learn more »](shell_environment)
 :::
 ::::
 
