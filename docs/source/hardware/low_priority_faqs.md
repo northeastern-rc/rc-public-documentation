@@ -118,7 +118,7 @@ Preempted jobs are put back in the default partition queue (`short`) and schedul
 ::::
 
 ::::{dropdown} 4. My servers are being used by others, how fast can we retrieve them?
-As a private partition owner you will always have the highest priority when accessing your own resources. When submitting jobs to your private partition, any low priority jobs currently running on your servers will be killed and sent back to the queue. You will retrieve your server(s) within approximately 30s.
+As a private partition owner you will always have the highest priority when accessing your own resources. When submitting jobs to your private partition, any low priority jobs currently running on your servers will be preempted and sent back to the default (`short`) queue. You will retrieve your server(s) within approximately 30s.
 ::::
 
 ::::{dropdown} 5. I already have access to one or more of the large, long, and/or multigpu partition(s), do I benefit from using the `lowpriority` partition?
