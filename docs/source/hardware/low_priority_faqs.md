@@ -16,7 +16,7 @@ A job submitted to the `lowpriority` partition that comes from a user **who is N
 ::::
 
 ::::{dropdown} 3. What is a “high priority” job?
-A job submitted to a private partition by a user **who is** a member of that private partition, on which a low priority job is running.
+A job submitted to a private partition by a user **who is** a member of that private partition.
 ::::
 
 ::::{dropdown} 4. How does SLURM handle low priority jobs?
