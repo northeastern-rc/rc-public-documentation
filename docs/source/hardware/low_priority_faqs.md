@@ -155,7 +155,7 @@ All hardware purchased on or after 2019 will be part of the `lowpriority` partit
 
 ::::{dropdown} 5. Why should I make my private resources available to the rest of the research community?
 
-By making your private resources available to others through the `lowpriority` partition, you will allow the Northeastern research community to use them when they are idle. This, in time, could double the resources available to NURC users and is a common practice in HPC clusters to optimize the use of idle private resources that consume power and cooling. 
+By making your private resources available to others through the `lowpriority` partition, you will allow the Northeastern research community to use them when they are idle. This, in time, could double the resources available to Northeastern researchers. This is a common practice in HPC clusters to optimize the use of idle private resources that consume power and cooling. 
 ::::
 
 :::{button-link} faq.html
