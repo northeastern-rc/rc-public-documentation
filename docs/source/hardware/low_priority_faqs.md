@@ -101,7 +101,7 @@ Back to the top
 ## Preemption
 
 ::::{dropdown} 1. What does 'preemption' or 'preemptable job' mean?
-In SLURM terminology, preemption is a scheduling mechanism that involves stopping/suspending one or more low priority jobs, to accommodate a high priority job (i.e. job submitted by the partition owner’s group member). A low priority job that can get suspended in this manner is also known as a ‘preemptable’ job. Preemptable jobs can run on private hardware owned by other research groups, with the potential risk of being suspended before their wall time ends if the private partition’s group member submits a job and requests for resources.
+In Slurm terminology, preemption is a scheduling mechanism that involves stopping/suspending one or more low priority jobs, to accommodate a high priority job. Preemptable jobs can run on private hardware owned by other research groups, with the potential risk of being suspended before their wall time ends if the private partition’s group member submits a job and requests for resources.
 ::::
 
 ::::{dropdown} 2. What do I need to know about preemption and are there any drawbacks for my research group?
