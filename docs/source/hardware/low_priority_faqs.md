@@ -5,7 +5,7 @@
 ## Partition Information
 
 ::::{dropdown} 1. What is the `lowpriority` partition and why is it important?
-`lowpriority` is a new partition on Discovery that allows the research community to use **private resources** on the cluster when they are idle. This new partition has hardware not otherwise available to the general research community and, in time, could double the resources available to NURC users. This is a common practice in HPC clusters to optimize the use of idle private resources that consume power and cooling. 
+`lowpriority` is a new partition on Discovery that allows the research community to use **private resources** on the cluster when they are idle. This new partition could, in time, double the resources available to the Northeastern research community. This practice is common in HPC clusters and will optimize the use of idle private resources that consume power and cooling. 
 
 More information about the low priority partition and examples on how to use it can be 
 found {ref}`low-priority`.
