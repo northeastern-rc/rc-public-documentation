@@ -135,7 +135,9 @@ Back to the top
 ## RC Policy
 
 ::::{dropdown} 1. Can I opt-out?
-We would prefer if you did not, but can if it's really required due to constraints like funding stipulations. Opening up idle private resources that consume power and cooling makes the cluster more useful for everyone (including you). This is a common practice in HPC implemented by many other universities and national labs. Also, all private hardware purchases that were placed since 2019 came with the explicit understanding that they would be added to the `lowpriority` partition when it became available (see next question).
+Opening up idle private resources that consume power and cooling makes the cluster more useful for everyone (including you). This is a common practice in HPC implemented by many other universities and national labs. Also, all private hardware purchases that were placed since 2019 came with the explicit understanding that they would be added to the `lowpriority` partition when it became available (see next question).
+
+If your private resources have constraints (i.e., funding stipulations), please reach out to the RC team and we will remove your resources from the low priority partition.
 ::::
 
 ::::{dropdown} 2. What is the understanding between RC and private partition owners?
