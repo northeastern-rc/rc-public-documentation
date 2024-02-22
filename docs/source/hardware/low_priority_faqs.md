@@ -144,16 +144,12 @@ The following understanding applies to all individual private partition owners w
 RC racks, installs and maintains privately owned servers; RC purchases the equipment needed to connect these servers to the infiniband network fabric; RC pays for power and cooling to operate the servers during their entire lifetime; In return, private partition owners make their servers available to the `lowpriority` partition.
 ::::
 
-::::{dropdown} 3. Are there policies or other formal documents available?
-RC is currently drafting a memorandum of understanding (MoU) that will be distributed to all private partitions owners later in the Fall semester 2023. This document will formalize the understanding that was stated to all private partitions owners at the time of purchase, since 2019. Moreover, RC is working on a detailed set of documentation, service level objectives and training sessions that will be available later in the Fall 2023 semester, once the service is ready to be released.
-::::
-
-::::{dropdown} 4. I have resources I would like to make available to the rest of the research community, what can I do?
+::::{dropdown} 3. I have resources I would like to make available to the rest of the research community, what can I do?
 
 All hardware purchased on or after 2019 will be part of the `lowpriority` partition. Feel free to contact us if you purchased hardware before 2019 and would like to make it available to the `lowpriority` partition.
 ::::
 
-::::{dropdown} 5. Why should I make my private resources available to the rest of the research community?
+::::{dropdown} 4. Why should I make my private resources available to the rest of the research community?
 
 By making your private resources available to others through the `lowpriority` partition, you will allow the Northeastern research community to use them when they are idle. This, in time, could double the resources available to Northeastern researchers. This is a common practice in HPC clusters to optimize the use of idle private resources that consume power and cooling. 
 ::::
