@@ -40,7 +40,7 @@ It is important to specify the required resources in the job script, including m
 ::::
 
 ::::{dropdown} 8. What is the downside of submitting a job to the `lowpriority` partition?
-If a job is submitted to the `lowpriority` partition and a high priority job comes through that requires resources currently occupied by the low priority job, then that low priority job will be stopped/suspended within 30s and re-queued. 
+If a high priority job comes through that requires resources currently occupied by a low priority job, the low priority job will be stopped/suspended within 30s and re-queued. 
 ::::
 
 ::::{dropdown} 9. When should I NOT use the `lowpriority` partition to run my jobs?
