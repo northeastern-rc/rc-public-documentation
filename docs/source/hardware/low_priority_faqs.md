@@ -69,7 +69,7 @@ Currently, the resource limits and the number for CPU-supported low priority job
 The maximum limit for number of CPUs, GPUs, job time etc. will be the same as that on the `short` and `gpu` partitions. Please check our partitions (see {ref}`partition-names`) page for the core and RAM limits on these partition. 
 ::::
 
-::::{dropdown} 4. I am an owner of a private partition, will this affect my group’s job wait time?
+::::{dropdown} 4. I am an owner of a private partition, will this affect my group’s wait time?
 Jobs submitted by the members of your private partition to your privately owned resources always have the highest priority. When submitting jobs to your private partition, any low priority jobs currently running on your servers will be killed and sent back to the queue, introducing a slight delay (~30s) on the first job submitted. This new service is designed to favor partition owners heavily.
 ::::
 
