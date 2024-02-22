@@ -187,24 +187,3 @@ Once testing, configuration, and documentation are complete, we will schedule an
 :align: center
 Back to the top
 :::
-
-## Miscellaneous
-
-::::{dropdown} 1.Where can I learn more about the `lowpriority` partition?
-RC is working on a {ref}`low-priority`, service level objectives, and training sessions that will be available later in the Fall 2023 semester, once the service is ready to be released.
-::::
-
-::::{dropdown} 2. Are there tools or resources available to help me better use and understand the `lowpriority` partition?
-
-Use checkpointing (see {ref}`checkpoint-jobs`) to take full advantage of the `lowpriority` partition. RC is working on a detailed set of documentation and training sessions that will be available later in the Fall 2023 semester to coincide with the release of this new service.
-::::
-
-::::{dropdown} 3. I have additional questions that are not addressed in the FAQs, what do I do?
-Kindly send your questions to [rchelp@northeastern.edu](mailto:rchelp%40northeastern.edu) or schedule a [consultation with us](https://rc.northeastern.edu/support/consulting/).
-::::
-
-:::{button-link} faq.html
-:color: primary
-:align: center
-Back to the top
-:::
