@@ -75,7 +75,7 @@ As a PI who purchased your own equipment, jobs submitted by the members of your 
 ::::
 
 ::::{dropdown} 5. Will the `lowpriority` partition affect the limits on my own server(s)?
-The `lowpriority` partition will not affect current partition definitions — it is just an additional partition. As is true now, PIs will be able to request their private partitions be configured according to their research requirements. 
+The `lowpriority` partition will not affect current partition definitions — it is an additional partition. As is true now, PIs will be able to request their private partitions be configured according to their research requirements. 
 ::::
 
 ::::{dropdown} 6. Will the software that my group uses exclusively on our server(s) be available on other servers?
