@@ -107,7 +107,7 @@ In SLURM terminology, preemption is a scheduling mechanism that involves stoppin
 ::::{dropdown} 2. What do I need to know about preemption and are there any drawbacks for my research group?
 
 **For private partition owners:** 
-When low priority jobs are running on your hardware, you may experience a slight delay (~30s) when submitting your first job to your private partition. This is the time it will take the scheduler to kill/preempt low priority jobs running on your partition. This new service is designed to minimize that delay.
+When low priority jobs are running on your hardware, you may experience a slight delay (~30s) when submitting your first job to your private partition while the scheduler preempts the low priority jobs running on your partition. This new service is designed to minimize that delay.
 
 **For users of the** `lowpriority` **partition:** 
 Submitting jobs to this partition will make your jobs preemptable, which means they may be stopped/suspended and re-queued at any time; {ref}`checkpoint-jobs`) can help you take full advantage of the {ref}`low-priority`.
