@@ -28,7 +28,7 @@ Please keep in mind that jobs submitted by private partition members to their ow
 ::::
 
 ::::{dropdown} 5. Is the `lowpriority` partition default?
-No, the default partition will still be the `short` partition. This ensures that by default, jobs are not subject to preemption.
+No, the default partition will still be the `short` partition; `short` partition jobs are not subject to preemption.
 ::::
 
 ::::{dropdown} 6. How do I submit a job to the `lowpriority` partition?
