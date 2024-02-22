@@ -114,7 +114,7 @@ Submitting jobs to this partition will make your jobs preemptable. That means th
 ::::
 
 ::::{dropdown} 3. How does re-queuing of preempted (terminated) low priority jobs work?
-Preempted jobs are put back in the default partition queue (`short`) and scheduled normally.
+Preempted jobs are put into the default partition queue (`short`) and scheduled normally.
 ::::
 
 ::::{dropdown} 4. My servers are being used by others, how fast can we retrieve them?
