@@ -56,7 +56,7 @@ srun --mpi=pmi2 -n $SLURM_NTASKS gmx_mpi mdrun -ntomp 1 -s myrun.tpr -v -dlb yes
 
 ### Slurm Job Array Example
 
-For this example, a python script and input lists from the [Slurm Job Array Training] are used to show how the `lowpriority` partition can be used with Slurm job arrays.
+For this example, a Python script and input lists from the [Slurm Job Array Training] are used to show how the `lowpriority` partition can be used with Slurm job arrays.
 
 :::{code} bash
 #!/bin/bash
