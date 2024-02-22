@@ -123,7 +123,7 @@ As a private partition owner you will always have the highest priority when acce
 
 ::::{dropdown} 5. I already have access to one or more of the large, long, and/or multigpu partition(s), do I benefit from using the `lowpriority` partition?
 
-The goal of `lowpriority` partition is to double the resources available to Discovery users. Hence, specifying the `lowpriority` partition in your SLURM job header gives your job a higher chance of being allocated resources, even when your first choice of partition is unavailable. For e.g., when you specify `#SBATCH --partition=short,lowpriority`, your job can start running on the `lowpriority` partition even when `short` is unavailable. 
+The goal of `lowpriority` partition is to double the resources available to Discovery users. Specifying the `lowpriority` partition in your Slurm job header gives your job a higher chance of being allocated resources when your first choice of partition is unavailable. For example, when you specify `#SBATCH --partition=short,lowpriority`, your job can start running on the `lowpriority` partition when `short` is unavailable. 
 ::::
 
 :::{button-link} faq.html
