@@ -70,8 +70,7 @@ The maximum limit for number of CPUs, GPUs, job time etc. will be the same as th
 ::::
 
 ::::{dropdown} 4. I am an owner of a private partition, will this affect my group’s job wait time?
-
-As a PI who purchased your own equipment, jobs submitted by the members of your private partition to your own resources always have the highest priority. When submitting jobs to your private partition, any low priority jobs currently running on your servers will be killed and sent back to the queue, introducing a slight delay (~30s) on the first job submitted. This new service is designed to favor partition owners heavily.
+Jobs submitted by the members of your private partition to your privately owned resources always have the highest priority. When submitting jobs to your private partition, any low priority jobs currently running on your servers will be killed and sent back to the queue, introducing a slight delay (~30s) on the first job submitted. This new service is designed to favor partition owners heavily.
 ::::
 
 ::::{dropdown} 5. Will the `lowpriority` partition affect the limits on my own server(s)?
