@@ -9,7 +9,7 @@ The Shell script `.bashrc` is used by Bash to initialize your Shell environment.
 :::{caution}
 Making edits to your `.bashrc` file can result in many issues. Some changes may prevent you from launching apps or executing commands. Modifying your `PATH` variable may result in the inability to use basic Shell commands (such as `cd` or `ls`) if not done correctly.
 
-Before making changes to your `.bashrc` file, make a backup of the default `.bashrc` file, so you can restore it if necessary. If you need help with editing `.bashrc`, reach out to <mailto:rchelp@northeastern.edu> or [schedule a consultation with a staff member](https://outlook.office365.com/owa/calendar/ResearchComputing2@northeastern.onmicrosoft.com/bookings/) who can help suggest edits and troubleshoot any issues you might be having.
+Before making changes to your `.bashrc` file, make a backup of the default `.bashrc` file, so you can restore it if necessary. If you need help with editing `.bashrc`, reach out to [rchelp@northeastern.edu](mailto:rchelp@northeastern.edu) or [schedule a consultation with a staff member](https://outlook.office365.com/owa/calendar/ResearchComputing2@northeastern.onmicrosoft.com/bookings/) who can help suggest edits and troubleshoot any issues you might be having.
 :::
 
 ## About your .bashrc file
