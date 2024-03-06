@@ -1,5 +1,5 @@
 (slurm-arrays)=
-# Slurm Array Jobs and Dependencies
+# Slurm Array Jobs
 
 <> (job-arrays)=
 ## Slurm Job Arrays

@@ -5,13 +5,10 @@
 :hidden:
 :maxdepth: 3
 
-introductiontoslurm
 slurmcommands
 slurmrunningjobs
 slurmmonitoringandmanaging
-slurmscripts
 slurmarray
-slurmbestpractices
 ```
 
 Slurm (Simple Linux Utility for Resource Management) is an open-source, highly configurable, fault-tolerant, and adaptable workload manager. It is extensively used across High-Performance Computing (HPC) environments.
@@ -22,7 +19,7 @@ It is the software on the HPC that provides functionalities such as {ref}`slurm-
 (basic-slurm-usage-index)=
 ## Basic Slurm Usage
 
-::::{grid} 3
+::::{grid} 4
 :::{grid-item-card} {ref}`slurm-commands`
 This page provides the basic slurm commands used for running, monitoring, and canceling jobs.
 :::
@@ -32,15 +29,7 @@ This page provides advanced usage and explanation of `srun` and `sbatch` for run
 :::{grid-item-card} {ref}`slurm-monitoring-and-managing`
 This page provides advanced usage and explanation of `squeue`, `scontrol`, and `sinfo` for monitoring jobs.
 :::
-::::
-
-## Advanced Slurm Usage
-
-::::{grid} 2
 :::{grid-item-card} {ref}`slurm-arrays`
 This page provides an introduction and use cases for slurm job arrays for launching a large series of jobs.
-:::
-:::{grid-item-card} {ref}`slurm-best-practices`
-This page provides the best practices for slurm HPC usage when submitting jobs.
 :::
 ::::
