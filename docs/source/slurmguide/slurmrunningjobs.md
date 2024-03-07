@@ -23,7 +23,7 @@ srun -N 1 -n 1 -p short --pty bash
 - **`N, --nodes=<minnodes[-maxnodes]>`**: specify the number of nodes
 - **`p, --partition=<partition-name>`**: specify a partition for the job to run on
 
-To see all options for `srun`, please refer to [srun manual] from the Schedmd.
+To see all options for `srun`, please refer to [srun manual] from Schedmd.
 
 ### Examples using `srun`
 
@@ -80,7 +80,7 @@ To submit this job script, save it as `my_job.sh` and run:
 sbatch my_job.sh
 :::
 
-For more information on the `SBATCH` directives that can be used in the script, please refer to [sbatch manual].
+For more information on the `SBATCH` directives that can be used in the script, please refer to the [sbatch manual] from Schedmd.
 
 Request a specific amount of memory in the job script if calculations require more than the default 2GB per allocated code. The example script below requests 100GB of memory (`--mem=100G`). Use one capital letter to abbreviate the unit of memory (i.e., kilo `K`, mega `M`, giga `G`, and tera `T`) with the `--mem=` option, as that is what Slurm expects to see:
 
