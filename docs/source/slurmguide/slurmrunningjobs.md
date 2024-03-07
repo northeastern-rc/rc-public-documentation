@@ -95,7 +95,6 @@ Request a specific amount of memory in the job script if calculations require mo
 # <commands to execute>
 :::
 
-
 If you need exclusive use of a node, such as when you have a job that has high I/O requirements, you can use the exclusive flag. The example script below specifies the exclusive use of one node in the short partition for four hours:
 
 :::{code} bash
