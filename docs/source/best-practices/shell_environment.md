@@ -4,7 +4,7 @@
 ## The Discovery Shell Environment and `.bashrc`
 Discovery uses a Linux-based Operating System (CentOS), where the Shell program interfaces with the user. Bash (Bourne Again SHell) is one of the most popular Shell implementations, the default Shell on Discovery.
 
-The Shell script `.bashrc` is used by Bash to initialize your Shell environment. For example, it is typically used to define aliases, functions, and load modules. Note that environment variables settings (such as `PATH`) generally go in the `.bash_profile` or `.profile` files. Your `.bashrc`, `.bash_profile`, and `.profile` files live in your `$HOME` directory. You can change your .bashrc with a text editor like [nano](https://www.nano-editor.org/).
+The shell script `.bashrc` is used by `bash` to initialize your Shell environment. For example, it is typically used to define aliases, functions, and load modules. Note that environment variables settings (such as `PATH`) generally go in the `.bash_profile` or `.profile` files. Your `.bashrc`, `.bash_profile`, and `.profile` files live in your `$HOME` directory. You can change your .bashrc with a text editor like [nano](https://www.nano-editor.org/).
 
 :::{caution}
 Making edits to your `.bashrc` file can result in many issues. Some changes may prevent you from launching apps or executing commands. Modifying your `PATH` variable may result in the inability to use basic shell commands (such as `cd` or `ls`) if not done correctly.
