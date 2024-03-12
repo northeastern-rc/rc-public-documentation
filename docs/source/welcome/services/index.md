@@ -46,7 +46,7 @@ A wide variety of free training sessions
 +++
 [Learn more »](services/training)
 :::
-:::{grid-item-card} {octicon}`code-of-conduct;1.5em;sd-mr-1` Collaborations
+:::{grid-item-card} {octicon}`person-add;1.5em;sd-mr-1` Collaborations
 :link: services/collaboration
 :link-type: doc
 
