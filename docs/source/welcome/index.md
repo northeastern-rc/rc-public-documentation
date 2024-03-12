@@ -4,7 +4,7 @@
 :hidden:
 :maxdepth: 3
 
-services
+services/index
 gettinghelp
 maintenance
 ```

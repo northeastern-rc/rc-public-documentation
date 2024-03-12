@@ -50,9 +50,15 @@ A wide variety of free training sessions
 :link: services/collaboration
 :link-type: doc
 
-We collaborate with researchers 
+We look forward to collaborations with researchers
 +++
 [Learn more »](services/collaboration)
 :::
 ::::
 
+
+If you feel your research has benefited from support from RC @ NU or want to acknowledge the cluster please use one of the statements below:
+
+*This work was completed in part using the Discovery cluster, supported by Northeastern University’s Research Computing team.*
+
+*This work was completed using the Discovery cluster at MGHPC for Northeastern University.*
