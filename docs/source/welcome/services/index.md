@@ -1,5 +1,5 @@
 (servicesprovided)=
-# Services we Provide
+# Services we provide
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
@@ -34,7 +34,7 @@ We support classroom use of HPC resources.
 :link: services/consultations
 :link-type: doc
 
-One-on-one support as you access the cluster
+One-on-one support as you access the cluster.
 +++
 [Learn more »](services/consultations)
 :::
@@ -42,7 +42,7 @@ One-on-one support as you access the cluster
 :link: services/training
 :link-type: doc
 
-A wide variety of free training sessions
+A wide variety of free training sessions.
 +++
 [Learn more »](services/training)
 :::
@@ -50,7 +50,7 @@ A wide variety of free training sessions
 :link: services/collaboration
 :link-type: doc
 
-We look forward to collaborations with researchers
+We look forward to collaborations with researchers.
 +++
 [Learn more »](services/collaboration)
 :::
