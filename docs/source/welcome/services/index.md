@@ -1,14 +1,6 @@
 (servicesprovided)=
 # Services we provide
-```{toctree}
-:hidden:
-hardware_overview
-storage
-classroom
-consultations
-training
-collaborations
-```
+
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
