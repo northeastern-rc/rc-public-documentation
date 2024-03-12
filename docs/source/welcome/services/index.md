@@ -2,9 +2,12 @@
 # Services we provide
 ```{toctree}
 :hidden:
-collaboration
+hardware_overview
+storage
+classroom
 consultations
 training
+collaborations
 ```
 
 ::::{grid} 1 2 2 3
