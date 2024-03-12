@@ -30,7 +30,7 @@ We support classroom use of HPC resources.
 +++
 [Learn more »](../../classroom/class_use)
 :::
-:::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` Consultations
+:::{grid-item-card} {octicon}`device-camera-video;1.5em;sd-mr-1` Consultations
 :link: services/consultations
 :link-type: doc
 
@@ -38,7 +38,7 @@ One-on-one support as you access the cluster
 +++
 [Learn more »](services/consultations)
 :::
-:::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` Training
+:::{grid-item-card} {octicon}`play;1.5em;sd-mr-1` Training
 :link: services/training
 :link-type: doc
 
@@ -46,7 +46,7 @@ A wide variety of free training sessions
 +++
 [Learn more »](services/training)
 :::
-:::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` Collaborations
+:::{grid-item-card} {octicon}`code-of-conduct;1.5em;sd-mr-1` Collaborations
 :link: services/collaboration
 :link-type: doc
 
@@ -56,10 +56,3 @@ We collaborate with researchers
 :::
 ::::
 
-## Citation Information
-
-If you feel your research has benefited from support from RC @ NU or want to acknowledge the cluster please use one of the statements below:
-
-*This work was completed in part using the Discovery cluster, supported by Northeastern University’s Research Computing team.*
-
-*This work was completed using the Discovery cluster at MGHPC for Northeastern University.*
