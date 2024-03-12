@@ -1,3 +1,5 @@
+(training)=
+
 # Training sessions
 
 The RC Team provides free online training sessions for cluster users and Northeastern Students interested in learning more.
