@@ -15,4 +15,4 @@ The team at RC @ NU is composed of full-time PhD scientists and domain experts w
 - Course Development
 - Reproducibility
 
-Please reach out via a consultation or by emailing rchelp@northeastern.edu if you're interested any of the above (or more) services.
+Please reach out via a consultation or by emailing rchelp@northeastern.edu if you're interested in any of the above (or more) services.

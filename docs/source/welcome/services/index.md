@@ -1,5 +1,7 @@
 (servicesprovided)=
-# Services we provide
+# Services we Provide
+```{toctree}
+
 
 
 ::::{grid} 1 2 2 3
