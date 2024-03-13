@@ -50,6 +50,6 @@ Using the Terminal to connect to Discovery.
 ::::
 
 ## Using Open OnDemand
-To learn more about connecting to the cluster using Open OnDemand, please see our dedicated pages on utilizing Open OnDemand starting with {ref}`using-ood`.
+To learn more about connecting to the cluster using Open OnDemand, please see our dedicated pages on utilizing Open OnDemand, starting with {ref}`using-ood`.
 
 [secure shell]: https://www.ssh.com/ssh/protocol/
