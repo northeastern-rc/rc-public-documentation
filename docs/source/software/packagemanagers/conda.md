@@ -204,7 +204,7 @@ unset __conda_setup
 You should not modify this section in the `.bashrc` file directly. If it was changed, remove this section manually using a file editor.
 
 :::{caution}
-We recommend removing the conda initialization section from your `.bashrc` as it may interfere with the correct startup environment when using Open OnDemand apps. You should always load your Conda environment after your job already started.
+We recommend removing the conda initialization section from your `.bashrc` as it may interfere with the correct startup environment when using Open OnDemand apps. You should always load your Conda environment after your job has already started.
 :::
 
 If you need help with your `.bashrc` file or would like it restored to its default, reach out to the RC team at <mailto:rchelp@northeastern.edu>, and we can provide you with
