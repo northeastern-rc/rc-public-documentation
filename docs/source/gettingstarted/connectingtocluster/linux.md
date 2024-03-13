@@ -34,7 +34,7 @@ Ensure you’re on your local computer for steps 1 through 4—type `exit` to re
 
 (x11-linux)=
 ## X11 on Linux
-To use X11 forwarding, from the Terminal appication, log in using the -Y option (`ssh -Y <yourusername>@login.discovery.neu.edu`).
+To use X11 forwarding, from the Terminal application, log in using the -Y option (`ssh -Y <yourusername>@login.discovery.neu.edu`).
 
 :::{tip}
 If you used the -Y option to enable X11 forwarding on your Linux machine, you can test to see if it is working by typing `xeyes`. This will run a small program that makes a pair of eyes appear to follow your cursor.
