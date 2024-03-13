@@ -57,7 +57,7 @@ Example procedure for editing your `.bashrc` file:
 
 ### Sourcing a Shell script example
 
-A safe alternative to `.bashrc` is to source a shell script inside your runtime job environment. Below is an example script to load an Anaconda module and source a conda environment, which will be used inside the slurm script.
+A safe alternative to `.bashrc` is to source a shell script inside your runtime job environment. Below is an example script to load an Anaconda module and source a Conda environment, which will be used inside the slurm script.
 
 Create a shell script `myenv.bash`:
 
