@@ -35,7 +35,7 @@ We recommend keeping `.bashrc` unchanged when using Discovery. You can source en
 
 ### Editing your `.bashrc` file
 
-The basic workflow for editing your `.bashrc` file is to sign in to Discovery, go to your `$HOME` directory, open the file in a text editor on the command line, make your edits, save the file, sign out of Discovery, then sign back in again. Your changes will take effect when you have signed back in again.
+The basic workflow for editing your `.bashrc` file is to sign in to Discovery, go to your `$HOME` directory, open the file in a text editor on the command line, make your edits, save the file, sign out of Discovery, then sign back in again. Your changes will take effect when you sign back in again.
 
 Example procedure for editing your `.bashrc` file:
 
