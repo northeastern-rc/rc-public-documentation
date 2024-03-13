@@ -3,7 +3,7 @@
 
 Linux computers come with a Secure Shell (SSH) program called Terminal that you use to connect to the HPC using SSH. If you need to use software that uses a GUI, such as Matlab or Maestro, make sure to use the -Y option in the second step below using X11 forwarding.
 
-## Connecting To the Cluster on Linux
+## Connecting to the Cluster on Linux
 
 1. Search for the Terminal application from the launcher menu.
 1. At the prompt, type `ssh <username>@login.discovery.neu.edu`, where `<username>` is your Northeastern username. If you need to use X11 forwarding, type `ssh -Y <username>@login.discovery.neu.edu`.
