@@ -23,7 +23,7 @@ You must set up passwordless ssh to ensure that GUI-based applications launch wi
 1. Type `cd ~/.ssh` to move to your ssh folder.
 1. Type `ssh-keygen -t rsa` to generate your key files.
 1. Press `Enter` on all the prompts (do not generate a passphrase). If prompted to overwrite a file, type `Y`.
-1. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in the `~/.ssh/authorized_keys`.
+1. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in `~/.ssh/authorized_keys`.
 
 :::{note}
 Errors that you can see on Windows when launching a GUI-based program include the following:
