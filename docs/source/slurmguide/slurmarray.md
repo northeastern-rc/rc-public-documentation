@@ -31,7 +31,7 @@ taskId = sys.getenv('SLURM_ARRAY_TASK_ID')
 ::::
 
 ## Resource Allotment in Job Arrays 
-When submitting an array and setting its size with many dimensions, please use the `%` symbol to indicate how many tasks run simultaneously. Whenever you specify the memory, number of nodes, number of CPUs, or other specifications, they will be applied to each task. For example, the following code specifies an array of 600 jobs, with 20 running at a time:
+When submitting an array and setting its size with many dimensions, please use the `%` symbol to indicate how many jobs run simultaneously. Whenever you specify the memory, number of nodes, number of CPUs, or other specifications, they will be applied to each job for the array. For example, the following code specifies an array of 600 jobs, with 20 running at a time:
 
 :::{code}
 #!/bin/bash
@@ -44,9 +44,9 @@ When submitting an array and setting its size with many dimensions, please use t
 #SBATCH --nodes=2
 :::
 
-Slurm will submit 20 jobs simultaneously. Each job, represented by a task ID, will use two nodes with 128GB of RAM each. In most cases, setting up a single task is sufficient.
+Slurm will submit 20 jobs to run simultaneously with each job, represented by a task ID, using the allocated resources for the submission of 2 nodes and 128 GB of RAM.
 
-Lastly, we usually use job arrays for embarrassingly parallel jobs. If your case is such that the job executed at each job ID does not use any multi-threading libraries, you can use the following header to avoid wasting resources:
+Lastly, we usually use job arrays for parallel jobs. If your case is such that the job executed at each job ID does not use any multi-threading libraries (serial programs), you can use the following header (1 core per job) to avoid wasting resources:
 
 :::{code} bash
 #!/bin/bash
