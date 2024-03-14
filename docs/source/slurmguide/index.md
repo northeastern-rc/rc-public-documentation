@@ -18,15 +18,15 @@ It is the software on the HPC that provides functionalities such as {ref}`slurm-
 
 ::::{grid} 3
 :::{grid-item-card} {ref}`slurm-commands`
-This page provides the basic slurm commands used for running, monitoring, and canceling jobs.
+Basic Slurm commands used for running, monitoring, and canceling jobs.
 :::
 :::{grid-item-card} {ref}`slurm-running-jobs`
-This page provides advanced usage and explanation of `srun` and `sbatch` for running jobs.
+Advanced usage and explanation of `srun` and `sbatch` for running jobs.
 :::
 :::{grid-item-card} {ref}`slurm-monitoring-and-managing`
-This page provides advanced usage and explanation of `squeue`, `scontrol`, and `sinfo` for monitoring jobs.
+Advanced usage and explanation of `squeue`, `scontrol`, and `sinfo` for monitoring jobs.
 :::
 :::{grid-item-card} {ref}`slurm-arrays`
-This page provides an introduction and use cases for slurm job arrays for launching a large series of jobs.
+An introduction and use cases for Slurm job arrays for launching a large series of jobs.
 :::
 ::::
