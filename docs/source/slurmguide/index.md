@@ -16,7 +16,7 @@ Slurm (Simple Linux Utility for Resource Management) is an open-source, highly c
 Slurm is designed to accommodate the complex needs of large-scale computational workloads. It can efficiently distribute and manage tasks across clusters comprising thousands of nodes, offering seamless control over resources, scheduling, and job queuing.
 It is the software on the HPC that provides functionalities such as {ref}`slurm-arrays`, {ref}`slurm-monitoring-and-managing`, and check the {ref}`cluster-and-node-states`.
 
-::::{grid} 4
+::::{grid} 3
 :::{grid-item-card} {ref}`slurm-commands`
 This page provides the basic slurm commands used for running, monitoring, and canceling jobs.
 :::
