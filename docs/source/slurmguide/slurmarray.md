@@ -31,7 +31,7 @@ taskId = sys.getenv('SLURM_ARRAY_TASK_ID')
 ::::
 
 ## Resource Allotment in Job Arrays 
-When submitting an array and setting its size with many dimensions, please use the `%` symbol to indicate how many jobs run simultaneously. Whenever you specify the memory, number of nodes, number of CPUs, or other specifications, they will be applied to each job for the array. For example, the following code specifies an array of 600 jobs, with 20 running at a time:
+When submitting an array and setting its size with many dimensions, please use the `%` symbol to indicate how many jobs run simultaneously. When you specify the memory, number of nodes, number of CPUs, or other specifications, they will be applied to each job for the array. For example, the following code specifies an array of 600 jobs, with 20 jobs running at a time:
 
 :::{code}
 #!/bin/bash
