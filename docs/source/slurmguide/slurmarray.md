@@ -68,4 +68,4 @@ You can launch job arrays from the sbatch submission on the command line as foll
 sbatch --array=<indexes> [options] script_file
 :::
 
-Indexes can be listed as `1-5` (i.e., one to five), `=1,2,3,5,8,13` (i.e., each index listed), or `1-200%5` (i.e., produce a 200 task job array with only 5 tasks active at any given time).
+Indexes can be listed as `1-5`, `=1,2,3,5,8,13` (i.e., each index listed), or `1-200%5` (i.e., produce a 200 task job array with only 5 tasks active at any given time).
