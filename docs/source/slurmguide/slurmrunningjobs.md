@@ -13,7 +13,7 @@ To start an `srun` session, the following syntex is used from the login node:
 srun [options] [command]
 :::
 
-As an example of an `srun` job running on 1 node, with 1 tasks:
+The following is an example of an `srun` job running on 1 node, with 1 task:
 
 :::{code} bash
 srun -N 1 -n 1 -p short --pty bash
