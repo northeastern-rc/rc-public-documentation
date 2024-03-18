@@ -1,7 +1,7 @@
 (slurm-monitoring-and-managing)=
 # Monitoring and Managing Jobs
 
-This section will explain the basics of checking the status of the cluster, checking for the details on the compute nodes, and checking on the running jobs you have on the cluster.
+You can use Slurm commands to check the status of the cluster, check details on the compute nodes, and check on the running jobs you have on the cluster. 
 
 (cluster-and-node-states)=
 ## Cluster and Node States
