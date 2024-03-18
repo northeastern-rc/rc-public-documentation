@@ -1,5 +1,5 @@
 (slurm-arrays)=
-# Slurm Array Jobs
+# Slurm Jobs Array
 
 Job arrays are a convenient way to submit and manage large numbers of similar jobs quickly. Job arrays are particularly useful when running similar jobs, such as performing the same analysis with different inputs or parameters.
 
