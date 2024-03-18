@@ -18,7 +18,7 @@ You can also use Slurm on the Discovery cluster for functionalities such as {ref
 
 ::::{grid} 3
 :::{grid-item-card} {ref}`slurm-commands`
-Basic Slurm commands used for running, monitoring, and canceling jobs.
+Basic Slurm commands that are used for running, monitoring, and canceling jobs.
 :::
 :::{grid-item-card} {ref}`slurm-running-jobs`
 Advanced usage and explanation of `srun` and `sbatch` for running jobs.
