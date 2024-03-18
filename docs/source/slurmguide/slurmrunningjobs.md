@@ -5,7 +5,7 @@ You have two options when running tasks, run interactively via {ref}`using-srun`
 
 (using-srun)=
 ## Interactive Jobs: `srun` Command
-The `srun` command is used to submit an interactive job which runs in a shell terminal. This method is useful when you want to test a short computation or run an interactive session like a shell, Python, or an R terminal.
+The `srun` command is used to submit an interactive job, which runs in a shell terminal. This method is useful when you want to test a short computation or run an interactive session like a shell, Python, or an R terminal.
 
 To start an `srun` session, the following syntex is used from the login node:
 
