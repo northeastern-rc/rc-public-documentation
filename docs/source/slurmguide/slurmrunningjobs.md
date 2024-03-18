@@ -55,7 +55,7 @@ srun --partition=gpu --nodes=1 --ntasks=1 --gres=gpu:1 --mem=2Gb --time=01:00:00
 
 (using-sbatch)=
 ## Batch Jobs: `sbatch` Command
-The `sbatch` command is used to submit a job script for passive execution. The script includes the `SBATCH` directives that control the job parameters like the number of nodes, CPUs per task, job name, etc. To submit the batch jobs, the following is run from the login node:
+The `sbatch` command is used to submit a job script for passive execution. The script includes the `SBATCH` directives that control the job parameters (e.g., number of nodes, CPUs per task, job name). To submit the batch jobs, the following is run from the login node:
 
 :::{code} bash
 sbatch [options]  <script_file>
