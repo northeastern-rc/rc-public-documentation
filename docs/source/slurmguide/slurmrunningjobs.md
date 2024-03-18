@@ -25,7 +25,7 @@ srun -N 1 -n 1 -p short --pty bash
 
 To see all options for `srun`, please refer to [srun manual] from Schedmd.
 
-### Examples using `srun`
+### Examples Using `srun`
 
 You should review the {ref}`hardware-overview` and {ref}`partition-names` pages to be familiar with the available hardware and partition limits on Discovery. This way, you can tailor the request to fit both the needs of the job and the limits of partitions. 
 
