@@ -27,7 +27,7 @@ To see all options for `srun`, please refer to [srun manual] from Schedmd.
 
 ### Examples Using `srun`
 
-You should review the {ref}`hardware-overview` and {ref}`partition-names` pages to be familiar with the available hardware and partition limits on Discovery. This way, you can tailor the request to fit both the needs of the job and the limits of partitions. 
+You can tailor your request to fit both the needs of the job and the partition limits if you're familiar with the available hardware and partitions on Discovery. 
 
 To request one node and one task for 30 minutes with X11 forwarding on the short partition, type:
 
