@@ -46,7 +46,7 @@ When submitting an array and setting its size with many dimensions, please use t
 
 Slurm will submit 20 jobs to run simultaneously with each job, represented by a task ID, using the allocated resources for the submission of 2 nodes and 128 GB of RAM.
 
-Lastly, we usually use job arrays for parallel jobs. If your case is such that the job executed at each job ID does not use any multi-threading libraries (serial programs), you can use the following header (1 core per job) to avoid wasting resources:
+Job arrays are used for embarrassingly parallel jobs. If your job executed at each job ID does not use any multi-threading libraries, you can use the following header to avoid wasting resources:
 
 :::{code} bash
 #!/bin/bash
