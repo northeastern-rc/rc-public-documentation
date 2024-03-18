@@ -5,7 +5,7 @@ Job arrays are a convenient way to submit and manage large numbers of similar jo
 
 There are several ways to define job arrays, such as specifying the range of indices or providing a list of indices in a file. Slurm also offers various features to manage and track job arrays, such as options to simultaneously suspend, resume, or cancel all jobs in the array.
 
-:::{warning}
+:::{note}
 50 is the maximum number of jobs allowed to be run at once per user-account.
 :::
 
