@@ -13,7 +13,7 @@ slurmarray
 
 Slurm (Simple Linux Utility for Resource Management) is an open-source, highly configurable, fault-tolerant, and adaptable workload manager, used extensively in High Performance Computing (HPC) environments.
 
-Slurm is designed to accommodate the complex needs of large-scale computational workloads. It can efficiently distribute and manage tasks across clusters comprising thousands of nodes, offering seamless control over resources, scheduling, and job queuing.
+Slurm is designed to accommodate the complex needs of large-scale computational workloads by efficiently distributing and managing tasks across clusters comprising thousands of nodes, offering seamless control over resources, scheduling, and job queuing.
 It is the software on the HPC that provides functionalities such as {ref}`slurm-arrays`, {ref}`slurm-monitoring-and-managing`, and check the {ref}`cluster-and-node-states`.
 
 ::::{grid} 3
