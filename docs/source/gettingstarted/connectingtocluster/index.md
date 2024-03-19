@@ -8,7 +8,7 @@ Windows <windows>
 Linux <linux>
 ```
 
-The following sections on this page will guide you on how to connect to the cluster using the command line access using the terminal and the web interface of Open OnDemand. Guides are provided if your personal computer is running Windows, macOS, or Linux.
+The following sections on this page will guide you on how to connect to the cluster using command-line access using the terminal and the web interface of Open OnDemand. Guides are provided if your personal computer is running Windows, macOS, or Linux.
 
 
 ## Using the Terminal
