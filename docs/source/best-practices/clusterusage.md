@@ -17,7 +17,7 @@ Performing CPU-intensive activities on the login nodes is detrimental to the per
 Conversely, if you allocate CPU or GPU resources through a slurm job, it is important to use them or end your job, as other users may be waiting for the resources to be freed.
 
 :::{important}
-There are bots monitoring the usage of the login nodes and compute nodes that identify inappropriate resource usage, alerting both RC and the user in question.
+There are bots monitoring the usage of the login nodes and compute nodes that identify inappropriate resource usage, alerting both RC and the user in question via email.
 :::
 
 ## Transferring Data
