@@ -4,10 +4,7 @@
 You can use Slurm commands to check the status of the cluster, check details on the compute nodes, and check on the running jobs you have on the cluster. 
 
 (cluster-and-node-states)=
-## Cluster and Node States
-Below are some examples of using `sinfo` and `scontrol` to provide information about the state of the cluster and information about specific nodes.
-
-### Using `sinfo`
+## Query Partitions: `sinfo`
 The `sinfo` command will show information about all partitions in the cluster, including the partition name, available nodes, and status. To view information about a specific partition (e.g., `short`, `gpu`, `long`):
 
 :::{code} bash
@@ -34,26 +31,10 @@ You can use the `--Format` flag to get more information or a specific format for
 sinfo -p <partition> -t idle --Format=gres,nodes
 :::
 
-### Using `scontrol`
-The `scontrol` command provides a way to check the status of jobs and properties of nodes.
-
-You can monitor your jobs by using the Slurm `scontrol` command. Type `scontrol show jobid -d <JOBID>`, where `JOBID` is the number of your job:
-
-:::{code} bash
-scontrol show jobid -d <JOBID>
-:::
-
-You can view information about a specific node:
-
-:::{code} bash
-scontrol show node -d <node_name>
-:::
+For more information about sinfo, please review the [sinfo manual].
 
 (job-management)=
-## Job Management
-This section will cover the commands you can use to check on the jobs you have running on the cluster as well as the commands to cancel your jobs. 
-
-### Monitoring Jobs
+## Monitoring Jobs: `squeue`
 The `squeue` command allows you to monitor the state of jobs in the queue. It provides information such as the job ID, the partition it is running on, and the job name.
 
 To monitor all jobs of a specific user, use the following command:
@@ -62,7 +43,9 @@ To monitor all jobs of a specific user, use the following command:
 squeue -u <username>
 :::
 
-### Canceling Jobs: `scancel`
+For more information about squeue, please review the [squeue manual].
+
+## Canceling Jobs: `scancel`
 The `scancel` command is used to cancel a running or pending job.
 
 To cancel a specific job, use:
@@ -76,3 +59,9 @@ To cancel all jobs of a specific user:
 :::{code} bash
 scancel -u <username>
 :::
+
+For more information about scancel, please review the [scancel manual].
+
+[scancel manual]: https://slurm.schedmd.com/scancel.html
+[sinfo manual]: https://slurm.schedmd.com/sinfo.html
+[squeue manual]: https://slurm.schedmd.com/squeue.html

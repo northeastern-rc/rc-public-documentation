@@ -24,7 +24,7 @@ Basic Slurm commands that are used for running, monitoring, and canceling jobs.
 Advanced usage and explanation of `srun` and `sbatch` for running jobs.
 :::
 :::{grid-item-card} {ref}`slurm-monitoring-and-managing`
-Learn the advanced usage and explanation of `squeue`, `scontrol`, and `sinfo` for monitoring jobs.
+Learn the advanced usage and explanation of `squeue`, `scancel`, and `sinfo` for monitoring jobs.
 :::
 :::{grid-item-card} {ref}`slurm-arrays`
 An introduction and use cases for Slurm job arrays for launching a large series of jobs.
