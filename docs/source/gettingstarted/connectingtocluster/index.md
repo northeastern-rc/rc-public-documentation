@@ -5,38 +5,51 @@
 
 Mac <mac>
 Windows <windows>
+Linux <linux>
 ```
 
-The following sections on this page will guide you in how to connect to the cluster using the command line access using the terminal and the web interface of Open OnDemand. Guides are provided for if your personal computer is running Windows or macOS.
+The following sections on this page will guide you on how to connect to the cluster using command-line access using the terminal and the web interface of Open OnDemand. Guides are provided if your personal computer is running Windows, macOS, or Linux.
 
 
 ## Using the Terminal
 You connect to the HPC using a [secure shell] program to initiate an SSH session to
 sign in to the HPC.
 
-::::{grid} 2
-:::{grid-item-card} {ref}`connecting-on-mac`
-To access GUIs from the terminal.
+::::{grid} 3
+:gutter: 1 1 1 2
+
+:::{grid-item-card} {octicon}`repo-forked;1.5em;screen-full` Connecting with Mac
+:link: mac
+:link-type: doc
+
+Using the Terminal to connect to Discovery.
+
++++
+[Learn more »](mac)
 :::
-:::{grid-item-card} {ref}`connecting-on-windows`
-To access GUIS from the command-line.
+
+:::{grid-item-card} {octicon}`versions;1.5em;sd-mr-1` Connecting with Windows
+:link: windows
+:link-type: doc
+
+Using MobaXTerm to connect to Discvoery.
+
++++
+[Learn more »](windows)
+:::
+
+:::{grid-item-card} {octicon}`workflow;1.5em;screen-full` Connecting with Linux
+:link: linux
+:link-type: doc
+
+Using the Terminal to connect to Discovery.
+
++++
+[Learn more »](linux)
 :::
 ::::
 
 ## Using Open OnDemand
-To learn more about connecting to the cluster using Open OnDemand, please see our dedicated pages on utilizing Open OnDemand starting with {ref}`using-ood`.
-
-(using-x11)=
-## Using X11
-When you launch a software application that uses a graphical user interface (GUI) from the command line, this is completed through X11 forwarding.
-
-::::{grid} 2
-:::{grid-item-card} {ref}`x11-mac`
-To access GUIs from the terminal.
-:::
-:::{grid-item-card} {ref}`x11-windows`
-To access GUIS from the command-line.
-:::
-::::
+To learn more about connecting to the cluster using Open OnDemand, please see our dedicated pages on utilizing Open OnDemand, starting with {ref}`using-ood`.
 
 [secure shell]: https://www.ssh.com/ssh/protocol/

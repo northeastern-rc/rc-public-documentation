@@ -15,12 +15,28 @@ whereas with other SSH programs, you would need a separate file transfer program
 
 You are now connected to the cluster's login node.
 
-Watch this video to see how to connect to the cluster with MobaXterm. If you do not see any controls on the video, right-click on the video to see viewing options.
+(passwordless-ssh-windows)=
+## Passwordless SSH On Windows Using MobaXterm
+You must set up passwordless ssh to ensure that GUI-based applications launch without issues. Please make sure that your keys are added to the authorized.key file in your `~/.ssh` directory. This needs to be done anytime you regenerate your SSH keys. If you are having an issue opening an application that needs X11 forwarding, such as MATLAB or Schrodinger, and you recently regenerated your keys, make sure to add your keys to the authorized.key file.
 
-<video width="720" height="480" controls>
-  <source src="../../_static/video/windows_moba_connect.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+1. Sign in to the cluster using MobaXterm.
+1. Type `cd ~/.ssh` to move to your ssh folder.
+1. Type `ssh-keygen -t rsa` to generate your key files.
+1. Press `Enter` on all the prompts (do not generate a passphrase). If prompted to overwrite a file, type `Y`.
+1. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in `~/.ssh/authorized_keys`.
+
+:::{note}
+Errors that you can see on Windows when launching a GUI-based program include the following:
+
+> `Error: unable to open display localhost:19.0`
+>
+> `Launch failed: non-zero return code`
+
+If you are getting these types of errors, it could be because of the following reasons:
+
+1. You still need to set up passwordless SSH. If so, you can follow the steps below to set up passwordless SSH.
+1. When requesting a compute node from the login node, you may have forgotten to include the `--x11` option. Please see this example [srun](https://rc-docs.northeastern.edu/en/latest/using-discovery/srun.html?highlight=X11#srun-examples) command.
+:::
 
 (x11-windows)=
 ## X11 on Windows

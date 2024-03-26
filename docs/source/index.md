@@ -82,9 +82,7 @@ Research Computing <welcome/index>
 
 ```{toctree}
 :hidden:
-
 Getting Started <gettingstarted/index>
-first_steps/index
 ```
 
 
