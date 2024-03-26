@@ -7,9 +7,10 @@
 homequota
 checkpointing
 shell_environment
+clusterusage
 ```
 
-Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your home directory storage, checkpointing jobs, optimizing performance, and software best practices.
+Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your home directory storage, checkpointing jobs, and cluster usage.
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
@@ -43,6 +44,17 @@ Best practices for using the shell environment on Discovery.
 +++
 [Learn more »](shell_environment)
 :::
+
+:::{grid-item-card} {octicon}`hubot;1.5em;sd-mr-1` Cluster Usage
+:link: clusterusage
+:link-type: doc
+
+Guidelines about where tasks should be performed and the bots that monitor them.
+
++++
+[Learn more »](clusterusage)
+:::
+
 ::::
 
 ---
