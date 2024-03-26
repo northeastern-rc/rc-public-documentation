@@ -19,12 +19,26 @@ You should keep XQuartz running in the background. If you close and restart XQua
 
 You are now connected to Discovery at a login node.
 
-Watch this video of how to connect to Discovery on a Mac. If you do not see any controls on the video, right-click on the video to see viewing options.
+(passwordless-ssh-mac)=
+## Passwordless SSH On A Mac
+You must set up passwordless ssh to ensure that GUI-based applications launch without issues. Please make sure that your keys are added to the authorized.key file in your `~/.ssh` directory. This needs to be done anytime you regenerate your SSH keys. If you are having an issue opening an application that needs X11 forwarding, such as MATLAB or Schrodinger, and you recently regenerated your keys, make sure to add your keys to the authorized.key file.
 
-<video width="720" height="480" controls>
-  <source src="../../_static/video/connect_mac_terminal.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+:::{note}
+Ensure you’re on your local computer for steps 1 through 4—type `exit` to return to your local computer if connected to the cluster.
+:::
+
+1. On a Mac, open the Terminal application and type `cd ~/.ssh`. This moves you to the ssh folder on your local computer.
+1. Type `ssh-keygen -t rsa` to generate two files, `id_rsa` and `id_rsa.pub`.
+1. Press `Enter` on all the prompts (do not generate a passphrase).
+1. Type `ssh-copy-id -i ~/.ssh/id_rsa.pub <yourusername>@login.discovery.neu.edu` to copy `id_rsa.pub` to your `/home/.ssh` folder on Discovery. You can enter your NU password if prompted. This copies the token from `id_rsa.pub` file to the `authorized_keys` file, which will either be generated or appended if it already exists.
+1. Connect to Discovery via `ssh <yourusername>@login.discovery.neu.edu`. You should now be connected without having to enter your password.
+
+**Now on the cluster,**
+
+1. Type `cd ~/.ssh` to move to your ssh folder.
+1. Type `ssh-keygen -t rsa` to generate your key files.
+1. Press Enter on all the prompts (do not generate a passphrase). If prompted to overwrite a file, type `Y`.
+1. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in the `~/.ssh/authorized_keys` file.
 
 (x11-mac)=
 ## X11 on Mac OS
