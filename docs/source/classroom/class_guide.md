@@ -18,12 +18,13 @@ Once access is provided, each course will have a course-specific directory under
 /courses/
 └── BINF6430.202410/
     ├── data/
+    ├── shared/
     ├── staff/
     └── students/
 
 :::
 
-The sub-directory `staff/` will be populated with a folder for each of the following: instructors, co-instructors, and TAs. The `students/` sub-directory contains a folder for each student. And the `data/` sub-directory can be populated by those in staff but is read-only for students. Students only have permission to read into their own directories under `students/` and cannot view into another students space. 
+The sub-directory `staff/` will be populated with a folder for each of the following: instructors, co-instructors, and TAs. The `students/` sub-directory contains a folder for each student. And the `data/` and `shared/` sub-directories can be populated by those in staff but is read-only for students. Students only have permission to read into their own directories under `students/` and cannot view into another students space. 
 
 All those in staff have read-write-execute permissions within the entirety of their courses directory, allowing them to store data, homework assignments, build conda environments, create new directories, etc, as they see fit.
 
