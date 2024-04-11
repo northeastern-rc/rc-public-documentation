@@ -16,13 +16,13 @@ Following are the basic steps for contributing to the RC documentation.
 
 2. Use the following command:
 
-```
+```bash
 git clone https://github.com/northeastern-rc/rc-public-documentation.git0
 ```
 
  This should result in an output similar to following:
 
-```
+```bash
 Cloning into 'rc-public-documentation'...
 remote: Enumerating objects: 9694, done.
 remote: Counting objects: 100% (2891/2891), done.
@@ -34,27 +34,27 @@ Resolving deltas: 100% (6479/6479), done.`
 
 3. If we already have the documentation project on our computer, we run the following commands in the terminal.
 
-```
+```bash
 git checkout master
 git pull
 ```
 
 This should bring the local copy of the project to the same state as the remote copy (master). We should get a message similar to the following
 
-```
+```bash
 Already on 'master'
 Your branch is up to date with 'origin/master'.
 ```
 
 or
 
-```
+```bash
 Already up to date.
 ```
 
 4. Now, to do our work, we’ll create a new branch from master and switch to this new branch, using the following command:
 
-```
+```bash
 git checkout -b new-branch-name
 ```
 
@@ -62,7 +62,7 @@ We can replace the `new-branch-name` with any appropriate name.
 
 5. We can use the command `git branch` to check if we are on the branch that we just created, which we should be working on, which should result in the following, (with the `*` next to the name of the branch we are working on)
 
-```
+```bash
 *new-branch-name
 master
 ```
@@ -71,7 +71,7 @@ master
 
 7. Once done with the change, use the following commands to add and commit the changes, with a relevant commit message.
 
-```
+```bash
 git add .
 git commit -m “This is the commit message”`
 ```
@@ -82,11 +82,11 @@ git commit -m “This is the commit message”`
 
 9. Now, the changes are ready to be pushed to remote. To push, use the following command:
 
-```
+```bash
 git push
 ```
 
-9. The above command should create a pull request (PR) on Github. Add reviewers to your PR for reviewing the changes. Once the review is complete someone can merge the PR, completing the process.
+10. The above command should create a pull request (PR) on Github. Add reviewers to your PR for reviewing the changes. Once the review is complete someone can merge the PR, completing the process.
 
 ## Advanced Development
 
