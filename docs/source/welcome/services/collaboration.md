@@ -2,7 +2,7 @@
 
 # Collaboration
 
-The team at RC @ NU is composed of full-time PhD scientists and domain experts whose expertise spans diverse fields (e.g., Machine Learning, Data Analytics, Molecular Dynamics, Bioinformatics, and Big Data). We are eagerly open to collaboration with researchers in multiple phases of their research, including:
+The Research Computing team is composed of full-time PhD scientists and domain experts whose expertise spans diverse fields (e.g., Big Data, Bioinformatics, Data Analytics, Machine Learning, and Molecular Dynamics).The team is eagerly open to collaboration with researchers in multiple phases of their research, including:
 
 - Container building/development
 - Course Development
