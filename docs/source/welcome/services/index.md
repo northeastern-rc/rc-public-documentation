@@ -50,7 +50,7 @@ RC provides a wide variety of free training sessions.
 :link: ../services/collaboration
 :link-type: doc
 
-We look forward to collaborations with researchers.
+Collaborate with RC on your research.
 +++
 [Learn more »](../services/collaboration)
 :::
