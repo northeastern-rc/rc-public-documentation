@@ -22,7 +22,7 @@ We offer several storage solutions for active and archival use.
 [Learn more »](../../datamanagement/discovery_storage)
 :::
 
-:::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` Classroom
+:::{grid-item-card} {octicon}`mortar-board;1.5em;sd-mr-1` Courses
 :link: ../../classroom/class_use
 :link-type: doc
 
