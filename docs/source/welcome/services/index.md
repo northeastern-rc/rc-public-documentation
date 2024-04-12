@@ -57,7 +57,7 @@ Collaborate with RC on your research.
 ::::
 
 
-If you feel your research has benefited from support from RC @ NU or want to acknowledge the cluster please use one of the statements below:
+If your research has benefited from support from the RC team, or you want to acknowledge the cluster, please use one of the statements below:
 
 *This work was completed in part using the Discovery cluster, supported by Northeastern University’s Research Computing team.*
 
