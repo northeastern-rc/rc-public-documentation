@@ -4,7 +4,7 @@
 
 The RC Team provides free online training sessions for cluster users and Northeastern students interested in learning more.
 
-If you’re new to Discovery or HPC, we strongly recommend watching the [Discovery Introduction Video](https://www.linkedin.com/checkpoint/enterprise/login/74653650?pathWildcard=74653650&application=learning&redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fcontent%2F1139340%3Fu%3D74653650).  You’ll need to sign in using your Northeastern username and password to view the video.
+If you’re new to Discovery or HPC, we strongly recommend watching the [Discovery Introduction Video](https://www.linkedin.com/checkpoint/enterprise/login/74653650?pathWildcard=74653650&application=learning&redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fcontent%2F1139340%3Fu%3D74653650). You’ll need to sign in using your Northeastern username and password to view the video.
 
 Recorded RC training sessions have been added to the [Research Computing Training Course in Canvas](https://northeastern.instructure.com/enroll/LNNCHN). Once you’ve clicked the link to enroll, you must log in using your Northeastern credentials.
 
