@@ -102,3 +102,8 @@ tutorialsandtraining/index
 miscellaneous/annual-shutdown
 glossary
 ```
+
+```{toctree}
+:hidden:
+Goto Northeastern RC website <https://rc.northeastern.edu/>
+```
