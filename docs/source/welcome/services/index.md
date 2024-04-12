@@ -8,7 +8,7 @@
 :link: ../../hardware/hardware_overview
 :link-type: doc
 
-An overview of our computational resources.
+An overview of available computational resources.
 +++
 [Learn more »](../../hardware/hardware_overview)
 :::
