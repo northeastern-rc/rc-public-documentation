@@ -42,7 +42,7 @@ One-on-one support as you access the cluster.
 :link: ../services/training
 :link-type: doc
 
-A wide variety of free training sessions.
+RC provides a wide variety of free training sessions.
 +++
 [Learn more »](../services/training)
 :::
