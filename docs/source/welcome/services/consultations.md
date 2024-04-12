@@ -6,4 +6,3 @@ You can schedule a consultation with RC to receive personal, one-on-one assistan
 
 RC offers online consultations, by appointment, on weekdays during regular business hours (9 a.m. to 5 p.m. ET). Use RC's [Bookings page](https://rc.northeastern.edu/support/consulting/) to view availability and schedule your consultation. You must sign in using your **@northeastern.edu** email address (for example, **[a.student@northeastern.edu](mailto:a.student@northeastern.edu)**). Please note, consultations are not available during Northeastern University holidays.
 
-Use our [Bookings page](https://rc.northeastern.edu/support/consulting/) to view our availability and schedule an appointment. You must sign in using your **@northeastern.edu** email address (for example, **[a.student@northeastern.edu](mailto:a.student@northeastern.edu)**).
