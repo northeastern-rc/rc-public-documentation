@@ -15,4 +15,4 @@ The team at RC @ NU is composed of full-time PhD scientists and domain experts w
 - Reproducibility
 - Statistical modeling
 
-Please reach out via a consultation or by emailing rchelp@northeastern.edu if you're interested in any of the above (or more) services.
+Please schedule a consultation or email rchelp@northeastern.edu if you're interested in any of the above (or more) services.
