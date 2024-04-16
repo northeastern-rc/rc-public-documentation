@@ -99,7 +99,7 @@ header-rows: 1
   - 25/250
   - 50/100
   - 1
-  - 8
+  - 4
   - For jobs that can run on a single GPU processor.
 * - `multigpu`
   - **Yes**
@@ -107,7 +107,7 @@ header-rows: 1
   - 25/100
   - 50/100
   - 12
-  - 12
+  - 8
   - For jobs that require more than one GPU and take up to 24 hours to run.
 :::
 
