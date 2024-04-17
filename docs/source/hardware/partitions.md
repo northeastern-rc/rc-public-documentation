@@ -81,9 +81,11 @@ header-rows: 1
 ---
 
 :::{list-table}
-widths: 20 20 20 20 30 20 20 30
-header-rows: 1
 
+widths: 20 20 20 20 30 20 20 30
+---
+header-rows: 1
+---
 * - Name
   - Requires approval?
   - Time limit (default/max)
