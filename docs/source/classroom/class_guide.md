@@ -54,7 +54,7 @@ header-rows: 1
   - 256 GB
 * - courses-gpu
   - 4 hr / 8 hrs
-  - 4
+  - 2
   - 12 GB
 ::::
 
