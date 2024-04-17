@@ -39,20 +39,21 @@ Please see our page on {ref}`getting-access` if you would like an account that p
 We have two partitions dedicated to the use of students and instructors for the duration of their course.
 
 ::::{list-table}
+---
 header-rows: 1
-
-- Name
-- Time Limit (default/max)
-- Running Jobs (max)
-- RAM Limit
-- courses
-- 4 hrs / 24 hrs
-- 50
-- 256 GB
-- courses-gpu
-- 4 hrs / 8 hrs
-- 2
-- 12 GB
+---
+* - Name
+  - Time Limit (default/max)
+  - Running Jobs (max)
+  - RAM Limit
+* - courses
+  - 4 hrs / 24 hrs
+  - 50
+  - 256 GB
+* - courses-gpu
+  - 4 hrs / 8 hrs
+  - 2
+  - 12 GB
 ::::
 
 The resources available in the courses/courses-gpu partitions can be queried with the command `sinfo` as run in the command line. We manage the resourses in courses/courses-gpu each term in response to the number of courses and requested usage per course.
