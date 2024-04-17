@@ -25,90 +25,89 @@ It is possible for you to see the message below in the output of `squeue -u $USE
 :::
 
 :::{list-table}
----
+
 header-rows: 1
----
-* - Name
-  - Requires approval?
-  - Time limit (default/max)
-  - Running jobs
-  - Submitted jobs
-  - Core limit (per user)
-  - RAM limit
-  - Use Case
-* - debug
-  - No
-  - 20 minutes/20 minutes
-  - 10/25
-  - 5000
-  - 128
-  - 256GB
-  - Best for serial and parallel jobs that can run under 20 minutes. Good for testing code.
-* - express
-  - No
-  - 30 minutes/60 minutes
-  - 50/250
-  - 5000
-  - 2048
-  - 25TB
-  - Best for serial and parallel jobs that can run under 60 minutes.
-* - short
-  - No
-  - 4 hours/24 Hours
-  - 50/500
-  - 5000
-  - 1024
-  - 25TB
-  - Best for serial or small parallel jobs (``--nodes=2`` max) that need to run for up to 24 hours.
-* - long
-  - **Yes**
-  - 1 day/5 Days
-  - 25/250
-  - 1000 per user/5000 per group
-  - 1024
-  - 25TB
-  - Primarily for serial or parallel jobs that need to run for more than 24 hours. Need to prove that your code cannot checkpoint to use this partition.
-* - large
-  - **Yes**
-  - 6 hours/6 Hours
-  - 100/100
-  - 1000 per user/5000 per group
-  - N/A
-  - N/A
-  - Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.
+
+- Name
+- Requires approval?
+- Time limit (default/max)
+- Running jobs
+- Submitted jobs
+- Core limit (per user)
+- RAM limit
+- Use Case
+- debug
+- No
+- 20 minutes/20 minutes
+- 10/25
+- 5000
+- 128
+- 256GB
+- Best for serial and parallel jobs that can run under 20 minutes. Good for testing code.
+- express
+- No
+- 30 minutes/60 minutes
+- 50/250
+- 5000
+- 2048
+- 25TB
+- Best for serial and parallel jobs that can run under 60 minutes.
+- short
+- No
+- 4 hours/24 Hours
+- 50/500
+- 5000
+- 1024
+- 25TB
+- Best for serial or small parallel jobs (``--nodes=2`` max) that need to run for up to 24 hours.
+- long
+- **Yes**
+- 1 day/5 Days
+- 25/250
+- 1000 per user/5000 per group
+- 1024
+- 25TB
+- Primarily for serial or parallel jobs that need to run for more than 24 hours. Need to prove that your code cannot checkpoint to use this partition.
+- large
+- **Yes**
+- 6 hours/6 Hours
+- 100/100
+- 1000 per user/5000 per group
+- N/A
+- N/A
+- Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.
 :::
 
 ---
 
 :::{list-table}
----
 widths: 20 20 20 20 30 20 20 30
 header-rows: 1
----
-* - Name
-  - Requires approval?
-  - Time limit (default/max)
-  - Running jobs
-  - Submitted jobs
-  - GPU limit
-  - GPU limit
-  - Use Case
-* - `gpu`
-  - No
-  - 4 hours/8 Hours
-  - 25/250
-  - 50/100
-  - 1
-  - 4
-  - For jobs that can run on a single GPU processor.
-* - `multigpu`
-  - **Yes**
-  - 4 hours/24 Hours
-  - 25/100
-  - 50/100
-  - 12
-  - 8
-  - For jobs that require more than one GPU and take up to 24 hours to run.
+
+- Name
+- Requires approval?
+- Time limit (default/max)
+- Running jobs
+- Submitted jobs
+- GPU limit
+- GPU limit
+- Use Case
+- `gpu`
+- No
+- 4 hours/8 Hours
+- 25/250
+- 50/100
+- 1
+- 4
+- For jobs that can run on a single GPU processor.
+- `multigpu`
+- **Yes**
+- 4 hours/24 Hours
+- 25/100
+- 50/100
+- 12
+- 8
+- For jobs that require more than one GPU and take up to 24 hours to run.
 :::
 
 ## Viewing partition information

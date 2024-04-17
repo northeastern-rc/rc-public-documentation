@@ -41,18 +41,18 @@ We have two partitions dedicated to the use of students and instructors for the 
 ::::{list-table}
 header-rows: 1
 
-* Name
-* Time Limit (default/max)
-* Running Jobs (max)
-* RAM Limit
-* courses
-* 4 hrs / 24 hrs
-* 50
-* 256 GB
-* courses-gpu
-* 4 hrs / 8 hrs
-* 2
-* 12 GB
+- Name
+- Time Limit (default/max)
+- Running Jobs (max)
+- RAM Limit
+- courses
+- 4 hrs / 24 hrs
+- 50
+- 256 GB
+- courses-gpu
+- 4 hrs / 8 hrs
+- 2
+- 12 GB
 ::::
 
 
@@ -100,7 +100,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 #SBATCH --mail-type=ALL  
 #SBATCH --mail-users=username@northeastern.edu  
 
-# commands to execute  
+# commands to execute for gpu
 
 :::
 ::::
