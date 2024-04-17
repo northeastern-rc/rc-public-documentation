@@ -49,11 +49,11 @@ header-rows: 1
   - Running Jobs (max)
   - RAM Limit
 * - courses
-  - 4 hr / 24 hrs
+  - 4 hrs / 24 hrs
   - 50
   - 256 GB
 * - courses-gpu
-  - 4 hr / 8 hrs
+  - 4 hrs / 8 hrs
   - 2
   - 12 GB
 ::::
