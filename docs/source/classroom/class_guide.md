@@ -38,24 +38,21 @@ Please see our page on {ref}`getting-access` if you would like an account that p
 
 We have two partitions dedicated to the use of students and instructors for the duration of their course.
 
-
-
 ::::{list-table}
----
 header-rows: 1
----
-* - Name
-  - Time Limit (default/max)
-  - Running Jobs (max)
-  - RAM Limit
-* - courses
-  - 4 hrs / 24 hrs
-  - 50
-  - 256 GB
-* - courses-gpu
-  - 4 hrs / 8 hrs
-  - 2
-  - 12 GB
+
+* Name
+* Time Limit (default/max)
+* Running Jobs (max)
+* RAM Limit
+* courses
+* 4 hrs / 24 hrs
+* 50
+* 256 GB
+* courses-gpu
+* 4 hrs / 8 hrs
+* 2
+* 12 GB
 ::::
 
 
@@ -85,11 +82,10 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 #SBATCH --mail-type=ALL  
 #SBATCH --mail-users=username@northeastern.edu  
 
-#commands to execute  
+# commands to execute  
 
 :::
 ::::
-
 
 ::::{dropdown} courses-gpu partition
 :::{code-block}bash
@@ -104,16 +100,16 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 #SBATCH --mail-type=ALL  
 #SBATCH --mail-users=username@northeastern.edu  
 
-#commands to execute  
+# commands to execute  
 
 :::
 ::::
 
 (srun-courses-index)=
+
 ### srun interactive session
 
 An interactive session can be run on the command line via the `srun` command as shown in the examples below. See {ref}`slurm-running-jobs` for more information on using `srun` or run `man srun` to see additinal parameters that can be set with `srun`.
-
 
 ::::{dropdown} courses partition
 :::{code-block} bash
@@ -128,6 +124,7 @@ srun --time=4:00:00 --job-name=MyJob --partition=courses-gpu --gres=gpu:1 --pty 
 ::::
 
 (OOD-courses-index)=
+
 ### Open OnDemand
 
 We have several widely-used applications available on the Open OnDemand (OOD) website including, Jupyterlab Notebook, Rstudio, Matlab, GaussView and more. {ref}`access-ood`
@@ -157,6 +154,7 @@ scancel jobid
 
 :::{note} A cluster is a collection of shared resources. We highly recommend canceling any jobs that are still running in an interactive session (on the OOD or via srun) when you have completed your work. This frees up the resources for other classmates and instructors.
 :::
+
 ## Software Applications
 
 All courses have access to the [command line](https://rc-docs.northeastern.edu/en/latest/first_steps/usingbash.html#command-line).
