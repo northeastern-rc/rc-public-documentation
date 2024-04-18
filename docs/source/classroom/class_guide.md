@@ -24,7 +24,7 @@ Once access is provided, each course will have a course-specific directory under
 
 :::
 
-The sub-directory `staff/` will be populated with a folder for each of the following: instructors, co-instructors, and TAs. The `students/` sub-directory contains a folder for each student. And the `data/` and `shared/` sub-directories can be populated by those in staff but is read-only for students. Students only have permission to read into their own directories under `students/` and cannot view into another students space. 
+The sub-directory `staff/` will be populated with a folder for each of the following: instructors, co-instructors, and TAs. The `students/` sub-directory contains a folder for each student. And the `data/` and `shared/` sub-directories can be populated by those in staff but is read-only for students. Students only have permission to read into their own directories under `students/` and cannot view into another students space.
 
 All those in staff have read-write-execute permissions within the entirety of their courses directory, allowing them to store data, homework assignments, build conda environments, create new directories, etc, as they see fit.
 
@@ -38,8 +38,6 @@ Please see our page on {ref}`getting-access` if you would like an account that p
 
 We have two partitions dedicated to the use of students and instructors for the duration of their course.
 
-
-
 ::::{list-table}
 ---
 header-rows: 1
@@ -49,15 +47,14 @@ header-rows: 1
   - Running Jobs (max)
   - RAM Limit
 * - courses
-  - 4 hr / 24 hrs
+  - 4 hrs / 24 hrs
   - 50
   - 256 GB
 * - courses-gpu
-  - 4 hr / 8 hrs
-  - 8
+  - 4 hrs / 8 hrs
+  - 2
   - 12 GB
 ::::
-
 
 The resources available in the courses/courses-gpu partitions can be queried with the command `sinfo` as run in the command line. We manage the resourses in courses/courses-gpu each term in response to the number of courses and requested usage per course.
 
@@ -65,10 +62,10 @@ The resources available in the courses/courses-gpu partitions can be queried wit
 sinfo -p courses-gpu  --Format=nodes,cpus,gres,statecompact
 :::
 
-
 These partitions can be used in the following ways:
 
 (sbatch-courses-index)=
+
 ### sbatch script
 
 An sbatch script can be submitted on the command line via the command `sbatch scriptname.sh`. Below are some examples of sbatch scripts using the courses and courses-gpu partitions. See {ref}`slurm-running-jobs` for more information on running sbatch scripts or run `man sbatch` for additional sbatch parameters.
@@ -76,44 +73,43 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 ::::{dropdown} courses partition
 :::{code-block}bash
 
-#!/bin/bash
+ #!/bin/bash
 
-#SBATCH --nodes=1  
-#SBATCH --time=4:00:00  
-#SBATCH --job-name=MyCPUJob  
-#SBATCH --partition=courses  
-#SBATCH --mail-type=ALL  
-#SBATCH --mail-users=username@northeastern.edu  
+ #SBATCH --nodes=1  
+ #SBATCH --time=4:00:00  
+ #SBATCH --job-name=MyCPUJob  
+ #SBATCH --partition=courses  
+ #SBATCH --mail-type=ALL  
+ #SBATCH --mail-users=username@northeastern.edu  
 
-#commands to execute  
+# commands to execute  
 
 :::
 ::::
 
-
 ::::{dropdown} courses-gpu partition
 :::{code-block}bash
 
-#!/bin/bash
+ #!/bin/bash
 
-#SBATCH --nodes=1  
-#SBATCH --time=4:00:00  
-#SBATCH --job-name=MyGPUJob  
-#SBATCH --partition=courses-gpu  
-#SBATCH --gres=gpu:1  
-#SBATCH --mail-type=ALL  
-#SBATCH --mail-users=username@northeastern.edu  
+ #SBATCH --nodes=1  
+ #SBATCH --time=4:00:00  
+ #SBATCH --job-name=MyGPUJob  
+ #SBATCH --partition=courses-gpu  
+ #SBATCH --gres=gpu:1  
+ #SBATCH --mail-type=ALL  
+ #SBATCH --mail-users=username@northeastern.edu  
 
-#commands to execute  
+# commands to execute for gpu
 
 :::
 ::::
 
 (srun-courses-index)=
-### srun interactive session
+
+## srun interactive session
 
 An interactive session can be run on the command line via the `srun` command as shown in the examples below. See {ref}`slurm-running-jobs` for more information on using `srun` or run `man srun` to see additinal parameters that can be set with `srun`.
-
 
 ::::{dropdown} courses partition
 :::{code-block} bash
@@ -128,6 +124,7 @@ srun --time=4:00:00 --job-name=MyJob --partition=courses-gpu --gres=gpu:1 --pty 
 ::::
 
 (OOD-courses-index)=
+
 ### Open OnDemand
 
 We have several widely-used applications available on the Open OnDemand (OOD) website including, Jupyterlab Notebook, Rstudio, Matlab, GaussView and more. {ref}`access-ood`
@@ -157,6 +154,7 @@ scancel jobid
 
 :::{note} A cluster is a collection of shared resources. We highly recommend canceling any jobs that are still running in an interactive session (on the OOD or via srun) when you have completed your work. This frees up the resources for other classmates and instructors.
 :::
+
 ## Software Applications
 
 All courses have access to the [command line](https://rc-docs.northeastern.edu/en/latest/first_steps/usingbash.html#command-line).
