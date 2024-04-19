@@ -69,7 +69,7 @@ If CUDA is detected by PyTorch, you should see the result, `True`.
 :::::
 :::::{tab-item} TensorFlow
 
-Here are steps for installing CUDA 11.8 with the latest version of TensorFlow (TF).
+Here are steps for installing CUDA 12.1 with the latest version of TensorFlow (TF).
 
 ::::{seealso}
 [Compatibility of CUDA and TensorFlow versions](https://www.tensorflow.org/install/source#gpu), and [detailed installation instructions](https://www.tensorflow.org/install/pip).
@@ -80,19 +80,22 @@ For the latest installation, use the TensorFlow pip package, which includes GPU 
 ::::{code-block} bash
 ---------------------
 caption: |
-    Tensorflow's installation steps for Python 3.9 and Cuda 11.8:
+    Tensorflow's installation steps for Python 3.9 and Cuda 12.1:
 ---
+srun -p gpu --gres=gpu:v100-pcie:1 --pty /bin/bash
+module load anaconda3/2022.05
+module load cuda/12.1
 conda create --name TF_env python=3.9 -y
 source activate TF_env
-conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 pip install --upgrade pip
-pip install tensorflow==2.13.*
+pip install tensorflow[and-cuda]
+pip install jupyterlab
 ::::
 
 Verify the installation:
 
 :::{code} bash
-python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' # True
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))" # True
 ::::
 
 ::::{note}
