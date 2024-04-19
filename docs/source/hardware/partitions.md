@@ -78,9 +78,8 @@ header-rows: 1
   - Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.
 :::
 
----
-
 :::{list-table}
+
 ---
 widths: 20 20 20 20 30 20 20 30
 
