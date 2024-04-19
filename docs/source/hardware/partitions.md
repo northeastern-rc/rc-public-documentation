@@ -91,22 +91,19 @@ header-rows: 1
   - Running jobs
   - Submitted jobs
   - GPU limit
-  - GPU limit
   - Use Case
 * - `gpu`
   - No
   - 4 hours/8 Hours
-  - 25/250
+  - 4/250
   - 50/100
   - 1
-  - 4
   - For jobs that can run on a single GPU processor.
 * - `multigpu`
   - **Yes**
   - 4 hours/24 Hours
-  - 25/100
+  - 8/100
   - 50/100
-  - 12
   - 8
   - For jobs that require more than one GPU and take up to 24 hours to run.
 :::
