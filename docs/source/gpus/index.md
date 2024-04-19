@@ -8,13 +8,12 @@
 gpuoverview
 accessinggpus
 gpujobsubmission
-bestpractices
 ```
 
 Harnessing the power of Graphics Processing Units (GPUs) can significantly accelerate your computations on our High-Performance Computing (HPC) cluster. This section provides insights into using GPUs effectively, from understanding their capabilities to best practices for optimization.
 
 
-::::{grid} 1 2 2 2
+::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` GPUs on our HPC
@@ -40,14 +39,6 @@ How to utilize GPUs interactively (srun) and passively (sbatch).
 Using CUDA and building deep learning environments.
 +++
 [Learn more »](gpujobsubmission)
-:::
-:::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` Best Practices for GPUs
-:link: bestpractices
-:link-type: doc
-
-Best practices of utilizing GPUs on Discovery. 
-+++
-[Learn more »](bestpractices)
 :::
 ::::
 
