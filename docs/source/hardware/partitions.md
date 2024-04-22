@@ -78,12 +78,13 @@ header-rows: 1
   - Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.
 :::
 
----
-
 :::{list-table}
+
 ---
 widths: 20 20 20 20 30 20 20 30
+
 header-rows: 1
+
 ---
 * - Name
   - Requires approval?
@@ -91,22 +92,19 @@ header-rows: 1
   - Running jobs
   - Submitted jobs
   - GPU limit
-  - GPU limit
   - Use Case
 * - `gpu`
   - No
   - 4 hours/8 Hours
-  - 25/250
+  - 4/250
   - 50/100
   - 1
-  - 4
   - For jobs that can run on a single GPU processor.
 * - `multigpu`
   - **Yes**
   - 4 hours/24 Hours
-  - 25/100
+  - 8/100
   - 50/100
-  - 12
   - 8
   - For jobs that require more than one GPU and take up to 24 hours to run.
 :::
