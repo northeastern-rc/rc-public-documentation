@@ -100,4 +100,5 @@ HPC for the Classroom <classroom/index>
 best-practices/index
 tutorialsandtraining/index
 glossary
+faqs-new
 ```
