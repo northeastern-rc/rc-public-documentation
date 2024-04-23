@@ -1,5 +1,4 @@
 (working-gpus)=
-
 # GPUs on the HPC
 :::{seealso}
 [Learn more about partitions.](../hardware/partitions.md)
@@ -109,15 +108,15 @@ widths: auto
 * - `gpu`
   - No
   - 4/8
-  - 50/100
+  - 4/100
   - 1
-  - 8
+  - 4
 * - `multigpu`
   - **Yes**
   - 4/24
-  - 50/100
-  - 12
-  - 12
+  - 8/100
+  - 8
+  - 8
 :::
 ::::{important}
 Consider the compatibility of the GPU, as some programs do not work on the older k40m or k80 GPUs.
