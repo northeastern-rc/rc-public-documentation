@@ -51,7 +51,9 @@ source activate pytorch_env
 conda install jupyterlab -y
 pip3 install torch torchvision torchaudio
 ::::
+
 Now, let us check the installation:
+
 ::::{code} bash
 python -c 'import torch; print(torch.cuda.is_available())'
 ::::
@@ -72,7 +74,9 @@ source activate pytorch_env
 conda install jupyterlab -y
 pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118
 ::::
+
 Now, let us check the installation:
+
 ::::{code} bash
 python -c 'import torch; print(torch.cuda.is_available())'
 ::::
@@ -81,7 +85,7 @@ If CUDA is detected by PyTorch, you should see the result, `True`.
 
 :::{seealso}
 [PyTorch documentation] for the most up-to-date instructions and for different CUDA versions.
-::::
+:::
 :::::
 :::::{tab-item} TensorFlow
 
@@ -110,7 +114,7 @@ pip install jupyterlab
 
 Verify the installation:
 
-:::{code} bash
+::::{code} bash
 python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))" # True
 ::::
 
@@ -118,4 +122,4 @@ python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU')
 Ignore the `Warning` messages that get generated after executing the above commands.
 ::::
 :::::
-::::
+::::::
