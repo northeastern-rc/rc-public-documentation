@@ -30,13 +30,6 @@ Executing `nvidia-smi` (i.e., NVIDIA System Management Interface) on a GPU node 
 Deep learning frameworks tend to cost storage that can quickly surpass {ref}`home-directory-storage-quota`: follow best practices for {ref}`best-practices-conda-environments`.
 :::
 
-First, log onto `gpu` interactively, and load anaconda and CUDA 11.8:
-
-:::{code} bash
-srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
-module load anaconda3/2022.05 cuda/11.8
-:::
-
 Select the tab with the desire deeplearning framework.
 
 :::{important}
@@ -44,17 +37,40 @@ Each tab assumes you are on a GPU node before with CUDA 11.8 and anaconda module
 :::
 ::::::{tab-set}
 :::::{tab-item} PyTorch
-The following example demonstrates how to build PyTorch inside a conda virtual environment for CUDA version 11.8.
-
+The following example demonstrates how to build PyTorch inside a conda virtual environment for CUDA version 12.1.
 
 ::::{code-block} bash
 ---------------------
 caption: |
-    PyTorch's installation steps for Python 3.9 and Cuda 11.8:
+    PyTorch's installation steps for Python 3.10 and Cuda 12.1:
 ---
-conda create --name pytorch_env python=3.10 -y
+srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
+module load anaconda3/2022.05 cuda/12.1
+conda create --name pytorch_env -c conda-forge python=3.10 -y
 source activate pytorch_env
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
+conda install jupyterlab -y
+pip3 install torch torchvision torchaudio
+::::
+Now, let us check the installation:
+::::{code} bash
+python -c 'import torch; print(torch.cuda.is_available())'
+::::
+
+If CUDA is detected by PyTorch, you should see the result, `True`.
+
+If you want to use an older version of CUDA, here is the following example that demonstrates how to build PyTorch inside a conda virtual environment for CUDA version 11.8.
+
+::::{code-block} bash
+---------------------
+caption: |
+    PyTorch's installation steps for Python 3.10 and Cuda 11.8:
+---
+srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
+module load anaconda3/2022.05 cuda/11.8
+conda create --name pytorch_env -c conda-forge python=3.10 -y
+source activate pytorch_env
+conda install jupyterlab -y
+pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118
 ::::
 Now, let us check the installation:
 ::::{code} bash
@@ -102,33 +118,4 @@ python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU')
 Ignore the `Warning` messages that get generated after executing the above commands.
 ::::
 :::::
-:::::{tab-item} PyTorch + TensorFlow
-::::{code-block} bash
----------------------
-caption: |
-    PyTorch and Tensorflow's installation steps for Python 3.9 and Cuda 11.8:
----
-conda create --name deeplearning-cuda11_8 python=3.9 -y
-source activate deeplearning-cuda11_8
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
-conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
-pip install --upgrade pip
-pip install tensorflow==2.13.*
-::::
-
-Verify installation:
-
-:::{code} bash
-python -c 'import torch; print(torch.cuda.is_available())' # True
-python3 -c 'import tensorflow as tf; print(tf.test.is_built_with_cuda())' # True
-::::
-:::::
-
-::::::
-
-::::{tip}
-Install `jupyterlab` and few other commonly used datascience packages in the `pytorch_env` environment:
-:::{code} bash
-conda install pandas scikit-learn matplotlib seaborn jupyterlab -y
-:::
 ::::
