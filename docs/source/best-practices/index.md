@@ -39,7 +39,7 @@ Discover how to save progress within long-running jobs, preventing loss of data.
 :link: shell_environment
 :link-type: doc
 
-Best practices for using the shell environment on Discovery. 
+Best practices for using the shell environment on Discovery.
 
 +++
 [Learn more »](shell_environment)

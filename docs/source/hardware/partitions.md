@@ -1,6 +1,6 @@
-(partition-names)=
-
 # Partitions
+
+(partition-names)=
 
 A {term}`partition` is a logical collections of nodes that comprise different hardware resources and limits to help meet the wide variety of jobs that get scheduled on the cluster. Occasionally, the Research Computing team might need to make updates to the partitions based on monitoring job submissions to help reduce job wait times. As our cluster grows, changes to the partitions also help to ensure the fair, efficient distribution of resources for all jobs being submitted to the cluster.
 
@@ -14,7 +14,7 @@ On Discovery, there are several partitions:
 PI-owned partitions only include the hardware that those PIs own and are only accessible to the members of the PI's group.
 :::
 
-The general access and application only partitions span the hardware on the cluster, with `gpu` and `multigpu` spanning the GPUs on the cluster and the other partitions spanning the CPUs. For example, if you use the `debug` partition you are using the same hardware as `short`, just with different time, job, and core limits. Refer to the tables below for detailed information on the current partitions. 
+The general access and application only partitions span the hardware on the cluster, with `gpu` and `multigpu` spanning the GPUs on the cluster and the other partitions spanning the CPUs. For example, if you use the `debug` partition you are using the same hardware as `short`, just with different time, job, and core limits. Refer to the tables below for detailed information on the current partitions.
 
 :::{note}
 In the following table, the `Running Jobs Per User/Per Research Group`, Core and RAM limits are set per user, across all running jobs (not pending). **Keep in mind that the number of running jobs is limited by the available resources on the cluster at the time of the job submission and may not adhere to the number stated below.**
@@ -78,12 +78,13 @@ header-rows: 1
   - Primarily for running parallel jobs that can efficiently use more than 2 nodes. Need to demonstrate that your code is optimized for running on more than 2 nodes.
 :::
 
----
-
 :::{list-table}
+
 ---
 widths: 20 20 20 20 30 20 20 30
+
 header-rows: 1
+
 ---
 * - Name
   - Requires approval?
@@ -91,23 +92,20 @@ header-rows: 1
   - Running jobs
   - Submitted jobs
   - GPU limit
-  - GPU limit
   - Use Case
 * - `gpu`
   - No
   - 4 hours/8 Hours
-  - 25/250
+  - 4/250
   - 50/100
   - 1
-  - 8
   - For jobs that can run on a single GPU processor.
 * - `multigpu`
   - **Yes**
   - 4 hours/24 Hours
-  - 25/100
+  - 8/100
   - 50/100
-  - 12
-  - 12
+  - 8
   - For jobs that require more than one GPU and take up to 24 hours to run.
 :::
 
@@ -116,10 +114,10 @@ header-rows: 1
 Slurm commands allow you to view information about the partitions. Three commands that can show you partition information are `sinfo`, `sacct`, and `scontrol`. The following are common options to use with these commands:
 
 :::{code} shell
-sinfo -p <partition name> #displays the state of the nodes on a specific partition
-sinfo -p <partition name> --Format=time,nodes,cpus,socketcorethread,memory,nodeai,features #displays more detailed information using the Format option, including features like the type of processors
-sacct --partition <partition name> #displays the jobs that have been run on this partition
-scontrol show partition <partition name> #displays the Slurm configuration of the partition
+sinfo -p `partition name` #displays the state of the nodes on a specific partition
+sinfo -p `partition name` --Format=time,nodes,cpus,socketcorethread,memory,nodeai,features #displays more detailed information using the Format option, including features like the type of processors
+sacct --partition `partition name` #displays the jobs that have been run on this partition
+scontrol show partition `partition name` #displays the Slurm configuration of the partition
 :::
 
 For more information about these commands, see our [Using Slurm] and the official [Slurm documentation].
