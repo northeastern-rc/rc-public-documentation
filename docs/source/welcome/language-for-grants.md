@@ -33,7 +33,7 @@ Data is staged into and out of the cluster using Globus ([www.globus.org](www.gl
 
 ## Compute Services
 
-The SDE also offers compute services via Open OnDemand ([www.openondemand.org](www.openondemand.org)). OOD is a web-ui to an HPC cluster that presents interfaces to traditional batch processing, a conventional "desktop-style" research, and client-server based programs. The HPC cluster is managed by SLURM ([www.schedmd.com](www.schedmd.com)), making the SDE a conventional research cluster with the enhanced security and auditing required for CMMC.
+The SDE also offers compute services via Open OnDemand ([www.openondemand.org](www.openondemand.org)). OOD is a web-based interface to an HPC cluster that presents interfaces to traditional batch processing, conventional "desktop-style" research, and client-server based programs. The HPC cluster is managed by SLURM ([www.schedmd.com]), making the SDE a conventional research cluster with the enhanced security and auditing required for CMMC.
 
 ## Data Management Plan (DMP)
 
