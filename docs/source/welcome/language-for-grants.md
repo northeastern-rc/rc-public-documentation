@@ -21,7 +21,7 @@ Researchers affiliated with Northeastern must request an access account on the S
 
 ## NU SDE
 
-The Secure Data Enclave (SDE) is a subset of RC systems configured to comply with Northeastern University's CMMC Programme, creating a storage and computational environment that allows researchers to compete for government funding without having to support their own computational environments. The SDE is targeted at computational research. There is no physical lab, there is no physical CUI, but there is a cluster of hardware dedicated to storing and computing on CUI data.
+The Secure Data Enclave (SDE) is a subset of RC systems configured to comply with Northeastern University's CMMC Program, creating a storage and computational environment that allows researchers to compete for government funding without having to support their own computational environments. Computational research is the focus of the SDE. There is no physical lab, and there is no physical CUI, but there is a cluster of hardware dedicated to storing and computing CUI data.
 
 ## Storage Services
 
