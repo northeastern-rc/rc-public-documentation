@@ -114,7 +114,7 @@ exclude_patterns = ["using-ood/cps_ood.md",
 # a list of builtin themes.
 #
 html_theme = "furo"
-html_title = "RC RTD"
+html_title = "NURC RTD"
 
 html_theme_options = {
     "footer_icons": [
@@ -129,12 +129,12 @@ html_theme_options = {
             "class": "",
         },
     ],
-    # "announcement": """
-    # <a style=\"text-decoration: none; color: white;\"
-    #    href=\"https://github.com/sponsors/urllib3\">
-    #    <img src=\"_static/image/logo-square.png\"/> Submit a ticket for support
-    # </a>
-    # """,
+    "announcement": """
+    <a style=\"text-decoration:none; color:red;\"
+       href=\"../miscellaneous/annual-shutdown.html\">
+        Important Announcement: MGHPCC Annual Shutdown, Wednesday, May 22, 2024 – Friday, May 24, 2024. Learn more >>
+    </a>
+    """,
     "sidebar_hide_name": True,
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
@@ -142,7 +142,11 @@ html_theme_options = {
 }
 
 # custom css file
-html_css_files = ["../css/custom.css"]
+html_css_files = ["css/custom.css"]
+
+rst_prolog = """
+.. role:: red
+"""
 
 # If true, “(C) Copyright …” is shown in the HTML footer. Default is True.
 html_show_copyright = True
