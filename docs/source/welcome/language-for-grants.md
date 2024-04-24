@@ -25,7 +25,7 @@ The Secure Data Enclave (SDE) is a subset of RC systems configured to comply wit
 
 ## Storage Services
 
-The focus of any CMMC-approved environment is storage — specifically security, privacy, and auditing. The SDE has two (2) Infinidat systems that are configured with FIPS-140-2 validated encryption — one (1) at the MGHPCC in Holyoke, MA and the other in Boston, MA at the Markley Datacenter.
+The focus of any CMMC-approved environment is storage—specifically, security, privacy, and auditing. The SDE has two (2) Infinidat systems that are configured with FIPS-140-2 validated encryption—one (1) at the MGHPCC in Holyoke, MA, and the other in Boston, MA, at the Markley Datacenter.
 
 These systems both provide snapshot facilities, but the system at Markley is a dedicated off-site replication target for MGHPCC, the primary SDE datastore.
 
