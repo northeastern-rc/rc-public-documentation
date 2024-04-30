@@ -142,7 +142,7 @@ html_theme_options = {
 }
 
 # custom css file
-html_css_files = ["../css/custom.css"]
+html_css_files = ["css/custom.css"]
 
 # If true, “(C) Copyright …” is shown in the HTML footer. Default is True.
 html_show_copyright = True
