@@ -84,7 +84,7 @@ python -c 'import torch; print(torch.cuda.is_available())'
 If CUDA is detected by PyTorch, you should see the result, `True`.
 
 :::{seealso}
-[PyTorch documentation] for the most up-to-date instructions and for different CUDA versions.
+[PyTorch documentation](https://pytorch.org/) for the most up-to-date instructions and for different CUDA versions.
 :::
 :::::
 :::::{tab-item} TensorFlow
