@@ -151,11 +151,6 @@ html_css_files = ["css/custom.css"]
 rst_prolog = """
 .. role:: red
 """
-
-rst_prolog = """
-.. role:: red
-"""
-
 # If true, “(C) Copyright …” is shown in the HTML footer. Default is True.
 html_show_copyright = True
 # If true, “Created using Sphinx” is shown in the HTML footer. Default is True.
