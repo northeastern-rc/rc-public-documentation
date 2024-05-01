@@ -162,7 +162,15 @@ html_static_path = ["_static", "_static/video"]
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-# html_sidebars = {}
+html_sidebars = {
+    "**": [
+        "sidebar/scroll-start.html",
+        "sidebar/brand.html",
+        "sidebar/nurc-extern.html",
+        "sidebar/search.html",
+        "sidebar/navigation.html",
+        "sidebar/scroll-end.html",
+    ]}
 
 source_suffix = [".rst", ".md"]
 
