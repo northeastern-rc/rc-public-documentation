@@ -10,7 +10,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 from datetime import date
 
@@ -116,6 +116,19 @@ exclude_patterns = ["using-ood/cps_ood.md",
 html_theme = "furo"
 html_title = "NURC RTD"
 
+
+current_dir = os.path.abspath(os.path.dirname(__file__))
+print(current_dir)
+doc_dir = os.path.abspath(os.path.join(current_dir, os.pardir)) + '/miscellaneous/annual-shutdown.html'
+print(doc_dir)
+announcement_html = """
+    <a style=\"text-decoration:none; color:red;\"
+       href="{}">
+        Important Announcement: MGHPCC Annual Shutdown, Wednesday, May 22, 2024 – Friday, May 24, 2024. Learn more >>
+    </a>
+    """.format(doc_dir)
+
+
 html_theme_options = {
     "footer_icons": [
         {
@@ -129,12 +142,7 @@ html_theme_options = {
             "class": "",
         },
     ],
-    "announcement": """
-    <a style=\"text-decoration:none; color:red;\"
-       href=\"../miscellaneous/annual-shutdown.html\">
-        Important Announcement: MGHPCC Annual Shutdown, Wednesday, May 22, 2024 – Friday, May 24, 2024. Learn more >>
-    </a>
-    """,
+    "announcement": announcement_html,
     "sidebar_hide_name": True,
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
