@@ -11,7 +11,7 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os
-# import sys
+import sys
 from datetime import date
 
 # sys.path.insert(0, os.path.abspath('.'))
@@ -117,16 +117,12 @@ html_theme = "furo"
 html_title = "NURC RTD"
 
 
-current_dir = os.path.abspath(os.path.dirname(__file__))
-print(current_dir)
-doc_dir = os.path.abspath(os.path.join(current_dir, os.pardir)) + '/miscellaneous/annual-shutdown.html'
-print(doc_dir)
 announcement_html = """
     <a style=\"text-decoration:none; color:red;\"
-       href="{}">
+    href="https://rc-docs.northeastern.edu/en/latest/miscellaneous/annual-shutdown.html">
         Important Announcement: MGHPCC Annual Shutdown, Wednesday, May 22, 2024 – Friday, May 24, 2024. Learn more >>
     </a>
-    """.format(doc_dir)
+    """
 
 
 html_theme_options = {
