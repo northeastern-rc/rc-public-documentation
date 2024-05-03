@@ -7,4 +7,33 @@ video {
 }
 .red{
   color: #C8102E;
+
+  .nurc-extern-sidebar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: inherit;
+  border-radius: 5px;
+}
+
+.sidebar-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #C8102E;
+  color: white !important;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.sidebar-button:hover {
+  color: white !important; 
+}
+
+.sidebar-button:visited {
+  color: white !important; 
 }
