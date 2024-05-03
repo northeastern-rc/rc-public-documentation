@@ -118,7 +118,7 @@ html_title = "NURC RTD"
 
 
 announcement_html = """
-    <a style=\"text-decoration:none; color:red;\"
+    <a style=\"text-decoration:none; color:white;\"
     href="https://rc-docs.northeastern.edu/en/latest/miscellaneous/annual-shutdown.html">
         Important Announcement: MGHPCC Annual Shutdown, Wednesday, May 22, 2024 – Friday, May 24, 2024. Learn more >>
     </a>
