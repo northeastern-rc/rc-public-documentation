@@ -7,8 +7,9 @@ video {
 }
 .red{
   color: #C8102E;
+}
 
-  .nurc-extern-sidebar-container {
+.nurc-extern-sidebar-container {
   display: flex;
   align-items: center;
   justify-content: center;
