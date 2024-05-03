@@ -102,8 +102,3 @@ best-practices/index
 tutorialsandtraining/index
 glossary
 ```
-
-```{toctree}
-:hidden:
-Goto Northeastern RC website <https://rc.northeastern.edu/>
-```
