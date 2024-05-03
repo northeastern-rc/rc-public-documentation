@@ -100,5 +100,6 @@ slurmguide/index
 HPC for the Classroom <classroom/index>
 best-practices/index
 tutorialsandtraining/index
+miscellaneous/annual-shutdown
 glossary
 ```

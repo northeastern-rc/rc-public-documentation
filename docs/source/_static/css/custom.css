@@ -5,6 +5,10 @@ video {
   width: 100%;
 
 }
+.red{
+  color: #C8102E;
+}
+
 .nurc-extern-sidebar-container {
   display: flex;
   align-items: center;
