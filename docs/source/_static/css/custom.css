@@ -20,7 +20,7 @@ video {
   align-items: center;
   padding: 10px 20px;
   background-color: #C8102E;
-  color: white;
+  color: white !important;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
@@ -28,9 +28,9 @@ video {
 }
 
 .sidebar-button:hover {
-  color: white; 
+  color: white !important; 
 }
 
 .sidebar-button:visited {
-  color: white; 
+  color: white !important; 
 }
