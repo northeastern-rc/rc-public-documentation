@@ -93,6 +93,7 @@ Getting Started <gettingstarted/index>
 hardware/index
 using-ood/index
 runningjobs/index
+Working with GPUs <gpus/index>
 datamanagement/index
 Software <software/index>
 slurmguide/index
