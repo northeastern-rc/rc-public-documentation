@@ -41,8 +41,6 @@ header-rows: 1
   - 186 - 3094 GB
 :::
 
-If you are looking for information about GPUs, see {ref}`working-gpus`.
-
 If you are interested in more information about the different partitions on Discovery, including the number of nodes per partition, running time limits, job submission limits, and RAM limits, see {ref}`partition-names`.
 
 ## Using the `--constraint` flag
@@ -66,3 +64,90 @@ You can add these same flags as an additional line in your `sbatch` script via (
 :::{note}
 Using the --constraint flag can mean that you will wait longer for your job to start, as the {term}`scheduler` ({term}`Slurm`) will need to find and allocate the appropriate hardware that you have specified for your job. For more information about running jobs, see {ref}`using-slurm`. Finally, at this time only the OR operator `|` is supported when using `--constraint`.
 :::
+
+
+## GPU Hardware
+
+Table 2 below shows the GPU Types, Architecture, memory and other features of the GPUs available on the HPC. All of these are NVIDIA GPUs available on gpu-equipped partitions.
+
+(gpu-table)=
+:::{list-table} The NVIDIA GPUs available on gpu-equipped partitions.
+--------------
+header-rows: 1
+align: center
+widths: auto
+--------------
+
+* - GPU Type
+  - GPU Architecture
+  - Memory (GB)
+  - Tensor Cores
+  - CUDA Cores
+  - Public Nodes (*x* # GPUs)
+  - Private Nodes (*x* # GPUs)
+* - [P100](https://northeastern.zoom.us/s/92041124566)
+  - [Pascal](https://www.nvidia.com/en-us/data-center/pascal-gpu-architecture/)
+  - 12
+  - N/A
+  - 3,584
+  - 12(*x*3-4)
+  - 3(*x*4)
+* - [V100 PCle](https://images.nvidia.com/content/technologies/volta/pdf/tesla-volta-v100-datasheet-letter-fnl-web.pdf)
+  - [Volta](https://www.nvidia.com/en-us/data-center/volta-gpu-architecture/)
+  - 32
+  - 640
+  - 5,120
+  - 4(*x*2)
+  - 1(*x*2), 16GB
+* - [V100 SXM2](https://images.nvidia.com/content/technologies/volta/pdf/tesla-volta-v100-datasheet-letter-fnl-web.pdf)
+  - [Volta](https://www.nvidia.com/en-us/data-center/volta-gpu-architecture/)
+  - 32
+  - 640
+  - 5,120
+  - 24(*x*4)
+  - 10(*x*4), 16GB<br>8(*x*4), 32GB
+* - [T4](https://www.nvidia.com/en-us/data-center/tesla-t4/)
+  - [Turing](https://developer.nvidia.com/blog/nvidia-turing-architecture-in-depth/)
+  - 15
+  - 320
+  - 2,560
+  - 2(*x*3-4)
+  - 1(*x*4)
+* - [A100](https://www.nvidia.com/en-us/data-center/a100/)
+  - [Ampere](https://www.nvidia.com/en-us/data-center/ampere-architecture/)
+  - 41 & 82
+  - 432
+  - 6,912
+  - 3(*x*4)
+  - 15(*x*2-8)
+* - [Quadro RTX 8000](https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-rtx-8000-us-nvidia-946977-r1-web.pdf)
+  - [Turing](https://developer.nvidia.com/blog/nvidia-turing-architecture-in-depth/)
+  - 46
+  - 576
+  - 4,608
+  - 0
+  - 2(*x*3)
+* -  [A30](https://www.nvidia.com/en-us/data-center/products/a30-gpu/)
+  - [Ampere](https://www.nvidia.com/en-us/data-center/ampere-architecture/)
+  - 24
+  - 224
+  - 3,804
+  - 0
+  - 1(*x*3)
+* - [RTX A5000](https://www.nvidia.com/en-us/design-visualization/rtx-a5000/)
+  - [Ampere](https://www.nvidia.com/en-us/data-center/ampere-architecture/)
+  - 24
+  - 256
+  - 8,192
+  - 0
+  - 6(*x*8)
+* - [RTX A6000](https://www.nvidia.com/en-us/design-visualization/rtx-a6000/)
+  - [Ampere](https://www.nvidia.com/en-us/data-center/ampere-architecture/)
+  - 49
+  - 336
+  - 10,752
+  - 0
+  - 3(*x*8)
+:::
+
+For more information about GPUs, see {ref}`working-gpus`.
