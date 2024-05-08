@@ -4,7 +4,7 @@
 [Learn more about partitions.](../hardware/partitions.md)
 :::
 :::{seealso}
-[GPU Hardware details.](../hardware/hardware_overview.md#gpu-hardware)
+[GPU Hardware details for different types of GPUs available on Discovery.](../hardware/hardware_overview.md#gpu-hardware)
 :::
 This page covers the {term}`Graphics Processing Unit (GPU)` resources available on the {term}`cluster`.
 
