@@ -36,5 +36,5 @@ Run `du -shc .[^.]* * /home/$USER` which will output:
 ::::
 
 ::::{dropdown} Can I install my software on the HPC cluster?
-Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {ref}`from-source` sections. If you encounter any issues, contact Research Computing.
+Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {ref}`from-source` sections. If you encounter any issues, contact Research Computing. To contact RC, see {ref}`getting-help`.
 ::::
