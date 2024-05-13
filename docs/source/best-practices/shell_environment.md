@@ -12,6 +12,7 @@ Making edits to your `.bashrc` file can result in many issues. Some changes may 
 Before making changes to your `.bashrc` file, make a backup of the default `.bashrc` file, so you can restore it if necessary. If you need help with editing `.bashrc`, reach out to [rchelp@northeastern.edu](mailto:rchelp@northeastern.edu) or [schedule a consultation with a staff member](https://outlook.office365.com/owa/calendar/ResearchComputing2@northeastern.onmicrosoft.com/bookings/) who can help suggest edits and troubleshoot any issues you might be having.
 :::
 
+(about-bashrc)=
 ## About your .bashrc file
 When your account is created, you have a default `.bashrc` file in your home directory. See the figure below for an example of a default `.bashrc` file.
 

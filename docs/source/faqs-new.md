@@ -2,7 +2,7 @@
 # Frequently Asked Questions (FAQs)
 Below are some common questions and answers regarding our HPC cluster and its operation.
 
-::::{dropdown} My OOD job shutsdown/completes quickly before/during/after starting? OR When I try and launch an OOD job, I get: "Disk quota exceeded" error.
+::::{dropdown} - My OOD job shutsdown/completes quickly before/during/after starting? OR <br> - When I try and launch an OOD job, I get: "Disk quota exceeded" error. OR <br> - My OOD Desktop job starts and quickly moves to `Completed` without starting..
 
 There are two main things to check:
 1. Check that the memory available in `/home/$USER` is less than the quota limit.
@@ -23,7 +23,7 @@ Based on the output, we can check which files are consuming how much memory, and
 
 2. Check if there are other scripts running at startup (in `.bashrc`), or an anaconda or other environments loading at startup.
    
-We recommend loading other scripts/environments after your main environment has been loaded. We recommend activating any conda environments _after_ the main environment has been loaded. If there are other scripts/environments you'd like to run, we recommend creating a separate bash script and sourcing it once the main environment has been loaded.
+We recommend loading other scripts/environments after your main environment has been loaded. We recommend activating any conda environments _after_ the main environment has been loaded. If there are other scripts/environments you'd like to run, we recommend creating a separate bash script and sourcing it once the main environment has been loaded. For more details on the `.bashrc` file and best practices, see {ref}`about-bashrc`.
 ::::
 
 ::::{dropdown} Can I install my software on the HPC cluster?
