@@ -76,7 +76,7 @@ Container images are cataloged using “tags”. The tag can indicate the versio
 
 We’ll use a compute node with the InfiniBand network to pull the image. The process of pulling an image and converting it to singularity format (.sif) will take longer for large images. 
 
-More about the spades metagenome assembler image can be found here: https://hub.docker.com/r/staphb/spades
+More about the spades metagenome assembler image can be found [here](https://hub.docker.com/r/staphb/spades).
 
 ```bash
 
@@ -94,7 +94,8 @@ More about the spades metagenome assembler image can be found here: https://hub.
  
  # Test the container with singularity run remember to use the "-B" flag to bind any directories 
  singularity run spades_3.15.5.sif
- spades.py --test
+ 
+ Singularity> spades.py --test
 ```
 
 This container image can now be used as in the srun and sbatch examples above.
