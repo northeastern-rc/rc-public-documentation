@@ -68,7 +68,7 @@ Using the --constraint flag can mean that you will wait longer for your job to s
 
 ## GPU Hardware
 
-Table 2 below shows the GPU Types, Architecture, memory and other features of the GPUs available on the HPC. All of these are NVIDIA GPUs available on gpu-equipped partitions.
+Table 2 below shows the GPU types, architecture, memory and other features of the GPUs available on the HPC. All of these are NVIDIA GPUs available on gpu-equipped partitions.
 
 (gpu-table)=
 :::{list-table} The NVIDIA GPUs available on gpu-equipped partitions.
@@ -85,13 +85,6 @@ widths: auto
   - CUDA Cores
   - Public Nodes (*x* # GPUs)
   - Private Nodes (*x* # GPUs)
-* - [P100](https://northeastern.zoom.us/s/92041124566)
-  - [Pascal](https://www.nvidia.com/en-us/data-center/pascal-gpu-architecture/)
-  - 12
-  - N/A
-  - 3,584
-  - 12(*x*3-4)
-  - 3(*x*4)
 * - [V100 PCle](https://images.nvidia.com/content/technologies/volta/pdf/tesla-volta-v100-datasheet-letter-fnl-web.pdf)
   - [Volta](https://www.nvidia.com/en-us/data-center/volta-gpu-architecture/)
   - 32
