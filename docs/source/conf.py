@@ -10,8 +10,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 from datetime import date
 
 # sys.path.insert(0, os.path.abspath('.'))
@@ -114,7 +114,16 @@ exclude_patterns = ["using-ood/cps_ood.md",
 # a list of builtin themes.
 #
 html_theme = "furo"
-html_title = "RC RTD"
+html_title = "NURC RTD"
+
+
+announcement_html = """
+    <a style=\"text-decoration:none; color:white;\"
+    href="https://rc-docs.northeastern.edu/en/latest/miscellaneous/annual-shutdown.html">
+        Important Announcement: MGHPCC Annual Shutdown, Wednesday, May 22, 2024 – Friday, May 24, 2024. Learn more >>
+    </a>
+    """
+
 
 html_theme_options = {
     "footer_icons": [
@@ -129,12 +138,7 @@ html_theme_options = {
             "class": "",
         },
     ],
-    # "announcement": """
-    # <a style=\"text-decoration: none; color: white;\"
-    #    href=\"https://github.com/sponsors/urllib3\">
-    #    <img src=\"_static/image/logo-square.png\"/> Submit a ticket for support
-    # </a>
-    # """,
+    "announcement": announcement_html,
     "sidebar_hide_name": True,
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
@@ -142,8 +146,11 @@ html_theme_options = {
 }
 
 # custom css file
-html_css_files = ["../css/custom.css"]
+html_css_files = ["css/custom.css"]
 
+rst_prolog = """
+.. role:: red
+"""
 # If true, “(C) Copyright …” is shown in the HTML footer. Default is True.
 html_show_copyright = True
 # If true, “Created using Sphinx” is shown in the HTML footer. Default is True.
@@ -162,7 +169,15 @@ html_static_path = ["_static", "_static/video"]
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-# html_sidebars = {}
+html_sidebars = {
+    "**": [
+        "sidebar/scroll-start.html",
+        "sidebar/brand.html",
+        "sidebar/nurc-extern.html",
+        "sidebar/search.html",
+        "sidebar/navigation.html",
+        "sidebar/scroll-end.html",
+    ]}
 
 source_suffix = [".rst", ".md"]
 

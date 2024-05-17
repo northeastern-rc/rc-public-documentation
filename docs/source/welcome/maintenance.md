@@ -10,6 +10,8 @@ Users can also check the maintenance status via [ITS Maintenance and Status] pag
 (annual_shutdown)=
 ## MGHPCC Annual Shutdown
 
+[**Important Announcement: MGHPCC Annual Shutdown, Wednesday, May 22, 2024 – Friday, May 24, 2024. Learn more >>**](../miscellaneous/annual-shutdown.md)
+
 The Massachusetts Green High Performance Computing Center (MGHPCC) conducts an annual shutdown for maintenance work. During this shutdown, all RC-managed services are powered down and unavailable for approximately four days. RC will send frequent reminders leading up to the shutdown to ensure that users are able to plan accordingly.
 
 ## ITS Statuspage

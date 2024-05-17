@@ -8,7 +8,6 @@
 understandingqueuing
 jobscheduling
 interactiveandbatch
-workingwithgpus
 ```
 Running jobs efficiently is at the heart of a successful experience with our High-Performance Computing (HPC) cluster. This section outlines the essential aspects of executing various types of jobs, understanding the queuing system, and troubleshooting.
 
@@ -43,16 +42,6 @@ Run jobs interactively or submit batch scripts for later execution.
 
 +++
 [Learn more »](interactiveandbatch)
-:::
-
-:::{grid-item-card} {octicon}`cpu;1.5em;screen-full` Working with GPUs
-:link: workingwithgpus
-:link-type: doc
-
-Harness the power of GPUs for computation-intensive tasks.
-
-+++
-[Learn more »](workingwithgpus)
 :::
 
 ::::
