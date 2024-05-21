@@ -5,7 +5,7 @@
 Use `srun` for interactive and `sbatch` for batch mode. The `srun` example below is requesting 1 node and 1 GPU with 4GB of memory in the `gpu` partition. You must use the `--gres=` option to request a gpu:
 
 :::{code} bash
-srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+srun --partition=gpu --nodes=1 --pty --gres=gpu:v100-pcie:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 :::
 
 :::{note}
@@ -18,7 +18,7 @@ The `sbatch` example below is similar to the `srun` example above, but it submit
 #!/bin/bash
 #SBATCH --partition=gpu
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:v100-pcie:1
 #SBATCH --time=01:00:00
 #SBATCH --job-name=gpu_run
 #SBATCH --mem=4GB
@@ -31,13 +31,13 @@ The `sbatch` example below is similar to the `srun` example above, but it submit
 :::
 
 ## Specifying a GPU type
-You can add a specific type of GPU to the `--gres=` option (with either `srun` or `sbatch`). For a list of available GPU types, refer to the GPU Types column in the table, at the top of this page, that are listed as *Public*.
+You can add a specific type of GPU to the `--gres=` option (with either `srun` or `sbatch`). For a list of available GPU types, refer to the GPU Types column in {ref}`gpu-table`, that are listed as *Public*.
 
 :::{code-block} bash
 ---
-caption: Command to request one p100 GPU.
+caption: Command to request one v100 GPU.
 ---
---gres=gpu:p100:1
+--gres=gpu:v100-pcie:1
 :::
 
 :::{note}
