@@ -1,5 +1,5 @@
 (servicesprovided)=
-# Services we Provide
+# Research Computing Services
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
@@ -57,7 +57,7 @@ Collaborate with RC on your research.
 ::::
 
 
-If your research has benefited from support from the RC team, or you want to acknowledge the cluster, please use one of the statements below:
+If your research has benefited from support from the Research Computing team, or you want to acknowledge the cluster, please use one of the statements below:
 
 *This work was completed in part using the Discovery cluster, supported by Northeastern University’s Research Computing team.*
 
