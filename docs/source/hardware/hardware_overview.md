@@ -43,7 +43,7 @@ header-rows: 1
 
 If you are looking for information about GPUs, see {ref}`working-gpus`.
 
-If you are interested in more information about the different partitions on Discovery, including the number of nodes per partition, running time limits, job submission limits, and RAM limits, see {ref}`partition-names`.
+If you are interested in more information about the different partitions on Explorer, including the number of nodes per partition, running time limits, job submission limits, and RAM limits, see {ref}`partition-names`.
 
 ## Using the `--constraint` flag
 
