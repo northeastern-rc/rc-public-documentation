@@ -54,9 +54,6 @@ In addition, you will receive an email notification from ServiceNow mentioning y
 
 Following these steps, you can easily track the progress and stay informed about any updates you submit.
 
-## Status Page
-
-We use the ITS Systems Status page to post important information, such as power outages and maintenance windows. You can subscribe to this page to receive email updates on the status of ITS systems.
 
 [classroom request form]: https://bit.ly/NURC-Classroom
 [data transfer consultation]: https://bit.ly/NURC-DataTransfer
