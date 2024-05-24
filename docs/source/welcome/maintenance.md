@@ -14,9 +14,9 @@ Users can also check the maintenance status via [ITS Maintenance and Status] pag
 
 The Massachusetts Green High Performance Computing Center (MGHPCC) conducts an annual shutdown for maintenance work. During this shutdown, all RC-managed services are powered down and unavailable for approximately four days. RC will send frequent reminders leading up to the shutdown to ensure that users are able to plan accordingly.
 
-## ITS Statuspage
+## IT Statuspage
 
-All routine cluster maintenance, emergency maintenance, and annual shutdown maintenance information will be posted to the [ITS Maintenance and Status]. Please subscribe to ensure you receive updates on the status of all ITS systems.
+All routine cluster maintenance, emergency maintenance, and annual shutdown maintenance information will be posted to the [IT Statuspage]. You can subscribe to updates to ensure you receive updates on the status of all Northeastern IT systems.
 
 ## Preparing Cluster Maintenance
 
