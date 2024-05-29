@@ -79,6 +79,7 @@ widths: auto
 --------------
 
 * - GPU Type
+  - GRES Flag
   - GPU Architecture
   - Memory (GB)
   - Tensor Cores
@@ -86,6 +87,7 @@ widths: auto
   - Public Nodes (*x* # GPUs)
   - Private Nodes (*x* # GPUs)
 * - [V100 PCle](https://images.nvidia.com/content/technologies/volta/pdf/tesla-volta-v100-datasheet-letter-fnl-web.pdf)
+  - v100-pcie
   - [Volta](https://www.nvidia.com/en-us/data-center/volta-gpu-architecture/)
   - 32
   - 640
@@ -93,6 +95,7 @@ widths: auto
   - 4(*x*2)
   - 1(*x*2), 16GB
 * - [V100 SXM2](https://images.nvidia.com/content/technologies/volta/pdf/tesla-volta-v100-datasheet-letter-fnl-web.pdf)
+  - v100-sxm2
   - [Volta](https://www.nvidia.com/en-us/data-center/volta-gpu-architecture/)
   - 32
   - 640
@@ -100,6 +103,7 @@ widths: auto
   - 24(*x*4)
   - 10(*x*4), 16GB<br>8(*x*4), 32GB
 * - [T4](https://www.nvidia.com/en-us/data-center/tesla-t4/)
+  - t4
   - [Turing](https://developer.nvidia.com/blog/nvidia-turing-architecture-in-depth/)
   - 15
   - 320
@@ -107,6 +111,7 @@ widths: auto
   - 2(*x*3-4)
   - 1(*x*4)
 * - [A100](https://www.nvidia.com/en-us/data-center/a100/)
+  - a100
   - [Ampere](https://www.nvidia.com/en-us/data-center/ampere-architecture/)
   - 41 & 82
   - 432
@@ -114,6 +119,7 @@ widths: auto
   - 3(*x*4)
   - 15(*x*2-8)
 * - [Quadro RTX 8000](https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/quadro-rtx-8000-us-nvidia-946977-r1-web.pdf)
+  - quadro
   - [Turing](https://developer.nvidia.com/blog/nvidia-turing-architecture-in-depth/)
   - 46
   - 576
@@ -121,6 +127,7 @@ widths: auto
   - 0
   - 2(*x*3)
 * -  [A30](https://www.nvidia.com/en-us/data-center/products/a30-gpu/)
+  - a30
   - [Ampere](https://www.nvidia.com/en-us/data-center/ampere-architecture/)
   - 24
   - 224
@@ -128,6 +135,7 @@ widths: auto
   - 0
   - 1(*x*3)
 * - [RTX A5000](https://www.nvidia.com/en-us/design-visualization/rtx-a5000/)
+  - a5000
   - [Ampere](https://www.nvidia.com/en-us/data-center/ampere-architecture/)
   - 24
   - 256
@@ -135,12 +143,28 @@ widths: auto
   - 0
   - 6(*x*8)
 * - [RTX A6000](https://www.nvidia.com/en-us/design-visualization/rtx-a6000/)
+  - a6000
   - [Ampere](https://www.nvidia.com/en-us/data-center/ampere-architecture/)
   - 49
   - 336
   - 10,752
   - 0
   - 3(*x*8)
+:::
+
+:::{note}
+The a100 GPUs come in two variants, 41 GB and 82 GB memory versions. If your job requires the 82 GB version, please include the `--constraint=` flag in your job:
+
+For srun
+
+`srun -p gpu --gres=gpu:a100:1 --constraint=a100@80 --pty /bin/bash`
+
+and for sbatch
+::::{code}
+#SBATCH -p gpu
+#SBATCH --gres=gpu:a100:1
+#SBATCH --constraint=a100@80g
+::::
 :::
 
 For more information about GPUs, see {ref}`working-gpus`.
