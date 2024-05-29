@@ -153,7 +153,7 @@ widths: auto
 :::
 
 :::{note}
-The a100 GPUs come in two variants, 41 GB and 82 GB memory versions. If your job requires the 82 GB version, please include the constraint flag in your job:
+The a100 GPUs come in two variants, 41 GB and 82 GB memory versions. If your job requires the 82 GB version, please include the `--constraint=` flag in your job:
 
 For srun
 
