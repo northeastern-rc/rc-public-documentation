@@ -162,7 +162,9 @@ For srun
 and for sbatch
 
 `#SBATCH -p gpu`
+
 `#SBATCH --gres=gpu:a100:1`
+
 `#SBATCH --constraint=a100@80g`
 :::
 
