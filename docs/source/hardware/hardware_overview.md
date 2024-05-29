@@ -160,12 +160,11 @@ For srun
 `srun -p gpu --gres=gpu:a100:1 --constraint=a100@80 --pty /bin/bash`
 
 and for sbatch
-
-`#SBATCH -p gpu`
-
-`#SBATCH --gres=gpu:a100:1`
-
-`#SBATCH --constraint=a100@80g`
+::::{code}
+#SBATCH -p gpu
+#SBATCH --gres=gpu:a100:1
+#SBATCH --constraint=a100@80g
+::::
 :::
 
 For more information about GPUs, see {ref}`working-gpus`.
