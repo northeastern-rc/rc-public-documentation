@@ -1,15 +1,13 @@
 (working-gpus)=
 # GPUs on the HPC
-:::{seealso}
-[Learn more about partitions.](../hardware/partitions.md)
-:::
+This page covers the {term}`Graphics Processing Unit (GPU)` resources available on the {term}`cluster`.
 :::{seealso}
 [GPU Hardware details for different types of GPUs available on Discovery.](../hardware/hardware_overview.md#gpu-hardware)
 :::
-This page covers the {term}`Graphics Processing Unit (GPU)` resources available on the {term}`cluster`.
-
 The `gpu` {term}`partition` is the general GPU resource for HPC users looking to use a GPU; `multigpu` is the alternative, where more than one GPU are accessible.
-
+:::{seealso}
+[Learn more about partitions.](../hardware/partitions.md)
+:::
 Anyone with a cluster account has access to the `gpu` partition. However, you must submit a [ServiceNow ticket] requesting temporary access to `multigpu` provided sufficient need and preparation.
 
 :::{note}
@@ -53,3 +51,5 @@ sinfo -p gpu --Format=nodes,cpus,memory,features,statecompact,nodelist,gres
 
 This indicates the state (idle or not) of gpu-types and could be helpful to find one that is `idle`. However, the command does not give real-time information of the state and should be used carefully.
 ::::
+
+[ServiceNow ticket]: https://bit.ly/NURC-PartitionAccess
