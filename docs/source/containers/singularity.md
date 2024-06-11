@@ -76,7 +76,7 @@ Docker Hub https://hub.docker.com/
 
 Singularity Hub https://singularityhub.com/
 
-[Nvidia Container Repository] (https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) 
+(Nvidia Container Repository)[https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=]
 
 :::{important}
 The Importance of Tags and Scientific Reproducibility
