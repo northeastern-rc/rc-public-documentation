@@ -113,6 +113,8 @@ More about the spades metagenome assembler image can be found [here](https://hub
 This container image can now be used as in the srun and sbatch examples above.
 
 :::{note}
-Pulling container images to the Discovery cluster can contribute to your storage use in /home. If a cache and tmp directory isn't created and exported as in the example above these items will be deposited in a hidden directory in your home called .singularity. Please regularily check your home storage usage to stay below the quota.
+Pulling container images to the Discovery cluster can contribute to your storage use in /home. If a cache and tmp directory aren't created and exported as in the example above, these items will be deposited in a hidden directory in your home at .singularity. 
+
+Please check your home storage usage regularily to stay below the quota.
 See {ref}`home-directory-storage-quota` for more.
 :::
