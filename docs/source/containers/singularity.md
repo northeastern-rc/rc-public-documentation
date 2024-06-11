@@ -7,7 +7,7 @@ Singularity is the container runtime engine for the Discovery cluster and is ins
 
 You can run a container image with the `run` or `exec` commands after moving to a compute node and loading the singularity module.
 
-To see available singularity versions run: module avail singularity
+To see available singularity versions run this in the command line: module avail singularity
 
 :::{important}
  The `--bind` or `-B` flag
