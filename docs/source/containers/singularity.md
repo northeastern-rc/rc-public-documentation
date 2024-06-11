@@ -9,9 +9,11 @@ You can run a container image with the `run` or `exec` commands after moving to 
 
 To see available singularity versions run: module avail singularity
 
-### The `--bind` or `-B` flag
+:::{important}
+ The `--bind` or `-B` flag
 
 It's important to mount the directories in the Discovery cluster to the container image so you can access necessary input data and to output the results of your software to the directory you specify.
+:::
 
 ### Example using an image already located on the file system
 
