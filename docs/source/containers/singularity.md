@@ -14,9 +14,9 @@ To see available singularity versions run this in the command line: module avail
 
 It's important to mount the directories in the Discovery cluster to the container image so you can access necessary input data and to output the results of your software to the directory you specify.
 
-For example, this command will allow you to access your directories on /work while running the container.
+For example, this command will allow you to access your directories on /work and /scratch while running the container.
 
--B "/work:/work" 
+-B "/work:/work,/scratch:/scratch" 
 :::
 
 ### Example using an image already located on the file system
