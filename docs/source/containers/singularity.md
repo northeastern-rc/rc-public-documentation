@@ -73,7 +73,9 @@ singularity exec -B "/work:/work" /shared/container_repository/star/star_2.7.8a.
 with the command `singularity pull` you can pull an existing container image from the repositories listed below:
 
 [Docker Hub](https://hub.docker.com/)
+
 [Singularity Hub](https://singularityhub.com/)
+
 [Nvidia Container Repository](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=)
 
 :::{important}
