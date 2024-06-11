@@ -78,13 +78,15 @@ Singularity Hub https://singularityhub.com/
 
 [Nvidia Container Repository] (https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) 
 
-## The importance of tags and scientific reproducibility
+:::{important}
+The Importance of Tags and Scientific Reproducibility
 
 Container images are cataloged using “tags”. The tag can indicate the version of the image build or some other aspect of the image. Common tags include “latest” and will pull the most recent version of the image. Care should be taken to distinguish the container version from the version of the software installed, as the same tag on a container image (i.e., “latest”) will pull different versions of software over time. We recommend pulling specific versions of images to better track the version used.
+:::
 
 ### Example pulling Spades image from Dockerhub
 
-We’ll use a compute node with the InfiniBand network to pull the image. The process of pulling an image and converting it to singularity format (.sif) will take longer for large images. 
+We’ll use a compute node with the InfiniBand network to pull the image. The process of pulling an image and converting it to singularity format (.sif) will take longer for large images.
 
 More about the spades metagenome assembler image can be found [here](https://hub.docker.com/r/staphb/spades).
 
@@ -109,3 +111,8 @@ More about the spades metagenome assembler image can be found [here](https://hub
 ```
 
 This container image can now be used as in the srun and sbatch examples above.
+
+:::{note}
+Pulling container images to the Discovery cluster can contribute to your storage use in /home. If a cache and tmp directory isn't created and exported as in the example above these items will be deposited in a hidden directory in your home called .singularity. Please regularily check your home storage usage to stay below the quota.
+See {ref}`home-directory-storage-quota` for more.
+:::
