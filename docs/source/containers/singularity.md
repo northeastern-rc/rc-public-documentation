@@ -1,21 +1,23 @@
 (singularity)=
 # Singularity on Discovery
 
-Singularity is the container runtime engine for the Discovery cluster and is installed as a module. With Singularity, you can run existing containers or build and run your own custom container.
+Singularity is the container runtime engine for the Discovery cluster and is installed as a module. With Singularity, you can run existing containers or pull and run your own custom container.
 
 ## How to run a container with Singularity
 
-You can run a container with the `run` or `exec` commands after moving to a compute node and loading the singularity module.
+You can run a container image with the `run` or `exec` commands after moving to a compute node and loading the singularity module.
 
 To see available singularity versions run: module avail singularity
 
 ### The `--bind` or `-B` flag
 
-Its important to mount the directories in discovery to the container so you can access necessary input data and to output the results of your software to the directory you specify. 
+It's important to mount the directories in the Discovery cluster to the container image so you can access necessary input data and to output the results of your software to the directory you specify.
 
-### Example using a container file on the file system
+### Example using an image already located on the file system
 
-Here’s an `srun` example using a container file from the /shared/container_repository
+We have several container images located in /shared/container_repository
+
+Here’s an `srun` example using a singularity image from the /shared/container_repository
 
 ```bash
 srun --pty /bin/bash
@@ -62,11 +64,13 @@ singularity exec -B "/work:/work" /shared/container_repository/star/star_2.7.8a.
 
 ## Pull an image from a URL
 
-with the command `singularity pull` you can pull an existing container from the repositories listed below:
+with the command `singularity pull` you can pull an existing container image from the repositories listed below:
 
 Docker Hub https://hub.docker.com/
 
 Singularity Hub https://singularityhub.com/
+
+[Nvidia Container Repository] (https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) 
 
 ## The importance of tags and scientific reproducibility
 
