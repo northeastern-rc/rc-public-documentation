@@ -98,6 +98,7 @@ datamanagement/index
 Software <software/index>
 slurmguide/index
 HPC for the Classroom <classroom/index>
+containers/index
 best-practices/index
 tutorialsandtraining/index
 miscellaneous/annual-shutdown
