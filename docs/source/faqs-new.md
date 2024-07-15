@@ -30,7 +30,7 @@ We recommend loading other scripts/environments after your main environment has 
 Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {ref}`from-source` sections. If you encounter any issues, contact Research Computing. To contact RC, see {ref}`getting-help`.
 ::::
 
-::::{dropdown}How to Resolve the "Error: C++17 standard requested but CXX17 is not defined" When Installing a Package in R?
+::::{dropdown} How to Resolve the "Error: C++17 standard requested but CXX17 is not defined" When Installing a Package in R?
 1. Ensure that you have the GCC version 11.1.0 module loaded. Run the following command
 :::{code-block} shell
 module load gcc/11.1.0
@@ -54,4 +54,3 @@ PKG_LIBS = -fPIC
 
 6. If you are using a different version of GCC, adjust the module load command accordingly (e.g., module load gcc/9.3.0).
 ::::
-:::
