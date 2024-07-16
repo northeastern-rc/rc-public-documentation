@@ -42,8 +42,9 @@ To create a new Conda environment where `<environment-name>` is the path and nam
 conda create --prefix=/<path>/<environment-name> python=3.11 anaconda
 :::
 
-::{attention}
+::::{attention}
 Do NOT automatically initialize conda on startup, as it sometimes interferes with other environments on the HPC. If you have previously set conda to initialize on startup, remove the conda initialization script from the `.bashrc` file. See {ref}`conda-and-bashrc` for more details.
+::::
 
 Follow the prompts to complete the Conda install, then activate the environment.
 
