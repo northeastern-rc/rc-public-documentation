@@ -42,6 +42,10 @@ To create a new Conda environment where `<environment-name>` is the path and nam
 conda create --prefix=/<path>/<environment-name> python=3.11 anaconda
 :::
 
+::::{attention}
+Do NOT automatically initialize conda on startup, as it sometimes interferes with other environments on the HPC. If you have previously set conda to initialize on startup, remove the conda initialization script from the `.bashrc` file. See {ref}`conda-and-bashrc` for more details.
+::::
+
 Follow the prompts to complete the Conda install, then activate the environment.
 
 :::{code} bash
@@ -168,6 +172,7 @@ conda activate my-py38env
 
 To deactivate the environment, type `conda deactivate`. You can type this command again to deactivate the base Miniconda environment.
 
+(conda-and-bashrc)=
 ## Conda and `.bashrc`
 
 In addition to editing your `.bashrc` file as outlined in the example above, programs you install can also modify your `.bashrc` file. For example, if you follow the procedure outlined in {ref}`mini-conda`, there may be a section added to your `.bashrc` file (if you didn't use the `-b` batch option) that automatically loads your conda environment every time you sign in to Discovery. See the figure below for an example of this:
