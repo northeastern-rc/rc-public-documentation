@@ -21,7 +21,7 @@ The `multigpu` partition in the HPC cluster allows users for extensive parallel 
     #<reservation_name> will be in the details provided by the RC team.
     ```
     
-- To run an interactive job, for example, using V100-sxm2 with 4 GPUs, use the command below
+- To run an {term}`interactive job <Interactive-Job>`, for example, using V100-sxm2 with 4 GPUs, use the command below
 
 ```bash
 srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --time=24:00:00 -N 1 --pty /bin/bash
