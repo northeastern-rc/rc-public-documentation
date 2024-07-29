@@ -49,6 +49,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
    InfiniBand (IB)
       A high-speed networking technology commonly used in HPC clusters. It provides high bandwidth and low latency communication between nodes in the cluster, facilitating fast data transfer for parallel processing.
 
+   Interactive Job
+   An interactive job lets you interact directly with a compute node in real-time. This is helpful for testing, debugging, or running applications that require user input. When you submit an interactive job, you gain access to a shell on the compute node, where you can execute commands and run scripts just as you would on your local machine. This is particularly helpful for iterative testing and development tasks that benefit from immediate feedback and adjustments.
+
    Job
       A set of computations a user submits to the HPC cluster for execution.
 
