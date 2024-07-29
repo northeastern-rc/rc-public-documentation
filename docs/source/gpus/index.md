@@ -8,6 +8,7 @@
 gpuoverview
 accessinggpus
 gpujobsubmission
+multigpu-partition-access
 ```
 
 Harnessing the power of Graphics Processing Units (GPUs) can significantly accelerate your computations on our High-Performance Computing (HPC) cluster. This section provides insights into using GPUs effectively, from understanding their capabilities to best practices for optimization.
@@ -45,9 +46,9 @@ Using CUDA and building deep learning environments.
 :link: multigpu-partition-access
 :link-type: doc
 
-Overview of the GPUs on the HPC.
+Get access to the Multi-GPU partition.
 +++
-[Learn more »](gpuoverview)
+[Learn more »](multigpu-partition-access)
 ::::
 
 :::{include} ../_snippets/helpfooter.md
