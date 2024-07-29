@@ -41,8 +41,8 @@ Using CUDA and building deep learning environments.
 [Learn more »](gpujobsubmission)
 :::
 
-:::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` Access to the `multigpu` Partition
-:link: gpuoverview
+:::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` Access to the Multi-GPU Partition
+:link: multigpu-partition-access
 :link-type: doc
 
 Overview of the GPUs on the HPC.
