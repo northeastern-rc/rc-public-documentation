@@ -7,7 +7,7 @@
 :::{important}
 If you previously had access to Discovery but are now working with a different PI, you should submit a [ServiceNow Access Request] form and enter the name of your current PI in the Sponsor field. This will link your account to your current PI and expedite updating your account with any of your current PI's resources on Discovery, such as shared storage or a private partition.
 
-To request to be added to a private partition or a faculty members space in /work, send an email to rchelp@northeastern.edu with the name of the partition or /work path and cc the factulty member who owns it.
+To request to be added to a private partition or a faculty members space in /work, send an email to rchelp@northeastern.edu with the name of the partition or /work path and cc the factulty member who owns it (if not owned by yourself).
 :::
 
 :::{sidebar} Valid NU Credentials
