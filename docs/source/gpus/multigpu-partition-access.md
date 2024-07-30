@@ -29,7 +29,7 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
 
 ***Note: Your local machine should be active for successful execution of the Job***
 
-- **To run non-interactive jobs, you can use the following command**
+- **To run {term}`Non-interactive job`, you can use the following command**
     
     1- Create a script
     
