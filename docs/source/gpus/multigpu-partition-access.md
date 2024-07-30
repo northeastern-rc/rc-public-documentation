@@ -88,7 +88,7 @@ RC staff should make sure that the instructor is contacted and educated about th
 
 **Post-Testing Application**
 
-- Ensure your scaling efficiency is adequate (generally over 0.5) when using the maximum GPUs selected on the `multigpu` partition⁠. If needed, please consult with the Research Computing (RC) team for guidance and support throughout the process⁠.
+- Ensure your {term}`Scaling efficiency` is adequate (generally over 0.5) when using the maximum GPUs selected on the `multigpu` partition⁠. If needed, please consult with the Research Computing (RC) team for guidance and support throughout the process⁠.
 - Re-enter the partition application form and select "Multigpu - Partition (Post Testing)" under "Partition Type."
 - Please fill out the form with your test results and submit it.
 - After the RC team reviews and approves your application, you will be granted access to the `multigpu` partition.
