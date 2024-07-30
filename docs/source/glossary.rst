@@ -118,15 +118,12 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Scaling efficiency
       Scaling efficiency measures how effectively a computing task can be parallelized across multiple processors or GPUs. It is calculated by comparing the execution time of a task on a single core with the time taken when using multiple cores. The formula for calculating scaling efficiency is:
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/68bc544a-e2aa-4f2a-9134-4556be5dde0c/fda4f977-07c8-4b94-a27d-2e1d19438dc6/Untitled.png)
-
+               Sη=T_1/(N×T_n )
 Where:
 T_1 is the time required to complete the task using a single core.
 T_N is the time required to complete the task using N cores.
 N is the number of cores or GPUs used.
-For example, if a task takes 100 seconds on a single core (T_1 = 100) and 25 seconds on 4 cores (T_4 = 25), the scaling efficiency would be:
 
-An efficiency of 1 indicates perfect scaling, meaning the task is evenly distributed across all cores. As a goal, the scaling efficiency should generally be over 0.8 when using all cores on a node. If the efficiency is less than 0.5, it indicates poor scaling and higher overheads, which could lead to a declined request for additional resources⁠
 
    Scheduling Policy
       A set of rules and algorithms used by the scheduler to determine the order in which jobs are executed based on their priority, resource requirements, and other factors.
