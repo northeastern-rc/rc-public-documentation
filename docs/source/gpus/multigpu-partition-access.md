@@ -58,7 +58,8 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     1- Create a script
     
     ```bash
-    nano my_job.sh
+    nano my_job.sh 
+    # You can use any text editor you prefer, not just nano. Choose the editor you're most comfortable with for modifying files. 
     ```
     
     2- Add reservation and job details
