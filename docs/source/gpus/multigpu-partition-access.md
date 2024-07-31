@@ -20,7 +20,7 @@ The `multigpu` partition in the HPC cluster allows users for extensive parallel 
    - Ensure your test cases cover a range of processor/GPU counts to measure scaling accurately.
    - Consider testing with different problem sizes to understand how scaling efficiency changes with workload.
 - Submit the form.
-- RC will then contact you with further details for accessing a multi-gpu node. RC team will need an estimate of the duration needed for testing (preferably less than 24 hrs.)
+- The Research Computing team will then contact you with further details for accessing a multi-GPU node. The Research Computing team will need an estimate of the duration needed for testing (preferably less than 24 hrs.)
 
 ### Step 2
 
