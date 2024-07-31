@@ -117,12 +117,6 @@ This glossary provides definitions for terms and abbreviations you may encounter
 
    Scaling efficiency
       Scaling efficiency measures how effectively a computing task can be parallelized across multiple processors or GPUs. It is calculated by comparing the execution time of a task on a single core with the time taken when using multiple cores. The formula for calculating scaling efficiency is:
-
-Scaling Efficiency
-------------------
-
-The scaling efficiency (Sη) is a measure of how well a parallel computation utilizes multiple processors. It is calculated using the following equation:
-
 .. math::
 
    S\eta = \frac{T_1}{N \times T_n}
