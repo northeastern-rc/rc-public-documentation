@@ -106,7 +106,6 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     ```
     
 - **This multi-GPU setup is intended for research workflows only. For course-related multi-GPU needs, please refer to the course request form. Instructors should submit those requests directly through the appropriate channels.** 
-RC staff should make sure that the instructor is contacted and educated about this and then create a reservation for all the students for the duration of the class.
 - Perform testing on 1,2,..(4,8) GPUs. Record runtimes for each test (calculate efficiency).
 
 ### Step-3
