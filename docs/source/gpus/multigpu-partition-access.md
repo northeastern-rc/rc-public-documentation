@@ -8,6 +8,17 @@ The `multigpu` partition in the HPC cluster allows users for extensive parallel 
 - Use the partition application form link in here: [HPC Partition Request](https://bit.ly/NURC-PartitionAccess)
 - Select under "Partition Type" - `Multigpu - Partition (Testing Access)`
 - Fill in the number of GPUs and the type of GPU you'd like to test on. Please also provide a short description of your expected testing workload.
+.. note::
+   **Important considerations while requesting GPU**
+   - Prefer V100 GPUs for multi-GPU testing if your jobs fit:
+     * V100 testing is often sufficient to demonstrate scaling.
+     * If a job scales well on V100s, it's likely to scale similarly on A100s.
+     * This approach conserves A100 resources for production work.
+   - Testing should represent your planned work but doesn't need full production runs.
+   - Use scaled-down versions of your jobs for timing data when possible.
+   - Only use A100s for testing if your job specifically requires their capabilities or memory.
+   - Ensure your test cases cover a range of processor/GPU counts to measure scaling accurately.
+   - Consider testing with different problem sizes to understand how scaling efficiency changes with workload.
 - Submit the form.
 - RC will then contact you with further details for accessing a multi-gpu node. RC team will need an estimate of the duration needed for testing (preferably less than 24 hrs.)
 
