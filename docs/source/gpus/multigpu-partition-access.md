@@ -73,7 +73,7 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     #SBATCH --nodes=1                    # Number of nodes
     #SBATCH --ntasks=4                   # Number of tasks
     #SBATCH --cpus-per-task=2            # Number of CPUs per task
-    #SBATCH --mem=8G                     # Total memory
+    #SBATCH --mem=8G                     # Total CPU memory (not GPU memory)
     #SBATCH --time=02:00:00              # Time limit hh:mm:ss
     #SBATCH --output=output_%j.txt       # Standard output and error log
     #SBATCH --error=error_%j.txt         # Standard error log
