@@ -89,7 +89,7 @@ This glossary provides definitions for terms and abbreviations you may encounter
       The process of reserving a set of nodes for a specific job, ensuring that the required resources are available for successful execution.
 
    Non-interactive job
-      A non-interactive job is a task submitted to a compute cluster that runs without the need for real-time user input. These jobs are defined by scripts that specify all the parameters and commands required for execution and do not provide a direct interface for user interaction during execution.**
+      A non-interactive job (sbatch job) is a task submitted to a compute cluster that runs without the need for real-time user input. These jobs are defined by scripts that specify all the parameters and commands required for execution and do not provide a direct interface for user interaction during execution.
 
    Open OnDemand (OOD)
       A web-based interface for accessing and managing HPC resources. It provides users a user-friendly way to submit jobs, manage files, and utilize cluster resources through a web browser.
