@@ -113,6 +113,6 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
 **Post-Testing Application**
 
 - Ensure your {term}`Scaling efficiency` is adequate (generally over 0.5) when using the maximum GPUs selected on the `multigpu` partition⁠. If needed, please consult with the Research Computing (RC) team for guidance and support throughout the process⁠.
-- Re-enter the partition application form and select "Multigpu - Partition (Post Testing)" under "Partition Type."
+- Re-enter the partition application [form](https://bit.ly/NURC-PartitionAccess) and select "Multigpu - Partition (Post Testing)" under "Partition Type."
 - Please fill out the form with your test results and submit it.
 - After the RC team reviews and approves your application, you will be granted access to the `multigpu` partition.
