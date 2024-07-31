@@ -105,7 +105,7 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     scancel <job_id> # where <job_id> is the ID of the Job we are cancelling
     ```
     
-- **You will also need to state whether it is for a class or for your own research work. If it is for a class, then the request should come from the instructor directly.** 
+- **This multi-GPU setup is intended for research workflows only. For course-related multi-GPU needs, please refer to the course request form. Instructors should submit those requests directly through the appropriate channels.** 
 RC staff should make sure that the instructor is contacted and educated about this and then create a reservation for all the students for the duration of the class.
 - Perform testing on 1,2,..(4,8) GPUs. Record runtimes for each test (calculate efficiency).
 
