@@ -1,5 +1,5 @@
 # Access to Multi-GPU Partition
-The `multigpu` partition in the HPC cluster allows users for extensive parallel processing. This setup is ideal for applications that require significant computational power, such as deep learning, scientific simulations, and large-scale data analysis.
+The `multigpu` partition in the HPC cluster allows users for extensive parallel processing on multiple GPUs. This setup is ideal for applications that require significant computational power, such as deep learning, scientific simulations, and large-scale data analysis.
 
 ## Applying for Multi GPU reservation
 
