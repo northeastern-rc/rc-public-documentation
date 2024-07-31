@@ -38,7 +38,20 @@ The `multigpu` partition in the HPC cluster allows users for extensive parallel 
 srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --time=24:00:00 -N 1 --pty /bin/bash
 ```
 
-***Note: Your local machine should be active for successful execution of the Job***
+***Note***
+   Your local machine must remain active for successful job execution. Be aware of the following risks:
+
+   - Network disconnections will interrupt the job
+   - Computer sleep/hibernation will break the connection
+   - Losing RDP session (e.g., timeout, local reboot) stops GUI-dependent processes
+   - Power outages or system updates can cause unexpected disconnects
+
+   Recommendations:
+   - Use a stable network connection
+   - Disable sleep mode on your local machine
+   - Consider using persistent remote desktop solutions
+   - Implement job checkpointing where possible
+   - Monitor job status regularly
 
 - **To run {term}`Non-interactive job`, you can use the following command**
     
