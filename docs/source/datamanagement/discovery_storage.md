@@ -9,15 +9,15 @@ RC is responsible for procuring and maintaining several data storage options, in
 Two main storage systems are connected to Northeastern's HPC cluster: `/home` and `/scratch`; these options have specific quotas and limitations. The list below details the storage options available on the HPC cluster if you have an account. Every individual with an account has a `/home` and `/scratch`. While research groups can request additional storage on the `/work` storage system, `/work` storage is not currently provisioned for individuals.
 
 :::{important}
-The `/scratch` space is only for temporary storage; this storage is not backed up, and there is a purge policy for data older than 28 days. Please review the `/scratch` policy on our [Policy page].
+The `/scratch` space is only for temporary storage; this storage is not backed up. Please review the `/scratch` policy on our [Policy page].
 :::
 
 **$HOME:** `/home/<username>` where `username` is your NU login, e.g., `/home/j.smith`
-- **Description:** All users are automatically given a `/home` when their account is created. This storage is mainly intended for storing relatively small files such as script files, source code, and software installation files. While `/home` is permanent storage backed up and replicated, `/home` is not permanent storage. `/home` also has a small quota, so you should frequently check your space usage (use a command such as `du -h /home/<yourusername>` where `<yourusername>` is your username to see the total space usage). You should use your `/scratch` for running jobs and directing output files.
+- **Description:** All users are automatically given a `/home` when their account is created. This storage is mainly intended for storing relatively small files such as script files, source code, and software installation files. While `/home` is permanent storage backed up and replicated, `/home` is not permanent storage. `/home` also has a small quota, so you should frequently check your space usage (use a command such as `du -h /home/<yourusername>` where `<yourusername>` is your username to see the total space usage). 
 - **Quota:** 75GB
 
 **Scratch:** `/scratch/<username>`
-- **Description:** All users are automatically given a `/scratch` when their account is created. {term}`Scratch space` is a shared space for all users. The total storage available is 2.5PB; however, while this is permanent, it is for temporary use only. **It is not backed up.** Data on `/scratch` should be moved to another location for permanent storage as soon as possible. You should run your jobs from and direct output to your `/scratch` for best performance. However, moving your files from scratch is the best practice to avoid potential data loss.
+- **Description:** All users are automatically given a `/scratch` when their account is created. {term}`Scratch space` is a shared space for all users and is meant for temporary storage. **It is not backed up.** Data on `/scratch` should be moved to another location for permanent storage as soon as possible. 
 - **Quota:** N/A
 
 **Work:** `/work/<groupname>`
