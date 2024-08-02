@@ -3,7 +3,7 @@ The `multigpu` partition in the HPC cluster allows users extensive parallel proc
 
 Please follow these steps to apply for the Multi-GPU Partition.
 
-### Step 1 - Submitting the Access to MultiGPU Partition Request
+#### Step 1 - Submitting the Access to MultiGPU Partition Request
 
 - Please use the partition application form here: [HPC Partition Request](https://bit.ly/NURC-PartitionAccess)
 - Select under "Partition Type" - `Multigpu - Partition (Testing Access)`
@@ -26,7 +26,7 @@ Please follow these steps to apply for the Multi-GPU Partition.
 - The Research Computing team will need an estimate of the duration needed for testing (preferably less than 24 hrs.)
 - The Research Computing team will contact you with more details for accessing a multi-GPU node. 
 
-### Step 2 - Testing the Code on the Temporary Reservation
+#### Step 2 - Testing the Code on the Temporary Reservation
 
 - To check your reservation
     
@@ -49,7 +49,7 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
    - Losing RDP session (e.g., timeout, local reboot) stops GUI-dependent processes.
    - Power outages or system updates can cause unexpected disconnects.
 
-   **Recommendations:**
+**Recommendations:**
    - Use a stable network connection.
    - Disable sleep mode on your local machine during testing.
    - Implement job checkpointing where possible.
@@ -113,7 +113,7 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
 This multi-GPU setup is intended for research workflows only. For course-related multi-GPU needs, please refer to the course request form. Instructors should submit those requests directly through the appropriate channels.
 :::
 
-### Step 3 - Post-Testing Application
+#### Step 3 - Post-Testing Application
 
 - Ensure your {term}`Scaling efficiency` is adequate (generally over 0.5) when using the maximum GPUs selected on the `multigpu` partition⁠. If needed, please consult with the Research Computing (RC) team for guidance and support throughout the process⁠.
 - Re-enter the partition application [form](https://bit.ly/NURC-PartitionAccess) and select "Multigpu - Partition (Post Testing)" under "Partition Type."
