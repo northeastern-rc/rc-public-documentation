@@ -1,24 +1,24 @@
 # Access to Multi-GPU Partition
-The `multigpu` partition in the HPC cluster allows users for extensive parallel processing on multiple GPUs. This setup is ideal for applications that require significant computational power, such as deep learning, scientific simulations, and large-scale data analysis.
+The `multigpu` partition in the HPC cluster allows users extensive parallel processing on multiple GPUs. This setup is ideal for applications that require significant computational power, such as deep learning, scientific simulations, and large-scale data analysis.
 
 ## Applying for the Multi GPU reservation
 
 ### Step 1 - Submitting the Access to MultiGPU Partition Request
 
-- Use the partition application form here: [HPC Partition Request](https://bit.ly/NURC-PartitionAccess)
+- Please use the partition application form here: [HPC Partition Request](https://bit.ly/NURC-PartitionAccess)
 - Select under "Partition Type" - `Multigpu - Partition (Testing Access)`
 - Fill in the number of GPUs and the type of GPU you'd like to test on. Please also provide a short description of your expected testing workload.
 :::{note}
-   **Important considerations while requesting GPUs**
+   Please consider the following while requesting GPUS for testing:
    - Testing should represent your planned work but doesn't need full production runs.
    - Use scaled-down versions of your jobs for timing data when possible.
-   - Only use A100s for testing if your job requires their capabilities or memory.
    - Ensure your test cases cover a range of processor/GPU counts to measure scaling accurately.
    - Consider testing with different problem sizes to understand how scaling efficiency changes with workload.
    - If you need to use A100s in your workflow, consider testing your code on V100 GPUs:
      * V100 testing is often sufficient to demonstrate scaling.
      * If a job scales well on V100s, it will also scale on A100s.
      * This approach conserves A100 resources for all the users on the cluster.
+     * Only use A100s for testing if your job requires their capabilities or memory that V100s cannot provide.
 :::
 
 
@@ -42,20 +42,18 @@ The `multigpu` partition in the HPC cluster allows users for extensive parallel 
 srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --time=24:00:00 -N 1 --pty /bin/bash
 ```
 
-***Note:***
+:::{note}
    Your local machine must remain active for successful job execution. Be aware of the following risks:
-
    - Network disconnections have the potential to interrupt the job.
    - Computer sleep/hibernation can break the connection.
    - Losing RDP session (e.g., timeout, local reboot) stops GUI-dependent processes.
    - Power outages or system updates can cause unexpected disconnects.
-
-   Recommendations:
+   **Recommendations:**
    - Use a stable network connection.
    - Disable sleep mode on your local machine during testing.
    - Implement job checkpointing where possible.
    - Monitor job status regularly.
-
+:::
 - **To run {term}`Non-interactive job`, you can use the following command**
     
     1- Create a script
@@ -87,11 +85,11 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     # Run your program
     srun python your_script.py #example
 
-    # You can use editor of your choice to edit and save the file on the cluster.
+    # You can use the editor of your choice to edit and save the file on the cluster.
     # Following commands are for the editor 'Nano', and can be used to write this script to disk
     # Ctrl+x to save the file 
     # press 'Y' to save the changes
-    # press enter to complete saving the file to disk
+    # press enter to complete saving the file to the disk
     ```
     
     3- Submit the job 
@@ -106,7 +104,7 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     squeue -u <your_username>
     
     #To cancel a job
-    scancel <job_id> # where <job_id> is the ID of the Job we are cancelling
+    scancel <job_id> # where <job_id> is the ID of the Job we are canceling
     ```
 - Perform testing on 1,2,..(4,8) GPUs. Record runtimes for each test (calculate efficiency).
 
