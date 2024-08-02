@@ -9,7 +9,7 @@ The `multigpu` partition in the HPC cluster allows users extensive parallel proc
 - Select under "Partition Type" - `Multigpu - Partition (Testing Access)`
 - Fill in the number of GPUs and the type of GPU you'd like to test on. Please also provide a short description of your expected testing workload.
 :::{note}
-   Please consider the following while requesting GPUS for testing:
+   Please consider the following while requesting GPUs for testing:
    - Testing should represent your planned work but doesn't need full production runs.
    - Use scaled-down versions of your jobs for timing data when possible.
    - Ensure your test cases cover a range of processor/GPU counts to measure scaling accurately.
