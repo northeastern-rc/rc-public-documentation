@@ -48,13 +48,14 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
    - Computer sleep/hibernation can break the connection.
    - Losing RDP session (e.g., timeout, local reboot) stops GUI-dependent processes.
    - Power outages or system updates can cause unexpected disconnects.
+
    **Recommendations:**
    - Use a stable network connection.
    - Disable sleep mode on your local machine during testing.
    - Implement job checkpointing where possible.
    - Monitor job status regularly.
 :::
-- **To run {term}`Non-interactive job`, you can use the following command**
+- To run {term}`Non-interactive job`, you can use the following command
     
     1- Create a script
     
