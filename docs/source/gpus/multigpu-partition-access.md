@@ -1,28 +1,32 @@
 # Access to Multi-GPU Partition
 The `multigpu` partition in the HPC cluster allows users for extensive parallel processing on multiple GPUs. This setup is ideal for applications that require significant computational power, such as deep learning, scientific simulations, and large-scale data analysis.
 
-## Applying for Multi GPU reservation
+## Applying for the Multi GPU reservation
 
-### Step 1
+### Step 1 - Submitting the Access to MultiGPU Partition Request
 
-- Use the partition application form link in here: [HPC Partition Request](https://bit.ly/NURC-PartitionAccess)
+- Use the partition application form here: [HPC Partition Request](https://bit.ly/NURC-PartitionAccess)
 - Select under "Partition Type" - `Multigpu - Partition (Testing Access)`
 - Fill in the number of GPUs and the type of GPU you'd like to test on. Please also provide a short description of your expected testing workload.
-.. note::
-   **Important considerations while requesting GPU**
-   - Prefer V100 GPUs for multi-GPU testing if your jobs fit:
-     * V100 testing is often sufficient to demonstrate scaling.
-     * If a job scales well on V100s, it's likely to scale similarly on A100s.
-     * This approach conserves A100 resources for production work.
+:::{note}
+   **Important considerations while requesting GPUs**
    - Testing should represent your planned work but doesn't need full production runs.
    - Use scaled-down versions of your jobs for timing data when possible.
-   - Only use A100s for testing if your job specifically requires their capabilities or memory.
+   - Only use A100s for testing if your job requires their capabilities or memory.
    - Ensure your test cases cover a range of processor/GPU counts to measure scaling accurately.
    - Consider testing with different problem sizes to understand how scaling efficiency changes with workload.
-- Submit the form.
-- The Research Computing team will then contact you with further details for accessing a multi-GPU node. The Research Computing team will need an estimate of the duration needed for testing (preferably less than 24 hrs.)
+   - If you need to use A100s in your workflow, consider testing your code on V100 GPUs:
+     * V100 testing is often sufficient to demonstrate scaling.
+     * If a job scales well on V100s, it will also scale on A100s.
+     * This approach conserves A100 resources for all the users on the cluster.
+:::
 
-### Step 2
+
+- Submit the form.
+- The Research Computing team will need an estimate of the duration needed for testing (preferably less than 24 hrs.)
+- The Research Computing team will contact you with more details for accessing a multi-GPU node. 
+
+### Step 2 - Testing the Code on the Temporary Reservation
 
 - To check your reservation
     
@@ -38,20 +42,19 @@ The `multigpu` partition in the HPC cluster allows users for extensive parallel 
 srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --time=24:00:00 -N 1 --pty /bin/bash
 ```
 
-  ***Note***
-     Your local machine must remain active for successful job execution. Be aware of the following risks:
-  
-     - Network disconnections will interrupt the job
-     - Computer sleep/hibernation will break the connection
-     - Losing RDP session (e.g., timeout, local reboot) stops GUI-dependent processes
-     - Power outages or system updates can cause unexpected disconnects
-  
-     Recommendations:
-     - Use a stable network connection
-     - Disable sleep mode on your local machine
-     - Consider using persistent remote desktop solutions
-     - Implement job checkpointing where possible
-     - Monitor job status regularly
+***Note:***
+   Your local machine must remain active for successful job execution. Be aware of the following risks:
+
+   - Network disconnections have the potential to interrupt the job.
+   - Computer sleep/hibernation can break the connection.
+   - Losing RDP session (e.g., timeout, local reboot) stops GUI-dependent processes.
+   - Power outages or system updates can cause unexpected disconnects.
+
+   Recommendations:
+   - Use a stable network connection.
+   - Disable sleep mode on your local machine during testing.
+   - Implement job checkpointing where possible.
+   - Monitor job status regularly.
 
 - **To run {term}`Non-interactive job`, you can use the following command**
     
@@ -83,11 +86,12 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     
     # Run your program
     srun python your_script.py #example
-    
-    # Following Nano-editor commands are used to write this script to disk
-    # ctrl+x 
-    # press 'Y'
-    # press enter
+
+    # You can use editor of your choice to edit and save the file on the cluster.
+    # Following commands are for the editor 'Nano', and can be used to write this script to disk
+    # Ctrl+x to save the file 
+    # press 'Y' to save the changes
+    # press enter to complete saving the file to disk
     ```
     
     3- Submit the job 
@@ -96,7 +100,7 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     sbatch job_script.sh
     ```
     
-    4-**You can monitor the status of your job using the squeue command:**
+    4-You can monitor the status of your job using the squeue command:
     
     ```bash
     squeue -u <your_username>
@@ -104,13 +108,13 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     #To cancel a job
     scancel <job_id> # where <job_id> is the ID of the Job we are cancelling
     ```
-    
-- **This multi-GPU setup is intended for research workflows only. For course-related multi-GPU needs, please refer to the course request form. Instructors should submit those requests directly through the appropriate channels.** 
 - Perform testing on 1,2,..(4,8) GPUs. Record runtimes for each test (calculate efficiency).
 
-### Step-3
+:::{important}
+This multi-GPU setup is intended for research workflows only. For course-related multi-GPU needs, please refer to the course request form. Instructors should submit those requests directly through the appropriate channels.
+:::
 
-**Post-Testing Application**
+### Step 3 - Post-Testing Application
 
 - Ensure your {term}`Scaling efficiency` is adequate (generally over 0.5) when using the maximum GPUs selected on the `multigpu` partition⁠. If needed, please consult with the Research Computing (RC) team for guidance and support throughout the process⁠.
 - Re-enter the partition application [form](https://bit.ly/NURC-PartitionAccess) and select "Multigpu - Partition (Post Testing)" under "Partition Type."
