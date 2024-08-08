@@ -22,7 +22,7 @@ The `/scratch` space is only for temporary storage; this storage is not backed u
 
 **Work:** `/work/<groupname>`
 - **Description:** Research groups can request additional storage on `/work`. A PI can request this extra storage through the [New Storage Space Request]. This is permanent, persistent, and long-term storage for storing data actively used for research. It can be accessed by all members of the research group who have the necessary access permissions, facilitating collaboration and seamless sharing of data within the group.
-- **Quota:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
+- **Quota:** Each PI can request up to **35TB** of complimentary storage summed across all `/work` they own.
 - **Access Request:** Students with research groups can request access to the PI’s storage on `/work`. To expedite the request process, we recommend that you inform the group owner that they will be receiving an email requesting their permission to grant you access to `/work` before you submit the request.
 
 1. To request access to `/work`, students can either create a  [ServiceNow ticket with RC] or email [rchelp@northeastern.edu](mailto:rchelp%40northeastern.edu) to automatically generate a ticket in ServiceNow. Please include both the storage space name and the PI’s name.
@@ -42,8 +42,7 @@ If you are not connected to the campus internet, you must be connected to the un
 
 **NAME:** `/nese`
 - **Description:** This is archival, non-permanent storage intended for researchers needing a long-term storage option for their data.
-- **Quota:** Each group can request up to **35TB** of free storage across all supplemental storage tiers: `/work/<groupname>` and `/nese`.
-
+- **Quota:** A PI can request this storage through the [New Storage Space Request].
 
 [FAQ: VPN and remote access]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013983>
 [New Storage Space Request]: https://bit.ly/NURC-NewStorage
