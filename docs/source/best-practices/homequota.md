@@ -30,6 +30,39 @@ Use `/work` for long-term storage. PIs can request a folder in `/work` via [New 
 Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See {ref}`data-storage` for information on `/work` and `/scratch`.
 :::
 
+### How To Check Your Quotas
+You can see exactly how much of your quota is being used in your /work, /scratch, or your /home directories by running the check-quota script from any node in the short partition.
+
+First, launch a job on a node in the short partition.
+:::{code-block} bash
+srun -p short --pty bash
+:::
+
+And then run check-quota with the desired path as follows:
+:::{code-block} bash
+# check your home quota
+check-quota /home/<username>
+# check your scratch quota
+check-quota /scratch/<username>
+# check a work directory quota
+check-quota /work/<directory>
+:::
+The output will be of the following form (inode count refers to the number of files):
+:::{code-block} bash
+Directory <> has the following quota:
+	Path: <directory>
+	Used Disk Space: 0.0 Tib
+	Disk Space Soft Limit: 0.07 Tib
+	Disk Space Hard Limit: 0.10 Tib
+	Used Inodes: 0
+	Inodes Soft Limit: 2500000
+	Inodes Hard Limit: 5000000
+:::
+
+:::{warning}
+You will only be able to see quotas of directories to which you have access; attempting to see quotas for directories that you don't have access to will be logged.
+:::
+
 ## Cleaning Directories
 ### Local
 
