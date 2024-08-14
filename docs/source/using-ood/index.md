@@ -34,14 +34,6 @@ Get started with OOD by understanding its purpose, features, and benefits.
 [Learn more »](introduction)
 :::
 
-:::{grid-item-card} {octicon}`desktop-download;1.5em;screen-full` Accessing Open OnDemand
-:link: accessingood
-:link-type: doc
-
-Learn about the various methods to access and navigate OOD.
-
-+++
-[Learn more »](accessingood)
 :::
 
 :::{grid-item-card} {octicon}`duplicate;1.5em;screen-full` Interactive Open OnDemand Applications
