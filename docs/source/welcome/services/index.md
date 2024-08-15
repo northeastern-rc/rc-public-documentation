@@ -56,9 +56,14 @@ Collaborate with RC on your research.
 :::
 ::::
 
+## Acknowledging the Discovery Cluster and Research Computing
 
-If your research has benefited from support from the Research Computing team, or you want to acknowledge the cluster, please use one of the statements below:
+If your research was made possible by the computing cluster or aided by the RC team, please use one of the statements below:
 
 *This work was completed in part using the Discovery cluster, supported by Northeastern University’s Research Computing team.*
 
 *This work was completed using the Discovery cluster at MGHPC for Northeastern University.*
+
+## Research Computing ServiceNow Catalog
+
+Please see the [ServiceNow](https://rc.northeastern.edu/service-catalog/) ticket catalog for Research Computing. 

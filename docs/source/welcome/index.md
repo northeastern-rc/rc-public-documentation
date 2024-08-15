@@ -34,13 +34,15 @@ Services we offer to all users of the HPC at NU.
 [Learn more »](services/index)
 :::
 
-:::{grid-item-card} {octicon}`info;1.5em;sd-mr-1` Getting Help
-:link: gettinghelp
+
+:::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Maintenance
+:link: maintenance
 :link-type: doc
 
-We offer training resources and direct assitance.
+Stay informed about maintenance.
 +++
-[Learn more »](gettinghelp)
+[Learn more »](maintenace)
+
 :::
 ::::
 
