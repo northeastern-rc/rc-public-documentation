@@ -6,7 +6,6 @@
 
 services/index
 gettinghelp
-maintenance
 language-for-grants
 ```
 
@@ -35,6 +34,7 @@ Services we offer to all users of the HPC at NU.
 [Learn more »](services/index)
 :::
 
+
 :::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Maintenance
 :link: maintenance
 :link-type: doc
@@ -42,6 +42,7 @@ Services we offer to all users of the HPC at NU.
 Stay informed about maintenance.
 +++
 [Learn more »](maintenace)
+
 :::
 ::::
 
