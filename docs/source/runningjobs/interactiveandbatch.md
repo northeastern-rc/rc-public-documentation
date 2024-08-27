@@ -3,72 +3,101 @@
 
 In our High-Performance Computing (HPC) environment, users can run jobs in two primary modes: Interactive and Batch. This page provides an in-depth guide to both, assisting users in selecting the appropriate mode for their specific tasks.
 
-## Interactive Mode
+(using-srun)=
+## Interactive Jobs: `srun` Command
+The `srun` command is used to submit an interactive job, which runs in a shell terminal. This method is useful when you want to test a short computation or run an interactive session like a shell, Python, or an R terminal.
 
-Interactive mode allows users to run jobs that need immediate execution and feedback.
-
-### Getting Started with Interactive Mode
-
-To launch an interactive session, use the following command:
+To start an `srun` session, the following syntex is used from the login node:
 
 :::{code} bash
-# Request an interactive session
-srun --pty /bin/bash
+srun [options] [command]
 :::
 
-This command allocates resources and gives you a shell prompt on the allocated node.
+The following is an example of an `srun` job running on 1 node, with 1 task:
 
-(interactive-mode-use-cases)=
-### Interactive Mode Use Cases
-- **Development and Testing**: Ideal for code development and testing.
-- **Short Tasks**: Best for tasks that require less time and immediate results.
+:::{code} bash
+srun -N 1 -n 1 -p short --pty bash
+:::
 
+- **`n, --ntasks=<number>`**: specify the number of tasks
+- **`N, --nodes=<minnodes[-maxnodes]>`**: specify the number of nodes
+- **`p, --partition=<partition-name>`**: specify a partition for the job to run on
 
-## Batch Mode
-Batch mode enables users to write scripts that manage job execution, making it suitable for more complex or longer-running jobs.
+To see all options for `srun`, please refer to [srun manual] from Schedmd.
 
-### Creating Batch Scripts
-A typical batch script includes directives for resource allocation, job names, and commands. Here is an example:
+### Examples Using `srun`
+
+You can tailor your request to fit both the needs of the job and the partition limits if you're familiar with the available hardware and partitions on Discovery. 
+
+To request one node and one task for 30 minutes with X11 forwarding on the short partition, type:
+
+:::{code} bash
+srun --partition=short --nodes=1 --ntasks=1 --x11 --mem=2G --time=00:30:00 --pty /bin/bash
+:::
+
+To request one node, with 10 tasks and 2 CPUs per task (a total of 20 CPUs), 40 GB of memory, for one hour on the express partition, type:
+
+:::{code} bash
+srun --partition=short --nodes 1 --ntasks 10 --cpus-per-task 2 --pty --mem=40G --time=01:00:00 /bin/bash
+:::
+
+To request 2 nodes, each with 10 tasks per node and 2 CPUs per task (a total of 40 CPUs), 80 GB of memory, for one hour on the express partition, type:
+
+:::{code} bash
+srun --partition=short --nodes=2 --ntasks 10 --cpus-per-task 2 --pty --mem=80G --time=01:00:00 /bin/bash
+:::
+
+To allocate a GPU node, you should specify the `gpu` partition and use the `–gres` option:
+
+:::{code} bash
+srun --partition=gpu --nodes=1 --ntasks=1 --gres=gpu:1 --mem=2Gb --time=01:00:00 --pty /bin/bash
+:::
+
+(using-sbatch)=
+## Batch Jobs: `sbatch` Command
+The `sbatch` command is used to submit a job script for passive execution. The script includes the `SBATCH` directives that control the job parameters (e.g., number of nodes, CPUs per task, job name). To submit the batch jobs, the following is run from the login node:
+
+:::{code} bash
+sbatch [options]  <script_file>
+:::
+
+An example sbatch script for a job utilizing 2 nodes and 16 tasks per node:
 
 :::{code} bash
 #!/bin/bash
-#SBATCH --job-name=my_job
+#SBATCH -J MyJob                            # Job name
+#SBATCH -N 1                                # Number of nodes
+#SBATCH -n 16                               # Number of tasks
+#SBATCH -o output_%j.txt                    # Standard output file
+#SBATCH -e error_%j.txt                     # Standard error file
+#SBATCH --mail-user=$USER@northeastern.edu  # Email
+#SBATCH --mail-type=ALL                     # Type of email notifications
+
+# Your program/command here
+
+./my_program
+:::
+
+To submit this job script, save it as `my_job.sh` and run:
+:::{code} bash
+sbatch my_job.sh
+:::
+
+For more information on the `SBATCH` directives that can be used in the script, please refer to the [sbatch manual] from Schedmd.
+
+Request a specific amount of memory in the job script if calculations require more than the default 2GB per allocated code. The example script below requests 100GB of memory (`--mem=100G`). Use one capital letter to abbreviate the unit of memory (i.e., kilo `K`, mega `M`, giga `G`, and tera `T`) with the `--mem=` option, as that is what Slurm expects to see:
+
+:::{code} bash
+#!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks=4
-#SBATCH --time=01:00:00
+#SBATCH --time=4:00:00
+#SBATCH --job-name=MyJobName
+#SBATCH --mem=100G
+#SBATCH --partition=short
 
-# Commands to execute
-module load python/3.8.1
-
-python my_python_script.py
-
+# <commands to execute>
 :::
 
-Save this script with a `.sh` extension, e.g., my_script.sh.
 
-### Submitting Batch Jobs
-You can submit your batch script using the sbatch command.
-
-:::{code} bash
-sbatch my_script.sh
-:::
-
-### Monitoring Batch Jobs
-You can monitor the status of your batch job using the squeue command.
-
-:::{code} bash
-squeue -u username
-:::
-
-Where `username` is your actual username.
-
-(batch-mode-use-cases)=
-### Use Cases
-- **Long-Running Jobs**: Suitable for extensive simulations or calculations.
-- **Scheduled Tasks**: Execute jobs at specific times or under certain conditions.
-- **Automated Workflows**: Manage complex workflows using multiple scripts.
-
-
-Interactive and Batch modes cater to different needs and scenarios in the HPC environment. You can explore both modes to choose the one that best aligns with your tasks. For more detailed guides and support, please consult the above guides or contact our support team at <rchelp@northeastern.edu>.
-
-Happy computing!
+[sbatch manual]: https://slurm.schedmd.com/sbatch.html
+[srun manual]: https://slurm.schedmd.com/srun.html
