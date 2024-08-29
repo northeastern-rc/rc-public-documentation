@@ -154,7 +154,7 @@ You need to make sure the partition you are submitting the job to is the `gpu` o
 Selecting the partition () you want the job to run on the HPC cluster:
 
 ```{code-block} matlab
->> % Specify the partition	
+>> % Specify the partition 
 >> c.AdditionalProperties.Partition = 'partition-name';
 ```
 
@@ -196,76 +196,138 @@ You need to make sure the time matches the partition you are submitting to or th
 
 ### Using the MATLAB client interactively on the HPC cluster
 
-If you want to run an interactive pool job on the cluster, you can continue to use the `parpool` that was set above:
+If you want to run an interactive pool job on the cluster we can use a `parpool` like above:
 
 ```{code-block} matlab
+>> % Get a handle to the cluster
+>> c = parcluster;
+
+>> % Open a pool of 64 workers on the cluster
+>> pool = c.parpool(64);
+```
+
+Instead of the open instance of MATLAB running this code, this will be run across the HPC cluster. Run the following code:
+
+```{code-block} matlab
+>> % Run a parfor over 1000 iterations
+>> parfor idx = 1:1000
+      a(idx) = rand;
+   end
+```
+
+When you no longer need the pool, you can delete it and free up the resources with:
+
+```{code-block} matlab
+>> % Delete the pool
+>> pool.delete
+```
+
+### Using the MATLAB with a batch job on the HPC cluster
+
+You can use the `batch` command to submit passively running jobs to the HPC cluster from MATLAB. This command will return a job object that can be used to access the output of the submitted batch job. 
+
+```{code-block} matlab
+>> % Get a handle to the cluster
+>> c = parcluster;
+
+>> % Submit job to query where MATLAB is running on the cluster
+>> job = c.batch(@pwd, 1, {}, 'CurrentFolder','.');
+
+>> % Query job for state
+>> job.State
+
+>> % If state is finished, fetch the results
+>> job.fetchOutputs{:}
+
+>> % Delete the job after results are no longer needed
+>> job.delete
 
 ```
 
-### Using parcluster example
-
-:::{note}
-For this example, please select 6 hours, 65 cpus, and 130 GB of memory.
-:::
-
-This section provides instructions for submitting a job to the cluster for scaling calculations on an integer factorization sample problem. The complexity of this problem increases with the magnitude of the number, making it computationally intensive. To perform these calculations, we will use the `myParallelAlgorithmFcn.m` MATLAB function. Please note that this section assumes you have already started a MATLAB Parallel Server.
-
-There are benchmarking scripts and examples available in **`**/shared/centos7/matlab/R2020a/examples/parallel/main/**`** on the cluster.
-
-To make the scripts and examples available, add the path to this folder to the list of available paths by doing one of the following:
-
-- On the MATLAB Home tab, in the **Environment** section, click **Set Path** and add the path to the script.
-- Alternatively, provide the script's full path in the MATLAB command line.
-
-The contents of _myParallelAlgorithmFcn_ are as follows:
+To see the jobs that have been completed or still are running, you can call `parcluster` to return the cluster object that stores this information. Run the following command in the Command Window:
 
 ```{code-block} matlab
-function [numWorkers,time] = myParallelAlgorithmFcn ()
+>> c = parcluster;
+>> jobs = c.Jobs
+>>
+>> % Get a handle to the second job in the list
+>> job2 = c.Jobs(2);
+```
 
-complexities =  [2^18 2^20 2^21 2^22];
-numWorkers = [1 2 4 6 16 32 64];
+Once you locate the job, you can retrieve the results with `fetchOutputs` if you are using it interactively in the Command Window or you can use `load` if you are using it in a MATLAB script.
 
-time = zeros(numel(numWorkers),numel(complexities));
+```{code-block} matlab
+>> % Fetch all results from the second job in the list
+>> job2.fetchOutputs{:}
+```
 
-% To obtain predictable sequences of composite numbers, fix the seed
-% of the random number generator.
-rng(0,'twister');
+### Parallel MATLAB Batch Job
 
-for c = 1:numel(complexities)
+The `batch` command can also submit parallel workflows to the HPC cluster. As an example, save the following code to a MATLAB script called `parallel_example.m.`
 
-   primeNumbers = primes(complexities(c));
-   compositeNumbers =    primeNumbers.*primeNumbers(randperm(numel(primeNumbers)));
-   factors = zeros(numel(primeNumbers),2);
-
-   for w = 1:numel(numWorkers)
-       tic;
-       parfor (idx = 1:numel(compositeNumbers), numWorkers(w))
-          factors(idx,:) = factor(compositeNumbers(idx));
-       end
-       time(w,c) = toc;
-   end
+```{code-block} matlab
+function [sim_t, A] = parallel_example(iter)
+ 
+if nargin==0
+    iter = 8;
+end
+ 
+disp('Start sim')
+ 
+t0 = tic;
+parfor idx = 1:iter
+    A(idx) = idx;
+    pause(2)
+    idx
+end
+sim_t = toc(t0);
+ 
+disp('Sim completed')
+ 
+save RESULTS A
+ 
 end
 ```
 
-### Running the Job
-To run the myParallelAlgorithmFcn in MATLAB, in the MATLAB Command Window, type:
+When you submit the job using the `batch` command, you will need to also specify the MATLAB Pool argument:
 
-:::{code-block} matlab
-parpool(feature('numcores'))
-[numWorkers,time] = myParallelAlgorithmFcn
-:::
+```{code-block} matlab
+>> % Get a handle to the cluster
+>> c = parcluster;
 
-This specifies the number of cpus allocated in the MATLAB Open OnDemand to be utilized in the Parallel Toolbox and runs the function `myParallelAlgorithmFcn` and stores the outputs as `[numWorkers,time]`.
+>> % Submit a batch pool job using 4 workers for 16 simulations
+>> job = c.batch(@parallel_example, 1, {16}, 'Pool',4, ...
+       'CurrentFolder','.');
 
-You can plot the performance (speedup) by typing:
+>> % View current job status
+>> job.State
 
-:::{code-block} matlab
-figure
-speedup = time(1,:)./time;
-plot(numWorkers,speedup);
-legend('Problem complexity 1','Problem complexity 2','Problem complexity 3','Problem complexity 4','Location','northwest');
-title('Speedup vs complexity');
-xlabel('Number of workers');
-xticks(numWorkers(2:end));
-ylabel('Speedup');
-:::
+>> % Fetch the results after a finished state is retrieved
+>> job.fetchOutputs{:}
+ans = 
+   8.8872
+```
+
+This example took 8.89 seconds to run utilizing four workers. These jobs will always request N+1 number of CPUs for the task since 1 worker is required to manage the batch job and the pool of workers.
+
+We can run the same simulation but increase the size of the Pool. We will retrieve the results later so we will keep the submitted job id as a reference.
+
+```{note}
+
+```
+
+```{code-block} matlab 
+>> % Get a handle to the cluster
+>> c = parcluster;
+
+>> % Submit a batch pool job using 8 workers for 16 simulations
+>> job = c.batch(@parallel_example, 1, {16}, 'Pool',8, ...
+       'CurrentFolder','.');
+
+>> % Get the job ID
+>> id = job.ID
+id =
+   4
+>> % Clear job from workspace (as though MATLAB exited)
+>> clear job
+```
