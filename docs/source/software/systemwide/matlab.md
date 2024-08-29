@@ -62,29 +62,145 @@ Use the following procedure if you need to install a MATLAB toolbox:
 
 ## Using MATLAB Parallel Server
 
-The cluster has MATLAB Parallel Server installed. This section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB 2023a launched as an interactive app on the Open OnDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting. The parameters presented represent only one scenario.
 
-This walkthrough will use Open OnDemand, the web portal on the cluster, to launch MATLAB. You will then use the default cluster profile.This allows you to utilize the resources that are allocated to your Open On Demand MATLAB job.
+### Configuration of MATLAB client on the HPC
 
-To start MATLAB and work with the Parallel Server, do the following:
+The cluster has MATLAB Parallel Server installed. This section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB launched as an interactive app on the Open OnDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting. The parameters presented represent only one scenario.
 
 1. Go to <http://ood.discovery.neu.edu>. If prompted, sign in with your cluster username and password.
 
 1. Click **Interactive Apps**, and select **MATLAB**.
 
-1. Select **MATLAB version 2023a**, and set the time for the length of your jobs, the number of cpus to be 1 plus the number you plan to use for the parallel toolbox work, and default memory to at least 2 times the number of cpus you request. Click **Launch**.
+1. Select **MATLAB version R2023a** or newer, and set the time for the length of your job, the number of cpus to be 8, and the memory to at least 16 GB. Click **Launch**.
 
 1. If necessary, adjust the **Compression** and **Image Quality**, and then click **Launch MATLAB**.
 
-The following commands `parpool(feature('numcores'))` will start the Parallel Server with the number of cores that are allocated in the MATLAB Open OnDemand job (`feature('numcores')`). You can inspect the Parallel Server and the state of it with the command `parcluster`.
+1. Once MATLAB is open, click on the Home tab, click Parallel > Discover Clusters... to discover the profile. Note, this is valid for R2023a and newer. Alternatively, you can create a cluster profile to run parallel jobs by running `configCluster` in the Command Window. Note: `configCluster` should only be called once on the HPC.
 
-:::{code-block} matlab
-#with parpool
-parpool(feature('numcores'))
+Now MATLAB is configured to have jobs submitted to the HPC cluster and not run in the current session.
 
-#with parcluster
-parcluster
-:::
+### Installation and Configuration of MATLAB on a local machine
+
+MATLAB can be configured on your local machine to submit jobs to the HPC cluster. To complete this, please follow the following steps:
+
+
+### Configuring Jobs
+
+Prior to submitting jobs to the HPC, various parameters can be assigned and adjusted for your job such as partition, email, job walltime, etc. 
+
+To get a handle on the cluster and the current configurations please run the following command in the Command Window:
+
+```{code-block} matlab
+>> % Get a handle to the cluster
+>> c = parcluster;
+```
+
+A required field that needs to be set is the memory per CPU core:
+
+```{code-block} matlab
+>> % Specify memory to use, per core (default: 4gb)
+>> c.AdditionalProperties.MemPerCPU = '6gb';
+```
+
+You need to save the changes after modifying the AdditionalProperties:
+
+```{code-block} matlab
+>> c.saveProfile
+```
+
+To view the values of the currently saved configuration, use the following command in the Command Window:
+
+```{code-block} matlab
+>> % To view current properties
+>> c.AdditionalProperties
+```
+
+If you need to unset a saved parameter, you can do the following in the Command Window:
+
+```{code-block} matlab
+>> % Turn off email notifications 
+>> c.AdditionalProperties.EmailAddress = '';
+>> c.saveProfile
+```
+
+The following are optional fields that can be set and adjusted for the parcluster and include the following items.
+
+Specifying a constaint such as a CPU constraint ():
+
+```{code-block} matlab
+>> % Specify a constraint 
+>> c.AdditionalProperties.Constraint = 'feature-name';
+```
+
+Setting an email to receive updates on the SLURM job:
+
+```{code-block} matlab
+>> % Request email notification of job status
+>> c.AdditionalProperties.EmailAddress = 'user-id@northeastern.edu';
+```
+
+Setting the number of GPUs used and the type of GPU ():
+
+```{code-block} matlab
+>> % Specify number of GPUs (default: 0)
+>> c.AdditionalProperties.GPUsPerNode = 1;
+>> c.AdditionalProperties.GPUCard = 'gpu-card';
+```
+
+```{note}
+You need to make sure the partition you are submitting the job to is the `gpu` or `multigpu` partition of a private partition that has GPUs available.
+```
+
+Selecting the partition () you want the job to run on the HPC cluster:
+
+```{code-block} matlab
+>> % Specify the partition	
+>> c.AdditionalProperties.Partition = 'partition-name';
+```
+
+Setting the number of cores for the job:
+
+```{code-block} matlab
+>> % Specify cores per node (default: 0)
+>> c.AdditionalProperties.ProcsPerNode = 4;
+```
+
+Setting exclusive use of the node:
+
+```{code-block} matlab
+>> % Set node exclusivity (default: false)
+>> c.AdditionalProperties.RequireExclusiveNode = true;
+```
+
+```{note}
+The exclusive node option can increase your wait time in the queue so only user if required.
+```
+
+If you are running the job on a reservation that has be setup:
+
+```{code-block} matlab
+>> % Use reservation 
+>> c.AdditionalProperties.Reservation = 'reservation-name';
+```
+
+Setting the time for the job to run on the HPC cluster:
+
+```{code-block} matlab
+>> % Specify the wall time (e.g., 1 day, 5 hours, 30 minutes)
+>> c.AdditionalProperties.WallTime = '1-05:30';
+```
+
+```{note}
+You need to make sure the time matches the partition you are submitting to or the jobs will not run.
+```
+
+### Using the MATLAB client interactively on the HPC cluster
+
+If you want to run an interactive pool job on the cluster, you can continue to use the `parpool` that was set above:
+
+```{code-block} matlab
+
+```
 
 ### Using parcluster example
 
