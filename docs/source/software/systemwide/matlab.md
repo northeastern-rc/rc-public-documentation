@@ -381,3 +381,28 @@ header-rows: 1
   - Explain why job is queued
   - 
 :::
+
+### Debugging
+You can debug MATLAB errors with the following commands depending if it is a serial or parallel job. If the job is a serial submission, you can use the `getDebugLog` method to view the error log that is created. In the Command Window:
+
+```{code-block} matlab
+>> c.getDebugLog(job.Tasks)
+```
+
+If you submit a Pool job, you need to specify the job object:
+
+```{code-block} matlab
+>> c.getDebugLog(job)
+```
+
+
+### To Learn More
+
+To learn more about the MATLAB Parallel Computing Toolbox, checkout these resources:
+
+[Parallel Computing Overview]
+[Parallel Computing Documentation]
+[Parallel Computing Coding Examples]
+[Parallel Computing Tutorials]
+[Parallel Computing Videos]
+[Parallel Computing Webinars]
