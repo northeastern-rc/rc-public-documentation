@@ -61,11 +61,9 @@ Use the following procedure if you need to install a MATLAB toolbox:
 1. You can now use the toolbox within MATLAB. When you are done, type `quit`.
 
 ## Using MATLAB Parallel Server
-
-
 ### Configuration of MATLAB client on the HPC
 
-The cluster has MATLAB Parallel Server installed. This section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox. This walkthrough uses MATLAB launched as an interactive app on the Open OnDemand web portal. There are several parts to this walkthrough. We suggest that you read it through completely before starting. The parameters presented represent only one scenario.
+The cluster has MATLAB Parallel Server installed and this section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox on the HPC. This walkthrough uses MATLAB launched as an interactive app on the [Open OnDemand](ood.discovery.neu.edu) web portal. There are several parts to this walkthrough so we suggest that you read it through completely before starting. The parameters presented represent only one scenario and the results may differ when you run the examples.
 
 1. Go to <http://ood.discovery.neu.edu>. If prompted, sign in with your cluster username and password.
 
@@ -79,10 +77,36 @@ The cluster has MATLAB Parallel Server installed. This section details an exampl
 
 Now MATLAB is configured to have jobs submitted to the HPC cluster and not run in the current session.
 
-### Installation and Configuration of MATLAB on a local machine
+### Installation and Configuration of MATLAB on a Local Machine
 
-MATLAB can be configured on your local machine to submit jobs to the HPC cluster. To complete this, please follow the following steps:
+MATLAB can be configured on your local machine to submit jobs to the HPC cluster. To complete this, you will need to download the following directory from Github: [MATLAB Desktop Parallel Toolbox Setup]().
 
+In your desktop MATLAB instance, run:
+
+```{code-block} matlab
+>> userpath
+```
+
+and move the compressed directory you downloaded from Github to that location, and unzip the directory. To configure MATLAB to run parallel jobs on the cluster, run the following in the Command Window:
+
+```{code-block} matlab
+>> configCluster
+```
+
+```{note} 
+This only needs to be called once per version of MATLAB you are using to run jobs on the HPC cluster.
+```
+
+Submitting jobs to the HPC cluster will require SSH credientials and you will be prompted for your username and password or a private SSH key. The username and/or location of the private key will be saved for future session in MATLAB.
+
+Jobs will now default to running on the HPC cluster rather than submitting to your local machine.
+
+To submit jobs to your local machine instead of the HPC cluster, run the following:
+
+```{code-block} matlab
+>> % Get a handle to the local resources
+>> c = parcluster('local');
+```
 
 ### Configuring Jobs
 
@@ -395,14 +419,22 @@ If you submit a Pool job, you need to specify the job object:
 >> c.getDebugLog(job)
 ```
 
+When troubleshooting a job, having the SLURM job ID can be helpful to understand what might have occurred in the job. You can obtain this by calling `getTaskSchedulerIDs() in the Command Window:
+
+```{code-block} matlab
+>> job.getTaskSchedulerIDs()
+ans = 
+25539
+
+```
 
 ### To Learn More
 
 To learn more about the MATLAB Parallel Computing Toolbox, checkout these resources:
 
-[Parallel Computing Overview]
-[Parallel Computing Documentation]
-[Parallel Computing Coding Examples]
-[Parallel Computing Tutorials]
-[Parallel Computing Videos]
-[Parallel Computing Webinars]
+[Parallel Computing Overview](http://www.mathworks.com/products/parallel-computing/index.html)
+[Parallel Computing Documentation](http://www.mathworks.com/help/distcomp/index.html)
+[Parallel Computing Coding Examples](https://www.mathworks.com/help/parallel-computing/examples.html)
+[Parallel Computing Tutorials](http://www.mathworks.com/products/parallel-computing/tutorials.html)
+[Parallel Computing Videos](http://www.mathworks.com/products/parallel-computing/videos.html)
+[Parallel Computing Webinars](http://www.mathworks.com/products/parallel-computing/webinars.html)
