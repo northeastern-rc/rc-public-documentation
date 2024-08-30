@@ -62,7 +62,6 @@ Use the following procedure if you need to install a MATLAB toolbox:
 
 ## Using MATLAB Parallel Server
 ### Configuration of MATLAB client on the HPC
-
 The cluster has MATLAB Parallel Server installed and this section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox on the HPC. This walkthrough uses MATLAB launched as an interactive app on the [Open OnDemand](ood.discovery.neu.edu) web portal. There are several parts to this walkthrough so we suggest that you read it through completely before starting. The parameters presented represent only one scenario and the results may differ when you run the examples.
 
 1. Go to <http://ood.discovery.neu.edu>. If prompted, sign in with your cluster username and password.
@@ -78,8 +77,7 @@ The cluster has MATLAB Parallel Server installed and this section details an exa
 Now MATLAB is configured to have jobs submitted to the HPC cluster and not run in the current session.
 
 ### Installation and Configuration of MATLAB on a Local Machine
-
-MATLAB can be configured on your local machine to submit jobs to the HPC cluster. To complete this, you will need to download the following directory from Github: [MATLAB Desktop Parallel Toolbox Setup]().
+MATLAB can be configured on your local machine to submit jobs to the HPC cluster. To complete this, you will need to download the following directory from Github: [MATLAB Desktop Parallel Toolbox Setup].
 
 In your desktop MATLAB instance, run:
 
@@ -87,7 +85,7 @@ In your desktop MATLAB instance, run:
 >> userpath
 ```
 
-and move the compressed directory you downloaded from Github to that location, and unzip the directory. To configure MATLAB to run parallel jobs on the cluster, run the following in the Command Window:
+and move the compressed directory you downloaded from Github to that location and unzip the directory. To configure MATLAB to run parallel jobs on the cluster, run the following in the Command Window:
 
 ```{code-block} matlab
 >> configCluster
@@ -97,7 +95,7 @@ and move the compressed directory you downloaded from Github to that location, a
 This only needs to be called once per version of MATLAB you are using to run jobs on the HPC cluster.
 ```
 
-Submitting jobs to the HPC cluster will require SSH credientials and you will be prompted for your username and password or a private SSH key. The username and/or location of the private key will be saved for future session in MATLAB.
+Submitting jobs to the HPC cluster will require SSH credentials and you will be prompted for your username and password or a private SSH key. The username and/or location of the private key will be saved for future session in MATLAB.
 
 Jobs will now default to running on the HPC cluster rather than submitting to your local machine.
 
@@ -109,8 +107,7 @@ To submit jobs to your local machine instead of the HPC cluster, run the followi
 ```
 
 ### Configuring Jobs
-
-Prior to submitting jobs to the HPC, various parameters can be assigned and adjusted for your job such as partition, email, job walltime, etc. 
+Prior to submitting jobs to the HPC, various parameters can be assigned and adjusted for your job such as partition, email, job walltime, etc.
 
 To get a handle on the cluster and the current configurations please run the following command in the Command Window:
 
@@ -149,7 +146,7 @@ If you need to unset a saved parameter, you can do the following in the Command 
 
 The following are optional fields that can be set and adjusted for the parcluster and include the following items.
 
-Specifying a constaint such as a CPU constraint ():
+Specifying a constaint such as a [CPU constraint](https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html#using-the-constraint-flag):
 
 ```{code-block} matlab
 >> % Specify a constraint 
@@ -163,7 +160,7 @@ Setting an email to receive updates on the SLURM job:
 >> c.AdditionalProperties.EmailAddress = 'user-id@northeastern.edu';
 ```
 
-Setting the number of GPUs used and the type of GPU ():
+Setting the number of GPUs used and the type of [GPU](https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html#gpu-hardware):
 
 ```{code-block} matlab
 >> % Specify number of GPUs (default: 0)
@@ -175,7 +172,7 @@ Setting the number of GPUs used and the type of GPU ():
 You need to make sure the partition you are submitting the job to is the `gpu` or `multigpu` partition of a private partition that has GPUs available.
 ```
 
-Selecting the partition () you want the job to run on the HPC cluster:
+Selecting the [partition](https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html#partitions) you want the job to run on the HPC cluster:
 
 ```{code-block} matlab
 >> % Specify the partition 
@@ -218,8 +215,7 @@ Setting the time for the job to run on the HPC cluster:
 You need to make sure the time matches the partition you are submitting to or the jobs will not run.
 ```
 
-### Using the MATLAB client interactively on the HPC cluster
-
+### Using the MATLAB Client Interactively on the HPC Cluster
 If you want to run an interactive pool job on the cluster we can use a `parpool` like above:
 
 ```{code-block} matlab
@@ -246,8 +242,7 @@ When you no longer need the pool, you can delete it and free up the resources wi
 >> pool.delete
 ```
 
-### Using the MATLAB with a batch job on the HPC cluster
-
+### Using the MATLAB with a Batch Job on the HPC Cluster
 You can use the `batch` command to submit passively running jobs to the HPC cluster from MATLAB. This command will return a job object that can be used to access the output of the submitted batch job. 
 
 ```{code-block} matlab
@@ -265,7 +260,6 @@ You can use the `batch` command to submit passively running jobs to the HPC clus
 
 >> % Delete the job after results are no longer needed
 >> job.delete
-
 ```
 
 To see the jobs that have been completed or still are running, you can call `parcluster` to return the cluster object that stores this information. Run the following command in the Command Window:
@@ -286,7 +280,6 @@ Once you locate the job, you can retrieve the results with `fetchOutputs` if you
 ```
 
 ### Parallel MATLAB Batch Job
-
 The `batch` command can also submit parallel workflows to the HPC cluster. As an example, save the following code to a MATLAB script called `parallel_example.m.`
 
 ```{code-block} matlab
@@ -337,7 +330,7 @@ This example took 8.89 seconds to run utilizing four workers. These jobs will al
 We can run the same simulation but increase the size of the Pool. We will retrieve the results later so we will keep the submitted job id as a reference.
 
 ```{note}
-
+Be careful with increasing the numbers of workers for your job because there can be a point where the returns on performance will diminish.
 ```
 
 ```{code-block} matlab 
@@ -429,7 +422,6 @@ ans =
 ```
 
 ### To Learn More
-
 To learn more about the MATLAB Parallel Computing Toolbox, checkout these resources:
 
 [Parallel Computing Overview](http://www.mathworks.com/products/parallel-computing/index.html)
