@@ -331,3 +331,53 @@ id =
 >> % Clear job from workspace (as though MATLAB exited)
 >> clear job
 ```
+
+You need to get a handle of the cluster and then you can use the `findJob` method to obtain information about the job:
+
+```{code-block} matlab
+>> % Get a handle to the cluster
+>> c = parcluster;
+
+>> % Find the old job
+>> job = c.findJob('ID', 4);
+
+>> % Retrieve the state of the job
+>> job.State
+ans = 
+finished
+>> % Fetch the results
+>> job.fetchOutputs{:};
+ans = 
+4.7270
+```
+
+This job ran for 4.73 seconds using 8 workers in MATLAB. You can run the code with different numbers of works to determine the ideal number of works for the job.
+
+You can also use the MATLAB GUI to obtain the results from the job using the Job Monitor found in the Parallel dropdown in the Home tab and select Monitor Jobs.
+
+:::{list-table}
+---
+header-rows: 1
+---
+* - Function
+  - Description
+  - Applies Only to Desktop
+* - clusterFeatures
+  - List of cluster features/constraints
+  - 
+* - clusterGpuCards
+  - List of cluster GPU cards
+  - 
+* - clusterPartitionNames
+  - List of cluster partition/queue names
+  - 
+* - disableArchiving
+  - Modify file archiving to resolve file mirroring issue
+  - true
+* - fixConnection
+  - Reestablish cluster connection (e.g., after reconnection of VPN)
+  - true
+* - willRun
+  - Explain why job is queued
+  - 
+:::
