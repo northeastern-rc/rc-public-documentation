@@ -157,7 +157,7 @@ The a100 GPUs come in two variants, 41 GB and 82 GB memory versions. If your job
 
 For srun
 
-`srun -p gpu --gres=gpu:a100:1 --constraint=a100@80 --pty /bin/bash`
+`srun -p gpu --gres=gpu:a100:1 --constraint=a100@80g --pty /bin/bash`
 
 and for sbatch
 ::::{code}
