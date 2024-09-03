@@ -7,8 +7,9 @@ Open OnDemand (OOD) is a web portal to the Discovery cluster. A Discovery accoun
 OOD provides you with several resources for interacting with the Discovery cluster:
 
 - Launch a terminal within your web browser without needing a separate terminal program. This is an advantage if you use Windows, as otherwise, you need to download and use a separately installed program, such as MobaXterm.
-- Use software applications like SAS Studio that run in your browser without further configuration. See {ref}`interactive-ood-apps` for more information.
-- View, download, copy, and delete files using the {ref}`file-explorer` feature.
+- Use software applications like SAS Studio that run in your browser without further configuration. 
+- View, download, copy, and delete files using the Files application.
+- See the [Research Computing website](https://rc.northeastern.edu/ood/) for a full list of applications offered on the OOD.
 
 % Watch this video for an overview of OOD. If you do not see any controls on the video, right-click on the video to see viewing options.
 

@@ -23,9 +23,6 @@ This command allocates resources and gives you a shell prompt on the allocated n
 - **Development and Testing**: Ideal for code development and testing.
 - **Short Tasks**: Best for tasks that require less time and immediate results.
 
-:::{seealso}
-ADD LINK for More Examples and Guides for Interactive Mode
-:::
 
 ## Batch Mode
 Batch mode enables users to write scripts that manage job execution, making it suitable for more complex or longer-running jobs.
@@ -41,8 +38,10 @@ A typical batch script includes directives for resource allocation, job names, a
 #SBATCH --time=01:00:00
 
 # Commands to execute
-module load my_program
-srun my_program.exe
+module load python/3.8.1
+
+python my_python_script.py
+
 :::
 
 Save this script with a `.sh` extension, e.g., my_script.sh.
@@ -69,9 +68,6 @@ Where `username` is your actual username.
 - **Scheduled Tasks**: Execute jobs at specific times or under certain conditions.
 - **Automated Workflows**: Manage complex workflows using multiple scripts.
 
-:::{seealso}
-ADD LINK for More Examples and Guides for Batch Mode
-:::
 
 Interactive and Batch modes cater to different needs and scenarios in the HPC environment. You can explore both modes to choose the one that best aligns with your tasks. For more detailed guides and support, please consult the above guides or contact our support team at <rchelp@northeastern.edu>.
 
