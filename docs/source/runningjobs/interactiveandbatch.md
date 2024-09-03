@@ -29,7 +29,7 @@ To see all options for `srun`, please refer to [srun manual] from SchedMD.
 
 You can tailor your request to fit both the needs of the job and the partition limits if you're familiar with the available [hardware](https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html#hardware-overview) and [partitions](https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html) on Discovery. 
 
-To request one node and one task for 30 minutes with X11 forwarding on the short partition, type:
+To request one node and one task for 30 minutes with X11 forwarding (check that you have [X11 forwarding](https://rc-docs.northeastern.edu/en/latest/gettingstarted/connectingtocluster/mac.html#x11-on-mac-os) setup) on the short partition, type:
 
 :::{code} bash
 srun --partition=short --nodes=1 --ntasks=1 --x11 --mem=2G --time=00:30:00 --pty /bin/bash
@@ -47,7 +47,7 @@ To request 2 nodes, each with 10 tasks per node and 2 CPUs per task (a total of 
 srun --partition=short --nodes=2 --ntasks 10 --cpus-per-task 2 --pty --mem=80G --time=01:00:00 /bin/bash
 :::
 
-To allocate a GPU node, you should specify the `gpu` partition and use the `–gres` option:
+To allocate a GPU node, you should specify the `gpu` partition and use the `--gres` option:
 
 :::{code} bash
 srun --partition=gpu --nodes=1 --ntasks=1 --gres=gpu:1 --mem=2Gb --time=01:00:00 --pty /bin/bash
@@ -55,7 +55,13 @@ srun --partition=gpu --nodes=1 --ntasks=1 --gres=gpu:1 --mem=2Gb --time=01:00:00
 
 (using-sbatch)=
 ## Batch Jobs: `sbatch` Command
-The `sbatch` command is used to submit a job script for passive execution. The script includes the `SBATCH` directives that control the job parameters (e.g., number of nodes, CPUs per task, job name). To submit the batch jobs, the following is run from the login node:
+The `sbatch` command is used to submit a job script for passive execution. The script includes the `SBATCH` directives that control the job parameters (e.g., number of nodes, CPUs per task, job name). A node is a single machine in the cluster allocated for computation, while a task is a unit of parallel work required from within the job. Not all programs are optimized to run on more than one node. We recommmend testing if increasing the number of tasks decreases job runtime prior to testing if increasing the number of nodes decreases runtime.
+
+:::{important}
+Remember for all requests to the scheduler, the more resources requested the longer your job may sit in the queue waiting for the allocation of those resources.
+:::
+
+To submit the batch jobs, the following is run from the login node:
 
 :::{code} bash
 sbatch [options]  <script_file>
@@ -63,10 +69,14 @@ sbatch [options]  <script_file>
 
 An example sbatch script for a job utilizing 2 nodes and 16 tasks per node:
 
+:::{note}
+Only use more than 1 node if your program is optimized for multi-nodal execution.
+:::
+
 :::{code} bash
 #!/bin/bash
 #SBATCH -J MyJob                            # Job name
-#SBATCH -N 1                                # Number of nodes
+#SBATCH -N 2                                # Number of nodes
 #SBATCH -n 16                               # Number of tasks
 #SBATCH -o output_%j.txt                    # Standard output file
 #SBATCH -e error_%j.txt                     # Standard error file
