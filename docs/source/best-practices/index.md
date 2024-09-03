@@ -30,7 +30,7 @@ Learn about storage quotas and how to manage your home directory effectively.
 :link: workquota
 :link-type: doc
 
-Learn about storage quotas and how to manage your home directory effectively.
+Learn about storage quotas and how to manage your work directory effectively.
 
 +++
 [Learn more »](workquota)
