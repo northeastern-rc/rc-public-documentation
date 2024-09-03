@@ -7,7 +7,7 @@ In our High-Performance Computing (HPC) environment, users can run jobs in two p
 ## Interactive Jobs: `srun` Command
 The `srun` command is used to submit an interactive job, which runs in a shell terminal. This method is useful when you want to test a short computation or run an interactive session like a shell, Python, or an R terminal.
 
-To start an `srun` session, the following syntex is used from the login node:
+To start an `srun` session, the following syntax is used from the login node:
 
 :::{code} bash
 srun [options] [command]
