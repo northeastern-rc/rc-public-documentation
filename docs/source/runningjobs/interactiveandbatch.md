@@ -23,11 +23,11 @@ srun -N 1 -n 1 -p short --pty bash
 - **`N, --nodes=<minnodes[-maxnodes]>`**: specify the number of nodes
 - **`p, --partition=<partition-name>`**: specify a partition for the job to run on
 
-To see all options for `srun`, please refer to [srun manual] from Schedmd.
+To see all options for `srun`, please refer to [srun manual] from SchedMD.
 
 ### Examples Using `srun`
 
-You can tailor your request to fit both the needs of the job and the partition limits if you're familiar with the available hardware and partitions on Discovery. 
+You can tailor your request to fit both the needs of the job and the partition limits if you're familiar with the available [hardware](https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html#hardware-overview) and [partitions](https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html) on Discovery. 
 
 To request one node and one task for 30 minutes with X11 forwarding on the short partition, type:
 
