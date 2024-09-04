@@ -9,14 +9,19 @@ There are several things you can do to prepare for a purge of /scratch.
 
 1. Transfer any materials that you need to save to /work or /home.
 
-    srun example
+   
+:::{code-block} srun example
+srun --pty /bin/bash
+mv /scratch/<username>/file/to/keep /home/<username>/
+:::
     sbatch example
-    
+
     Idealy this step is incorporated into your sbatch script and occurs after the job has been written. We provide an example of how to do this below.
 
-2. On the day of the /scratch purge you will not be able to write job outputs to /scratch. Please write outputs to /work.
 
-3. If you have jobs that continually write output to scratch and run for long periods of time, please make sure you are checkpointing, to allow the resumption of your jobs around the /scratch purge.
+2. On the day of the /scratch purge you will not be able to write job outputs to /scratch. Please edit your sbatch scripts to write outputs to /work.
+
+3. If you have jobs that continually write output to scratch and run for long periods of time, please make sure you are [checkpointing](https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html). This will allow the resumption of your jobs around the /scratch purge.
 
 ## What happens during a purge of /scratch ?
 
@@ -30,3 +35,7 @@ We will message via XX. You can also check if the below commands work:
 cd /scratch/<username>
 touch test-scratch
 :::
+
+## My files are too big to transfer to /home
+
+Home has a limit of 75GBs. If your usage in /scratch is greater than than for the files that you want to keep, please apply for a space in [/work]() or if you are a student request that your PI applies for /work. 
