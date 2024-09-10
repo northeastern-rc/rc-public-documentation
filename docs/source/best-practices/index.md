@@ -37,7 +37,7 @@ Learn about storage quotas and how to manage your work directory effectively.
 [Learn more »](workquota)
 :::
 
-:::{grid-item-card} {octicon}`file-removed;1.5em;screen-full` Prepare for a Purge of /scratch
+:::{grid-item-card} {octicon}`file-removed;1.5em;screen-full` Scratch Directory Purge
 :link: scratchpurge
 :link-type: doc
 
