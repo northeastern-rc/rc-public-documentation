@@ -52,7 +52,7 @@ Request a reservation devoted for the classroom, whether an entire curriculum or
 :::
 
 :::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Best Practices
-:link: best-practices/checkpointing
+:link: best-practices/index
 :link-type: doc
 
 Learn to optimize your projects by following some best practices.
