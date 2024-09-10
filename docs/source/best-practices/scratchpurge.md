@@ -1,5 +1,5 @@
 (scratch-directory-purge)=
-# Preparing for a /scratch purge
+# Scratch Directory Purge
 
 The space assigned to every user in /scratch/<username> is not meant for persistant storage and is purged every month by the Research Computing team. Files are not backed up in /scratch and as such important data or scripts need to be transfered quickly to /work or /home to be retained.
 
@@ -10,10 +10,11 @@ There are several things you can do to prepare for a purge of /scratch.
 1. Transfer any materials that you need to save to /work or /home.
 
    
-:::{code-block} srun example
+:::{code-block}
 srun --pty /bin/bash
 mv /scratch/<username>/file/to/keep /home/<username>/
 :::
+
     sbatch example
 
     Idealy this step is incorporated into your sbatch script and occurs after the job has been written. We provide an example of how to do this below.
