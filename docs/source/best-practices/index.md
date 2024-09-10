@@ -12,7 +12,7 @@ shell_environment
 clusterusage
 ```
 
-Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your home directory storage, checkpointing jobs, and cluster usage.
+Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your directory storage, checkpointing jobs, and cluster usage.
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
