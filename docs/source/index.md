@@ -58,7 +58,7 @@ Request a reservation devoted for the classroom, whether an entire curriculum or
 Learn to optimize your projects by following some best practices.
 
 +++
-[Learn more »](best-practices/checkpointing)
+[Learn more »](best-practices/index)
 :::
 
 ::::
