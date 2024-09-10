@@ -6,6 +6,7 @@
 
 homequota
 workquota
+scratchpurge
 checkpointing
 shell_environment
 clusterusage
@@ -34,6 +35,16 @@ Learn about storage quotas and how to manage your work directory effectively.
 
 +++
 [Learn more »](workquota)
+:::
+
+::{grid-item-card} {octicon}`repo-deleted;1.5em;screen-full` Prepare for a Purge of /scratch
+:link: scratchpurge
+:link-type: doc
+
+Learn how to use /scratch effectively, before and after a purge.
+
++++
+[Learn more »](scratchpurge)
 :::
 
 :::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Checkpointing Jobs
