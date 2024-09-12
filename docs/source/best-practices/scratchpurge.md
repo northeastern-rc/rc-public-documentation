@@ -1,7 +1,7 @@
 (scratch-directory-purge)=
 # Scratch Directory Purge
 
-The space assigned to every user in /scratch/<username> is not meant for persistant storage and is purged every month by the Research Computing team. Files are not backed up in /scratch and as such important data or scripts need to be transfered quickly to /work or /home to be retained.
+The space assigned to every user in `/scratch/<username>` is not meant for persistant storage and is purged every month by the Research Computing team. Files are not backed up in /scratch and as such important data or scripts need to be transfered quickly to /work or /home to be retained.
 
 The /scratch space is intended to provide temporary storage for jobs that produce a lot of output, not all of which will be retained.
 
