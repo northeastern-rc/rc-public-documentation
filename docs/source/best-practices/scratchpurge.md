@@ -3,27 +3,54 @@
 
 The space assigned to every user in `/scratch/<username>` is not meant for persistant storage and is purged every month by the Research Computing team. Files are not backed up in /scratch and as such important data or scripts need to be transfered quickly to /work or /home to be retained.
 
-:::{important}The /scratch space is intended to provide temporary storage for jobs that produce a lot of output, not all of which will be retained.
+:::{important}
+The /scratch space is intended to provide temporary storage for jobs that produce a lot of output, not all of which will be retained.
 :::
 
 There are several things you can do to prepare for a purge of /scratch.
 
 1. Transfer any materials that you need to save to /work or /home.
 
-   
 :::{code-block}
 srun --pty /bin/bash
-mv /scratch/<username>/file/to/keep /home/<username>/
+mv /scratch/<username>/file_to_keep.out /home/<username>/
 :::
 
-    sbatch example
+Here's a detailed sbatch example showing how to transfer files as soon as they are created.
 
-    Idealy this step is incorporated into your sbatch script and occurs after the job has been written. We provide an example of how to do this below.
+:::{code-block}
+!/bin/bash
 
+#SBATCH --nodes=1
+#SBATCH --time=01:00:00
+#SBATCH --partition=short
+#SBATCH --job-name=star
+#SBATCH --ntasks=1
+
+module load singularity/3.10.3
+
+cd /work/mygroup
+
+singularity exec -B "/work:/work" /shared/container_repository/star/star_2.7.8a.sif STAR \
+
+--genomeDIR /path/to/genome \
+--readFilesIn R1.fq R2.fq
+
+:::
 
 2. On the day of the /scratch purge you will not be able to write job outputs to /scratch. Please edit your sbatch scripts to write outputs to /work.
 
 3. If you have jobs that continually write output to scratch and run for long periods of time, please make sure you are [checkpointing](https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html). This will allow the resumption of your jobs around the /scratch purge.
+
+4. If you wish to retain entire directories that were generated in /scratch as part of a job output, you can tar the directory and move the compressed file to your /home or /work.
+
+:::{code-block}
+# First get on a compute node
+srun --pty /bin/bash
+tar czvf name_of_output.tar.gz /scratch/<username>/directory
+:::
+
+The code above can also be run in an sbatch job. Note, taring and compressing files can take time for large directories.
 
 ## What happens during a purge of /scratch ?
 
@@ -40,4 +67,4 @@ touch test-scratch
 
 ## My files are too big to transfer to /home
 
-Home has a limit of 75GBs. If your usage in /scratch is greater than than for the files that you want to keep, please apply for a space in [/work]() or if you are a student request that your PI applies for /work. 
+Home has a limit of 75GBs. If your usage in /scratch is greater than than for the files that you want to keep, please apply for a space in [/work](https://bit.ly/NURC-NewStorage) or if you are a student request that your PI applies for /work. Do this well in advance of the /scratch purge to ensure your files are saved.
