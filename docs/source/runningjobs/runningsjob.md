@@ -1,7 +1,7 @@
-(running-job-with-sjob)=
-# Running Jobs with sjob
+(running-job-with-job-assist)=
+# Running Jobs with job-assist
 
-The `sjob` command is designed to simplify the process of submitting jobs on the Discovery cluster using SLURM's `srun` and `sbatch` modes. It provides an intuitive interface for requesting resources and managing job submissions.
+The `job-assist` command is designed to simplify the process of submitting jobs on the Discovery cluster using SLURM's `srun` and `sbatch` modes. It provides an intuitive interface for requesting resources and managing job submissions on the cluster.
 
 ## Features
 
@@ -13,18 +13,25 @@ This command provides three modes of operation:
 | **Interactive** | To submit the job interactively with customized resource requests. |
 | **Batch**    | To generate and save `sbatch` scripts with specified parameters. |
 
-## Getting Started with sjob Command
+## Getting Started with job-assist Command
 
-To launch an interactive session, use the following command:
+#### Load the job-assist Module
 
 :::{code} bash
-sjob
+module load job-assist
+:::
+
+#### To launch an interactive session, use the following command:
+
+:::{code} bash
+job-assist
 :::
 
 This command will display a menu option with different modes of operation.
 
-::::{dropdown} Simple Example of the Menu Options
-:::{code-block} bash
+
+:::{code} bash
+#Simple Example of the Menu Options
 SLURM Menu:
 1. Default mode (srun --pty /bin/bash)
 2. Interactive Mode
@@ -32,22 +39,21 @@ SLURM Menu:
 4. Exit
 Enter your option:
 :::
-::::
 
 
 ### Default Mode
 
 This mode runs a basic SLURM job with the command:
 
-:::{code-block} bash
+:::{code} bash
 srun --pty /bin/bash
 :::
 
-By default the resource allocated is short partition with 2 CPUs, 1 task, 1 node, and 2GB of memory for a duration of 4 hours.
+By default, the resource allocated is short partition with 2 CPUs, 1 task, 1 node, and 2GB of memory for a duration of 4 hours.
 
 ::::{dropdown} Default Mode Example
 :::{code-block} bash
-[rc.computing@login-00 ~]$ sjob
+[rc.computing@login-00 ~]$ job-assist
 SLURM Menu:
 1. Default mode (srun --pty /bin/bash)
 2. Interactive Mode
@@ -64,7 +70,7 @@ srun: job 43910949 has been allocated resources
 
 ### Interactive Mode
 
-In this mode, `sjob` will guide you through the process of requesting resources interactively. You will be prompted to provide the following information:
+In this mode, `job-assist` guide you through interactively requesting resources. You will be prompted to provide the following information:
 
 - **Partition Name**: Choose from available partitions like `debug`, `express`, `short`, or `gpu`.
 - **Number of Nodes**: Specify the number of nodes required.
@@ -77,7 +83,7 @@ If you select the `gpu` partition, you will have the option to choose the type o
 
 ::::{dropdown} Interactive Mode Example
 :::{code-block} bash
-[rc.computing@login-00 ~]$ sjob
+[rc.computing@login-00 ~]$ job-assist
 SLURM Menu:
 1. Default mode (srun --pty /bin/bash)
 2. Interactive Mode
@@ -112,7 +118,7 @@ This mode allows you to create and save an `sbatch` script with your specific re
 
 ::::{dropdown} Batch Mode Example
 :::{code-block} bash
-[rc.computing@login-00 ~]$ sjob
+[rc.computing@login-00 ~]$ job-assist
 SLURM Menu:
 1. Default mode (srun --pty /bin/bash)
 2. Interactive Mode
@@ -139,10 +145,11 @@ Batch script saved to /home/<user-name>/batch-mode.sh
 
 :::{code-block} bash
 nano /home/<user-name>/batch-mode.sh
+#Replace <user-name> with your actual username in the path
 :::
 
 This creates a basic structure for the batch script to interpret with SLURM. You can edit it to add software, environment modules, and programs to execute.
 
 :::{tip}
-**Efficient Resource Usage**: Requesting only the resources you need (e.g., nodes, memory, CPUs) can help your job start sooner. Be mindful that requesting more CPUs or longer run times may lead to longer queue times.
+**Efficient Resource Usage**: Requesting only the resources you need (e.g., nodes, memory, CPUs) can help your job start sooner. Be mindful that requesting more CPUs or longer run times may result in longer queue times.
 :::
