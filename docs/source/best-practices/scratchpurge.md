@@ -11,31 +11,37 @@ There are several things you can do to prepare for a purge of /scratch.
 
 1. Transfer any materials that you need to save to /work or /home.
 
+Example using `srun`
+
 :::{code-block}
 srun --pty /bin/bash
 mv /scratch/<username>/file_to_keep.out /home/<username>/
 :::
 
-Here's a detailed sbatch example showing how to transfer files as soon as they are created.
+Example using taring and moving files via an sbatch script. You will need to copy the script below to a text file (e.g., tarmaker.sh) and submit it to the scheduler with the command sbatch tarmaker.sh
 
 :::{code-block}
 !/bin/bash
 
 #SBATCH --nodes=1
-#SBATCH --time=01:00:00
+#SBATCH --time=05:00:00
 #SBATCH --partition=short
-#SBATCH --job-name=star
+#SBATCH --job-name=tar
 #SBATCH --ntasks=1
 
-module load singularity/3.10.3
+# compress the directory that you need with tar
 
-cd /work/mygroup
+tar cvzf filename.tar.gz /scratch/<username>/output/path
 
-singularity exec -B "/work:/work" /shared/container_repository/star/star_2.7.8a.sif STAR \
+# if statement to check if tar.gz file exists, delete the output path
 
---genomeDIR /path/to/genome \
---readFilesIn R1.fq R2.fq
+FILE=filename.tar.gz
 
+if [ -f $FILE ]; then
+    echo "File $FILE exists."
+    mv /scratch/$FILE /work/<groupname>/myimportantdata
+
+fi
 :::
 
 2. On the day of the /scratch purge you will not be able to write job outputs to /scratch. Please edit your sbatch scripts to write outputs to /work.
