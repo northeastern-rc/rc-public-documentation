@@ -5,6 +5,7 @@
 :maxdepth: 3
 
 homequota
+workquota
 checkpointing
 shell_environment
 clusterusage
@@ -23,6 +24,16 @@ Learn about storage quotas and how to manage your home directory effectively.
 
 +++
 [Learn more »](homequota)
+:::
+
+:::{grid-item-card} {octicon}`check-circle;1.5em;screen-full` Work Directory Storage Quota
+:link: workquota
+:link-type: doc
+
+Learn about storage quotas and how to manage your work directory effectively.
+
++++
+[Learn more »](workquota)
 :::
 
 :::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Checkpointing Jobs
