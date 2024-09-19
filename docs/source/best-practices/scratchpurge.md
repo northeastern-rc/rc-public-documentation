@@ -18,30 +18,23 @@ srun --pty /bin/bash
 mv /scratch/<username>/file_to_keep.out /home/<username>/
 :::
 
-Example using taring and moving files via an sbatch script. You will need to copy the script below to a text file (e.g., tarmaker.sh) and submit it to the scheduler with the command sbatch tarmaker.sh
+Example moving files via an `sbatch` script.
+
+You will need to copy the script below to a text file (e.g., filemover.sh) and submit it to the scheduler with the command `sbatch filemover.sh`
 
 :::{code-block}
-!/bin/bash
+#!/bin/bash
 
 #SBATCH --nodes=1
 #SBATCH --time=05:00:00
 #SBATCH --partition=short
-#SBATCH --job-name=tar
+#SBATCH --job-name=moveit
 #SBATCH --ntasks=1
-
-# compress the directory that you need with tar
-
-tar cvzf filename.tar.gz /scratch/<username>/output/path
 
 # if statement to check if tar.gz file exists, delete the output path
 
-FILE=filename.tar.gz
+mv /scratch/file_to_keep /work/<groupname>/myimportantdata
 
-if [ -f $FILE ]; then
-    echo "File $FILE exists."
-    mv /scratch/$FILE /work/<groupname>/myimportantdata
-
-fi
 :::
 
 2. On the day of the /scratch purge you will not be able to write job outputs to /scratch. Please edit your sbatch scripts to write outputs to /work.
