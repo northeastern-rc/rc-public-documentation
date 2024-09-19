@@ -41,15 +41,22 @@ mv /scratch/file_to_keep /work/<groupname>/myimportantdata
 
 3. If you have jobs that continually write output to scratch and run for long periods of time, please make sure you are [checkpointing](https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html). This will allow the resumption of your jobs around the /scratch purge.
 
-4. If you wish to retain entire directories that were generated in /scratch as part of a job output, you can tar the directory and move the compressed file to your /home or /work.
+4. If you wish to retain entire directories that were generated in /scratch as part of a job output, you can tar the directory first and move the compressed file to your /home or /work. We recommned only doing this if the directory will not be opened often as for large or many files taring and untaring can be time consuming.
 
 :::{code-block}
 # First get on a compute node
 srun --pty /bin/bash
+
 tar czvf name_of_output.tar.gz /scratch/<username>/directory
+
+mv /scratch/name_of_output.tar.gz /work/<groupname>/files_to_keep
 :::
 
-The code above can also be run in an sbatch job. Note, taring and compressing files can take time for large directories.
+The code above can also be run in an `sbatch` job.
+
+:::{note}
+Taring and compressing files can take time for large directories.
+:::
 
 ## What happens during a purge of /scratch ?
 
@@ -57,7 +64,7 @@ All files are removed during a /scratch purge. Previously the Resesarch Computin
 
 ## How do I know /scratch is usable again following the /scratch purge?
 
-We will message via XX. You can also check if the below commands work:
+We will message via email when the scratch purge is finished. You can also check for updates on You can also check if the below commands work:
 
 :::{code-block}
 cd /scratch/<username>
