@@ -49,7 +49,7 @@ srun --pty /bin/bash
 
 tar czvf name_of_output.tar.gz /scratch/<username>/directory
 
-mv /scratch/name_of_output.tar.gz /work/<groupname>/files_to_keep
+mv /scratch/<username>/name_of_output.tar.gz /work/<groupname>/files_to_keep
 :::
 
 The code above can also be run in an `sbatch` job.
