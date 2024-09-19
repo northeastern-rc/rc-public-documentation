@@ -45,11 +45,11 @@ Run jobs interactively or submit batch scripts for later execution.
 [Learn more »](interactiveandbatch)
 :::
 
-:::{grid-item-card} {octicon}`cpu;1.5em;screen-full` Running Jobs with sjob
+:::{grid-item-card} {octicon}`cpu;1.5em;screen-full` Running Jobs with job-assist
 :link: runningsjob
 :link-type: doc
 
-SLURM job submissions with sjob command.
+SLURM job submissions with job-assist command.
 
 +++
 [Learn more »](runningsjob)
