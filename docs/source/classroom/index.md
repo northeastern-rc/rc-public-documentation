@@ -1,10 +1,9 @@
 # Classroom Resources
 ```{toctree}
 :hidden:
-:maxdepth: 4
+:maxdepth: 3
 
 class_guide
-class_use
 cheatsheet
 cps_ood
 ```
