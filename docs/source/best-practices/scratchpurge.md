@@ -37,17 +37,17 @@ mv /scratch/file_to_keep /work/<groupname>/myimportantdata
 
 :::
 
-2. On the day of the /scratch purge you will not be able to write job outputs to /scratch. Please edit your sbatch scripts to write outputs to /work.
+2. On the day of the /scratch purge you will not be able to write job outputs to /scratch. Please edit your sbatch scripts to write outputs to /work or to /home.
 
 3. If you have jobs that continually write output to scratch and run for long periods of time, please make sure you are [checkpointing](https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html). This will allow the resumption of your jobs around the /scratch purge.
 
-4. If you wish to retain entire directories that were generated in /scratch as part of a job output, you can tar the directory first and move the compressed file to your /home or /work. We recommned only doing this if the directory will not be opened often as for large or many files taring and untaring can be time consuming.
+4. If you wish to retain entire directories that were generated in /scratch as part of a job output, you can tar the directory first and move the compressed file to your /home or /work. We recommmend only doing this if the directory will not be opened often as for large or many files taring and untaring can be time consuming.
 
 :::{code-block}
 # First get on a compute node
 srun --pty /bin/bash
 
-tar czvf name_of_output.tar.gz /scratch/<username>/directory
+tar -czvf name_of_output.tar.gz /scratch/<username>/directory
 
 mv /scratch/<username>/name_of_output.tar.gz /work/<groupname>/files_to_keep
 :::
@@ -60,7 +60,7 @@ Taring and compressing files can take time for large directories.
 
 ## What happens during a purge of /scratch ?
 
-All files are removed during a /scratch purge. Previously the Resesarch Computing team removed files that had been in /scratch for more than 28 days without being edited. Now we remove *all* files. This saves space for the proper function of the filesystem for all users.
+Files and directories are removed during a /scratch purge. This saves space for the proper function of the filesystem for all users.
 
 ## How do I know /scratch is usable again following the /scratch purge?
 
