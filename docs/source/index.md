@@ -34,7 +34,7 @@ A dedicated platform for researchers, scholars, and students to access, learn, a
 :::{grid-item-card} {octicon}`video;1.5em;screen-full` Open OnDemand (OOD)
 :link: https://rc.northeastern.edu/ood/
 
-OOD provides a various available software interactively through your favorite browser.
+OOD provides interactive software (e.g, Rstudio, Jupyterlab, VSCode) connected to the cluster.
 
 +++
 [Learn more »](https://rc.northeastern.edu/ood/)
