@@ -44,7 +44,7 @@ OOD provides interactive software (e.g, Rstudio, Jupyterlab, VSCode) connected t
 :link: classroom/index
 :link-type: doc
 
-Request use of the cluster for your class, including CPU, GPU, and storage.
+Request use of the HPC for your class, including CPU, GPU, and storage.
 
 +++
 [Learn more »](classroom/index)
