@@ -38,17 +38,17 @@ A dedicated platform for researchers, scholars, and students to access, learn, a
 OOD provides a various available software interactively through your favorite browser.
 
 +++
-[Learn more »](using-ood/introduction)
+[Learn more »](https://rc.northeastern.edu/ood/)
 :::
 
 :::{grid-item-card} {octicon}`plug;1.5em;sd-mr-1` Classroom Integration
 :link: classroom/class_use
 :link-type: doc
 
-Request a reservation devoted for the classroom, whether an entire curriculum or specific assignments and lessons.
+Request use of the cluster for your class, including CPU, GPU, and storage.
 
 +++
-[Learn more »](classroom/class_use)
+[Learn more »](https://rc-docs.northeastern.edu/en/latest/classroom/index.html)
 :::
 
 :::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Best Practices
