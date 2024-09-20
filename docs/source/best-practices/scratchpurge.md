@@ -64,7 +64,7 @@ Files and directories are removed during a /scratch purge. This saves space for 
 
 ## How do I know /scratch is usable again following the /scratch purge?
 
-We will message via email when the scratch purge is finished. You can also check for updates on You can also check if the below commands work:
+We will message via email when the scratch purge is finished. You can also check for updates on the Research Computing [website](https://rc.northeastern.edu/status-updates/). Additionaly, you can also check if the below commands work without error:
 
 :::{code-block}
 cd /scratch/<username>
