@@ -90,6 +90,7 @@ Getting Started <gettingstarted/index>
 :hidden:
 :caption: User Guides
 
+connectingtocluster/index
 hardware/index
 using-ood/index
 runningjobs/index
