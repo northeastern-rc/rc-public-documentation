@@ -24,13 +24,6 @@ Read our guide on teaching or taking a course on the NU HPC.
 +++
 [Learn more »](class_guide)
 :::
-:::{grid-item-card} {octicon}`question;1.5em;sd-mr-1` Courses FAQ
-:link: class_use
-:link-type: doc
-
-Frequently asked questions about courses on the NU HPC.
-+++
-[Learn more »](class_use)
 :::
 :::{grid-item-card} {octicon}`note;1.5em;sd-mr-1` Courses Cheetsheet
 :link: cheatsheet
