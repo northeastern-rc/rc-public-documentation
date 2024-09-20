@@ -61,7 +61,11 @@ Use the following procedure if you need to install a MATLAB toolbox:
 1. You can now use the toolbox within MATLAB. When you are done, type `quit`.
 
 ## Using MATLAB Parallel Server
-### Configuration of MATLAB client on the HPC
+
+:::{tab-set}
+::{tab-item} MATLAB on OOD
+Configuration of MATLAB client on the HPC
+
 The cluster has MATLAB Parallel Server installed and this section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox on the HPC. This walkthrough uses MATLAB R2023a launched as an interactive app on the [Open OnDemand](ood.discovery.neu.edu) web portal. There are several parts to this walkthrough so we suggest that you read it through completely before starting. The parameters presented represent only one scenario and the results may differ when you run the examples.
 
 1. Go to <http://ood.discovery.neu.edu>. If prompted, sign in with your cluster username and password.
@@ -75,8 +79,10 @@ The cluster has MATLAB Parallel Server installed and this section details an exa
 1. Once MATLAB is open, click on the Home tab, click Parallel > Discover Clusters... to discover the profile. Note, this is valid for R2023a and newer. Alternatively, you can create a cluster profile to run parallel jobs by running `configCluster` in the Command Window. Note: `configCluster` should only be called once on the HPC.
 
 Now MATLAB is configured to have jobs submitted to the HPC cluster and not run in the current session.
+::
+:: {tab-item} MATLAB on a Local Machine
+Installation and Configuration of MATLAB on a Local Machine
 
-### Installation and Configuration of MATLAB on a Local Machine
 MATLAB can be configured on your local machine to submit jobs to the HPC cluster. To complete this, you will need to download the following directory from Github: [MATLAB Desktop Parallel Toolbox Setup](https://github.com/northeastern-rc/matlab-configuration-scripts).
 
 In your desktop MATLAB instance, run:
@@ -105,6 +111,8 @@ To submit jobs to your local machine instead of the HPC cluster, run the followi
 >> % Get a handle to the local resources
 >> c = parcluster('local');
 ```
+::
+:::
 
 ### Configuring Jobs
 Prior to submitting jobs to the HPC, various parameters can be assigned and adjusted for your job such as partition, email, job walltime, etc.
