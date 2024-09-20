@@ -19,7 +19,7 @@ Read our guide on teaching or taking a course on the NU HPC.
 +++
 [Learn more »](class_guide)
 :::
-:::
+
 :::{grid-item-card} {octicon}`note;1.5em;sd-mr-1` Courses Cheetsheet
 :link: cheatsheet
 :link-type: doc
@@ -36,7 +36,6 @@ Instructions for opening a jupyterlab session for students and instructors in CP
 +++
 [Learn more »](cps_ood)
 :::
-::::
 
 ---
 Leveraging HPC in the classroom can enrich the learning experience, allowing students to tackle real-world problems. Explore this section to understand how you can make the most of our HPC resources for educational purposes. For further assistance, please contact our educational support team at <rchelp@northeastern.edu> or consult our {ref}`faq`.
