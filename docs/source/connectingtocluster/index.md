@@ -1,5 +1,5 @@
-(connect-to-cluster)=
 # Connecting To Cluster
+
 ```{toctree}
 :hidden:
 
