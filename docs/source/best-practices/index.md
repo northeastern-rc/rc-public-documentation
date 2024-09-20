@@ -5,12 +5,14 @@
 :maxdepth: 3
 
 homequota
+workquota
+scratchpurge
 checkpointing
 shell_environment
 clusterusage
 ```
 
-Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your home directory storage, checkpointing jobs, and cluster usage.
+Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your directory storage, checkpointing jobs, and cluster usage.
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
@@ -23,6 +25,26 @@ Learn about storage quotas and how to manage your home directory effectively.
 
 +++
 [Learn more »](homequota)
+:::
+
+:::{grid-item-card} {octicon}`check-circle;1.5em;screen-full` Work Directory Storage Quota
+:link: workquota
+:link-type: doc
+
+Learn about storage quotas and how to manage your work directory effectively.
+
++++
+[Learn more »](workquota)
+:::
+
+:::{grid-item-card} {octicon}`file-removed;1.5em;screen-full` Scratch Directory Purge
+:link: scratchpurge
+:link-type: doc
+
+Learn how to use /scratch effectively, before and after a purge.
+
++++
+[Learn more »](scratchpurge)
 :::
 
 :::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Checkpointing Jobs

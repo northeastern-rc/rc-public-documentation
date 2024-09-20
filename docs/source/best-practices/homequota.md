@@ -7,22 +7,6 @@ There are strict quotas for each {term}`home directory` (i.e., `/home/<username>
 All commands on this page should be run from a {term}`compute node` because they are CPU-intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
 :::
 
-## Analyze Disk Usage
-From a compute node, run the following command from your `/home/<username>` directory:
-:::{code-block} bash
-du -shc .[^.]* ~/*
-:::
-
-This command will output the size of each file, directory, and hidden directory in your `/home/<username>` space, with the total of your `/home` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location (e.g., `/work` for research) or back up and delete them if they are no longer required. An example output would look like:
-:::{code-block} shell
-[<username>@<host> directory]$  du -shc .[^.]* ~/*
-39M     .git
-106M    discovery-examples
-41K     README.md
-3.3M    software-installation
-147M    total
-:::
-
 ## Utilize /work and /scratch
 Use `/work` for long-term storage. PIs can request a folder in `/work` via [New Storage Space Request] and additional storage via [Storage Space Extension Request]. Utilize `/scratch/<username>` for temporary or intermediate files. Then, move files from `/scratch` to `/work` for persistent storage (i.e., the recommended workflow).
 
@@ -30,7 +14,7 @@ Use `/work` for long-term storage. PIs can request a folder in `/work` via [New 
 Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See {ref}`data-storage` for information on `/work` and `/scratch`.
 :::
 
-### How To Check Your Quotas
+## How To Check Your Quotas
 You can see exactly how much of your quota is being used in your /work, /scratch, or your /home directories by running the check-quota script from any node in the short partition.
 
 First, launch a job on a node in the short partition.
@@ -61,6 +45,26 @@ Directory <> has the following quota:
 
 :::{warning}
 You will only be able to see quotas of directories to which you have access; attempting to see quotas for directories that you don't have access to will be logged.
+:::
+
+## Analyze Disk Usage
+To evaluate directory level usage you can use the command `du`. From a compute node, run the following command from your `/home/<username>` directory:
+:::{code-block} bash
+du -shc .[^.]* ~/*
+:::
+
+This command will output the size of each file, directory, and hidden directory in your `/home/<username>` space, with the total of your `/home` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location (e.g., `/work` for research) or back up and delete them if they are no longer required. An example output would look like:
+:::{code-block} shell
+[<username>@<host> directory]$  du -shc .[^.]* ~/*
+39M     .git
+106M    discovery-examples
+41K     README.md
+3.3M    software-installation
+147M    total
+:::
+
+;;;{note}
+The `du` command can take a few minutes to run in `/home/<username>`
 :::
 
 ## Cleaning Directories
