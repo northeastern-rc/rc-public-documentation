@@ -33,7 +33,6 @@ A dedicated platform for researchers, scholars, and students to access, learn, a
 
 :::{grid-item-card} {octicon}`video;1.5em;screen-full` Open OnDemand (OOD)
 :link: https://rc.northeastern.edu/ood/
-:link-type: doc
 
 OOD provides a various available software interactively through your favorite browser.
 
