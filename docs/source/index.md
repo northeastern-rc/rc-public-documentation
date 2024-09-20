@@ -32,7 +32,7 @@ A dedicated platform for researchers, scholars, and students to access, learn, a
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`video;1.5em;screen-full` Open OnDemand (OOD)
-:link: using-ood/introduction
+:link: https://rc.northeastern.edu/ood/
 :link-type: doc
 
 OOD provides a various available software interactively through your favorite browser.
@@ -42,13 +42,13 @@ OOD provides a various available software interactively through your favorite br
 :::
 
 :::{grid-item-card} {octicon}`plug;1.5em;sd-mr-1` Classroom Integration
-:link: classroom/class_use
+:link: classroom/index
 :link-type: doc
 
 Request use of the cluster for your class, including CPU, GPU, and storage.
 
 +++
-[Learn more »](https://rc-docs.northeastern.edu/en/latest/classroom/index.html)
+[Learn more »](classroom/index)
 :::
 
 :::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Best Practices
