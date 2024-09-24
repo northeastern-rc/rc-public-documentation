@@ -64,7 +64,7 @@ Use the following procedure if you need to install a MATLAB toolbox:
 
 ::::::{tab-set}
 :::::{tab-item} MATLAB on OOD
-Configuration of MATLAB client on the HPC
+**Configuration of MATLAB client on the HPC**
 
 The cluster has MATLAB Parallel Server installed and this section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox on the HPC. This walkthrough uses MATLAB R2023a launched as an interactive app on the [Open OnDemand](ood.discovery.neu.edu) web portal. There are several parts to this walkthrough so we suggest that you read it through completely before starting. The parameters presented represent only one scenario and the results may differ when you run the examples.
 
@@ -76,12 +76,12 @@ The cluster has MATLAB Parallel Server installed and this section details an exa
 
 1. If necessary, adjust the **Compression** and **Image Quality**, and then click **Launch MATLAB**.
 
-1. Once MATLAB is open, click on the Home tab, click Parallel > Discover Clusters... to discover the profile. Note, this is valid for R2023a and newer. Alternatively, you can create a cluster profile to run parallel jobs by running `configCluster` in the Command Window. Note: `configCluster` should only be called once on the HPC.
+1. Once MATLAB is open, click on the Home tab, click Parallel > Discover Clusters... to discover the profile. This will open a window where you should select 'on your network' and click next and then select 'Discovery' and click finished. Note, this is valid for R2023a and newer. Alternatively, you can create a cluster profile to run parallel jobs by running `configCluster` in the Command Window. Note: `configCluster` should only be called once on the HPC.
 
 Now MATLAB is configured to have jobs submitted to the HPC cluster and not run in the current session.
 :::::
 :::::{tab-item} MATLAB on a Local Machine
-Installation and Configuration of MATLAB on a Local Machine
+**Installation and Configuration of MATLAB on a Local Machine**
 
 MATLAB can be configured on your local machine to submit jobs to the HPC cluster. To complete this, you will need to download the following directory from Github: [MATLAB Desktop Parallel Toolbox Setup](https://github.com/northeastern-rc/matlab-configuration-scripts).
 
@@ -177,7 +177,7 @@ Setting the number of GPUs used and the type of [GPU](https://rc-docs.northeaste
 ```
 
 ```{note}
-You need to make sure the partition you are submitting the job to is the `gpu` or `multigpu` partition of a private partition that has GPUs available.
+If you need a GPU, you need to make sure the partition you are submitting the job to is the `gpu` or `multigpu` partition or a private partition that has GPUs available.
 ```
 
 Selecting the [partition](https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html#partitions) you want the job to run on the HPC cluster:
@@ -202,7 +202,7 @@ Setting exclusive use of the node:
 ```
 
 ```{note}
-The exclusive node option can increase your wait time in the queue so only user if required.
+The exclusive node option can increase your wait time in the queue so only use if required.
 ```
 
 If you are running the job on a reservation that has be setup:
