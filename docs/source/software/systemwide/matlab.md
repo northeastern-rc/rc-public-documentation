@@ -76,7 +76,7 @@ The cluster has MATLAB Parallel Server installed and this section details an exa
 
 1. If necessary, adjust the **Compression** and **Image Quality**, and then click **Launch MATLAB**.
 
-1. Once MATLAB is open, click on the Home tab, click Parallel > Discover Clusters... to discover the profile. This will open a window where you should select 'on your network' and click next and then select 'Discovery' and click finished. Note, this is valid for R2023a and newer. Alternatively, you can create a cluster profile to run parallel jobs by running `configCluster` in the Command Window. Note: `configCluster` should only be called once on the HPC.
+1. Once MATLAB is open, click on the Home tab, click Parallel > Discover Clusters... to discover the profile. This will open a window where you should select 'on your network' and click next and then select 'Discovery' and click finished. Note, this is valid for R2023a and newer. You can create a cluster profile to run parallel jobs by running `configCluster` in the Command Window. Note: `configCluster` should only be called once on the HPC.
 
 Now MATLAB is configured to have jobs submitted to the HPC cluster and not run in the current session.
 :::::
