@@ -220,7 +220,7 @@ Setting the time for the job to run on the HPC cluster:
 ```
 
 ```{note}
-You need to make sure the time fits within the max time allowed on the [partition] you are submitting to or the jobs will not run.
+You need to make sure the time fits within the max time allowed on the [partition](https://rc.northeastern.edu/partitions/) you are submitting to or the jobs will not run.
 ```
 
 ### Using the MATLAB Client Interactively on the HPC Cluster
@@ -433,9 +433,13 @@ ans =
 To learn more about the MATLAB Parallel Computing Toolbox, checkout these resources:
 
 [Parallel Computing Overview](http://www.mathworks.com/products/parallel-computing/index.html)
+
 [Parallel Computing Documentation](http://www.mathworks.com/help/distcomp/index.html)
+
 [Parallel Computing Coding Examples](https://www.mathworks.com/help/parallel-computing/examples.html)
+
 [Parallel Computing Tutorials](http://www.mathworks.com/products/parallel-computing/tutorials.html)
+
 [Parallel Computing Videos](http://www.mathworks.com/products/parallel-computing/videos.html)
+
 [Parallel Computing Webinars](http://www.mathworks.com/products/parallel-computing/webinars.html)
-[partition](https://rc.northeastern.edu/partitions/)
