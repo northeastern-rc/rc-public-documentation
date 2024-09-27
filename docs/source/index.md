@@ -32,33 +32,32 @@ A dedicated platform for researchers, scholars, and students to access, learn, a
 :gutter: 1 1 1 2
 
 :::{grid-item-card} {octicon}`video;1.5em;screen-full` Open OnDemand (OOD)
-:link: using-ood/introduction
-:link-type: doc
+:link: https://rc.northeastern.edu/ood/
 
-OOD provides a various available software interactively through your favorite browser.
+OOD provides interactive software (e.g, Rstudio, Jupyterlab, VSCode) connected to the cluster.
 
 +++
-[Learn more »](using-ood/introduction)
+[Learn more »](https://rc.northeastern.edu/ood/)
 :::
 
 :::{grid-item-card} {octicon}`plug;1.5em;sd-mr-1` Classroom Integration
-:link: classroom/class_use
+:link: classroom/index
 :link-type: doc
 
-Request a reservation devoted for the classroom, whether an entire curriculum or specific assignments and lessons.
+Request use of the HPC for your class, including CPU, GPU, and storage.
 
 +++
-[Learn more »](classroom/class_use)
+[Learn more »](classroom/index)
 :::
 
 :::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Best Practices
-:link: best-practices/checkpointing
+:link: best-practices/index
 :link-type: doc
 
 Learn to optimize your projects by following some best practices.
 
 +++
-[Learn more »](best-practices/checkpointing)
+[Learn more »](best-practices/index)
 :::
 
 ::::
@@ -90,6 +89,7 @@ Getting Started <gettingstarted/index>
 :hidden:
 :caption: User Guides
 
+connectingtocluster/index
 hardware/index
 using-ood/index
 runningjobs/index
