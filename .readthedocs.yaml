@@ -9,8 +9,6 @@ build:
   os: "ubuntu-22.04"
   tools:
     python: "3.11"
-  environment:
-    DISABLE_SPHINX_MANIPULATION: "1"
 
 # Build from the docs/source directory with Sphinx
 sphinx:
