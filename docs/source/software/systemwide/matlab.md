@@ -154,7 +154,7 @@ If you need to unset a saved parameter, you can do the following in the Command 
 
 The following are optional fields that can be set and adjusted for the parcluster and include the following items.
 
-Specifying a constaint such as a [CPU constraint](https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html#using-the-constraint-flag):
+Specifying a constaint such as a [CPU constraint](https://rc.northeastern.edu/compute/):
 
 ```{code-block} matlab
 >> % Specify a constraint 
@@ -168,7 +168,7 @@ Setting an email to receive updates on the SLURM job:
 >> c.AdditionalProperties.EmailAddress = 'user-id@northeastern.edu';
 ```
 
-Setting the number of GPUs used and the type of [GPU](https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html#gpu-hardware):
+Setting the number of GPUs used and the type of [GPU](https://rc.northeastern.edu/compute/):
 
 ```{code-block} matlab
 >> % Specify number of GPUs (default: 0)
@@ -180,7 +180,7 @@ Setting the number of GPUs used and the type of [GPU](https://rc-docs.northeaste
 If you need a GPU, you need to make sure the partition you are submitting the job to is the `gpu` or `multigpu` partition or a private partition that has GPUs available.
 ```
 
-Selecting the [partition](https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html#partitions) you want the job to run on the HPC cluster:
+Selecting the [partition](https://rc.northeastern.edu/partitions/) you want the job to run on the HPC cluster:
 
 ```{code-block} matlab
 >> % Specify the partition 
