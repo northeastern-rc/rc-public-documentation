@@ -6,7 +6,6 @@
 :maxdepth: 3
 
 slurmcommands
-slurmrunningjobs
 slurmmonitoringandmanaging
 slurmarray
 ```
@@ -19,9 +18,6 @@ You can also use Slurm on the Discovery cluster for functionalities such as {ref
 ::::{grid} 3
 :::{grid-item-card} {ref}`slurm-commands`
 Basic Slurm commands that are used for running, monitoring, and canceling jobs.
-:::
-:::{grid-item-card} {ref}`slurm-running-jobs`
-Advanced usage and explanation of `srun` and `sbatch` for running jobs.
 :::
 :::{grid-item-card} {ref}`slurm-monitoring-and-managing`
 Learn the advanced usage and explanation of `squeue`, `scancel`, and `sinfo` for monitoring jobs.

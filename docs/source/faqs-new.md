@@ -29,3 +29,28 @@ We recommend loading other scripts/environments after your main environment has 
 ::::{dropdown} Can I install my software on the HPC cluster?
 Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {ref}`from-source` sections. If you encounter any issues, contact Research Computing. To contact RC, see {ref}`getting-help`.
 ::::
+
+::::{dropdown} How to Resolve the "Error: C++17 standard requested but CXX17 is not defined" When Installing a Package in R?
+1. Ensure that you have the GCC version 11.1.0 module loaded. Run the following command
+:::{code-block} shell
+module load gcc/11.1.0
+:::
+      
+2. Later create a .R/Makevars file to add compiler flags using following commands.
+:::{code-block} shell
+mkdir -p ~/.R
+nano ~/.R/Makevars
+::: 
+
+3. Next, make sure to add the following flags in the file.
+::: {code-block}
+CXX17 = g++ -std=c++17 -fPIC
+CXX17STD = -std=c++17
+PKG_CXXFLAGS = -std=c++17 -fPIC
+PKG_LIBS = -fPIC
+::: 
+
+5. Now try to install the desired package.
+
+6. If you are using a different version of GCC, adjust the module load command accordingly (e.g., module load gcc/9.3.0).
+::::

@@ -49,6 +49,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
    InfiniBand (IB)
       A high-speed networking technology commonly used in HPC clusters. It provides high bandwidth and low latency communication between nodes in the cluster, facilitating fast data transfer for parallel processing.
 
+   Interactive Job
+      An interactive job lets you interact directly with a compute node in real-time. This is helpful for testing, debugging, or running applications that require user input. When you submit an interactive job, you gain access to a shell on the compute node, where you can execute commands and run scripts just as you would on your local machine. This is particularly helpful for iterative testing and development tasks that benefit from immediate feedback and adjustments.
+
    Job
       A set of computations a user submits to the HPC cluster for execution.
 
@@ -85,6 +88,9 @@ This glossary provides definitions for terms and abbreviations you may encounter
    Node Allocation
       The process of reserving a set of nodes for a specific job, ensuring that the required resources are available for successful execution.
 
+   Non-interactive job
+      A non-interactive job (sbatch job) is a task submitted to a compute cluster that runs without the need for real-time user input. These jobs are defined by scripts that specify all the parameters and commands required for execution and do not provide a direct interface for user interaction during execution.
+
    Open OnDemand (OOD)
       A web-based interface for accessing and managing HPC resources. It provides users a user-friendly way to submit jobs, manage files, and utilize cluster resources through a web browser.
 
@@ -108,6 +114,29 @@ This glossary provides definitions for terms and abbreviations you may encounter
 
    Resource Reservation
       The process of specifying resources required for a job in advance to ensure availability and prevent resource conflicts.
+
+   Scaling efficiency
+      Scaling efficiency measures how effectively a computing task can be parallelized across multiple processors or GPUs. It is calculated by comparing the execution time of a task on a single core with the time taken when using multiple cores. The formula for calculating scaling efficiency is:
+.. math::
+
+   S\eta = \frac{T_1}{N \times T_n}
+
+Where:
+
+- :math:`S\eta` is the scaling efficiency
+- :math:`T_1` is the execution time on a single processor
+- :math:`N` is the number of processors used
+- :math:`T_n` is the execution time on N processors
+
+For example, if :math:`T_1 = 100` seconds, :math:`N = 4` processors, and :math:`T_n = 25` seconds, the scaling efficiency would be:
+
+.. math::
+
+   S\eta = \frac{100}{4 \times 25} = 1
+
+A scaling efficiency of 1 (or 100%) indicates perfect linear scaling, which is the ideal case where using N processors reduces the execution time by a factor of N.
+
+
 
    Scheduling Policy
       A set of rules and algorithms used by the scheduler to determine the order in which jobs are executed based on their priority, resource requirements, and other factors.

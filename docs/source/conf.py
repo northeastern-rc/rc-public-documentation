@@ -17,6 +17,18 @@ from datetime import date
 # sys.path.insert(0, os.path.abspath('.'))
 
 
+# -- Sphinx Context Injection Deprecation --------------------------------
+
+# Set canonical URL from the Read the Docs Domain
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+ 
+# Tell Jinja2 templates the build is running on Read the Docs
+html_context = {}
+
+if os.environ.get("READTHEDOCS", "") == "True":
+    html_context["READTHEDOCS"] = True
+
+
 # -- Project information -----------------------------------------------------
 
 project = "RC-HPC"
@@ -138,7 +150,7 @@ html_theme_options = {
             "class": "",
         },
     ],
-    "announcement": announcement_html,
+    #"announcement": announcement_html,
     "sidebar_hide_name": True,
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
