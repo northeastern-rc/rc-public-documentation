@@ -109,8 +109,7 @@ The following instructions to build LAMMPS using `make`.
    #SBATCH -n 8
    #SBATCH -p short
 
-   module load gcc/11.1.0
-   module openmpi/4.1.2-gcc11.1
+   module load OpenMPI/4.1.6
 
    export PATH=/home/$USER/lammps-stable_29Aug2024/src:$PATH
 
@@ -122,8 +121,7 @@ The following instructions to build LAMMPS using `make`.
 
    ::::{code-block} bash
    #!/bin/bash
-   module load gcc/11.1.0
-   module openmpi/4.1.2-gcc11.1
+   module load OpenMPI/4.1.6
 
    export PATH=/home/$USER/lammps-stable_29Aug2024/src:$PATH
    ::::
