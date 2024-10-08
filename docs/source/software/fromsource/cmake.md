@@ -91,19 +91,10 @@ The following instructions to build LAMMPS using cmake.
    wget https://github.com/lammps/lammps/archive/refs/tags/stable_29Aug2024.tar.gz
    tar -xvf stable_29Aug2024.tar.gz 
    ::::
-1. Download the source code to LAMMPS:
-   ::::{code-block} bash
-   cd ~
-   wget https://github.com/lammps/lammps/archive/refs/tags/stable_29Aug2024.tar.gz
-   tar -xvf stable_29Aug2024.tar.gz 
-   ::::
 1. Load the required modules required for building LAMMPS:
    ::::{code-block} bash
-
-   # module load gcc/11.1.0  # In case a different version of gcc is needed
-   module OpenMPI/4.1.6
+   module load OpenMPI/4.1.6
    module load cmake/3.30.2
-
    ::::
 1. For LAMMPS, you will need to create and use the build directory with the following command:
    ::::{code-block} bash
