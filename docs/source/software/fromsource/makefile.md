@@ -74,25 +74,68 @@ source ~/.bashrc
 {ref}`cmake-lammps-example`
 :::
 :::{note}
-There are no configure options used and the information is stored within the makefiles `mylammps/MAKE` in the `make.serial` and `make.mpi` files.
+There are no configure options used and the information is stored within the makefiles `MAKE` directory inside of the LAMMPS source code in the `make.serial` and `make.mpi` files.
 :::
 :::
-The following instructions to build LAMMPS using make.
+The following instructions to build LAMMPS using `make`.
 1. To allocate an interactive job on compute node type:
    ::::{code-block} bash
    srun -N 1 -n 28 --constraint=ib --pty /bin/bash
    ::::
 1. Load the following modules required for building LAMMPS:
    ::::{code-block} bash
-   module load openmpi/4.0.5
-   module load python/3.6.6
-   module load gcc/9.2.0
+   module load gcc/11.1.0
+   module openmpi/4.1.2-gcc11.1
    ::::
-1. Change the directory to the `src` directory using the command `cd /path/to/mylammps/src`
+1. Download the source code to LAMMPS:
+   ::::{code-block} bash
+   cd ~
+   wget https://github.com/lammps/lammps/archive/refs/tags/stable_29Aug2024.tar.gz
+   tar -xvf stable_29Aug2024.tar.gz 
+   ::::
+1. Change the directory to the `src` directory using the command `cd lammps-stable_29Aug2024/src`
 1. Use the following command to build serial version or the MPI version of LAMMPS depending on the requirement. This will generate `lmp_serial` binary for a serial build and `lmp_mpi` for an MPI build.
    ::::{code-block} bash
+   make yes-most
    make serial
    make mpi
    ::::
+1. To use the LAMMPS build, you will need to setup your environment so the binaries are in your PATH. This can be completed by including the following export statement in your sbatch script or have it as a script that you can source in your job script:
+   ::::{code-block} bash
+   #!/bin/bash
+   #SBATCH -N 1
+   #SBATCH -n 8
+   #SBATCH -p short
 
-Now you can start running the program, using `./lmp_serial` or `mpirun -n 1 ./lmp_mpi -h`.
+   module load gcc/11.1.0
+   module openmpi/4.1.2-gcc11.1
+
+   export PATH=/home/$USER/lammps-stable_29Aug2024/src:$PATH
+
+   cd ~
+   mpirun -n 8 lmp_mpi -in /home/$USER/lammps-stable_29Aug2024/examples/melt/in.melt
+   ::::
+
+   or create the following script in your `$HOME` called `lammps_env.sh`
+
+   ::::{code-block} bash
+   #!/bin/bash
+   module load gcc/11.1.0
+   module openmpi/4.1.2-gcc11.1
+
+   export PATH=/home/$USER/lammps-stable_29Aug2024/src:$PATH
+   ::::
+
+   and modify your sbatch job script to source this environment file that will setup your environment for your job:
+
+   ::::{code-block} bash
+   #!/bin/bash
+   #SBATCH -N 1
+   #SBATCH -n 8
+   #SBATCH -p short
+   
+   source /home/$USER/lammps_env.sh
+
+   cd ~
+   mpirun -n 8 lmp_mpi -in /home/$USER/lammps-stable_29Aug2024/examples/melt/in.melt
+   ::::
