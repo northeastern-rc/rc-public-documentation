@@ -13,7 +13,7 @@ The `/scratch` space is only for temporary storage; this storage is not backed u
 :::
 
 **$HOME:** `/home/<username>` where `username` is your NU login, e.g., `/home/j.smith`
-- **Description:** All users are automatically given a `/home` when their account is created. This storage is mainly intended for storing relatively small files such as script files, source code, and software installation files. Storage in `/home` is backed up and replicated. `/home` also has a small quota, so you should frequently check your [`/home` space usage](https://rc-docs.northeastern.edu/en/latest/best-practices/homequota.html). 
+- **Description:** All users are automatically given a `/home` when their account is created. This storage is mainly intended for storing relatively small files such as script files, source code, and software installation files. Storage in `/home` is backed up and replicated. `/home` also has a small quota, so you should frequently [check your `/home` space usage](https://rc-docs.northeastern.edu/en/latest/best-practices/homequota.html). 
 - **Quota:** 75GB
 
 **Scratch:** `/scratch/<username>`
@@ -22,7 +22,7 @@ The `/scratch` space is only for temporary storage; this storage is not backed u
 
 **Work:** `/work/<groupname>`
 - **Description:** Research groups can request additional storage on `/work`. A PI can request this extra storage through the [New Storage Space Request]. This is permanent, persistent, and long-term storage for storing data actively used for research. It can be accessed by all members of the research group who have the necessary access permissions, facilitating collaboration and seamless sharing of data within the group.
-- **Quota:** Each PI can request up to **35TB** and **7.5 million inodes** of complimentary storage summed across all `/work` they own. We recomend [compressing directories in `/work`](https://rc-docs.northeastern.edu/en/latest/best-practices/workquota.html) if they are not in regular use. 
+- **Quota:** Each PI can request up to **35 TB** and **7.5 million inodes** of complimentary storage summed across all `/work` they own. We recommend [compressing directories in `/work`](https://rc-docs.northeastern.edu/en/latest/best-practices/workquota.html) if they are not in regular use. 
 - **Access Request:** Students with research groups can request access to the PI’s storage on `/work`. To expedite the request process, we recommend that you inform the group owner that they will be receiving an email requesting their permission to grant you access to `/work` before you submit the request.
 
 1. To request access to `/work`, students can either create a  [ServiceNow ticket with RC] or email [rchelp@northeastern.edu](mailto:rchelp%40northeastern.edu) to automatically generate a ticket in ServiceNow. Please include both the storage space name and the PI’s name.
@@ -47,7 +47,7 @@ If you are not connected to the campus internet, you must be connected to the un
 [FAQ: VPN and remote access]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013983>
 [New Storage Space Request]: https://bit.ly/NURC-NewStorage
 [OneDrive]: https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012764
-[Policy page]: https://rc.northeastern.edu/policy/
+[Policy page]: https://rc.northeastern.edu/research-projects-storage-space-policy/
 [schedule a storage consultation]: https://rc.northeastern.edu/support/consulting
 [ServiceNow ticket with RC]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0a0bfc5adb9f1fc075892f17d4961993
 [Sharepoint]: https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012695
