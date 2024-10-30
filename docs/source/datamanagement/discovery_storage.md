@@ -2,14 +2,16 @@
 
 # Data Storage Options
 
-RC is responsible for procuring and maintaining several data storage options, including active and archive storage solutions. If you are affiliated with Northeastern, you can request one or more storage solutions to meet your needs. If you anticipate needing storage as part of a grant requirement, please [schedule a storage consultation] with an RC staff member to understand what storage options best meet your research needs.
+Research Computing is responsible for procuring and maintaining data storage options, including active and archive storage solutions. If you are affiliated with Northeastern, you can request one or more storage solutions to meet your needs. If you anticipate needing storage as part of a grant requirement, please [schedule a storage consultation] with an RC staff member to understand what storage options best meet your research needs.
+
+If you find that you need more than the allotted complimentary storage, please refer to the [Research Projects Storage Space Policy] page for more information about Active and Archival storage costs.
 
 ## Active Storage
 
 Two main storage systems are connected to Northeastern's HPC cluster: `/home` and `/scratch`; these options have specific quotas and limitations. The list below details the storage options available on the HPC cluster if you have an account. Every individual with an account has a `/home` and `/scratch`. While research groups can request additional storage on the `/work` storage system, `/work` storage is not currently provisioned for individuals.
 
 :::{important}
-The `/scratch` space is only for temporary storage; this storage is not backed up. Please review the `/scratch` policy on our [Policy page].
+The `/scratch` space is only for temporary storage; this storage is not backed up. Please review the `/scratch` policy on our [Scratch Space Policy page].
 :::
 
 **$HOME:** `/home/<username>` where `username` is your NU login, e.g., `/home/j.smith`
@@ -30,25 +32,22 @@ The `/scratch` space is only for temporary storage; this storage is not backed u
 - **Default Permission:** By default, users are given read and write access when added to `/work`. However, specific permissions might be granted at the PI’s request.
 
 
-:::{attention}
-The `/research` storage tier is no longer provided. Please contact Research Computing if you are a former user of `/research` and have questions or issues related to `/research` by [submitting a ticket]. Other storage options include `/work`, [Sharepoint], and [OneDrive].
-:::
-
 ##  Archival Storage
 
 :::{important}
-If you are not connected to the campus internet, you must be connected to the university's {term}`VPN` (i.e., GlobalProtect) before accessing the `/nese` system. You can find detailed information about downloading and using the GlobalProtect VPN in the [FAQ: VPN and remote access].
+If you are not connected to the campus internet, you must be connected to the university's {term}`VPN` (i.e., GlobalProtect) before accessing the `/nese` system. You can find detailed information about downloading and using the GlobalProtect VPN in the [How do I connect to Northeastern VPN?].
 :::
 
 **NAME:** `/nese`
 - **Description:** This is archival, non-permanent storage intended for researchers needing a long-term storage option for their data.
 - **Quota:** A PI can request this storage through the [New Storage Space Request].
 
-[FAQ: VPN and remote access]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0013983>
+[How do I connect to Northeastern VPN?]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB000017951
 [New Storage Space Request]: https://bit.ly/NURC-NewStorage
 [OneDrive]: https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012764
-[Policy page]: https://rc.northeastern.edu/policy/
-[schedule a storage consultation]: https://rc.northeastern.edu/support/consulting
+[Scratch Space Policy page]: https://rc.northeastern.edu/policies-scratch-space-policy/
+[schedule a storage consultation]: https://rc.northeastern.edu/support/gettinghelp/
 [ServiceNow ticket with RC]: https://service.northeastern.edu/tech?id=sc_cat_item&sys_id=0a0bfc5adb9f1fc075892f17d4961993
-[Sharepoint]: https://service.northeastern.edu/tech?id=kb_article&sysparm_article=KB0012695
+[Sharepoint]: https://service.northeastern.edu/tech?id=kb_article_view&sysparm_article=KB0012695
 [submitting a ticket]: https://bit.ly/NURC-Assistance
+[Research Projects Storage Space Policy]: https://rc.northeastern.edu/research-projects-storage-space-policy/
