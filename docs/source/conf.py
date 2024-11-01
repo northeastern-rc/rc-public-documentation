@@ -157,7 +157,7 @@ html_theme_options = {
     "dark_logo": "image/nu-logo-dark.png",
     "source_repository": "https://github.com/northeastern-rc/rc-public-documentation",
     "source_branch": "master",
-    "source_directory": "docs/",
+    "source_directory": "docs/source/",
 }
 
 # custom css file
