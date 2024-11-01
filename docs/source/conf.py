@@ -155,6 +155,9 @@ html_theme_options = {
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
     "dark_logo": "image/nu-logo-dark.png",
+    "source_repository": "https://github.com/northeastern-rc/rc-public-documentation",
+    "source_branch": "master",
+    "source_directory": "docs/",
 }
 
 # custom css file
