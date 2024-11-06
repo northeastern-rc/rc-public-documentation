@@ -27,7 +27,7 @@ You are now connected to Explorer at a login node.
 |                                                           |
 | The Research Computing Team                               |
 +-----------------------------------------------------------+
-[s.caplins@explorer-02 ~]$
+[s.falken@explorer-02 ~]$
 
 :::
 
