@@ -26,15 +26,6 @@ Learn how our job scheduler manages the distribution of computational tasks.
 +++
 [Learn more »](understandingqueuing)
 :::
-
-:::{grid-item-card} {octicon}`checklist;1.5em;sd-mr-1` Job Scheduling Policies and Priorities
-:link: jobscheduling
-:link-type: doc
-
-Gain insights into how jobs are prioritized and scheduled within the system.
-
-+++
-[Learn more »](jobscheduling)
 :::
 
 :::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Interactive and Batch Mode

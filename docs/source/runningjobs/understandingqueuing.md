@@ -8,7 +8,7 @@ The queuing system in a high-performance computing (HPC) environment manages and
 
 The Slurm scheduler manages jobs in the queue. When you submit a job via the commands `srun` or `sbatch`, it gets placed in the queue. The scheduler then assigns the resources you requested (e.g., number of CPUs, memory, and GPUs) to the job when they become available, according to the job's priority and the available resources.
 
-## Scheduling Policies**
+## Scheduling Policies
 
 Our cluster uses a fair-share scheduling policy. This means that usage is tracked for each user or group, and the system attempts to balance resource allocation over time. If a user or group has been using many resources, their job priority may be temporarily reduced to allow others to use the system. Conversely, users or groups that have used fewer resources will have their jobs prioritized.
 
@@ -28,7 +28,7 @@ Each job in the queue has a state. The main job states are:
 
 A complete list of job states can be found in the Slurm documentation.
 
-## Tips for Efficient Queue Usage**
+## Tips for Efficient Queue Usage
 
 - Request only the resources you need: Overestimating your job's requirements can result in longer queue times.
 - Break up large jobs: Large jobs tend to wait in the queue longer than small jobs. Break up large jobs into smaller ones.
