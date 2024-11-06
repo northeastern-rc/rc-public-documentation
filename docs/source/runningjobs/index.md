@@ -9,6 +9,7 @@ understandingqueuing
 jobscheduling
 interactiveandbatch
 runningsjob
+slurmarray
 ```
 Running jobs efficiently is at the heart of a successful experience with our High-Performance Computing (HPC) cluster. This section outlines the essential aspects of executing various types of jobs, understanding the queuing system, and troubleshooting.
 
@@ -53,6 +54,15 @@ SLURM job submissions with job-assist command.
 
 +++
 [Learn more »](runningsjob)
+:::
+
+:::{grid-item-card} {octicon}`cpu;1.5em;screen-full` Slurm Arrays
+:link: slurmarray
+:link-type: doc
+An introduction and use cases for Slurm job arrays for launching a large series of jobs.
+
++++
+[Learn more »](slurmarray)
 :::
 
 ::::
