@@ -1,4 +1,4 @@
-# Connecting To Cluster
+# Connecting To The Cluster
 
 ```{toctree}
 :hidden:

@@ -1,7 +1,7 @@
 (connecting-on-linux)=
 # Connecting on Linux
 
-Linux computers come with a Secure Shell (SSH) program called Terminal that you use to connect to the HPC using SSH. If you need to use software that uses a GUI, such as Matlab or Maestro, make sure to use the -Y option in the second step below using X11 forwarding.
+Linux computers come with a Secure Shell (SSH) program called Terminal that you use to connect to the HPC using SSH. If you need to use software that uses a GUI, such as MATLAB or Maestro, make sure to use the -Y option in the second step below using X11 forwarding.
 
 ## Connecting to the Cluster on Linux
 
@@ -19,7 +19,7 @@ You are now connected to Explorer at a login node.
 /_____//_/|_/_/   /_____/\____/_/ |_/_____/_/ |_|
 
 +-----------------------------------------------------------+
-| You're now connected to the Explorer cluster. Visit our   |
+| You are now connected to the Explorer cluster. Visit our   |
 | website http://rc.northeastern.edu/support for links to   |
 | our service catalog, documentation, training, and consul- |
 | tations. You can also email us at rchelp@northeastern.edu |
