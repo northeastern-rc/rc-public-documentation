@@ -7,6 +7,7 @@
 
 understandingqueuing
 jobscheduling
+slurmmonitoringandmanaging
 interactiveandbatch
 runningsjob
 slurmarray
@@ -44,6 +45,9 @@ Run jobs interactively or submit batch scripts for later execution.
 
 +++
 [Learn more »](interactiveandbatch)
+:::
+:::{grid-item-card} {ref}`slurm-monitoring-and-managing`
+Learn the advanced usage and explanation of `squeue`, `scancel`, and `sinfo` for monitoring jobs.
 :::
 
 :::{grid-item-card} {octicon}`cpu;1.5em;screen-full` Running Jobs with job-assist
