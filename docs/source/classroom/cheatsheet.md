@@ -1,6 +1,6 @@
 (courses-cheatsheet)=
 # Courses Cheatsheet
-:::{rubric} {download}`Download Courses Cheatsheet <../_resources/Explorer_CheatSheet_Courses.pdf>`
+:::{rubric} {download}`Download Courses Cheatsheet <../_resources/Explorer_CheatSheat_Courses.pdf>`
 :::
 
 
