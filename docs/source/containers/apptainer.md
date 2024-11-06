@@ -36,7 +36,7 @@ Here’s an `srun` example using an apptainer image from the /shared/container_r
 
 ```bash
 srun -p rc --pty /bin/bash
-apptainer run -B "/projects:/projects" /shared/container_repository/explorer/star/star_2.7.8a.sif
+apptainer run -B "/projects:/projects" /shared/container_repository/explorer/star/star_2.7.10b.sif
 
 Apptainer>
 
@@ -70,7 +70,7 @@ An example sbatch script
 
 cd /projects/mygroup
 
-apptainer exec -B "/work:/work" /shared/container_repository/explorer/star/star_2.7.8a.sif STAR \
+apptainer exec -B "/work:/work" /shared/container_repository/explorer/star/star_2.7.10b.sif STAR \
 
 --genomeDIR /path/to/genome \
 --readFilesIn R1.fq R2.fq
