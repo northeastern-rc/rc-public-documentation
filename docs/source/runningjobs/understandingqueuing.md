@@ -29,7 +29,7 @@ Each job in the queue has a state. The main job states are:
 
 A complete list of job states can be found in the Slurm documentation.
 
-## Tips for Efficient Queue Usage**
+## Tips for Efficient Queue Usage
 
 - Request only the resources you need: Overestimating your job's requirements can result in longer queue times.
 - Break up large jobs: Large jobs tend to wait in the queue longer than small jobs. Break up large jobs into smaller ones.
