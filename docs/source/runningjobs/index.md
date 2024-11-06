@@ -46,8 +46,13 @@ Run jobs interactively or submit batch scripts for later execution.
 +++
 [Learn more »](interactiveandbatch)
 :::
-:::{grid-item-card} {ref}`slurm-monitoring-and-managing`
+:::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Monitoring and Managing your Jobs
+:link: slurmmonitoringandmanaging
+:link-type: doc
+
 Learn the advanced usage and explanation of `squeue`, `scancel`, and `sinfo` for monitoring jobs.
++++
+[Learn more »](slurmmonitoringandmanaging)
 :::
 
 :::{grid-item-card} {octicon}`cpu;1.5em;screen-full` Running Jobs with job-assist
