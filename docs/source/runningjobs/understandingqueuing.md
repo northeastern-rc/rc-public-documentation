@@ -27,7 +27,7 @@ Each job in the queue has a state. The main job states are:
 - Running (R): The job is currently running.
 - Completed (CG): The job has been completed successfully.
 
-A complete list of job states can be found in the Slurm documentation.
+A complete list of job states can be found in the ([Slurm documentation](https://slurm.schedmd.com/documentation.html)).
 
 ## Tips for Efficient Queue Usage
 
