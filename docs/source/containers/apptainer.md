@@ -1,10 +1,10 @@
 (apptainer)=
 # Apptainer on Explorer
 
-Apptainer is the container runtime engine for the Explorer cluster and is installed system wide on every node. With Apptainer, you can run existing containers or pull and run your own custom container. 
+Apptainer is the container runtime engine for the Explorer cluster and is installed system-wide on every node. With Apptainer, you can run existing containers or pull and run your own custom container.
 
 :::{note}
-The commands `apptainer` and `singularity` can be used interchangibly on the explorer cluster. 
+The commands `apptainer` and `singularity` can be used interchangibly on the Explorer cluster.
 :::
 
 ## How to run a container with Apptainer
@@ -13,9 +13,9 @@ You can run a container image with the `run` or `exec` commands after moving to 
 
 To see available the apptainer version run this in the command line:
 
-:::{code-block}bash
+```bash
 apptainer version
-:::
+```
 
 
 :::{important}
@@ -35,7 +35,7 @@ We have several container images located in /shared/container_repository/explore
 Here’s an `srun` example using an apptainer image from the /shared/container_repository/explorer
 
 ```bash
-srun -p rc --pty /bin/bash
+srun -p short --pty /bin/bash
 apptainer run -B "/projects:/projects" /shared/container_repository/explorer/star/star_2.7.10b.sif
 
 Apptainer>
@@ -70,7 +70,7 @@ An example sbatch script
 
 cd /projects/mygroup
 
-apptainer exec -B "/work:/work" /shared/container_repository/explorer/star/star_2.7.10b.sif STAR \
+apptainer exec -B "/projects:/projects" /shared/container_repository/explorer/star/star_2.7.10b.sif STAR \
 
 --genomeDIR /path/to/genome \
 --readFilesIn R1.fq R2.fq
@@ -102,7 +102,7 @@ More about the spades metagenome assembler image can be found [here](https://hub
 
 ```bash
 
- srun --constraint=ib -p rc --pty /bin/bash
+ srun --constraint=ib -p short --pty /bin/bash
  cd /projects/groupname/container_images
  mkdir -p cache tmp
  export APPTAINER_CACHEDIR=$(pwd)/cache 
