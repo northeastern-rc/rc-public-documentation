@@ -5,6 +5,7 @@
 
 class_guide
 cheatsheet
+cps_ood
 ```
 
 High-Performance Computing (HPC) is not only for researchers; it is an integral part of modern education. In this section, we offer guidance for instructors and students who want to use our HPC resources in the classroom.
@@ -22,13 +23,21 @@ Read our guide on teaching or taking a course on the NU HPC.
 [Learn more »](class_guide)
 :::
 
-:::{grid-item-card} {octicon}`note;1.5em;sd-mr-1` Courses Cheatsheet
+:::{grid-item-card} {octicon}`note;1.5em;sd-mr-1` Courses Cheetsheet
 :link: cheatsheet
 :link-type: doc
 
 A one-page guide to common unix commands, OOD troubleshooting tips, and more.
 +++
 [Learn more »](cheatsheet)
+:::
+:::{grid-item-card} {octicon}`globe;1.5em;sd-mr-1` CPS Class Instructions
+:link: cps_ood
+:link-type: doc
+
+Instructions for opening a jupyterlab session for students and instructors in CPS
++++
+[Learn more »](cps_ood)
 :::
 ::::
 ---
