@@ -175,7 +175,7 @@ To deactivate the environment, type `conda deactivate`. You can type this comman
 (conda-and-bashrc)=
 ## Conda and `.bashrc`
 
-In addition to editing your `.bashrc` file as outlined in the example above, programs you install can also modify your `.bashrc` file. For example, if you follow the procedure outlined in {ref}`mini-conda`, there may be a section added to your `.bashrc` file (if you didn't use the `-b` batch option) that automatically loads your conda environment every time you sign in to Discovery. See the figure below for an example of this:
+In addition to editing your `.bashrc` file as outlined in the example above, programs you install can also modify your `.bashrc` file. For example, if you follow the procedure outlined in {ref}`mini-conda`, there may be a section added to your `.bashrc` file (if you didn't use the `-b` batch option) that automatically loads your conda environment every time you sign in to Explorer. See the figure below for an example of this:
 
 :::{code} bash
 # .bashrc

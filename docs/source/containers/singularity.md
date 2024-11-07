@@ -1,7 +1,7 @@
 (singularity)=
-# Singularity on Discovery
+# Singularity on Explorer
 
-Singularity is the container runtime engine for the Discovery cluster and is installed as a module. With Singularity, you can run existing containers or pull and run your own custom container.
+Singularity is the container runtime engine for the Explorer cluster and is installed as a module. With Singularity, you can run existing containers or pull and run your own custom container.
 
 ## How to run a container with Singularity
 
@@ -12,7 +12,7 @@ To see available singularity versions run this in the command line: module avail
 :::{important}
  The `--bind` or `-B` flag
 
-It's important to mount the directories in the Discovery cluster to the container image so you can access necessary input data and to output the results of your software to the directory you specify.
+It's important to mount the directories in the Explorer cluster to the container image so you can access necessary input data and to output the results of your software to the directory you specify.
 
 For example, this command will allow you to access your directories on /work and /scratch while running the container.
 
@@ -113,7 +113,7 @@ More about the spades metagenome assembler image can be found [here](https://hub
 This container image can now be used as in the srun and sbatch examples above.
 
 :::{note}
-Pulling container images to the Discovery cluster can contribute to your storage use in /home. If a cache and tmp directory aren't created and exported as in the example above, these items will be deposited in a hidden directory in your home at .singularity. 
+Pulling container images to the Explorer cluster can contribute to your storage use in /home. If a cache and tmp directory aren't created and exported as in the example above, these items will be deposited in a hidden directory in your home at .singularity. 
 
 Please check your home storage usage regularily to stay below the quota.
 See {ref}`home-directory-storage-quota` for more.

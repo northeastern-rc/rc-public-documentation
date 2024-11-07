@@ -28,6 +28,9 @@ html_context = {}
 if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
 
+# Show Edit button
+html_show_sourcelink = True
+html_copy_source = True
 
 # -- Project information -----------------------------------------------------
 
@@ -155,6 +158,9 @@ html_theme_options = {
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
     "dark_logo": "image/nu-logo-dark.png",
+    "source_repository": "https://github.com/northeastern-rc/rc-public-documentation",
+    "source_branch": "master",
+    "source_directory": "docs/source/",
 }
 
 # custom css file

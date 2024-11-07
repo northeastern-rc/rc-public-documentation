@@ -16,14 +16,14 @@ This consistency also allows for more collaboration, allowing researchers to sha
 
 Containers also simplify software dependency issues by isolating software and its dependencies from the underlying HPC environment. This reduces project conflicts and makes managing different software versions much more accessible. 
 
-We recommend using containers on the HPC because they provide isolation from the HPC environment and complete control of the software environment to the researcher. Many technologies exist that could be used for containerization, including Docker, Podman, and Singularity/Apptainer. On Discovery, we use Singularity as the containerization engine, however, Singularity can work with containers built with Docker or Podman.
+We recommend using containers on the HPC because they provide isolation from the HPC environment and complete control of the software environment to the researcher. Many technologies exist that could be used for containerization, including Docker, Podman, and Singularity/Apptainer. On Explorer, we use Singularity as the containerization engine, however, Singularity can work with containers built with Docker or Podman.
 
 
 ::::{grid} 1 2 3 4
 :gutter: 1 1 1 2
 
 
-:::{grid-item-card} {octicon}`book;1.5em;sd-mr-1` Singularity on Discovery
+:::{grid-item-card} {octicon}`book;1.5em;sd-mr-1` Singularity on Explorer
 :link: singularity
 :link-type: doc
  
