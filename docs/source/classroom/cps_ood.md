@@ -15,16 +15,16 @@ Due to problems with launching OOD on **Safari**, we recommend using **Google Ch
 ## Open JupyterLab For Classes
 
 :::{important}
-The class instructor needs to fill in the: [Discovery Classroom Use Request] You will only be able to find your class resources if a request was already made.
+The class instructor needs to fill in the [HPC Classroom Use Request](https://bit.ly/NURC-Classroom) You will only be able to find your class resources if a request was already made.
 :::
 
 1. In a web browser, go to <http://ood.explorer.northeastern.edu>. Login with your NU credentials.
 
-1. Under the **Courses** menu, select your Class Name (For example: **ALY6080 JupyterLab**).
+2. Under the **Courses** menu, select your Class Name (For example: **ALY6080 JupyterLab**).
 
-1. Select the default options and click **Launch**. Wait until the session is successfully created and ready to be launched (turns green).
+3. Select the default options and click **Launch**. Wait until the session is successfully created and ready to be launched (turns green).
 
-1. For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab will launch.
+4. For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab will launch.
 
     ::::{note}
     If **Working Directory** is left blank, the session will launch in the main class folder (in this example `/courses/ALY6080.202335/data`). Alternatively, start the session directly from your personal working directory by entering: `/courses/ALY6080.202335/students/[username]`, where `[username]` is your Northeastern username. The instructions below assume the field is left blank.
@@ -44,7 +44,7 @@ The class instructor needs to fill in the: [Discovery Classroom Use Request] You
     The above file tree represents the folder structure for the `ALY6080.202335` course.
     ::::
 
-1. Click **Connect to Jupyter** to open JupyterLab. This will open a JupyterLab interface in another tab.
+5. Click **Connect to Jupyter** to open JupyterLab. This will open a JupyterLab interface in another tab.
 
 :::{caution}
 Select **Cancel** when prompted with the **Build Recommended** option. The package jupyterlab-dash does not require a build, and will not work when build is enabled.
