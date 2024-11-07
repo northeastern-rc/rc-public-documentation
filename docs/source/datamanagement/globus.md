@@ -65,22 +65,22 @@ After you have an account and set up a personal endpoint using Globus Connect pe
 
 ### Using the Northeastern endpoint
 
-To access the Northeastern endpoint on Globus, on the Globus web app, click **File Manager**, then in the **Collection** text box, type Northeastern. The endpoints owned by Northeastern University are displayed in the collection area. The general Northeastern endpoint is `Discovery Cluster`. This collection is a Managed Mapped Collection (GCS) hosted on dtn-03.rc.northeastern.edu. Using the File Manager interface, you can easily change directories, switch the direction of transferring to and from, and specify options such as transferring only new or changed files. Below is a procedure for transferring files from Discovery to your personal computer, but with the flexibility of the File Manager interface, you can adjust the endpoints, file view, direction of the transfer, and many other options.
+To access the Northeastern endpoint on Globus, on the Globus web app, click **File Manager**, then in the **Collection** text box, type Northeastern. The endpoints owned by Northeastern University are displayed in the collection area. The general Northeastern endpoint is `Discovery Cluster`. This collection is a Managed Mapped Collection (GCS) hosted on dtn-03.rc.northeastern.edu. Using the File Manager interface, you can easily change directories, switch the direction of transferring to and from, and specify options such as transferring only new or changed files. Below is a procedure for transferring files from Explorer to your personal computer, but with the flexibility of the File Manager interface, you can adjust the endpoints, file view, direction of the transfer, and many other options.
 
-**To transfer files from Discovery to your personal computer, do the following**
+**To transfer files from Explorer to your personal computer, do the following**
 
 1. Create an endpoint on your computer using the procedure above "Install Globus Connect," if you have not done so already.
 1. In the File Manager on the Globus web app, in the **Collections** textbox, type Discovery Cluster, then in the collection list, click the `Discovery Cluster` endpoint.
 1. click **Transfer or Sync to** in the right-pane menu.
-1. Click in the **Search** text box, and then click the name of your endpoint on the **Your Collections** tab. You can now see the list of your files on Discovery on the left and on your personal computer on the right.
-1. Select the file or files from the right-side list of Discovery files that you want to transfer to your personal computer.
+1. Click in the **Search** text box, and then click the name of your endpoint on the **Your Collections** tab. You can now see the list of your files on Explorer on the left and on your personal computer on the right.
+1. Select the file or files from the right-side list of Explorer files that you want to transfer to your personal computer.
 1. Select the destination folder from the left-side list of the files on your computer.
 1. (Optional) Click **Transfer & Sync Options** and select the transfer options you need.
 1. Click **Start**.
 
 ### Connecting to Google Drive
 
-The version of Globus currently on Discovery allows you to connect to Google Drive by first setting up the connection in GCP. This will add your Google Drive to your current personal endpoint.
+The version of Globus currently on Explorer allows you to connect to Google Drive by first setting up the connection in GCP. This will add your Google Drive to your current personal endpoint.
 Just so you know, you will first need a personal endpoint, as outlined in the procedure above. This procedure is slightly different from using the Google Drive Connector with
 Globus version 5.5. You will need your Google Drive [downloaded to your local computer](https://www.google.com/drive/download/).
 

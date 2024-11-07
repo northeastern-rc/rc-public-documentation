@@ -66,9 +66,9 @@ Use the following procedure if you need to install a MATLAB toolbox:
 :::::{tab-item} MATLAB on OOD
 **Configuration of MATLAB client on the HPC**
 
-The cluster has MATLAB Parallel Server installed and this section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox on the HPC. This walkthrough uses MATLAB R2023a launched as an interactive app on the [Open OnDemand](ood.discovery.neu.edu) web portal. There are several parts to this walkthrough so we suggest that you read it through completely before starting. The parameters presented represent only one scenario and the results may differ when you run the examples.
+The cluster has MATLAB Parallel Server installed and this section details an example of how you can set up and use the MATLAB Parallel Computing Toolbox on the HPC. This walkthrough uses MATLAB R2023a launched as an interactive app on the [Open OnDemand](ood.explorer.northeastern.edu) web portal. There are several parts to this walkthrough so we suggest that you read it through completely before starting. The parameters presented represent only one scenario and the results may differ when you run the examples.
 
-1. Go to <http://ood.discovery.neu.edu>. If prompted, sign in with your cluster username and password.
+1. Go to <http://ood.explorer.northeastern.edu>. If prompted, sign in with your cluster username and password.
 
 1. Click **Interactive Apps**, and select **MATLAB**.
 

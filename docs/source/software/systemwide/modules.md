@@ -46,7 +46,7 @@ widths: 23 40
 :::
 
 :::{caution}
-`module purge` unloads all modules from your environment, including the default module `discovery/2019-02-21`. This module sets the HTTP proxy needed to access the internet from nodes. If you accidentally purge this module, it automatically reloads by logging out and then back in. You can also load it manually `module load`.
+`module purge` unloads all modules from your environment. This module sets the HTTP proxy needed to access the internet from nodes. If you accidentally purge this module, it automatically reloads by logging out and then back in. You can also load it manually `module load`.
 :::
 
 (module-show-example)=
@@ -100,7 +100,7 @@ caption: Loading Stata version 15.
 $ module load stata/15
 $ module list
 Currently Loaded Modulefiles:
-1) discovery/2019-02-21     2) stata/15
+1) explorer/1.0     2) stata/15
 :::
 ::::
 ::::{grid-item}
@@ -112,7 +112,7 @@ caption: Unloading Stata version 15.
 $ module unload stata/15
 $ module list
 Currently Loaded Modulefiles:
-1) discovery/2019-02-21
+1) explorer/1.0
 :::
 ::::
 :::::
