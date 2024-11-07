@@ -78,7 +78,7 @@ lammps`. Then, you can follow the instructions below. Note that the
 installation can take about two hours to complete. As part of the
 procedure, we recommend that you initiate a [tmux session] so that
 you can have the installation running as a separate process if you
-need to do other work on Discovery. If you decide to use tmux, make
+need to do other work on Explorer. If you decide to use tmux, make
 note of the compute node number (compute node numbers start with c or
 d with four numbers, such as c0123) to make it easier to check on the
 progress of the installation.

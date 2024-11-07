@@ -18,7 +18,7 @@ Due to problems with launching OOD on **Safari**, we recommend using **Google Ch
 The class instructor needs to fill in the: [Discovery Classroom Use Request] You will only be able to find your class resources if a request was already made.
 :::
 
-1. In a web browser, go to <http://ood.discovery.neu.edu>. Login with your NU credentials.
+1. In a web browser, go to <http://ood.explorer.northeastern.edu>. Login with your NU credentials.
 
 1. Under the **Courses** menu, select your Class Name (For example: **ALY6080 JupyterLab**).
 
@@ -27,7 +27,7 @@ The class instructor needs to fill in the: [Discovery Classroom Use Request] You
 1. For more control of the session, modify **Time** for the session time (in hours), **Memory** to get more memory in GB, and the **Working Directory** where JupyterLab will launch.
 
     ::::{note}
-    If **Working Directory** is left blank, the session will launch in the main class folder (in this example `/courses/ALY6080.202335/data`). Alternatively, start the session directly from your personal working directory by entering: `/courses/ALY6080.202335/students/[username]`, where `[username]` is your username on Discovery. The instructions below assume the field is left blank.
+    If **Working Directory** is left blank, the session will launch in the main class folder (in this example `/courses/ALY6080.202335/data`). Alternatively, start the session directly from your personal working directory by entering: `/courses/ALY6080.202335/students/[username]`, where `[username]` is your Northeastern username. The instructions below assume the field is left blank.
     :::{code}
     courses/
     └── ALY6080.202335
