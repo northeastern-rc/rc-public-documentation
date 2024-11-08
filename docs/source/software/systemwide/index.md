@@ -21,7 +21,7 @@ Matlab <matlab>
 ::::
 
 ## Getting Started Scientific Applications
-Research Computing has provides [scripts] to assist you in getting started with different scientific software packages on discovery. Although these scripts may not have all the solutions, they aim to provide users with a starting point to grasp the syntax and procedures used in various applications.
+Research Computing has provides [scripts] to assist you in getting started with different scientific software packages on Explorer. Although these scripts may not have all the solutions, they aim to provide users with a starting point to grasp the syntax and procedures used in various applications.
 
 ::::{grid} 3
 :::{grid-item-card} [MATLAB]

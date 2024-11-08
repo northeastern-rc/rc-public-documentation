@@ -1,10 +1,10 @@
 (courses-cheatsheet)=
 # Courses Cheatsheet
-:::{rubric} {download}`Download Courses Cheatsheet <../_resources/Discovery_CheatSheet_Courses_final.pdf>`
+:::{rubric} {download}`Download courses cheatsheet as a PDF <../_resources/Explorer_CheatSheat_Courses.pdf>`
 :::
 
 
-:::{figure} ../images/Discovery_CheatSheet_Courses_final.png
+:::{figure} ../images/Explorer_CheatSheet_Courses.png
 :name: courses-sheet
 :align: center
 :::

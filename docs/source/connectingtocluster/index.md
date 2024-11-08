@@ -22,7 +22,7 @@ sign in to the HPC.
 :link: mac
 :link-type: doc
 
-Using the Terminal to connect to Discovery.
+Using the Terminal to connect to Explorer.
 
 +++
 [Learn more »](mac)
@@ -42,7 +42,7 @@ Using MobaXTerm to connect to Discvoery.
 :link: linux
 :link-type: doc
 
-Using the Terminal to connect to Discovery.
+Using the Terminal to connect to Explorer.
 
 +++
 [Learn more »](linux)

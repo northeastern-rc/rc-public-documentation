@@ -7,7 +7,9 @@ We’ve supported courses from many disciplines, including biology, chemistry, c
 
 To gain access to HPC resources instructors need to submit a [classroom access form.](https://bit.ly/NURC-Classroom)
 
-Please submit these requests prior to the beginning of each semester (preferred), or at least **one week** prior to the start of when you plan on using the HPC cluster for your class. If you're requesting a customized application we require **two-weeks** to **one-month** time to complete prior to when you'd like to use it.
+:::{important}
+Please submit classroom access requests prior to the beginning of each term (preferred), or at least **one week** prior to the start of when you plan on using the HPC cluster for your class. If you're requesting a customized application we require **two-weeks** to **one-month** time to complete prior to when you'd like to use it.
+:::
 
 ## Classroom setup
 
@@ -127,7 +129,11 @@ srun --time=4:00:00 --job-name=MyJob --partition=courses-gpu --gres=gpu:1 --pty 
 
 ### Open OnDemand
 
-We have several widely-used applications available on the Open OnDemand (OOD) website including, Jupyterlab Notebook, Rstudio, Matlab, GaussView and more. {ref}`access-ood`
+We have several widely-used applications available on the Open OnDemand (OOD) website including, Jupyterlab Notebook, Rstudio, Matlab, GaussView and more.
+
+You can login to the Open OnDemand website via the link below.
+
+[ood.explorer.northeastern.edu](https://ood.explorer.northeastern.edu/)
 
 All of the applications under the “Courses” tab on the dashboard can be set to either the `courses` or `courses-gpu` partitions via the applications specific pull down menus.
 
