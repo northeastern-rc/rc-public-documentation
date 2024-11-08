@@ -2,7 +2,7 @@
 # GPUs on the HPC
 This page covers the {term}`Graphics Processing Unit (GPU)` resources available on the {term}`cluster`.
 :::{seealso}
-[GPU Hardware details for different types of GPUs available on Discovery.](../hardware/hardware_overview.md#gpu-hardware)
+[GPU Hardware details for different types of GPUs available on Explorer.](../hardware/hardware_overview.md#gpu-hardware)
 :::
 The `gpu` {term}`partition` is the general GPU resource for HPC users looking to use a GPU; `multigpu` is the alternative, where more than one GPU are accessible.
 :::{seealso}

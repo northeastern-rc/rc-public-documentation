@@ -40,10 +40,10 @@ Ensure you’re on your local computer for steps 1 through 4—type `exit` to re
 :::
 
 1. Open the Terminal application and type `cd ~/.ssh`. This moves you to the ssh folder on your local computer.
-1. Type `ssh-keygen -t rsa` to generate two files, `id_rsa` and `id_rsa.pub`.
-1. Press `Enter` on all the prompts (do not generate a passphrase).
-1. Type `ssh-copy-id -i ~/.ssh/id_rsa.pub <yourusername>@login.explorer.northeastern.edu` to copy `id_rsa.pub` to your `/home/.ssh` folder on Discovery. You can enter your NU password if prompted. This copies the token from `id_rsa.pub` file to the `authorized_keys` file, which will either be generated or appended if it already exists.
-1. Connect to Discovery via `ssh <yourusername>@login.explorer.northeastern.edu`. You should now be connected without having to enter your password.
+2. Type `ssh-keygen -t rsa` to generate two files, `id_rsa` and `id_rsa.pub`.
+3. Press `Enter` on all the prompts (do not generate a passphrase).
+4. Type `ssh-copy-id -i ~/.ssh/id_rsa.pub <yourusername>@login.explorer.northeastern.edu` to copy `id_rsa.pub` to your `/home/.ssh` folder on Explorer. You can enter your NU password if prompted. This copies the token from `id_rsa.pub` file to the `authorized_keys` file, which will either be generated or appended if it already exists.
+5. Connect to Explorer via `ssh <yourusername>@login.explorer.northeastern.edu`. You should now be connected without having to enter your password.
 
 **Now on the cluster,**
 

@@ -1,8 +1,8 @@
 (shell_environment)=
 # Shell Environment on the Cluster
 
-## The Discovery Shell Environment and `.bashrc`
-Discovery uses a Linux-based operating system (CentOS), where the shell program interfaces with the user. Bash (Bourne Again Shell) is one of the most popular shell implementations and the default shell on Discovery.
+## The Explorer Shell Environment and `.bashrc`
+Explorer uses a Linux-based operating system (CentOS), where the shell program interfaces with the user. Bash (Bourne Again Shell) is one of the most popular shell implementations and the default shell on Explorer.
 
 The shell script `.bashrc` is used by `bash` to initialize your shell environment. For example, it is typically used to define aliases, functions, and load modules. Note that environment variables settings (such as `PATH`) generally go in the `.bash_profile` or `.profile` files. Your `.bashrc`, `.bash_profile`, and `.profile` files live in your `$HOME` directory. You can change your .bashrc with a text editor like [nano](https://www.nano-editor.org/).
 
@@ -31,16 +31,16 @@ fi
 :::
 
 :::{important}
-We recommend keeping `.bashrc` unchanged when using Discovery. You can source environment shell scripts or load modules directly inside your job instead. This approach can prevent some runtime errors from loading incompatible modules, setting environment variables incorrectly, or mixing multiple software and Conda environments.
+We recommend keeping `.bashrc` unchanged. You can source environment shell scripts or load modules directly inside your job instead. This approach can prevent some runtime errors from loading incompatible modules, setting environment variables incorrectly, or mixing multiple software and Conda environments.
 :::
 
 ### Editing your `.bashrc` file
 
-The basic workflow for editing your `.bashrc` file is to sign in to Discovery, go to your `$HOME` directory, open the file in a text editor on the command line, make your edits, save the file, sign out of Discovery, then sign back in again. Your changes will take effect when you sign back in again.
+The basic workflow for editing your `.bashrc` file is to sign in to Explorer, go to your `$HOME` directory, open the file in a text editor on the command line, make your edits, save the file, sign out of Explorer, then sign back in again. Your changes will take effect when you sign back in again.
 
 Example procedure for editing your `.bashrc` file:
 
-1. Sign in to Discovery.
+1. Sign in to Explorer.
 
 1. (Optional) Type `pwd` to ensure you are in your `/home` directory.
 
@@ -54,7 +54,7 @@ Example procedure for editing your `.bashrc` file:
 
 1. Save the file and exit the editor.
 
-1. Sign out of Discovery and sign back in for the changes to take effect.
+1. Sign out of Explorer and sign back in for the changes to take effect.
 
 ### Sourcing a Shell script example
 
