@@ -27,7 +27,7 @@ We recommend loading other scripts/environments after your main environment has 
 ::::
 
 ::::{dropdown} Can I install my software on the HPC cluster?
-Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {ref}`from-source` sections. If you encounter any issues, contact Research Computing. To contact RC, see {ref}`getting-help`.
+Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {ref}`from-source` sections. If you encounter any issues, contact [Research Computing](https://rc.northeastern.edu/support/gettinghelp/).
 ::::
 
 ::::{dropdown} How to Resolve the "Error: C++17 standard requested but CXX17 is not defined" When Installing a Package in R?
