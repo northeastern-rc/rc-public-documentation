@@ -1,4 +1,4 @@
-# Connecting To Cluster
+# Connecting To The Cluster
 
 ```{toctree}
 :hidden:
@@ -32,7 +32,7 @@ Using the Terminal to connect to Explorer.
 :link: windows
 :link-type: doc
 
-Using MobaXTerm to connect to Discvoery.
+Using MobaXTerm to connect to Explorer.
 
 +++
 [Learn more »](windows)

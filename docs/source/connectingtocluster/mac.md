@@ -1,7 +1,7 @@
 (connecting-on-mac)=
-# Connecting on Mac
+# Connecting on a Mac
 
-Mac computers come with a Secure Shell (SSH) program called [Terminal] that you use to connect to the HPC using SSH. If you need to use software that uses a GUI, such as Matlab or Maestro, make sure to use the -Y option in the second step below using X11 forwarding.
+Mac computers come with a Secure Shell (SSH) program called [Terminal] that you use to connect to the HPC using SSH. If you need to use software that uses a GUI, such as MATLAB or Maestro, make sure to use the -Y option in the second step below using X11 forwarding.
 
 :::{note}
 If you use Mac OS X version 10.8 or higher, and you have [XQuartz] running in the background to do X11 forwarding, you should execute the following command in Terminal once before connecting:
@@ -18,6 +18,26 @@ You should keep XQuartz running in the background. If you close and restart XQua
 1. Type your Northeastern password and press `Enter`.
 
 You are now connected to Explorer at a login node.
+
+:::{code-block} bash
+    _______  __ ____  __    ____  ____  __________
+   / ____/ |/ // __ \/ /   / __ \/ __ \/ ____/ __ \
+  / __/  |   // /_/ / /   / / / / /_/ / __/ / /_/ /
+ / /___ /   |/ ____/ /___/ /_/ / _, _/ /___/ _, _/
+/_____//_/|_/_/   /_____/\____/_/ |_/_____/_/ |_|
+
++-----------------------------------------------------------+
+| You are now connected to the Explorer cluster. Visit our   |
+| website http://rc.northeastern.edu/support for links to   |
+| our service catalog, documentation, training, and consul- |
+| tations. You can also email us at rchelp@northeastern.edu |
+| to generate a help ticket.                                |
+|                                                           |
+| The Research Computing Team                               |
++-----------------------------------------------------------+
+[s.lurm@explorer-02 ~]$
+
+:::
 
 (passwordless-ssh-mac)=
 ## Passwordless SSH On A Mac
