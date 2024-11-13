@@ -5,7 +5,10 @@ This page highlights the major changes between Discovery and Explorer and provid
 
 ## New Logins
 
-You will want to update your commands to ssh in, as well as login in via the Open OnDemand website.
+You will want to update your commands to [connect to the cluster](https://rc-docs.northeastern.edu/en/explorer-main/connectingtocluster/index.html).
+
+The [Open OnDemand website](ood.explorer.northeastern.edu) has also been updated and provides graphical interface to many applications (Jupyterlab, R, MATLAB etc).
+
 
 ## New Storage Directory Name
 
@@ -19,8 +22,16 @@ All of the modules on Explorer are new. Some of the versions may have changed fr
 Any "module load" commands in your .bashrc that load Discovery modules may result in a "MODULE NOT FOUND" error in Explorer. Modules loaded in your .bashrc can also lead to conflicts in your environment.
 
 We recommend removing all module load commands from your .bashrc
-
-Modules should be loaded in sbatch scripts, or you can create an environment file (a text file with your module load commands) to source environemntal parameters for interactive sessions. In an interactive session this can be executed via the command "bash file_name.sh"
 :::
 
-## New Partitions
+Modules should be loaded in sbatch scripts, or you can create an environment file (a text file with your module load commands) to source environemntal parameters for interactive sessions. For example, if we saved several module load commands in a file called "env_file.sh". We could execute this file in an interactive session with the command "bash env_file.sh".
+
+## Software compilied on the Discovery cluster
+
+We recommend recompiling software on Explorer that was compilied on the Discovery cluster.
+
+## Conda Environments
+
+Conda environments that were built in Discovery may work in Explorer. A case where they may not work is if you had to load modules on Discovery to build and run your conda environment, and those same modules are not on the Explorer cluster (or their version has been updated). We recommend trying your conda environments on Explorer. If you run into error, try rebuilding the environment, or contact Research Computing by emailing [rchelp](rchelp@northeastern.edu)
+
+Please see our documentation on [conda environements](https://rc-docs.northeastern.edu/en/explorer-main/software/packagemanagers/conda.html#conda) for more information.
