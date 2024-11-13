@@ -80,7 +80,7 @@ There are no configure options used and the information is stored within the mak
 The following instructions to build LAMMPS using make.
 1. To allocate an interactive job on compute node type:
    ::::{code-block} bash
-   srun -N 1 -n 28 --constraint=ib --pty /bin/bash
+   srun -N 1 -p short -n 28 --constraint=ib --pty /bin/bash
    ::::
 1. Load the following modules required for building LAMMPS:
    ::::{code-block} bash
