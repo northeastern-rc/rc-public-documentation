@@ -10,6 +10,7 @@ scratchpurge
 checkpointing
 shell_environment
 clusterusage
+transition
 ```
 
 Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your directory storage, checkpointing jobs, and cluster usage.
@@ -75,6 +76,16 @@ Guidelines about where tasks should be performed and the bots that monitor them.
 
 +++
 [Learn more »](clusterusage)
+:::
+
+:::{grid-item-card} {octicon}`hubot;1.5em;sd-mr-1` Discovery to Explorer
+:link: transition
+:link-type: doc
+
+Learn a few suggested practices for a smooth transition from Discovery to Explorer.
+
++++
+[Learn more »](transition)
 :::
 
 ::::
