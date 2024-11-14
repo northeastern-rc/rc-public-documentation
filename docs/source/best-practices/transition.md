@@ -7,7 +7,7 @@ This page highlights the major changes between Discovery and Explorer and provid
 
 You will want to update your commands to [connect to the cluster](../connectingtocluster/index.md).
 
-The [Open OnDemand](https:://ood.explorer.northeastern.edu) website has also been updated and provides graphical interface to many applications (Jupyterlab, R, MATLAB etc).
+The [Open OnDemand](https://ood.explorer.northeastern.edu) website has also been updated and provides graphical interface to many applications (Jupyterlab, R, MATLAB etc).
 
 ### New Storage Directory
 
