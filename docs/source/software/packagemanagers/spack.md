@@ -1,16 +1,17 @@
 (spack)=
 # Spack
 
-Research Computing recommends using [Spack] to conveniently install software packages locally to your path. Please refer to the [Spack documentation] for the latest information about the [packages] that Spack contains. To use Spack, you first need to copy it to your `/home` directory or a `/work` directory, then you need to add it to your local environment.
+Research Computing recommends using [Spack] to conveniently install software packages locally to your path. Please refer to the [Spack documentation] for the latest information about the [packages] that Spack contains. To use Spack, you first need to copy it to your `/home` directory or a `/projects` directory, then you need to add it to your local environment.
 
 :::{note}
-Spack software installations are part of your research and should preferably be stored in your PI's `/work` directory.
+Spack software installations are part of your research and should preferably be stored in your PI's `/projects` directory.
 :::
 
 (getting-started-spack)=
 ## Install Spack
+If you have used Spack on the Discovery HPC cluster, please check your `/home/$USER` directory for a `.spack` directory and rename it because it will cause conflicts on the Explorer HPC cluster. To rename the directory, `mv ~/.spack ~/.spack-discovery`.
 
-These instructions will demonstrate how to install Spack in your `/home` (*non-shared*) or `/work` (*shared*) directory and then how to add Spack to your local environment while on a compute node, so you have access to the Spack commands (steps 4-5).
+These instructions will demonstrate how to install Spack in your `/home` (*non-shared*) or `/projects` (*shared*) directory and then how to add Spack to your local environment while on a compute node, so you have access to the Spack commands (steps 4-5).
 
 ::::::{tab-set}
 :::::{tab-item} Non-shared
@@ -24,10 +25,10 @@ git clone -c feature.manyFiles=true https://github.com/spack/spack.git
 :::::
 :::::{tab-item}	Shared
 
-Copy Spack's Git repository to `/work` and modify directory permissions to give write access to the members of your PI's `/work`.
+Copy Spack's Git repository to `/projects` and modify directory permissions to give write access to the members of your PI's `/projects`.
 
 ::::{code-block} bash
-cd /work/<PI-Project-Dir>
+cd /projects/<PI-Project-Dir>
 git clone -c feature.manyFiles=true https://github.com/spack/spack.git
 chmod -R 775 spack/
 ::::
@@ -38,7 +39,7 @@ chmod -R 775 spack/
 ## Install a software using Spack
 
 1. Request a compute node interactively: `srun -p short --pty -N 1 -n 28 /bin/bash`. While building the software Spack will attempt to run `make` in parallel. Hence, you need to request a compute node with multiple cores. This `srun` request is for 28 cores on one node (`-N 1 -n 28`).
-1. Any module that is required for your software installation needs to be in your `$PATH` prior to adding Spack to your local environment. For example, to use a newer version of python for compatibility with Spack, type: `module load python/3.8.1`.
+1. Any module that is required for your software installation needs to be in your `$PATH` prior to adding Spack to your local environment. 
 1. Add Spack to your local environment, so you can use the Spack commands. If Spack has been installed on `$HOME`:
 
    ::::{code-block} bash
@@ -46,12 +47,12 @@ chmod -R 775 spack/
    export SPACK_ROOT=/home/<yourusername>/spack
    . $SPACK_ROOT/share/spack/setup-env.sh
 
-   For Spack on /work/<PI-Project-Dir>
-   export SPACK_ROOT=/work/<PI-Project-Dir>/spack
+   For Spack on /projects/<PI-Project-Dir>
+   export SPACK_ROOT=/projects/<PI-Project-Dir>/spack
    . $SPACK_ROOT/share/spack/setup-env.sh
    ::::
 
-1. After you have the Spack commands in your environment, type `spack help` to ensure Spack is loaded in your environment and to see the commands you can use with Spack. You can also type `spack list` to see all the software that you can install with Spack, but note this command can take a few moments to populate the list.
+1. After you have the Spack commands in your environment, type `spack help` to ensure Spack is loaded in your environment and to see the commands you can use with Spack. 
 1. To check your spack version: `spack --version` .
 1. To see information about a specific software package, including options and dependencies: `spack info <software name>`. Make sure to note the options and/or dependencies that you want to add or not add before installing the software.
 1. To install a software package plus any dependencies or options:
@@ -83,23 +84,6 @@ note of the compute node number (compute node numbers start with c or
 d with four numbers, such as c0123) to make it easier to check on the
 progress of the installation.
 
-If LAMMPS has a dependency on a specific `gcc` compiler, then do the following before starting the installation procedure. This will update the `compilers.yaml` file located in `$HOME/.spack/linux`.
-
-1. `cd $HOME/.spack/linux/`
-1. Open `compilers.yaml` and copy-paste a `compiler` entry at the end of the file.
-1. Edit 'spec' and 'path' to indicate the version of the GCC compiler that is required for installation.
-
-   ::::{code-block} bash
-   For example:
-        spec: gcc@=8.1.0
-    	paths:
-    	  cc: /shared/centos7/gcc/8.1.0/bin/gcc
-     	  cxx: /shared/centos7/gcc/8.1.0/bin/g++
-    	  f77: /shared/centos7/gcc/8.1.0/bin/gfortran
-      	  fc: /shared/centos7/gcc/8.1.0/bin/gfortran
-   ::::
-
-1. The `compilers.yaml` file should now have the desired `gcc` version as its latest `compiler` entry.
 1. Assuming that Spack has already been installed at a desired location. For installing gpu-supported LAMMPS, request a GPU node for 8 hours:
 
    :::{code-block} shell
@@ -109,8 +93,8 @@ If LAMMPS has a dependency on a specific `gcc` compiler, then do the following b
 1. Load compatible CUDA, GCC, and Python modules and activate Spack from the installed location.
 
    ::::{code-block} bash
-    module load cuda/10.2 gcc/8.1.0 python/3.8.1
-    export SPACK_ROOT=/work/<PI-Project-Dir>/spack
+    module load cuda/12.1.1
+    export SPACK_ROOT=/projects/<PI-Project-Dir>/spack
     . $SPACK_ROOT/share/spack/setup-env.sh
    ::::
 
