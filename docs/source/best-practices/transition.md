@@ -27,7 +27,7 @@ Any "module load" commands in your .bashrc that load Discovery modules may resul
 We recommend removing all module load commands from your .bashrc
 :::
 
-### Software compilied on the Discovery cluster
+### Software Compilied on Discovery
 
 We recommend recompiling software on Explorer that was compilied on the Discovery cluster.
 
