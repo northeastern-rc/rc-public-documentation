@@ -57,7 +57,7 @@ This command will output the size of each file, directory, and hidden directory 
 :::{code-block} shell
 [<username>@<host> directory]$  du -shc .[^.]* ~/*
 39M     .git
-106M    discovery-examples
+106M    examples
 41K     README.md
 3.3M    software-installation
 147M    total

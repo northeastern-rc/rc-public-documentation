@@ -22,15 +22,15 @@ If you have tried to install a package in the *RStudio* or *Tidyverse* flavors a
 
 ## Creating a Packrat Environment
 
-If you work with R packages, using a [Packrat environment](https://rstudio.github.io/packrat/) can be a helpful way to access packages across different sessions in the Open OnDemand app, between the Open OnDemand app and the command line, or between the different R flavors. Use the procedure below to create a Packrat environment on Discovery.
+If you work with R packages, using a [Packrat environment](https://rstudio.github.io/packrat/) can be a helpful way to access packages across different sessions in the Open OnDemand app, between the Open OnDemand app and the command line, or between the different R flavors. Use the procedure below to create a Packrat environment on Explorer.
 
 After you create a new directory for your R project, you can then use Packrat to store your package dependencies inside it.
 
 We recommend making your Packrat directory in /work (preferred) or /home
 
-1. Connect to Discovery via ssh.
+1. Connect to Explorer via ssh.
 
-1. Type `module load R/4.2.1`.
+1. Type `module load R/4.4.1`.
 
 1. Create a new directory for your R project by typing, `mkdir /work/<groupname>/<username>/<directoryname>` where `<groupname>` is your group name, `<username>` is your username, and `<directoryname>` is the name of the directory you want to create for your R project. For example, `/work/coolsciencegroup/j.smith/packrat_r`.
 
@@ -70,7 +70,7 @@ ______________________________________________________________________
 
 **When using RStudio in the OOD App:**
 
-The instructions below can be applied on any RStudio “flavor” available (i.e., RStudio, Geospatial, and Tidyverse). Once a Packrat snapshot is created it can easily be transferred between flavors and even machines (e.g., personal laptop, Discovery).
+The instructions below can be applied on any RStudio “flavor” available (i.e., RStudio, Geospatial, and Tidyverse). Once a Packrat snapshot is created it can easily be transferred between flavors and even machines (e.g., personal laptop, Explorer).
 
 1. Launch an RStudio instance on the OOD. Specify the flavor and other parameters as usual.
 1. In the RStudio console type: `install.packages("packrat")`.

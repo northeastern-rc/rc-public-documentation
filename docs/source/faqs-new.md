@@ -13,7 +13,7 @@ In the terminal, run `du -shc .[^.]* * /home/$USER`, which should have output si
 :::{code-block} shell
 [<username>@<host> ~]$  du -shc .[^.]* * /home/$USER/
 39M     .git
-106M    discovery-examples
+106M    examples
 41K     README.md
 3.3M    software-installation
 147M    total
