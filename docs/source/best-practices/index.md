@@ -48,7 +48,7 @@ Learn how to use /scratch effectively, before and after a purge.
 [Learn more »](scratchpurge)
 :::
 
-:::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Checkpointing Jobs
+:::{grid-item-card} {octicon}`checklist;1.5em;sd-mr-1` Checkpointing Jobs
 :link: checkpointing
 :link-type: doc
 
@@ -78,7 +78,7 @@ Guidelines about where tasks should be performed and the bots that monitor them.
 [Learn more »](clusterusage)
 :::
 
-:::{grid-item-card} {octicon}`hubot;1.5em;sd-mr-1` Discovery to Explorer
+:::{grid-item-card} {octicon}`diff-renamed;1.5em;sd-mr-1` Discovery to Explorer
 :link: transition
 :link-type: doc
 
