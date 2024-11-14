@@ -3,7 +3,7 @@
 
 This page highlights the major changes between Discovery and Explorer and provides a few recommendations for a smooth transition.
 
-## New Logins
+### New Logins
 
 You will want to update your commands to [connect to the cluster](https://rc-docs.northeastern.edu/en/explorer-main/connectingtocluster/index.html).
 
