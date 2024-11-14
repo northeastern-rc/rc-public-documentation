@@ -29,10 +29,10 @@ We recommend removing all module load commands from your .bashrc
 
 ### Software Compilied on Discovery
 
-We recommend recompiling software on Explorer that was compilied on the Discovery cluster.
+We recommend recompiling software on Explorer that was compilied on the Discovery cluster. If you need assistance please reach out to the Research Computing Team by emailing rchelp@northeastern.edu.
 
 ### Conda Environments
 
-Conda environments that were built in Discovery may work in Explorer. A case where they may not work is if you had to load modules on Discovery to build and run your conda environment, and those same modules are not on the Explorer cluster (or their version has been updated). We recommend trying your conda environments on Explorer. If you run into error, try rebuilding the environment, or contact Research Computing by emailing [rchelp](rchelp@northeastern.edu)
+Conda environments that were built in Discovery may work in Explorer. A case where they may not work is if you had to load modules on Discovery to build and run your conda environment, and those same modules are not on the Explorer cluster (or their version has been updated). We recommend trying your conda environments on Explorer. If you run into error, try rebuilding the environment, or contact Research Computing by emailing rchelp@northeastern.edu
 
 Please see our documentation on [conda environements](../software/packagemanagers/conda.md#conda) for more information.
