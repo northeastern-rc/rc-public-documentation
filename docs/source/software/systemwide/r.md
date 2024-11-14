@@ -11,7 +11,7 @@ In addition to different R packages you will find additional package requirement
 
 ## Running the Rocker Container in an sbatch script
 
-If you have installed packages in the Open OnDemand Rstudio application, you may want to use those same packages in an sbatch script (non-interactive).
+If you have installed packages in the Open OnDemand RStudio application, you may want to use those same packages in an sbatch script (non-interactive).
 
 It makes sense to move to sbatch scripts when you have tested your scripts interactively in the Open OnDemand and code needs to just run without supervision.
 
