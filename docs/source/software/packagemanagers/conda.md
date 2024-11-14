@@ -13,7 +13,7 @@
 ### Creating Environments
 
 :::::{note}
-We recommend avoiding building Conda environments in your `/home`, for its space quota. Instead, Use `/work`, which can be requested by PIs for groups in need of space `/work`.
+We recommend avoiding building Conda environments in your `/home`, for its space quota. Instead, Use `/project`, which can be requested by PIs for groups in need of space `/project`.
 :::{seealso}
 {ref}`Learn about storage options <data-storage>` and [Submit New Storage Space request].
 :::
@@ -33,7 +33,7 @@ linenos: true
 ---
 
 srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
-module load anaconda3/2022.05
+module load anaconda3/2024.06
 :::
 
 To create a new Conda environment where `<environment-name>` is the path and name. You can see a list of your existing environments with `conda env list`.
