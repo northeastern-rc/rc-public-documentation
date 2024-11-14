@@ -1,5 +1,5 @@
 (transition)=
-# Moving from Discovery to the Explorer Cluster
+# Moving from Discovery to Explorer
 
 This page highlights the major changes between Discovery and Explorer and provides a few recommendations for a smooth transition.
 
