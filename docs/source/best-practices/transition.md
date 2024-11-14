@@ -17,7 +17,7 @@ If you had a storage space for performant storage on Discovery you will want to 
 
 ### New Modules
 
-All of the [modules](../../software/systemwide/modules.html) on Explorer are new. Some of the versions may have changed from the version you were using on Discovery. Thus, module load commands will need to be updated.
+All of the [modules](../software/systemwide/modules.md) on Explorer are new. Some of the versions may have changed from the version you were using on Discovery. Thus, module load commands will need to be updated.
 
 Modules should be loaded in sbatch scripts, or you can create an environment file (a text file with your module load commands) to source environemental parameters for interactive sessions. For example, if we saved several module load commands in a file called "env_file.sh". We could execute this file in an interactive session with the command "bash env_file.sh".
 
@@ -35,4 +35,4 @@ We recommend recompiling software on Explorer that was compilied on the Discover
 
 Conda environments that were built in Discovery may work in Explorer. A case where they may not work is if you had to load modules on Discovery to build and run your conda environment, and those same modules are not on the Explorer cluster (or their version has been updated). We recommend trying your conda environments on Explorer. If you run into error, try rebuilding the environment, or contact Research Computing by emailing [rchelp](rchelp@northeastern.edu)
 
-Please see our documentation on [conda environements](../../software/packagemanagers/conda.html#conda) for more information.
+Please see our documentation on [conda environements](../software/packagemanagers/conda.md#conda) for more information.
