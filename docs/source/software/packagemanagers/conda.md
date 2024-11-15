@@ -33,7 +33,7 @@ linenos: true
 ---
 
 srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
-module load anaconda3/2022.05
+module load anaconda3/2024.06
 :::
 
 To create a new Conda environment where `<environment-name>` is the path and name. You can see a list of your existing environments with `conda env list`.
