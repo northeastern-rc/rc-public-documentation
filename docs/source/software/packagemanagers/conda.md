@@ -115,7 +115,7 @@ conda env remove --name env_name
 
 For environments located elsewhere, you can remove them using:
 :::{code} bash
-rm -rf /path/to/env
+rm -rf /path/to/env/<env_name>
 :::
 
 ### Clean Conda Environment
