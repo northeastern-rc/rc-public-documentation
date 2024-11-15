@@ -59,7 +59,7 @@ before loading the module. Sometimes, a module might depend on loading other mod
 {ref}`software-overview` for installing software on the cluster.
 :::
 
-Here is an example of using `module show` to show details for the Amber software package.
+Here is an example of using `module show` to show details for the MATLAB software package.
 
 :::{code} bash
 $ module show matlab
