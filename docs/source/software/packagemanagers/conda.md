@@ -101,7 +101,7 @@ conda list --name env_name
 
 If you've created an environment in a different location, you can still list its packages using:
 :::{code} bash
-conda list --prefix /path/to/env
+conda list --prefix /path/to/env/<env_name>
 :::
 
 ### Exporting Environment
