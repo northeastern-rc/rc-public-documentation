@@ -145,7 +145,13 @@ Download Miniconda, check the hash key, and install as follows:
 
 :::{code} bash
 wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+:::
+
+:::{code} bash
 sha256sum Miniconda3-latest-Linux-x86_64.sh
+:::
+
+:::{code} bash
 bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>
 :::
 Where `<dir>` is the full path to your desired installation directory (e.g., `/work/mygroup/miniconda3`).
