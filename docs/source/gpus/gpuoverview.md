@@ -1,14 +1,8 @@
 (working-gpus)=
 # GPUs on the HPC
-This page covers the {term}`Graphics Processing Unit (GPU)` resources available on the {term}`cluster`.
-:::{seealso}
-[GPU Hardware details for different types of GPUs available on Explorer.](../hardware/hardware_overview.md#gpu-hardware)
-:::
-The `gpu` {term}`partition` is the general GPU resource for HPC users looking to use a GPU; `multigpu` is the alternative, where more than one GPU are accessible.
-:::{seealso}
-[Learn more about partitions.](../hardware/partitions.md)
-:::
-Anyone with a cluster account has access to the `gpu` partition. However, you must submit a [ServiceNow ticket] requesting temporary access to `multigpu` provided sufficient need and preparation.
+This page covers the {term}`Graphics Processing Unit (GPU)` resources available on the {term}`cluster`. The `gpu` {term}`partition` is the general GPU resource for HPC users; `multigpu` is the alternative partition where more than one GPUs are accessible.
+
+Anyone with a cluster account has access to the `gpu` partition. However, to access the `multigpu` partition, you must submit a [ServiceNow ticket].
 
 :::{note}
 **When working with shared computational resources, it is important to remember not to leave the jobs idle.**

@@ -42,6 +42,7 @@ This is a minimal example using the command line version of CMake to build LAMMP
    #SBATCH -n 1
    #SBATCH -p short
 
+
    # module load gcc/11.4.1  # In case a different version of gcc is needed
 
    export PATH=/home/$USER/lammps-stable_29Aug2024/build:$PATH
@@ -54,6 +55,7 @@ This is a minimal example using the command line version of CMake to build LAMMP
 
    ::::{code-block} bash
    #!/bin/bash
+
    # module load gcc/11.1.0 # In case a different version of gcc is needed
 
    export PATH=/home/$USER/lammps-stable_29Aug2024/build:$PATH
@@ -89,11 +91,19 @@ The following instructions to build LAMMPS using cmake.
    wget https://github.com/lammps/lammps/archive/refs/tags/stable_29Aug2024.tar.gz
    tar -xvf stable_29Aug2024.tar.gz 
    ::::
+1. Download the source code to LAMMPS:
+   ::::{code-block} bash
+   cd ~
+   wget https://github.com/lammps/lammps/archive/refs/tags/stable_29Aug2024.tar.gz
+   tar -xvf stable_29Aug2024.tar.gz 
+   ::::
 1. Load the required modules required for building LAMMPS:
    ::::{code-block} bash
+
    # module load gcc/11.1.0  # In case a different version of gcc is needed
    module OpenMPI/4.1.6
    module load cmake/3.30.2
+
    ::::
 1. For LAMMPS, you will need to create and use the build directory with the following command:
    ::::{code-block} bash
