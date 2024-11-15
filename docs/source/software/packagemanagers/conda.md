@@ -55,7 +55,7 @@ source activate /<path>/<environment-name>
 Your command line prompt will then include the path and name of environment.
 
 :::{code} bash
-(/<path>/<environment-name>) [<username>@c2001 dirname]$
+(/<path>/<environment-name>) [<username>@<hostname> dirname]$
 :::
 
 ::::{tip}
