@@ -59,31 +59,41 @@ before loading the module. Sometimes, a module might depend on loading other mod
 {ref}`software-overview` for installing software on the cluster.
 :::
 
-Here is an example of using `module show` to show details for the Amber software package.
+Here is an example of using `module show` to show details for the MATLAB software package.
 
 :::{code} bash
-$ module show amber
+$ module show matlab
 :::
 :::{code-block} text
 ---
 caption: Command-line output.
 ---
-/shared/centos7/modulefiles/amber/18-mpi:
+-------------------------------------------------------------------
+/shared/EL9/explorer/modulefiles/matlab/R2024b:
 
-module-whatis     loads the modules environment for Amber 18 MPI parallel executable
-                  on CPU nodes.
+module-whatis   {Loads matlab/R2024b module.
 
-Please load the following modules:
-module load openmpi/3.1.2
-module load amber/18-mpi
-module load python/2.7.15
+This module was built on Fri Nov  1 02:01:33 PM EDT 2024
 
-setenv            AMBER_HOME /shared/centos7/amber/amber18-cpu
-prepend-path      PYTHONPATH /shared/centos7/amber/amber18-cpu/lib/python2.7/site-packages
-prepend-path      PATH /shared/centos7/amber/amber18-cpu/bin
-prepend-path      LD_LIBRARY_PATH /shared/centos7/amber/amber18-cpu/lib
-prepend-path      C_INCLUDE_PATH /shared/centos7/amber/amber18-cpu/include
-prepend-path      CPLUS_INCLUDE_PATH /shared/centos7/amber/amber18-cpu/include
+MATLAB (https://www.mathworks.com/) is a numerical computing suite.
+
+The script used to build this module can be found here: https://github.com/northeastern-rc-software-modules/matlab-R2024b
+
+To load the module, type:
+module load matlab/R2024b
+
+}
+conflict        matlab
+prepend-path    PATH /shared/EL9/explorer/matlab/R2024b/bin
+prepend-path    PATH /shared/EL9/explorer/matlab/R2024b/bin/glnxa64
+prepend-path    LD_LIBRARY_PATH /shared/EL9/explorer/matlab/R2024b/runtime/glnxa64
+prepend-path    LD_LIBRARY_PATH /shared/EL9/explorer/matlab/R2024b/bin/glnxa64
+module          add OpenJDK/22.0.2
+prepend-path    MLM_LICENSE_FILE /shared/EL9/explorer/matlab/nunet.lic
+append-path     PATH /shared/EL9/explorer/matlab/support_packages/matlab_parallel_server/bin
+prepend-path    MATLABPATH /shared/EL9/explorer/matlab/support_packages/matlab_parallel_server/scripts
+prepend-path    MATLAB_CLUSTER_PROFILES_LOCATION /shared/EL9/explorer/matlab/support_packages/matlab_parallel_server/scripts
+-------------------------------------------------------------------
 :::
 
 ## Module load and unload example
@@ -95,12 +105,12 @@ The software module `stata/15` was loaded and unloaded in the following code sni
 :::{code-block} bash
 ---
 emphasize-lines: 3,4
-caption: Loading Stata version 15.
+caption: Loading MATLAB version R2024b.
 ---
-$ module load stata/15
+$ module load matlab/R2024b
 $ module list
 Currently Loaded Modulefiles:
-1) explorer/1.0     2) stata/15
+1) explorer/1.0     2) matlab/R2024b
 :::
 ::::
 ::::{grid-item}
@@ -109,7 +119,7 @@ Currently Loaded Modulefiles:
 emphasize-lines: 3,4
 caption: Unloading Stata version 15.
 ---
-$ module unload stata/15
+$ module unload matlab/R2024b
 $ module list
 Currently Loaded Modulefiles:
 1) explorer/1.0
