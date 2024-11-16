@@ -117,7 +117,7 @@ Verify the installation:
 python -c 'import tensorflow as tf; print("True" if tf.config.list_physical_devices("GPU") else "False")'
 ::::
 
-If CUDA is detected by PyTorch, you should see the result, `True`.
+If CUDA is detected by Tensorflow, you should see the result, `True`.
 
 ::::{note}
 Ignore the `Warning` messages that get generated after executing the above commands.
