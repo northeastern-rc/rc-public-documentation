@@ -15,7 +15,9 @@ On Explorer our performant storage directory is called `/projects`.
 
 If you had a storage space for performant storage on Discovery you will want to change the paths in your scripts from `/work` to `/projects`.
 
-### New Modules
+### New Software
+
+#### Modules
 
 All of the [modules](../software/systemwide/modules.md) on Explorer are new. Some of the versions may have changed from the version you were using on Discovery. Thus, module load commands will need to be updated.
 
@@ -26,6 +28,14 @@ Any "module load" commands in your .bashrc that load Discovery modules may resul
 
 We recommend removing all module load commands from your .bashrc
 :::
+
+#### Container Images
+
+[Apptainer](../containers/apptainer.md) is the container run-time engine on Explorer and is installed system-wide (there is no module for apptainer).
+
+We have many newly added container images at `/shared/container_repository/explorer/`
+
+If you had an image that was pulled to Discovery using `Singularity` it should still work as expected on Explorer. Though there may be some exceptions. One of the advantages of container images, is there portability.
 
 ### Software Compilied on Discovery
 
