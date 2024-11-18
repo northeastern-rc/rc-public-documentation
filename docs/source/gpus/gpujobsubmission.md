@@ -32,7 +32,7 @@ Deep learning frameworks tend to cost storage that can quickly surpass {ref}`hom
 Select the tab with the desire deeplearning framework.
 
 :::{important}
-Each tab assumes helps you get on a GPU node with CUDA 12.1.1 and anaconda modules loaded as done below.
+Each tab helps you get on a GPU node and load CUDA and anaconda modules, as shown below.
 :::
 ::::::{tab-set}
 :::::{tab-item} PyTorch
