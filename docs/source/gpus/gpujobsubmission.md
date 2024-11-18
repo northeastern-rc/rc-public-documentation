@@ -45,7 +45,7 @@ caption: |
 ---
 srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
 module purge
-module load discovery anaconda3/2024.06 cuda/12.1.1
+module load explorer anaconda3/2024.06 cuda/12.1.1
 conda create --name pytorch_env -c conda-forge python=3.12.4 -y
 source activate pytorch_env
 conda install jupyterlab -y
