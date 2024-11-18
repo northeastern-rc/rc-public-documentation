@@ -63,7 +63,7 @@ This command will output the size of each file, directory, and hidden directory 
 147M    total
 :::
 
-;;;{note}
+:::{note}
 The `du` command can take a few minutes to run in `/home/<username>`
 :::
 
