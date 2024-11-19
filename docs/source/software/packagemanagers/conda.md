@@ -154,7 +154,7 @@ sha256sum Miniconda3-latest-Linux-x86_64.sh
 :::{code} bash
 bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>
 :::
-Where `<dir>` is the full path to your desired installation directory (e.g., `/work/mygroup/miniconda3`).
+Where `<dir>` is the full path to your desired installation directory (e.g., `/projects/mygroup/miniconda3`).
 
 
 Activate the base Miniconda environment
@@ -228,7 +228,7 @@ Best practices for home storage: {ref}`cleaning-conda`.
 
 1. Your `~/.conda` may get very large if you install multiple packages and create many virtual Conda environments. Make sure to clean the Conda cache and clean unused packages with: `conda clean --all`.
 1. Clean unused Conda environments by first listing the environments with: `conda env list` , and then removing unused ones: `conda env remove --name <environment-name>`.
-1. You can build Conda environments in different locations to save space on your home directory (see {ref}`data-storage`). You can use the `--prefix` flag when building your environment. For example: `conda create --prefix=/work/<mygroup>/<mydirectory>/<env_name>`.
+1. You can build Conda environments in different locations to save space on your home directory (see {ref}`data-storage`). You can use the `--prefix` flag when building your environment. For example: `conda create --prefix=/projects/<mygroup>/<mydirectory>/<env_name>`.
 1. Another recommended step is to update your Conda version (possible only when using Miniconda): `conda update conda -y`
 
 
