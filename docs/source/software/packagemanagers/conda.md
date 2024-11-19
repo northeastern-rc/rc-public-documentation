@@ -13,7 +13,7 @@
 ### Creating Environments
 
 :::::{note}
-We recommend avoiding building Conda environments in your `/home`, for its space quota. Instead, Use `/project`, which can be requested by PIs for groups in need of space `/project`.
+We recommend avoiding building Conda environments in your `/home`, for its space quota. Instead, Use `/projects`, which can be requested by PIs for groups in need of space `/projects`.
 :::{seealso}
 {ref}`Learn about storage options <data-storage>` and [Submit New Storage Space request].
 :::
