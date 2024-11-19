@@ -15,7 +15,7 @@
 :::::{note}
 We recommend avoiding building Conda environments in your `/home`, for its space quota. Instead, Use `/projects`, which can be requested by PIs for groups in need of space `/projects`.
 :::{seealso}
-{ref}`Learn about storage options <data-storage>` and [Submit New Storage Space request].
+[Learn about storage options] and [Submit New Storage Space request].
 :::
 
 :::::
@@ -236,4 +236,5 @@ Best practices for home storage: {ref}`cleaning-conda`.
 [conda]: https://docs.conda.io/en/latest/
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [Should I use Anaconda or Miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
+[Learn about storage options]: https://rc.northeastern.edu/data-storage-options/
 [Submit New Storage Space request]: https://bit.ly/NURC-NewStorage
