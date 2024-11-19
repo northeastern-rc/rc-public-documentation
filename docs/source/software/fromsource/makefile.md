@@ -4,7 +4,7 @@
 Be sure to refer to the installation instructions provided with software being installed. If the software requires additional dependencies not installed on the system, they might need to installed and added to your `PATH` similarly.
 :::
 
-If you want to use `make` to add software locally to your path, you must first download the software package from its source (e.g., its webpage or GitHub) and unpack it or unzip it if need be. Then, you must set the installation path to a directory with write access on the cluster, such as your home directory or your `/work`.
+If you want to use `make` to add software locally to your path, you must first download the software package from its source (e.g., its webpage or GitHub) and unpack it or unzip it if need be. Then, you must set the installation path to a directory with write access on the cluster, such as your home directory or your `/projects`.
 
 :::{note}
 You can use `./configure` to specify the installation path (e.g., `./configure --prefix=${HOME}/software`).
@@ -80,12 +80,14 @@ There are no configure options used and the information is stored within the mak
 The following instructions to build LAMMPS using `make`.
 1. To allocate an interactive job on compute node type:
    ::::{code-block} bash
-   srun -N 1 -n 28 --constraint=ib --pty /bin/bash
+   srun -N 1 -p short -n 28 --constraint=ib --pty /bin/bash
    ::::
 1. Load the following modules required for building LAMMPS:
    ::::{code-block} bash
-   module load gcc/11.1.0
-   module openmpi/4.1.2-gcc11.1
+   module load OpenMPI/4.1.6
+   # module load python/3.9.18  # In case a different version of python is needed and available
+   # module load gcc/11.4.1     # In case a different version of gcc is needed and available
+
    ::::
 1. Download the source code to LAMMPS:
    ::::{code-block} bash

@@ -2,7 +2,7 @@
 # Shell Environment on the Cluster
 
 ## The Explorer Shell Environment and `.bashrc`
-Explorer uses a Linux-based operating system (CentOS), where the shell program interfaces with the user. Bash (Bourne Again Shell) is one of the most popular shell implementations and the default shell on Explorer.
+Explorer uses a Linux-based operating system (Rocky Linux 9), where the shell program interfaces with the user. Bash (Bourne Again Shell) is one of the most popular shell implementations and the default shell on Explorer.
 
 The shell script `.bashrc` is used by `bash` to initialize your shell environment. For example, it is typically used to define aliases, functions, and load modules. Note that environment variables settings (such as `PATH`) generally go in the `.bash_profile` or `.profile` files. Your `.bashrc`, `.bash_profile`, and `.profile` files live in your `$HOME` directory. You can change your .bashrc with a text editor like [nano](https://www.nano-editor.org/).
 
@@ -31,7 +31,7 @@ fi
 :::
 
 :::{important}
-We recommend keeping `.bashrc` unchanged. You can source environment shell scripts or load modules directly inside your job instead. This approach can prevent some runtime errors from loading incompatible modules, setting environment variables incorrectly, or mixing multiple software and Conda environments.
+We recommend keeping `.bashrc` unchanged when using Explorer. You can source environment shell scripts or load modules directly inside your job instead. This approach can prevent some runtime errors from loading incompatible modules, setting environment variables incorrectly, or mixing multiple software and Conda environments.
 :::
 
 ### Editing your `.bashrc` file
@@ -64,9 +64,9 @@ Create a shell script `myenv.bash`:
 
 ```{code-block} bash
 #!/bin/bash
-module load anaconda3/2021.05
-module load cuda/11.1
-source activate pytorch_env_training
+module load anaconda3/2024.06
+module load cuda/12.1.1
+source activate pytorch_env
 ```
 
 Then, source the shell script inside your sbatch slurm script (see {ref}`using-sbatch`):
