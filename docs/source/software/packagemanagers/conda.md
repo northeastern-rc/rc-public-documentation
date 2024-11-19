@@ -13,9 +13,9 @@
 ### Creating Environments
 
 :::::{note}
-We recommend avoiding building Conda environments in your `/home`, for its space quota. Instead, Use `/work`, which can be requested by PIs for groups in need of space `/work`.
+We recommend avoiding building Conda environments in your `/home`, for its space quota. Instead, Use `/projects`, which can be requested by PIs for groups in need of space `/projects`.
 :::{seealso}
-{ref}`Learn about storage options <data-storage>` and [Submit New Storage Space request].
+[Learn about storage options] and [Submit New Storage Space request].
 :::
 
 :::::
@@ -33,7 +33,7 @@ linenos: true
 ---
 
 srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
-module load anaconda3/2022.05
+module load anaconda3/2024.06
 :::
 
 To create a new Conda environment where `<environment-name>` is the path and name. You can see a list of your existing environments with `conda env list`.
@@ -55,7 +55,7 @@ source activate /<path>/<environment-name>
 Your command line prompt will then include the path and name of environment.
 
 :::{code} bash
-(/<path>/<environment-name>) [<username>@c2001 dirname]$
+(/<path>/<environment-name>) [<username>@<hostname> dirname]$
 :::
 
 ::::{tip}
@@ -101,7 +101,7 @@ conda list --name env_name
 
 If you've created an environment in a different location, you can still list its packages using:
 :::{code} bash
-conda list --prefix /path/to/env
+conda list --prefix /path/to/env/<env_name>
 :::
 
 ### Exporting Environment
@@ -115,7 +115,7 @@ conda env remove --name env_name
 
 For environments located elsewhere, you can remove them using:
 :::{code} bash
-rm -rf /path/to/env
+rm -rf /path/to/env/<env_name>
 :::
 
 ### Clean Conda Environment
@@ -145,10 +145,16 @@ Download Miniconda, check the hash key, and install as follows:
 
 :::{code} bash
 wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+:::
+
+:::{code} bash
 sha256sum Miniconda3-latest-Linux-x86_64.sh
+:::
+
+:::{code} bash
 bash Miniconda3-latest-Linux-x86_64.sh -b -p <dir>
 :::
-Where `<dir>` is the full path to your desired installation directory (e.g., `/work/mygroup/miniconda3`).
+Where `<dir>` is the full path to your desired installation directory (e.g., `/projects/mygroup/miniconda3`).
 
 
 Activate the base Miniconda environment
@@ -222,7 +228,7 @@ Best practices for home storage: {ref}`cleaning-conda`.
 
 1. Your `~/.conda` may get very large if you install multiple packages and create many virtual Conda environments. Make sure to clean the Conda cache and clean unused packages with: `conda clean --all`.
 1. Clean unused Conda environments by first listing the environments with: `conda env list` , and then removing unused ones: `conda env remove --name <environment-name>`.
-1. You can build Conda environments in different locations to save space on your home directory (see {ref}`data-storage`). You can use the `--prefix` flag when building your environment. For example: `conda create myenv --prefix=/work/<mygroup>/<mydirectory>`.
+1. You can build Conda environments in different locations to save space on your home directory (see [Learn about storage options]). You can use the `--prefix` flag when building your environment. For example: `conda create --prefix=/projects/<mygroup>/<mydirectory>/<env_name>`.
 1. Another recommended step is to update your Conda version (possible only when using Miniconda): `conda update conda -y`
 
 
@@ -230,4 +236,5 @@ Best practices for home storage: {ref}`cleaning-conda`.
 [conda]: https://docs.conda.io/en/latest/
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [Should I use Anaconda or Miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
+[Learn about storage options]: https://rc.northeastern.edu/data-storage-options/
 [Submit New Storage Space request]: https://bit.ly/NURC-NewStorage
