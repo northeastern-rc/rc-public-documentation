@@ -1,5 +1,5 @@
 (transition)=
-# Moving from Discovery to Explorer
+# Quick Start to Explorer
 
 This page highlights the major changes between Discovery and Explorer and provides a few recommendations for a smooth transition.
 
@@ -10,6 +10,8 @@ You will want to update your commands to [connect to the cluster](../connectingt
 The [Open OnDemand](https://ood.explorer.northeastern.edu) website has also been updated and provides graphical interface to many applications (Jupyterlab, R, MATLAB etc).
 
 ### New Storage Directory
+
+All of your data that was in Discovery will be in Explorer.
 
 On Explorer our performant storage directory is called `/projects`. 
 
