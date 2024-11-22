@@ -19,6 +19,8 @@ If you had a storage space for performant storage on Discovery you will want to 
 
 ### New Software
 
+There is a lot of new software on Explorer. Please see what we offer as a [module](../software/systemwide/modules.md) and as a [container image](../containers/index.md). If you don't see software that you would like to use on the Explorer cluster, please fill out a [software request form](https://bit.ly/NURC-StorageExtension).
+
 #### Modules
 
 All of the [modules](../software/systemwide/modules.md) on Explorer are new. Some of the versions may have changed from the version you were using on Discovery. Thus, module load commands will need to be updated.
