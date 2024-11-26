@@ -19,19 +19,19 @@ Use the following procedure if you need to install a MATLAB toolbox:
 1. Create a directory in your /home directory. We recommend creating a directory called `matlab` by typing:
 
    :::
-   mkdir /home/<username>/matlab  #where <username> is your username
+   mkdir /home/a.noether/matlab  # please substitute your username for the example `a.noether`
    :::
 
 1. Go to the directory you just created by typing:
 
    :::
-   cd /home/<username>/matlab
+   cd /home/a.noether/matlab
    :::
 
 1. Unzip the toolbox file by typing:
 
    :::
-   unzip <toolboxname>
+   unzip toolboxname.zip
    :::
 
 1. Load MATLAB by typing:
@@ -49,7 +49,7 @@ Use the following procedure if you need to install a MATLAB toolbox:
 1. Add the toolbox to your PATH by typing:
 
    :::
-   addpath('/home/<username>/matlab/<toolbox>') #where <toolbox> is the name of the toolbox you just unzipped
+   addpath('/home/a.noether/matlab/toolboxname') # where toolboxname is the name of the toolbox you just unzipped
    :::
 
 1. If this is a toolbox you want to use more than once, you should save it to your path by typing:
