@@ -81,7 +81,7 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     #SBATCH --error=error_%j.txt         # Standard error log
     
     # Load any required modules
-    module load python #example
+    module load anaconda3/2024.06 #example
     
     # Run your program
     srun python your_script.py #example
