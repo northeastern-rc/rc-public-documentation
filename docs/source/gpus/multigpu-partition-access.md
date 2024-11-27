@@ -81,10 +81,9 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     #SBATCH --error=error_%j.txt         # Standard error log
     
     # Load any required modules
-    module load python #example
     
     # Run your program
-    srun python your_script.py #example
+    python your_script.py #example
 
     # You can use the editor of your choice to edit and save the file on the cluster.
     # Following commands are for the editor 'Nano', and can be used to write this script to disk
