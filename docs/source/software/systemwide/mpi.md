@@ -15,9 +15,9 @@ To get started with MPI on a Slurm-based HPC cluster, you should have:
 
 ### MPI libraries on Explorer
 
-There are many versions of OpenMPI, MVAPICH, and MPICH that are available on the HPC as modules compiled with different compilers and additional libraries and features. To see them, use the `module avail openmpi`, `module avail mpich`, and `module avail mvapich` respectively.
+Curently, OpenMPI 4.1.6 is available on the HPC cluster as a module, which can be loaded using the `module load OpenMPI/4.1.6`. If there is a need for other MPI modules, please submit a [software request](https://bit.ly/NURC-Software)
 
-Use the `module show` command to view information about the compilers you need to use with these libraries and if they support InfiniBand (IB) or not. For example, `module show openmpi/4.1.0-zen2-gcc10.1`.
+Use the `module show OpenMPI/4.1.6` command to identify the information about how the module was installed.
 
 ::::{dropdown} Output for `module show openmpi/4.1.0-zen2-gcc10.1`
 :::{code} bash
