@@ -4,6 +4,10 @@
 
 The HPC has a dedicated transfer node that you must use to transfer data to and from the cluster. You cannot transfer data from any other node or the HPC to your local machine. The node name is `<username>@xfer.discovery.neu.edu:` where `<username>` is your Northeastern username to login into the transfer node.
 
+:::{important}
+At the moment, only the Discovery transfer node is available for data transfers to and from the cluster. Folder names such as `/projects/foo` on Explorer and `/work/foo` on Discovery are mapped together. Accessing and making changes to `/work/foo` on Discovery will be reflected in `/projects/foo` on Explorer, and vice-versa.
+:::
+
 You can also transfer files using Globus. This is highly recommended if you need to transfer large amounts of data. See {ref}`using-globus` for more information.
 
 If you are transferring data from different directories on the HPC, you need to use a compute node (see {ref}`using-srun` or {ref}`using-sbatch`) with SCP, rsync, or the copy command to complete these tasks. You should use the `--constraint=ib` flag which will use the infiniband network for the fastest transfer.
