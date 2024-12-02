@@ -15,7 +15,7 @@ All of your data that was in Discovery will be in Explorer.
 
 On Explorer our performant storage directory is called `/projects`. 
 
-If you had a storage space for performant storage on Discovery you will want to change the paths in your scripts from `/work` to `/projects`. if you would like a new directory in /projects please [request one](https://bit.ly/NURC-NewStorage).
+If you had a storage space for performant storage on Discovery you will want to change the paths in your scripts from `/work` to `/projects`. If you would like a new directory in /projects please [request one](https://bit.ly/NURC-NewStorage).
 
 ### Courses Directory
 
