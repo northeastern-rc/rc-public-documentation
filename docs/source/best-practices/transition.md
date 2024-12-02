@@ -15,7 +15,13 @@ All of your data that was in Discovery will be in Explorer.
 
 On Explorer our performant storage directory is called `/projects`. 
 
-If you had a storage space for performant storage on Discovery you will want to change the paths in your scripts from `/work` to `/projects`.
+If you had a storage space for performant storage on Discovery you will want to change the paths in your scripts from `/work` to `/projects`. If you would like a new directory in /projects please [request one](https://bit.ly/NURC-NewStorage).
+
+### Courses Directory
+
+If you are teaching in the Spring 2025 term, you will only be able to access your course materials (i.e., `/courses` directory and OOD applications) from Explorer. 
+
+If you get a "Permission Denied" error when trying to `cd` or otherwise access your space in `/courses` please check that you are logged in to Explorer, and please select "Restart Web Server" from the `?` icon.
 
 ### New Software
 
