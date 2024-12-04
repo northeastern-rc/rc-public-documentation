@@ -121,7 +121,7 @@ srun --time=4:00:00 --job-name=MyJob --partition=courses-gpu --gres=gpu:1 --pty 
 
 ### Open OnDemand
 
-We have several widely-used applications available on the Open OnDemand (OOD) website including, Jupyterlab Notebook, Rstudio, Matlab, GaussView and more.
+We have have interactive versions of several widely-used applications available on the [Open OnDemand](https://rc.northeastern.edu/ood/) including, Jupyterlab Notebook, Rstudio, Matlab, GaussView and more.
 
 You can login to the Open OnDemand website via the link below.
 
@@ -158,8 +158,6 @@ scancel jobid
 All courses have access to the command line.
 
 We have many software applications installed system wide as modules that are available through the command line via the [module](../software/systemwide/modules.md) command.
-
-We also support many software applications for courses and have interactive versions on [Open OnDemand](https://rc.northeastern.edu/ood/) including Jupyterlab notebook, Rstudio, Matlab, VSCode, Maestro (Schrodinger), and a unix Desktop
 
 Professors should create custom conda environments for their course which can be used in JupyterLab notebook or used in interactive mode (srun) or sbatch scripts on the command line.
 
