@@ -167,7 +167,7 @@ Professors should create custom conda environments for their course which can be
 
 At Northeastern University instructors have a great deal of flexibility in how they use the HPC for their classroom, and this is most apparent in the use of software applications.
 
-We encourage professors to perform local software installations via conda environments within the `/courses` directory for their class. These can be used by the students to complete tutorials and homework assignments. Students can also create their own conda environments in their `/courses/course.code/students/username` directory to complete their own projects. [Conda environments](../software/packagemanagers/conda.html) can be used to install a variety of research software and are not only useful for coding in python.
+We encourage professors to perform local software installations via conda environments within the `/courses` directory for their class. These can be used by the students to complete tutorials and homework assignments. Students can also create their own conda environments in their `/courses/course.code/students/username` directory to complete their own projects. [Conda environments](../software/packagemanagers/conda.md) can be used to install a variety of research software and are not only useful for coding in python.
 
 For most courses, the instructor is able to create a shared conda environment in their `/courses` directory that can provide all the necessary packages for the class.
 
