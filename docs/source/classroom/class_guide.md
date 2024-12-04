@@ -111,7 +111,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 
 ## srun interactive session
 
-An interactive session can be run on the command line via the `srun` command as shown in the examples below. See {ref}`slurm-running-jobs` for more information on using `srun` or run `man srun` to see additinal parameters that can be set with `srun`.
+An interactive session can be run on the command line via the `srun` command as shown in the examples below. We have more information on [running jobs]((../runningjobs/index.md)) for more information on using `srun` or run `man srun` to see additinal parameters that can be set with `srun`.
 
 ::::{dropdown} courses partition
 :::{code-block} bash
@@ -163,11 +163,11 @@ scancel jobid
 
 ## Software Applications
 
-All courses have access to the [command line](https://rc-docs.northeastern.edu/en/latest/first_steps/usingbash.html#command-line).
+All courses have access to the command line.
 
-We have many software applications installed system wide as modules that are available through the command line via the [“module” command](https://rc-docs.northeastern.edu/en/latest/software/systemwide/modules.html).
+We have many software applications installed system wide as modules that are available through the command line via the [module](../software/systemwide/modules.md) command.
 
-We also support many software applications for courses and have interactive versions on the [Open OnDemand](https://rc-docs.northeastern.edu/en/latest/using-ood/index.html) website including:
+We also support many software applications for courses and have interactive versions on the [Open OnDemand](https://rc.northeastern.edu/ood/) website including:
 
 Jupyterlab notebook, Rstudio, Matlab, VSCode, Maestro (Schrodinger), and a unix Desktop
 
@@ -177,7 +177,7 @@ Professors should create custom conda environments for their course which can be
 
 At Northeastern University instructors have a great deal of flexibility in how they use the HPC for their classroom, and this is most apparent in the use of software applications.
 
-We encourage professors to perform local software installations via conda environments within the `/courses` directory for their class. These can be used by the students to complete tutorials and homework assignments. Students can also create their own conda environments in their `/courses/course.code/students/username` directory to complete their own projects. [Conda environments](https://rc-docs.northeastern.edu/en/latest/software/packagemanagers/conda.html#conda) can be used to install a variety of research software and are not only useful for coding in python.
+We encourage professors to perform local software installations via conda environments within the `/courses` directory for their class. These can be used by the students to complete tutorials and homework assignments. Students can also create their own conda environments in their `/courses/course.code/students/username` directory to complete their own projects. [Conda environments](../software/packagemanagers/conda.html#conda) can be used to install a variety of research software and are not only useful for coding in python.
 
 For most courses, the instructor is able to create a shared conda environment in their `/courses` directory that can provide all the necessary packages for the class.
 
