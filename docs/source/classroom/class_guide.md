@@ -74,26 +74,20 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 
 ::::{dropdown} courses partition
 :::{code-block}bash
-
  #!/bin/bash
-
  #SBATCH --nodes=1  
  #SBATCH --time=4:00:00  
  #SBATCH --job-name=MyCPUJob  
  #SBATCH --partition=courses  
  #SBATCH --mail-type=ALL  
  #SBATCH --mail-users=username@northeastern.edu  
-
 # commands to execute  
-
 :::
 ::::
 
 ::::{dropdown} courses-gpu partition
 :::{code-block}bash
-
  #!/bin/bash
-
  #SBATCH --nodes=1  
  #SBATCH --time=4:00:00  
  #SBATCH --job-name=MyGPUJob  
@@ -101,9 +95,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
  #SBATCH --gres=gpu:1  
  #SBATCH --mail-type=ALL  
  #SBATCH --mail-users=username@northeastern.edu  
-
 # commands to execute for gpu
-
 :::
 ::::
 
@@ -111,7 +103,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 
 ## srun interactive session
 
-An interactive session can be run on the command line via the `srun` command as shown in the examples below. We have more information on [running jobs]((../runningjobs/index.md)) using `srun`. Or you can run `man srun` in the command line to see additinal parameters that can be set with `srun`.
+An interactive session can be run on the command line via the `srun` command as shown in the examples below. We have more information on [running jobs](../runningjobs/index.md) using `srun`. Or you can run `man srun` in the command line to see additinal parameters that can be set with `srun`.
 
 ::::{dropdown} courses partition
 :::{code-block} bash
