@@ -167,9 +167,7 @@ All courses have access to the command line.
 
 We have many software applications installed system wide as modules that are available through the command line via the [module](../software/systemwide/modules.md) command.
 
-We also support many software applications for courses and have interactive versions on the [Open OnDemand](https://rc.northeastern.edu/ood/) website including:
-
-Jupyterlab notebook, Rstudio, Matlab, VSCode, Maestro (Schrodinger), and a unix Desktop
+We also support many software applications for courses and have interactive versions on the [Open OnDemand](https://rc.northeastern.edu/ood/) website including Jupyterlab notebook, Rstudio, Matlab, VSCode, Maestro (Schrodinger), and a unix Desktop
 
 Professors should create custom conda environments for their course which can be used in JupyterLab notebook or used in interactive mode (srun) or sbatch scripts on the command line.
 
@@ -177,7 +175,7 @@ Professors should create custom conda environments for their course which can be
 
 At Northeastern University instructors have a great deal of flexibility in how they use the HPC for their classroom, and this is most apparent in the use of software applications.
 
-We encourage professors to perform local software installations via conda environments within the `/courses` directory for their class. These can be used by the students to complete tutorials and homework assignments. Students can also create their own conda environments in their `/courses/course.code/students/username` directory to complete their own projects. [Conda environments](../software/packagemanagers/conda.html#conda) can be used to install a variety of research software and are not only useful for coding in python.
+We encourage professors to perform local software installations via conda environments within the `/courses` directory for their class. These can be used by the students to complete tutorials and homework assignments. Students can also create their own conda environments in their `/courses/course.code/students/username` directory to complete their own projects. [Conda environments](../software/packagemanagers/conda.html) can be used to install a variety of research software and are not only useful for coding in python.
 
 For most courses, the instructor is able to create a shared conda environment in their `/courses` directory that can provide all the necessary packages for the class.
 
