@@ -34,7 +34,7 @@ Each course directory gets a default 1TB of storage space. This amount can be in
 
 Once the course has ended, and final grades have been submitted, the courses space including all data and shared class files will be archived, and all student personal directories will be deleted. Any students who had access to the HPC cluster only though the course will no longer have access when the course is completed.
 
-Please see our page on {ref}`getting-access` if you would like an account that persists through taking courses.
+Please see our page on [getting-access](https://rc.northeastern.edu/getting-access/) if you would like an account that persists through taking courses.
 
 ## Courses Partitions
 
