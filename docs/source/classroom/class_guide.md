@@ -73,7 +73,7 @@ These partitions can be used in the following ways:
 An sbatch script can be submitted on the command line via the command `sbatch scriptname.sh`. Below are some examples of sbatch scripts using the courses and courses-gpu partitions. See {ref}`slurm-running-jobs` for more information on running sbatch scripts or run `man sbatch` for additional sbatch parameters.
 
 ::::{dropdown} courses partition
-:::{code-block}bash
+:::{code-block} bash
  #!/bin/bash
  #SBATCH --nodes=1  
  #SBATCH --time=4:00:00  
@@ -86,7 +86,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 ::::
 
 ::::{dropdown} courses-gpu partition
-:::{code-block}bash
+:::{code-block} bash
  #!/bin/bash
  #SBATCH --nodes=1  
  #SBATCH --time=4:00:00  
