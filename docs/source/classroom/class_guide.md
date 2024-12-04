@@ -159,7 +159,7 @@ All courses have access to the command line.
 
 We have many software applications installed system wide as modules that are available through the command line via the [module](../software/systemwide/modules.md) command.
 
-We also support many software applications for courses and have interactive versions on the [Open OnDemand](https://rc.northeastern.edu/ood/) website including Jupyterlab notebook, Rstudio, Matlab, VSCode, Maestro (Schrodinger), and a unix Desktop
+We also support many software applications for courses and have interactive versions on [Open OnDemand](https://rc.northeastern.edu/ood/) including Jupyterlab notebook, Rstudio, Matlab, VSCode, Maestro (Schrodinger), and a unix Desktop
 
 Professors should create custom conda environments for their course which can be used in JupyterLab notebook or used in interactive mode (srun) or sbatch scripts on the command line.
 
