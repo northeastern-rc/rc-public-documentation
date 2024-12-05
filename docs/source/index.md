@@ -89,15 +89,15 @@ Getting Started <gettingstarted/index>
 :hidden:
 :caption: User Guides
 
-Connecting to Explorer <connectingtocluster/index
+connectingtocluster/index
 hardware/index
 using-ood/index
 runningjobs/index
 Working with GPUs <gpus/index>
 datamanagement/index
 Software <software/index>
-Courses on Explorer <classroom/index>
-Containers on Explorer <containers/index
+classroom/index>
+containers/index
 best-practices/index
 tutorialsandtraining/index
 miscellaneous/annual-shutdown
