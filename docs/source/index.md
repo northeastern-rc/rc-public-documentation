@@ -87,7 +87,7 @@ Getting Started <gettingstarted/index>
 
 ```{toctree}
 :hidden:
-:caption: User Guides
+:caption: Explorer User Guides
 
 connectingtocluster/index
 hardware/index
