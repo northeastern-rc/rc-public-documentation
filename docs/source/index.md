@@ -63,7 +63,7 @@ Learn to optimize your projects by following some best practices.
 ::::
 
 ---
-The Northeastern University HPC Cluster is a high-powered, multi-node, parallel computing system designed to meet the computational and data-intensive needs of various academic and industry-oriented research projects. The cluster incorporates cutting-edge computing technologies and robust storage solutions, providing an efficient and scalable environment for large-scale simulations, complex calculations, artificial intelligence, machine learning, big data analytics, bioinformatics, and more.
+The Northeastern University Discovery Cluster is a high-powered, multi-node, parallel computing system designed to meet the computational and data-intensive needs of various academic and industry-oriented research projects. The cluster incorporates cutting-edge computing technologies and robust storage solutions, providing an efficient and scalable environment for large-scale simulations, complex calculations, artificial intelligence, machine learning, big data analytics, bioinformatics, and more.
 
 Whether you are a seasoned user or just beginning your journey into high-performance computing, our portal offers comprehensive resources, including in-depth guides, tutorials, best practices, and troubleshooting tips. Furthermore, the platform provides a streamlined interface to monitor, submit, and manage your computational jobs on the HPC cluster.
 
@@ -87,18 +87,15 @@ Getting Started <gettingstarted/index>
 
 ```{toctree}
 :hidden:
-:caption: User Guides
+:caption: Discovery User Guides
 
-connectingtocluster/index
-hardware/index
-using-ood/index
+Connecting to Discovery <connectingtocluster/index>
 runningjobs/index
 Working with GPUs <gpus/index>
 datamanagement/index
 Software <software/index>
-slurmguide/index
-HPC for the Classroom <classroom/index>
-containers/index
+Courses on Discovery <classroom/index>
+Containers on Discovery <containers/index>
 best-practices/index
 tutorialsandtraining/index
 miscellaneous/annual-shutdown
