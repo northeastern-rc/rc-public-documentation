@@ -1,4 +1,4 @@
-# Containers on HPC
+# Containers on Explorer
 ```{toctree}
 :hidden:
 :maxdepth: 4
