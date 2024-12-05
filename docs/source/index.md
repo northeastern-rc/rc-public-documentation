@@ -91,12 +91,11 @@ Getting Started <gettingstarted/index>
 
 connectingtocluster/index
 hardware/index
-using-ood/index
 runningjobs/index
 Working with GPUs <gpus/index>
 datamanagement/index
 Software <software/index>
-classroom/index>
+Courses on Explorer <classroom/index>
 containers/index
 best-practices/index
 tutorialsandtraining/index
