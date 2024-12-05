@@ -87,7 +87,7 @@ Getting Started <gettingstarted/index>
 
 ```{toctree}
 :hidden:
-:caption: User Guides
+:caption: Discovery User Guides
 
 Connecting to Discovery <connectingtocluster/index>
 runningjobs/index
