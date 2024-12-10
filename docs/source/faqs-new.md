@@ -30,6 +30,15 @@ We recommend loading other scripts/environments after your main environment has 
 Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {ref}`from-source` sections. If you encounter any issues, contact [Research Computing](https://rc.northeastern.edu/support/gettinghelp/).
 ::::
 
+::::{dropdown} I am graduating soon. How can I keep my access to the cluster?
+If a user is graduating and wants to continue using the cluster, they'll need a sponsored account from Northeastern University. To request a sponsored account from Northeastern, please see [Faculty, Staff, and Sponsored Accounts](https://accounts.northeastern.edu/faculty-staff-and-sponsored-accounts/) and [related FAQs](https://accounts.northeastern.edu/sponsored-account-faqs/)
+
+After the user gets a sponsored account, we can help move their data from their student account to their sponsored account. Please [open a ticket with Research Computing](https://bit.ly/NURC-Assistance) after you have a sponsored account, and we'll be happy to assist.
+::::
+
+
+
+
 ::::{dropdown} How to Resolve the "Error: C++17 standard requested but CXX17 is not defined" When Installing a Package in R?
 1. Ensure that you have the GCC version 11.1.0 module loaded. Run the following command
 :::{code-block} shell
