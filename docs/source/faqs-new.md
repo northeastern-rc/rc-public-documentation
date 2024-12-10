@@ -31,7 +31,7 @@ Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {r
 ::::
 
 ::::{dropdown} I am graduating soon. How can I keep my access to the cluster?
-If a user is graduating and wants to continue using the cluster, they'll need a sponsored account from Northeastern University. To request a sponsored account from Northeastern, please see https://accounts.northeastern.edu/faculty-staff-and-sponsored-accounts/ and https://accounts.northeastern.edu/sponsored-account-faqs/
+If a user is graduating and wants to continue using the cluster, they'll need a sponsored account from Northeastern University. To request a sponsored account from Northeastern, please see [Faculty, Staff, and Sponsored Accounts](https://accounts.northeastern.edu/faculty-staff-and-sponsored-accounts/) and [related FAQs](https://accounts.northeastern.edu/sponsored-account-faqs/)
 
 After the user gets a sponsored account, we can help move their data from their student account to their sponsored account. Please [open a ticket with Research Computing](https://bit.ly/NURC-Assistance) after you have a sponsored account, and we'll be happy to assist.
 ::::
