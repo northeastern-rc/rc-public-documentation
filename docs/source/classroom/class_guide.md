@@ -32,7 +32,7 @@ All those in staff have read-write-execute permissions within the entirety of th
 
 Each course directory gets a default 1TB of storage space. This amount can be increased in the initial application form for classroom access, or requested anytime during an actively running course, by contacting <rchelp@northeastern.edu>
 
-Once the course has ended, and final grades have been submitted, the courses space including all data and shared class files will be archived, and all student personal directories will be deleted. Any students who had access to the HPC cluster only though the course will no longer have access when the course is completed.
+Once the course has ended, and final grades have been submitted, all student personal directories will be deleted. The remaining courses space including all data and shared class files will be archived for one year. Any students who had access to the HPC cluster only though the course will no longer have access when the course is completed. 
 
 Please see our page on [getting-access](https://rc.northeastern.edu/getting-access/) if you would like an account that persists through taking courses.
 
@@ -65,7 +65,7 @@ sinfo -p courses-gpu  --Format=nodes,cpus,gres,statecompact
 :::
 
 :::{important}
-The compute resources for courses are shared across all courses each term. We monitor their usage daily. **We send out email notifications to users who are idle on courses-gpu for one hour.** We highly recommend ending jobs (scancel for sbatch/srun or Delete for OOD) when your work has finished as this frees up the resource for other students. Which increases the efficiency of resource use for all users. 
+The compute resources for courses are shared across all courses each term. [We monitor their usage daily](../best-practices/clusterusage.md). **We send out email notifications to users who are idle on courses-gpu for one hour.** We highly recommend ending jobs (scancel for sbatch/srun or Delete for OOD) when your work has finished as this frees up the resource for other students. Which increases the efficiency of resource use for all users. 
 :::
 
 These partitions can be used in the following ways:
