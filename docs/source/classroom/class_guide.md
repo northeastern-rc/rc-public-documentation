@@ -52,7 +52,7 @@ header-rows: 1
   - 256 GB
 * - courses-gpu
   - 4 hrs / 8 hrs
-  - 2
+  - 1
   - 12 GB
 ::::
 
@@ -60,6 +60,10 @@ The resources available in the courses/courses-gpu partitions can be queried wit
 
 :::{code-block} bash
 sinfo -p courses-gpu  --Format=nodes,cpus,gres,statecompact
+:::
+
+:::{important}
+Course resources are shared across all courses each term. We monitor their usage daily, and will notifiy users on the courses-gpu partition if they are idle for more than 60 minutes. We highly encourage users to delete or cancel their jobs once their work has finished. This allows other students to access those resources and makes the whole process more efficient for everyone. 
 :::
 
 These partitions can be used in the following ways:
@@ -107,7 +111,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
 
 (srun-courses-index)=
 
-## srun interactive session
+### srun interactive session
 
 An interactive session can be run on the command line via the `srun` command as shown in the examples below. See {ref}`slurm-running-jobs` for more information on using `srun` or run `man srun` to see additinal parameters that can be set with `srun`.
 
