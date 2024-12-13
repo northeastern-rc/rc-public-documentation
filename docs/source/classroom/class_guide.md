@@ -8,7 +8,7 @@ We’ve supported courses from many disciplines, including biology, chemistry, c
 To gain access to HPC resources instructors need to submit a [classroom access form.](https://bit.ly/NURC-Classroom)
 
 :::{important}
-Please submit classroom access requests prior to the beginning of each term (preferred), or at least **one week** prior to the start of when you plan on using the HPC cluster for your class. If you're requesting a customized application we require **two-weeks** to **one-month** time to complete prior to when you'd like to use it.
+Please submit classroom access requests prior to the beginning of each term (preferred), or at least **one week** prior to the start of when you plan on using the HPC cluster for your class. If you're requesting a customized application we require **one-months** time to complete prior to when you'd like to use it.
 :::
 
 ## Classroom setup
@@ -65,7 +65,7 @@ sinfo -p courses-gpu  --Format=nodes,cpus,gres,statecompact
 :::
 
 :::{important}
-The compute resources for courses are shared across all courses each term. [We monitor their usage daily](../best-practices/clusterusage.md). **We send out email notifications to users who are idle on courses-gpu for one hour.** We highly recommend ending jobs (scancel for sbatch/srun or Delete for OOD) when your work has finished as this frees up the resource for other students. Which increases the efficiency of resource use for all users. 
+The compute resources for courses are shared across all courses each term. [We monitor their usage daily](../best-practices/clusterusage.md). **We send out email notifications to users who are idle on courses-gpu for one hour.** We highly recommend ending jobs when your work has finished as this frees up the resource for other students. When all students do this, it increases the availability of resources for everyone in courses. 
 :::
 
 These partitions can be used in the following ways:
