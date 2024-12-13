@@ -64,6 +64,10 @@ The resources available in the courses/courses-gpu partitions can be queried wit
 sinfo -p courses-gpu  --Format=nodes,cpus,gres,statecompact
 :::
 
+:::{important}
+The compute resources for courses are shared across all courses each term. We monitor their usage daily. We send out notifications to users who are idle on courses-gpu for one hour. We highly recommend ending jobs (scancel for sbatch/srun or Delete for OOD) when your work has finished as this frees up the resource for other students. Which increases the efficiency of resource use for all users. 
+:::
+
 These partitions can be used in the following ways:
 
 (sbatch-courses-index)=
