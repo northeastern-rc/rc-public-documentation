@@ -1,4 +1,4 @@
-# Connecting To The Cluster
+# Connecting To Explorer
 
 ```{toctree}
 :hidden:
@@ -8,11 +8,11 @@ Windows <windows>
 Linux <linux>
 ```
 
-The following sections on this page will guide you on how to connect to the cluster using command-line access using the terminal and the web interface of Open OnDemand. Guides are provided if your personal computer is running Windows, macOS, or Linux.
+The following sections on this page will guide you on how to connect to the Explorer cluster using command-line access using the terminal and the web interface of Open OnDemand. Guides are provided if your personal computer is running Windows, macOS, or Linux.
 
 
 ## Using the Terminal
-You connect to the HPC using a [secure shell] program to initiate an SSH session to
+You connect to Explorer using a [secure shell] program to initiate an SSH session to
 sign in to the HPC.
 
 ::::{grid} 3
