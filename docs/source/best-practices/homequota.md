@@ -111,23 +111,22 @@ conda env list
 conda env remove --name <your environment>
 :::
 
-### Singularity
+### Apptainer
 
-If you have pulled any {term}`containers <container>` to the HPC using {term}`Singularity`, you can clean your container cache in your `/home/<username>` directory by running the following command from a {term}`compute node`:
-
-:::{code-block} bash
-module load singularity/3.5.3
-singularity cache clean all
-:::
-
-To avoid your `~/.singularity` directory filling up, you can set a temporary directory for when you pull a {term}`container` to store the cache in that location; an example of this procedure (where `<project>` is your PI's `/projects` directory) is the following:
+If you have pulled any {term}`containers <container>` to the HPC using {term}`Apptainer`, you can clean your container cache in your `/home/<username>` directory by running the following command from a {term}`compute node`:
 
 :::{code-block} bash
-mkdir /projects/<project-name>/singularity_tmp
-export SINGULARITY_TMPDIR=/projects/<project-name>/singularity_tmp
+apptainer cache clean all
 :::
 
-Then, pull the container using Singularity as usual.
+To avoid your `~/.apptainer` directory filling up, you can set a temporary directory for when you pull a {term}`container` to store the cache in that location; an example of this procedure (where `<project-name>` is your PI's `/projects` directory) is the following:
+
+:::{code-block} bash
+mkdir /projects/<project-name>/apptainer_tmp
+export APPTAINER_TMPDIR=/projects/<project-name>/apptainer_tmp
+:::
+
+Then, pull the container using Apptainer as usual.
 
 ### Cache
 
@@ -156,7 +155,7 @@ Utilize the same conda environment to save storage space and time (i.e., avoid d
 
 {ref}`More information about creating custom Conda environments. <conda>`
 
-### Singularity containers
+### Apptainer containers
 
 Containers pulled, built, and maintained for research work should be stored in your PI's `/projects` directory, not your `/home/<username>` directory.
 
