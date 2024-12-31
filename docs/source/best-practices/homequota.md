@@ -4,32 +4,32 @@
 There are strict quotas for each {term}`home directory` (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. This page provides some best practices for keeping within the {term}`quota`. For more information about data storage on the HPC, see {ref}`data-storage`.
 
 :::{important}
-All commands on this page should be run from a {term}`compute node` on the partition `short`, because they are CPU-intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
+All commands on this page should be run from a {term}`compute node` because they are CPU-intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
 :::
 
-## Utilize /projects and /scratch
-Use `/projects` for long-term storage. PIs can request a folder in `/projects` via [New Storage Space Request] and additional storage via [Storage Space Extension Request]. Utilize `/scratch/<username>` for temporary or intermediate files. Then, move files from `/scratch` to `/projects` for persistent storage (i.e., the recommended workflow).
+## Utilize /work and /scratch
+Use `/work` for long-term storage. PIs can request a folder in `/work` via [New Storage Space Request] and additional storage via [Storage Space Extension Request]. Utilize `/scratch/<username>` for temporary or intermediate files. Then, move files from `/scratch` to `/work` for persistent storage (i.e., the recommended workflow).
 
 :::{note}
-Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See {ref}`data-storage` for information on `/projects` and `/scratch`.
+Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See {ref}`data-storage` for information on `/work` and `/scratch`.
 :::
 
 ## How To Check Your Quotas
-You can see exactly how much of your quota is being used in your `/projects`, `/scratch`, or your `/home` directories by running the `check-quota` script from any node in the `short` partition.
+You can see exactly how much of your quota is being used in your /work, /scratch, or your /home directories by running the check-quota script from any node in the short partition.
 
-First, launch a job on a node in the `short` partition.
+First, launch a job on a node in the short partition.
 :::{code-block} bash
 srun -p short --pty bash
 :::
 
-And then run `check-quota` with the desired path as follows:
+And then run check-quota with the desired path as follows:
 :::{code-block} bash
 # check your home quota
 check-quota /home/<username>
 # check your scratch quota
 check-quota /scratch/<username>
-# check a projects directory quota
-check-quota /projects/<directory>
+# check a work directory quota
+check-quota /work/<directory>
 :::
 The output will be of the following form (inode count refers to the number of files):
 :::{code-block} bash
@@ -44,7 +44,7 @@ Directory <> has the following quota:
 :::
 
 :::{warning}
-You will only be able to see quotas of directories to which you have access; attempting to see quotas for directories that you don't have access to is not supported.
+You will only be able to see quotas of directories to which you have access; attempting to see quotas for directories that you don't have access to will be logged.
 :::
 
 ## Analyze Disk Usage
@@ -53,25 +53,27 @@ To evaluate directory level usage you can use the command `du`. From a compute n
 du -shc .[^.]* ~/*
 :::
 
-This command will output the size of each file, directory, and hidden directory in your `/home/<username>` space, with the total of your `/home` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location (e.g., `/projects` for research) or back up and delete them if they are no longer required. An example output would look like:
+This command will output the size of each file, directory, and hidden directory in your `/home/<username>` space, with the total of your `/home` directory being the last line of the output. After identifying the large files and directories, you can move them to the appropriate location (e.g., `/work` for research) or back up and delete them if they are no longer required. An example output would look like:
 :::{code-block} shell
 [<username>@<host> directory]$  du -shc .[^.]* ~/*
 39M     .git
-106M    examples
+106M    discovery-examples
 41K     README.md
 3.3M    software-installation
 147M    total
 :::
 
-;;;{note}
+:::{note}
 The `du` command can take a few minutes to run in `/home/<username>`
 :::
 
 ## Cleaning Directories
-### Local
+### .local
+We advise against using 'pip install' to install packages outside of a conda environment or python virtual environment (for example, while in a JupyterLab Notebook or interactive python session). These installations are placed in your `.local` directory, adding to your `/home` quota. 
 
-We advise against using 'pip install' to install packages outside of a conda environment or python virtual environment (for example, while in a JupyterLab Notebook or interactive python session). These installations are placed in your `.local` directory, adding to your `/home` quota. Additionaly, the presence of different packages in `.local` can have a negative impact on the function of applications on the OOD. Please ensure all the packages you need are installed in a conda or virtual python environment.
-
+:::{warning}
+Additionaly, the presence of different packages in `.local` can have a negative impact on the function of applications on the OOD. Please ensure all the packages you need are installed in a conda or virtual python environment.
+:::
 If there are no activly running processes the entire `.local` directory can be moved to `.local-off` or individual packages can be removed usually from within: `/home/username/.local/lib/pythonXX/site-packages`
 
 You can check for running processes via:
@@ -91,7 +93,7 @@ mv /home/username/.local /home/username/.local-off
 ### Conda
 
 :::{note}
-Conda environments are part of your research and should be stored in your PI's `/projects` directory.
+Conda environments are part of your research and should be stored in your PI's `/work` directory.
 :::
 Here are some suggestions to reduce the storage size of the environments for those using the `/home/<username>/.conda` directory.
 
@@ -111,22 +113,23 @@ conda env list
 conda env remove --name <your environment>
 :::
 
-### Apptainer
+### Singularity
 
-If you have pulled any {term}`containers <container>` to the HPC using {term}`Apptainer`, you can clean your container cache in your `/home/<username>` directory by running the following command from a {term}`compute node`:
-
-:::{code-block} bash
-apptainer cache clean all
-:::
-
-To avoid your `~/.apptainer` directory filling up, you can set a temporary directory for when you pull a {term}`container` to store the cache in that location; an example of this procedure (where `<project-name>` is your PI's `/projects` directory) is the following:
+If you have pulled any {term}`containers <container>` to the HPC using {term}`Singularity`, you can clean your container cache in your `/home/<username>` directory by running the following command from a {term}`compute node`:
 
 :::{code-block} bash
-mkdir /projects/<project-name>/apptainer_tmp
-export APPTAINER_TMPDIR=/projects/<project-name>/apptainer_tmp
+module load singularity/3.5.3
+singularity cache clean all
 :::
 
-Then, pull the container using Apptainer as usual.
+To avoid your `~/.singularity` directory filling up, you can set a temporary directory for when you pull a {term}`container` to store the cache in that location; an example of this procedure (where `<project>` is your PI's `/work` directory) is the following:
+
+:::{code-block} bash
+mkdir /work/<project>/singularity_tmp
+export SINGULARITY_TMPDIR=/work/<project>/singularity_tmp
+:::
+
+Then, pull the container using Singularity as usual.
 
 ### Cache
 
@@ -143,21 +146,21 @@ which prints a table with `JOBID`, `PARTITION`, `NAME`, `USER ST`, `TIME`, `NODE
 (best-practices-conda-environments)=
 ### Conda environments
 
-Use conda environments for Python on HPC. To create an environment in `/projects`, use the `--prefix` flag as follows: (where `<project-name>` is your PI's `/projects` directory and `<my conda env>` is an empty directory to store your Conda environment):
+Use conda environments for Python on HPC. To create an environment in `/work`, use the `--prefix` flag as follows: (where `<project>` is your PI's `/work` directory and `<my conda env>` is an empty directory to store your Conda environment):
 
 :::{code-block} bash
-conda create --prefix=/projects/<project-name>/<my conda env>
+conda create --prefix=/work/<project>/<my conda env>
 :::
 
 
-Utilize the same conda environment to save storage space and time (i.e., avoid duplicate conda environments). Hence, shared environments can be easily done for a project accessing the same `/projects` directory.
+Utilize the same conda environment to save storage space and time (i.e., avoid duplicate conda environments). Hence, shared environments can be easily done for a project accessing the same `/work` directory.
 
 
 {ref}`More information about creating custom Conda environments. <conda>`
 
-### Apptainer containers
+### Singularity containers
 
-Containers pulled, built, and maintained for research work should be stored in your PI's `/projects` directory, not your `/home/<username>` directory.
+Containers pulled, built, and maintained for research work should be stored in your PI's `/work` directory, not your `/home/<username>` directory.
 
 [New Storage Space Request]: https://bit.ly/NURC-NewStorage
 [Research Computing Policy Page]: https://rc.northeastern.edu/policy/
