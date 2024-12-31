@@ -1,7 +1,7 @@
 (home-directory-storage-quota)=
 # Home Directory Storage Quota
 
-There are strict quotas for each {term}`home directory` (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. This page provides some best practices for keeping within the {term}`quota`. For more information about data storage on the HPC, see {ref}`data-storage`.
+There are strict quotas for each {term}`home directory` (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. Home directory quotas are fixed and cannot be increased. You can use projects or scratch space to move files and free up space in your home directory. This page provides some best practices for keeping within the {term}`quota`. For more information about data storage on the HPC, see {ref}`data-storage`.
 
 :::{important}
 All commands on this page should be run from a {term}`compute node` on the partition `short`, because they are CPU-intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
@@ -72,7 +72,7 @@ The `du` command can take a few minutes to run in `/home/<username>`
 
 We advise against using 'pip install' to install packages outside of a conda environment or python virtual environment (for example, while in a JupyterLab Notebook or interactive python session). These installations are placed in your `.local` directory, adding to your `/home` quota. Additionaly, the presence of different packages in `.local` can have a negative impact on the function of applications on the OOD. Please ensure all the packages you need are installed in a conda or virtual python environment.
 
-If there are no activly running processes the entire `.local` directory can be moved to `.local-off` or individual packages can be removed usually from within: `/home/username/.local/lib/pythonXX/site-packages`
+If there are no actively running processes the entire `.local` directory can be moved to `.local-off` or individual packages can be removed usually from within: `/home/username/.local/lib/pythonXX/site-packages`
 
 You can check for running processes via:
 
