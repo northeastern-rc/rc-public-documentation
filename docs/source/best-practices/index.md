@@ -27,11 +27,11 @@ Learn about storage quotas and how to manage your home directory effectively.
 [Learn more »](homequota)
 :::
 
-:::{grid-item-card} {octicon}`check-circle;1.5em;screen-full` Work Directory Storage Quota
+:::{grid-item-card} {octicon}`check-circle;1.5em;screen-full` Projects Directory Storage Quota
 :link: workquota
 :link-type: doc
 
-Learn about storage quotas and how to manage your work directory effectively.
+Learn about storage quotas and how to manage your projects directory effectively.
 
 +++
 [Learn more »](workquota)
