@@ -23,6 +23,10 @@ If you are teaching in the Spring 2025 term, you will only be able to access you
 
 If you get a "Permission Denied" error when trying to `cd` or otherwise access your space in `/courses` please check that you are logged in to Explorer, and please select "Restart Web Server" from the `?` icon.
 
+### Transferring Files
+
+The hostname for the transfernode (xfer) will continue to be: `xfer.discovery.neu.edu`. Please see our documentation on [transferring files](../datamanagment/index.md) for example commands.
+
 ### New Software
 
 There is a lot of new software on Explorer. Please see what we offer as a [module](../software/systemwide/modules.md) and as a [container image](../containers/index.md). If you don't see software that you would like to use on the Explorer cluster, please fill out a [software request form](https://bit.ly/NURC-StorageExtension).
