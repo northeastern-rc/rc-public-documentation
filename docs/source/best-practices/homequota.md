@@ -19,7 +19,7 @@ You can see exactly how much of your quota is being used in your /work, /scratch
 
 First, launch a job on a node in the short partition.
 :::{code-block} bash
-srun -p short --pty bash
+srun -p short --constraint=ib --pty bash
 :::
 
 And then run check-quota with the desired path as follows:
