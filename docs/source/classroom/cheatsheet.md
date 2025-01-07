@@ -4,7 +4,7 @@
 :::
 
 
-:::{figure} ../images/Explorer_CheatSheet_Courses_updated.png
+:::{figure} ../images/Explorer_CheatSheat_Courses_updated.png
 :name: courses-sheet
 :align: center
 :::
