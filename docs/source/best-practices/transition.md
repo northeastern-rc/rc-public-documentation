@@ -25,7 +25,7 @@ If you get a "Permission Denied" error when trying to `cd` or otherwise access y
 
 ### Transferring Files
 
-The hostname for the transfernode (xfer) will continue to be: `xfer.discovery.neu.edu`. Please see our documentation on [transferring files](../datamanagment/index.md) for example commands.
+The hostname for the transfernode (xfer) will continue to be: `xfer.discovery.neu.edu`. Please see our documentation on [transferring files](../datamanagement/index.md) for example commands.
 
 ### New Software
 
