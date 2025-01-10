@@ -1,13 +1,6 @@
 (ml-model-level)=
 ## ML Model-level Checkpointing
-Model-level checkpointing is a technique used to periodically save the state of a machine learning (ML) model during training, enabling the training process to be resumed from the saved checkpoint in case of interruptions or premature termination. The saved state typically includes the model's parameters, optimizer state, and essential training information (e.g., the epoch number and loss value). Model checkpoints are especially critical for long-running training jobs.
-
-### Why is Checkpointing Important in Deep Learning?
-Checkpointing is crucial in deep learning because the training process can be time-consuming and require significant computational resources. Additionally, the training process may be interrupted due to hardware or software issues. Checkpoints solve this problem by saving the model's current state to resume where it left off.
-
-Moreover, checkpointing also saves the best-performing model, which can be loaded for evaluation. For instance, the model's performance can vary based on the initialization and optimization algorithms, so checkpointing provides a way to select the best model based on a performance metric.
-
-In summary, checkpointing is essential in deep learning as it provides a way to save progress, resume training, and select the best-performing model.
+Model-level checkpointing is a technique used to periodically save the state of a machine learning (ML) model during training, enabling the training process to be resumed from the saved checkpoint in case of interruptions or premature termination. The saved state typically includes the model's parameters, optimizer state, and essential training information (e.g., the epoch number and loss value). Model checkpoints are especially critical for long-running training jobs. Moreover, checkpointing also saves the best-performing model, which can be loaded for evaluation. 
 
 ### TensorFlow checkpoint example
 
