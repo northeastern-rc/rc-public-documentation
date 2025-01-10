@@ -54,7 +54,7 @@ Learn how to use /scratch effectively, before and after a purge.
 Discover how to save progress within long-running jobs, preventing loss of data.
 
 +++
-[Learn more »](checkpointing)
+[Learn more »](checkpointing/index)
 :::
 
 :::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Shell Environment on the Cluster
