@@ -13,11 +13,11 @@ Checkpointing is a technique used to save a snapshot of the state of a program a
 
 This allows for restarting the program from the saved state in case of any failures or job interruption.
 
-:::{image} ../images/checkpointing.png
+:::{image} ../../images/checkpointing.png
 ---
 width: 300
 alt: Checkpointing algorithm flow chart.
-align: right
+align: center
 :::
 
 Checkpointing can be implemented at different levels of the workflow, such as application-level, user-level, system-level or model-level (e.g. in ML). We'll discuss the application level and model level checkpointing.
