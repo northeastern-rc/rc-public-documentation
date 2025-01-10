@@ -1,5 +1,3 @@
-
-
 (checkpoint-jobs)=
 # Checkpointing Jobs
 
