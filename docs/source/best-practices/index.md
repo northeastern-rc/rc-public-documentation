@@ -7,7 +7,7 @@
 homequota
 workquota
 scratchpurge
-checkpointing
+Checkpointing Jobs <checkpointing/index> 
 shell_environment
 clusterusage
 ```
