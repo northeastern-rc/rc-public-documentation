@@ -36,12 +36,30 @@ To overcome partition time limits, replace your single long job with multiple sh
 
 
 
-::::{grid} 2
+::::{grid} 3
+:gutter: 1 1 1 2
 
-:::{grid-item-card} {ref}`application-level`
+:::{grid-item-card} {octicon}`repo-forked;1.5em;screen-full` Application-Level Checkpointing
+:link: application-level
+:link-type: doc
+
+Using Checkpointing at application level.
+
++++
+[Learn more »](application-level)
 :::
-:::{grid-item-card} {ref}`ml-model-level`
+
+:::{grid-item-card} {octicon}`versions;1.5em;sd-mr-1` Model-Level Checkpointing
+:link: ml-model-level
+:link-type: doc
+
+Using Checkpointing at model level, e.g. for ML models.
+
++++
+[Learn more »](ml-model-level)
 :::
+
+
 ::::
 
 
