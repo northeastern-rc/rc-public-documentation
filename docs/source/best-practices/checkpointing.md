@@ -1,10 +1,10 @@
 (checkpoint-jobs)=
 # Checkpointing Jobs
 
-The complexity of HPC systems can introduce unpredictable hardware or software component behavior, leading to job failures. Applying fault tolerance techniques to your HPC workflows can make your jobs more resilient to crashes, partition time limits, and hardware failures.
+Checkpointing is a technique used to save a snapshot of the state of a program at regular intervals. 
 
-## The Checkpointing technique
-Checkpointing is a fault tolerance technique based on the Backward Error Recovery (BER) technique, designed to overcome "fail-stop" failures (interruptions during the execution of a job).
+This allows for restarting the program from the saved state in case of any failures or job interruption.
+
 :::{image} ../images/checkpointing.png
 ---
 width: 300
@@ -12,33 +12,7 @@ alt: Checkpointing algorithm flow chart.
 align: right
 :::
 
-To implement checkpointing:
-
-- Use data redundancy to create checkpoint files, saving all necessary calculation state data. Checkpoint files are generally created at constant intervals during the run.
-- If a failure occurs, start from an error-free state, check for consistency, and restore the algorithm to the previous error-free state.
-
-Checkpointing allows you to:
-
-- Create resilient workflows in the event of faults.
-- Overcome most scheduler resource time limitations.
-- Implement an early error detection approach by inspecting intermediate results.
-
-## Checkpointing types
-Checkpointing can be implemented at different levels of your workflow.
-
-- **Application-level** checkpointing is recommended for most Discovery users. You can use the checkpointing tool that is already available in your software application. For example, most software designed for HPC has a checkpointing option, and information on proper usage is often available in the software user manual.
-- **User-level** checkpointing is good if you develop your code or know the application code well enough to integrate checkpointing techniques effectively. We recommend this approach for some Discovery users with advanced proficiency and familiarity with checkpointing mechanisms.
-- **System-level** checkpointing is done on the system side, where the user saves the state of the entire process. This option is less efficient than User-level or Application-level checkpointing as it introduces a lot of redundancy.
-- **Model-level** checkpointing is suitable for saving a model's internal state (its weights, current learning rate, etc.) so that the framework can resume the training from this point whenever desired. This is often the intent of users doing machine learning on Discovery.
-
-### Which checkpoint type should you use?
-
-There are several checkpointing options, depending on your software's needs.
-
-- If your software already includes **built-in checkpointing**, this is often the preferred option, as it is the most optimized and efficient way to checkpoint.
-- **Application-level** checkpointing is the easiest to use, as it exists within your application. It does not require significant script changes and saves only the relevant data for your specific application.
-- **User-level** checkpointing is recommended if you are writing your code. You can use DMTCP or implement checkpointing.
-- **ML Model-level** checkpointing is specific to model training and deployment, as detailed in the `ML Model-level`_ section.
+Checkpointing can be implemented at different levels of the workflow, such as application-level, user-level, system-level or model-level (e.g. in ML). We'll discuss the application level and model level checkpointing.
 
 :::{note}
 Some packages can be used to implement checkpointing if you are developing in Python, Matlab, or R. Some examples include [Python PyTorch checkpointing], [TensorFlow checkpointing], [MATLAB checkpointing], and [R checkpointing]. Additionally, many Computational Chemistry and Molecular Dynamics software packages have built-in checkpointing options (e.g., [GROMACS] and [LAMMPS]).
