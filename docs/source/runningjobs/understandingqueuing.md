@@ -17,6 +17,6 @@ Several factors determine job priority:
 - **Queue wait time**: The longer a job has been in the queue, the higher its priority becomes.
 
 :::{important}
-1) Request only the resources you need: Overestimating your job's requirements can result in longer queue times.
+1) Request only the resources you need: Overestimating your job's requirements can result in longer queue times. See {ref}`seff` to learn about viewing historical job resource utilization.
 2) Break up large jobs: Large jobs tend to wait in the queue longer than small jobs. Break up large jobs into smaller ones.
 :::
