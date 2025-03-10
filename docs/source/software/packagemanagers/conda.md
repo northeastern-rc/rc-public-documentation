@@ -42,7 +42,7 @@ To create a new Conda environment where `<environment-name>` is the path and nam
 conda create --prefix=/<path>/<environment-name> python=3.11
 :::
 
-If you need a Conda environment with the full Anaconda package installation, use:
+If you need a Conda environment with the full Anaconda package installation, use the following command (can take more time):
 
 :::{code} bash
 conda create --prefix=/<path>/<environment-name> python=3.11 anaconda
