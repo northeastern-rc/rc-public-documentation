@@ -96,7 +96,7 @@ datamanagement/index
 Software <software/index>
 Courses on Discovery <classroom/index>
 Containers on Discovery <containers/index>
-best-practices/index
+Best Practices <best-practices/index>
 tutorialsandtraining/index
 miscellaneous/annual-shutdown
 glossary

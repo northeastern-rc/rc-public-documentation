@@ -32,7 +32,7 @@ Using the Terminal to connect to Discovery.
 :link: windows
 :link-type: doc
 
-Using MobaXTerm to connect to Discvoery.
+Using MobaXTerm to connect to Discovery.
 
 +++
 [Learn more »](windows)
