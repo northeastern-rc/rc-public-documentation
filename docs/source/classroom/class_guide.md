@@ -84,7 +84,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
  #SBATCH --job-name=MyCPUJob  
  #SBATCH --partition=courses  
  #SBATCH --mail-type=ALL  
- #SBATCH --mail-users=username@northeastern.edu  
+ #SBATCH --mail-user=username@northeastern.edu  
 # commands to execute  
 :::
 ::::
@@ -98,7 +98,7 @@ An sbatch script can be submitted on the command line via the command `sbatch sc
  #SBATCH --partition=courses-gpu  
  #SBATCH --gres=gpu:1  
  #SBATCH --mail-type=ALL  
- #SBATCH --mail-users=username@northeastern.edu  
+ #SBATCH --mail-user=username@northeastern.edu  
 # commands to execute for gpu
 :::
 ::::

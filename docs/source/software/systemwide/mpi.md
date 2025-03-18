@@ -23,6 +23,10 @@ Use the `module show` command to view information about the compilers you need t
 :::{code} bash
 /shared/centos7/modulefiles/openmpi/4.1.0-zen2-gcc10.1:
 
+::::{note}
+To select only nodes connected by infiniband add the `--constraint=ib` flag to your SLURM command.
+:::
+
 module-whatis	 Loads the executables, libraries and headers for OpenMPI v. 4.1.1. Built using Intel 2021 compilers on AMD EPYC architecture (zen2).
 
 Please note - this MPI module supports communication through the HDR200 InfiniBand network by using the Mellanox (OFED 5.3) UCX (1.10.1) framework with cross platform unified API. To make sure InfiniBand is being used, make sure to compile and run your applications using this module only on AMD EPYC architectures (zen2).
