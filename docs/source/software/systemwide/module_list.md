@@ -10,7 +10,7 @@ Table of modules currently available on the Explorer cluster. To see which versi
 :align: left
 
 | Software Name     | Description     |  
-| :---------------- | :------------:  | 
+| :---------------: | :------------:  | 
 |	anaconda3	        |	Open	source	data	science	and	artificial	intelligence	distribution	platform	for	Python	and	R	programming	languages.	|															
 |	angsd             | ANGSD is a software for analyzing next generation sequencing data.  |																																
 |	bamtools	        |	BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.	|																												
