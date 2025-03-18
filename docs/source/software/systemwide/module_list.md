@@ -7,7 +7,7 @@ Table of modules currently available on the Explorer cluster. To see which versi
 :::{table} 
 :width: 65
 :widths: auto
-:align: center
+:align: left
 
 | Software Name     | Description     |  
 | :---------------- | :------------:  | 
