@@ -31,7 +31,13 @@ taskId = sys.getenv('SLURM_ARRAY_TASK_ID')
 ::::
 
 ## Resource Allotment in Job Arrays 
-When submitting an array and setting its size with many dimensions, please use the `%` symbol to indicate how many jobs run simultaneously. When you specify the memory, number of nodes, number of CPUs, or other specifications, they will be applied to each job for the array. For example, the following code specifies an array of 600 jobs, with 20 jobs running at a time:
+When submitting an array and setting its size with many dimensions, please use the `%` symbol to indicate how many jobs run simultaneously. When you specify the memory, number of nodes, number of CPUs, or other specifications, they will be applied to each job for the array. 
+
+:::{note}
+   All resource-related ``#SBATCH`` directives (such as ``--mem``, ``--cpus-per-task``, ``--nodes``, and ``--time``) apply to each individual task in the array, not to the array as a whole. This means that Slurm will allocate the specified amount of memory, CPU cores, nodes, and time to every single task in the array independently. The directive ``--mem=128G`` does not divide 128 GB among all tasks. Instead, each task in the array receives 128 GB of memory. If your array consists of 600 tasks, and 20 run concurrently, then at peak usage Slurm may allocate up to 20 × 128 GB = 2560 GB of memory (subject to availability and limits). The same logic applies to other resources like CPUs and nodes.
+:::
+
+For example, the following code specifies an array of 600 jobs, with 20 jobs running at a time:
 
 :::{code}
 #!/bin/bash
