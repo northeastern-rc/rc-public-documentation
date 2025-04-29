@@ -4,7 +4,7 @@
 ## Introduction
 The Research Computing team would like to share a general quick start guide on accessing the H200s on the Explorer HPC cluster. The H200s will be accessible for your jobs in the terminal in sbatch and srun sessions and on Open OnDemand in the gpu-short, gpu, and multigpu partitions. 
 
-We have documentation on utilizing GPU resources on the Explorer HPC cluster (https://rc-docs.northeastern.edu/en/explorer-main/gpus/accessinggpus.html), only the `gres` flag will have to get change in the submission.
+We have documentation on utilizing GPU resources on the Explorer HPC cluster: {ref}`accessing-gpus`, only the `gres` flag will have to get change in the submission.
 
 ## For use in `srun`
 :::{code} bash
