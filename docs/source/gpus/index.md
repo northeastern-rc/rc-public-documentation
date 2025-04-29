@@ -51,5 +51,11 @@ Get access to the Multi-GPU partition.
 [Learn more »](multigpu-partition-access)
 ::::
 
+Get access to the H200 GPUs on Explorer.
++++
+[Learn more »](quickstart-h200)
+::::
+
+
 :::{include} ../_snippets/helpfooter.md
 :::
