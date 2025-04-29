@@ -16,7 +16,7 @@ This example is for an interactive session running on 1 node, with 1 CPU core an
 On the `gpu` partition, requesting more than 1 GPU (`--gres=gpu:1`) will cause your request to fail. Additionally, you cannot request all the CPUs on that GPU node, as those CPUs are reserved for other GPUs.
 :::
 
-## Using H200s in 'sbatch`
+## Using H200s in `sbatch`
 :::{code-block} bash
 #!/bin/bash
 #SBATCH --partition=gpu
