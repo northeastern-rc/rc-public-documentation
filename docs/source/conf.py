@@ -154,7 +154,7 @@ html_theme_options = {
             "class": "",
         },
     ],
-    #"announcement": announcement_html,
+    "announcement": announcement_html,
     "sidebar_hide_name": True,
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
