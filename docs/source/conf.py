@@ -134,8 +134,8 @@ html_title = "NURC RTD"
 
 announcement_html = """
     <a style=\"text-decoration:none; color:white;\"
-    href="https://rc-docs.northeastern.edu/en/latest/miscellaneous/annual-shutdown.html">
-        Important Announcement: MGHPCC Annual Shutdown, Wednesday, May 22, 2024 – Friday, May 24, 2024. Learn more >>
+    href="https://rc.northeastern.edu/2025/04/30/mghpcc-annual-shutdown-monday-june-2-thursday-june-5/">
+        Important Announcement: MGHPCC Annual Shutdown, Monday, June 02, 2025 – Thursday, Jun 05, 2024. Learn more >>
     </a>
     """
 
@@ -153,7 +153,7 @@ html_theme_options = {
             "class": "",
         },
     ],
-    #"announcement": announcement_html,
+    "announcement": announcement_html,
     "sidebar_hide_name": True,
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
