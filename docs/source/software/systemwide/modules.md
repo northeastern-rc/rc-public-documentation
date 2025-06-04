@@ -12,7 +12,7 @@ The 'modules' tool is widely used for managing application environments on High-
 
 The module system on the cluster includes many commonly used scientific software packages that you can load into your path when you need them and unload when you no longer need them. In essence, 'modules' handle environment variables like `PATH` and `LD_LIBRARY_PATH` to avoid conflicts between software applications.
 
-Use the `module avail` command to show a list of the most currently available software on the cluster or refer to a [table of our modules here](../module_list.md). 
+Use the `module avail` command to show a list of the most currently available software on the cluster or refer to a [table of our modules here](module_list.md). 
 
 :::{tip}
 The `which <target>` prints the path of executable `<target>` in your path (e.g., `which python` prints the `python` that will execute if called).
