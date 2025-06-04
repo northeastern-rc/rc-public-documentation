@@ -4,7 +4,7 @@
 
 Table of modules currently available on the Explorer cluster. To see which versions are available use the command `module avail software_name`. Modules can be loaded on a compute node or in an sbatch script with the command `module load software_name`. 
 
-::::{table} 
+:::{table} 
 :width: 75
 :widths: auto
 :align: left
