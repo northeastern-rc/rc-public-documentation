@@ -81,12 +81,6 @@ Research Computing <welcome/index>
 
 ```{toctree}
 :hidden:
-Getting Started <gettingstarted/index>
-```
-
-
-```{toctree}
-:hidden:
 :caption: Explorer User Guides
 
 connectingtocluster/index
