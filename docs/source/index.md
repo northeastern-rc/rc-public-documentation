@@ -73,11 +73,6 @@ We invite you to explore the resources, tools, and services available through th
 Access to the Explorer Cluster is subject to university policy and guidelines. Please ensure that you read and understand these guidelines before using the facility. If you require assistance or have any questions, please do not hesitate to contact our dedicated support team.
 :::
 
-```{toctree}
-:hidden:
-
-Research Computing <welcome/index>
-```
 
 ```{toctree}
 :hidden:
