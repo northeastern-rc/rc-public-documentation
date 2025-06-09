@@ -1,7 +1,7 @@
 (home-directory-storage-quota)=
 # Home Directory Storage Quota
 
-There are strict quotas for each {term}`home directory` (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. Home directory quotas are fixed and cannot be increased. You can use projects or scratch space to move files and free up space in your home directory. This page provides some best practices for keeping within the {term}`quota`. For more information about data storage on the HPC, see {ref}`data-storage`.
+There are strict quotas for each {term}`home directory` (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. Home directory quotas are fixed and cannot be increased. You can use projects or scratch space to move files and free up space in your home directory. This page provides some best practices for keeping within the {term}`quota`. For more information about data storage on the HPC, see our [website's section on Data Storage](https://rc.northeastern.edu/data-storage-options/).
 
 :::{important}
 All commands on this page should be run from a {term}`compute node` on the partition `short`, because they are CPU-intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
