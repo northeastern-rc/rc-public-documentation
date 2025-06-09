@@ -79,7 +79,6 @@ Access to the Explorer Cluster is subject to university policy and guidelines. P
 :caption: Explorer User Guides
 
 connectingtocluster/index
-hardware/index
 runningjobs/index
 Working with GPUs <gpus/index>
 datamanagement/index
