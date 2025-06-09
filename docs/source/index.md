@@ -86,6 +86,5 @@ Software <software/index>
 Courses on Explorer <classroom/index>
 containers/index
 best-practices/index
-miscellaneous/annual-shutdown
 glossary
 faqs-new
