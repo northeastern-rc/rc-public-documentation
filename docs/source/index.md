@@ -87,4 +87,4 @@ Courses on Explorer <classroom/index>
 containers/index
 best-practices/index
 glossary
-faqs-new
+faq
