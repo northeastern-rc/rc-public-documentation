@@ -6,7 +6,6 @@
 :maxdepth: 3
 
 understandingqueuing
-jobscheduling
 slurmmonitoringandmanaging
 interactiveandbatch
 runningsjob
