@@ -47,7 +47,7 @@ Using make or cmake.
 ::::
 
 ---
-The cluster offers you many options for working with software. Two of the easiest and most convenient ways are using the `module` command in the terminal and through the {ref}`interactive-ood-apps` web portal.
+The cluster offers you many options for working with software. Two of the easiest and most convenient ways are using the `module` command in the terminal and through our [Open OnDemand web portal](https://rc.northeastern.edu/ood/).
 
 ::::{sidebar}
 :::{seealso}
