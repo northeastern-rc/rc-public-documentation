@@ -118,7 +118,7 @@ You can interact with the directory from your GUI or use the terminal to perform
 :::::{tab-set}
 ::::{tab-item} OOD's File Explorer
 
-You can use OOD's File Explorer application to transfer data from different directories on the HPC and also to transfer data to and from your local machine to the HPC. For more information to complete this please see {ref}`file-explorer`.
+You can use OOD's File Explorer application to transfer data from different directories on the HPC and also to transfer data to and from your local machine to the HPC. 
 ::::
 ::::{tab-item} MobaXterm
 
