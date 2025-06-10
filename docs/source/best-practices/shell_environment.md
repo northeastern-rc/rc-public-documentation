@@ -1,4 +1,4 @@
-(shell_environment)=
+(shell-environment-on-cluster)=
 # Shell Environment on the Cluster
 
 ## The Explorer Shell Environment and `.bashrc`
