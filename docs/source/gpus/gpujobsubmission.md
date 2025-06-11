@@ -6,7 +6,7 @@ There are several versions of CUDA Toolkits available on our HPC cluster. To see
 
 :::{code-block} bash
 ---
-emphasize-lines: 3-5
+emphasize-lines: 3-4
 ---
 $ module avail cuda
 
