@@ -6,7 +6,6 @@
 :maxdepth: 3
 
 understandingqueuing
-jobscheduling
 slurmmonitoringandmanaging
 interactiveandbatch
 runningsjob
@@ -25,7 +24,6 @@ Learn how our job scheduler manages the distribution of computational tasks.
 
 +++
 [Learn more »](understandingqueuing)
-:::
 :::
 
 :::{grid-item-card} {octicon}`device-desktop;1.5em;sd-mr-1` Interactive and Batch Mode

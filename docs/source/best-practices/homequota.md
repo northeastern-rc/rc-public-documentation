@@ -1,7 +1,7 @@
 (home-directory-storage-quota)=
 # Home Directory Storage Quota
 
-There are strict quotas for each {term}`home directory` (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. Home directory quotas are fixed and cannot be increased. You can use projects or scratch space to move files and free up space in your home directory. This page provides some best practices for keeping within the {term}`quota`. For more information about data storage on the HPC, see {ref}`data-storage`.
+There are strict quotas for each {term}`home directory` (i.e., `/home/<username>`), and staying within the quota is vital for preventing issues on the HPC. Home directory quotas are fixed and cannot be increased. You can use projects or scratch space to move files and free up space in your home directory. This page provides some best practices for keeping within the {term}`quota`. For more information about data storage on the HPC, see our [website's section on Data Storage](https://rc.northeastern.edu/data-storage-options/).
 
 :::{important}
 All commands on this page should be run from a {term}`compute node` on the partition `short`, because they are CPU-intensive. You can find more information on getting a job on a compute node from {ref}`using-srun`.
@@ -11,7 +11,7 @@ All commands on this page should be run from a {term}`compute node` on the parti
 Use `/projects` for long-term storage. PIs can request a folder in `/projects` via [New Storage Space Request] and additional storage via [Storage Space Extension Request]. Utilize `/scratch/<username>` for temporary or intermediate files. Then, move files from `/scratch` to `/projects` for persistent storage (i.e., the recommended workflow).
 
 :::{note}
-Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See {ref}`data-storage` for information on `/projects` and `/scratch`.
+Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See our [website's section on Data Storage](https://rc.northeastern.edu/data-storage-options/) for information on `/projects` and `/scratch`.
 :::
 
 ## How To Check Your Quotas
@@ -113,7 +113,7 @@ conda env remove --name <your environment>
 
 ### Apptainer
 
-If you have pulled any {term}`containers <container>` to the HPC using {term}`Apptainer`, you can clean your container cache in your `/home/<username>` directory by running the following command from a {term}`compute node`:
+If you have pulled any {term}`containers <container>` to the HPC using `apptainer`, you can clean your container cache in your `/home/<username>` directory by running the following command from a {term}`compute node`:
 
 :::{code-block} bash
 apptainer cache clean all

@@ -73,24 +73,12 @@ We invite you to explore the resources, tools, and services available through th
 Access to the Explorer Cluster is subject to university policy and guidelines. Please ensure that you read and understand these guidelines before using the facility. If you require assistance or have any questions, please do not hesitate to contact our dedicated support team.
 :::
 
-```{toctree}
-:hidden:
-
-Research Computing <welcome/index>
-```
-
-```{toctree}
-:hidden:
-Getting Started <gettingstarted/index>
-```
-
 
 ```{toctree}
 :hidden:
 :caption: Explorer User Guides
 
 connectingtocluster/index
-hardware/index
 runningjobs/index
 Working with GPUs <gpus/index>
 datamanagement/index
@@ -98,7 +86,5 @@ Software <software/index>
 Courses on Explorer <classroom/index>
 containers/index
 best-practices/index
-tutorialsandtraining/index
-miscellaneous/annual-shutdown
 glossary
-faqs-new
+faq

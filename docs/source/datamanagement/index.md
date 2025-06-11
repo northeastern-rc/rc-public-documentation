@@ -5,25 +5,14 @@
 :hidden:
 :maxdepth: 3
 
-discovery_storage
 transferringdata
 globus
 ```
 
 Data management is a critical aspect of utilizing our High-Performance Computing (HPC) environment. This section provides comprehensive guidance on handling data within the cluster, storage options, and secure data transfers.
 
-::::{grid} 1 2 2 3
-:gutter: 1 1 1 2
-
-:::{grid-item-card} {octicon}`database;1.5em;screen-full` Data Storage Options
-:link: discovery_storage
-:link-type: doc
-
-Selecting the appropriate storage option can significantly impact your work’s efficiency.
-
-+++
-[Learn more »](discovery_storage)
-:::
+::::{grid} 1 1 2 2
+:gutter: 2
 
 :::{grid-item-card} {octicon}`upload;1.5em;sd-mr-1` Transfer Data
 :link: transferringdata

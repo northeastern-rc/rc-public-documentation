@@ -1,7 +1,7 @@
 (using-r)=
 # Using R
 
-[R](https://www.r-project.org/) is available as a {ref}`modules <using-module>` and it is also an interactive app on {ref}`Open OnDemand <using-ood>` (OOD). You can also install R with anaconda or miniconda in a conda environment.
+[R](https://www.r-project.org/) is available as a {ref}`module <using-module>` and it is also an interactive app on our [Open OnDemand web portal](https://rc.northeastern.edu/ood/). You can also install R with anaconda or miniconda in a conda environment.
 
 ## Using R on Open OnDemand
 

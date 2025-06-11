@@ -135,11 +135,6 @@ If you are attempting to open a GUI-based software application that  uses X11 fo
 
 Explain how to use modules in job scripts or interactive sessions, using module save and module restore to manage module collections and other advanced topics.
 
-## Creating Module Files
-
-:::{seealso}
-{ref}`installing-your-own-module`.
-:::
 
 ## Best Practices Using Modules
 

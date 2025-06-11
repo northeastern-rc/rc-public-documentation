@@ -1,4 +1,4 @@
-(transition)=
+(transition-to-explorer)=
 # Quick Start to Explorer
 
 This page highlights the major changes between Discovery and Explorer and provides a few recommendations for a smooth transition.

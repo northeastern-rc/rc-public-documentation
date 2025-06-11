@@ -74,7 +74,7 @@ These partitions can be used in the following ways:
 
 ### sbatch script
 
-An sbatch script can be submitted on the command line via the command `sbatch scriptname.sh`. Below are some examples of sbatch scripts using the courses and courses-gpu partitions. See {ref}`slurm-running-jobs` for more information on running sbatch scripts or run `man sbatch` for additional sbatch parameters.
+An sbatch script can be submitted on the command line via the command `sbatch scriptname.sh`. Below are some examples of sbatch scripts using the courses and courses-gpu partitions. See {ref}`sbatch-courses-index` for more information on running sbatch scripts or run `man sbatch` for additional sbatch parameters.
 
 ::::{dropdown} courses partition
 :::{code-block} bash
