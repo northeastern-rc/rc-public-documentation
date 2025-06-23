@@ -1,3 +1,4 @@
+(connect-to-cluster)=
 # Connecting To Explorer
 
 ```{toctree}

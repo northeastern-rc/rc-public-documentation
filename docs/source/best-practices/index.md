@@ -38,7 +38,7 @@ Learn about storage quotas and how to manage your projects directory effectively
 [Learn more »](workquota)
 :::
 
-:::{grid-item-card} {octicon}`file-removed;1.5em;screen-full` Scratch Directory Purge
+:::{grid-item-card} {octicon}`diff-removed;1.5em;screen-full` Scratch Directory Purge
 :link: scratchpurge
 :link-type: doc
 
