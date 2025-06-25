@@ -8,7 +8,7 @@ This page provides a quick explanation of the vocabulary used with the project-m
 
 ## User Types
 
-Users are split into four types. The user type determines the user's access level for a research project both on the filesystem and our project-management software. The four types in ascending order of access level:
+Users are split into five types. The user type determines the user's access level for a research project both on the filesystem and our project-management software. The five types in ascending order of access level:
 
 1. **Data-custodian**: the data-custodian is an email address that will receive information related to quotas and updates about the workspace;  access to the cluster is not a requirement (N.B. this is an optional user type to have for a group).
 1. **Guests**: guests of a research group are users that can read and execute within a project directory but not write.
