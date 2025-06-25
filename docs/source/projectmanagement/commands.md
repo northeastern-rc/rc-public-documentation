@@ -49,6 +49,10 @@ project <project_name> view ttl
 
 ## Adding
 
+:::{note}
+For adding and removing, the actual commands with proper names should be written without angle brackets (<>) and the list of users should be written as a comma-separated list of users with no spaces.
+:::
+
 To add users to the members of a research group, any _delegate_ or the _PI_ of the group can run the following:
 :::{code-block} bash
 project <project_name> add members <user1,user2,etc.>
