@@ -23,7 +23,7 @@ Read our guide on teaching or taking a course on the NU HPC.
 [Learn more »](class_guide)
 :::
 
-:::{grid-item-card} {octicon}`note;1.5em;sd-mr-1` Courses Cheetsheet
+:::{grid-item-card} {octicon}`note;1.5em;sd-mr-1` Courses Cheatsheet
 :link: cheatsheet
 :link-type: doc
 
