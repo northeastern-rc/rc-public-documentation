@@ -34,5 +34,5 @@ module load singularity/3.10.3
 ROCKER_IMAGE=/shared/container_repository/rstudio/rocker-geospatial-4.4.0.sif
 
 # Run R with Singularity
-singularity exec -B "/projects:/projects" $ROCKER_IMAGE Rscript my_r_code.R
+singularity exec -B "/work:/work" $ROCKER_IMAGE Rscript my_r_code.R
 :::
