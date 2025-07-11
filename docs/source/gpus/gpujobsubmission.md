@@ -68,7 +68,7 @@ caption: |
     PyTorch's installation steps for Python 3.10 and Cuda 11.8:
 ---
 srun --partition=gpu-interactive --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
-module load anaconda3/2024.06 cuda/11.8
+module load anaconda3/2024.06 cuda/12.1.1
 conda create --name pytorch_env -c conda-forge python=3.10 -y
 source activate pytorch_env
 conda install jupyterlab -y
