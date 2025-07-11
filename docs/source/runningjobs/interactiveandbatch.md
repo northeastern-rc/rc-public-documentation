@@ -50,7 +50,7 @@ srun --partition=short --nodes=2 --ntasks 10 --cpus-per-task 2 --pty --mem=80G -
 To allocate a GPU node, you should specify the `gpu` partition and use the `--gres` option:
 
 :::{code} bash
-srun --partition=gpu --nodes=1 --ntasks=1 --gres=gpu:1 --mem=2Gb --time=01:00:00 --pty /bin/bash
+srun --partition=gpu-interactive --nodes=1 --ntasks=1 --gres=gpu:1 --mem=2Gb --time=01:00:00 --pty /bin/bash
 :::
 
 (using-sbatch)=

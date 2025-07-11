@@ -84,10 +84,10 @@ note of the compute node number (compute node numbers start with c or
 d with four numbers, such as c0123) to make it easier to check on the
 progress of the installation.
 
-1. Assuming that Spack has already been installed at a desired location. For installing gpu-supported LAMMPS, request a GPU node for 8 hours:
+1. Assuming that Spack has already been installed at a desired location. For installing gpu-supported LAMMPS, request a GPU node for 2 hours:
 
    :::{code-block} shell
-   srun --partition=gpu --nodes=1 --ntasks=14 --pty --gres=gpu:1 --mem=16GB --time=08:00:00 /bin/bash
+   srun --partition=gpu-interactive --nodes=1 --ntasks=14 --pty --gres=gpu:1 --mem=16GB --time=02:00:00 /bin/bash
    :::
 
 1. Load compatible CUDA, GCC, and Python modules and activate Spack from the installed location.
