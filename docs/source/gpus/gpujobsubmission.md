@@ -44,7 +44,7 @@ The following example demonstrates how to build PyTorch inside a conda virtual e
 caption: |
     PyTorch's installation steps for Python 3.10 and Cuda 12.1:
 ---
-srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
+srun --partition=gpu-interactive --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
 module load anaconda3/2022.05 cuda/12.1
 conda create --name pytorch_env -c conda-forge python=3.10 -y
 source activate pytorch_env
@@ -67,7 +67,7 @@ If you want to use an older version of CUDA, here is the following example that 
 caption: |
     PyTorch's installation steps for Python 3.10 and Cuda 11.8:
 ---
-srun --partition=gpu --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
+srun --partition=gpu-interactive --nodes=1 --gres=gpu:v100-sxm2:1 --cpus-per-task=2 --mem=10GB --time=02:00:00 --pty /bin/bash
 module load anaconda3/2022.05 cuda/11.8
 conda create --name pytorch_env -c conda-forge python=3.10 -y
 source activate pytorch_env
@@ -102,7 +102,7 @@ For the latest installation, use the TensorFlow pip package, which includes GPU 
 caption: |
     Tensorflow's installation steps for Python 3.9 and Cuda 12.1:
 ---
-srun -p gpu --gres=gpu:v100-pcie:1 --pty /bin/bash
+srun -p gpu-interactive --gres=gpu:v100-sxm2:1 --pty /bin/bash
 module load anaconda3/2022.05
 module load cuda/12.1
 conda create --name TF_env python=3.9 -y
