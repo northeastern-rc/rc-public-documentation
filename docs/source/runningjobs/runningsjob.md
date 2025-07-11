@@ -91,7 +91,7 @@ SLURM Menu:
 4. Exit
 Enter your option: 2
 Partitions:
-debug express short gpu
+debug express short gpu-interactive
 Enter partition name: short
 Maximum number of nodes available for short is 2
 Enter number of nodes (1-2): 1

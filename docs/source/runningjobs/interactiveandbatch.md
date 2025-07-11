@@ -47,7 +47,7 @@ To request 2 nodes, each with 10 tasks per node and 2 CPUs per task (a total of 
 srun --partition=short --nodes=2 --ntasks 10 --cpus-per-task 2 --pty --mem=80G --time=01:00:00 /bin/bash
 :::
 
-To allocate a GPU node, you should specify the `gpu` partition and use the `--gres` option:
+To allocate a GPU node, you should specify the `gpu-interactive` partition and use the `--gres` option:
 
 :::{code} bash
 srun --partition=gpu-interactive --nodes=1 --ntasks=1 --gres=gpu:1 --mem=2Gb --time=01:00:00 --pty /bin/bash
