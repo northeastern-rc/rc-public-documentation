@@ -40,7 +40,7 @@ Consider the compatibility of the GPU, as some programs do not work on the older
 Execute the following command to display the `non-Kepler` GPUs that are available:
 
 :::
-sinfo -p gpu --Format=nodes,cpus,memory,features,statecompact,nodelist,gres
+sinfo -p gpu-interactive --Format=nodes,cpus,memory,features,statecompact,nodelist,gres
 :::
 
 This indicates the state (idle or not) of gpu-types and could be helpful to find one that is `idle`. However, the command does not give real-time information of the state and should be used carefully.

@@ -2,10 +2,10 @@
 # GPU Access
 
 ## Running Jobs
-Use `srun` for interactive and `sbatch` for batch mode. The `srun` example below is requesting 1 node and 1 GPU with 4GB of memory in the `gpu` partition. You must use the `--gres=` option to request a gpu:
+Use `srun` for interactive and `sbatch` for batch mode. The `srun` example below is requesting 1 node and 1 GPU with 4GB of memory in the `gpu-interactive` partition. You must use the `--gres=` option to request a gpu:
 
 :::{code} bash
-srun --partition=gpu --nodes=1 --pty --gres=gpu:v100-pcie:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+srun --partition=gpu-interactive --nodes=1 --pty --gres=gpu:v100-sxm2:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 :::
 
 :::{note}
