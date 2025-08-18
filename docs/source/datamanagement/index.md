@@ -22,7 +22,7 @@ Data management is a critical aspect of utilizing our High-Performance Computing
 Selecting the appropriate storage option can significantly impact your work’s efficiency.
 
 +++
-[Learn more »](discovery_storage)
+[Learn more »](discovery_storage.md)
 :::
 
 :::{grid-item-card} {octicon}`upload;1.5em;sd-mr-1` Transfer Data
