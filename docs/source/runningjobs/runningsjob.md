@@ -72,14 +72,14 @@ srun: job 43910949 has been allocated resources
 
 In this mode, `job-assist` guide you through interactively requesting resources. You will be prompted to provide the following information:
 
-- **Partition Name**: Choose from available partitions like `debug`, `express`, `short`, or `gpu`.
+- **Partition Name**: Choose from available partitions like `debug`, `express`, `short`, or `gpu-interactive`.
 - **Number of Nodes**: Specify the number of nodes required.
 - **Number of Tasks**: Specify the number of tasks.
 - **CPUs per Task**: Specify how many CPUs are needed per task.
 - **Time**: Specify the maximum run time for the job in `HH:MM:SS` format.
 - **Memory**: Specify the memory required per node in the correct format (e.g., `4G` for 4 GB).
 
-If you select the `gpu` partition, you will have the option to choose the type of GPU needed. This mode automatically submits the job to the scheduler and allocates the resources.
+If you select the `gpu-interactive` partition, you will have the option to choose the type of GPU needed. This mode automatically submits the job to the scheduler and allocates the resources.
 
 ::::{dropdown} Interactive Mode Example
 :::{code-block} bash
@@ -91,7 +91,7 @@ SLURM Menu:
 4. Exit
 Enter your option: 2
 Partitions:
-debug express short gpu
+debug express short gpu-interactive
 Enter partition name: short
 Maximum number of nodes available for short is 2
 Enter number of nodes (1-2): 1
