@@ -51,7 +51,7 @@ The cluster offers you many options for working with software. Two of the easies
 
 ::::{sidebar}
 :::{seealso}
-{ref}`More about using module. <using-module>`
+{ref}`[Our full list of Modules offered on Explorer](systemwide/module_list.html)`
 :::
 ::::
 
