@@ -21,7 +21,7 @@ When the output of a script has been generated and you wish to keep the intermed
 
 # Commands to execute
 
-tar cvxf project_1_output.tar.gz /projects/full/path/to/directory
+tar cvf project_1_output.tar.gz /projects/full/path/to/directory
 
 :::
 
