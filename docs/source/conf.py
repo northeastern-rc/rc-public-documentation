@@ -115,8 +115,9 @@ language = "en"
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ["using-ood/cps_ood.md",
+exclude_patterns = ["classroom/cps_ood.md",
                     "classroom/classroomexamples.md",
+                    "faqs-old.md",
                     "_snippets/*",
                     "build",
                     "Thumbs.db",
@@ -153,7 +154,7 @@ html_theme_options = {
             "class": "",
         },
     ],
-    "announcement": announcement_html,
+    #"announcement": announcement_html,
     "sidebar_hide_name": True,
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
@@ -267,3 +268,6 @@ epub_exclude_files = ["search.html"]
 
 # Warn about all references to unknown targets
 nitpicky = True
+
+suppress_warnings = ["myst.header"]
+

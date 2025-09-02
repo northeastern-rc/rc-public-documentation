@@ -3,7 +3,7 @@
 
 ::::{sidebar}
 :::{seealso}
-{ref}`using-module` and {ref}`using-ood`.
+{ref}`using-module` and our website for information on using [Open OnDemand web portal](https://rc.northeastern.edu/ood/).
 :::
 ::::
 MATLAB is available on the cluster as a module and as an interactive app on Open OnDemand. You can also download MATLAB for your computer through the [Northeastern portal on the MATLAB website](https://www.mathworks.com/academia/tah-portal/northeastern-university-30294223.html). Note that the procedures detailed below pertain specifically to using MATLAB on the cluster, and not to using MATLAB on your computer.

@@ -5,7 +5,7 @@ Every space in `/projects` has a quota for TB and inodes (file count). It is nec
 
 We recommend the following practices to ensure effective use of your space in `/projects`
 
-1. [Check your usage](../best-practices/homequota.html#how-to-check-your-quotas) regularily to avoid hitting the quota limit in the middle of running jobs, which will disrupt their execution. 
+1. [Check your usage](homequota.md#how-to-check-your-quotas) regularily to avoid hitting the quota limit in the middle of running jobs, which will disrupt their execution. 
 
 2. Compress directories that are not used frequently or for projects that have been completed.
 
@@ -21,7 +21,7 @@ When the output of a script has been generated and you wish to keep the intermed
 
 # Commands to execute
 
-tar cvxf project_1_output.tar.gz /projects/full/path/to/directory
+tar cvf project_1_output.tar.gz /projects/full/path/to/directory
 
 :::
 
