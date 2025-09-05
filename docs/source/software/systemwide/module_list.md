@@ -1,10 +1,8 @@
 (module-list)=
 
-# Currently available modules
+# Northeastern RC Software Modules
 
 Table of modules currently available on the Explorer cluster. To see which versions are available use the command `module avail software_name`. Modules can be loaded on a compute node or in an sbatch script with the command `module load software_name`. 
-
-# Northeastern RC Software Modules
 
 :::{table}
 :width: 75
