@@ -65,7 +65,7 @@ Table of modules currently available on the Explorer cluster. To see which versi
 | weka              | Waikato Environment for Knowledge Analysis is a collection of machine learning and data analysis free software licensed under the GNU General Public License. |
 :::
 
-```{list-table} Northeastern RC Software Modules
+```{table} Northeastern RC Software Modules
 :header-rows: 1
 :widths: 25 50 15
 
