@@ -3,6 +3,7 @@
 # Northeastern RC Software Modules
 
 Table of modules currently available on the Explorer cluster. To see which versions are available use the command `module avail software_name`. Modules can be loaded on a compute node or in an sbatch script with the command `module load software_name`. 
+# Northeastern RC Software Modules
 
 :::{table}
 :width: 75
@@ -29,7 +30,7 @@ Table of modules currently available on the Explorer cluster. To see which versi
 |	fastqc	|	A quality control tool for high throughput sequence data.	|	0.12.1	|
 |	ffmpeg	|	FFmpeg is a free and open-source software project consisting of a suite of libraries and programs for handling video, audio, and other multimedia files and streams.	|	N/A	|
 |	Fsl	|	No description available	|	6.0.7.18	|
-|	Gamess July 15 2024Gnu	|	 GAMESS version July 15, 2024 R2 Patch 1 for 64 bit ARM under Linux using GNU compilers	|	15	|
+|	Gamess July 15 2024Gnu	|	GAMESS version July 15, 2024 R2 Patch 1 for 64 bit ARM under Linux using GNU compilers	|	15	|
 |	glew	|	The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library.	|	N/A	|
 |	Gnu Parallel	|	No description available	|	20250422	|
 |	gnuplot	|	Gnuplot is a command-line and GUI program that can generate two- and three-dimensional plots of functions, data, and data fits.	|	N/A	|
@@ -74,5 +75,3 @@ Table of modules currently available on the Explorer cluster. To see which versi
 |	VTune	|	VTune Profiler (formerly VTune Amplifier) is a performance analysis tool for x86-based machines running Linux or Microsoft Windows operating systems.	|	2025.0	|
 |	weka	|	Waikato Environment for Knowledge Analysis is a collection of machine learning and data analysis free software licensed under the GNU General Public License.	|	N/A	|
 :::
-
-
