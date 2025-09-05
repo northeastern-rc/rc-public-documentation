@@ -8,12 +8,12 @@ We have documentation on utilizing GPU resources on the Explorer HPC cluster. Pl
 
 ## Using H200s in `srun`
 :::{code} bash
-srun --partition=gpu --nodes=1 --pty --gres=gpu:h200:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
+srun --partition=gpu-interactive --nodes=1 --pty --gres=gpu:h200:1 --ntasks=1 --mem=4GB --time=01:00:00 /bin/bash
 :::
 This example is for an interactive session running on 1 node, with 1 CPU core and 4 GB of CPU memory for 1 hour with an H200 GPU.
 
 :::{note}
-On the `gpu` partition, requesting more than 1 GPU (`--gres=gpu:1`) will cause your request to fail. Additionally, you cannot request all the CPUs on that GPU node, as those CPUs are reserved for other GPUs.
+On the `gpu-interactive` partition, requesting more than 1 GPU (`--gres=gpu:1`) will cause your request to fail. Additionally, you cannot request all the CPUs on that GPU node, as those CPUs are reserved for other GPUs.
 :::
 
 ## Using H200s in `sbatch`
