@@ -13,6 +13,7 @@ Table of modules currently available on the Explorer cluster. To see which versi
 | Software Name     | Description     |  Version  |
 | :---------------- | :--------------  | :-------- |
 |	anaconda3	|	Open	source	data	science	and	artificial	intelligence	distribution	platform	for	Python	and	R	programming	languages.	|	2024.06	|
+| AMBER  | Amber is a suite of biomolecular simulation programs. | 24 | 
 |	bamtools	|	BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.	|	2.5.2	|
 |	bbmap	|	Short read aligner for DNA and RNA-seq data. Capable of handling arbitrarily large genomes with millions of scaffolds. Handles Illumina, PacBio, 454, and other reads.	|	39.10	|
 |	bcftools	|	Bcftools - utilities for variant calling and manipulating VCFs and BCFs.	|	1.21	|
