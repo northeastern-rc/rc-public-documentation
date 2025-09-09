@@ -2,7 +2,7 @@
 
 # Northeastern RC Software Modules
 
-Table of modules currently available on the Explorer cluster. To see which versions are available use the command `module avail software_name`. Modules can be loaded on a compute node or in an sbatch script with the command `module load software_name`. 
+Table of modules currently available on the Explorer cluster. To see which versions are available use the command `module avail software_name`. Modules can be loaded on a compute node or in an sbatch script with the command `module load software_name/version`. 
 # Northeastern RC Software Modules
 
 :::{table}
@@ -20,8 +20,8 @@ Table of modules currently available on the Explorer cluster. To see which versi
 |	bedtools	|	Bedtools is a fast, flexible toolset for genome arithmetic.	|	2.31.1	|
 |	blast	|	NCBI blast: The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences.	|	2.13.0	|
 |	bowtie2	|	Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.	|	2.5.4	|
-|	BWA	|	BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.	|	0.7.18	|
-|	Clustalw	|	No description available	|	2.1	|
+|	bwa	|	BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.	|	0.7.18	|
+|	clustal	|	No description available	|	2.1	|
 |	cmake	|	A Powerful Software Build System for building C++ code.	|	3.30.2	|
 |	Code Server	|	No description available	|	4.101.1	|
 |	cuda	|	CUDA is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs).	|	12.1.1, 12.3.0, 12.8.0	|
@@ -31,8 +31,8 @@ Table of modules currently available on the Explorer cluster. To see which versi
 |	Gamess 	|	GAMESS version July 15, 2024 R2 Patch 1 for 64 bit ARM under Linux using GNU compilers	|	July 15 2024Gnu		|
 |	glew	|	The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library.	|	2.2.0 |
 |	Gnu Parallel	|	No description available	| 2025-04-22	|
-#|	gnuplot	|	Gnuplot is a command-line and GUI program that can generate two- and three-dimensional plots of functions, data, and data fits.	|	N/A	|
-#|	gromacs	|	GROMACS is a molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids.	|	N/A	|
+%|	gnuplot	|	Gnuplot is a command-line and GUI program that can generate two- and three-dimensional plots of functions, data, and data fits.	|	N/A	|
+%|	gromacs	|	GROMACS is a molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids.	|	N/A	|
 |	gurobi	|	Gurobi Optimizer is a prescriptive analytics platform and a decision-making technology developed by Gurobi Optimization, LLC.	|11.0.3, 12.0.2	|
 |	htop	|	htop is an interactive system monitor process viewer and process manager.	|	3.3.0	|
 |	Intel Oneapi	|	No description available	|	2025.0.1	|
