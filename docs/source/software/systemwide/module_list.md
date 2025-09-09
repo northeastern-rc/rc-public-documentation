@@ -31,8 +31,6 @@ Table of modules currently available on the Explorer cluster. To see which versi
 |	Gamess 	|	GAMESS version July 15, 2024 R2 Patch 1 for 64 bit ARM under Linux using GNU compilers	|	July 15 2024Gnu		|
 |	glew	|	The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library.	|	2.2.0 |
 |	Gnu Parallel	|	No description available	| 2025-04-22	|
-%|	gnuplot	|	Gnuplot is a command-line and GUI program that can generate two- and three-dimensional plots of functions, data, and data fits.	|	N/A	|
-%|	gromacs	|	GROMACS is a molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids.	|	N/A	|
 |	gurobi	|	Gurobi Optimizer is a prescriptive analytics platform and a decision-making technology developed by Gurobi Optimization, LLC.	|11.0.3, 12.0.2	|
 |	htop	|	htop is an interactive system monitor process viewer and process manager.	|	3.3.0	|
 |	Intel Oneapi	|	No description available	|	2025.0.1	|
