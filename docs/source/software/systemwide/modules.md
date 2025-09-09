@@ -2,11 +2,6 @@
 
 # Using Module
 
-::::{sidebar}
-:::{note}
-Some modules conflict, resulting in the software behaving differently than expected. Also, if there are multiple software versions and you load more than one version of the software, only the latest version will be used. Use `module list` to view the modules loaded into your path.
-:::
-::::
 
 The 'modules' tool is widely used for managing application environments on High-Performance Computing (HPC) systems. This page will provide an overview of 'modules', instructions on using them, best practices, use cases, and more.
 
@@ -46,7 +41,7 @@ widths: 23 40
 :::
 
 :::{caution}
-`module purge` unloads all modules from your environment. This module sets the HTTP proxy needed to access the internet from nodes. If you accidentally purge this module, it automatically reloads by logging out and then back in. You can also load it manually `module load`.
+`module purge` unloads all modules from your environment. This module sets the HTTP proxy needed to access the internet from nodes. If you accidentally purge this module, it automatically reloads by logging out and then back in. You can also load it manually `module load explorer`.
 :::
 
 (module-show-example)=
@@ -131,20 +126,11 @@ Currently Loaded Modulefiles:
 
 If you are attempting to open a GUI-based software application that  uses X11 forwarding to display, such as MATLAB or Maestro, and you get an error such as `Error: unable to open display localhost:19.0`, this is most likely due to an issue with passwordless SSH. See {ref}`connect-to-cluster` for tips and troubleshooting information opening applications that use X11 forwarding.
 
-## Advanced Module Usage
-
-Explain how to use modules in job scripts or interactive sessions, using module save and module restore to manage module collections and other advanced topics.
-
-
 ## Best Practices Using Modules
 
 - Only load the modules you need: Unnecessary modules can cause conflicts.
 - Know module hierarchies: Some modules might only become available after loading another module.
 - Always load a specific module version: This avoids problems if the default version changes.
-
-## Common Issues and Troubleshooting Modules
-
-Cover common issues users might face while using 'modules', like conflicts, missing modules, or unexpected behavior, and provide troubleshooting tips.
 
 ## Use-Cases for Modules
 
