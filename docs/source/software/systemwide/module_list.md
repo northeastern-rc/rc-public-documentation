@@ -31,45 +31,44 @@ Table of modules currently available on the Explorer cluster. To see which versi
 |	Gamess 	|	GAMESS version July 15, 2024 R2 Patch 1 for 64 bit ARM under Linux using GNU compilers	|	July 15 2024Gnu		|
 |	glew	|	The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library.	|	2.2.0 |
 |	Gnu Parallel	|	No description available	| 2025-04-22	|
-|	gnuplot	|	Gnuplot is a command-line and GUI program that can generate two- and three-dimensional plots of functions, data, and data fits.	|	N/A	|
-|	gromacs	|	GROMACS is a molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids.	|	N/A	|
-|	gurobi	|	Gurobi Optimizer is a prescriptive analytics platform and a decision-making technology developed by Gurobi Optimization, LLC.	|	12.0.2	|
+#|	gnuplot	|	Gnuplot is a command-line and GUI program that can generate two- and three-dimensional plots of functions, data, and data fits.	|	N/A	|
+#|	gromacs	|	GROMACS is a molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids.	|	N/A	|
+|	gurobi	|	Gurobi Optimizer is a prescriptive analytics platform and a decision-making technology developed by Gurobi Optimization, LLC.	|11.0.3, 12.0.2	|
 |	htop	|	htop is an interactive system monitor process viewer and process manager.	|	3.3.0	|
 |	Intel Oneapi	|	No description available	|	2025.0.1	|
-|	job_assist	|	The job-assist command is designed to simplify the process of submitting jobs on the Explorer cluster using SLURM’s srun and sbatch modes.	|	N/A	|
+|	job_assist	|	The job-assist command is designed to simplify the process of submitting jobs on the Explorer cluster using SLURM’s srun and sbatch modes.	|	1.0	|
 |	Jq	|	jq is a lightweight and flexible command-line JSON processor.	|	1.7.1	|
-|	julia	|	Julia is a high-level, general-purpose dynamic programming language, designed to be fast and productive.	|	N/A	|
-|	knime	|	The	Konstanz	Information	Miner,	is	a	free	and	open-source	data	analytics,	reporting	and	integration	platform.	|	N/A	|
-|	LAMMPS	|	LAMMPS is a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator.	|	N/A	|
-|	mathematica	|	Wolfram Mathematica is a software system with built-in libraries for several areas of technical computing.	|	N/A	|
-|	matlab	|	MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks.	|	R2025a	|
+|	julia	|	Julia is a high-level, general-purpose dynamic programming language, designed to be fast and productive.	|	1.10.4	|
+|	knime	|	The	Konstanz	Information	Miner,	is	a	free	and	open-source	data	analytics,	reporting	and	integration	platform.	|	5.3.1|
+|	LAMMPS	|	LAMMPS is a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator.	|	29Aug2024	|
+|	mathematica	|	Wolfram Mathematica is a software system with built-in libraries for several areas of technical computing.	|	14.1.0	|
+|	matlab	|	MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks.	|	R2023b, R2024b, R2025a	|
 |	miniconda3	|	Miniconda is a free, miniature installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.	|	24.11.1	|
-|	mpich	|	MPICH, formerly known as MPICH2, is a freely available, portable implementation of MPI, a standard for message-passing for distributed-memory applications used in parallel computing.	|	N/A	|
-|	Namd	|	No description available	|	3.0.1	|
-|	Namd 3.0.1 Cuda	|	No description available	|	3.0.1	|
-|	netlogo	|	NetLogo is a programming language and integrated development environment for agent-based modeling.	|	N/A	|
-|	nextflow	|	Nextflow is a scientific workflow system predominantly used for bioinformatic data analysis.	|	24.10.3	|
-|	nodejs	|	Node.js is a cross-platform, open-source JavaScript runtime environment.	|	N/A	|
+| Molcas |   Molcas is an ab initio quantum chemistry software package developed by scientists to be used by scientists. | 25.06 |
+|	mpich	|	MPICH, formerly known as MPICH2, is a freely available, portable implementation of MPI, a standard for message-passing for distributed-memory applications used in parallel computing.	|	4.3.0b1	|
+|	Namd	| Nanoscale Molecular Dynamics is computer software for molecular dynamics simulation, written using the Charm++ parallel programming model. It is noted for its parallel efficiency and is often used to simulate large systems.	|	3.0.1, 3.0.1-cuda	|
+|	netlogo	|	NetLogo is a programming language and integrated development environment for agent-based modeling.	|	6.4.0	|
+|	nextflow	|	Nextflow is a scientific workflow system predominantly used for bioinformatic data analysis.	|	24.10.3, 25.04.6	|
+|	nodejs	|	Node.js is a cross-platform, open-source JavaScript runtime environment.	|	22.11.0	|
 |	Nsight	|	Nsight Systems is a performance analysis tool for visualizing app algorithms and scaling optimization across CPUs and GPUs.	|	2024.7.1	|
-|	nvidia-hpc-sdk	|	The	NVIDIA	HPC	Software	Development	Kit	(SDK)	includes	the	proven	compilers,	libraries	and	software	tools	essential	to	maximizing	developer	productivity	and	the	performance	and	portability	of	HPC	applications.	|	N/A	|
-|	openblas	|	OpenBLAS is an open-source implementation of the BLAS and LAPACK APIs with many hand-crafted optimizations for specific processor types.	|	N/A	|
+|	nvidia-hpc-sdk	|	The	NVIDIA	HPC	Software	Development	Kit	(SDK)	includes	the	proven	compilers,	libraries	and	software	tools	essential	to	maximizing	developer	productivity	and	the	performance	and	portability	of	HPC	applications.	|	24.7	|
+|	openblas	|	OpenBLAS is an open-source implementation of the BLAS and LAPACK APIs with many hand-crafted optimizations for specific processor types.	|	0.3.29	|
 |	OpenCV	|	OpenCV (Open Source Computer Vision Library) is a library of programming functions mainly for real-time computer vision.	|	4.10.0	|
 |	OpenFOAM	|	OpenFOAM (Open Field Operation And Manipulation) is a C++ toolbox for the development of customized numerical solvers, and pre-/post-processing utilities for the solution of continuum mechanics problems.	|	12	|
-|	OpenJDK	|	A	free	and	open-source	implementation	of	the	Java	Platform,	Standard	Edition	(Java	SE).	|	N/A	|
+|	OpenJDK	|	A	free	and	open-source	implementation	of	the	Java	Platform,	Standard	Edition	(Java	SE).	|	22.0.2	|
 |	OpenMPI	|	Open MPI Project is an open source Message Passing Interface implementation.	|	4.1.6	|
-|	ParaView	|	ParaView is an open-source multiple-platform application for interactive, scientific visualization.	|	N/A	|
+|	ParaView	|	ParaView is an open-source multiple-platform application for interactive, scientific visualization.	| 5.13.0-RC2, 5.13.1	|
 |	perl	|	Perl is a high-level, general-purpose, interpreted, dynamic programming language.	|	5.40.0	|
-|	R	|	R	is	a	free	software	environment	for	statistical	computing	and	graphics.	|	N/A	|
+|	R	|	R	is	a	free	software	environment	for	statistical	computing	and	graphics.	|	4.4.1	|
 |	ROCm	|	AMD ROCm™ is an open software stack including drivers, development tools, and APIs that enable GPU programming from low-level kernel to end-user applications.	|	6.3.0	|
 |	samtools	|	Samtools is a suite of programs for interacting with high-throughput sequencing data.	|	1.21	|
-|	schrodinger	|	Computational platform for molecular design and discovery.	|	N/A	|
+|	schrodinger	|	Computational platform for molecular design and discovery.	|	2024-4, 2025-3	|
 |	sratoolkit	|	The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives.	|	12	|
-|	star	|	STAR: ultrafast universal RNA-seq aligner.	|	N/A	|
-|	Star 2.7.11B	|	RNA-seq aligner	|	2.7.11	|
+|	star	|	STAR: ultrafast universal RNA-seq aligner.	|	2.7.11b	|
 |	Tinker	|	Tinker is a suite of computer software applications for molecular dynamics simulation.	|	8.11.3	|
 |	trimmomatic	|	Trimmomatic: A flexible read trimming tool for Illumina NGS data.	|	0.39	|
 |	vcftools	|	vcftools is a suite of functions for use on genetic variation data in the form of VCF and BCF files.	|	0.1.16	|
-|	VMD	|	VMD is a molecular visualization program for displaying, animating, and analyzing large biomolecular systems using 3-D graphics and built-in scripting.	|	N/A	|
+|	VMD	|	VMD is a molecular visualization program for displaying, animating, and analyzing large biomolecular systems using 3-D graphics and built-in scripting.	|	1.9.3, 1.9.4a55	|
 |	VTune	|	VTune Profiler (formerly VTune Amplifier) is a performance analysis tool for x86-based machines running Linux or Microsoft Windows operating systems.	|	2025.0	|
-|	weka	|	Waikato Environment for Knowledge Analysis is a collection of machine learning and data analysis free software licensed under the GNU General Public License.	|	N/A	|
+|	weka	|	Waikato Environment for Knowledge Analysis is a collection of machine learning and data analysis free software licensed under the GNU General Public License.	|	3.8.6|
 :::
