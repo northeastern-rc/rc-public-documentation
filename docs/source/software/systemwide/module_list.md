@@ -26,13 +26,13 @@ Table of modules currently available on the Explorer cluster. To see which versi
 |	bwa	|	BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.	|	0.7.18	|
 |	clustal	|	No description available	|	2.1	|
 |	cmake	|	A Powerful Software Build System for building C++ code.	|	3.30.2	|
-|	Code Server	|	VS Code in the browser	|	4.91.1	|
+|	code-server	|	VS Code in the browser	|	4.91.1	|
 |	cuda	|	CUDA is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs).	|	12.1.1, 12.3.0, 12.8.0	|
 | cuDNN  | NVIDIA® CUDA® Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for deep neural networks. | 12.8.0 |
 |	EMAN2	|	A scientific image processing software suite with a focus on CryoEM and CryoET.	|	2.99.47	|
 |	fastqc	|	A quality control tool for high throughput sequence data.	|	0.12.1	|
 |	ffmpeg	|	FFmpeg is a free and open-source software project consisting of a suite of libraries and programs for handling video, audio, and other multimedia files and streams.	|	7.1.1	|
-|	Gamess 	|	GAMESS version July 15, 2024 R2 Patch 1 for 64 bit ARM under Linux using GNU compilers	|	July 15 2024Gnu		|
+|	gamess 	|	GAMESS version July 15, 2024 R2 Patch 1 for 64 bit ARM under Linux using GNU compilers	|	July 15 2024Gnu		|
 | gaussian | Gaussian software is a computational chemistry program for electronic structure modeling that predicts molecular energies, structures, and properties by applying quantum mechanics to molecules and reactions. | g16 |
 |	glew	|	The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library.	|	2.2.0 |
 |	Gnu Parallel	|	No description available	| 2025-04-22	|
