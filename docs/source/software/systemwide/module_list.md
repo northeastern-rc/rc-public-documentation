@@ -24,7 +24,7 @@ Table of modules currently available on the Explorer cluster. To see which versi
 |	bwa	|	BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.	|	0.7.18	|
 |	clustal	|	No description available	|	2.1	|
 |	cmake	|	A Powerful Software Build System for building C++ code.	|	3.30.2	|
-|	Code Server	|	No description available	|	4.101.1	|
+|	Code Server	|	VS Code in the browser	|	4.91.1	|
 |	cuda	|	CUDA is a parallel computing platform and programming model developed by NVIDIA for general computing on graphical processing units (GPUs).	|	12.1.1, 12.3.0, 12.8.0	|
 | cuDNN  | NVIDIA® CUDA® Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for deep neural networks. | 12.8.0 |
 |	EMAN2	|	A scientific image processing software suite with a focus on CryoEM and CryoET.	|	2.99.47	|
