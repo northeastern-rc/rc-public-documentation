@@ -30,3 +30,4 @@ We recommend using containers on the HPC because they provide isolation from the
  
  See how to use containers on HPC
  +++
+ :::{grid-item-card} {octicon}list;1.5em;sd-mr-1 List of Available Containers:link: containers offered :link-type: doc
