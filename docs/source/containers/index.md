@@ -29,12 +29,14 @@ We recommend using containers on the HPC because they provide isolation from the
 :link: apptainer
 :link-type: doc
  
-+++ Learn more » :::
++++ Learn more » 
+:::
 
-:::{grid-item-card} {octicon}'list-unordered;1.5em;sd-mr-1' List of Available Containers
+:::{grid-item-card} {octicon}`list-unordered;1.5em;sd-mr-1` List of Available Containers
 :link: containers_list 
 :link-type: doc
  
-+++ Learn more » :::
++++ Learn more » 
+:::
 
 ::::
