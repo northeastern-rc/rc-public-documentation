@@ -5,6 +5,7 @@
 :maxdepth: 3
 
 Modules <modules>
+Containers <containers>
 MPI <mpi>
 R <r>
 Matlab <matlab>
@@ -12,6 +13,8 @@ Matlab <matlab>
 
 ::::{grid} 4
 :::{grid-item-card} {ref}`Modules <using-module>`
+:::
+:::{grid-item-card} {ref}`Containers <containers>`
 :::
 :::{grid-item-card} {ref}`MPI <using-mpi>`
 :::
