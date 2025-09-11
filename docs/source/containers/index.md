@@ -32,7 +32,7 @@ We recommend using containers on the HPC because they provide isolation from the
  +++ See how to use container images on HPC
  :::
 
- :::{grid-item-card} {octicon}checklist;1.5em;sd-mr-1 List of Available Containers
+ :::{grid-item-card} {octicon}'list-unordered;1.5em;sd-mr-1' List of Available Containers
  :link: containers_list 
  :link-type: doc
  
