@@ -14,9 +14,9 @@ Here is a table of the containers currently available in: /shared/container_repo
 | megan_diamond | MEGAN with DIAMOND - metagenomic analysis tool for taxonomic classification | No versions found |
 | multiqc | Aggregate results from bioinformatics analyses across many samples | 1.26 |
 | phpmyadmin | Web interface for MySQL and MariaDB database administration | 5.1.1,5.2.1 |
-| rstudio | Integrated development environment for R programming and data science | 4.4.0,4.4.2 |
+| [rstudio](../software/systemwide/R.md | Integrated development environment for R programming and data science | 4.4.0,4.4.2 |
 | salmon | Fast and accurate quantification of transcript expression from RNA-seq data | 1.10.3 |
-| star | Spliced Transcripts Alignment to a Reference - RNA-seq aligner | 2.7.10b |
+| [star](/apptainer.md#example-using-an-image-already-located-on-the-file-system) | Spliced Transcripts Alignment to a Reference - RNA-seq aligner | 2.7.10b |
 | tensorboard | TensorFlow's visualization toolkit for machine learning experiments | 2.18.0 |
 | trinityrnaseq | De novo transcript sequence reconstruction from RNA-Seq data | 2.15.2 |
 | trinotateweb | Web interface for Trinotate functional annotation of transcriptomes | v3.2.2 |
