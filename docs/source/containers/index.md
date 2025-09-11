@@ -29,12 +29,14 @@ We recommend using containers on the HPC because they provide isolation from the
 :link: apptainer
 :link-type: doc
  
- +++ See how to use container images on HPC:::
+ +++ See how to use container images on HPC
+ :::
 
- :::{grid-item-card} {octicon}list;1.5em;sd-mr-1 List of Available Containers
+ :::{grid-item-card} {octicon}checklist;1.5em;sd-mr-1 List of Available Containers
  :link: containers_list 
  :link-type: doc
  
- +++ See list of container images on Explorer:::
+ +++ See list of container images on Explorer
+ :::
 
 ::::
