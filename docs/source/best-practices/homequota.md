@@ -14,7 +14,10 @@ Use `/projects` for long-term storage. PIs can request a folder in `/projects` v
 Please be mindful of the `/scratch` purge policy, which can be found on the [Research Computing Policy Page]. See our [website's section on Data Storage](https://rc.northeastern.edu/data-storage-options/) for information on `/projects` and `/scratch`.
 :::
 
+(checking-your-quotas)=
+
 ## How To Check Your Quotas
+
 You can see exactly how much of your quota is being used in your `/projects`, `/scratch`, or your `/home` directories by running the `check-quota` script from any node in the `short` partition.
 
 First, launch a job on a node in the `short` partition.
