@@ -34,7 +34,7 @@ Learn about the terminology used with this software to manage `/projects`.
 :link: commands
 :link-type: doc
 
-Explore the commands available with the project-mangagement software.
+Explore the commands available with the software to manage `/projects`.
 
 +++
 [Learn more »](commands)
