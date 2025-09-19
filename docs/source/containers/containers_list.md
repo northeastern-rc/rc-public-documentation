@@ -5,7 +5,6 @@ Here is a table of the containers currently available in: /shared/container_repo
 |---------------|-------------|------------|
 | afni | Analysis of Functional NeuroImages - neuroimaging analysis software | 24.3.06 |
 | angsd suite | Analysis of Next Generation Sequencing Data - Includes angsd, pcangsd, ngsRelate, and ngsadmix | 0.940 |
-| courses | Educational course materials and resources | BINF6400,DS2000,IE7374,IE7500,jupyterlab |
 | delft3d | 3D numerical modeling suite for hydrodynamics, sediment transport and morphology | 6.04.00, 6.04.99_dev |
 | freesurfer | Software suite for processing and analyzing brain MRI images | 8.0.0 |
 | fsl | FMRIB Software Library - comprehensive library of analysis tools for brain imaging data | 6.0.1, 6.0.3, 6.0.7 |
