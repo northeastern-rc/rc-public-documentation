@@ -1,9 +1,11 @@
+(containers)=
 # Containers on Explorer
 ```{toctree}
 :hidden:
 :maxdepth: 4
 
 apptainer
+containers_list
 ```
 
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings. ([Reference](https://www.docker.com/resources/what-container/))
@@ -27,5 +29,14 @@ We recommend using containers on the HPC because they provide isolation from the
 :link: apptainer
 :link-type: doc
  
- See how to use containers on HPC
- +++
++++ Learn more » 
+:::
+
+:::{grid-item-card} {octicon}`list-unordered;1.5em;sd-mr-1` List of Available Containers
+:link: containers_list 
+:link-type: doc
+ 
++++ Learn more » 
+:::
+
+::::

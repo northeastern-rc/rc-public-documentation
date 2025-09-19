@@ -30,5 +30,5 @@ Here is an example sbatch script using the container runtime engine `Apptainer` 
 ROCKER_IMAGE=/shared/container_repository/explorer/rstudio/4.4.2/rocker-geospatial-4.4.2.sif
 
 # Run R with Apptainer
-apptainer exec -B "/projects:/projects" $ROCKER_IMAGE Rscript my_r_code.sh
+apptainer exec -B "/projects:/projects" $ROCKER_IMAGE Rscript my_r_code.R
 :::
