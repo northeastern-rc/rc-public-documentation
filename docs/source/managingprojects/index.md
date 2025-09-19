@@ -1,5 +1,5 @@
 (managing-projects)=
-# Managing /Projects
+# Managing `/projects`
 
 ```{toctree}
 :hidden:
