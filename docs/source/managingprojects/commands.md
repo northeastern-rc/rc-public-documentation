@@ -2,7 +2,7 @@
 
 # Commands
 
-The commands for interacting with the project-management software can be thought of in four areas: viewing, adding, updating, and removing.
+The commands for interacting with the software to manage `/projects` can be thought of in four areas: viewing, adding, updating, and removing.
 
 Every command below is detailed with the type of user able to run the command with respect to the project (for more information on user type see  {ref}`user-types`).
 

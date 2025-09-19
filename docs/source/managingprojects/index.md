@@ -1,5 +1,5 @@
-(project-management)=
-# Project Management
+(managing-projects)=
+# Managing /Projects
 
 ```{toctree}
 :hidden:
@@ -24,7 +24,7 @@ For our Explorer cluster we developed custom `/projects` management software to 
 :link: terminology
 :link-type: doc
 
-Learn about the terminology used with this project-management software.
+Learn about the terminology used with this software to manage `/projects`.
 
 +++
 [Learn more »](terminology)
@@ -44,7 +44,7 @@ Explore the commands available with the project-mangagement software.
 :link: cheatsheet
 :link-type: doc
 
-A one-page guide that provides all the information necessary on our project management software.
+A one-page guide that provides all the information necessary on our software that manages `/projects`.
 +++
 [Learn more »](cheatsheet)
 :::

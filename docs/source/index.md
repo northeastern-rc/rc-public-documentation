@@ -82,7 +82,7 @@ connectingtocluster/index
 runningjobs/index
 Working with GPUs <gpus/index>
 datamanagement/index
-projectmanagement/index
+managingprojects/index
 Software <software/index>
 Courses on Explorer <classroom/index>
 containers/index
