@@ -22,10 +22,10 @@ To see all the available commands for the different user types check out {ref}`p
 
 ## TTL
 
-At the inception of every project, we establish a `ttl` or "Time To Live," which indicates how long the project is gauranteed to be supported.
+At the inception of every project, we establish a `ttl` or "Time To Live", which indicates how long the project is guaranteed to be supported.
 
 This `ttl` can be viewed by the PI at any point (see {ref}`commands-for-viewing`), and, once the `ttl` expires, Research Computing will email the PI and data-custodian to inquire about the status and continuation of the research project on the cluster.
 
 :::{important}
-Although a TTL exists for a research group, its purpose is not punitive or restrictive, but rather it is purely adminstrative -- enabling  to find out if the group is still active,  if PI needs to be changed as they may have left, etc.
+Although a TTL exists for a research group, its purpose is not punitive or restrictive, but rather it is purely administrative -- enabling us to find out if the group is still active,  if PI needs to be changed as they may have left, etc.
 :::
