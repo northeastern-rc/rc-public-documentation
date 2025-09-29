@@ -86,3 +86,17 @@ To remove delegates  from a research group, the _PI_ of the group can run the fo
 :::{code-block} bash
 project <project_name> remove delegates <user1,user2,etc.>
 :::
+
+## Additional Commands
+
+To see which groups you currently belong to:
+:::{code-block} bash
+groups <username>
+:::
+
+To see what unix group gates a given directory:
+:::{code-block} bash
+getfacl /projects/<project_name>
+:::
+
+
