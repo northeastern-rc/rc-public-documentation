@@ -15,11 +15,13 @@ PIs (staff, research scientists, teaching professors, faculty) can now add and r
 
 Simply login to the terminal via ssh or select the option "Clusters -> explorer Shell Access" on the OOD.
 :::{code}bash 
-# Get on a compute node
+#Get on a compute node
 srun --pty bash
-# Run the command 'project'
+#Run the command 'project'
 project <projectname> add members <username>
 :::
+
+Read more about managing /projects [here](../managingprojects/index.md)
 
 ### New Storage Directory
 
