@@ -14,7 +14,7 @@ The [Open OnDemand](https://ood.explorer.northeastern.edu) website has also been
 PIs (staff, research scientists, teaching professors, faculty) can now add and remove members from their storage spaces and partitions. For new users, this will create their account on the cluster and add them to the PIs storage space. 
 
 Simply login to the terminal via ssh or select the option "Clusters -> explorer Shell Access" on the OOD.
-:::{code block} 
+:::{code}bash 
 # Get on a compute node
 srun --pty bash
 # Run the command 'project'
