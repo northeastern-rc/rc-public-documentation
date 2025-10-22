@@ -1,13 +1,15 @@
 # Access to Multi-GPU Partition
-The `multigpu` partition in the HPC cluster allows users extensive parallel processing on multiple GPUs. This setup is ideal for applications that require significant computational power, such as deep learning, scientific simulations, and large-scale data analysis.
+The `multigpu` partition in the HPC cluster enables parallel processing across multiple GPUs. This setup is ideal for applications that require significant computational power, such as deep learning, scientific simulations, and large-scale data analysis.
 
 Please follow these steps to apply for the Multi-GPU Partition.
 
-#### Step 1 - Submitting the Access to MultiGPU Partition Request
+## MultiGPU Partition Access Guide
+
+### Requesting Access to MultiGPU partition
 
 - Please use the partition application form here: [HPC Partition Request](https://bit.ly/NURC-PartitionAccess)
-- Select under "Partition Type" - `Multigpu - Partition (Testing Access)`
-- Fill in the number of GPUs and the type of GPU you'd like to test on. Please also provide a short description of your expected testing workload.
+- Select under "Partition Type" - `Multigpu`
+- Make sure that you have filled the form with briefly answering the setup questions at the end.
 :::{note}
    Please consider the following while requesting GPUs for testing:
    - Testing should represent your planned work but doesn't need full production runs.
@@ -23,20 +25,25 @@ Please follow these steps to apply for the Multi-GPU Partition.
 
 
 - Submit the form.
-- The Research Computing team will need an estimate of the duration needed for testing (preferably less than 24 hrs.)
-- The Research Computing team will contact you with more details for accessing a multi-GPU node. 
+- After submitting the form Research Computing team will reach out to you for an estimate of the duration needed for testing (preferably less than 24 hrs).
+- Research Computing team will contact you with more details for accessing a multi-GPU node. 
 
-#### Step 2 - Testing the Code on the Temporary Reservation
+### Testing the Code on the Temporary Reservation
 
-- To check your reservation
+In the testing phase, you will be provided with the reservation for performing test on 1, 2, 4, and 8 GPUs and recording runtimes for each test to calculate efficiency.
+
+#### Check your reservation
     
-    ```bash
-    scontrol show reservation=<reservation_name>
+Before you begin check your reservation
+```bash
+scontrol show reservation=<reservation_name>
     
-    #<reservation_name> will be in the details provided by the RC team.
-    ```
+#<reservation_name> will be in the details provided by the RC team.
+```
+
+#### Interactive Job
     
-- To run an {term}`Interactive Job`, for example, using V100-sxm2 with 4 GPUs, use the command below
+To run an {term}`Interactive Job`, for example, using V100-sxm2 with 4 GPUs, use the command below
 
 ```bash
 srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --time=24:00:00 -N 1 --pty /bin/bash
@@ -54,8 +61,12 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
    - Disable sleep mode on your local machine during testing.
    - Implement job checkpointing where possible.
    - Monitor job status regularly.
+   - Use [Non-interactive job](https://rc-docs.northeastern.edu/en/latest/gpus/multigpu-partition-access.html#non-interactive-job)
 :::
-- To run {term}`Non-interactive job`, you can use the following command
+
+#### Non-interactive job
+
+To run {term}`Non-interactive job`, you can use the following command
     
     1- Create a script
     
@@ -107,15 +118,14 @@ srun -p reservation --reservation=<reservation_name> --gres=gpu:v100-sxm2:4 --
     #To cancel a job
     scancel <job_id> # where <job_id> is the ID of the Job we are canceling
     ```
-- Perform testing on 1,2,..(4,8) GPUs. Record runtimes for each test (calculate efficiency).
 
 :::{important}
 This multi-GPU setup is intended for research workflows only. For course-related multi-GPU needs, please refer to the course request form. Instructors should submit those requests directly through the appropriate channels.
 :::
 
-#### Step 3 - Post-Testing Application
+#### Post-Testing Sharing Performance Results
 
 - Ensure your {term}`Scaling efficiency` is adequate (generally over 0.5) when using the maximum GPUs selected on the `multigpu` partition⁠. If needed, please consult with the Research Computing (RC) team for guidance and support throughout the process⁠.
-- Re-enter the partition application [form](https://bit.ly/NURC-PartitionAccess) and select `Multigpu - Partition (Post Testing)` under "Partition Type."
-- Please fill out the form with your test results and submit it.
-- After the RC team reviews and approves your application, you will be granted access to the `multigpu` partition.
+- Share your execution time across 1, 2, 3, 4 GPUs with efficiency in the ticket for review.
+- Based on your performance, the team will evaluate your application for permanent access to the `multigpu` partition until your research work is completed.
+
