@@ -9,13 +9,29 @@ You will want to update your commands to [connect to the cluster](../connectingt
 
 The [Open OnDemand](https://ood.explorer.northeastern.edu) website has also been updated and provides graphical interface to many applications (Jupyterlab, R, MATLAB etc).
 
+### PIs can Add and Remove Users
+
+PIs (staff, research scientists, teaching professors, faculty) can now add and remove members from their storage spaces and partitions. For new users, this will create their account on the cluster and add them to the PIs storage space. 
+
+Simply login to the terminal via ssh or select the option "Clusters -> Explorer Shell Access" on the OOD.
+
+:::{code-block} bash 
+# Get on a compute node
+srun --pty bash
+# Run the command 'project'
+project <projectname> add members <username>
+
+:::
+
+Read more about managing `/projects` [here](../managingprojects/index.md)
+
 ### New Storage Directory
 
 All of your data that was in Discovery will be in Explorer.
 
-On Explorer our performant storage directory is called `/projects`. 
+On Explorer, our performant storage directory is called `/projects`. 
 
-If you had a storage space for performant storage on Discovery you will want to change the paths in your scripts from `/work` to `/projects`. If you would like a new directory in /projects please [request one](https://bit.ly/NURC-NewStorage).
+If you had a storage space for performant storage on Discovery, you would want to change the paths in your scripts from `/work` to `/projects`. If you would like a new directory in /projects, please [request one](https://bit.ly/NURC-NewStorage).
 
 ### Courses Directory
 
@@ -33,7 +49,7 @@ There is a lot of new software on Explorer. Please see what we offer as a [modul
 
 #### Modules
 
-All of the [modules](../software/systemwide/modules.md) on Explorer are new. Some of the versions may have changed from the version you were using on Discovery. Thus, module load commands will need to be updated.
+All of the [modules](../software/systemwide/modules.md) on Explorer are new. Some versions may have changed since the one you used on Discovery. Thus, module load commands will need to be updated.
 
 Modules should be loaded in sbatch scripts.
 
@@ -51,11 +67,11 @@ We recommend removing all module load commands from your .bashrc
 
 We have many newly added container images at `/shared/container_repository/explorer/`
 
-If you had an image that was pulled to Discovery using `Singularity` it should still work as expected on Explorer, though there may be some exceptions. One of the advantages of container images, is their portability.
+If you had an image that was pulled to Discovery using `Singularity` it should still work as expected on Explorer, though there may be some exceptions. One of the advantages of container images is their portability.
 
-### Software Compilied on Discovery
+### Software Compiled on Discovery
 
-We recommend recompiling software on Explorer that was compilied on the Discovery cluster. If you need assistance please reach out to the Research Computing Team by emailing rchelp@northeastern.edu.
+We recommend recompiling software on Explorer that was compiled on the Discovery cluster. If you need assistance, please reach out to the Research Computing Team by emailing rchelp@northeastern.edu.
 
 ### Conda Environments
 
