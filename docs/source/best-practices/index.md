@@ -7,7 +7,7 @@
 homequota
 workquota
 scratchpurge
-checkpointing
+Checkpointing Jobs<checkpointing/index>
 shell_environment
 clusterusage
 ```
@@ -48,13 +48,13 @@ Learn how to use /scratch effectively, before and after a purge.
 :::
 
 :::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Checkpointing Jobs
-:link: checkpointing
+:link: checkpointing/index
 :link-type: doc
 
 Discover how to save progress within long-running jobs, preventing loss of data.
 
 +++
-[Learn more »](checkpointing)
+[Learn more »](checkpointing/index)
 :::
 
 :::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Shell Environment on the Cluster
