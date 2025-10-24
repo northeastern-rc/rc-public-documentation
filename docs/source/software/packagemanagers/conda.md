@@ -39,6 +39,12 @@ module load anaconda3/2024.06
 To create a new Conda environment where `<environment-name>` is the path and name. You can see a list of your existing environments with `conda env list`.
 
 :::{code} bash
+conda create --prefix=/<path>/<environment-name> python=3.11
+:::
+
+If you need a Conda environment with the full Anaconda package installation, use the following command (can take more time):
+
+:::{code} bash
 conda create --prefix=/<path>/<environment-name> python=3.11 anaconda
 :::
 
@@ -105,7 +111,7 @@ conda list --prefix /path/to/env/<env_name>
 :::
 
 ### Exporting Environment
-For ensuring reproducibility, it's recommended to export a list of all packages and versions in an environment to an environment file. This file can then be used to recreate the exact environment on another system or by another user. It also serves as a record of the software environment used for your analysis.
+For ensuring reproducibility, it's recommended to [export] a list of all packages and versions in an environment to an environment file. This file can then be used to recreate the exact environment on another system or by another user. It also serves as a record of the software environment used for your analysis.
 
 ### Removing Environments
 When you need to remove an environment located in your home directory, execute:
@@ -238,3 +244,4 @@ Best practices for home storage: {ref}`cleaning-conda`.
 [Should I use Anaconda or Miniconda]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda
 [Learn about storage options]: https://rc.northeastern.edu/data-storage-options/
 [Submit New Storage Space request]: https://bit.ly/NURC-NewStorage
+[export]: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-the-environment-yml-file
