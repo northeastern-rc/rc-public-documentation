@@ -14,7 +14,7 @@ sinfo -p <partition_name>
 as an example:
 
 :::{code} bash
-sinfo -p gpu
+sinfo -p gpu-interactive
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 gpu          up    8:00:00      5 drain* c[2171,2184,2188],d[1008,1014]
 gpu          up    8:00:00      3  down* c2162,d[1006,1017]

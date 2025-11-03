@@ -15,38 +15,35 @@ To get started with MPI on a Slurm-based HPC cluster, you should have:
 
 ### MPI libraries on Explorer
 
-There are many versions of OpenMPI, MVAPICH, and MPICH that are available on the HPC as modules compiled with different compilers and additional libraries and features. To see them, use the `module avail openmpi`, `module avail mpich`, and `module avail mvapich` respectively.
+OpenMPI 4.1.6 and MPICH 4.3.0b1 are available on the HPC cluster as a module. OpenMPI 4.1.6, for example, can be loaded using the command `module load OpenMPI/4.1.6`. If there is a need for other MPI modules, please submit a [software request](https://bit.ly/NURC-Software)
 
-Use the `module show` command to view information about the compilers you need to use with these libraries and if they support InfiniBand (IB) or not. For example, `module show openmpi/4.1.0-zen2-gcc10.1`.
+Use the `module show OpenMPI/4.1.6` command to identify the information about how the module was installed.
 
-::::{dropdown} Output for `module show openmpi/4.1.0-zen2-gcc10.1`
+::::{dropdown} Output for `module show OpenMPI/4.1.6`
 :::{code} bash
-/shared/centos7/modulefiles/openmpi/4.1.0-zen2-gcc10.1:
 
-::::{note}
-To select only nodes connected by infiniband add the `--constraint=ib` flag to your SLURM command.
-:::
+-------------------------------------------------------------------
+/shared/EL9/explorer/modulefiles/OpenMPI/4.1.6:
 
-module-whatis	 Loads the executables, libraries and headers for OpenMPI v. 4.1.1. Built using Intel 2021 compilers on AMD EPYC architecture (zen2).
+module-whatis   {Loads OpenMPI/4.1.6 module.
 
-Please note - this MPI module supports communication through the HDR200 InfiniBand network by using the Mellanox (OFED 5.3) UCX (1.10.1) framework with cross platform unified API. To make sure InfiniBand is being used, make sure to compile and run your applications using this module only on AMD EPYC architectures (zen2).
+This module was built on Wed Sep 25 05:59:52 PM EDT 2024
 
-To allocate the zen2 arch compute node, add the following flag to your SLURM command: --constraint=zen2
-For more details:
-https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html
+OpenMPI (https://www.open-mpi.org/) is a high performance message passing library.
 
-To use the module, type:
-module load gcc/10.1.0
-module load openmpi/4.1.0-zen2-gcc10.1
+The script used to build this module can be found here: https://github.com/northeastern-rc-software-modules/OpenMPI-4.1.6/
 
+To load the module, type:
+module load OpenMPI/4.1.6
 
-conflict	 openmpi
-prepend-path	 PATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/bin
-prepend-path	 MANPATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/share/man
-prepend-path	 LD_LIBRARY_PATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/lib
-prepend-path	 CPATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/include
-prepend-path	 LIBRARY_PATH /shared/centos7/openmpi/4.1.0-zen2-gcc10.1/lib
-setenv		 OMPI_MCA_btl ^vader,tcp,openib,uct
+}
+conflict        OpenMPI
+prepend-path    PATH /shared/EL9/explorer/OpenMPI/4.1.6/bin
+prepend-path    LIBRARY_PATH /shared/EL9/explorer/OpenMPI/4.1.6/lib
+prepend-path    LD_LIBRARY_PATH /shared/EL9/explorer/OpenMPI/4.1.6/lib
+prepend-path    CPATH /shared/EL9/explorer/OpenMPI/4.1.6/include
+
+-------------------------------------------------------------------
 :::
 ::::
 
@@ -62,7 +59,7 @@ The following is a basic slurm script for running an MPI program with annotation
 #SBATCH --time=01:00:00             # Request 1 hour runtime
 #SBATCH --mem-per-cpu=2000          # Request 2000MB memory per CPU
 
-module load openmpi/4.0.5           # Load the necessary module(s)
+module load OpenMPI/4.1.6           # Load the necessary module(s)
 mpirun -n 4 ./your_program          # Run your MPI executable
 :::
 
@@ -70,7 +67,7 @@ mpirun -n 4 ./your_program          # Run your MPI executable
 For MPI tasks, `--ntasks=X` is used, where `X` requests the number of cpu cores for tasks.
 :::
 
-This script specifies that it needs 4 tasks (i.e., CPU cores), a maximum of 10 minutes of runtime, and 2000MB of memory per CPU. It then loads the OpenMPI module and runs the MPI program using mpirun.
+This script specifies that it needs 4 tasks (i.e., CPU cores), a maximum of one hour of runtime, and 2000MB of memory per CPU. It then loads the OpenMPI module and runs the MPI program using mpirun.
 
 :::{tip}
 Best practice for writing your sbatch script is including the versions of the modules you are loading to ensure you always have your expected environment on the HPC.
@@ -175,6 +172,7 @@ This program initializes the MPI environment, gets the rank of the process, gets
 Next, compile the program using the `mpicc` command, which is a wrapper for the C compiler that includes the OpenMPI libraries:
 
 :::{code-block} bash
+module load OpenMPI/4.1.6
 mpicc hello_world.c -o hello_world
 :::
 
@@ -190,7 +188,7 @@ Finally, create a slurm job script to run the program:
 #SBATCH --time=10:00
 #SBATCH --mem-per-cpu=2000
 
-module load openmpi/4.0.5
+module load OpenMPI/4.1.6
 mpirun -n 4 ./hello_world
 :::
 
@@ -287,7 +285,7 @@ To install mpi4py inside of a conda environment:
 
 :::{code-block} bash
 srun -n 4 --pty /bin/bash
-module load anaconda3/2022.05
+module load anaconda3/2022.06
 mkdir -p /path/to/mpi4py_env
 conda create --prefix=/path/to/mpi4py_env -y
 source activate /path/to/mpi4py_env
