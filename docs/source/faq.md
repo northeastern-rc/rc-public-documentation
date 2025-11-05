@@ -63,7 +63,9 @@ PKG_LIBS = -fPIC
 6. If you are using a different version of GCC, adjust the module load command accordingly (e.g., module load gcc/9.3.0).
 
 ::::   
-::::{dropdown} To use a node connected by Infiniband please use the flag 'constraint=ib' in your srun or sbatch sessions.
+::::{dropdown} How to use Infiniband on the cluster?
+
+To use a node connected by Infiniband please use the flag 'constraint=ib' in your srun or sbatch sessions.
 ::: {code-block}
 #SBATCH --constraint=ib
 :::
