@@ -26,6 +26,14 @@ Based on the output, we can check which files are consuming how much memory, and
 We recommend loading other scripts/environments after your main environment has been loaded. We recommend activating any conda environments _after_ the main environment has been loaded. If there are other scripts/environments you'd like to run, we recommend creating a separate bash script and sourcing it once the main environment has been loaded. For more details on the `.bashrc` file and best practices, see {ref}`about-bashrc`.
 ::::
 
+
+::::{dropdown} I am graduating soon. How can I keep my access to the cluster?
+If a user is graduating and wants to continue using the cluster, they'll need a sponsored account from Northeastern University. To request a sponsored account from Northeastern, please see [Faculty, Staff, and Sponsored Accounts](https://accounts.northeastern.edu/faculty-staff-and-sponsored-accounts/) and [related FAQs](https://accounts.northeastern.edu/sponsored-account-faqs/)
+
+After the user gets a sponsored account, we can help move their data from their student account to their sponsored account. Please [open a ticket with Research Computing](https://bit.ly/NURC-Assistance) after you have a sponsored account, and we'll be happy to assist.
+::::
+
+
 ::::{dropdown} Can I install my software on the HPC cluster?
 Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {ref}`from-source` sections. If you encounter any issues, contact [Research Computing](https://rc.northeastern.edu/support/gettinghelp/).
 ::::
