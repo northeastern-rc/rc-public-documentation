@@ -5,7 +5,6 @@
 :maxdepth: 3
 
 Modules <modules>
-Containers <containers>
 MPI <mpi>
 R <r>
 Matlab <matlab>
