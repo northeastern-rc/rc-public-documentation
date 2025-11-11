@@ -1,7 +1,7 @@
 (running-job-with-job-assist)=
 # Running Jobs with job-assist
 
-The `job-assist` command is designed to simplify the process of submitting jobs on the Discovery cluster using SLURM's `srun` and `sbatch` modes. It provides an intuitive interface for requesting resources and managing job submissions on the cluster.
+The `job-assist` command is designed to simplify the process of submitting jobs on the Explorer cluster using SLURM's `srun` and `sbatch` modes. It provides an intuitive interface for requesting resources and managing job submissions on the cluster.
 
 ## Features
 

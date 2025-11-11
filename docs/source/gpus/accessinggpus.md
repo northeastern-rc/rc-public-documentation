@@ -12,7 +12,7 @@ srun --partition=gpu-interactive --nodes=1 --pty --gres=gpu:v100-sxm2:1 --ntasks
 On the `gpu` partition, requesting more than 1 GPU (`--gres=gpu:1`) will cause your request to fail. Additionally, one cannot request all the CPUs on that gpu node as they are reserved for other GPUs.
 :::
 
-The `sbatch` example below is similar to the `srun` example above, but it submits the job in the background, gives it a name, and directs the output to a file:
+The `sbatch` example below is similar to the `srun` example above, but it submits the job in the background, submits to the `gpu` partition, gives it a name, and directs the output to a file:
 
 :::{code-block} shell
 #!/bin/bash
@@ -31,12 +31,10 @@ The `sbatch` example below is similar to the `srun` example above, but it submit
 :::
 
 ## Specifying a GPU type
-You can add a specific type of GPU to the `--gres=` option (with either `srun` or `sbatch`). For a list of available GPU types, refer to the GPU Types column in {ref}`gpu-table`, that are listed as *Public*.
+You can add a specific type of GPU to the `--gres=` option (with either `srun` or `sbatch`). For a list of available GPU types, refer to the GPU Type column in [GPU Nodes](https://rc.northeastern.edu/compute/) table, that are listed as *Public*.
 
 :::{code-block} bash
----
-caption: Command to request one v100 GPU.
----
+:caption: Flag to request one v100 GPU:
 --gres=gpu:v100-pcie:1
 :::
 

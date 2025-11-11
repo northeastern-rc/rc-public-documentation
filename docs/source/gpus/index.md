@@ -9,10 +9,11 @@ gpuoverview
 accessinggpus
 gpujobsubmission
 multigpu-partition-access
+quickstart-h200
+idlebot
 ```
 
 Harnessing the power of Graphics Processing Units (GPUs) can significantly accelerate your computations on our High-Performance Computing (HPC) cluster. This section provides insights into using GPUs effectively, from understanding their capabilities to best practices for optimization.
-
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
@@ -20,23 +21,24 @@ Harnessing the power of Graphics Processing Units (GPUs) can significantly accel
 :::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` GPUs on our HPC
 :link: gpuoverview
 :link-type: doc
-
 Overview of the GPUs on the HPC.
 +++
 [Learn more »](gpuoverview)
 :::
+
+
 :::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` GPU Access
 :link: accessinggpus
 :link-type: doc
-
 How to utilize GPUs interactively (srun) and passively (sbatch).
 +++
 [Learn more »](accessing-gpus)
 :::
+
+
 :::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` GPU Job Submission
 :link: gpujobsubmission
 :link-type: doc
-
 Using CUDA and building deep learning environments.
 +++
 [Learn more »](gpujobsubmission)
@@ -45,11 +47,27 @@ Using CUDA and building deep learning environments.
 :::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` Access to the Multi-GPU Partition
 :link: multigpu-partition-access
 :link-type: doc
-
 Get access to the Multi-GPU partition.
 +++
 [Learn more »](multigpu-partition-access)
-::::
+:::
 
+:::{grid-item-card} {octicon}`home;1.5em;sd-mr-1` Quick Start Guide for H200s
+:link: quickstart-h200
+:link-type: doc
+Get access to the H200 GPUs on Explorer.
++++
+[Learn more »](quickstart-h200)
+:::
+
+:::{grid-item-card} {octicon}`dependabot;1.5em;sd-mr-1`GPU IdleBot
+:link: idlebot
+:link-type: doc
+Learn about Explorer's IdleBot.
++++
+[Learn more »](idlebot)
+:::
+
+::::
 :::{include} ../_snippets/helpfooter.md
 :::

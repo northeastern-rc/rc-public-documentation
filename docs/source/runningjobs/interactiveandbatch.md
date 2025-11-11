@@ -27,7 +27,7 @@ To see all options for `srun`, please refer to [srun manual] from SchedMD.
 
 ### Examples Using `srun`
 
-You can tailor your request to fit both the needs of the job and the partition limits if you're familiar with the available [hardware](https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html#hardware-overview) and [partitions](https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html) on Discovery. 
+You can tailor your request to fit both the needs of the job and the partition limits if you're familiar with the available [hardware](https://rc-docs.northeastern.edu/en/latest/hardware/hardware_overview.html#hardware-overview) and [partitions](https://rc-docs.northeastern.edu/en/latest/hardware/partitions.html) on Explorer. 
 
 To request one node and one task for 30 minutes with X11 forwarding (check that you have [X11 forwarding](https://rc-docs.northeastern.edu/en/latest/gettingstarted/connectingtocluster/mac.html#x11-on-mac-os) setup) on the short partition, type:
 

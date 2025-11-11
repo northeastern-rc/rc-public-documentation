@@ -8,6 +8,18 @@ This repository contains the source files for the Research Computing documentati
 
 HPC users can submit issues and bugs in the documentation [here](https://github.com/northeastern-rc/rc-public-documentation/issues/new/choose).
 
+--------------
+## NOTE: This is the `explorer-main` branch
+
+All changes to RTD for Explorer (the new cluster) will happen here.
+
+While making any change that is intended for Explorer, please create a branch off of this branch instead of `master`.
+
+After developing the change, merge the change back into this branch.
+
+Eventually, we plan to make a final release for Discovery, and then bring this branch to master, to serve as the main documentation.
+-------------
+
 ## Basic Development Workflow
 
 Following are the basic steps for contributing to the RC documentation.

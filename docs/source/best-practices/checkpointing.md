@@ -26,10 +26,10 @@ Checkpointing allows you to:
 ## Checkpointing types
 Checkpointing can be implemented at different levels of your workflow.
 
-- **Application-level** checkpointing is recommended for most Discovery users. You can use the checkpointing tool that is already available in your software application. For example, most software designed for HPC has a checkpointing option, and information on proper usage is often available in the software user manual.
-- **User-level** checkpointing is good if you develop your code or know the application code well enough to integrate checkpointing techniques effectively. We recommend this approach for some Discovery users with advanced proficiency and familiarity with checkpointing mechanisms.
+- **Application-level** checkpointing is recommended for most users. You can use the checkpointing tool that is already available in your software application. For example, most software designed for HPC has a checkpointing option, and information on proper usage is often available in the software user manual.
+- **User-level** checkpointing is good if you develop your code or know the application code well enough to integrate checkpointing techniques effectively. We recommend this approach for some users with advanced proficiency and familiarity with checkpointing mechanisms.
 - **System-level** checkpointing is done on the system side, where the user saves the state of the entire process. This option is less efficient than User-level or Application-level checkpointing as it introduces a lot of redundancy.
-- **Model-level** checkpointing is suitable for saving a model's internal state (its weights, current learning rate, etc.) so that the framework can resume the training from this point whenever desired. This is often the intent of users doing machine learning on Discovery.
+- **Model-level** checkpointing is suitable for saving a model's internal state (its weights, current learning rate, etc.) so that the framework can resume the training from this point whenever desired.
 
 ### Which checkpoint type should you use?
 

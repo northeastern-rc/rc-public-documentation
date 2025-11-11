@@ -10,6 +10,7 @@ scratchpurge
 checkpointing
 shell_environment
 clusterusage
+transition
 ```
 
 Utilizing High-Performance Computing (HPC) resources effectively requires adherence to best practices. In this section, you will find essential guidance for managing your directory storage, checkpointing jobs, and cluster usage.
@@ -27,17 +28,17 @@ Learn about storage quotas and how to manage your home directory effectively.
 [Learn more »](homequota)
 :::
 
-:::{grid-item-card} {octicon}`check-circle;1.5em;screen-full` Work Directory Storage Quota
+:::{grid-item-card} {octicon}`check-circle;1.5em;screen-full` Projects Directory Storage Quota
 :link: workquota
 :link-type: doc
 
-Learn about storage quotas and how to manage your work directory effectively.
+Learn about storage quotas and how to manage your projects directory effectively.
 
 +++
 [Learn more »](workquota)
 :::
 
-:::{grid-item-card} {octicon}`file-removed;1.5em;screen-full` Scratch Directory Purge
+:::{grid-item-card} {octicon}`diff-removed;1.5em;screen-full` Scratch Directory Purge
 :link: scratchpurge
 :link-type: doc
 
@@ -47,7 +48,7 @@ Learn how to use /scratch effectively, before and after a purge.
 [Learn more »](scratchpurge)
 :::
 
-:::{grid-item-card} {octicon}`git-pull-request;1.5em;sd-mr-1` Checkpointing Jobs
+:::{grid-item-card} {octicon}`checklist;1.5em;sd-mr-1` Checkpointing Jobs
 :link: checkpointing
 :link-type: doc
 
@@ -61,7 +62,7 @@ Discover how to save progress within long-running jobs, preventing loss of data.
 :link: shell_environment
 :link-type: doc
 
-Best practices for using the shell environment on Discovery.
+Best practices for using the shell environment on Explorer.
 
 +++
 [Learn more »](shell_environment)
@@ -75,6 +76,16 @@ Guidelines about where tasks should be performed and the bots that monitor them.
 
 +++
 [Learn more »](clusterusage)
+:::
+
+:::{grid-item-card} {octicon}`diff-renamed;1.5em;sd-mr-1` Discovery to Explorer
+:link: transition
+:link-type: doc
+
+Learn a few suggested practices for a smooth transition from Discovery to Explorer.
+
++++
+[Learn more »](transition)
 :::
 
 ::::

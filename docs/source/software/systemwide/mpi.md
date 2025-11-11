@@ -13,7 +13,7 @@ To get started with MPI on a Slurm-based HPC cluster, you should have:
 - Understand how to load MPI module on the HPC
 - Understand how to compile your source code and run the binaries (compiled languages) or to run the interpreted language with MPI
 
-### MPI libraries on Discovery
+### MPI libraries on Explorer
 
 OpenMPI 4.1.6 and MPICH 4.3.0b1 are available on the HPC cluster as a module. OpenMPI 4.1.6, for example, can be loaded using the command `module load OpenMPI/4.1.6`. If there is a need for other MPI modules, please submit a [software request](https://bit.ly/NURC-Software)
 
@@ -352,7 +352,7 @@ Efficiency and scalability are crucial when writing MPI code. Here are some tips
 
 ## Getting Help with MPI
 
-For assistance with getting started with using MPI or troubleshooting using MPI libraries on Discovery, reach out to us at <rchelp@northeastern.edu> or [schedule a consultation] with one of our team members.
+For assistance with getting started with using MPI or troubleshooting using MPI libraries on Explorer, reach out to us at <rchelp@northeastern.edu> or [schedule a consultation] with one of our team members.
 
 [Intel MPI]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/mpi-library.html
 [Messaging Passing Interface (MPI)]: https://www.mpi-forum.org

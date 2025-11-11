@@ -8,8 +8,8 @@ whereas with other SSH programs, you would need a separate file transfer program
 
 1. Open MobaXterm.
 1. Click **Session**, then click **SSH** as the connection type.
-1. In **Remote Host**, type `login.discovery.neu.edu`, make sure **Port** is set to 22, and click **OK**.
-   (OPTIONAL: You can type your Northeastern username and password on MobaXterm, and it will save that information every time you sign in. If you opt to do this, you will be connected to Discovery after you click OK.)
+1. In **Remote Host**, type `login.explorer.northeastern.edu`, make sure **Port** is set to 22, and click **OK**.
+   (OPTIONAL: You can type your Northeastern username and password on MobaXterm, and it will save that information every time you sign in. If you opt to do this, you will be connected to Explorer after you click OK.)
 1. At the prompt, type your Northeastern username and press Enter.
 1. Type your Northeastern password and press Enter. Note that the cursor does not move as you type your password. This is expected behavior.
 

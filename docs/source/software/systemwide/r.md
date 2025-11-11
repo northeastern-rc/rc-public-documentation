@@ -1,7 +1,7 @@
 (using-r)=
 # Using R
 
-[R](https://www.r-project.org/) is available as a {ref}`modules <using-module>` and it is also an interactive app on {ref}`Open OnDemand <using-ood>` (OOD). You can also install R with anaconda or miniconda in a conda environment.
+[R](https://www.r-project.org/) is available as a {ref}`module <using-module>` and it is also an interactive app on our [Open OnDemand web portal](https://rc.northeastern.edu/ood/). You can also install R with anaconda or miniconda in a conda environment.
 
 ## Using R on Open OnDemand
 
@@ -15,7 +15,7 @@ If you have installed packages in the Open OnDemand RStudio application, you may
 
 It makes sense to move to sbatch scripts when you have tested your scripts interactively in the Open OnDemand and code needs to just run without supervision.
 
-Here is an example sbatch script using the container runtime engine `Singularity` and the command `Rscript`.
+Here is an example sbatch script using the container runtime engine `Apptainer` and the command `Rscript`.
 
 :::{code-block} bash
 
@@ -27,12 +27,8 @@ Here is an example sbatch script using the container runtime engine `Singularity
 #SBATCH --mem=10g
 #SBATCH --time 24:00:00
 
-# load the singularity module
-module load singularity/3.10.3
+ROCKER_IMAGE=/shared/container_repository/explorer/rstudio/4.4.2/rocker-geospatial-4.4.2.sif
 
-# set path to container
-ROCKER_IMAGE=/shared/container_repository/rstudio/rocker-geospatial-4.4.0.sif
-
-# Run R with Singularity
-singularity exec -B "/work:/work" $ROCKER_IMAGE Rscript my_r_code.R
+# Run R with Apptainer
+apptainer exec -B "/projects:/projects" $ROCKER_IMAGE Rscript my_r_code.R
 :::
