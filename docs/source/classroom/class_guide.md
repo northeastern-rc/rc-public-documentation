@@ -65,7 +65,7 @@ sinfo -p courses-gpu  --Format=nodes,cpus,gres,statecompact
 :::
 
 :::{important}
-The compute resources for courses are shared across all courses each term. [We monitor their usage daily](../best-practices/clusterusage.md). **We send out email notifications to users who are idle on courses-gpu for one hour.** We highly recommend ending jobs when your work has finished as this frees up the resource for other students. When all students do this, it increases the availability of resources for everyone in courses. 
+The compute resources for courses are shared across all courses each term. [We monitor their usage daily](../best-practices/clusterusage.md). **We send out email notifications to users who are idle on courses-gpu for up to one hour, after which the jobs are terminated.** We highly recommend ending jobs when your work has finished as this frees up the resource for other students. When all students do this, it increases the availability of resources for everyone in courses. 
 :::
 
 These partitions can be used in the following ways:
