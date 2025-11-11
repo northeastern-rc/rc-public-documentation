@@ -37,11 +37,9 @@ mv /scratch/file_to_keep /projects/<groupname>/myimportantdata
 
 :::
 
-2. On the day of the /scratch purge you will not be able to write job outputs to /scratch. Please edit your sbatch scripts to write outputs to /projects or to /home.
+2. If you have jobs that continually write output to scratch and run for long periods of time, please make sure you are [checkpointing](https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html). This will allow the resumption of your jobs around the /scratch purge.
 
-3. If you have jobs that continually write output to scratch and run for long periods of time, please make sure you are [checkpointing](https://rc-docs.northeastern.edu/en/latest/best-practices/checkpointing.html). This will allow the resumption of your jobs around the /scratch purge.
-
-4. If you wish to retain entire directories that were generated in /scratch as part of a job output, you can tar the directory first and move the compressed file to your /home or /projects. We recommend only doing this if the directory will not be opened often as for large or many files taring and untaring can be time consuming.
+3. If you wish to retain entire directories that were generated in /scratch as part of a job output, you can tar the directory first and move the compressed file to your /home or /projects. We recommend only doing this if the directory will not be opened often as for large or many files taring and untaring can be time consuming.
 
 :::{code-block}
 # First get on a compute node
@@ -61,15 +59,6 @@ Taring and compressing files can take time for large directories.
 ## What happens during a purge of /scratch ?
 
 Files and directories are removed during a /scratch purge. This saves space for the proper function of the filesystem for all users.
-
-## How do I know /scratch is usable again following the /scratch purge?
-
-We will message via email when the scratch purge is finished. You can also check for updates on the Research Computing [website](https://rc.northeastern.edu/status-updates/). Additionaly, you can also check if the below commands executes without error:
-
-:::{code-block}
-cd /scratch/<username>
-touch test-scratch
-:::
 
 ## My files are too big to transfer to /home
 
