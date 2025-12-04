@@ -111,6 +111,116 @@ sshfs <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data ~/mount_po
 
 You can interact with the directory from your GUI or use the terminal to perform tasks on it.
 ::::
+
+::::{tab-item} rclone
+
+Rclone can be used to connect to external databases including dropbox and google drive. Rclone must first be installed on your personal computer and the external database authorised prior to transfering data to/from the cluster. 
+
+## Configure rclone on your personal compute
+
+This is a required step. Install rclone locally (on your personal computer). Rclone can be found here. Please select the correct executable for your operating system: https://rclone.org/downloads/
+
+Then in terminal run:
+
+:::{code-block} bash
+rclone authorize “dropbox”
+:::
+
+This will open a browser window asking if you authorize rclone to have access to your dropbox. Say "yes"
+
+After accepting you should see an ‘access token’ on your terminal.
+
+Copy this token. You will need it for explorer
+
+## Configuring rclone on Explorer
+
+Start an interactive session either on the terminal from an ssh session or via the Open Ondemand option under "Cluster" and "explorer Shell Access"
+
+:::{code-block} bash
+srun --pty /bin/bash
+module load rclone/1.72
+rclone configure
+
+		n #for new 
+
+		name > mydropbox
+
+		9 or “dropbox”. #select the number or name of the type of storage you would like to configure
+
+		client_id> #hit enter to leave blank
+
+		client_secret> #leave blank
+
+		edit advanced config?
+
+		y
+
+		token> #leave blank
+
+		auth_url> #leave blank
+
+		token_url> #leave blank
+
+		chunk_size> 150M 
+
+		impersonate> #leave blank
+
+		encoding> #leave blank for default
+
+		Remote config
+
+		use auto config?
+
+		n
+
+		result> # paste the token from above into this space. It should start with curly brackets {”access_token”: ”…….”}
+
+		# hit enter
+:::
+
+You should now see a little summary showing the name of your remote in square brackets and some of the settings that you specified below:
+:::{code-block} bash
+[mydropbox]
+type = dropbox
+chunk_size = 150M
+token = {”access_token”:....}
+
+# Hit q to quit
+:::
+
+### rclone is now ready to be run in an sbatch script to transfer your data from dropbox to discovery
+
+To test that rclone is correctly connected to your dropbox type this:
+
+:::{code-bash} bash
+# note if you have a lot stored in your dropbox you may want to specify a more specific path here, otherwise it will take a while to load your directory contents
+rclone ls mydropbox:  
+:::
+This command should print out a list of everything in your dropbox.
+
+To copy over all of your files from dropbox to Explorer run the following:
+:::{code-bash} bash
+rclone copy mydropbox: test_dropbox
+:::
+
+:::{note}
+The destination to copy your files can be the file path (for example: /scratch/s.caplins/test_dropbox) or a relative path. If the destination folder (test_dropbox) does not already exist it will be created.
+
+Please be aware of all directory quota limits when copying data. Your home directory in particular is not the best location for data transfer. Use /scratch or /projects instead.
+:::
+
+## Once rclone is configured move to the transfer node to transfer data
+
+:::{code-block} bash
+exit out of login node
+
+ssh username@xfer.discovery.neu.edu
+
+module load rclone
+
+rclone copy mydropbox: path/where/you/want/the/file/dropbox # if file dropbox does not exist this will create it
+:::
+
 :::::
 
 ## Transfer via GUI Application
