@@ -130,7 +130,7 @@ This will open a browser window asking if you authorize rclone to have access to
 
 After accepting you should see an ‘access token’ on your terminal.
 
-Copy this token. You will need it for explorer
+Copy this token. You will need it for Explorer.
 
 ## Configuring rclone on Explorer
 
@@ -179,6 +179,7 @@ rclone configure
 :::
 
 You should now see a little summary showing the name of your remote in square brackets and some of the settings that you specified below:
+
 :::{code-block} bash
 [mydropbox]
 type = dropbox
@@ -188,11 +189,10 @@ token = {”access_token”:....}
 # Hit q to quit
 :::
 
-### rclone is now ready to be run in an sbatch script to transfer your data from dropbox to discovery
 
 To test that rclone is correctly connected to your dropbox type this:
 
-:::{code-bash} bash
+:::{code-block} bash
 # note if you have a lot stored in your dropbox you may want to specify a more specific path here, otherwise it will take a while to load your directory contents
 rclone ls mydropbox:  
 :::
@@ -219,6 +219,23 @@ ssh username@xfer.discovery.neu.edu
 module load rclone
 
 rclone copy mydropbox: path/where/you/want/the/file/dropbox # if file dropbox does not exist this will create it
+:::
+## Or transfer data using rclone in an sbatch script
+
+Here is an example sbatch script you can modify to reflect your database name and transfer location
+
+:::{code-block} bash
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --time=12:00:00
+#SBATCH --job-name=rclone
+#SBATCH --mem=10G
+#SBATCH --partition=short
+#SBATCH --constraint=ib
+
+module load rclone/1.72
+rclone copy mydropbox:/path/if/needed /projects/<project_name>/destination_folder
 :::
 
 :::::
