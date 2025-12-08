@@ -118,7 +118,7 @@ Rclone can be used to connect to external databases including dropbox and google
 
 ## Configure rclone on your personal compute
 
-This is a required step. Install rclone locally (on your personal computer). Rclone can be found here. Please select the correct executable for your operating system: https://rclone.org/downloads/
+This is a required step. Install rclone locally (on your personal computer). Rclone can be found here. [https://rclone.org/downloads/](https://rclone.org/downloads/) (Please select the correct executable for your operating system).
 
 Then in terminal run:
 
@@ -234,7 +234,7 @@ Here is an example sbatch script you can modify to reflect your database name an
 #SBATCH --partition=short
 #SBATCH --constraint=ib
 
-module load rclone/1.72
+module load rclone/1.72.0
 rclone copy mydropbox:/path/if/needed /projects/<project_name>/destination_folder
 :::
 
