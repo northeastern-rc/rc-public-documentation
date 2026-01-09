@@ -21,10 +21,22 @@ widths: auto
   - Submitted Jobs
   - GPU per Job Limit
   - User Limit (No. GPUs)
+* - `gpu-short`
+  - No
+  - 1/2
+  - 2/4
+  - 1
+  - 1
+* - `gpu-interactive`
+  - No
+  - 1/2
+  - 2/4
+  - 1
+  - 1
 * - `gpu`
   - No
   - 4/8
-  - 4/100
+  - 4/4
   - 1
   - 4
 * - `multigpu`
