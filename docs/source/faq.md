@@ -44,7 +44,7 @@ Yes, you can. Please follow the guidelines in the {ref}`package-managers` and {r
 module load gcc/11.1.0
 :::
       
-2. Later create a .R/Makevars file to add compiler flags using following commands.
+2. Later, create a .R/Makevars file to add compiler flags using the following commands.
 :::{code-block} shell
 mkdir -p ~/.R
 nano ~/.R/Makevars
@@ -73,3 +73,4 @@ To use a node connected by Infiniband please use the flag 'constraint=ib' in you
 srun -p short --constraint=ib --pty /bin/bash
 :::
 ::::
+
