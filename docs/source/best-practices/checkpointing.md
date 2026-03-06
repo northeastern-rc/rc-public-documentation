@@ -3,7 +3,6 @@
 
 The complexity of HPC systems can introduce unpredictable hardware or software component behavior, leading to job failures. Applying fault tolerance techniques to your HPC workflows can make your jobs more resilient to crashes, partition time limits, and hardware failures.
 
-## The Checkpointing technique
 Checkpointing is a fault tolerance technique based on the Backward Error Recovery (BER) technique, designed to overcome "fail-stop" failures (interruptions during the execution of a job).
 :::{image} ../images/checkpointing.png
 ---
