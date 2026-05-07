@@ -18,19 +18,31 @@ widths: auto
 * - Name
   - Requires Approval?
   - Time in Hours (Default/Max)
-  - Submitted Jobs
+  - Max Submitted Jobs (Running/Submitted)
   - GPU per Job Limit
   - User Limit (No. GPUs)
+* - `gpu-short`
+  - No
+  - 1/2
+  - 2/4
+  - 1
+  - 1
+* - `gpu-interactive`
+  - No
+  - 1/2
+  - 2/4
+  - 1
+  - 1
 * - `gpu`
   - No
   - 4/8
-  - 4/100
+  - 4/8
   - 1
   - 4
 * - `multigpu`
   - **Yes**
   - 4/24
-  - 8/100
+  - 4/8
   - 8
   - 8
 :::
