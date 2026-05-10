@@ -7,6 +7,7 @@
 System Wide <systemwide/index>
 Package Managers <packagemanagers/index>
 From Source <fromsource/index>
+Specialized Software <specializedsoftware/index>
 ```
 ## Cluster Software
 
@@ -42,6 +43,16 @@ Using make or cmake.
 
 +++
 [Learn more »](fromsource/index)
+:::
+
+:::{grid-item-card} {octicon}`tools;1.5em;sd-mr-1` Specialized Software
+:link: specializedsoftware/index
+:link-type: doc
+
+Domain-specific research software.
+
++++
+[Learn more »](specializedsoftware/index)
 :::
 
 ::::
