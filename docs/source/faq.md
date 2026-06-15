@@ -58,7 +58,7 @@ PKG_CXXFLAGS = -std=c++17 -fPIC
 PKG_LIBS = -fPIC
 ::: 
 
-5. Now try to install the desired package.
+5. Now try to install the desired package
 
 6. If you are using a different version of GCC, adjust the module load command accordingly (e.g., module load gcc/9.3.0).
 
