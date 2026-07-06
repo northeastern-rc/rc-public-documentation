@@ -71,6 +71,7 @@ an output will then resembling the following:
 +------------+---------------------+------------------------------------+
 | 20.8GiB    | 55.3GiB             | 0.38                               |
 +------------+---------------------+------------------------------------+
+Scan for <project> was completed on <date>.
 :::
 
 ## Project Storage Components
@@ -113,4 +114,5 @@ project-storage-components --project <project_name> --date <YYYY-MM-DD>
 | <project_name>/<sub_dir_9>                                | 472.6MiB   | 0.01                              |
 | <project_name>/<sub_dir_10>                               | 1.0MiB     | 0.00                              |
 +-----------------------------------------------------------+------------+-----------------------------------+
+Scan for <project> was completed on <date>.
 :::
