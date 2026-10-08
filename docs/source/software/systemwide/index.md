@@ -5,6 +5,7 @@
 :maxdepth: 3
 
 Modules <modules>
+Module List <module_list>
 MPI <mpi>
 R <r>
 Matlab <matlab>
