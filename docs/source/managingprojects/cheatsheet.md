@@ -1,9 +1,9 @@
 (projects-cheatsheet)=
 # Projects Cheatsheet
-:::{rubric} {download}`Download our cheatsheet on managing '/projects' as a PDF <../_resources/Project_Cheatsheet.pdf>`
+:::{rubric} {download}`Download our cheatsheet for our '/projects' commands as a PDF <../_resources/Projects_Commands_Cheatsheet.pdf>`
 :::
 
-:::{figure} ../images/Project_Cheatsheet.png
+:::{figure} ../images/Projects_Commands_Cheatsheet.png
 :name: projects-sheet
 :align: center
 :::

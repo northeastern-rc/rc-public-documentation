@@ -1,8 +1,8 @@
 (project-commands)=
 
-# Commands
+# `/projects` Group Management Commands
 
-The commands for interacting with the software to manage `/projects` can be thought of in four areas: viewing, adding, updating, and removing.
+The commands for interacting with the software to manage `/projects` groups can be thought of in four areas: viewing, adding, updating, and removing.
 
 Every command below is detailed with the type of user able to run the command with respect to the project (for more information on user type see  {ref}`user-types`).
 
@@ -98,5 +98,3 @@ To see what unix group gates a given directory:
 :::{code-block} bash
 getfacl /projects/<project_name>
 :::
-
-
