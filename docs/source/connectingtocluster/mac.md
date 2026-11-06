@@ -62,6 +62,23 @@ You are now connected to Explorer at a login node.
 
 :::
 
+## Create a Config Entry
+For ease of logging in, you should create a ~/.ssh/config file or add the following to your config file if you already have one. Just enter your username as it is on the cluster in place of $username and the SSH key with the timestamp as it is in your ~/.ssh directory. This is entirely optional.
+
+:::{code-block} bash
+Host explorer
+    HostName login.explorer.northeastern.edu
+    User s.caplins
+    IdentityFile ~/.ssh/s.caplins-20261019T173141Z
+
+:::
+
+And then you can login via:
+
+:::{code-block} bash
+ssh explorer
+:::
+
 
 
 (x11-mac)=
