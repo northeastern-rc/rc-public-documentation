@@ -13,7 +13,7 @@ The following sections on this page will guide you on how to connect to the Expl
 
 
 ## Using the Terminal
-You connect to Explorer using a [secure shell] program to initiate an SSH session to
+You connect to Explorer using a secure shell program to initiate an SSH session to
 sign in to the HPC.
 
 ::::{grid} 3
