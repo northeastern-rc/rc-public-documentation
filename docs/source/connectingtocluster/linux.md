@@ -8,7 +8,7 @@ Linux computers come with a Secure Shell (SSH) program called Terminal that you 
 Login to the Open OnDemand website (ood.explorer.northeastern.edu) and copy your public and private key from /home/$username/.ssh to your local computer. Your keys should match the pattern below:
 
 :::{code-block} bash
-$username-$generationdate : your private key
+$username-$generationdate     : your private key
 $username-$generationdate.pub : your public key
 :::
 
