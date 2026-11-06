@@ -3,11 +3,35 @@
 
 Linux computers come with a Secure Shell (SSH) program called Terminal that you use to connect to the HPC using SSH. If you need to use software that uses a GUI, such as MATLAB or Maestro, make sure to use the -Y option in the second step below using X11 forwarding.
 
+## Copy your SSH Keys from the cluster
+
+Login to the Open OnDemand website (ood.explorer.northeastern.edu) and copy your public and private key from /home/$username/.ssh to your local computer. Your keys should match the pattern below:
+
+:::{code-block} bash
+$username-$generationdate : your private key
+$username-$generationdate.pub : your public key
+:::
+
+On your local computer put your keys in your ~/.ssh directory. And make sure the permissions are set as below 600 for private key and 644 for the public key:
+
+:::{code-block} bash
+-rw------- 1 s.caplins users  411 Oct 27 10:00 s.caplins-20261027T140127Z
+-rw-r--r-- 1 s.caplins users   98 Oct 27 10:00 s.caplins-20261027T140127Z.pub
+:::
+
+Set the permissions if needed:
+
+:::{code-block} bash
+chmod 600 s.caplins-20261027T140127Z
+chmod 644 s.caplins-20261027T140127Z.pub
+:::
+
+
 ## Connecting to the Cluster on Linux
 
-1. Search for the Terminal application from the launcher menu.
-1. At the prompt, type `ssh <username>@login.explorer.northeastern.edu`, where `<username>` is your Northeastern username. If you need to use X11 forwarding, type `ssh -Y <username>@login.explorer.northeastern.edu`.
-1. Type your Northeastern password and press `Enter`.
+1. Open the Terminal application from the launcher menu. 
+2. At the prompt, type `ssh -i ~/.ssh/<ssh-key> <username>@login.explorer.northeastern.edu`, where `<username>` is your Northeastern username, and <ssh-key></ssh-key> is your private key from above. If you need to use X11 forwarding, type `ssh -Y -i ~/.ssh/<ssh-key> <username>@login.explorer.northeastern.edu`.
+3. Press Enter.
 
 You are now connected to Explorer at a login node.
 
@@ -31,26 +55,18 @@ You are now connected to Explorer at a login node.
 
 :::
 
-(passwordless-ssh-linux)=
-## Passwordless SSH In Linux
-You must set up passwordless ssh to ensure that GUI-based applications launch without issues. Please make sure that your keys are added to the authorized.key file in your `~/.ssh` directory. This needs to be done anytime you regenerate your SSH keys. If you are having an issue opening an application that needs X11 forwarding, such as MATLAB or Schrodinger, and you recently regenerated your keys, make sure to add your keys to the authorized.key file.
+## Create a Config Entry
+For ease of logging in, you should create a ~/.ssh/config file or add the following to your config file if you already have one. Just enter your username as it is on the cluster in place of $username and the SSH key with the timestamp as it is in your ~/.ssh directory. This is entirely optional.
 
-:::{note}
-Ensure you’re on your local computer for steps 1 through 4—type `exit` to return to your local computer if connected to the cluster.
-:::
+?
+Host explorer
+    HostName login.explorer.northeastern.edu
+    User s.caplins
+    IdentityFile ~/.ssh/s.caplins-20261019T173141Z
+And then you can login via:
 
-1. Open the Terminal application and type `cd ~/.ssh`. This moves you to the ssh folder on your local computer.
-2. Type `ssh-keygen -t rsa` to generate two files, `id_rsa` and `id_rsa.pub`.
-3. Press `Enter` on all the prompts (do not generate a passphrase).
-4. Type `ssh-copy-id -i ~/.ssh/id_rsa.pub <yourusername>@login.explorer.northeastern.edu` to copy `id_rsa.pub` to your `/home/.ssh` folder on Explorer. You can enter your NU password if prompted. This copies the token from `id_rsa.pub` file to the `authorized_keys` file, which will either be generated or appended if it already exists.
-5. Connect to Explorer via `ssh <yourusername>@login.explorer.northeastern.edu`. You should now be connected without having to enter your password.
-
-**Now on the cluster,**
-
-1. Type `cd ~/.ssh` to move to your ssh folder.
-1. Type `ssh-keygen -t rsa` to generate your key files.
-1. Press Enter on all the prompts (do not generate a passphrase). If prompted to overwrite a file, type `Y`.
-1. Type `cat id_rsa.pub >> authorized_keys`. This adds the contents of your public key file to a new line in the `~/.ssh/authorized_keys` file.
+?
+ssh explorer
 
 (x11-linux)=
 ## X11 on Linux
