@@ -51,6 +51,9 @@ Using the Terminal to connect to Explorer.
 ::::
 
 ## Using Open OnDemand
+
+Please use the Open OnDemand website if you are on a shared or public computer. Or from your own local machine. 
+
 To learn more about connecting to the cluster using Open OnDemand, please see the Research Computing website on utilizing [Open OnDemand](https://rc.northeastern.edu/ood/).
 
-[secure shell]: https://www.ssh.com/ssh/protocol/
+
