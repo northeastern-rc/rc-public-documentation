@@ -32,7 +32,7 @@ chmod 644 s.caplins-20261027T140127Z.pub
 ## Connecting to the Cluster on Linux
 
 1. Open the Terminal application from the launcher menu. 
-2. At the prompt, type the ssh command where `<username>` is your Northeastern username, and <ssh-key> is your private key from above.
+2. At the prompt, type the ssh command where `<username>` is your Northeastern username, and `<ssh-key>` is your private key from above.
 
 :::{code-block} bash
 ssh -i ~/.ssh/<ssh-key> <username>@login.explorer.northeastern.edu
