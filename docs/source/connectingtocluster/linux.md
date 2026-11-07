@@ -5,6 +5,8 @@ Linux computers come with a Secure Shell (SSH) program called Terminal that you 
 
 ## Copy your SSH Keys from the cluster
 
+Do not copy your keys to a shared or public computer.
+
 Login to the Open OnDemand website (ood.explorer.northeastern.edu) and copy your public and private key from /home/$username/.ssh to your local computer. Your keys should match the pattern below:
 
 :::{code-block} bash
@@ -12,7 +14,7 @@ $username-$generationdate     : your private key
 $username-$generationdate.pub : your public key
 :::
 
-On your local computer put your keys in your ~/.ssh directory. And make sure the permissions are set as below 600 for private key and 644 for the public key:
+On your local computer put your keys in your ~/.ssh directory. Make sure the permissions are set as below 600 for private key and 644 for the public key:
 
 :::{code-block} bash
 -rw------- 1 s.caplins users  411 Oct 27 10:00 s.caplins-20261027T140127Z
