@@ -9,6 +9,8 @@ Download the **Home Edition (Installer edition)** of MobaXterm from the [MobaXte
 
 ## Copy your SSH Keys from the cluster
 
+Do not copy your keys to a shared or public computer.
+
 Login to the Open OnDemand website (ood.explorer.northeastern.edu) and copy your public and private key from /home/$username/.ssh to your local computer. Your keys should match the pattern below:
 
 :::{code-block} bash
