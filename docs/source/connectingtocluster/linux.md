@@ -30,7 +30,7 @@ chmod 644 s.caplins-20261027T140127Z.pub
 ## Connecting to the Cluster on Linux
 
 1. Open the Terminal application from the launcher menu. 
-2. At the prompt, type `ssh -i ~/.ssh/<ssh-key> <username>@login.explorer.northeastern.edu`, where `<username>` is your Northeastern username, and <ssh-key></ssh-key> is your private key from above. If you need to use X11 forwarding, type `ssh -Y -i ~/.ssh/<ssh-key> <username>@login.explorer.northeastern.edu`.
+2. At the prompt, type `ssh -i ~/.ssh/<ssh-key> <username>@login.explorer.northeastern.edu`, where `<username>` is your Northeastern username, and <ssh-key> is your private key from above. If you need to use X11 forwarding, type `ssh -Y -i ~/.ssh/<ssh-key> <username>@login.explorer.northeastern.edu`.
 3. Press Enter.
 
 You are now connected to Explorer at a login node.
