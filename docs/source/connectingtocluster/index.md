@@ -54,6 +54,8 @@ Using the Terminal to connect to Explorer.
 
 Please use the Open OnDemand website if you are on a shared or public computer. Or from your own local machine. 
 
+ood.explorer.northeastern.edu
+
 To learn more about connecting to the cluster using Open OnDemand, please see the Research Computing website on utilizing [Open OnDemand](https://rc.northeastern.edu/ood/).
 
 
