@@ -13,6 +13,8 @@ You should keep XQuartz running in the background. If you close and restart XQua
 
 ## Copy your SSH Keys from the cluster
 
+Do not copy your keys to a shared or public computer.
+
 Login to the Open OnDemand website (ood.explorer.northeastern.edu) and copy your public and private key from /home/$username/.ssh to your local computer. Your keys should match the pattern below:
 
 :::{code-block} bash
