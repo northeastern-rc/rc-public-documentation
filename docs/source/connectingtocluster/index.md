@@ -13,7 +13,7 @@ The following sections on this page will guide you on how to connect to the Expl
 
 
 ## Using the Terminal
-You connect to Explorer using a [secure shell] program to initiate an SSH session to
+You connect to Explorer using a secure shell program to initiate an SSH session to
 sign in to the HPC.
 
 ::::{grid} 3
@@ -51,6 +51,11 @@ Using the Terminal to connect to Explorer.
 ::::
 
 ## Using Open OnDemand
+
+Please use the Open OnDemand website if you are on a shared or public computer. Or from your own local machine. 
+
+ood.explorer.northeastern.edu
+
 To learn more about connecting to the cluster using Open OnDemand, please see the Research Computing website on utilizing [Open OnDemand](https://rc.northeastern.edu/ood/).
 
-[secure shell]: https://www.ssh.com/ssh/protocol/
+
