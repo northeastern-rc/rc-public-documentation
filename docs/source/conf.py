@@ -154,7 +154,7 @@ html_theme_options = {
             "class": "",
         },
     ],
-    "announcement": announcement_html,
+    #"announcement": announcement_html,
     "sidebar_hide_name": True,
     # add logo to the upper left in the help system
     "light_logo": "image/nu-logo-light.png",
@@ -162,6 +162,20 @@ html_theme_options = {
     "source_repository": "https://github.com/northeastern-rc/rc-public-documentation",
     "source_branch": "master",
     "source_directory": "docs/source/",
+    "light_css_variables": {
+        "color-sidebar-link-text--top-level": "#C8102E",
+        "color-sidebar-link-text": "#C8102E",
+        "color-toc-item-text": "#C8102E",
+        "color-toc-item-text--hover": "#C8102E",
+        "color-toc-item-text--active": "#C8102E",
+    },
+    "dark_css_variables": {
+        "color-sidebar-link-text--top-level": "#C8102E",
+        "color-sidebar-link-text": "#C8102E",
+        "color-toc-item-text": "#C8102E",
+        "color-toc-item-text--hover": "#C8102E",
+        "color-toc-item-text--active": "#C8102E",
+    },
 }
 
 # custom css file

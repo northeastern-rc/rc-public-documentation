@@ -24,15 +24,15 @@ The `/scratch` space is for temporary file storage only. It is not backed up. If
 You can use `scp` to transfer files/directories to and from your local machine and the HPC. As an example, you can use this command to transfer a file to your `/scratch` space on the HPC from your local machine:
 
 :::{code-block} bash
-scp <filename> <username>@xfer.discovery.neu.edu:/scratch/<username>
+scp -i ~/.ssh/<username>-<generationdate> <filename> <username>@xfer.discovery.neu.edu:/scratch/<username>
 :::
 
-where `<filename>` is the name of the file in your current directory you want to transfer, and `<username>` is your Northeastern username. So that you know, this command is run on your local machine.
+Where `<username>` is your Northeastern username, and `<username>-<generationdate>` is your ssh-key which you copy to your local machine from the cluster, and `<filename>` is the name of the file in your current directory you want to transfer. So that you know, this command is run on your local machine.
 
 If you want to transfer a directory in your `/scratch` called `test-data` from the HPC to your local machine's current working directory, an example of that command would be:
 
 :::{code-block} bash
-scp -r <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data .
+scp -r -i ~/.ssh/<username>-<generationdate> <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data .
 :::
 
 where `-r` flag is for the recursive transfer because it is a directory. So that you know, this command is run on your local machine.
@@ -50,7 +50,7 @@ rsync [options] <source> <destination>
 An example of using rsync to transfer a directory called `test-data` in your current working directory on your local machine to your `/scratch` on the HPC is
 
 :::{code} bash
-rsync -av test-data/ <username>@xfer.discovery.neu.edu:/scratch/<username>
+rsync -av "ssh -i ~/.ssh/<username>-<generationdate>" test-data/ <username>@xfer.discovery.neu.edu:/scratch/<username>
 :::
 
 where this command is run on your local machine in the directory that contains `test-data`.
@@ -58,7 +58,7 @@ where this command is run on your local machine in the directory that contains `
 Similarly, `rsync` can be used to copy from the current working directory on the HPC to your current working directory on your local machine:
 
 :::{code} bash
-rsync -av <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data .
+rsync -av "ssh -i ~/.ssh/<username>-<generationdate>"  <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data .
 :::
 
 where this command is run on your local machine in the current directory that you want to save the directory `test-data`.
@@ -106,7 +106,7 @@ sshfs <username>@xfer.discovery.neu.edu:</your/remote/path> <your/local/path> -<
 For example, this will mount a directory in your `/scratch` named `test-data` to a local directory on your machine `~/mount_point`:
 
 :::{code-block} bash
-sshfs <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data ~/mount_point
+sshfs -o IdentityFile=~/.ssh/<username>-<generationdate> <username>@xfer.discovery.neu.edu:/scratch/<username>/test-data ~/mount_point
 :::
 
 You can interact with the directory from your GUI or use the terminal to perform tasks on it.
@@ -214,7 +214,7 @@ Please be aware of all directory quota limits when copying data. Your home direc
 :::{code-block} bash
 exit out of login node
 
-ssh username@xfer.discovery.neu.edu
+ssh -i ~/.ssh/<username>-<generationdate> username@xfer.discovery.neu.edu
 
 module load rclone
 
