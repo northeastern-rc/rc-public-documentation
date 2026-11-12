@@ -1,8 +1,11 @@
+---
+orphan: true
+---
 (module-list)=
 
 # Northeastern RC Software Modules
 
-Table of modules currently available on the Explorer cluster. To see which versions are available use the command `module avail software_name`. Modules can be loaded on a compute node or in an sbatch script with the command `module load software_name/version`. 
+Table of modules currently available on the Explorer cluster. To see which versions are available use the command `module avail software_name`. Modules can be loaded on a compute node or in an sbatch script with the command `module load software_name/version`.
 
 :::{table}
 :width: 75
@@ -13,7 +16,7 @@ Table of modules currently available on the Explorer cluster. To see which versi
 | :---------------- | :--------------  | :-------- |
 | Abaqus | A simulation product portfolio for multiphysics, process integration and optimization. | 2024 |
 |	anaconda3	|	Open	source	data	science	and	artificial	intelligence	distribution	platform	for	Python	and	R	programming	languages.	|	2024.06	|
-| AMBER  | Amber is a suite of biomolecular simulation programs. | 24 | 
+| AMBER  | Amber is a suite of biomolecular simulation programs. | 24 |
 |	bamtools	|	BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.	|	2.5.2	|
 |	bbmap	|	Short read aligner for DNA and RNA-seq data. Capable of handling arbitrarily large genomes with millions of scaffolds. Handles Illumina, PacBio, 454, and other reads.	|	39.10	|
 |	bcftools	|	Bcftools - utilities for variant calling and manipulating VCFs and BCFs.	|	1.21	|
